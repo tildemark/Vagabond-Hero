@@ -833,6 +833,12 @@
   display: flex;
   gap: 1.25rem;
   align-items: flex-start;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.4);
 }
 
 .skill-icon {
@@ -882,6 +888,177 @@
   font-size: 0.88rem;
   color: var(--text-main);
   line-height: 1.45;
+}
+
+/* =========================================================
+   NEW: 4-TIER PROGRESSION CODEX & COMPARISON MATRIX
+   ========================================================= */
+
+.progression-tree-box {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(8, 12, 22, 0.95));
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+}
+
+.progression-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+  position: relative;
+}
+
+.tier-step-card {
+  background: #090d16;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.tier-step-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+}
+
+.tier-step-1::before { background: #facc15; }
+.tier-step-2::before { background: #38bdf8; }
+.tier-step-3::before { background: #c084fc; }
+.tier-step-4::before { background: #f43f5e; }
+
+.tier-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  align-self: flex-start;
+}
+
+.tier-step-1 .tier-badge { color: #facc15; background: rgba(250, 204, 21, 0.1); border: 1px solid rgba(250, 204, 21, 0.3); }
+.tier-step-2 .tier-badge { color: #38bdf8; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); }
+.tier-step-3 .tier-badge { color: #c084fc; background: rgba(192, 132, 252, 0.1); border: 1px solid rgba(192, 132, 252, 0.3); }
+.tier-step-4 .tier-badge { color: #f43f5e; background: rgba(244, 63, 94, 0.1); border: 1px solid rgba(244, 63, 94, 0.3); }
+
+.tier-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.tier-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.tier-meta-list {
+  list-style: none;
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-main);
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tier-meta-list li strong {
+  color: var(--accent-gold);
+}
+
+/* Comparison Matrix Table */
+.matrix-container {
+  overflow-x: auto;
+  background: #080b12;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  scrollbar-width: thin;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  text-align: left;
+}
+
+.matrix-table th {
+  background: #0d121c;
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.matrix-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+  vertical-align: middle;
+}
+
+.matrix-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.matrix-class-cell {
+  font-weight: 700;
+  color: var(--text-bright);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.stat-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.stat-str { color: #f87171; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.25); }
+.stat-agi { color: #fbbf24; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); }
+.stat-int { color: #38bdf8; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.25); }
+.stat-sta { color: #4ade80; background: rgba(74, 222, 128, 0.1); border: 1px solid rgba(74, 222, 128, 0.25); }
+.stat-all { color: #e2e8f0; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); }
+
+/* Skill Category Accordion / Tier Filters */
+.skill-tier-heading {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-bright);
+  margin: 1.75rem 0 0.75rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.skill-tier-heading span {
+  font-size: 1.25rem;
 }
 
 /* =========================================================
