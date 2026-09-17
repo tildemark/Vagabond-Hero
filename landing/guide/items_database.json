@@ -12,7 +12,7 @@
     "socketCount": 0,
     "description": "Simple rags wrapped around the hands to prevent blisters.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Wraps",
@@ -31,7 +31,7 @@
     "socketCount": 0,
     "description": "Thick leather gloves, useful for digging through the ash.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Gloves",
@@ -50,7 +50,7 @@
     "socketCount": 0,
     "description": "Heavy forearm guards. The hinges are rusted stiff.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Bracers",
@@ -69,7 +69,7 @@
     "socketCount": 0,
     "description": "Boiled leather reinforced with scrap metal.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Armbands",
@@ -88,7 +88,7 @@
     "socketCount": 0,
     "description": "Thick iron gloves that restrict finger movement but block blades.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Gauntlets",
@@ -107,7 +107,7 @@
     "socketCount": 0,
     "description": "Extremely light, providing decent protection without sacrificing dexterity.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Gloves",
@@ -126,7 +126,7 @@
     "socketCount": 0,
     "description": "Industrial forearm plating salvaged from old pumping machinery.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Bracers",
@@ -145,7 +145,7 @@
     "socketCount": 0,
     "description": "Forged from petrified fog. They hum with latent energy.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Bracers",
@@ -164,7 +164,7 @@
     "socketCount": 0,
     "description": "Interlocking gears over the knuckles allow for crushing strikes.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Gauntlets",
@@ -183,7 +183,7 @@
     "socketCount": 0,
     "description": "Holographic shields that project outward from the wrists.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Bracers",
@@ -408,7 +408,7 @@
     "description": "Thin, incredibly strong, and slightly sticky.",
     "modifiers": [
       "+15 Agility",
-      "+10% Attack Speed",
+      "+10% Attack Speed (Permanent)",
       "+15% Poison Resist",
       "+3% Crit Chance"
     ],
@@ -430,7 +430,7 @@
     "description": "Shackles once worn by the devout, now weaponized.",
     "modifiers": [
       "+35 Intelligence",
-      "+15% Cast Speed",
+      "+15% Cast Speed (Permanent)",
       "+10% Magic Damage",
       "+5% Life Steal"
     ],
@@ -452,7 +452,7 @@
     "description": "Tipped with jagged shards of pure lightning-glass.",
     "modifiers": [
       "+60 Strength",
-      "+15% Evasion",
+      "+15% Evasion (Permanent)",
       "+10% Attack Speed",
       "+10% Crit Damage"
     ],
@@ -474,7 +474,7 @@
     "description": "Heavy diving gloves reinforced with lead knuckles.",
     "modifiers": [
       "+100 Stamina",
-      "+400 Max HP",
+      "+400 Max HP (Permanent)",
       "+20% Armor",
       "+15 Damage Reflect"
     ],
@@ -496,8 +496,9 @@
     "description": "Grants the wearer pixel-perfect precision.",
     "modifiers": [
       "+150 All Stats",
-      "+25% Attack/Cast Speed",
-      "+15% Boss Damage"
+      "+25% Attack/Cast Speed (Permanent)",
+      "+15% Boss Damage",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "Gloves",
@@ -517,8 +518,9 @@
     "description": "Ignite: Every consecutive Physical attack against the same target increases your Attack Speed by 10% and adds flat Fire damage. Resets if you change targets.",
     "modifiers": [
       "+20 to 40 Core Stat",
-      "+5% to 15% Attack Speed",
-      "+10% to 20% Fire Resist"
+      "+5% to 15% Attack Speed (Permanent)",
+      "+10% to 20% Fire Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Ignite: Every consecutive Physical attack against the same target increases your Attack Speed by 10% and adds flat Fire damage. Resets if you change targets.",
     "rawType": "Gauntlets",
@@ -538,8 +540,9 @@
     "description": "Spatial Tear: Your melee attacks gain the 'Ranged' property. You no longer trigger enemy melee Counter-Attacks.",
     "modifiers": [
       "+50 to 80 Core Stat",
-      "+10% to 20% Cast Speed",
-      "+20% to 35% Void Resist"
+      "+10% to 20% Cast Speed (Permanent)",
+      "+20% to 35% Void Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Spatial Tear: Your melee attacks gain the 'Ranged' property. You no longer trigger enemy melee Counter-Attacks.",
     "rawType": "Wraps",
@@ -559,8 +562,9 @@
     "description": "Savage Toxin: Critical Hits simultaneously apply both a Bleed (STR-based) and Poison (INT-based) DoT to the target.",
     "modifiers": [
       "+80 to 120 STR & INT",
-      "+10% to 20% Crit Chance",
-      "+10% to 20% Life Steal"
+      "+10% to 20% Crit Chance (Permanent)",
+      "+10% to 20% Life Steal",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Savage Toxin: Critical Hits simultaneously apply both a Bleed (STR-based) and Poison (INT-based) DoT to the target.",
     "rawType": "Gloves",
@@ -580,8 +584,9 @@
     "description": "Double Strike: You have a 25% chance to instantly repeat your Basic Attack or Spell for 0 Mana.",
     "modifiers": [
       "+110 to 160 Core Stat",
-      "+15% to 25% All Resist",
-      "+15% to 25% Attack Speed"
+      "+15% to 25% All Resist (Permanent)",
+      "+15% to 25% Attack Speed",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Double Strike: You have a 25% chance to instantly repeat your Basic Attack or Spell for 0 Mana.",
     "rawType": "Bracers",
@@ -601,8 +606,9 @@
     "description": "Fatal Error: Critical Hits execute non-boss enemies instantly. Critical Hits against Bosses deal 300% damage instead of 150%.",
     "modifiers": [
       "+180 to 250 Core Stat",
-      "+20% to 30% Crit Chance",
-      "+50% to 100% Crit Damage"
+      "+20% to 30% Crit Chance (Permanent)",
+      "+50% to 100% Crit Damage",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Fatal Error: Critical Hits execute non-boss enemies instantly. Critical Hits against Bosses deal 300% damage instead of 150%.",
     "rawType": "Gauntlets",
@@ -621,7 +627,7 @@
     "socketCount": 0,
     "description": "Simple leather straps over a hardened wooden sole.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Sandals",
@@ -640,7 +646,7 @@
     "socketCount": 0,
     "description": "Worn, cracked leather boots patched with twine.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Boots",
@@ -659,7 +665,7 @@
     "socketCount": 0,
     "description": "Heavy metal boots that echo loudly on stone surfaces.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Sabatons",
@@ -678,7 +684,7 @@
     "socketCount": 0,
     "description": "Thick, sturdy boots ideal for long treks through the fog.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Boots",
@@ -697,7 +703,7 @@
     "socketCount": 0,
     "description": "Standard-issue footwear for the Hold's heavy infantry.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Sabatons",
@@ -716,7 +722,7 @@
     "socketCount": 0,
     "description": "Surprisingly durable and completely silent when walking.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Shoes",
@@ -735,7 +741,7 @@
     "socketCount": 0,
     "description": "Weighted diving boots with ribbed copper soles.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Boots",
@@ -754,7 +760,7 @@
     "socketCount": 0,
     "description": "Shoes woven from ambient fog. They leave no footprints.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Shoes",
@@ -773,7 +779,7 @@
     "socketCount": 0,
     "description": "Outfitted with tiny stabilizing gyros in the heels.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Sabatons",
@@ -792,7 +798,7 @@
     "socketCount": 0,
     "description": "Emits a hard-light platform beneath your feet with every step.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Boots",
@@ -1017,7 +1023,7 @@
     "description": "Chitinous shoes that allow the wearer to grip vertical surfaces.",
     "modifiers": [
       "+15 Agility",
-      "+15% Movement Speed",
+      "+15% Movement Speed (Permanent)",
       "+10% Evasion",
       "+15% Poison Resist"
     ],
@@ -1039,7 +1045,7 @@
     "description": "Lined with sharp stones to ensure every step is painful.",
     "modifiers": [
       "+35 Intelligence",
-      "+100 Max Mana",
+      "+100 Max Mana (Permanent)",
       "+15% Movement Speed",
       "+5% Life Steal"
     ],
@@ -1061,7 +1067,7 @@
     "description": "Massive bird-like claws that dig fiercely into the ground.",
     "modifiers": [
       "+60 Strength",
-      "+20% Evasion",
+      "+20% Evasion (Permanent)",
       "+20% Attack Speed",
       "+20% Lightning Resist"
     ],
@@ -1083,7 +1089,7 @@
     "description": "Lead-filled boots that make dodging almost impossible.",
     "modifiers": [
       "+100 Stamina",
-      "+350 Max HP",
+      "+350 Max HP (Permanent)",
       "+25% Armor",
       "+30% Water Resist"
     ],
@@ -1105,8 +1111,9 @@
     "description": "Hovering a few inches off the ground entirely.",
     "modifiers": [
       "+150 All Stats",
-      "+25% Movement Speed",
-      "+15% Boss Damage"
+      "+25% Movement Speed (Permanent)",
+      "+15% Boss Damage",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "Shoes",
@@ -1126,8 +1133,9 @@
     "description": "Scorched Earth: You leave a trail of fire. Enemies that engage you in melee combat take 25% of your Strength as Fire damage per turn.",
     "modifiers": [
       "+20 to 40 Core Stat",
-      "+60 to 120 Max HP",
-      "+10% to 20% Fire Resist"
+      "+60 to 120 Max HP (Permanent)",
+      "+10% to 20% Fire Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Scorched Earth: You leave a trail of fire. Enemies that engage you in melee combat take 25% of your Strength as Fire damage per turn.",
     "rawType": "Boots",
@@ -1147,8 +1155,9 @@
     "description": "Unencumbered: You are completely immune to environmental movement penalties and all slow/snare debuffs.",
     "modifiers": [
       "+50 to 80 Core Stat",
-      "+15% to 25% Evasion",
-      "+20% to 35% Void Resist"
+      "+15% to 25% Evasion (Permanent)",
+      "+20% to 35% Void Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Unencumbered: You are completely immune to environmental movement penalties and all slow/snare debuffs.",
     "rawType": "Shoes",
@@ -1168,8 +1177,9 @@
     "description": "Feral Leap: Selecting the 'Flee' command in combat now executes a damaging leap attack instead, dealing 150% Physical damage before escaping.",
     "modifiers": [
       "+80 to 120 STR & INT",
-      "+250 to 450 Max HP",
-      "+10% to 20% Evasion"
+      "+250 to 450 Max HP (Permanent)",
+      "+10% to 20% Evasion",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Feral Leap: Selecting the 'Flee' command in combat now executes a damaging leap attack instead, dealing 150% Physical damage before escaping.",
     "rawType": "Boots",
@@ -1189,8 +1199,9 @@
     "description": "Momentum: Every time you successfully Evade an attack, your Critical Hit Chance is increased by 10% for your next turn.",
     "modifiers": [
       "+110 to 160 Core Stat",
-      "+15% to 25% All Resist",
-      "+20% to 30% Movement Speed"
+      "+15% to 25% All Resist (Permanent)",
+      "+20% to 30% Movement Speed",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Momentum: Every time you successfully Evade an attack, your Critical Hit Chance is increased by 10% for your next turn.",
     "rawType": "Boots",
@@ -1210,8 +1221,9 @@
     "description": "Teleportation: Your movement instantly transitions you between Rooms. You can bypass locked doors or environmental hazards without taking damage.",
     "modifiers": [
       "+180 to 250 Core Stat",
-      "+600 to 1000 Max HP",
-      "+20% to 40% Magic Find"
+      "+600 to 1000 Max HP (Permanent)",
+      "+20% to 40% Magic Find",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Teleportation: Your movement instantly transitions you between Rooms. You can bypass locked doors or environmental hazards without taking damage.",
     "rawType": "Sabatons",
@@ -1230,7 +1242,7 @@
     "socketCount": 0,
     "description": "A simple cloth cap, permanently stained grey.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Cap",
@@ -1249,7 +1261,7 @@
     "socketCount": 0,
     "description": "Offers little protection, but hides your face from the fog.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Hood",
@@ -1268,7 +1280,7 @@
     "socketCount": 0,
     "description": "Heavy, uncomfortable, and smells of old blood.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Helm",
@@ -1287,7 +1299,7 @@
     "socketCount": 0,
     "description": "A hardened leather facepiece worn by old-world scavengers.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Mask",
@@ -1306,7 +1318,7 @@
     "socketCount": 0,
     "description": "A heavy bucket of copper that protects against blunt trauma.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Helm",
@@ -1325,7 +1337,7 @@
     "socketCount": 0,
     "description": "Spun from the bioluminescent webs of the Whispering Hollow.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Hood",
@@ -1344,7 +1356,7 @@
     "socketCount": 0,
     "description": "A bulky brass dome with a shattered glass visor.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Helm",
@@ -1363,7 +1375,7 @@
     "socketCount": 0,
     "description": "Forged from petrified fog. Unnaturally lightweight.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Mask",
@@ -1382,7 +1394,7 @@
     "socketCount": 0,
     "description": "A ticking, mechanical helmet that keeps the wearer's head warm.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Helm",
@@ -1401,7 +1413,7 @@
     "socketCount": 0,
     "description": "A holographic hood generated by server-side armor protocols.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Hood",
@@ -1626,7 +1638,7 @@
     "description": "Carved from the fangs of the Whispering Hollow's queen.",
     "modifiers": [
       "+15 Agility",
-      "+50 Max HP",
+      "+50 Max HP (Permanent)",
       "+15% Poison Resist",
       "+5% Attack Speed"
     ],
@@ -1648,7 +1660,7 @@
     "description": "Tears of liquid void constantly stream down the fabric.",
     "modifiers": [
       "+35 Intelligence",
-      "+100 Max Mana",
+      "+100 Max Mana (Permanent)",
       "+10% Magic Damage",
       "+5% Life Steal"
     ],
@@ -1670,7 +1682,7 @@
     "description": "A helmet fashioned from razor-sharp glass feathers.",
     "modifiers": [
       "+60 Strength",
-      "+15% Evasion",
+      "+15% Evasion (Permanent)",
       "+10% Movement Speed",
       "+20% Lightning Resist"
     ],
@@ -1692,7 +1704,7 @@
     "description": "A heavy diving helmet. You can hear the ocean inside.",
     "modifiers": [
       "+100 Stamina",
-      "+500 Max HP",
+      "+500 Max HP (Permanent)",
       "+25% Armor",
       "+30% Water Resist"
     ],
@@ -1714,8 +1726,9 @@
     "description": "A floating ring of golden code. Perfect for endgame farming.",
     "modifiers": [
       "+150 All Stats",
-      "+20% Boss Damage",
-      "+15% Cooldown Reduction"
+      "+20% Boss Damage (Permanent)",
+      "+15% Cooldown Reduction",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "Cap",
@@ -1735,8 +1748,9 @@
     "description": "Ember-Flesh: Whenever you take physical damage, you have a 25% chance to retaliate with a burst of Fire Damage equal to 50% of your Strength.",
     "modifiers": [
       "+20 to 40 Core Stat",
-      "+80 to 150 Max HP",
-      "+10% to 20% Fire Resist"
+      "+80 to 150 Max HP (Permanent)",
+      "+10% to 20% Fire Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Ember-Flesh: Whenever you take physical damage, you have a 25% chance to retaliate with a burst of Fire Damage equal to 50% of your Strength.",
     "rawType": "Helm",
@@ -1756,8 +1770,9 @@
     "description": "Deep Vision: You are immune to all Evasion debuffs. Furthermore, you gain +100% Critical Hit Chance against any enemy below 30% HP.",
     "modifiers": [
       "+50 to 80 Core Stat",
-      "+200 to 350 Max HP",
-      "+15% to 30% Void Resist"
+      "+200 to 350 Max HP (Permanent)",
+      "+15% to 30% Void Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Deep Vision: You are immune to all Evasion debuffs. Furthermore, you gain +100% Critical Hit Chance against any enemy below 30% HP.",
     "rawType": "Mask",
@@ -1777,8 +1792,9 @@
     "description": "Two-Faced: Your Physical attacks deal an additional 15% Magic Damage, and your Magic attacks deal an additional 15% Physical Damage.",
     "modifiers": [
       "+80 to 120 STR & INT",
-      "+300 to 500 Max HP",
-      "+10% to 15% Life Steal"
+      "+300 to 500 Max HP (Permanent)",
+      "+10% to 15% Life Steal",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Two-Faced: Your Physical attacks deal an additional 15% Magic Damage, and your Magic attacks deal an additional 15% Physical Damage.",
     "rawType": "Mask",
@@ -1798,8 +1814,9 @@
     "description": "Rewind: Once per combat, if an enemy attack would reduce you to 0 HP, time reverses. You negate the damage and restore 30% of your Max HP instead.",
     "modifiers": [
       "+110 to 160 Core Stat",
-      "+15% to 25% All Resist",
-      "+10% to 20% Attack Speed"
+      "+15% to 25% All Resist (Permanent)",
+      "+10% to 20% Attack Speed",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Rewind: Once per combat, if an enemy attack would reduce you to 0 HP, time reverses. You negate the damage and restore 30% of your Max HP instead.",
     "rawType": "Hood",
@@ -1819,8 +1836,9 @@
     "description": "Root Access: Every 5th attack you land ignores 100% of the enemy's Armor and Resistances, dealing True Damage.",
     "modifiers": [
       "+180 to 250 Core Stat",
-      "+800 to 1200 Max HP",
-      "+20% to 40% Magic Find"
+      "+800 to 1200 Max HP (Permanent)",
+      "+20% to 40% Magic Find",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Root Access: Every 5th attack you land ignores 100% of the enemy's Armor and Resistances, dealing True Damage.",
     "rawType": "Helm",
@@ -1839,7 +1857,7 @@
     "socketCount": 0,
     "description": "A frayed piece of twine holding a smooth stone.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Necklace",
@@ -1858,7 +1876,7 @@
     "socketCount": 0,
     "description": "A broken chain salvaged from a forgotten ruin.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Necklace",
@@ -1877,7 +1895,7 @@
     "socketCount": 0,
     "description": "Leaves a green ring of oxidation around the wearer's neck.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Choker",
@@ -1896,7 +1914,7 @@
     "socketCount": 0,
     "description": "Stamped with a faded crest of Oakhaven.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -1915,7 +1933,7 @@
     "socketCount": 0,
     "description": "Iron tags bearing the ID of a fallen Hold defender.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Necklace",
@@ -1934,7 +1952,7 @@
     "socketCount": 0,
     "description": "Untarnished silver that feels cool against the skin.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Necklace",
@@ -1953,7 +1971,7 @@
     "socketCount": 0,
     "description": "Watertight and heavily pressurized. The locket is rusted shut.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -1972,7 +1990,7 @@
     "socketCount": 0,
     "description": "A shard of frozen fog that pulses with a faint heartbeat.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -1991,7 +2009,7 @@
     "socketCount": 0,
     "description": "A band of interlocking gears that tick in time with your pulse.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Choker",
@@ -2010,7 +2028,7 @@
     "socketCount": 0,
     "description": "A glowing ring of code that hovers just above the collarbone.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Choker",
@@ -2029,8 +2047,8 @@
     "socketCount": 0,
     "description": "The locket feels unnaturally heavy.",
     "modifiers": [
-      "The locket feels unnaturally heavy.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+5 to 10 Core Stat",
+      "+20 to 40 Max HP (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2049,8 +2067,8 @@
     "socketCount": 0,
     "description": "Beads made of polished bone and blue glass.",
     "modifiers": [
-      "Beads made of polished bone and blue glass.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+15 to 25 Core Stat",
+      "+30 to 60 Max Mana (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Necklace",
@@ -2069,8 +2087,8 @@
     "socketCount": 0,
     "description": "constantly drips saltwater, no matter how dry the air is.",
     "modifiers": [
-      "constantly drips saltwater, no matter how dry the air is.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+30 to 45 Core Stat",
+      "+10% to 20% Water Resist (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Choker",
@@ -2089,8 +2107,8 @@
     "socketCount": 0,
     "description": "A shard of true-ice that never melts.",
     "modifiers": [
-      "A shard of true-ice that never melts.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+50 to 75 Core Stat",
+      "+15% to 25% Ice Resist (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2109,8 +2127,8 @@
     "socketCount": 0,
     "description": "A crystalline drive containing corrupted sector data.",
     "modifiers": [
-      "A crystalline drive containing corrupted sector data.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+90 to 130 Core Stat",
+      "+5% to 10% Cooldown Reduc. (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2129,9 +2147,9 @@
     "socketCount": 0,
     "description": "A polished iron shield worn on a heavy chain.",
     "modifiers": [
-      "A polished iron shield worn on a heavy chain.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+15 to 30 STR/STA",
+      "+50 to 100 Max HP",
+      "+5% to 10% All Resist (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2150,9 +2168,9 @@
     "socketCount": 0,
     "description": "Crafted from a material that swallows ambient light.",
     "modifiers": [
-      "Crafted from a material that swallows ambient light.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+30 to 50 INT/AGI",
+      "+5% to 10% Life Steal",
+      "+10% Evasion (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Choker",
@@ -2171,9 +2189,9 @@
     "socketCount": 0,
     "description": "Contains a tiny, functional air purification filter.",
     "modifiers": [
-      "Contains a tiny, functional air purification filter.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+50 to 80 Core Stat",
+      "+20% to 35% Poison Resist",
+      "+20% to 30% HP Regen (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2192,9 +2210,9 @@
     "socketCount": 0,
     "description": "Strung with various microscopic calibration tools.",
     "modifiers": [
-      "Strung with various microscopic calibration tools.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+80 to 120 Core Stat",
+      "+10% to 20% Cooldown Reduc.",
+      "+20% to 30% Magic Find (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Necklace",
@@ -2213,9 +2231,9 @@
     "socketCount": 0,
     "description": "A severed fiber-optic node leaking raw processing power.",
     "modifiers": [
-      "A severed fiber-optic node leaking raw processing power.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+130 to 190 Core Stat",
+      "+15% to 25% All Resist",
+      "+10% to 20% Boss Damage (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2234,7 +2252,10 @@
     "socketCount": 0,
     "description": "A petrified, glowing blue eye that tracks your enemies.",
     "modifiers": [
-      "A petrified, glowing blue eye that tracks your enemies."
+      "+20 Agility",
+      "+50 Max HP (Permanent)",
+      "+15% Poison Resist",
+      "+5% Life Steal"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2253,7 +2274,10 @@
     "socketCount": 0,
     "description": "A twisted geometric shape that induces migraines in non-believers.",
     "modifiers": [
-      "A twisted geometric shape that induces migraines in non-believers."
+      "+40 Intelligence",
+      "+150 Max Mana (Permanent)",
+      "+15% Magic Damage",
+      "+10% Cast Speed"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2272,7 +2296,10 @@
     "socketCount": 0,
     "description": "Threaded on a wire of pure static electricity.",
     "modifiers": [
-      "Threaded on a wire of pure static electricity."
+      "+70 Strength",
+      "+15% Evasion (Permanent)",
+      "+15% Attack Speed",
+      "+25% Lightning Resist"
     ],
     "uniqueTrait": "",
     "rawType": "Necklace",
@@ -2291,7 +2318,10 @@
     "socketCount": 0,
     "description": "An old-world police badge, heavy with the weight of the deep.",
     "modifiers": [
-      "An old-world police badge, heavy with the weight of the deep."
+      "+110 Stamina",
+      "+500 Max HP (Permanent)",
+      "+20% Armor",
+      "+35% Water Resist"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2310,7 +2340,10 @@
     "socketCount": 0,
     "description": "The needle always points toward the nearest system anomaly.",
     "modifiers": [
-      "The needle always points toward the nearest system anomaly."
+      "+160 All Stats",
+      "+25% Cooldown Reduction (Permanent)",
+      "+20% Boss Damage",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -2329,7 +2362,10 @@
     "socketCount": 0,
     "description": "Phoenix Down: Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node).",
     "modifiers": [
-      "**Phoenix Down:** Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node)."
+      "+25 to 45 Core Stat",
+      "+100 to 180 Max HP (Permanent)",
+      "+15% to 25% Fire Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Phoenix Down: Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node).",
     "rawType": "Amulet",
@@ -2348,7 +2384,10 @@
     "socketCount": 0,
     "description": "Deep Magic: Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost.",
     "modifiers": [
-      "**Deep Magic:** Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost."
+      "+60 to 90 Core Stat",
+      "+250 to 400 Max Mana (Permanent)",
+      "+25% to 40% Void Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Deep Magic: Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost.",
     "rawType": "Amulet",
@@ -2367,7 +2406,10 @@
     "socketCount": 0,
     "description": "Blood Bond: 50% of all healing and Life Steal you receive is also applied to your active Companion.",
     "modifiers": [
-      "**Blood Bond:** 50% of all healing and Life Steal you receive is also applied to your active Companion."
+      "+90 to 130 STR & INT",
+      "+400 to 600 Max HP (Permanent)",
+      "+15% to 25% Life Steal",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Blood Bond: 50% of all healing and Life Steal you receive is also applied to your active Companion.",
     "rawType": "Choker",
@@ -2386,7 +2428,10 @@
     "socketCount": 0,
     "description": "Overtime: Every time you kill an enemy, you instantly gain a free, immediate turn.",
     "modifiers": [
-      "**Overtime:** Every time you kill an enemy, you instantly gain a free, immediate turn."
+      "+120 to 170 Core Stat",
+      "+20% to 30% All Resist (Permanent)",
+      "+20% to 30% Cooldown Reduc.",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Overtime: Every time you kill an enemy, you instantly gain a free, immediate turn.",
     "rawType": "Amulet",
@@ -2405,7 +2450,10 @@
     "socketCount": 0,
     "description": "Admin Privilege: You are completely immune to all enemy Critical Hits and 'Execute' mechanics.",
     "modifiers": [
-      "**Admin Privilege:** You are completely immune to all enemy Critical Hits and 'Execute' mechanics."
+      "+200 to 280 Core Stat",
+      "+1000 to 1500 Max HP (Permanent)",
+      "+30% to 50% Magic Find",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Admin Privilege: You are completely immune to all enemy Critical Hits and 'Execute' mechanics.",
     "rawType": "Amulet",
@@ -2424,7 +2472,7 @@
     "socketCount": 0,
     "description": "Splintery and fragile, carved from petrified wood.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2443,7 +2491,7 @@
     "socketCount": 0,
     "description": "A simple loop of hammered copper.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Band",
@@ -2462,7 +2510,7 @@
     "socketCount": 0,
     "description": "Flakes of rust rub off onto your skin.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2481,7 +2529,7 @@
     "socketCount": 0,
     "description": "The seal on the signet has been ground smooth.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Signet",
@@ -2500,7 +2548,7 @@
     "socketCount": 0,
     "description": "Bears the shield-and-anchor crest of the Hold.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Signet",
@@ -2519,7 +2567,7 @@
     "socketCount": 0,
     "description": "A clean, bright band that resists tarnishing.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Band",
@@ -2538,7 +2586,7 @@
     "socketCount": 0,
     "description": "Originally a pipe fitting from the Sunken City.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2557,7 +2605,7 @@
     "socketCount": 0,
     "description": "A perfect circle of frozen fog.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2576,7 +2624,7 @@
     "socketCount": 0,
     "description": "The metal is warm and vibrates softly.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Band",
@@ -2595,7 +2643,7 @@
     "socketCount": 0,
     "description": "A ring of light that resizes perfectly to your finger.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Signet",
@@ -2614,8 +2662,8 @@
     "socketCount": 0,
     "description": "The ash seems baked into the metal itself.",
     "modifiers": [
-      "The ash seems baked into the metal itself.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+4 to 8 Core Stat",
+      "+2% to 5% Crit Chance (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Band",
@@ -2634,8 +2682,8 @@
     "socketCount": 0,
     "description": "Bears a geometric rune of the Void.",
     "modifiers": [
-      "Bears a geometric rune of the Void.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+12 to 22 Core Stat",
+      "+10% to 20% Magic Damage (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Signet",
@@ -2654,8 +2702,8 @@
     "socketCount": 0,
     "description": "Smells of brine and glowing algae.",
     "modifiers": [
-      "Smells of brine and glowing algae.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+25 to 40 Core Stat",
+      "+5% to 15% Water Resist (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2674,8 +2722,8 @@
     "socketCount": 0,
     "description": "Leaves a layer of frost on the wearer's hand.",
     "modifiers": [
-      "Leaves a layer of frost on the wearer's hand.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+45 to 70 Core Stat",
+      "+3% to 8% Crit Chance (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2694,8 +2742,8 @@
     "socketCount": 0,
     "description": "Text scrolls endlessly around the inside of the band.",
     "modifiers": [
-      "Text scrolls endlessly around the inside of the band.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+85 to 125 Core Stat",
+      "+10% to 20% Magic Find (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Band",
@@ -2714,9 +2762,9 @@
     "socketCount": 0,
     "description": "Granted to veterans who survived their first Void storm.",
     "modifiers": [
-      "Granted to veterans who survived their first Void storm.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+15 to 25 STR/STA",
+      "+5% to 10% Block/Evasion",
+      "+5% to 10% Armor (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Signet",
@@ -2735,9 +2783,9 @@
     "socketCount": 0,
     "description": "The gemstone is replaced by a void of absolute black.",
     "modifiers": [
-      "The gemstone is replaced by a void of absolute black.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+25 to 45 INT/AGI",
+      "+5% to 12% Crit Chance",
+      "+20% to 40% Crit Damage (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2756,9 +2804,9 @@
     "socketCount": 0,
     "description": "Forged from non-reactive industrial polymers.",
     "modifiers": [
-      "Forged from non-reactive industrial polymers.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+45 to 75 Core Stat",
+      "+20% to 35% Poison Resist",
+      "+15% to 25% Attack Speed (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Band",
@@ -2777,9 +2825,9 @@
     "socketCount": 0,
     "description": "Features a rotating bezel used to measure distances.",
     "modifiers": [
-      "Features a rotating bezel used to measure distances.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+75 to 115 Core Stat",
+      "+10% to 18% Crit Chance",
+      "+30% to 50% Crit Damage (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2798,9 +2846,9 @@
     "socketCount": 0,
     "description": "Forged from a melted processing chip.",
     "modifiers": [
-      "Forged from a melted processing chip.",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+125 to 185 Core Stat",
+      "+15% to 25% All Resist",
+      "+15% to 25% Boss Damage (Optional)"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2819,7 +2867,10 @@
     "socketCount": 0,
     "description": "A hollow spider fang wrapped around a copper wire.",
     "modifiers": [
-      "A hollow spider fang wrapped around a copper wire."
+      "+18 Agility",
+      "+5% Crit Chance (Permanent)",
+      "+20% Crit Damage",
+      "+15% Poison Resist"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2838,7 +2889,10 @@
     "socketCount": 0,
     "description": "Painfully tight, a constant reminder of duty.",
     "modifiers": [
-      "Painfully tight, a constant reminder of duty."
+      "+38 Intelligence",
+      "+10% Cast Speed (Permanent)",
+      "+15% Magic Damage",
+      "+10% All Resist"
     ],
     "uniqueTrait": "",
     "rawType": "Band",
@@ -2857,7 +2911,10 @@
     "socketCount": 0,
     "description": "A razor-sharp talon curled into a ring.",
     "modifiers": [
-      "A razor-sharp talon curled into a ring."
+      "+65 Strength",
+      "+10% Crit Chance (Permanent)",
+      "+15% Attack Speed",
+      "+25% Lightning Resist"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2876,7 +2933,10 @@
     "socketCount": 0,
     "description": "Used to stamp official warrants in the Sunken City.",
     "modifiers": [
-      "Used to stamp official warrants in the Sunken City."
+      "+105 Stamina",
+      "+400 Max HP (Permanent)",
+      "+15% Armor",
+      "+10 Damage Reflect"
     ],
     "uniqueTrait": "",
     "rawType": "Signet",
@@ -2895,7 +2955,10 @@
     "socketCount": 0,
     "description": "Expands and contracts based on the wearer's pulse.",
     "modifiers": [
-      "Expands and contracts based on the wearer's pulse."
+      "+155 All Stats",
+      "+15% Crit Chance (Permanent)",
+      "+50% Crit Damage",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -2914,7 +2977,10 @@
     "socketCount": 0,
     "description": "Kindling: Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat.",
     "modifiers": [
-      "**Kindling:** Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat."
+      "+20 to 45 Core Stat",
+      "+8% to 15% Crit Chance (Permanent)",
+      "+15% to 30% Fire Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Kindling: Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat.",
     "rawType": "Ring",
@@ -2933,7 +2999,10 @@
     "socketCount": 0,
     "description": "Implosion: Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP.",
     "modifiers": [
-      "**Implosion:** Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP."
+      "+55 to 85 Core Stat",
+      "+15% to 25% Attack/Cast Spd (Permanent)",
+      "+25% to 40% Void Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Implosion: Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP.",
     "rawType": "Band",
@@ -2952,7 +3021,10 @@
     "socketCount": 0,
     "description": "Feral Insight: Your Critical Hits ignore 100% of the enemy's Elemental Resistances.",
     "modifiers": [
-      "**Feral Insight:** Your Critical Hits ignore 100% of the enemy's Elemental Resistances."
+      "+85 to 125 STR & INT",
+      "+12% to 20% Crit Chance (Permanent)",
+      "+40% to 80% Crit Damage",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Feral Insight: Your Critical Hits ignore 100% of the enemy's Elemental Resistances.",
     "rawType": "Signet",
@@ -2971,7 +3043,10 @@
     "socketCount": 0,
     "description": "Clockstopper: Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn.",
     "modifiers": [
-      "**Clockstopper:** Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn."
+      "+115 to 165 Core Stat",
+      "+20% to 30% All Resist (Permanent)",
+      "+20% to 40% Magic Find",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Clockstopper: Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn.",
     "rawType": "Ring",
@@ -2990,7 +3065,10 @@
     "socketCount": 0,
     "description": "Buffer Overflow: If you deal damage that exceeds an enemy's remaining HP, the excess damage chains to a second random enemy in the room.",
     "modifiers": [
-      "**Buffer Overflow:** If you deal damage that exceeds an enemy's remaining HP, the excess damage chains to a second random enemy in the room."
+      "+190 to 270 Core Stat",
+      "+25% to 40% Crit Chance (Permanent)",
+      "+100% to 150% Crit Damage",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Buffer Overflow: If you deal damage that exceeds an enemy's remaining HP, the excess damage chains to a second random enemy in the room.",
     "rawType": "Band",
@@ -3009,7 +3087,7 @@
     "socketCount": 0,
     "description": "Stiff with dried mud and grey ash.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Pants",
@@ -3028,7 +3106,7 @@
     "socketCount": 0,
     "description": "Thick canvas that prevents the local flora from tearing up your legs.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Trousers",
@@ -3047,7 +3125,7 @@
     "socketCount": 0,
     "description": "Heavy and clunky, significantly slowing the wearer's stride.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Greaves",
@@ -3066,7 +3144,7 @@
     "socketCount": 0,
     "description": "Cured leather plates strapped tightly over padded trousers.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Legguards",
@@ -3085,7 +3163,7 @@
     "socketCount": 0,
     "description": "Sturdy iron armor issued to the defenders of the Hold.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Greaves",
@@ -3104,7 +3182,7 @@
     "socketCount": 0,
     "description": "Woven from spider silk, offering surprisingly high tensile strength.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Skirt",
@@ -3123,7 +3201,7 @@
     "socketCount": 0,
     "description": "Thick industrial thigh guards designed to withstand extreme pressure.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Cuisses",
@@ -3142,7 +3220,7 @@
     "socketCount": 0,
     "description": "Fabric that seems to absorb the ambient light around it.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Pants",
@@ -3161,7 +3239,7 @@
     "socketCount": 0,
     "description": "Emits a rhythmic mechanical whir with every step you take.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Greaves",
@@ -3180,7 +3258,7 @@
     "socketCount": 0,
     "description": "Project overlapping geometric shields around the wearer's legs.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Legguards",
@@ -3405,7 +3483,7 @@
     "description": "Chitinous plating that flexes naturally with the wearer's joints.",
     "modifiers": [
       "+15 Agility",
-      "+50 Max HP",
+      "+50 Max HP (Permanent)",
       "+10% Evasion",
       "+15% Poison Resist"
     ],
@@ -3427,7 +3505,7 @@
     "description": "Torn and frayed, yet it sweeps across the floor without a sound.",
     "modifiers": [
       "+35 Intelligence",
-      "+120 Max Mana",
+      "+120 Max Mana (Permanent)",
       "+15% Movement Speed",
       "+5% Life Steal"
     ],
@@ -3449,7 +3527,7 @@
     "description": "Forged to resemble the powerful legs of a predatory bird.",
     "modifiers": [
       "+60 Strength",
-      "+15% Evasion",
+      "+15% Evasion (Permanent)",
       "+20% Attack Speed",
       "+20% Lightning Resist"
     ],
@@ -3471,7 +3549,7 @@
     "description": "So heavy they leave permanent indentations in the digital stone.",
     "modifiers": [
       "+100 Stamina",
-      "+450 Max HP",
+      "+450 Max HP (Permanent)",
       "+25% Armor",
       "+30% Water Resist"
     ],
@@ -3493,8 +3571,9 @@
     "description": "Exoskeletal braces that entirely negate the effects of fatigue.",
     "modifiers": [
       "+150 All Stats",
-      "+15% Boss Damage",
-      "+20% Movement Speed"
+      "+15% Boss Damage (Permanent)",
+      "+20% Movement Speed",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "Legguards",
@@ -3514,8 +3593,9 @@
     "description": "Unmovable: You are completely immune to all Stun, Knockback, and Root debuffs.",
     "modifiers": [
       "+20 to 40 Core Stat",
-      "+80 to 150 Max HP",
-      "+10% to 20% Fire Resist"
+      "+80 to 150 Max HP (Permanent)",
+      "+10% to 20% Fire Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Unmovable: You are completely immune to all Stun, Knockback, and Root debuffs.",
     "rawType": "Greaves",
@@ -3535,8 +3615,9 @@
     "description": "Deep Current: Whenever you successfully Evade an attack, your next action costs 0 Mana and does not consume your turn.",
     "modifiers": [
       "+50 to 80 Core Stat",
-      "+10% to 20% Evasion",
-      "+20% to 35% Void Resist"
+      "+10% to 20% Evasion (Permanent)",
+      "+20% to 35% Void Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Deep Current: Whenever you successfully Evade an attack, your next action costs 0 Mana and does not consume your turn.",
     "rawType": "Pants",
@@ -3556,8 +3637,9 @@
     "description": "Predator's Pounce: Your very first attack in any combat encounter deals 250% damage and guarantees a Critical Hit.",
     "modifiers": [
       "+80 to 120 STR & INT",
-      "+300 to 500 Max HP",
-      "+10% to 15% Life Steal"
+      "+300 to 500 Max HP (Permanent)",
+      "+10% to 15% Life Steal",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Predator's Pounce: Your very first attack in any combat encounter deals 250% damage and guarantees a Critical Hit.",
     "rawType": "Legguards",
@@ -3577,8 +3659,9 @@
     "description": "Clockwork Steps: For every turn that passes in combat, your Evasion increases by 2%, up to a maximum of 20%.",
     "modifiers": [
       "+110 to 160 Core Stat",
-      "+15% to 25% All Resist",
-      "+15% to 25% Movement Speed"
+      "+15% to 25% All Resist (Permanent)",
+      "+15% to 25% Movement Speed",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Clockwork Steps: For every turn that passes in combat, your Evasion increases by 2%, up to a maximum of 20%.",
     "rawType": "Trousers",
@@ -3598,8 +3681,9 @@
     "description": "System Bypass: You are entirely immune to environmental damage, traps, and passive Node debuffs (e.g., Toxic drains, Chill effects).",
     "modifiers": [
       "+180 to 250 Core Stat",
-      "+800 to 1200 Max HP",
-      "+20% to 40% Magic Find"
+      "+800 to 1200 Max HP (Permanent)",
+      "+20% to 40% Magic Find",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "System Bypass: You are entirely immune to environmental damage, traps, and passive Node debuffs (e.g., Toxic drains, Chill effects).",
     "rawType": "Greaves",
@@ -3620,7 +3704,8 @@
     "modifiers": [
       "+40 STR",
       "+10% Block",
-      "Set Bonus (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -3641,7 +3726,8 @@
     "modifiers": [
       "+60 STA",
       "+200 Max HP",
-      "Set Bonus (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -3662,7 +3748,8 @@
     "modifiers": [
       "+30 STR",
       "+30 Damage Reflect",
-      "Set Bonus (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Off-Hand",
@@ -3683,7 +3770,8 @@
     "modifiers": [
       "+40 STR",
       "+20% Cooldown Reduc.",
-      "Set Bonus (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
+      "+1 Random Class Modifier",
+      "Set Attribute (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -3704,7 +3792,8 @@
     "modifiers": [
       "+35 STR",
       "+15% Movement Spd",
-      "Set Bonus (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
+      "+1 Random Class Modifier",
+      "Set Attribute (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -3725,7 +3814,8 @@
     "modifiers": [
       "+50 STR",
       "+20% Boss Damage",
-      "Set Bonus (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
+      "+1 Random Class Modifier",
+      "Set Attribute (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
     ],
     "uniqueTrait": "",
     "rawType": "2H Mace",
@@ -3746,7 +3836,8 @@
     "modifiers": [
       "+50 STA",
       "+25% HP Regen",
-      "Set Bonus (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -3767,7 +3858,8 @@
     "modifiers": [
       "+40 STR",
       "+15% Attack Speed",
-      "Set Bonus (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -3788,7 +3880,8 @@
     "modifiers": [
       "+300 Max HP",
       "+10% All Resist",
-      "Set Bonus (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -3809,7 +3902,8 @@
     "modifiers": [
       "+35 AGI",
       "+15 Flat Poison Dmg",
-      "Set Bonus (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
     ],
     "uniqueTrait": "",
     "rawType": "1H Dagger",
@@ -3830,7 +3924,8 @@
     "modifiers": [
       "+35 AGI",
       "+15% Attack Speed",
-      "Set Bonus (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
     ],
     "uniqueTrait": "",
     "rawType": "1H Dagger",
@@ -3851,7 +3946,8 @@
     "modifiers": [
       "+40 AGI",
       "+30% Poison Resist",
-      "Set Bonus (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -3872,7 +3968,8 @@
     "modifiers": [
       "+40 AGI",
       "+10% Evasion",
-      "Set Bonus (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -3893,7 +3990,8 @@
     "modifiers": [
       "+35 AGI",
       "+20% Crit Damage",
-      "Set Bonus (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -3914,7 +4012,8 @@
     "modifiers": [
       "+10% Crit Chance",
       "+15% Movement Spd",
-      "Set Bonus (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -3935,7 +4034,8 @@
     "modifiers": [
       "+50 AGI",
       "+15% Attack Speed",
-      "Set Bonus (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
     ],
     "uniqueTrait": "",
     "rawType": "2H Bow",
@@ -3956,7 +4056,8 @@
     "modifiers": [
       "+40 AGI",
       "+20% Movement Spd",
-      "Set Bonus (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -3977,7 +4078,8 @@
     "modifiers": [
       "+20 AGI",
       "+10% Evasion",
-      "Set Bonus (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -3998,7 +4100,8 @@
     "modifiers": [
       "+50 INT",
       "+15% Cast Speed",
-      "Set Bonus (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "2H Staff",
@@ -4019,7 +4122,8 @@
     "modifiers": [
       "+40 INT",
       "+10% All Resist",
-      "Set Bonus (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4040,7 +4144,8 @@
     "modifiers": [
       "+30 INT",
       "+20% Crit Chance",
-      "Set Bonus (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -4061,7 +4166,8 @@
     "modifiers": [
       "+45 INT",
       "+100 Max Mana",
-      "Set Bonus (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4082,7 +4188,8 @@
     "modifiers": [
       "+35 STA",
       "+150 Max Mana",
-      "Set Bonus (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Off-Hand",
@@ -4103,7 +4210,8 @@
     "modifiers": [
       "+30 INT",
       "+20% Mana Regen",
-      "Set Bonus (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -4124,7 +4232,8 @@
     "modifiers": [
       "+40 INT",
       "+10% Cooldown Reduc.",
-      "Set Bonus (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "1H Wand",
@@ -4145,7 +4254,8 @@
     "modifiers": [
       "+35 INT",
       "+15% Cast Speed",
-      "Set Bonus (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4166,7 +4276,8 @@
     "modifiers": [
       "+15% Cooldown Reduc.",
       "+10% Magic Dmg",
-      "Set Bonus (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4187,7 +4298,8 @@
     "modifiers": [
       "+35 INT",
       "+15% Attack Speed",
-      "Set Bonus (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
+      "+1 Random Class Modifier",
+      "Set Attribute (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
     ],
     "uniqueTrait": "",
     "rawType": "1H Whip",
@@ -4208,7 +4320,8 @@
     "modifiers": [
       "+40 STA",
       "+20% Summon HP",
-      "Set Bonus (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
+      "+1 Random Class Modifier",
+      "Set Attribute (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
     ],
     "uniqueTrait": "",
     "rawType": "Off-Hand",
@@ -4229,7 +4342,8 @@
     "modifiers": [
       "+30 STR",
       "+250 Max HP",
-      "Set Bonus (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
+      "+1 Random Class Modifier",
+      "Set Attribute (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4250,7 +4364,8 @@
     "modifiers": [
       "+45 INT/STA",
       "+15 Flat Poison",
-      "Set Bonus (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "2H Spear",
@@ -4271,7 +4386,8 @@
     "modifiers": [
       "+35 STA",
       "+10% HP Regen",
-      "Set Bonus (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -4292,7 +4408,8 @@
     "modifiers": [
       "+10% Life Steal",
       "+50 Max HP",
-      "Set Bonus (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4313,7 +4430,8 @@
     "modifiers": [
       "+40 STA",
       "+15% All Resist",
-      "Set Bonus (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
+      "+1 Random Class Modifier",
+      "Set Attribute (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4334,7 +4452,8 @@
     "modifiers": [
       "+35 INT",
       "+15% Potion Effect",
-      "Set Bonus (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
+      "+1 Random Class Modifier",
+      "Set Attribute (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -4355,7 +4474,8 @@
     "modifiers": [
       "+20% Boss Damage",
       "+100 Max Mana",
-      "Set Bonus (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
+      "+1 Random Class Modifier",
+      "Set Attribute (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -4376,7 +4496,8 @@
     "modifiers": [
       "+60 STR",
       "+15% Crit Damage",
-      "Set Bonus (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4397,7 +4518,8 @@
     "modifiers": [
       "+80 STR",
       "+10% Life Steal",
-      "Set Bonus (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4418,7 +4540,8 @@
     "modifiers": [
       "+15% Attack Speed",
       "+10% Boss Dmg",
-      "Set Bonus (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4439,7 +4562,8 @@
     "modifiers": [
       "+70 STA",
       "+20 Damage Reflect",
-      "Set Bonus (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4460,7 +4584,8 @@
     "modifiers": [
       "+60 STR",
       "+20% Void Resist",
-      "Set Bonus (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
     ],
     "uniqueTrait": "",
     "rawType": "Legs",
@@ -4481,7 +4606,8 @@
     "modifiers": [
       "+20% Block Chance",
       "+500 Max HP",
-      "Set Bonus (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -4502,7 +4628,8 @@
     "modifiers": [
       "+80 STR/STA",
       "+15% All Resist",
-      "Set Bonus (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4523,7 +4650,8 @@
     "modifiers": [
       "+70 STR",
       "+20% Crit Damage",
-      "Set Bonus (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4544,7 +4672,8 @@
     "modifiers": [
       "+20% Boss Damage",
       "+10% Armor Pen",
-      "Set Bonus (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
+      "+1 Random Class Modifier",
+      "Set Attribute (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4565,7 +4694,8 @@
     "modifiers": [
       "+60 AGI",
       "+20% Attack Speed",
-      "Set Bonus (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4586,7 +4716,8 @@
     "modifiers": [
       "+75 AGI",
       "+15% Evasion",
-      "Set Bonus (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4607,7 +4738,8 @@
     "modifiers": [
       "+15 Flat Poison Dmg",
       "+15% Crit Chance",
-      "Set Bonus (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4628,7 +4760,7 @@
     "modifiers": [
       "+70 AGI",
       "+20% Crit Chance",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4649,7 +4781,7 @@
     "modifiers": [
       "+60 AGI",
       "+20% Movement Spd",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -4670,7 +4802,7 @@
     "modifiers": [
       "+50% Crit Damage",
       "+10% Cooldown Reduc.",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -4691,7 +4823,8 @@
     "modifiers": [
       "+80 AGI",
       "+20% All Resist",
-      "Set Bonus (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
+      "+1 Random Class Modifier",
+      "Set Attribute (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4712,7 +4845,8 @@
     "modifiers": [
       "+70 AGI",
       "+25% Attack Speed",
-      "Set Bonus (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
+      "+1 Random Class Modifier",
+      "Set Attribute (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4733,7 +4867,8 @@
     "modifiers": [
       "+15% Evasion",
       "+20% Magic Find",
-      "Set Bonus (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
+      "+1 Random Class Modifier",
+      "Set Attribute (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4754,7 +4889,8 @@
     "modifiers": [
       "+70 INT",
       "+15% Cast Speed",
-      "Set Bonus (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4775,7 +4911,8 @@
     "modifiers": [
       "+80 INT",
       "+20% All Resist",
-      "Set Bonus (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4796,7 +4933,8 @@
     "modifiers": [
       "+200 Max Mana",
       "+15% Magic Dmg",
-      "Set Bonus (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -4877,7 +5015,8 @@
     "modifiers": [
       "+90 INT",
       "+400 Max Mana",
-      "Set Bonus (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4898,7 +5037,8 @@
     "modifiers": [
       "+70 INT",
       "+20% Movement Spd",
-      "Set Bonus (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -4919,7 +5059,8 @@
     "modifiers": [
       "+25% Cast Speed",
       "+10% Cooldown Reduc.",
-      "Set Bonus (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -4940,7 +5081,8 @@
     "modifiers": [
       "+65 INT",
       "+20% Summon HP",
-      "Set Bonus (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
+      "+1 Random Class Modifier",
+      "Set Attribute (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4961,7 +5103,8 @@
     "modifiers": [
       "+80 INT",
       "+30% Void Resist",
-      "Set Bonus (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
+      "+1 Random Class Modifier",
+      "Set Attribute (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4982,7 +5125,8 @@
     "modifiers": [
       "+10% Cooldown Reduc.",
       "+15% Boss Dmg",
-      "Set Bonus (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
+      "+1 Random Class Modifier",
+      "Set Attribute (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5003,7 +5147,8 @@
     "modifiers": [
       "+60 STR/INT",
       "+15% All Resist",
-      "Set Bonus (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5024,7 +5169,8 @@
     "modifiers": [
       "+50 STR/INT",
       "+20% Attack Speed",
-      "Set Bonus (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5045,7 +5191,8 @@
     "modifiers": [
       "+400 Max HP",
       "+20% Crit Chance",
-      "Set Bonus (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
+      "+1 Random Class Modifier",
+      "Set Attribute (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -5066,7 +5213,8 @@
     "modifiers": [
       "+90 STA",
       "+15% Life Steal",
-      "Set Bonus (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
+      "+1 Random Class Modifier",
+      "Set Attribute (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5087,7 +5235,8 @@
     "modifiers": [
       "+70 STA",
       "+20% Movement Spd",
-      "Set Bonus (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
+      "+1 Random Class Modifier",
+      "Set Attribute (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -5108,7 +5257,8 @@
     "modifiers": [
       "+100 INT/STA",
       "+15% All Resist",
-      "Set Bonus (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
+      "+1 Random Class Modifier",
+      "Set Attribute (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5129,7 +5279,8 @@
     "modifiers": [
       "+120 STR",
       "+25% Crit Damage",
-      "Set Bonus (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
+      "+1 Random Class Modifier",
+      "Set Attribute (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5150,7 +5301,8 @@
     "modifiers": [
       "+150 STR",
       "+500 Max HP",
-      "Set Bonus (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
+      "+1 Random Class Modifier",
+      "Set Attribute (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5171,7 +5323,8 @@
     "modifiers": [
       "+30% Attack Speed",
       "+20% Boss Dmg",
-      "Set Bonus (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
+      "+1 Random Class Modifier",
+      "Set Attribute (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5192,7 +5345,8 @@
     "modifiers": [
       "+100 STA",
       "+50 Damage Reflect",
-      "Set Bonus (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5213,7 +5367,8 @@
     "modifiers": [
       "+120 STR",
       "+30% All Resist",
-      "Set Bonus (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
     ],
     "uniqueTrait": "",
     "rawType": "Legs",
@@ -5234,7 +5389,8 @@
     "modifiers": [
       "+40% Block Chance",
       "+1000 Max HP",
-      "Set Bonus (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
+      "+1 Random Class Modifier",
+      "Set Attribute (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5255,7 +5411,8 @@
     "modifiers": [
       "+150 STR/STA",
       "+20% All Resist",
-      "Set Bonus (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5276,7 +5433,8 @@
     "modifiers": [
       "+100 STR",
       "+50% Crit Damage",
-      "Set Bonus (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5297,7 +5455,8 @@
     "modifiers": [
       "+25% Boss Damage",
       "+20% Armor Pen",
-      "Set Bonus (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5318,7 +5477,8 @@
     "modifiers": [
       "+120 AGI",
       "+30% Attack Speed",
-      "Set Bonus (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5339,7 +5499,8 @@
     "modifiers": [
       "+150 AGI",
       "+20% Evasion",
-      "Set Bonus (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5360,7 +5521,8 @@
     "modifiers": [
       "+50 Flat Poison Dmg",
       "+20% Crit Chance",
-      "Set Bonus (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5381,7 +5543,8 @@
     "modifiers": [
       "+140 AGI",
       "+25% Crit Chance",
-      "Set Bonus (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
+      "+1 Random Class Modifier",
+      "Set Attribute (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5402,7 +5565,8 @@
     "modifiers": [
       "+100 AGI",
       "+30% Movement Spd",
-      "Set Bonus (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
+      "+1 Random Class Modifier",
+      "Set Attribute (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -5423,7 +5587,8 @@
     "modifiers": [
       "+100% Crit Damage",
       "+15% Cooldown Reduc.",
-      "Set Bonus (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
+      "+1 Random Class Modifier",
+      "Set Attribute (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5444,7 +5609,8 @@
     "modifiers": [
       "+160 AGI",
       "+30% All Resist",
-      "Set Bonus (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5465,7 +5631,8 @@
     "modifiers": [
       "+120 AGI",
       "+35% Attack Speed",
-      "Set Bonus (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5486,7 +5653,8 @@
     "modifiers": [
       "+20% Evasion",
       "+40% Magic Find",
-      "Set Bonus (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5507,7 +5675,8 @@
     "modifiers": [
       "+140 INT",
       "+25% Cast Speed",
-      "Set Bonus (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
+      "+1 Random Class Modifier",
+      "Set Attribute (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5528,7 +5697,8 @@
     "modifiers": [
       "+160 INT",
       "+30% All Resist",
-      "Set Bonus (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
+      "+1 Random Class Modifier",
+      "Set Attribute (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5549,7 +5719,8 @@
     "modifiers": [
       "+500 Max Mana",
       "+25% Magic Dmg",
-      "Set Bonus (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
+      "+1 Random Class Modifier",
+      "Set Attribute (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5570,7 +5741,8 @@
     "modifiers": [
       "+120 INT/STA",
       "+800 Max HP",
-      "Set Bonus (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5591,7 +5763,8 @@
     "modifiers": [
       "+100 INT",
       "+30% Cast Speed",
-      "Set Bonus (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5612,7 +5785,8 @@
     "modifiers": [
       "+25% Life Steal",
       "+30% Magic Dmg",
-      "Set Bonus (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
+      "+1 Random Class Modifier",
+      "Set Attribute (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5633,7 +5807,8 @@
     "modifiers": [
       "+180 INT",
       "+1000 Max Mana",
-      "Set Bonus (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5654,7 +5829,8 @@
     "modifiers": [
       "+120 INT",
       "+30% Movement Spd",
-      "Set Bonus (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -5675,7 +5851,8 @@
     "modifiers": [
       "+40% Cast Speed",
       "+20% Cooldown Reduc.",
-      "Set Bonus (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -5696,7 +5873,8 @@
     "modifiers": [
       "+140 INT",
       "+40% Summon HP",
-      "Set Bonus (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
+      "+1 Random Class Modifier",
+      "Set Attribute (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5717,7 +5895,8 @@
     "modifiers": [
       "+160 INT",
       "+40% Void Resist",
-      "Set Bonus (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
+      "+1 Random Class Modifier",
+      "Set Attribute (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5738,7 +5917,8 @@
     "modifiers": [
       "+20% Cooldown Reduc.",
       "+30% Boss Dmg",
-      "Set Bonus (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
+      "+1 Random Class Modifier",
+      "Set Attribute (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5759,7 +5939,8 @@
     "modifiers": [
       "+100 STR/INT",
       "+25% All Resist",
-      "Set Bonus (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
+      "+1 Random Class Modifier",
+      "Set Attribute (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5780,7 +5961,8 @@
     "modifiers": [
       "+100 STR/INT",
       "+30% Attack Speed",
-      "Set Bonus (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
+      "+1 Random Class Modifier",
+      "Set Attribute (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5801,7 +5983,8 @@
     "modifiers": [
       "+800 Max HP",
       "+30% Crit Chance",
-      "Set Bonus (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
+      "+1 Random Class Modifier",
+      "Set Attribute (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -5822,7 +6005,8 @@
     "modifiers": [
       "+180 STA",
       "+25% Life Steal",
-      "Set Bonus (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5843,7 +6027,8 @@
     "modifiers": [
       "+140 STA",
       "+30% Movement Spd",
-      "Set Bonus (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -5864,7 +6049,8 @@
     "modifiers": [
       "+200 INT/STA",
       "+25% All Resist",
-      "Set Bonus (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
+      "+1 Random Class Modifier",
+      "Set Attribute (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5886,7 +6072,7 @@
       "+15 All Stats",
       "+10% EXP Gained",
       "+20 Max HP",
-      "Set Bonus (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
+      "Set Attribute (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
     ],
     "uniqueTrait": "",
     "rawType": "Head (Hood)",
@@ -5908,7 +6094,7 @@
       "+25 All Stats",
       "+15% EXP Gained",
       "+5% Evasion",
-      "Set Bonus (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
+      "Set Attribute (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
     ],
     "uniqueTrait": "",
     "rawType": "Torso (Shirt)",
@@ -5930,7 +6116,7 @@
       "+10% EXP Gained",
       "+10% Cooldown Reduc.",
       "+5% All Resist",
-      "Set Bonus (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
+      "Set Attribute (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
     ],
     "uniqueTrait": "",
     "rawType": "Finger (Ring)",
@@ -5952,7 +6138,7 @@
       "+20 Agility",
       "+15% Gold Drop Rate",
       "+5% Attack Speed",
-      "Set Bonus (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
+      "Set Attribute (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
     ],
     "uniqueTrait": "",
     "rawType": "L-Hand (1H)",
@@ -5974,7 +6160,7 @@
       "+20 Stamina",
       "+15% Magic Find",
       "+5% Block Chance",
-      "Set Bonus (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
+      "Set Attribute (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
     ],
     "uniqueTrait": "",
     "rawType": "R-Hand (Shield)",
@@ -5996,7 +6182,7 @@
       "+15 All Stats",
       "+20% Potion Effect",
       "+15% Gold Drop Rate",
-      "Set Bonus (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
+      "Set Attribute (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
     ],
     "uniqueTrait": "",
     "rawType": "Waist (Belt)",
@@ -6018,7 +6204,7 @@
       "+20 Agility",
       "+10% Movement Speed",
       "+15% Magic Find",
-      "Set Bonus (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
+      "Set Attribute (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
     ],
     "uniqueTrait": "",
     "rawType": "Feet (Boots)",
@@ -6037,7 +6223,7 @@
     "socketCount": 0,
     "description": "A plain linen shirt, worn thin by the ash winds.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Shirt",
@@ -6056,7 +6242,7 @@
     "socketCount": 0,
     "description": "Thick, padded cloth that offers basic protection from bites and scratches.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Tunic",
@@ -6075,7 +6261,7 @@
     "socketCount": 0,
     "description": "The links are brittle and snap easily, but it beats bare skin.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Chainmail",
@@ -6094,7 +6280,7 @@
     "socketCount": 0,
     "description": "Cured with unnatural chemicals to resist the Void fog.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Cuirass",
@@ -6113,7 +6299,7 @@
     "socketCount": 0,
     "description": "Standard issue heavy armor forged in the Vanguard's Hold.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Plate",
@@ -6132,7 +6318,7 @@
     "socketCount": 0,
     "description": "Woven tightly from spider silk, it hums with latent energy.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Coat",
@@ -6151,7 +6337,7 @@
     "socketCount": 0,
     "description": "An industrial exoskeleton frame used by deep-trench divers.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Harness",
@@ -6170,7 +6356,7 @@
     "socketCount": 0,
     "description": "Fabric that phase-shifts slightly, making the wearer hard to focus on.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Robe",
@@ -6189,7 +6375,7 @@
     "socketCount": 0,
     "description": "Emits a rhythmic ticking sound; the metal feels warm to the touch.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Plate",
@@ -6208,7 +6394,7 @@
     "socketCount": 0,
     "description": "A chest piece made entirely of hard-light polygons and projected code.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Cuirass",
@@ -6433,7 +6619,7 @@
     "description": "An exoskeleton ripped from a massive spider. Still twitches.",
     "modifiers": [
       "+20 Agility",
-      "+60 Max HP",
+      "+60 Max HP (Permanent)",
       "+20% Poison Resist",
       "+15 Damage Reflect (Thorns)"
     ],
@@ -6455,7 +6641,7 @@
     "description": "Lined with sharp barbs on the inside to keep the wearer focused.",
     "modifiers": [
       "+45 Intelligence",
-      "+150 Max Mana",
+      "+150 Max Mana (Permanent)",
       "+15% Magic Damage",
       "+10% Cast Speed"
     ],
@@ -6477,7 +6663,7 @@
     "description": "A mantle of glass feathers that conduct electricity harmlessly away.",
     "modifiers": [
       "+75 Strength",
-      "+20% Evasion",
+      "+20% Evasion (Permanent)",
       "+15% Movement Speed",
       "+25% Lightning Resist"
     ],
@@ -6499,7 +6685,7 @@
     "description": "Enormously heavy; forces the wearer to walk with a lumbering gait.",
     "modifiers": [
       "+120 Stamina",
-      "+600 Max HP",
+      "+600 Max HP (Permanent)",
       "+30% Armor",
       "+40% Water Resist"
     ],
@@ -6521,8 +6707,9 @@
     "description": "A floating rig of server racks that orbits the wearer's torso.",
     "modifiers": [
       "+180 All Stats",
-      "+15% Boss Damage",
-      "+20% Cooldown Reduction"
+      "+15% Boss Damage (Permanent)",
+      "+20% Cooldown Reduction",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "Harness",
@@ -6542,8 +6729,9 @@
     "description": "Molten Core: Enemies that strike you in melee are Ignited, taking Fire Damage equal to 10% of their Max HP over 3 turns.",
     "modifiers": [
       "+25 to 50 Core Stat",
-      "+100 to 200 Max HP",
-      "+15% to 30% Fire Resist"
+      "+100 to 200 Max HP (Permanent)",
+      "+15% to 30% Fire Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Molten Core: Enemies that strike you in melee are Ignited, taking Fire Damage equal to 10% of their Max HP over 3 turns.",
     "rawType": "Plate",
@@ -6563,8 +6751,9 @@
     "description": "Void Siphon: 30% of all damage you take is converted into Mana. If your Mana is full, the excess heals you instead.",
     "modifiers": [
       "+60 to 100 Core Stat",
-      "+250 to 450 Max Mana",
-      "+20% to 40% Void Resist"
+      "+250 to 450 Max Mana (Permanent)",
+      "+20% to 40% Void Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Void Siphon: 30% of all damage you take is converted into Mana. If your Mana is full, the excess heals you instead.",
     "rawType": "Robe",
@@ -6584,8 +6773,9 @@
     "description": "Apex Hide: You take 25% less damage from Bosses and Elite enemies.",
     "modifiers": [
       "+90 to 140 STR & INT",
-      "+400 to 700 Max HP",
-      "+15% to 25% Life Steal"
+      "+400 to 700 Max HP (Permanent)",
+      "+15% to 25% Life Steal",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Apex Hide: You take 25% less damage from Bosses and Elite enemies.",
     "rawType": "Coat",
@@ -6605,8 +6795,9 @@
     "description": "Overclock: Every time you take damage, your Attack Speed and Cast Speed increase by 10%. Stacks up to 5 times. Lasts until the end of combat.",
     "modifiers": [
       "+120 to 180 Core Stat",
-      "+20% to 30% All Resist",
-      "+15% to 25% Attack Speed"
+      "+20% to 30% All Resist (Permanent)",
+      "+15% to 25% Attack Speed",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Overclock: Every time you take damage, your Attack Speed and Cast Speed increase by 10%. Stacks up to 5 times. Lasts until the end of combat.",
     "rawType": "Cuirass",
@@ -6626,8 +6817,9 @@
     "description": "God Mode: At the start of every combat encounter, you gain a hard-light shield equal to 100% of your Max HP.",
     "modifiers": [
       "+200 to 300 Core Stat",
-      "+1000 to 1500 Max HP",
-      "+25% to 50% Magic Find"
+      "+1000 to 1500 Max HP (Permanent)",
+      "+25% to 50% Magic Find",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "God Mode: At the start of every combat encounter, you gain a hard-light shield equal to 100% of your Max HP.",
     "rawType": "Plate",
@@ -6646,7 +6838,7 @@
     "socketCount": 0,
     "description": "Dried, petrified grass twisted into a fragile rope.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Cord",
@@ -6665,7 +6857,7 @@
     "socketCount": 0,
     "description": "A strip of torn fabric used to hold pants up.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Sash",
@@ -6684,7 +6876,7 @@
     "socketCount": 0,
     "description": "Stiff, uncomfortable, but features a rusted iron buckle.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Belt",
@@ -6703,7 +6895,7 @@
     "socketCount": 0,
     "description": "Heavy metal links that clink loudly when you walk.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Girdle",
@@ -6722,7 +6914,7 @@
     "socketCount": 0,
     "description": "Features numerous empty pouches for holding supplies.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Belt",
@@ -6741,7 +6933,7 @@
     "socketCount": 0,
     "description": "Surprisingly strong for being so thin and lightweight.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Sash",
@@ -6760,7 +6952,7 @@
     "socketCount": 0,
     "description": "Lined with heavy lead blocks to counteract buoyancy.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Belt",
@@ -6779,7 +6971,7 @@
     "socketCount": 0,
     "description": "Woven from the ambient digital fog; feels cold to the touch.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Cord",
@@ -6798,7 +6990,7 @@
     "socketCount": 0,
     "description": "Interlocking brass plates that adjust to your breathing.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Girdle",
@@ -6817,7 +7009,7 @@
     "socketCount": 0,
     "description": "A floating band of holograms that locks around your waist.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Belt",
@@ -7042,7 +7234,7 @@
     "description": "Binds tightly to the wearer, secreting a faint paralyzing toxin.",
     "modifiers": [
       "+15 Agility",
-      "+40 Max HP",
+      "+40 Max HP (Permanent)",
       "+15% Poison Resist",
       "+10% Movement Speed"
     ],
@@ -7064,7 +7256,7 @@
     "description": "Heavy, rusted iron chains worn as a twisted form of penance.",
     "modifiers": [
       "+30 Intelligence",
-      "+100 Max Mana",
+      "+100 Max Mana (Permanent)",
       "+10% Magic Damage",
       "+10% Cooldown Reduction"
     ],
@@ -7086,7 +7278,7 @@
     "description": "Woven from razor-sharp glass fibers that spark when rubbed.",
     "modifiers": [
       "+50 Strength",
-      "+15% Evasion",
+      "+15% Evasion (Permanent)",
       "+10% Attack Speed",
       "+20% Lightning Resist"
     ],
@@ -7108,7 +7300,7 @@
     "description": "An actual ship's chain wrapped multiple times around the waist.",
     "modifiers": [
       "+90 Stamina",
-      "+400 Max HP",
+      "+400 Max HP (Permanent)",
       "+20% Armor",
       "+30% Water Resist"
     ],
@@ -7130,8 +7322,9 @@
     "description": "Contains holographic tools that phase into reality when needed.",
     "modifiers": [
       "+130 All Stats",
-      "+15% Boss Damage",
-      "+25% Potion Effect"
+      "+15% Boss Damage (Permanent)",
+      "+25% Potion Effect",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "Belt",
@@ -7151,8 +7344,9 @@
     "description": "Ember Flask: Whenever you use a healing potion, you unleash a shockwave of Fire Damage equal to 100% of your Strength to all enemies.",
     "modifiers": [
       "+20 to 40 Core Stat",
-      "+60 to 120 Max HP",
-      "+10% to 20% Fire Resist"
+      "+60 to 120 Max HP (Permanent)",
+      "+10% to 20% Fire Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Ember Flask: Whenever you use a healing potion, you unleash a shockwave of Fire Damage equal to 100% of your Strength to all enemies.",
     "rawType": "Girdle",
@@ -7172,8 +7366,9 @@
     "description": "Crush Depth: Enemies that begin their turn in the same room as you have their Evasion and Attack Speed permanently reduced by 15%.",
     "modifiers": [
       "+40 to 75 Core Stat",
-      "+150 to 250 Max Mana",
-      "+20% to 35% Void Resist"
+      "+150 to 250 Max Mana (Permanent)",
+      "+20% to 35% Void Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Crush Depth: Enemies that begin their turn in the same room as you have their Evasion and Attack Speed permanently reduced by 15%.",
     "rawType": "Belt",
@@ -7193,8 +7388,9 @@
     "description": "Beast Blood: Potion effects and base HP regeneration are multiplied by 300%, but your base Armor is reduced by 25%.",
     "modifiers": [
       "+70 to 110 STR & INT",
-      "+250 to 450 Max HP",
-      "+10% to 20% Life Steal"
+      "+250 to 450 Max HP (Permanent)",
+      "+10% to 20% Life Steal",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Beast Blood: Potion effects and base HP regeneration are multiplied by 300%, but your base Armor is reduced by 25%.",
     "rawType": "Cord",
@@ -7214,8 +7410,9 @@
     "description": "Tick-Tock: Every 3rd attack you make instantly reduces the cooldown of all your active skills by 1 turn.",
     "modifiers": [
       "+100 to 150 Core Stat",
-      "+15% to 25% All Resist",
-      "+15% to 25% Cooldown Reduc."
+      "+15% to 25% All Resist (Permanent)",
+      "+15% to 25% Cooldown Reduc.",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Tick-Tock: Every 3rd attack you make instantly reduces the cooldown of all your active skills by 1 turn.",
     "rawType": "Sash",
@@ -7235,8 +7432,9 @@
     "description": "Memory Leak: Every attack you land steals 5% of the enemy's maximum damage output and adds it to your own for the remainder of the battle.",
     "modifiers": [
       "+150 to 220 Core Stat",
-      "+600 to 900 Max HP",
-      "+25% to 45% Magic Find"
+      "+600 to 900 Max HP (Permanent)",
+      "+25% to 45% Magic Find",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Memory Leak: Every attack you land steals 5% of the enemy's maximum damage output and adds it to your own for the remainder of the battle.",
     "rawType": "Belt",
@@ -7255,9 +7453,9 @@
     "socketCount": 0,
     "description": "A blade as wide as a man's torso.",
     "modifiers": [
-      "35 - 50 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+20 to 35 STR",
+      "+5% to 10% Armor Pen",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Sword",
@@ -7276,9 +7474,9 @@
     "socketCount": 0,
     "description": "Top-heavy and brutal; designed to shatter armor.",
     "modifiers": [
-      "22 - 32 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+25 to 40 STR/STA",
+      "+10% to 20% Boss Dmg",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "1H Mace",
@@ -7297,9 +7495,9 @@
     "socketCount": 0,
     "description": "Heavily chipped from severing bone.",
     "modifiers": [
-      "45 - 60 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+35 to 55 STR",
+      "+10% to 20% Crit Dmg",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Axe",
@@ -7318,10 +7516,11 @@
     "socketCount": 0,
     "description": "Steadfast: While you have a Shield equipped, your Weapon Damage is increased by 30%.",
     "modifiers": [
+      "+15% to 25% Total Armor (Permanent)",
       "+45 to 70 STR/STA",
-      "+15% to 25% Armor"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Steadfast: While you have a Shield equipped, your Weapon Damage is increased by 30%.",
     "rawType": "1H Sword",
     "classTag": "Juggernaut"
   },
@@ -7338,10 +7537,11 @@
     "socketCount": 0,
     "description": "Seismic Slam: Your Physical attacks unleash a shockwave, dealing 30% of the initial damage to all other enemies in the room.",
     "modifiers": [
+      "+20% to 40% Crit Damage (Permanent)",
       "+60 to 85 STR",
-      "+20% to 40% Crit Dmg"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Seismic Slam: Your Physical attacks unleash a shockwave, dealing 30% of the initial damage to all other enemies in the room.",
     "rawType": "2H Mace",
     "classTag": "Juggernaut"
   },
@@ -7358,9 +7558,9 @@
     "socketCount": 0,
     "description": "The jagged edge guarantees severe bleeding.",
     "modifiers": [
-      "18 - 26 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+20 to 35 AGI",
+      "+5% to 10% Crit Chance",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "1H Dagger",
@@ -7379,9 +7579,9 @@
     "socketCount": 0,
     "description": "Fires arrows with terrifying velocity.",
     "modifiers": [
-      "30 - 45 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+25 to 40 AGI",
+      "+10% to 15% Attack Spd",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Bow",
@@ -7400,9 +7600,9 @@
     "socketCount": 0,
     "description": "Perfectly balanced for lightning-fast thrusts.",
     "modifiers": [
-      "28 - 38 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+35 to 55 AGI",
+      "+10% to 20% Evasion",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "1H Sword",
@@ -7421,10 +7621,11 @@
     "socketCount": 0,
     "description": "Crimson Thirst: Every application of Bleed or Poison on an enemy increases your Life Steal by 5%.",
     "modifiers": [
+      "+15% to 25% Life Steal (Permanent)",
       "+45 to 70 AGI",
-      "+15% to 25% Life Steal"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Crimson Thirst: Every application of Bleed or Poison on an enemy increases your Life Steal by 5%.",
     "rawType": "1H Dagger",
     "classTag": "Phantom"
   },
@@ -7441,10 +7642,11 @@
     "socketCount": 0,
     "description": "Ghost-String: Attacking from Stealth has a 50% chance to NOT break your stealth, allowing consecutive critical hits.",
     "modifiers": [
+      "+50% to 100% Crit Damage (Permanent)",
       "+60 to 85 AGI",
-      "+50% to 100% Crit Dmg"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Ghost-String: Attacking from Stealth has a 50% chance to NOT break your stealth, allowing consecutive critical hits.",
     "rawType": "2H Bow",
     "classTag": "Phantom"
   },
@@ -7461,9 +7663,9 @@
     "socketCount": 0,
     "description": "A conductive rod that focuses raw magic efficiently.",
     "modifiers": [
-      "15 - 22 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+20 to 35 INT",
+      "+10% to 20% Cast Spd",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "1H Wand",
@@ -7482,9 +7684,9 @@
     "socketCount": 0,
     "description": "Etched with glowing geometric runes.",
     "modifiers": [
-      "28 - 42 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+25 to 40 INT",
+      "+50 to 100 Max Mana",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Staff",
@@ -7503,9 +7705,9 @@
     "socketCount": 0,
     "description": "Held in the off-hand to amplify magical output.",
     "modifiers": [
-      "*None*",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+35 to 55 INT",
+      "+20 to 40 Flat Elem Dmg",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Off-Hand",
@@ -7524,10 +7726,11 @@
     "socketCount": 0,
     "description": "Overload: Every 3rd spell you cast strikes twice, with the second strike dealing 50% damage.",
     "modifiers": [
+      "+15% to 25% All Resist (Permanent)",
       "+45 to 70 INT",
-      "+15% to 25% All Resist"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Overload: Every 3rd spell you cast strikes twice, with the second strike dealing 50% damage.",
     "rawType": "1H Wand",
     "classTag": "Weaver"
   },
@@ -7544,10 +7747,11 @@
     "socketCount": 0,
     "description": "Feedback Loop: Casting the same spell two turns in a row reduces its Mana cost to 0 on the second cast.",
     "modifiers": [
+      "+100 to 200 Max Mana (Permanent)",
       "+60 to 85 INT",
-      "+100 to 200 Max Mana"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Feedback Loop: Casting the same spell two turns in a row reduces its Mana cost to 0 on the second cast.",
     "rawType": "2H Staff",
     "classTag": "Weaver"
   },
@@ -7564,9 +7768,9 @@
     "socketCount": 0,
     "description": "Covered in thorns that secrete a mild neurotoxin.",
     "modifiers": [
-      "20 - 28 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+20 to 35 INT/STA",
+      "+5 to 15 Flat Poison Dmg",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "1H Whip",
@@ -7585,9 +7789,9 @@
     "socketCount": 0,
     "description": "A wooden totem that pulses like a beating heart.",
     "modifiers": [
-      "*None*",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+25 to 40 STA",
+      "+10% to 20% Summon HP",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Off-Hand",
@@ -7606,9 +7810,9 @@
     "socketCount": 0,
     "description": "A long spear used to direct packs of summoned beasts.",
     "modifiers": [
-      "40 - 55 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+35 to 55 INT/STA",
+      "+15% to 25% Max HP",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Spear",
@@ -7627,10 +7831,11 @@
     "socketCount": 0,
     "description": "Pack Leader: Your active Summon mirrors your attacks, dealing 30% of your weapon damage as bonus Magic Damage.",
     "modifiers": [
+      "+10% to 20% Boss Damage (Permanent)",
       "+45 to 70 INT/STA",
-      "+10% to 20% Boss Dmg"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Pack Leader: Your active Summon mirrors your attacks, dealing 30% of your weapon damage as bonus Magic Damage.",
     "rawType": "1H Whip",
     "classTag": "Warden"
   },
@@ -7647,10 +7852,11 @@
     "socketCount": 0,
     "description": "Symbiosis: Whenever your active Summon deals damage, you are healed for 25% of the damage dealt.",
     "modifiers": [
+      "+15% to 25% All Resist (Permanent)",
       "+60 to 85 INT/STA",
-      "+15% to 25% All Resist"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Symbiosis: Whenever your active Summon deals damage, you are healed for 25% of the damage dealt.",
     "rawType": "Off-Hand",
     "classTag": "Warden"
   },
@@ -7667,9 +7873,9 @@
     "socketCount": 0,
     "description": "A terrifyingly heavy axe meant for executions.",
     "modifiers": [
-      "110 - 150 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+75 to 110 STR",
+      "+15% to 25% Crit Dmg",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "",
@@ -7688,9 +7894,9 @@
     "socketCount": 0,
     "description": "Flanged to catch and tear through enemy plating.",
     "modifiers": [
-      "70 - 95 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+85 to 120 STR/STA",
+      "+10% to 20% Armor Pen",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "",
@@ -7709,10 +7915,11 @@
     "socketCount": 0,
     "description": "Frenzy: For every 10% of HP you are missing, your Base Weapon Damage increases by 15%.",
     "modifiers": [
+      "+20% to 35% Attack Speed (Permanent)",
       "+130 to 180 STR",
-      "+20% to 35% Attack Spd"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Frenzy: For every 10% of HP you are missing, your Base Weapon Damage increases by 15%.",
     "rawType": "",
     "classTag": "Juggernaut"
   },
@@ -7729,10 +7936,11 @@
     "socketCount": 0,
     "description": "Singularity: Your weapon damage is now calculated entirely using your Total Armor instead of Strength.",
     "modifiers": [
+      "+20% to 40% Total Armor (Permanent)",
       "+150 to 200 STR/STA",
-      "+20% to 40% Armor"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Singularity: Your weapon damage is now calculated entirely using your Total Armor instead of Strength.",
     "rawType": "",
     "classTag": "Juggernaut"
   },
@@ -7749,10 +7957,11 @@
     "socketCount": 0,
     "description": "Executioner: Deals 200% damage to targets below 20% HP.",
     "modifiers": [
+      "+30% to 50% Boss Damage (Permanent)",
       "+170 to 220 STR",
-      "+30% to 50% Boss Dmg"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Executioner: Deals 200% damage to targets below 20% HP.",
     "rawType": "",
     "classTag": "Juggernaut"
   },
@@ -7769,9 +7978,9 @@
     "socketCount": 0,
     "description": "The blade weeps toxic fluid continuously.",
     "modifiers": [
-      "65 - 85 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+75 to 110 AGI",
+      "+30 to 50 Flat Poison",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "",
@@ -7790,9 +7999,9 @@
     "socketCount": 0,
     "description": "High-tension cables allow for piercing shots.",
     "modifiers": [
-      "120 - 160 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+85 to 120 AGI",
+      "+15% to 25% Crit Chance",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "",
@@ -7811,10 +8020,11 @@
     "socketCount": 0,
     "description": "Toxic Shock: When an enemy reaches 5 stacks of Poison, the stacks detonate, dealing 500% AGI damage instantly.",
     "modifiers": [
+      "+20% to 30% Attack Speed (Permanent)",
       "+130 to 180 AGI",
-      "+20% to 30% Attack Spd"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Toxic Shock: When an enemy reaches 5 stacks of Poison, the stacks detonate, dealing 500% AGI damage instantly.",
     "rawType": "",
     "classTag": "Phantom"
   },
@@ -7831,10 +8041,11 @@
     "socketCount": 0,
     "description": "Headshot: Your Critical Hits ignore 100% of the enemy's Evasion and Armor.",
     "modifiers": [
+      "+100% to 150% Crit Damage (Permanent)",
       "+150 to 200 AGI",
-      "+100% to 150% Crit Dmg"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Headshot: Your Critical Hits ignore 100% of the enemy's Evasion and Armor.",
     "rawType": "",
     "classTag": "Phantom"
   },
@@ -7851,10 +8062,11 @@
     "socketCount": 0,
     "description": "Vanish: Killing an enemy instantly grants you Stealth (Shadow Cloak) for 1 turn.",
     "modifiers": [
+      "+20% to 30% Evasion (Permanent)",
       "+170 to 220 AGI",
-      "+20% to 30% Evasion"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Vanish: Killing an enemy instantly grants you Stealth (Shadow Cloak) for 1 turn.",
     "rawType": "",
     "classTag": "Phantom"
   },
@@ -7871,9 +8083,9 @@
     "socketCount": 0,
     "description": "Embedded with a Ruby, Sapphire, and Topaz.",
     "modifiers": [
-      "90 - 130 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+75 to 110 INT",
+      "+15% to 25% All Resist",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "",
@@ -7892,9 +8104,9 @@
     "socketCount": 0,
     "description": "Used for bloodletting rituals.",
     "modifiers": [
-      "70 - 95 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+85 to 120 INT/STA",
+      "+200 to 400 Max HP",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "",
@@ -7913,10 +8125,11 @@
     "socketCount": 0,
     "description": "Prismatic: Your spells deal Fire, Ice, and Lightning damage simultaneously, applying the debuffs of all three elements.",
     "modifiers": [
+      "+20% to 30% Cast Speed (Permanent)",
       "+130 to 180 INT",
-      "+20% to 30% Cast Spd"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Prismatic: Your spells deal Fire, Ice, and Lightning damage simultaneously, applying the debuffs of all three elements.",
     "rawType": "",
     "classTag": "Weaver"
   },
@@ -7933,10 +8146,11 @@
     "socketCount": 0,
     "description": "Blood Price: Magic Damage is multiplied by 2x, but your spells now cost 20% of your Current HP per cast.",
     "modifiers": [
+      "+15% to 25% Life Steal (Permanent)",
       "+150 to 200 INT",
-      "+15% to 25% Life Steal"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Blood Price: Magic Damage is multiplied by 2x, but your spells now cost 20% of your Current HP per cast.",
     "rawType": "",
     "classTag": "Weaver"
   },
@@ -7953,10 +8167,11 @@
     "socketCount": 0,
     "description": "Aether-Tap: Converts 50% of your Max Mana into raw Base Weapon Damage.",
     "modifiers": [
+      "+300 to 500 Max Mana (Permanent)",
       "+170 to 220 INT",
-      "+300 to 500 Max Mana"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Aether-Tap: Converts 50% of your Max Mana into raw Base Weapon Damage.",
     "rawType": "",
     "classTag": "Weaver"
   },
@@ -7973,9 +8188,9 @@
     "socketCount": 0,
     "description": "Rusted and dull, but imbued with dark magic.",
     "modifiers": [
-      "100 - 140 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+75 to 110 INT",
+      "+20% to 30% Summon HP",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "",
@@ -7994,9 +8209,9 @@
     "socketCount": 0,
     "description": "A massive two-handed weapon carved from a beast's femur.",
     "modifiers": [
-      "110 - 150 Dmg",
-      "+1 Random Modifier (Class Pool)",
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+60 to 90 STR & INT",
+      "+15% to 25% Armor",
+      "+1 Optional Modifier (Class/Utility Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "",
@@ -8015,10 +8230,11 @@
     "socketCount": 0,
     "description": "Macabre: When an enemy dies, it is instantly resurrected as a Skeletal Minion that fights for you until the end of the Node.",
     "modifiers": [
+      "+25% to 40% Magic Find (Permanent)",
       "+130 to 180 INT",
-      "+25% to 40% Magic Find"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Macabre: When an enemy dies, it is instantly resurrected as a Skeletal Minion that fights for you until the end of the Node.",
     "rawType": "",
     "classTag": "Warden"
   },
@@ -8035,10 +8251,11 @@
     "socketCount": 0,
     "description": "Wild-Shape: While in Chimera Form, your attacks hit twice, and you are immune to all debuffs.",
     "modifiers": [
+      "+20% to 30% Crit Chance (Permanent)",
       "+100 to 150 STR & INT",
-      "+20% to 30% Crit Chance"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Wild-Shape: While in Chimera Form, your attacks hit twice, and you are immune to all debuffs.",
     "rawType": "",
     "classTag": "Warden"
   },
@@ -8055,10 +8272,11 @@
     "socketCount": 0,
     "description": "Ancestral Spirit: Replaces your active Pet with an invincible Ancient Spirit that heals you for 10% of your Max HP every turn.",
     "modifiers": [
+      "+500 to 800 Max HP (Permanent)",
       "+170 to 220 INT/STA",
-      "+500 to 800 Max HP"
+      "+1 High Random Class Affix"
     ],
-    "uniqueTrait": "",
+    "uniqueTrait": "Ancestral Spirit: Replaces your active Pet with an invincible Ancient Spirit that heals you for 10% of your Max HP every turn.",
     "rawType": "",
     "classTag": "Warden"
   },
@@ -8075,7 +8293,7 @@
     "socketCount": 0,
     "description": "A brittle blade scavenged from a corpse.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "1H Dagger",
@@ -8094,7 +8312,7 @@
     "socketCount": 0,
     "description": "Heavy and unwieldy, but it crushes skulls well enough.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Staff",
@@ -8113,7 +8331,7 @@
     "socketCount": 0,
     "description": "Better than blocking with your bare forearm.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Shield",
@@ -8132,7 +8350,7 @@
     "socketCount": 0,
     "description": "The edge is dull, acting more like a club than a blade.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "1H Sword",
@@ -8151,7 +8369,7 @@
     "socketCount": 0,
     "description": "The string looks ready to snap at any moment.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Bow",
@@ -8170,7 +8388,7 @@
     "socketCount": 0,
     "description": "Bound in rusted iron rings.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Shield",
@@ -8189,7 +8407,7 @@
     "socketCount": 0,
     "description": "Used by the butchers of old Oakhaven.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "1H Axe",
@@ -8208,7 +8426,7 @@
     "socketCount": 0,
     "description": "The wood is petrified, making it incredibly dense.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Staff",
@@ -8227,7 +8445,7 @@
     "socketCount": 0,
     "description": "Standard issue for new recruits at the Vanguard's Hold.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "Shield",
@@ -8246,7 +8464,7 @@
     "socketCount": 0,
     "description": "A clean, sharp blade forged by Garrick the Smith.",
     "modifiers": [
-      "+1 Optional Modifier (Class-Weighted Roll)"
+      "+1 Optional Core/Modifier Stat (Class Roll)"
     ],
     "uniqueTrait": "",
     "rawType": "2H Sword",
@@ -8471,7 +8689,7 @@
     "description": "Disgusting, but highly effective for quick, bleeding strikes.",
     "modifiers": [
       "+10 Agility",
-      "+5% Attack Speed",
+      "+5% Attack Speed (Permanent)",
       "+10% Poison Resist",
       "+5% Life Steal"
     ],
@@ -8493,7 +8711,7 @@
     "description": "Constantly drips a highly acidic, glowing venom.",
     "modifiers": [
       "+15 STR / AGI",
-      "+15 Flat Poison Dmg",
+      "+15 Flat Poison Dmg (Permanent)",
       "+10% Crit Chance",
       "+20% Crit Damage"
     ],
@@ -8515,7 +8733,7 @@
     "description": "Swings slowly, but hits with the force of a meteor.",
     "modifiers": [
       "+25 Strength",
-      "+20 Flat Fire Dmg",
+      "+20 Flat Fire Dmg (Permanent)",
       "+15% Area of Effect Dmg",
       "-10% Attack Speed (Debuff)"
     ],
@@ -8537,7 +8755,7 @@
     "description": "A shield made of glass feathers that deflects both blades and magic.",
     "modifiers": [
       "+20 Agility",
-      "+10% Evasion",
+      "+10% Evasion (Permanent)",
       "+10% Movement Speed",
       "+20% Lightning Resist"
     ],
@@ -8559,8 +8777,9 @@
     "description": "The very axe that tore the fabric of Act 1 apart.",
     "modifiers": [
       "+35 Strength",
-      "+25% Boss Damage",
-      "+15% Armor Penetration"
+      "+25% Boss Damage (Permanent)",
+      "+15% Armor Penetration",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "",
     "rawType": "2H Axe",
@@ -8580,8 +8799,9 @@
     "description": "Ignition: Critical Hits ignite the enemy, dealing an additional 50% of the initial hit's damage over 2 turns.",
     "modifiers": [
       "+15 to 25 STR/INT",
-      "+5% to 10% Crit Chance",
-      "+10 to 20 Flat Fire Dmg"
+      "+5% to 10% Crit Chance (Permanent)",
+      "+10 to 20 Flat Fire Dmg",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Ignition: Critical Hits ignite the enemy, dealing an additional 50% of the initial hit's damage over 2 turns.",
     "rawType": "1H Mace",
@@ -8601,8 +8821,9 @@
     "description": "Entangle: Your basic attacks have a 20% chance to root the enemy, preventing them from using Evasion for 3 turns.",
     "modifiers": [
       "+20 to 30 AGI",
-      "+10% to 20% Attack Speed",
-      "+15% to 25% Poison Resist"
+      "+10% to 20% Attack Speed (Permanent)",
+      "+15% to 25% Poison Resist",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Entangle: Your basic attacks have a 20% chance to root the enemy, preventing them from using Evasion for 3 turns.",
     "rawType": "2H Bow",
@@ -8622,8 +8843,9 @@
     "description": "Phalanx: While equipped, your active Companion takes 50% less damage from all sources.",
     "modifiers": [
       "+25 to 35 STR/STA",
-      "+100 to 150 Max HP",
-      "+5% to 15% Block Chance"
+      "+100 to 150 Max HP (Permanent)",
+      "+5% to 15% Block Chance",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Phalanx: While equipped, your active Companion takes 50% less damage from all sources.",
     "rawType": "Shield",
@@ -8643,8 +8865,9 @@
     "description": "Glitch-Strike: 10% chance on hit to instantly deal damage equal to 15% of the enemy's Current HP (bypasses armor).",
     "modifiers": [
       "+30 to 45 Core Stat",
-      "+15% to 25% Crit Damage",
-      "+15 to 30 Flat Void Dmg"
+      "+15% to 25% Crit Damage (Permanent)",
+      "+15 to 30 Flat Void Dmg",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Glitch-Strike: 10% chance on hit to instantly deal damage equal to 15% of the enemy's Current HP (bypasses armor).",
     "rawType": "1H Sword",
@@ -8664,8 +8887,9 @@
     "description": "Overgrowth: Casting a spell heals you for 10% of your Max HP. If you are at full HP, it grants a temporary armor shield instead.",
     "modifiers": [
       "+40 to 60 INT",
-      "+100 to 200 Max Mana",
-      "+15% to 25% Cast Speed"
+      "+100 to 200 Max Mana (Permanent)",
+      "+15% to 25% Cast Speed",
+      "+1 Random Class Modifier"
     ],
     "uniqueTrait": "Overgrowth: Casting a spell heals you for 10% of your Max HP. If you are at full HP, it grants a temporary armor shield instead.",
     "rawType": "2H Staff",

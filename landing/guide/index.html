@@ -70,7 +70,7 @@
       <div class="guide-header-box">
         <h2 class="guide-header-title"><span>⚔️</span> Equipment Directory & Class Loot Codex</h2>
         <p class="guide-header-desc">
-          Equipment drops are dynamically weighted to your active hero class. Tiers define modifier composition: <strong>Common</strong> (Base + 1 Optional), <strong>Magic</strong> (Base + 1 Random + 1 Optional), <strong>Rare</strong> (Base + 2 Random + 1 Optional), <strong>Relic</strong> (Base + 1 Unique + 2 Random), <strong>Mythic</strong> (High Base + 1 Unique Trait + 1 High Stat + 1 Random), <strong>Set</strong> (High Base + 1 High Stat + 2 Random + Set Bonus), and <strong>Corrupted</strong> (+Corrupted Infusion).
+          Equipment drops are dynamically weighted to your active hero class across diverse combat and utility affixes. Tiers define composition: <strong>Common</strong> (Base + 1 Optional Core/Stat), <strong>Magic</strong> (Base + 1 Core + 1 Optional), <strong>Rare</strong> (Base + 1 Core + 1 Random + 1 Optional), <strong>Relic</strong> (Base + 1 Core + 1 Permanent + 2 Random), <strong>Mythic</strong> (High Base + 1 High Permanent + 2 Random), <strong>Set</strong> (High Base + 1 High Stat + 2 Random + Set Attribute), and <strong>Corrupted</strong> (+Corrupted Infusion).
         </p>
       </div>
 
@@ -989,7 +989,9 @@
           let extraClass = '';
           if (mod.includes('(Optional)')) {
             extraClass = 'affix-optional';
-          } else if (mod.startsWith('Set Bonus')) {
+          } else if (mod.includes('(Permanent)')) {
+            extraClass = 'affix-permanent';
+          } else if (mod.startsWith('Set Attribute') || mod.startsWith('Set Bonus')) {
             extraClass = 'affix-set';
           } else if (displayRarity === 'Mythic') {
             extraClass = 'affix-legendary';

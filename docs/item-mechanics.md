@@ -31,19 +31,21 @@ To prevent the frustration of a Strength-based melee character receiving useless
 
 ---
 
-## 3. Rarity Tiers & Modifier Budgets (Class-Related Drops)
+## 3. Rarity Tiers & Modifier Budgets (Class-Related Drops & Diverse Modifiers)
 
-Drops are strictly related to the player's current character class. An item's Rarity dictates its base stats, signature traits, class affixes, and optional modifier rolls.
+Drops are strictly related to the player's current character class. Instead of being restricted solely to core stats, modifiers encompass the game's full array of combat and utility affixes: **Damage, Armor, HP, EXP, Gold/Currency, Range, Crit Damage, Crit Chance, Evasion, Defense/Block, STR, AGI, INT, STA, Fire, Ice, Poison, Void, Lightning, Water, All Resistances, Life Steal, Damage Reflect (Thorns), Luck (Magic Find), Boss Damage, Cooldown Reduction (CDR), and Attack/Cast Speed**.
+
+Modifiers can be **Permanent** (fixed inherent properties derived from the item's identity and name, such as nimble footwear guaranteeing Attack/Movement Speed or iron bracers guaranteeing Strength/Armor) or **Random/Optional** (rolled from the class-weighted affix pools).
 
 | Rarity | UI Color | Modifier Composition | Item Behavior & Budget Rule |
 | --- | --- | --- | --- |
-| **Common** | White | Base Stat + 1 Optional Modifier | Baseline equipment with authentic base stats (Damage or Armor) plus **1 Optional Modifier** rolled from the player's class pool. |
-| **Magic** | Blue | Base Stat + 1 Random Modifier + 1 Optional Modifier | Standard enchanted gear. Always rolls **1 guaranteed random class modifier** and **1 optional modifier** for early build customization. |
-| **Rare** | Yellow | Base Stat + 2 Random Modifiers + 1 Optional Modifier | The leveling and mid-game backbone. Guarantees **2 random class modifiers** plus **1 optional modifier** with elevated stat ranges. |
-| **Relic** | Purple | Base Stat + 1 Unique Modifier + 2 Random Modifiers | Fixed identity equipment drops. Possesses **1 signature Unique Modifier** (unique to the specific item identity) plus **2 random class-weighted modifiers**. |
-| **Mythic** | Orange | High Base Stat + 1 Unique Modifier + 1 High Stat Modifier + 1 Random Modifier | Pinnacle class weapons and armor. Rolls **amplified High Base Stats**, **1 signature Unique Trait** (gameplay-altering rule), **1 High Stat Modifier**, and **1 random class modifier**. |
-| **Set** | Green | High Base Stat + 1 High Stat Modifier + 2 Random Modifiers + Set Attribute | Synergy armor and armaments. Features **High Base Stats**, **1 High Stat Modifier**, **2 random class modifiers**, and the distinctive **Set Attribute bonus** active at 2, 3, or 4 pieces. |
-| **Corrupted** | Red/Glitch | As Is + Corrupted Modifier Infusion | *Post-Echo Pinnacle Drops.* Injects a game-breaking **Corrupted Modifier** (immense buff paired with a severe, build-testing drawback) on top of the item's existing budget. |
+| **Common** | White | Base Stat + 1 Optional Core/Modifier Stat | Baseline equipment with authentic base stats (Damage or Armor) plus **1 Optional Stat** (rolled as a core attribute or defensive/utility affix). |
+| **Magic** | Blue | Base Stat + 1 Core Stat + 1 Optional Modifier | Enchanted gear. Guarantees **1 Core Attribute** (+STR, +AGI, +INT, or +STA matching hero class) and **1 Optional Modifier** (combat, elemental, or utility affix). |
+| **Rare** | Yellow | Base Stat + 1 Core Stat + 1 Random Modifier + 1 Optional Modifier | Mid-game build backbone. Guarantees **1 Core Stat**, **1 Random Affix** (e.g. Crit, Attack Speed, Reflect, Elemental Dmg), and **1 Optional Modifier**. |
+| **Relic** | Purple | Base Stat + 1 Core Stat + 1 Permanent Modifier (Does Not Change) + 2 Random Modifiers | Unique identity equipment. Features **1 Core Stat**, **1 Permanent Thematic Modifier** fixed to the item's identity/name (e.g., Venom items always rolling Poison, Nimble items always rolling Speed), and **2 Random Class Affixes**. |
+| **Mythic** | Orange | High Base Stat + 1 High Permanent Modifier (Does Not Change) + 2 Random Modifiers | Pinnacle class armaments. Rolls **elevated High Base Stats**, **1 High Permanent Thematic Trait/Affix** that never changes, and **2 high-tier Random Class Modifiers**. |
+| **Set** | Green | High Base Stat + 1 High Stat Modifier + 2 Random Modifiers + Set Attribute | Coordinated synergy armor and weapons. Features **High Base Stats**, **1 High Stat Modifier**, **2 Random Modifiers**, and the distinctive **Set Attribute bonus** (active at 2, 3, or 4 equipped pieces). |
+| **Corrupted** | Red/Glitch | As Is + Corrupted Modifier Infusion | *Post-Echo Pinnacle Drops.* Preserves the item's existing tier budget while injecting a game-breaking **Corrupted Modifier** (immense buff paired with a severe, build-testing debuff). |
 
 ---
 

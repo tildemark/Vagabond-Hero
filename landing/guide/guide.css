@@ -672,6 +672,14 @@
   color: #64748b !important;
 }
 
+.affix-permanent {
+  color: #facc15 !important;
+  font-weight: 600;
+}
+.affix-permanent::before {
+  color: #facc15 !important;
+}
+
 .affix-unique {
   color: #c084fc !important;
   font-weight: 600;
