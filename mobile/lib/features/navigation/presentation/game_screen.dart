@@ -462,12 +462,14 @@ void _showInventoryModal(BuildContext context, WidgetRef ref) {
       side: BorderSide(color: GameColors.borderSubtle),
     ),
     builder: (context) {
-      final itemsAsync = ref.watch(playerInventoryProvider);
+      return Consumer(
+        builder: (context, sheetRef, _) {
+          final itemsAsync = sheetRef.watch(playerInventoryProvider);
 
-      return Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          return Container(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -584,6 +586,8 @@ void _showInventoryModal(BuildContext context, WidgetRef ref) {
             ),
           ],
         ),
+      );
+        },
       );
     },
   );

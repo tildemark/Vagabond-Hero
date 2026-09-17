@@ -25,7 +25,7 @@ class CombatLogNotifier extends Notifier<List<String>> {
   }
 }
 
-final combatEngineProvider = Provider.autoDispose<CombatEngine>((ref) {
+final combatEngineProvider = Provider<CombatEngine>((ref) {
   final db = ref.watch(databaseProvider);
   return CombatEngine(db, ref);
 });

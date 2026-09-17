@@ -6,8 +6,7 @@ import '../../../core/database/database_providers.dart';
 
 enum Direction { north, south, east, west }
 
-final navigationControllerProvider =
-    Provider.autoDispose<NavigationController>((ref) {
+final navigationControllerProvider = Provider<NavigationController>((ref) {
   final db = ref.watch(databaseProvider);
   return NavigationController(db, ref);
 });
