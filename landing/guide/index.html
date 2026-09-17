@@ -68,60 +68,137 @@
          ========================================================= -->
     <section id="tab-items" class="guide-section active">
       <div class="guide-header-box">
-        <h2 class="guide-header-title"><span>⚔️</span> Procedural Items, Sets & Legendaries</h2>
+        <h2 class="guide-header-title"><span>⚔️</span> Equipment Directory & Codex</h2>
         <p class="guide-header-desc">
-          Equipment spans 11 slots: Head, Neck, Torso, Waist, Arms, Legs, Feet, 2 Rings, Main Hand, and Off-Hand. Under the <strong>Artisan Socketing System</strong>, items drop with pure combat affixes (sockets never consume modifier rolls) and can have physical sockets drilled by Garrick the Artificer at camp.
+          Browse items by character archetype, compare progression from Level 1 to 70 slot-by-slot, and filter by rarity tier. Under the <strong>Artisan Socketing System</strong>, sockets never consume modifier rolls and can be forged into gear by Garrick the Artificer.
         </p>
       </div>
 
+      <!-- Step 1: Class Archetype Selector Deck -->
+      <div style="margin-bottom: 0.5rem;">
+        <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-gold); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.45rem;">
+          1. Select Hero Class / Archetype:
+        </div>
+        <div class="class-deck">
+          <button class="class-card-btn active" data-class="all" onclick="selectClassFilter('all', this)">
+            <span class="class-card-icon">🌐</span>
+            <div class="class-card-info">
+              <span class="class-card-title">All Classes</span>
+              <span class="class-card-sub">Universal & All Sets (425)</span>
+            </div>
+          </button>
+
+          <button class="class-card-btn" data-class="Vagabond" onclick="selectClassFilter('Vagabond', this)">
+            <span class="class-card-icon">🎒</span>
+            <div class="class-card-info">
+              <span class="class-card-title">Vagabond</span>
+              <span class="class-card-sub">Levels 1–20 Survivor (96)</span>
+            </div>
+          </button>
+
+          <button class="class-card-btn" data-class="Juggernaut" onclick="selectClassFilter('Juggernaut', this)">
+            <span class="class-card-icon">🛡️</span>
+            <div class="class-card-info">
+              <span class="class-card-title">Juggernaut</span>
+              <span class="class-card-sub">Fury • Heavy Plates (299)</span>
+            </div>
+          </button>
+
+          <button class="class-card-btn" data-class="Phantom" onclick="selectClassFilter('Phantom', this)">
+            <span class="class-card-icon">⚡</span>
+            <div class="class-card-info">
+              <span class="class-card-title">Phantom</span>
+              <span class="class-card-sub">Energy • Finesse Leathers (299)</span>
+            </div>
+          </button>
+
+          <button class="class-card-btn" data-class="Weaver" onclick="selectClassFilter('Weaver', this)">
+            <span class="class-card-icon">🔮</span>
+            <div class="class-card-info">
+              <span class="class-card-title">Weaver</span>
+              <span class="class-card-sub">Mana • Arcane Robes (301)</span>
+            </div>
+          </button>
+
+          <button class="class-card-btn" data-class="Warden" onclick="selectClassFilter('Warden', this)">
+            <span class="class-card-icon">🌿</span>
+            <div class="class-card-info">
+              <span class="class-card-title">Warden</span>
+              <span class="class-card-sub">Animus • Mail & Regalia (305)</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Slot Subcategory Tab Strip -->
+      <div style="margin-bottom: 0.5rem;">
+        <div style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.45rem;">
+          2. Compare Equipment Slots (Lv 1–70):
+        </div>
+        <div class="slot-deck" id="slot-deck-bar">
+          <button class="slot-btn active" data-slot="all" onclick="selectSlotFilter('all', this)">
+            <span>All Equipment</span> <span class="slot-count-badge" id="slot-count-all">425</span>
+          </button>
+          <button class="slot-btn" data-slot="Head" onclick="selectSlotFilter('Head', this)">
+            <span>🪖 Head / Helms</span> <span class="slot-count-badge" id="slot-count-Head">51</span>
+          </button>
+          <button class="slot-btn" data-slot="Chest" onclick="selectSlotFilter('Chest', this)">
+            <span>🥋 Torso / Chest</span> <span class="slot-count-badge" id="slot-count-Chest">81</span>
+          </button>
+          <button class="slot-btn" data-slot="Arms" onclick="selectSlotFilter('Arms', this)">
+            <span>🧤 Arms / Gloves</span> <span class="slot-count-badge" id="slot-count-Arms">30</span>
+          </button>
+          <button class="slot-btn" data-slot="Waist" onclick="selectSlotFilter('Waist', this)">
+            <span>🎗️ Waist / Belts</span> <span class="slot-count-badge" id="slot-count-Waist">31</span>
+          </button>
+          <button class="slot-btn" data-slot="Legs" onclick="selectSlotFilter('Legs', this)">
+            <span>👖 Legs / Greaves</span> <span class="slot-count-badge" id="slot-count-Legs">30</span>
+          </button>
+          <button class="slot-btn" data-slot="Feet" onclick="selectSlotFilter('Feet', this)">
+            <span>🥾 Feet / Boots</span> <span class="slot-count-badge" id="slot-count-Feet">31</span>
+          </button>
+          <button class="slot-btn" data-slot="Weapon" onclick="selectSlotFilter('Weapon', this)">
+            <span>⚔️ Weapons</span> <span class="slot-count-badge" id="slot-count-Weapon">78</span>
+          </button>
+          <button class="slot-btn" data-slot="OffHand" onclick="selectSlotFilter('OffHand', this)">
+            <span>🛡️ Off-Hands / Shields</span> <span class="slot-count-badge" id="slot-count-OffHand">14</span>
+          </button>
+          <button class="slot-btn" data-slot="Neck" onclick="selectSlotFilter('Neck', this)">
+            <span>📿 Amulets / Neck</span> <span class="slot-count-badge" id="slot-count-Neck">41</span>
+          </button>
+          <button class="slot-btn" data-slot="Ring" onclick="selectSlotFilter('Ring', this)">
+            <span>💍 Rings</span> <span class="slot-count-badge" id="slot-count-Ring">48</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Rarity Filter Pills, Sorting, and Search Bar -->
       <div class="filter-bar">
-        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-gold); font-weight: 600;">RARITY:</span>
-        <button class="filter-btn active" onclick="setRarityFilter('all', this)">All</button>
-        <button class="filter-btn" onclick="setRarityFilter('normal', this)">Common</button>
-        <button class="filter-btn" onclick="setRarityFilter('magic', this)">Magic</button>
-        <button class="filter-btn" onclick="setRarityFilter('rare', this)">Rare</button>
-        <button class="filter-btn" onclick="setRarityFilter('unique', this)">Unique</button>
-        <button class="filter-btn" onclick="setRarityFilter('legendary', this)">Legendary</button>
-        <button class="filter-btn" onclick="setRarityFilter('set', this)">Set</button>
+        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-gold); font-weight: 700;">RARITY:</span>
+        <div class="rarity-pill-group">
+          <button class="rarity-pill active" data-rarity="all" onclick="selectRarityFilter('all', this)">All</button>
+          <button class="rarity-pill" data-rarity="Common" onclick="selectRarityFilter('Common', this)">Common</button>
+          <button class="rarity-pill" data-rarity="Magic" onclick="selectRarityFilter('Magic', this)">Magic</button>
+          <button class="rarity-pill" data-rarity="Rare" onclick="selectRarityFilter('Rare', this)">Rare</button>
+          <button class="rarity-pill" data-rarity="Relic" onclick="selectRarityFilter('Relic', this)">Relic</button>
+          <button class="rarity-pill" data-rarity="Mythic" onclick="selectRarityFilter('Mythic', this)">Mythic</button>
+          <button class="rarity-pill" data-rarity="Set" onclick="selectRarityFilter('Set', this)">Set</button>
+        </div>
 
-        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-left: 0.5rem; font-weight: 600;">SLOT:</span>
-        <select class="filter-select" id="slot-select" onchange="setSlotFilter(this.value)">
-          <option value="all">All Equipment Slots</option>
-          <option value="Weapon">Weapons (1H / 2H / Shields)</option>
-          <option value="Head">Head (Helms / Hoods / Masks)</option>
-          <option value="Chest">Chest / Torso (Plate / Robes)</option>
-          <option value="Arms">Arms (Bracers / Gauntlets)</option>
-          <option value="Waist">Waist (Belts / Sashes / Cords)</option>
-          <option value="Legs">Legs (Greaves / Legguards)</option>
-          <option value="Feet">Feet (Boots / Sabatons)</option>
-          <option value="Neck">Neck (Amulets / Chokers)</option>
-          <option value="Ring">Fingers (Rings / Signets)</option>
-        </select>
-
-        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #f43f5e; margin-left: 0.5rem; font-weight: 600;">CLASS:</span>
-        <select class="filter-select" id="class-select" onchange="setClassFilter(this.value)">
-          <option value="all">All Archetypes & Subclasses</option>
-          <option value="Juggernaut">Juggernaut (Berserker / Void-Knight)</option>
-          <option value="Phantom">Phantom (Assassin / Rift-Sniper)</option>
-          <option value="Weaver">Weaver (Elementalist / Blood Mage)</option>
-          <option value="Warden">Warden (Necromancer / Druid)</option>
-          <option value="Vagabond">Vagabond (Novice Survivor)</option>
-        </select>
-
-        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #a78bfa; margin-left: 0.5rem; font-weight: 600;">SORT:</span>
+        <span style="font-family: var(--font-mono); font-size: 0.78rem; color: #a78bfa; margin-left: auto; font-weight: 700;">SORT:</span>
         <select class="filter-select" id="sort-select" onchange="setSortOrder(this.value)">
-          <option value="level-asc">Level: Low to High</option>
-          <option value="level-desc">Level: High to Low</option>
-          <option value="name-asc">Name: A to Z</option>
-          <option value="power-desc">Base Stat: Highest First</option>
+          <option value="level-asc">Progression: Level 1 → 70</option>
+          <option value="level-desc">Level: High to Low (70 → 1)</option>
+          <option value="power-desc">Base Stat (Damage / Armor)</option>
+          <option value="name-asc">Alphabetical (A → Z)</option>
         </select>
 
-        <input type="text" class="search-input" id="item-search" placeholder="Search 425 items..." oninput="handleSearch(this.value)" />
+        <input type="text" class="search-input" id="item-search" placeholder="Search by name, stat, affix..." oninput="handleSearch(this.value)" />
       </div>
 
       <div class="items-counter-bar">
         <span id="items-counter-text">Showing items...</span>
-        <span style="color: var(--accent-cyan);">Canonical Database: 425 Items (Acts 1–5)</span>
+        <span id="active-filter-summary" style="color: var(--accent-cyan);">Comparing: All Classes • All Slots • All Rarities</span>
       </div>
 
       <div class="cards-grid" id="items-grid">
@@ -669,6 +746,7 @@
         const res = await fetch('items_database.json');
         if (!res.ok) throw new Error('Failed to load items_database.json');
         allItems = await res.json();
+        updateSlotCountBadges();
         applyFilters();
       } catch (err) {
         console.error(err);
@@ -680,24 +758,85 @@
       }
     }
 
-    function setRarityFilter(rarity, btn) {
-      currentRarity = rarity;
-      currentPage = 1;
-      const parent = btn.parentElement;
-      parent.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      applyFilters();
+    // Helper to map item into its canonical slot category
+    function getItemSlotCategory(it) {
+      const es = it.equipSlot || '';
+      const bt = it.baseType || '';
+      if (es === 'Head' || bt === 'Head') return 'Head';
+      if (es === 'Chest' || bt === 'Chest' || bt === 'Armor') return 'Chest';
+      if (es === 'Arms' || bt === 'Arms') return 'Arms';
+      if (es === 'Waist' || bt === 'Waist') return 'Waist';
+      if (es === 'Legs' || bt === 'Legs') return 'Legs';
+      if (es === 'Feet' || bt === 'Feet') return 'Feet';
+      if (es === 'MainHand' || bt === 'Weapon') return 'Weapon';
+      if (es === 'OffHand' || bt === 'Shield') return 'OffHand';
+      if (es === 'Neck' || bt === 'Neck') return 'Neck';
+      if (es === 'RingL' || bt === 'Ring') return 'Ring';
+      return bt || es || 'Other';
     }
 
-    function setSlotFilter(slot) {
-      currentSlot = slot;
-      currentPage = 1;
-      applyFilters();
+    // Helper to check if item is usable by selected class
+    function isItemUsableByClass(it, cls) {
+      if (cls === 'all') return true;
+      const tag = it.classTag || 'All Classes';
+      if (cls === 'Vagabond') {
+        // Base survivor Lv 1-20
+        return (tag === 'All Classes' || tag === 'Vagabond') && it.reqLvl <= 20;
+      }
+      return tag === 'All Classes' || tag === cls;
     }
 
-    function setClassFilter(cls) {
+    function updateSlotCountBadges() {
+      const classUsableItems = allItems.filter(it => isItemUsableByClass(it, currentClass));
+      const slotCounts = {
+        all: classUsableItems.length,
+        Head: 0,
+        Chest: 0,
+        Arms: 0,
+        Waist: 0,
+        Legs: 0,
+        Feet: 0,
+        Weapon: 0,
+        OffHand: 0,
+        Neck: 0,
+        Ring: 0
+      };
+
+      classUsableItems.forEach(it => {
+        const cat = getItemSlotCategory(it);
+        if (slotCounts[cat] !== undefined) {
+          slotCounts[cat]++;
+        }
+      });
+
+      for (const [slotKey, count] of Object.entries(slotCounts)) {
+        const badge = document.getElementById(`slot-count-${slotKey}`);
+        if (badge) badge.textContent = count;
+      }
+    }
+
+    function selectClassFilter(cls, btn) {
       currentClass = cls;
       currentPage = 1;
+      document.querySelectorAll('.class-card-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      updateSlotCountBadges();
+      applyFilters();
+    }
+
+    function selectSlotFilter(slot, btn) {
+      currentSlot = slot;
+      currentPage = 1;
+      document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      applyFilters();
+    }
+
+    function selectRarityFilter(rarity, btn) {
+      currentRarity = rarity;
+      currentPage = 1;
+      document.querySelectorAll('.rarity-pill').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
       applyFilters();
     }
 
@@ -714,22 +853,23 @@
 
     function applyFilters() {
       filteredItems = allItems.filter(it => {
-        // Rarity filter
-        if (currentRarity !== 'all') {
-          const r = it.rarity.toLowerCase();
-          if (currentRarity === 'normal' && (r !== 'normal' && r !== 'common')) return false;
-          if (currentRarity !== 'normal' && r !== currentRarity) return false;
-        }
+        // Class check
+        if (!isItemUsableByClass(it, currentClass)) return false;
 
-        // Slot filter
+        // Slot check
         if (currentSlot !== 'all') {
-          if (it.baseType !== currentSlot && it.equipSlot !== currentSlot) return false;
+          const itemSlot = getItemSlotCategory(it);
+          if (itemSlot !== currentSlot) return false;
         }
 
-        // Class filter
-        if (currentClass !== 'all') {
-          const itemCls = it.classTag || 'All Classes';
-          if (itemCls !== 'All Classes' && itemCls !== currentClass) return false;
+        // Rarity check (Common, Magic, Rare, Relic, Mythic, Set, Corrupted)
+        if (currentRarity !== 'all') {
+          const r = it.rarity;
+          if (currentRarity === 'Common' && (r !== 'Common' && r !== 'Normal')) return false;
+          if (currentRarity === 'Relic' && (r !== 'Relic' && r !== 'Unique')) return false;
+          if (currentRarity === 'Mythic' && (r !== 'Mythic' && r !== 'Legendary')) return false;
+          if (currentRarity === 'Corrupted' && (r !== 'Corrupted' && r !== 'Glitched')) return false;
+          if (!['Common', 'Relic', 'Mythic', 'Corrupted'].includes(currentRarity) && r !== currentRarity) return false;
         }
 
         // Search query
@@ -740,24 +880,41 @@
           const matchMods = (it.modifiers || []).some(m => m.toLowerCase().includes(searchQuery));
           const matchTrait = (it.uniqueTrait || '').toLowerCase().includes(searchQuery);
           const matchCls = (it.classTag || '').toLowerCase().includes(searchQuery);
-          if (!matchName && !matchDesc && !matchId && !matchMods && !matchTrait && !matchCls) return false;
+          const matchType = (it.rawType || it.baseType || '').toLowerCase().includes(searchQuery);
+          if (!matchName && !matchDesc && !matchId && !matchMods && !matchTrait && !matchCls && !matchType) return false;
         }
 
         return true;
       });
 
-      // Sort items
+      // Sort items (default level-asc allows natural 1 to 70 comparison)
       filteredItems.sort((a, b) => {
-        if (currentSort === 'level-asc') return a.reqLvl - b.reqLvl;
-        if (currentSort === 'level-desc') return b.reqLvl - a.reqLvl;
+        if (currentSort === 'level-asc') {
+          if (a.reqLvl !== b.reqLvl) return a.reqLvl - b.reqLvl;
+          return a.name.localeCompare(b.name);
+        }
+        if (currentSort === 'level-desc') {
+          if (a.reqLvl !== b.reqLvl) return b.reqLvl - a.reqLvl;
+          return a.name.localeCompare(b.name);
+        }
         if (currentSort === 'name-asc') return a.name.localeCompare(b.name);
         if (currentSort === 'power-desc') {
           const powerA = Math.max(a.maxDamage, a.armorValue);
           const powerB = Math.max(b.maxDamage, b.armorValue);
-          return powerB - powerA;
+          if (powerB !== powerA) return powerB - powerA;
+          return b.reqLvl - a.reqLvl;
         }
         return 0;
       });
+
+      // Update header summary text
+      const summaryElem = document.getElementById('active-filter-summary');
+      if (summaryElem) {
+        const clsLabel = currentClass === 'all' ? 'All Classes' : currentClass;
+        const slotLabel = currentSlot === 'all' ? 'All Slots' : currentSlot;
+        const rarLabel = currentRarity === 'all' ? 'All Rarities' : currentRarity;
+        summaryElem.textContent = `Comparing: ${clsLabel} • ${slotLabel} • ${rarLabel} (Sorted: ${currentSort === 'level-asc' ? 'Lv 1 → 70' : currentSort})`;
+      }
 
       renderItems();
       renderPagination();
@@ -777,14 +934,20 @@
       if (pageItems.length === 0) {
         grid.innerHTML = `
           <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
-            No items matched your current filter criteria.
+            No items matched your current filter criteria. Try selecting another slot or archetype.
           </div>
         `;
         return;
       }
 
       grid.innerHTML = pageItems.map(it => {
-        const rarityClass = (it.rarity || 'Normal').toLowerCase();
+        let displayRarity = it.rarity || 'Common';
+        if (displayRarity === 'Normal') displayRarity = 'Common';
+        if (displayRarity === 'Unique') displayRarity = 'Relic';
+        if (displayRarity === 'Legendary') displayRarity = 'Mythic';
+        if (displayRarity === 'Glitched') displayRarity = 'Corrupted';
+
+        const rarityCssClass = displayRarity.toLowerCase();
         
         let statHero = '';
         if (it.baseType === 'Weapon') {
@@ -812,8 +975,9 @@
 
         const affixesHtml = (it.modifiers || []).map(mod => {
           let extraClass = '';
-          if (it.rarity === 'Legendary') extraClass = 'affix-legendary';
-          if (it.rarity === 'Set') extraClass = 'affix-set';
+          if (displayRarity === 'Mythic') extraClass = 'affix-legendary';
+          if (displayRarity === 'Set') extraClass = 'affix-set';
+          if (displayRarity === 'Corrupted') extraClass = 'affix-glitch-pos';
           return `<li class="card-affix ${extraClass}">${escapeHtml(mod)}</li>`;
         }).join('');
 
@@ -828,14 +992,14 @@
         const classBadgeHtml = `<span class="class-badge-tag class-tag-${clsSlug}">${cls}</span>`;
 
         return `
-          <div class="arpg-card ${rarityClass}">
+          <div class="arpg-card ${rarityCssClass}">
             <div class="card-top">
               <div class="card-title-group">
                 <div class="card-title">${escapeHtml(it.name)}</div>
                 <div class="card-meta">${escapeHtml(it.rawType || it.baseType)} • [${it.id}] • Req Lv ${it.reqLvl}</div>
                 ${classBadgeHtml}
               </div>
-              <span class="card-badge">${it.rarity}</span>
+              <span class="card-badge">${displayRarity}</span>
             </div>
             ${statHero}
             <ul class="card-affixes">

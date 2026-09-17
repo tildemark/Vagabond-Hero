@@ -133,7 +133,166 @@
   max-width: 900px;
 }
 
-/* Filter controls inside sections */
+/* =========================================================
+   BLIZZARD-STYLE ARPG DIRECTORY CONTROLS
+   ========================================================= */
+
+/* Step 1: Class Selector Deck */
+.class-deck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.class-card-btn {
+  background: #090c14;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+}
+
+.class-card-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.class-card-btn:hover {
+  background: #0f1422;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.class-card-btn.active {
+  background: linear-gradient(135deg, rgba(20, 27, 45, 0.95), rgba(12, 16, 28, 0.95));
+  border-color: var(--card-border-active, var(--accent-gold));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.03);
+}
+
+.class-card-btn.active::before {
+  background: var(--card-accent, var(--accent-gold));
+}
+
+.class-card-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.class-card-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.class-card-title {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.class-card-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Class Accent Color Overrides */
+.class-card-btn[data-class="all"] { --card-accent: #94a3b8; --card-border-active: #94a3b8; }
+.class-card-btn[data-class="Vagabond"] { --card-accent: #facc15; --card-border-active: #facc15; }
+.class-card-btn[data-class="Juggernaut"] { --card-accent: #ef4444; --card-border-active: #ef4444; }
+.class-card-btn[data-class="Phantom"] { --card-accent: #a855f7; --card-border-active: #a855f7; }
+.class-card-btn[data-class="Weaver"] { --card-accent: #38bdf8; --card-border-active: #38bdf8; }
+.class-card-btn[data-class="Warden"] { --card-accent: #4ade80; --card-border-active: #4ade80; }
+
+/* Step 2: Slot Subcategory Tab Strip */
+.slot-deck {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.6rem;
+  background: rgba(11, 15, 25, 0.75);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  margin-bottom: 1rem;
+  scrollbar-width: thin;
+}
+
+.slot-deck::-webkit-scrollbar {
+  height: 4px;
+}
+.slot-deck::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 2px;
+}
+
+.slot-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.slot-btn:hover {
+  color: var(--text-bright);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.slot-btn.active {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-weight: 600;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+}
+
+.slot-count-badge {
+  font-size: 0.68rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: var(--text-muted);
+}
+.slot-btn.active .slot-count-badge {
+  background: rgba(56, 189, 248, 0.25);
+  color: #bae6fd;
+}
+
+/* Step 3: Rarity Filter Pills & Tool Strip */
 .filter-bar {
   display: flex;
   gap: 0.75rem;
@@ -141,10 +300,51 @@
   margin-bottom: 1rem;
   align-items: center;
   background: rgba(18, 24, 38, 0.5);
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 1rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-subtle);
 }
+
+.rarity-pill-group {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.rarity-pill {
+  background: #080b12;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.35rem 0.7rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.rarity-pill:hover {
+  color: var(--text-bright);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.rarity-pill.active {
+  font-weight: 700;
+}
+
+/* Rarity-specific Pill Colors */
+.rarity-pill[data-rarity="all"].active { background: rgba(246, 200, 107, 0.15); border-color: var(--accent-gold); color: var(--accent-gold); }
+.rarity-pill[data-rarity="Common"].active { background: rgba(148, 163, 184, 0.15); border-color: #94a3b8; color: #f1f5f9; }
+.rarity-pill[data-rarity="Magic"].active { background: rgba(56, 189, 248, 0.15); border-color: #38bdf8; color: #38bdf8; }
+.rarity-pill[data-rarity="Rare"].active { background: rgba(250, 204, 21, 0.15); border-color: #facc15; color: #facc15; }
+.rarity-pill[data-rarity="Relic"].active { background: rgba(192, 132, 252, 0.15); border-color: #c084fc; color: #c084fc; }
+.rarity-pill[data-rarity="Mythic"].active { background: rgba(251, 146, 60, 0.15); border-color: #fb923c; color: #fb923c; }
+.rarity-pill[data-rarity="Set"].active { background: rgba(74, 222, 128, 0.15); border-color: #4ade80; color: #4ade80; }
+.rarity-pill[data-rarity="Corrupted"].active { background: rgba(244, 63, 94, 0.15); border-color: #f43f5e; color: #f43f5e; }
 
 .filter-btn {
   background: transparent;
@@ -300,10 +500,10 @@
 }
 
 /* Rarity Accents */
-.arpg-card.normal, .arpg-card.common {
+.arpg-card.common {
   border-color: #94a3b8;
 }
-.arpg-card.normal:hover, .arpg-card.common:hover {
+.arpg-card.common:hover {
   box-shadow: 0 8px 30px rgba(148, 163, 184, 0.2);
 }
 
@@ -321,18 +521,18 @@
   box-shadow: 0 8px 30px rgba(250, 204, 21, 0.3);
 }
 
-.arpg-card.unique {
+.arpg-card.relic {
   border-color: #c084fc;
 }
-.arpg-card.unique:hover {
+.arpg-card.relic:hover {
   box-shadow: 0 8px 30px rgba(192, 132, 252, 0.35);
 }
 
-.arpg-card.legendary {
+.arpg-card.mythic {
   border-color: #fb923c;
   background: radial-gradient(circle at 50% 0%, rgba(251, 146, 60, 0.08) 0%, #090c12 70%);
 }
-.arpg-card.legendary:hover {
+.arpg-card.mythic:hover {
   box-shadow: 0 8px 35px rgba(251, 146, 60, 0.4);
 }
 
@@ -344,12 +544,12 @@
   box-shadow: 0 8px 35px rgba(74, 222, 128, 0.4);
 }
 
-.arpg-card.glitched {
+.arpg-card.corrupted {
   border-color: #f43f5e;
   background: radial-gradient(circle at 50% 0%, rgba(244, 63, 94, 0.12) 0%, #090c12 70%);
   animation: glitchPulse 4s infinite alternate;
 }
-.arpg-card.glitched:hover {
+.arpg-card.corrupted:hover {
   box-shadow: 0 8px 40px rgba(244, 63, 94, 0.5);
 }
 
@@ -378,13 +578,13 @@
   margin-bottom: 0.2rem;
 }
 
-.normal .card-title, .common .card-title { color: #f1f5f9; }
+.common .card-title { color: #f1f5f9; }
 .magic .card-title { color: #38bdf8; }
 .rare .card-title { color: #facc15; }
-.unique .card-title { color: #c084fc; }
-.legendary .card-title { color: #fb923c; }
+.relic .card-title { color: #c084fc; }
+.mythic .card-title { color: #fb923c; }
 .set .card-title { color: #4ade80; }
-.glitched .card-title { color: #f43f5e; }
+.corrupted .card-title { color: #f43f5e; }
 
 .card-meta {
   font-size: 0.78rem;
@@ -402,13 +602,13 @@
   font-weight: 600;
 }
 
-.normal .card-badge, .common .card-badge { color: #cbd5e1; border: 1px solid #64748b; }
+.common .card-badge { color: #cbd5e1; border: 1px solid #64748b; }
 .magic .card-badge { color: #7dd3fc; border: 1px solid #0284c7; }
 .rare .card-badge { color: #fde047; border: 1px solid #ca8a04; }
-.unique .card-badge { color: #e9d5ff; border: 1px solid #9333ea; }
-.legendary .card-badge { color: #fdba74; border: 1px solid #ea580c; }
+.relic .card-badge { color: #e9d5ff; border: 1px solid #9333ea; }
+.mythic .card-badge { color: #fdba74; border: 1px solid #ea580c; }
 .set .card-badge { color: #86efac; border: 1px solid #16a34a; }
-.glitched .card-badge { color: #fda4af; border: 1px solid #e11d48; }
+.corrupted .card-badge { color: #fda4af; border: 1px solid #e11d48; }
 
 .card-stat-hero {
   background: rgba(0,0,0,0.4);

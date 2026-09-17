@@ -40,17 +40,17 @@ An item's Rarity dictates how many randomly generated modifiers (Affixes) it rec
 | **Common** | White | 0 Modifiers | Base stats only (Damage or Armor). Serves as early game gear or crafting salvage. |
 | **Magic** | Blue | 1 to 2 Modifiers | Minor buffs. Rolls 1 Prefix and 1 Suffix maximum. |
 | **Rare** | Yellow | 3 to 4 Modifiers | The backbone of builds. Can roll very high stat values on its 4 modifiers. |
-| **Unique** | Purple | 4 Modifiers | Fixed static drops from specific mini-bosses. Good, predictable stats. |
-| **Legendary** | Orange | 4 to 5 + Trait | Rolls high stats PLUS one hard-coded **Unique Trait** that fundamentally alters gameplay (e.g., "Attacks hit 3 targets"). |
+| **Relic** | Purple | 4 Modifiers | Fixed static drops from specific mini-bosses. Good, predictable stats. |
+| **Mythic** | Orange | 4 to 5 + Trait | Rolls high stats PLUS one hard-coded **Unique Trait** that fundamentally alters gameplay (e.g., "Attacks hit 3 targets"). |
 | **Set** | Green | 4 + Set Bonus | Wearing 2, 3, or 4 pieces of the same named set grants massive synergistic passive abilities. |
-| **Glitched** | Red/Glitch | 5 Modifiers | *New Game+ / Post-Echo Quest.* Grants a game-breaking buff tied to a severe, build-defining debuff. |
+| **Corrupted** | Red/Glitch | 5 Modifiers | *New Game+ / Post-Echo Quest.* Grants a game-breaking buff tied to a severe, build-defining debuff. |
 
-### Post-Echo Quest: Glitched Modifier Infusion (Corrupted Drops)
+### Post-Echo Quest: Corrupted Modifier Infusion (Corrupted Drops)
 Once the player completes the **Level 70 Echo Quest ("Breaking the Core")** and unlocks Pinnacle progression:
-* **Hybrid Glitched Drops:** Any newly dropped **Legendary** or **Set** item has a baseline **10% chance** (scalable via Echo Mutators) to roll a **Glitched Modifier**.
-* **Extra Modifier Budget:** This Glitched modifier is added as an **additional bonus modifier** beyond the item's standard modifier cap, accompanied by the distinctive Glitched visual aura in the UI.
-* **Dual Nature:** The injected Glitched affix rolls one game-breaking positive attribute paired with an equally disruptive penalty (e.g. `+250% Skill Damage` paired with `Cannot Evade attacks` or `Consumes 5% Max HP on action`).
-* **Preserves Base Identity:** Legendary items retain their hard-coded Unique Trait, and Set items retain their set piece identity and set bonuses while carrying the Glitched modifier.
+* **Hybrid Corrupted Drops:** Any newly dropped **Mythic** or **Set** item has a baseline **10% chance** (scalable via Echo Mutators) to roll a **Corrupted Modifier**.
+* **Extra Modifier Budget:** This Corrupted modifier is added as an **additional bonus modifier** beyond the item's standard modifier cap, accompanied by the distinctive Glitched visual aura in the UI.
+* **Dual Nature:** The injected Corrupted affix rolls one game-breaking positive attribute paired with an equally disruptive penalty (e.g. `+250% Skill Damage` paired with `Cannot Evade attacks` or `Consumes 5% Max HP on action`).
+* **Preserves Base Identity:** Mythic items retain their hard-coded Unique Trait, and Set items retain their set piece identity and set bonuses while carrying the Corrupted modifier.
 
 ---
 
