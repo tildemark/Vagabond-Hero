@@ -72,35 +72,35 @@ This document contains the foundational database for all **Arms** slot items (Br
 
 <br>+5 to 15 Damage Reflect<br>
 
-<br>+1 Socket | Excellent for blocking strikes in close-quarters combat. |
+| Excellent for blocking strikes in close-quarters combat. |
 | A-R02 | **Shadow-Strike Gloves** | Gloves | 33 | 40 - 55 | +25 to 45 INT/AGI<br>
 
 <br>+5% to 12% Attack Speed<br>
 
 <br>+3% to 8% Crit Chance<br>
 
-<br>+1 Socket | Muffles the sound of your weapon being drawn. |
+| Muffles the sound of your weapon being drawn. |
 | A-R03 | **Hazardous Handling Gloves** | Gloves | 48 | 70 - 90 | +40 to 70 Core Stat<br>
 
 <br>+15% to 30% Poison Resist<br>
 
 <br>+10% to 20% Cast Speed<br>
 
-<br>+1 to 2 Sockets | Thick rubberized material designed for handling toxic sludge. |
+| Thick rubberized material designed for handling toxic sludge. |
 | A-R04 | **Engineer's Calibration** | Gloves | 62 | 130 - 165 | +70 to 110 Core Stat<br>
 
 <br>+10% to 18% Attack Speed<br>
 
 <br>+15% to 25% Magic Find<br>
 
-<br>+1 to 2 Sockets | Fingers are lined with precision micro-tools. |
+| Fingers are lined with precision micro-tools. |
 | A-R05 | **Mainframe Core-Guards** | Bracers | 70 | 260 - 320 | +120 to 180 Core Stat<br>
 
 <br>+10% to 20% Crit Chance<br>
 
 <br>+15% to 25% All Resist<br>
 
-<br>+1 to 2 Sockets | Heat sinks vent directly from the wrists. |
+| Heat sinks vent directly from the wrists. |
 
 ---
 
@@ -144,7 +144,7 @@ This document contains the foundational database for all **Arms** slot items (Br
 
 <br>+15% Boss Damage<br>
 
-<br>+2 Sockets | Grants the wearer pixel-perfect precision. |
+| Grants the wearer pixel-perfect precision. |
 
 ---
 
@@ -160,35 +160,35 @@ This document contains the foundational database for all **Arms** slot items (Br
 
 <br>+10% to 20% Fire Resist<br>
 
-<br>+1 Socket | **Ignite:** Every consecutive Physical attack against the same target increases your Attack Speed by 10% and adds flat Fire damage. Resets if you change targets. |
+| **Ignite:** Every consecutive Physical attack against the same target increases your Attack Speed by 10% and adds flat Fire damage. Resets if you change targets. |
 | A-L02 | **Abyssal Reach** | Wraps | 40 | 85 - 110 | +50 to 80 Core Stat<br>
 
 <br>+10% to 20% Cast Speed<br>
 
 <br>+20% to 35% Void Resist<br>
 
-<br>+1 to 2 Sockets | **Spatial Tear:** Your melee attacks gain the 'Ranged' property. You no longer trigger enemy melee Counter-Attacks. |
+| **Spatial Tear:** Your melee attacks gain the 'Ranged' property. You no longer trigger enemy melee Counter-Attacks. |
 | A-L03 | **Chimera's Paws** | Gloves | 55 | 140 - 180 | +80 to 120 STR & INT<br>
 
 <br>+10% to 20% Crit Chance<br>
 
 <br>+10% to 20% Life Steal<br>
 
-<br>+1 to 2 Sockets | **Savage Toxin:** Critical Hits simultaneously apply both a Bleed (STR-based) and Poison (INT-based) DoT to the target. |
+| **Savage Toxin:** Critical Hits simultaneously apply both a Bleed (STR-based) and Poison (INT-based) DoT to the target. |
 | A-L04 | **Ascendant's Ticking Bracers** | Bracers | 65 | 210 - 260 | +110 to 160 Core Stat<br>
 
 <br>+15% to 25% All Resist<br>
 
 <br>+15% to 25% Attack Speed<br>
 
-<br>+1 to 2 Sockets | **Double Strike:** You have a 25% chance to instantly repeat your Basic Attack or Spell for 0 Mana. |
+| **Double Strike:** You have a 25% chance to instantly repeat your Basic Attack or Spell for 0 Mana. |
 | A-L05 | **The Prime Hand** | Gauntlets | 70 | 380 - 450 | +180 to 250 Core Stat<br>
 
 <br>+20% to 30% Crit Chance<br>
 
 <br>+50% to 100% Crit Damage<br>
 
-<br>+2 Sockets | **Fatal Error:** Critical Hits execute non-boss enemies instantly. Critical Hits against Bosses deal 300% damage instead of 150%. |
+| **Fatal Error:** Critical Hits execute non-boss enemies instantly. Critical Hits against Bosses deal 300% damage instead of 150%. |
 
 ---
 
@@ -198,5 +198,5 @@ When generating an arms instance (e.g., `A-L04` Ascendant's Ticking Bracers):
 
 1. Roll Base Armor between the defined Min/Max values (210 - 260).
 2. Determine the player's primary Core Stat (STR, AGI, INT) via Smart Loot and roll its value based on the Modifier Range (110 - 160).
-3. Roll the remaining random modifiers (All Resist, Attack Speed, Sockets).
+3. Roll the remaining random modifiers (All Resist, Attack Speed).
 4. Apply the Unique Trait (`Double Strike`) statically to the item instance JSON. In the `CombatEngine`, after the player resolves an attack, calculate a `Random().nextInt(100) < 25` check. If true, run the attack logic a second time and push both results to the combat log.

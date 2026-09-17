@@ -70,35 +70,35 @@ This document contains the foundational database for all **Head** slot items (Ca
 
 <br>+2% to 6% Armor<br>
 
-<br>+1 Socket | Standard issue for the Hold's elite defenders. |
+| Standard issue for the Hold's elite defenders. |
 | H-R02 | **Shadow-Weaver's Hood** | Hood | 33 | 55 - 70 | +25 to 45 INT/AGI<br>
 
 <br>+5% to 10% Evasion<br>
 
 <br>+50 to 120 Max Mana<br>
 
-<br>+1 Socket | Shadows naturally cling to the fabric. |
+| Shadows naturally cling to the fabric. |
 | H-R03 | **Toxic Filter Mask** | Mask | 48 | 95 - 120 | +40 to 70 Core Stat<br>
 
 <br>+15% to 30% Poison Resist<br>
 
 <br>+10% to 20% HP Regen<br>
 
-<br>+1 to 2 Sockets | Essential for surviving the Rusting Aqueducts. |
+| Essential for surviving the Rusting Aqueducts. |
 | H-R04 | **Engineer's Brass Goggles** | Cap | 62 | 160 - 200 | +70 to 110 Core Stat<br>
 
 <br>+5% to 12% Crit Chance<br>
 
 <br>+15% to 25% Magic Find<br>
 
-<br>+1 to 2 Sockets | Lenses crafted from polished clock-crystals. |
+| Lenses crafted from polished clock-crystals. |
 | H-R05 | **Prime Server Crown** | Helm | 70 | 320 - 400 | +120 to 180 Core Stat<br>
 
 <br>+500 to 800 Max HP<br>
 
 <br>+15% to 25% All Resist<br>
 
-<br>+2 Sockets | A jagged halo of pure processing power. |
+| A jagged halo of pure processing power. |
 
 ---
 
@@ -142,7 +142,7 @@ This document contains the foundational database for all **Head** slot items (Ca
 
 <br>+15% Cooldown Reduction<br>
 
-<br>+3 Sockets | A floating ring of golden code. Perfect for endgame farming. |
+| A floating ring of golden code. Perfect for endgame farming. |
 
 ---
 
@@ -158,35 +158,35 @@ This document contains the foundational database for all **Head** slot items (Ca
 
 <br>+10% to 20% Fire Resist<br>
 
-<br>+1 to 2 Sockets | **Ember-Flesh:** Whenever you take physical damage, you have a 25% chance to retaliate with a burst of Fire Damage equal to 50% of your Strength. |
+| **Ember-Flesh:** Whenever you take physical damage, you have a 25% chance to retaliate with a burst of Fire Damage equal to 50% of your Strength. |
 | H-L02 | **The Abyssal Gaze** | Mask | 40 | 110 - 140 | +50 to 80 Core Stat<br>
 
 <br>+200 to 350 Max HP<br>
 
 <br>+15% to 30% Void Resist<br>
 
-<br>+1 to 2 Sockets | **Deep Vision:** You are immune to all Evasion debuffs. Furthermore, you gain +100% Critical Hit Chance against any enemy below 30% HP. |
+| **Deep Vision:** You are immune to all Evasion debuffs. Furthermore, you gain +100% Critical Hit Chance against any enemy below 30% HP. |
 | H-L03 | **Face of the Chimera** | Mask | 55 | 180 - 220 | +80 to 120 STR & INT<br>
 
 <br>+300 to 500 Max HP<br>
 
 <br>+10% to 15% Life Steal<br>
 
-<br>+2 Sockets | **Two-Faced:** Your Physical attacks deal an additional 15% Magic Damage, and your Magic attacks deal an additional 15% Physical Damage. |
+| **Two-Faced:** Your Physical attacks deal an additional 15% Magic Damage, and your Magic attacks deal an additional 15% Physical Damage. |
 | H-L04 | **Clockwork Ascendant's Hood** | Hood | 65 | 260 - 310 | +110 to 160 Core Stat<br>
 
 <br>+15% to 25% All Resist<br>
 
 <br>+10% to 20% Attack Speed<br>
 
-<br>+2 Sockets | **Rewind:** Once per combat, if an enemy attack would reduce you to 0 HP, time reverses. You negate the damage and restore 30% of your Max HP instead. |
+| **Rewind:** Once per combat, if an enemy attack would reduce you to 0 HP, time reverses. You negate the damage and restore 30% of your Max HP instead. |
 | H-L05 | **The Prime Override's Visage** | Helm | 70 | 450 - 550 | +180 to 250 Core Stat<br>
 
 <br>+800 to 1200 Max HP<br>
 
 <br>+20% to 40% Magic Find<br>
 
-<br>+3 Sockets | **Root Access:** Every 5th attack you land ignores 100% of the enemy's Armor and Resistances, dealing True Damage. |
+| **Root Access:** Every 5th attack you land ignores 100% of the enemy's Armor and Resistances, dealing True Damage. |
 
 ---
 
@@ -196,5 +196,5 @@ When generating an item instance (e.g., `H-L02` The Abyssal Gaze):
 
 1. Roll Base Armor between the defined Min/Max values (110 - 140).
 2. Determine the player's primary Core Stat (STR, AGI, INT) via Smart Loot and roll its value based on the Modifier Range (50 - 80).
-3. Roll the remaining random modifiers (HP, Void Resist, Sockets).
+3. Roll the remaining random modifiers (HP, Void Resist).
 4. Apply the Unique Trait (`Deep Vision`) statically to the item instance JSON for the `CombatEngine` to parse.

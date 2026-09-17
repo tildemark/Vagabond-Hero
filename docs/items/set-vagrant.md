@@ -25,21 +25,21 @@
 
 <br>+20 Max HP<br>
 
-<br>+1 Socket | A dusty hood that smells of old parchment and ozone. |
+| A dusty hood that smells of old parchment and ozone. |
 | S1-V02 | **Pilgrim's Tunic** | Torso (Shirt) | 15 | 35 Armor | +25 All Stats<br>
 
 <br>+15% EXP Gained<br>
 
 <br>+5% Evasion<br>
 
-<br>+1 to 2 Sockets | Woven with protective runes that glow faintly in the dark. |
+| Woven with protective runes that glow faintly in the dark. |
 | S1-V03 | **Seeker's Loop** | Finger (Ring) | 15 | *None* | +10% EXP Gained<br>
 
 <br>+10% Cooldown Reduc.<br>
 
 <br>+5% All Resist<br>
 
-<br>+1 Socket | A simple wooden band that vibrates when near unexplored rooms. |
+| A simple wooden band that vibrates when near unexplored rooms. |
 
 ---
 
@@ -64,28 +64,28 @@
 
 <br>+5% Attack Speed<br>
 
-<br>+1 Socket | A rusted grappling hook repurposed as a brutal melee weapon. |
+| A rusted grappling hook repurposed as a brutal melee weapon. |
 | S2-V02 | **Trash-Lid Buckler** | R-Hand (Shield) | 18 | 20 Armor | +20 Stamina<br>
 
 <br>+15% Magic Find<br>
 
 <br>+5% Block Chance<br>
 
-<br>+1 Socket | Literally a dented trash can lid, painted with a crude smiley face. |
+| Literally a dented trash can lid, painted with a crude smiley face. |
 | S2-V03 | **Hoarder's Bandolier** | Waist (Belt) | 18 | 15 Armor | +15 All Stats<br>
 
 <br>+20% Potion Effect<br>
 
 <br>+15% Gold Drop Rate<br>
 
-<br>+1 Socket | Covered in clinking pouches overflowing with junk and coins. |
+| Covered in clinking pouches overflowing with junk and coins. |
 | S2-V04 | **Ash-Trotters** | Feet (Boots) | 18 | 25 Armor | +20 Agility<br>
 
 <br>+10% Movement Speed<br>
 
 <br>+15% Magic Find<br>
 
-<br>+1 Socket | Lightweight boots designed to outrun trouble with heavy pockets. |
+| Lightweight boots designed to outrun trouble with heavy pockets. |
 
 ---
 

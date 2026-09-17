@@ -70,35 +70,35 @@ This document contains the foundational database for all **Torso** slot items (C
 
 <br>+5% to 10% Armor<br>
 
-<br>+1 to 2 Sockets | A dented but incredibly sturdy piece of pre-Severance armor. |
+| A dented but incredibly sturdy piece of pre-Severance armor. |
 | T-R02 | **Shadow-Cloak Tunic** | Tunic | 33 | 80 - 105 | +30 to 55 INT/AGI<br>
 
 <br>+8% to 15% Evasion<br>
 
 <br>+60 to 150 Max Mana<br>
 
-<br>+1 to 2 Sockets | Absorbs ambient light, making the wearer difficult to track. |
+| Absorbs ambient light, making the wearer difficult to track. |
 | T-R03 | **Hazard Suit** | Harness | 48 | 130 - 165 | +50 to 85 Core Stat<br>
 
 <br>+20% to 40% Poison Resist<br>
 
 <br>+15% to 30% HP Regen<br>
 
-<br>+2 to 3 Sockets | Heavy rubber and brass, built for the toxic aqueducts. |
+| Heavy rubber and brass, built for the toxic aqueducts. |
 | T-R04 | **Engineer's Boilerplate** | Plate | 62 | 220 - 270 | +80 to 130 Core Stat<br>
 
 <br>+20% to 35% Fire Resist<br>
 
 <br>+15% to 25% Magic Find<br>
 
-<br>+2 to 3 Sockets | Fitted with exhaust valves that vent excess thermal energy. |
+| Fitted with exhaust valves that vent excess thermal energy. |
 | T-R05 | **Mainframe Core-Suit** | Cuirass | 70 | 420 - 520 | +140 to 200 Core Stat<br>
 
 <br>+600 to 1000 Max HP<br>
 
 <br>+15% to 25% All Resist<br>
 
-<br>+3 Sockets | A high-tech chassis that interfaces directly with your nervous system. |
+| A high-tech chassis that interfaces directly with your nervous system. |
 
 ---
 
@@ -142,7 +142,7 @@ This document contains the foundational database for all **Torso** slot items (C
 
 <br>+20% Cooldown Reduction<br>
 
-<br>+3 Sockets | A floating rig of server racks that orbits the wearer's torso. |
+| A floating rig of server racks that orbits the wearer's torso. |
 
 ---
 
@@ -158,35 +158,35 @@ This document contains the foundational database for all **Torso** slot items (C
 
 <br>+15% to 30% Fire Resist<br>
 
-<br>+1 to 2 Sockets | **Molten Core:** Enemies that strike you in melee are Ignited, taking Fire Damage equal to 10% of their Max HP over 3 turns. |
+| **Molten Core:** Enemies that strike you in melee are Ignited, taking Fire Damage equal to 10% of their Max HP over 3 turns. |
 | T-L02 | **Mantle of the Abyss** | Robe | 40 | 150 - 190 | +60 to 100 Core Stat<br>
 
 <br>+250 to 450 Max Mana<br>
 
 <br>+20% to 40% Void Resist<br>
 
-<br>+2 to 3 Sockets | **Void Siphon:** 30% of all damage you take is converted into Mana. If your Mana is full, the excess heals you instead. |
+| **Void Siphon:** 30% of all damage you take is converted into Mana. If your Mana is full, the excess heals you instead. |
 | T-L03 | **Chimera's Hide** | Coat | 55 | 240 - 300 | +90 to 140 STR & INT<br>
 
 <br>+400 to 700 Max HP<br>
 
 <br>+15% to 25% Life Steal<br>
 
-<br>+2 to 3 Sockets | **Apex Hide:** You take 25% less damage from Bosses and Elite enemies. |
+| **Apex Hide:** You take 25% less damage from Bosses and Elite enemies. |
 | T-L04 | **Ascendant's Gearbox** | Cuirass | 65 | 350 - 420 | +120 to 180 Core Stat<br>
 
 <br>+20% to 30% All Resist<br>
 
 <br>+15% to 25% Attack Speed<br>
 
-<br>+2 to 3 Sockets | **Overclock:** Every time you take damage, your Attack Speed and Cast Speed increase by 10%. Stacks up to 5 times. Lasts until the end of combat. |
+| **Overclock:** Every time you take damage, your Attack Speed and Cast Speed increase by 10%. Stacks up to 5 times. Lasts until the end of combat. |
 | T-L05 | **The Prime Shell** | Plate | 70 | 650 - 800 | +200 to 300 Core Stat<br>
 
 <br>+1000 to 1500 Max HP<br>
 
 <br>+25% to 50% Magic Find<br>
 
-<br>+3 Sockets | **God Mode:** At the start of every combat encounter, you gain a hard-light shield equal to 100% of your Max HP. |
+| **God Mode:** At the start of every combat encounter, you gain a hard-light shield equal to 100% of your Max HP. |
 
 ---
 
@@ -196,5 +196,5 @@ When generating a torso instance (e.g., `T-L04` Ascendant's Gearbox):
 
 1. Roll Base Armor between the defined Min/Max values (350 - 420).
 2. Determine the player's primary Core Stat (STR, AGI, INT) via Smart Loot and roll its value based on the Modifier Range (120 - 180).
-3. Roll the remaining random modifiers (All Resist, Attack Speed, Sockets - Torso items typically favor 2 to 3 sockets for high customizability).
+3. Roll the remaining random modifiers (All Resist, Attack Speed - Torso items typically favor 2 to 3 sockets for high customizability).
 4. Apply the Unique Trait (`Overclock`) statically to the item instance JSON for the `CombatEngine` to parse.

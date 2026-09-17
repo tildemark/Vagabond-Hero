@@ -72,35 +72,35 @@ This document contains the foundational database for all **Feet** slot items (Sh
 
 <br>+3% to 7% Armor<br>
 
-<br>+1 Socket | Spiked soles provide an unyielding defensive stance. |
+| Spiked soles provide an unyielding defensive stance. |
 | F-R02 | **Shadow-Step Boots** | Boots | 33 | 50 - 65 | +25 to 45 INT/AGI<br>
 
 <br>+8% to 15% Evasion<br>
 
 <br>+10% Movement Speed<br>
 
-<br>+1 Socket | The leather seems to absorb ambient sound. |
+| The leather seems to absorb ambient sound. |
 | F-R03 | **Hazard Waders** | Boots | 48 | 85 - 110 | +40 to 70 Core Stat<br>
 
 <br>+15% to 30% Poison Resist<br>
 
 <br>+10% to 20% HP Regen<br>
 
-<br>+1 to 2 Sockets | Knee-high rubber waders designed for the toxic sumps. |
+| Knee-high rubber waders designed for the toxic sumps. |
 | F-R04 | **Engineer's Brass-Toes** | Boots | 62 | 145 - 185 | +70 to 110 Core Stat<br>
 
 <br>+10% to 20% Evasion<br>
 
 <br>+15% to 25% Magic Find<br>
 
-<br>+1 to 2 Sockets | Reinforced with solid brass toe caps to prevent crushing. |
+| Reinforced with solid brass toe caps to prevent crushing. |
 | F-R05 | **Mainframe Core-Treads** | Boots | 70 | 280 - 340 | +120 to 180 Core Stat<br>
 
 <br>+400 to 700 Max HP<br>
 
 <br>+15% to 25% All Resist<br>
 
-<br>+1 to 2 Sockets | Server-grade grounding boots that negate static feedback. |
+| Server-grade grounding boots that negate static feedback. |
 
 ---
 
@@ -144,7 +144,7 @@ This document contains the foundational database for all **Feet** slot items (Sh
 
 <br>+15% Boss Damage<br>
 
-<br>+2 Sockets | Hovering a few inches off the ground entirely. |
+| Hovering a few inches off the ground entirely. |
 
 ---
 
@@ -160,35 +160,35 @@ This document contains the foundational database for all **Feet** slot items (Sh
 
 <br>+10% to 20% Fire Resist<br>
 
-<br>+1 Socket | **Scorched Earth:** You leave a trail of fire. Enemies that engage you in melee combat take 25% of your Strength as Fire damage per turn. |
+| **Scorched Earth:** You leave a trail of fire. Enemies that engage you in melee combat take 25% of your Strength as Fire damage per turn. |
 | F-L02 | **Abyssal Flippers** | Shoes | 40 | 100 - 130 | +50 to 80 Core Stat<br>
 
 <br>+15% to 25% Evasion<br>
 
 <br>+20% to 35% Void Resist<br>
 
-<br>+1 to 2 Sockets | **Unencumbered:** You are completely immune to environmental movement penalties and all slow/snare debuffs. |
+| **Unencumbered:** You are completely immune to environmental movement penalties and all slow/snare debuffs. |
 | F-L03 | **Chimera's Paws** | Boots | 55 | 160 - 200 | +80 to 120 STR & INT<br>
 
 <br>+250 to 450 Max HP<br>
 
 <br>+10% to 20% Evasion<br>
 
-<br>+1 to 2 Sockets | **Feral Leap:** Selecting the 'Flee' command in combat now executes a damaging leap attack instead, dealing 150% Physical damage before escaping. |
+| **Feral Leap:** Selecting the 'Flee' command in combat now executes a damaging leap attack instead, dealing 150% Physical damage before escaping. |
 | F-L04 | **Ascendant's Spring-Heels** | Boots | 65 | 240 - 290 | +110 to 160 Core Stat<br>
 
 <br>+15% to 25% All Resist<br>
 
 <br>+20% to 30% Movement Speed<br>
 
-<br>+1 to 2 Sockets | **Momentum:** Every time you successfully Evade an attack, your Critical Hit Chance is increased by 10% for your next turn. |
+| **Momentum:** Every time you successfully Evade an attack, your Critical Hit Chance is increased by 10% for your next turn. |
 | F-L05 | **The Prime Steps** | Sabatons | 70 | 420 - 500 | +180 to 250 Core Stat<br>
 
 <br>+600 to 1000 Max HP<br>
 
 <br>+20% to 40% Magic Find<br>
 
-<br>+2 Sockets | **Teleportation:** Your movement instantly transitions you between Rooms. You can bypass locked doors or environmental hazards without taking damage. |
+| **Teleportation:** Your movement instantly transitions you between Rooms. You can bypass locked doors or environmental hazards without taking damage. |
 
 ---
 
@@ -198,5 +198,5 @@ When generating a feet instance (e.g., `F-L04` Ascendant's Spring-Heels):
 
 1. Roll Base Armor between the defined Min/Max values (240 - 290).
 2. Determine the player's primary Core Stat (STR, AGI, INT) via Smart Loot and roll its value based on the Modifier Range (110 - 160).
-3. Roll the remaining random modifiers (All Resist, Movement Speed, Sockets).
+3. Roll the remaining random modifiers (All Resist, Movement Speed).
 4. Apply the Unique Trait (`Momentum`) statically to the item instance JSON. In the `CombatEngine`, when `calculateEvasion()` resolves to true, a temporary state variable `momentumBuff += 10` is applied to the player's crit formula for the subsequent turn.

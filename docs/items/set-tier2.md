@@ -21,17 +21,17 @@
 
 <br>+15% Crit Damage<br>
 
-<br>+2 Sockets | A jagged, open-faced helmet stained crimson. |
+| A jagged, open-faced helmet stained crimson. |
 | S3-B02 | **Blood-Crazed Plate** | Torso | 55 | 240 Armor | +80 STR<br>
 
 <br>+10% Life Steal<br>
 
-<br>+2 Sockets | Spiked on the inside to keep the wearer enraged. |
+| Spiked on the inside to keep the wearer enraged. |
 | S3-B03 | **Blood-Crazed Loop** | Ring | 55 | *None* | +15% Attack Speed<br>
 
 <br>+10% Boss Dmg<br>
 
-<br>+1 Socket | A ring of jagged bone. |
+| A ring of jagged bone. |
 
 ### Set 2: The Abyssal Aegis
 
@@ -47,17 +47,17 @@
 
 <br>+20 Damage Reflect<br>
 
-<br>+1 Socket | Massive shoulder guards that absorb kinetic force. |
+| Massive shoulder guards that absorb kinetic force. |
 | S3-V02 | **Aegis Greaves** | Legs | 58 | 190 Armor | +60 STR<br>
 
 <br>+20% Void Resist<br>
 
-<br>+2 Sockets | Grounding plates that prevent you from being moved. |
+| Grounding plates that prevent you from being moved. |
 | S3-V03 | **Aegis Core** | Amulet | 58 | *None* | +20% Block Chance<br>
 
 <br>+500 Max HP<br>
 
-<br>+1 Socket | A miniature black hole held in a magnetic field. |
+| A miniature black hole held in a magnetic field. |
 
 ### Set 3: The Warlord's Zenith
 
@@ -73,17 +73,17 @@
 
 <br>+15% All Resist<br>
 
-<br>+2 Sockets | A crown of dark iron fit for a conqueror. |
+| A crown of dark iron fit for a conqueror. |
 | S3-J02 | **Zenith Gauntlets** | Arms | 62 | 140 Armor | +70 STR<br>
 
 <br>+20% Crit Damage<br>
 
-<br>+2 Sockets | Your grip strength is amplified tenfold. |
+| Your grip strength is amplified tenfold. |
 | S3-J03 | **Zenith Signet** | Ring | 62 | *None* | +20% Boss Damage<br>
 
 <br>+10% Armor Pen<br>
 
-<br>+1 Socket | Bears the seal of the shattered server admin. |
+| Bears the seal of the shattered server admin. |
 
 ---
 
@@ -103,17 +103,17 @@
 
 <br>+20% Attack Speed<br>
 
-<br>+2 Sockets | A rebreather filtering out your own toxic fumes. |
+| A rebreather filtering out your own toxic fumes. |
 | S3-A02 | **Nightshade Coat** | Torso | 55 | 180 Armor | +75 AGI<br>
 
 <br>+15% Evasion<br>
 
-<br>+2 Sockets | Lined with hidden vials of acidic venom. |
+| Lined with hidden vials of acidic venom. |
 | S3-A03 | **Nightshade Band** | Ring | 55 | *None* | +15 Flat Poison Dmg<br>
 
 <br>+15% Crit Chance<br>
 
-<br>+1 Socket | A hollow ring concealing a lethal needle. |
+| A hollow ring concealing a lethal needle. |
 
 ### Set 2: Orbital Trajectory
 
@@ -129,17 +129,17 @@
 
 <br>+20% Crit Chance<br>
 
-<br>+2 Sockets | A heads-up display calculating wind and drop. |
+| A heads-up display calculating wind and drop. |
 | S3-R02 | **Orbital Treads** | Feet | 58 | 110 Armor | +60 AGI<br>
 
 <br>+20% Movement Spd<br>
 
-<br>+1 Socket | Anchors you perfectly to the ground when firing. |
+| Anchors you perfectly to the ground when firing. |
 | S3-R03 | **Orbital Calibrator** | Amulet | 58 | *None* | +50% Crit Damage<br>
 
 <br>+10% Cooldown Reduc.<br>
 
-<br>+1 Socket | A targeting laser worn around the neck. |
+| A targeting laser worn around the neck. |
 
 ### Set 3: Ghost-Walk Regalia
 
@@ -155,17 +155,17 @@
 
 <br>+20% All Resist<br>
 
-<br>+2 Sockets | Fabric that phases in and out of the physical realm. |
+| Fabric that phases in and out of the physical realm. |
 | S3-P02 | **Ghost-Walk Gloves** | Arms | 62 | 100 Armor | +70 AGI<br>
 
 <br>+25% Attack Speed<br>
 
-<br>+2 Sockets | Your hands leave motion-blurred trails in the air. |
+| Your hands leave motion-blurred trails in the air. |
 | S3-P03 | **Ghost-Walk Band** | Ring | 62 | *None* | +15% Evasion<br>
 
 <br>+20% Magic Find<br>
 
-<br>+1 Socket | Completely invisible to the naked eye. |
+| Completely invisible to the naked eye. |
 
 ---
 
@@ -185,17 +185,17 @@
 
 <br>+15% Cast Speed<br>
 
-<br>+2 Sockets | A halo of shifting elemental energy. |
+| A halo of shifting elemental energy. |
 | S3-E02 | **Prismatic Robes** | Torso | 55 | 160 Armor | +80 INT<br>
 
 <br>+20% All Resist<br>
 
-<br>+2 Sockets | Weaves different elemental threads based on your stance. |
+| Weaves different elemental threads based on your stance. |
 | S3-E03 | **Prismatic Core** | Amulet | 55 | *None* | +200 Max Mana<br>
 
 <br>+15% Magic Dmg<br>
 
-<br>+1 Socket | A perfectly cut tri-color gemstone. |
+| A perfectly cut tri-color gemstone. |
 
 ### Set 2: Crimson Covenant
 
@@ -211,17 +211,17 @@
 
 <br>+300 Max HP<br>
 
-<br>+2 Sockets | The cloth is perpetually damp with blood. |
+| The cloth is perpetually damp with blood. |
 | S3-M02 | **Covenant Bindings** | Arms | 58 | 80 Armor | +60 INT<br>
 
 <br>+20% Cast Speed<br>
 
-<br>+1 Socket | Deep scars cover the wrists under these wraps. |
+| Deep scars cover the wrists under these wraps. |
 | S3-M03 | **Covenant Ring** | Ring | 58 | *None* | +15% Life Steal<br>
 
 <br>+20% Magic Dmg<br>
 
-<br>+1 Socket | A silver ring inset with a crystallized drop of blood. |
+| A silver ring inset with a crystallized drop of blood. |
 
 ### Set 3: Aetherial Ascendant
 
@@ -237,17 +237,17 @@
 
 <br>+400 Max Mana<br>
 
-<br>+3 Sockets | Woven from the source code of the Astral Servers. |
+| Woven from the source code of the Astral Servers. |
 | S3-W02 | **Ascendant's Steps** | Feet | 62 | 90 Armor | +70 INT<br>
 
 <br>+20% Movement Spd<br>
 
-<br>+2 Sockets | You hover slightly off the digital floor. |
+| You hover slightly off the digital floor. |
 | S3-W03 | **Ascendant's Dial** | Waist | 62 | 60 Armor | +25% Cast Speed<br>
 
 <br>+10% Cooldown Reduc.<br>
 
-<br>+1 Socket | A belt that actively rewinds time around your spells. |
+| A belt that actively rewinds time around your spells. |
 
 ---
 
@@ -267,17 +267,17 @@
 
 <br>+20% Summon HP<br>
 
-<br>+2 Sockets | A terrifying skull mask wreathed in blue flame. |
+| A terrifying skull mask wreathed in blue flame. |
 | S3-N02 | **Grave-Lord's Shroud** | Torso | 55 | 170 Armor | +80 INT<br>
 
 <br>+30% Void Resist<br>
 
-<br>+2 Sockets | Whispers of the damned emanate from the folds. |
+| Whispers of the damned emanate from the folds. |
 | S3-N03 | **Grave-Lord's Signet** | Ring | 55 | *None* | +10% Cooldown Reduc.<br>
 
 <br>+15% Boss Dmg<br>
 
-<br>+1 Socket | A ring that hums with necromantic energy. |
+| A ring that hums with necromantic energy. |
 
 ### Set 2: Chimera's Aspect
 
@@ -293,17 +293,17 @@
 
 <br>+15% All Resist<br>
 
-<br>+2 Sockets | A heavy hood adorned with beast fur and fangs. |
+| A heavy hood adorned with beast fur and fangs. |
 | S3-D02 | **Aspect Claws** | Arms | 58 | 100 Armor | +50 STR/INT<br>
 
 <br>+20% Attack Speed<br>
 
-<br>+2 Sockets | Gauntlets that extend razor-sharp claws when making a fist. |
+| Gauntlets that extend razor-sharp claws when making a fist. |
 | S3-D03 | **Aspect Girdle** | Waist | 58 | 80 Armor | +400 Max HP<br>
 
 <br>+20% Crit Chance<br>
 
-<br>+1 Socket | A belt woven from incredibly tough, living vines. |
+| A belt woven from incredibly tough, living vines. |
 
 ### Set 3: Echoes of the Wild
 
@@ -319,14 +319,14 @@
 
 <br>+15% Life Steal<br>
 
-<br>+3 Sockets | Wood from Oakhaven, petrified by the Void. |
+| Wood from Oakhaven, petrified by the Void. |
 | S3-W05 | **Echoing Striders** | Feet | 62 | 120 Armor | +70 STA<br>
 
 <br>+20% Movement Spd<br>
 
-<br>+2 Sockets | Roots spread from the soles to anchor you when struck. |
+| Roots spread from the soles to anchor you when struck. |
 | S3-W06 | **Echoing Amulet** | Amulet | 62 | *None* | +100 INT/STA<br>
 
 <br>+15% All Resist<br>
 
-<br>+1 Socket | Two intertwined rings, representing the master and the beast. |
+| Two intertwined rings, representing the master and the beast. |

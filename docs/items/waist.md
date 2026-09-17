@@ -72,35 +72,35 @@ This document contains the foundational database for all **Waist** slot items (B
 
 <br>+2% to 5% Armor<br>
 
-<br>+1 Socket | A thick leather belt reinforced with iron studs. |
+| A thick leather belt reinforced with iron studs. |
 | W-R02 | **Shadow-Step Sash** | Sash | 33 | 22 - 30 | +20 to 40 INT/AGI<br>
 
 <br>+5% to 10% Evasion<br>
 
 <br>+40 to 100 Max Mana<br>
 
-<br>+1 Socket | Makes your footsteps completely silent. |
+| Makes your footsteps completely silent. |
 | W-R03 | **Alchemist's Bandolier** | Belt | 48 | 40 - 55 | +35 to 65 Core Stat<br>
 
 <br>+15% to 30% Potion Effect<br>
 
 <br>+10% to 20% HP Regen<br>
 
-<br>+1 to 2 Sockets | Covered in padded vials and glass tubes. |
+| Covered in padded vials and glass tubes. |
 | W-R04 | **Chrono-Mechanic's Belt** | Belt | 62 | 75 - 95 | +60 to 100 Core Stat<br>
 
 <br>+10% to 20% Cooldown Reduc.<br>
 
 <br>+15% to 25% Magic Find<br>
 
-<br>+1 to 2 Sockets | Contains an array of miniature ticking clocks and tools. |
+| Contains an array of miniature ticking clocks and tools. |
 | W-R05 | **Mainframe Core-Cord** | Cord | 70 | 140 - 170 | +100 to 160 Core Stat<br>
 
 <br>+300 to 600 Max HP<br>
 
 <br>+15% to 25% All Resist<br>
 
-<br>+2 Sockets | A thick fiber-optic cable ripped directly from a server. |
+| A thick fiber-optic cable ripped directly from a server. |
 
 ---
 
@@ -144,7 +144,7 @@ This document contains the foundational database for all **Waist** slot items (B
 
 <br>+25% Potion Effect<br>
 
-<br>+2 Sockets | Contains holographic tools that phase into reality when needed. |
+| Contains holographic tools that phase into reality when needed. |
 
 ---
 
@@ -160,35 +160,35 @@ This document contains the foundational database for all **Waist** slot items (B
 
 <br>+10% to 20% Fire Resist<br>
 
-<br>+1 Socket | **Ember Flask:** Whenever you use a healing potion, you unleash a shockwave of Fire Damage equal to 100% of your Strength to all enemies. |
+| **Ember Flask:** Whenever you use a healing potion, you unleash a shockwave of Fire Damage equal to 100% of your Strength to all enemies. |
 | W-L02 | **Abyssal Trench-Belt** | Belt | 40 | 45 - 60 | +40 to 75 Core Stat<br>
 
 <br>+150 to 250 Max Mana<br>
 
 <br>+20% to 35% Void Resist<br>
 
-<br>+1 to 2 Sockets | **Crush Depth:** Enemies that begin their turn in the same room as you have their Evasion and Attack Speed permanently reduced by 15%. |
+| **Crush Depth:** Enemies that begin their turn in the same room as you have their Evasion and Attack Speed permanently reduced by 15%. |
 | W-L03 | **Chimera's Coiled Tail** | Cord | 55 | 75 - 95 | +70 to 110 STR & INT<br>
 
 <br>+250 to 450 Max HP<br>
 
 <br>+10% to 20% Life Steal<br>
 
-<br>+1 to 2 Sockets | **Beast Blood:** Potion effects and base HP regeneration are multiplied by 300%, but your base Armor is reduced by 25%. |
+| **Beast Blood:** Potion effects and base HP regeneration are multiplied by 300%, but your base Armor is reduced by 25%. |
 | W-L04 | **Ascendant's Pendulum** | Sash | 65 | 115 - 140 | +100 to 150 Core Stat<br>
 
 <br>+15% to 25% All Resist<br>
 
 <br>+15% to 25% Cooldown Reduc.<br>
 
-<br>+2 Sockets | **Tick-Tock:** Every 3rd attack you make instantly reduces the cooldown of all your active skills by 1 turn. |
+| **Tick-Tock:** Every 3rd attack you make instantly reduces the cooldown of all your active skills by 1 turn. |
 | W-L05 | **The Prime Loop** | Belt | 70 | 200 - 240 | +150 to 220 Core Stat<br>
 
 <br>+600 to 900 Max HP<br>
 
 <br>+25% to 45% Magic Find<br>
 
-<br>+2 to 3 Sockets | **Memory Leak:** Every attack you land steals 5% of the enemy's maximum damage output and adds it to your own for the remainder of the battle. |
+| **Memory Leak:** Every attack you land steals 5% of the enemy's maximum damage output and adds it to your own for the remainder of the battle. |
 
 ---
 
@@ -198,5 +198,5 @@ When generating a waist instance (e.g., `W-L01` Ring of the Ashen Forge):
 
 1. Roll Base Armor between the defined Min/Max values (18 - 24).
 2. Determine the player's primary Core Stat (STR, AGI, INT) via Smart Loot and roll its value based on the Modifier Range (20 - 40).
-3. Roll the remaining random modifiers (HP, Fire Resist, Sockets - Waist items typically favor 1 to 2 sockets).
+3. Roll the remaining random modifiers (HP, Fire Resist - Waist items typically favor 1 to 2 sockets).
 4. Apply the Unique Trait (`Ember Flask`) statically to the item instance JSON for the `CombatEngine` to parse. Whenever the player triggers the "Use Potion" action, the engine checks for this trait flag and executes the AoE damage function.

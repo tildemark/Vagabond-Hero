@@ -23,17 +23,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+25% Crit Damage<br>
 
-<br>+3 Sockets | A helm forged from the debris of a deleted sector. |
+| A helm forged from the debris of a deleted sector. |
 | S4-WB2 | **Cataclysmic Plate** | Torso | 70 | 600 Armor | +150 STR<br>
 
 <br>+500 Max HP<br>
 
-<br>+3 Sockets | The metal is perpetually white-hot. |
+| The metal is perpetually white-hot. |
 | S4-WB3 | **Cataclysmic Ring** | Ring | 70 | *None* | +30% Attack Speed<br>
 
 <br>+20% Boss Dmg<br>
 
-<br>+2 Sockets | A ring of condensed gravity. |
+| A ring of condensed gravity. |
 
 ### Set 2: Aegis Lord's Bastion
 
@@ -49,17 +49,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+50 Damage Reflect<br>
 
-<br>+2 Sockets | Emits a hard-light barrier extending 10 feet out. |
+| Emits a hard-light barrier extending 10 feet out. |
 | S4-AL2 | **Bastion Greaves** | Legs | 70 | 450 Armor | +120 STR<br>
 
 <br>+30% All Resist<br>
 
-<br>+3 Sockets | Anchors the wearer directly to the server's root code. |
+| Anchors the wearer directly to the server's root code. |
 | S4-AL3 | **Bastion Core** | Amulet | 70 | *None* | +40% Block Chance<br>
 
 <br>+1000 Max HP<br>
 
-<br>+2 Sockets | A tiny, contained supernova. |
+| A tiny, contained supernova. |
 
 ### Set 3: Prime Enforcer's Plating
 
@@ -75,17 +75,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+20% All Resist<br>
 
-<br>+3 Sockets | Worn by the original server moderators. |
+| Worn by the original server moderators. |
 | S4-JE2 | **Enforcer's Gauntlets** | Arms | 70 | 280 Armor | +100 STR<br>
 
 <br>+50% Crit Damage<br>
 
-<br>+2 Sockets | Your punches can shatter digital reality. |
+| Your punches can shatter digital reality. |
 | S4-JE3 | **Enforcer's Signet** | Ring | 70 | *None* | +25% Boss Damage<br>
 
 <br>+20% Armor Pen<br>
 
-<br>+2 Sockets | Grants write-permission to the game engine. |
+| Grants write-permission to the game engine. |
 
 ---
 
@@ -105,17 +105,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+30% Attack Speed<br>
 
-<br>+3 Sockets | A mask made of absolute, light-devouring void. |
+| A mask made of absolute, light-devouring void. |
 | S4-SW2 | **Eclipse Coat** | Torso | 70 | 400 Armor | +150 AGI<br>
 
 <br>+20% Evasion<br>
 
-<br>+3 Sockets | Blends flawlessly into the Unallocated Space. |
+| Blends flawlessly into the Unallocated Space. |
 | S4-SW3 | **Eclipse Band** | Ring | 70 | *None* | +50 Flat Poison Dmg<br>
 
 <br>+20% Crit Chance<br>
 
-<br>+2 Sockets | Continuously leaks corrupted data. |
+| Continuously leaks corrupted data. |
 
 ### Set 2: Void-Stalker's Horizon
 
@@ -131,17 +131,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+25% Crit Chance<br>
 
-<br>+3 Sockets | Calculates trajectories across parallel dimensions. |
+| Calculates trajectories across parallel dimensions. |
 | S4-VS2 | **Horizon Treads** | Feet | 70 | 250 Armor | +100 AGI<br>
 
 <br>+30% Movement Spd<br>
 
-<br>+2 Sockets | Grants the ability to walk on the air itself. |
+| Grants the ability to walk on the air itself. |
 | S4-VS3 | **Horizon Calibrator** | Amulet | 70 | *None* | +100% Crit Damage<br>
 
 <br>+15% Cooldown Reduc.<br>
 
-<br>+2 Sockets | A quantum targeting lens. |
+| A quantum targeting lens. |
 
 ### Set 3: Prime Assassin's Shroud
 
@@ -157,17 +157,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+30% All Resist<br>
 
-<br>+3 Sockets | Woven from the source code of deleted player characters. |
+| Woven from the source code of deleted player characters. |
 | S4-PA2 | **Grips of the Prime** | Arms | 70 | 220 Armor | +120 AGI<br>
 
 <br>+35% Attack Speed<br>
 
-<br>+2 Sockets | Your strikes pass cleanly through physical armor. |
+| Your strikes pass cleanly through physical armor. |
 | S4-PA3 | **Seal of the Prime** | Ring | 70 | *None* | +20% Evasion<br>
 
 <br>+40% Magic Find<br>
 
-<br>+2 Sockets | A ring that exists only in your peripheral vision. |
+| A ring that exists only in your peripheral vision. |
 
 ---
 
@@ -187,17 +187,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+25% Cast Speed<br>
 
-<br>+3 Sockets | A halo of golden gears spinning backward. |
+| A halo of golden gears spinning backward. |
 | S4-AM2 | **Paradox Robes** | Torso | 70 | 380 Armor | +160 INT<br>
 
 <br>+30% All Resist<br>
 
-<br>+3 Sockets | The fabric depicts stars that have yet to be born. |
+| The fabric depicts stars that have yet to be born. |
 | S4-AM3 | **Paradox Core** | Amulet | 70 | *None* | +500 Max Mana<br>
 
 <br>+25% Magic Dmg<br>
 
-<br>+2 Sockets | A clock-face permanently stuck at 12:00. |
+| A clock-face permanently stuck at 12:00. |
 
 ### Set 2: Crimson Sovereign's Court
 
@@ -213,17 +213,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+800 Max HP<br>
 
-<br>+3 Sockets | A crown of crystallized blood hovering over a red hood. |
+| A crown of crystallized blood hovering over a red hood. |
 | S4-CS2 | **Sovereign's Bindings** | Arms | 70 | 180 Armor | +100 INT<br>
 
 <br>+30% Cast Speed<br>
 
-<br>+2 Sockets | Covered in runes written in the blood of dead servers. |
+| Covered in runes written in the blood of dead servers. |
 | S4-CS3 | **Sovereign's Ring** | Ring | 70 | *None* | +25% Life Steal<br>
 
 <br>+30% Magic Dmg<br>
 
-<br>+2 Sockets | Pulses like an anatomical heart. |
+| Pulses like an anatomical heart. |
 
 ### Set 3: Prime Compiler's Array
 
@@ -239,17 +239,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+1000 Max Mana<br>
 
-<br>+4 Sockets | Woven directly into the game's rendering engine. |
+| Woven directly into the game's rendering engine. |
 | S4-PW2 | **Compiler's Steps** | Feet | 70 | 200 Armor | +120 INT<br>
 
 <br>+30% Movement Spd<br>
 
-<br>+2 Sockets | You do not walk; the world moves around you. |
+| You do not walk; the world moves around you. |
 | S4-PW3 | **Compiler's Dial** | Waist | 70 | 140 Armor | +40% Cast Speed<br>
 
 <br>+20% Cooldown Reduc.<br>
 
-<br>+2 Sockets | An admin console strapped to your waist. |
+| An admin console strapped to your waist. |
 
 ---
 
@@ -269,17 +269,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+40% Summon HP<br>
 
-<br>+3 Sockets | A terrifying skull mask wreathed in green hellfire. |
+| A terrifying skull mask wreathed in green hellfire. |
 | S4-DC2 | **Apocalypse Shroud** | Torso | 70 | 400 Armor | +160 INT<br>
 
 <br>+40% Void Resist<br>
 
-<br>+3 Sockets | Shadows physically reach out from the fabric. |
+| Shadows physically reach out from the fabric. |
 | S4-DC3 | **Apocalypse Signet** | Ring | 70 | *None* | +20% Cooldown Reduc.<br>
 
 <br>+30% Boss Dmg<br>
 
-<br>+2 Sockets | Bound with the souls of corrupted admin programs. |
+| Bound with the souls of corrupted admin programs. |
 
 ### Set 2: Chimera-Lord's Apex
 
@@ -295,17 +295,17 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+25% All Resist<br>
 
-<br>+3 Sockets | Merges the traits of a dragon, wolf, and void-beast. |
+| Merges the traits of a dragon, wolf, and void-beast. |
 | S4-CL2 | **Apex Claws** | Arms | 70 | 240 Armor | +100 STR/INT<br>
 
 <br>+30% Attack Speed<br>
 
-<br>+2 Sockets | Unbreakable talons crackling with aether. |
+| Unbreakable talons crackling with aether. |
 | S4-CL3 | **Apex Girdle** | Waist | 70 | 180 Armor | +800 Max HP<br>
 
 <br>+30% Crit Chance<br>
 
-<br>+2 Sockets | A belt of living, glowing tendons. |
+| A belt of living, glowing tendons. |
 
 ### Set 3: Prime Architect's Command
 
@@ -321,14 +321,14 @@ This is the ultimate endgame Set Item database, available only to players who ha
 
 <br>+25% Life Steal<br>
 
-<br>+4 Sockets | Woven from the master framework of Oakhaven. |
+| Woven from the master framework of Oakhaven. |
 | S4-PW5 | **Architect's Striders** | Feet | 70 | 280 Armor | +140 STA<br>
 
 <br>+30% Movement Spd<br>
 
-<br>+2 Sockets | Roots from these boots tap directly into the server database. |
+| Roots from these boots tap directly into the server database. |
 | S4-PW6 | **Architect's Link** | Amulet | 70 | *None* | +200 INT/STA<br>
 
 <br>+25% All Resist<br>
 
-<br>+2 Sockets | A master-key glowing with blinding white light. |
+| A master-key glowing with blinding white light. |

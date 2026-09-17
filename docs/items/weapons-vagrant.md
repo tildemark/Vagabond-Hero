@@ -72,35 +72,35 @@ This document contains the foundational database for all **Weapons (1H and 2H)**
 
 <br>+3% to 6% Block<br>
 
-<br>+1 Socket | Painted with the faded crest of a forgotten kingdom. |
+| Painted with the faded crest of a forgotten kingdom. |
 | W1-R02 | **Shadow-Strike Dirk** | 1H Dagger | 10 | 10 - 15 Dmg | +8 to 15 AGI<br>
 
 <br>+4% to 8% Crit Chance<br>
 
 <br>+10% to 20% Crit Dmg<br>
 
-<br>+1 Socket | The blade absorbs light, creating a localized shadow. |
+| The blade absorbs light, creating a localized shadow. |
 | W1-R03 | **Weaver's Silk-Bow** | 2H Bow | 15 | 16 - 22 Dmg | +12 to 22 AGI/INT<br>
 
 <br>+10% to 15% Attack Speed<br>
 
 <br>+5 to 15 Flat Poison Dmg<br>
 
-<br>+1 Socket | Strung with incredibly tense spider silk. |
+| Strung with incredibly tense spider silk. |
 | W1-R04 | **Engraved Brass Hammer** | 1H Mace | 18 | 15 - 20 Dmg | +15 to 25 STR<br>
 
 <br>+5% to 10% Armor<br>
 
 <br>+10% to 20% Boss Dmg<br>
 
-<br>+1 Socket | A heavy industrial tool repurposed for crushing skulls. |
+| A heavy industrial tool repurposed for crushing skulls. |
 | W1-R05 | **Hazard-Prod** | 2H Spear | 20 | 20 - 28 Dmg | +18 to 28 Core Stat<br>
 
 <br>+15% to 25% Poison Resist<br>
 
 <br>+10 to 20 Flat Lightning Dmg<br>
 
-<br>+1 to 2 Sockets | Originally used to corral toxic sludge-beasts. |
+| Originally used to corral toxic sludge-beasts. |
 
 ---
 
@@ -144,7 +144,7 @@ This document contains the foundational database for all **Weapons (1H and 2H)**
 
 <br>+15% Armor Penetration<br>
 
-<br>+1 Socket | The very axe that tore the fabric of Act 1 apart. |
+| The very axe that tore the fabric of Act 1 apart. |
 
 ---
 
@@ -160,35 +160,35 @@ This document contains the foundational database for all **Weapons (1H and 2H)**
 
 <br>+10 to 20 Flat Fire Dmg<br>
 
-<br>+1 Socket | **Ignition:** Critical Hits ignite the enemy, dealing an additional 50% of the initial hit's damage over 2 turns. |
+| **Ignition:** Critical Hits ignite the enemy, dealing an additional 50% of the initial hit's damage over 2 turns. |
 | W1-L02 | **The Whispering Web** | 2H Bow | 14 | 20 - 26 Dmg | +20 to 30 AGI<br>
 
 <br>+10% to 20% Attack Speed<br>
 
 <br>+15% to 25% Poison Resist<br>
 
-<br>+1 to 2 Sockets | **Entangle:** Your basic attacks have a 20% chance to root the enemy, preventing them from using Evasion for 3 turns. |
+| **Entangle:** Your basic attacks have a 20% chance to root the enemy, preventing them from using Evasion for 3 turns. |
 | W1-L03 | **Vanguard's First Wall** | Shield | 16 | 20 - 28 Armor | +25 to 35 STR/STA<br>
 
 <br>+100 to 150 Max HP<br>
 
 <br>+5% to 15% Block Chance<br>
 
-<br>+1 to 2 Sockets | **Phalanx:** While equipped, your active Companion takes 50% less damage from all sources. |
+| **Phalanx:** While equipped, your active Companion takes 50% less damage from all sources. |
 | W1-L04 | **Blade of the Severance** | 1H Sword | 18 | 22 - 30 Dmg | +30 to 45 Core Stat<br>
 
 <br>+15% to 25% Crit Damage<br>
 
 <br>+15 to 30 Flat Void Dmg<br>
 
-<br>+1 to 2 Sockets | **Glitch-Strike:** 10% chance on hit to instantly deal damage equal to 15% of the enemy's Current HP (bypasses armor). |
+| **Glitch-Strike:** 10% chance on hit to instantly deal damage equal to 15% of the enemy's Current HP (bypasses armor). |
 | W1-L05 | **The Behemoth's Root** | 2H Staff | 20 | 28 - 38 Dmg | +40 to 60 INT<br>
 
 <br>+100 to 200 Max Mana<br>
 
 <br>+15% to 25% Cast Speed<br>
 
-<br>+2 Sockets | **Overgrowth:** Casting a spell heals you for 10% of your Max HP. If you are at full HP, it grants a temporary armor shield instead. |
+| **Overgrowth:** Casting a spell heals you for 10% of your Max HP. If you are at full HP, it grants a temporary armor shield instead. |
 
 ---
 
@@ -198,7 +198,7 @@ When generating a weapon instance (e.g., `W1-L04` Blade of the Severance):
 
 1. Roll Base Damage between the defined Min/Max values (22 - 30).
 2. Determine the player's primary Core Stat via Smart Loot and roll its value based on the Modifier Range (30 - 45).
-3. Roll the remaining random modifiers (Crit Damage, Void Dmg, Sockets).
+3. Roll the remaining random modifiers (Crit Damage, Void Dmg).
 4. Apply the Unique Trait (`Glitch-Strike`) statically to the item instance JSON.
 5. In the `CombatEngine`, inside the `executePlayerTurn()` function, add a trait check:
 

@@ -23,12 +23,12 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+10% Block<br>
 
-<br>+1 Socket | A solid iron faceplate with no eye slits. |
+| A solid iron faceplate with no eye slits. |
 | SJ1-02 | **Bastion's Carapace** | Torso | 35 | 160 Armor | +60 STA<br>
 
 <br>+200 Max HP<br>
 
-<br>+2 Sockets | Ridiculously heavy plate armor. |
+| Ridiculously heavy plate armor. |
 | SJ1-03 | **Bastion's Wall** | Off-Hand | 35 | 120 Armor | +30 STR<br>
 
 <br>+30 Damage Reflect | A towering shield resembling a vault door. |
@@ -47,7 +47,7 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+20% Cooldown Reduc.<br>
 
-<br>+1 Socket | A glowing brass whistle. |
+| A glowing brass whistle. |
 | SJ2-02 | **Warlord's Stride** | Feet | 38 | 80 Armor | +35 STR<br>
 
 <br>+15% Movement Spd | Boots tipped with solid steel spikes. |
@@ -55,7 +55,7 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+20% Boss Damage<br>
 
-<br>+2 Sockets | A massive hammer that crackles with kinetic energy. |
+| A massive hammer that crackles with kinetic energy. |
 
 ### Set 3: Goliath's Endurance
 
@@ -71,17 +71,17 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+25% HP Regen<br>
 
-<br>+1 Socket | A wrestling belt won in the old fighting pits. |
+| A wrestling belt won in the old fighting pits. |
 | SJ3-02 | **Goliath's Grips** | Arms | 42 | 70 Armor | +40 STR<br>
 
 <br>+15% Attack Speed<br>
 
-<br>+1 Socket | Armbands that pulse like veins. |
+| Armbands that pulse like veins. |
 | SJ3-03 | **Goliath's Heart** | Ring | 42 | *None* | +300 Max HP<br>
 
 <br>+10% All Resist<br>
 
-<br>+1 Socket | A ring holding a drop of crystallized giant's blood. |
+| A ring holding a drop of crystallized giant's blood. |
 
 ---
 
@@ -107,7 +107,7 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+30% Poison Resist<br>
 
-<br>+1 Socket | Woven from the skin of an Abyssal snake. |
+| Woven from the skin of an Abyssal snake. |
 
 ### Set 2: Shadow-Walker's Shroud
 
@@ -123,12 +123,12 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+10% Evasion<br>
 
-<br>+1 Socket | Your face is entirely obscured by magical shadow. |
+| Your face is entirely obscured by magical shadow. |
 | SP2-02 | **Shroud's Wraps** | Arms | 38 | 50 Armor | +35 AGI<br>
 
 <br>+20% Crit Damage<br>
 
-<br>+1 Socket | Muffles the sound of your weapons being drawn. |
+| Muffles the sound of your weapons being drawn. |
 | SP2-03 | **Shroud's Loop** | Ring | 38 | *None* | +10% Crit Chance<br>
 
 <br>+15% Movement Spd | A ring forged from absolute darkness. |
@@ -147,17 +147,17 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+15% Attack Speed<br>
 
-<br>+2 Sockets | The bowstring hums with contained wind. |
+| The bowstring hums with contained wind. |
 | SP3-02 | **Gale-Wind Boots** | Feet | 42 | 60 Armor | +40 AGI<br>
 
 <br>+20% Movement Spd<br>
 
-<br>+1 Socket | So light they feel like wearing nothing. |
+| So light they feel like wearing nothing. |
 | SP3-03 | **Gale-Wind Signet** | Ring | 42 | *None* | +20 AGI<br>
 
 <br>+10% Evasion<br>
 
-<br>+1 Socket | Carved with the symbol of a tornado. |
+| Carved with the symbol of a tornado. |
 
 ---
 
@@ -177,12 +177,12 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+15% Cast Speed<br>
 
-<br>+2 Sockets | Topped with a rotating, multi-faceted crystal. |
+| Topped with a rotating, multi-faceted crystal. |
 | SW1-02 | **Genesis Halo** | Head | 35 | 60 Armor | +40 INT<br>
 
 <br>+10% All Resist<br>
 
-<br>+1 Socket | A floating crown of pure arcane energy. |
+| A floating crown of pure arcane energy. |
 | SW1-03 | **Genesis Pendant** | Amulet | 35 | *None* | +30 INT<br>
 
 <br>+20% Crit Chance | The gem constantly changes color (Fire/Ice/Lightning). |
@@ -201,12 +201,12 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+100 Max Mana<br>
 
-<br>+2 Sockets | Woven from the physical manifestation of the Void. |
+| Woven from the physical manifestation of the Void. |
 | SW2-02 | **Aether Focus** | Off-Hand | 38 | *None* | +35 STA<br>
 
 <br>+150 Max Mana<br>
 
-<br>+1 Socket | A glowing orb held in the palm of the hand. |
+| A glowing orb held in the palm of the hand. |
 | SW2-03 | **Aether Cord** | Waist | 38 | 30 Armor | +30 INT<br>
 
 <br>+20% Mana Regen | A belt made of braided starlight. |
@@ -225,12 +225,12 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+10% Cooldown Reduc.<br>
 
-<br>+1 Socket | Shaped like an infinity symbol at the tip. |
+| Shaped like an infinity symbol at the tip. |
 | SW3-02 | **Looping Gloves** | Arms | 42 | 45 Armor | +35 INT<br>
 
 <br>+15% Cast Speed<br>
 
-<br>+1 Socket | Your fingers blur when weaving spell components. |
+| Your fingers blur when weaving spell components. |
 | SW3-03 | **Looping Band** | Ring | 42 | *None* | +15% Cooldown Reduc.<br>
 
 <br>+10% Magic Dmg | A Moebius strip forged from silver. |
@@ -253,17 +253,17 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+15% Attack Speed<br>
 
-<br>+1 Socket | Used to direct the pack, not strike them. |
+| Used to direct the pack, not strike them. |
 | SD1-02 | **Master's Totem** | Off-Hand | 35 | *None* | +40 STA<br>
 
 <br>+20% Summon HP<br>
 
-<br>+1 Socket | Carved with the roaring face of a chimera. |
+| Carved with the roaring face of a chimera. |
 | SD1-03 | **Master's Harness** | Torso | 35 | 120 Armor | +30 STR<br>
 
 <br>+250 Max HP<br>
 
-<br>+1 Socket | Thick leather reinforced with bone plates. |
+| Thick leather reinforced with bone plates. |
 
 ### Set 2: The Overgrowth
 
@@ -279,12 +279,12 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+15 Flat Poison<br>
 
-<br>+2 Sockets | A spear made entirely of twisted, living thorns. |
+| A spear made entirely of twisted, living thorns. |
 | SD2-02 | **Overgrowth Boots** | Feet | 38 | 65 Armor | +35 STA<br>
 
 <br>+10% HP Regen<br>
 
-<br>+1 Socket | Roots occasionally attempt to anchor you to the ground. |
+| Roots occasionally attempt to anchor you to the ground. |
 | SD2-03 | **Overgrowth Ring** | Ring | 38 | *None* | +10% Life Steal<br>
 
 <br>+50 Max HP | A ring of petrified moss. |
@@ -303,12 +303,12 @@ Here is the comprehensive Set Item Database for the **First Job Change (Levels 2
 
 <br>+15% All Resist<br>
 
-<br>+1 Socket | Connected to your spine by ethereal blue threads. |
+| Connected to your spine by ethereal blue threads. |
 | SD3-02 | **Tethered Cord** | Waist | 42 | 40 Armor | +35 INT<br>
 
 <br>+15% Potion Effect<br>
 
-<br>+1 Socket | A belt that feels like it's squeezing you just a bit too tight. |
+| A belt that feels like it's squeezing you just a bit too tight. |
 | SD3-03 | **Tethered Amulet** | Amulet | 42 | *None* | +20% Boss Damage<br>
 
 <br>+100 Max Mana | The gemstone beats in sync with your heart. |

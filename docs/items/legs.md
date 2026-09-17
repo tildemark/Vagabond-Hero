@@ -72,35 +72,35 @@ This document contains the foundational database for all **Legs** slot items (Pa
 
 <br>+2% to 6% Armor<br>
 
-<br>+1 to 2 Sockets | Battle-scarred leg plates that have seen countless skirmishes. |
+| Battle-scarred leg plates that have seen countless skirmishes. |
 | L-R02 | **Shadow-Step Trousers** | Trousers | 33 | 60 - 80 | +25 to 45 INT/AGI<br>
 
 <br>+5% to 12% Evasion<br>
 
 <br>+10% Movement Speed<br>
 
-<br>+1 to 2 Sockets | The fabric blurs when you move, making you hard to target. |
+| The fabric blurs when you move, making you hard to target. |
 | L-R03 | **Hazard Suit Legs** | Legguards | 48 | 100 - 130 | +40 to 70 Core Stat<br>
 
 <br>+15% to 30% Poison Resist<br>
 
 <br>+10% to 20% HP Regen<br>
 
-<br>+1 to 2 Sockets | Fully sealed with airtight rubberized joints. |
+| Fully sealed with airtight rubberized joints. |
 | L-R04 | **Engineer's Brass Trousers** | Trousers | 62 | 170 - 220 | +70 to 110 Core Stat<br>
 
 <br>+10% to 20% Evasion<br>
 
 <br>+15% to 25% Magic Find<br>
 
-<br>+2 Sockets | Lined with copper wire to ground out electrical charges. |
+| Lined with copper wire to ground out electrical charges. |
 | L-R05 | **Mainframe Core-Greaves** | Greaves | 70 | 330 - 400 | +120 to 180 Core Stat<br>
 
 <br>+500 to 800 Max HP<br>
 
 <br>+15% to 25% All Resist<br>
 
-<br>+2 Sockets | High-density ceramic plates wired directly to the server core. |
+| High-density ceramic plates wired directly to the server core. |
 
 ---
 
@@ -144,7 +144,7 @@ This document contains the foundational database for all **Legs** slot items (Pa
 
 <br>+20% Movement Speed<br>
 
-<br>+2 Sockets | Exoskeletal braces that entirely negate the effects of fatigue. |
+| Exoskeletal braces that entirely negate the effects of fatigue. |
 
 ---
 
@@ -160,35 +160,35 @@ This document contains the foundational database for all **Legs** slot items (Pa
 
 <br>+10% to 20% Fire Resist<br>
 
-<br>+1 to 2 Sockets | **Unmovable:** You are completely immune to all Stun, Knockback, and Root debuffs. |
+| **Unmovable:** You are completely immune to all Stun, Knockback, and Root debuffs. |
 | L-L02 | **Abyssal Waders** | Pants | 40 | 120 - 160 | +50 to 80 Core Stat<br>
 
 <br>+10% to 20% Evasion<br>
 
 <br>+20% to 35% Void Resist<br>
 
-<br>+2 Sockets | **Deep Current:** Whenever you successfully Evade an attack, your next action costs 0 Mana and does not consume your turn. |
+| **Deep Current:** Whenever you successfully Evade an attack, your next action costs 0 Mana and does not consume your turn. |
 | L-L03 | **Chimera's Hind Legs** | Legguards | 55 | 190 - 240 | +80 to 120 STR & INT<br>
 
 <br>+300 to 500 Max HP<br>
 
 <br>+10% to 15% Life Steal<br>
 
-<br>+2 Sockets | **Predator's Pounce:** Your very first attack in any combat encounter deals 250% damage and guarantees a Critical Hit. |
+| **Predator's Pounce:** Your very first attack in any combat encounter deals 250% damage and guarantees a Critical Hit. |
 | L-L04 | **Ascendant's Gear-Pants** | Trousers | 65 | 280 - 340 | +110 to 160 Core Stat<br>
 
 <br>+15% to 25% All Resist<br>
 
 <br>+15% to 25% Movement Speed<br>
 
-<br>+2 Sockets | **Clockwork Steps:** For every turn that passes in combat, your Evasion increases by 2%, up to a maximum of 20%. |
+| **Clockwork Steps:** For every turn that passes in combat, your Evasion increases by 2%, up to a maximum of 20%. |
 | L-L05 | **The Prime Strides** | Greaves | 70 | 500 - 600 | +180 to 250 Core Stat<br>
 
 <br>+800 to 1200 Max HP<br>
 
 <br>+20% to 40% Magic Find<br>
 
-<br>+2 to 3 Sockets | **System Bypass:** You are entirely immune to environmental damage, traps, and passive Node debuffs (e.g., Toxic drains, Chill effects). |
+| **System Bypass:** You are entirely immune to environmental damage, traps, and passive Node debuffs (e.g., Toxic drains, Chill effects). |
 
 ---
 
@@ -198,5 +198,5 @@ When generating a legs instance (e.g., `L-L02` Abyssal Waders):
 
 1. Roll Base Armor between the defined Min/Max values (120 - 160).
 2. Determine the player's primary Core Stat (STR, AGI, INT) via Smart Loot and roll its value based on the Modifier Range (50 - 80).
-3. Roll the remaining random modifiers (Evasion, Void Resist, Sockets).
+3. Roll the remaining random modifiers (Evasion, Void Resist).
 4. Apply the Unique Trait (`Deep Current`) statically to the item instance JSON. In the `CombatEngine`, when the `calculateEvasion()` function returns true, the engine applies a temporary state flag `freeTurn = true`, skipping the enemy's next action and resetting the player's mana cost for the subsequent spell.

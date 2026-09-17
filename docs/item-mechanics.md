@@ -136,9 +136,26 @@ When generating a Magic, Rare, or Legendary item, the `LootGenerator` will rando
 
 ---
 
-## 6. The Gem & Socketing Mechanics
+## 6. The Gem & Artisan Socketing Mechanics (Option B: Pure Modifiers & Artificer NPC)
 
-Items from Level 15 onward have a chance to drop with empty Sockets (Max 3 for Weapons/Torso, Max 1 or 2 for other slots).
+In *Vagabond Hero*, **items drop purely with authentic combat and utility modifiers**—sockets never dilute or consume an item's modifier budget. Instead, sockets are physical sockets added post-drop through the camp/town artisan.
+
+### 1. Natural Item Drops (Zero Intrinsic Sockets)
+* All dropped and vendor equipment starts with **0 open sockets**.
+* Rare, Unique, Legendary, and Set pieces always drop with their **full allocation of stat affixes** (+Strength, +Crit Chance, % Resistances, Unique Traits) without losing an affix slot to a socket roll.
+
+### 2. The Artificer NPC: "Garrick's Drill & Infusion"
+At the Vanguard's Hold (and Act Camp hubs), the **Artificer / Blacksmith NPC** provides equipment socketing services:
+* **First Socket:** Costs Silver Prisms + Salvage Shards.
+* **Second Socket:** Requires a higher level item (Level 35+) and Pristine Essences.
+* **Maximum Socket Capacity by Slot:**
+  * **2H Weapons & Torso (Chest):** Max **2 Sockets**.
+  * **1H Weapons, Shields, Head, Legs:** Max **1 to 2 Sockets** (2nd socket unlocked at Level 50+).
+  * **Arms, Waist, Feet, Neck, Rings:** Max **1 Socket**.
+
+---
+
+### 3. Gem Matrix & Slot Effects
 
 Gems provide different stats based on where they are slotted:
 
@@ -150,7 +167,7 @@ Gems provide different stats based on where they are slotted:
 | **Amethyst (Void)** | + Flat Void Damage | + % Damage Reflect (Thorns) | + % Void Resistance |
 | **Diamond (Core)** | + % Boss Damage | + % All Resistances | + % Magic Find |
 | **Topaz (Wealth)** | + % Life Steal | + % Evasion | + % Gold Drop Rate |
-| **Pearl (Swiftness)** | + % Attack Speed | + % Movement / Travel Speed | + % EXP Gained |
+| **Pearl (Swiftness)** | + % Attack Speed | + % Movement / Avoidance | + % EXP Gained |
 
 **Gem Tier Combining (Blacksmith Forge):**
 Players combine 3 gems of the same tier (plus gold) to upgrade them to the next tier:

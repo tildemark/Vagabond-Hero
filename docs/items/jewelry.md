@@ -62,35 +62,35 @@ This document contains the foundational database for all **Neck** (Amulets, Neck
 
 <br>+5% to 10% All Resist<br>
 
-<br>+1 Socket | A polished iron shield worn on a heavy chain. |
+| A polished iron shield worn on a heavy chain. |
 | N-R02 | **Shadow-Step Choker** | Choker | 33 | +30 to 50 INT/AGI<br>
 
 <br>+5% to 10% Life Steal<br>
 
 <br>+10% Evasion<br>
 
-<br>+1 to 2 Sockets | Crafted from a material that swallows ambient light. |
+| Crafted from a material that swallows ambient light. |
 | N-R03 | **Hazard-Proof Pendant** | Amulet | 48 | +50 to 80 Core Stat<br>
 
 <br>+20% to 35% Poison Resist<br>
 
 <br>+20% to 30% HP Regen<br>
 
-<br>+1 to 2 Sockets | Contains a tiny, functional air purification filter. |
+| Contains a tiny, functional air purification filter. |
 | N-R04 | **Engineer's Brass-Chain** | Necklace | 62 | +80 to 120 Core Stat<br>
 
 <br>+10% to 20% Cooldown Reduc.<br>
 
 <br>+20% to 30% Magic Find<br>
 
-<br>+2 Sockets | Strung with various microscopic calibration tools. |
+| Strung with various microscopic calibration tools. |
 | N-R05 | **Mainframe Core-Node** | Amulet | 70 | +130 to 190 Core Stat<br>
 
 <br>+15% to 25% All Resist<br>
 
 <br>+10% to 20% Boss Damage<br>
 
-<br>+2 to 3 Sockets | A severed fiber-optic node leaking raw processing power. |
+| A severed fiber-optic node leaking raw processing power. |
 
 ### 4. Unique Neck Items (4 Fixed Modifiers)
 
@@ -132,7 +132,7 @@ This document contains the foundational database for all **Neck** (Amulets, Neck
 
 <br>+20% Boss Damage<br>
 
-<br>+2 Sockets | The needle always points toward the nearest system anomaly. |
+| The needle always points toward the nearest system anomaly. |
 
 ### 5. Legendary Neck Items (4-5 Random Modifiers + 1 Unique Trait)
 
@@ -146,35 +146,35 @@ This document contains the foundational database for all **Neck** (Amulets, Neck
 
 <br>+15% to 25% Fire Resist<br>
 
-<br>+1 to 2 Sockets | **Phoenix Down:** Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node). |
+| **Phoenix Down:** Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node). |
 | N-L02 | **Abyssal Pearl** | Amulet | 40 | +60 to 90 Core Stat<br>
 
 <br>+250 to 400 Max Mana<br>
 
 <br>+25% to 40% Void Resist<br>
 
-<br>+2 Sockets | **Deep Magic:** Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost. |
+| **Deep Magic:** Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost. |
 | N-L03 | **Chimera's Mane-Tether** | Choker | 55 | +90 to 130 STR & INT<br>
 
 <br>+400 to 600 Max HP<br>
 
 <br>+15% to 25% Life Steal<br>
 
-<br>+2 Sockets | **Blood Bond:** 50% of all healing and Life Steal you receive is also applied to your active Companion. |
+| **Blood Bond:** 50% of all healing and Life Steal you receive is also applied to your active Companion. |
 | N-L04 | **Ascendant's Pocket-Watch** | Amulet | 65 | +120 to 170 Core Stat<br>
 
 <br>+20% to 30% All Resist<br>
 
 <br>+20% to 30% Cooldown Reduc.<br>
 
-<br>+2 to 3 Sockets | **Overtime:** Every time you kill an enemy, you instantly gain a free, immediate turn. |
+| **Overtime:** Every time you kill an enemy, you instantly gain a free, immediate turn. |
 | N-L05 | **The Prime Node** | Amulet | 70 | +200 to 280 Core Stat<br>
 
 <br>+1000 to 1500 Max HP<br>
 
 <br>+30% to 50% Magic Find<br>
 
-<br>+3 Sockets | **Admin Privilege:** You are completely immune to all enemy Critical Hits and 'Execute' mechanics. |
+| **Admin Privilege:** You are completely immune to all enemy Critical Hits and 'Execute' mechanics. |
 
 ---
 
@@ -233,35 +233,35 @@ This document contains the foundational database for all **Neck** (Amulets, Neck
 
 <br>+5% to 10% Armor<br>
 
-<br>+1 Socket | Granted to veterans who survived their first Void storm. |
+| Granted to veterans who survived their first Void storm. |
 | R-R02 | **Shadow-Strike Ring** | Ring | 33 | +25 to 45 INT/AGI<br>
 
 <br>+5% to 12% Crit Chance<br>
 
 <br>+20% to 40% Crit Damage<br>
 
-<br>+1 Socket | The gemstone is replaced by a void of absolute black. |
+| The gemstone is replaced by a void of absolute black. |
 | R-R03 | **Hazard-Resistant Band** | Band | 48 | +45 to 75 Core Stat<br>
 
 <br>+20% to 35% Poison Resist<br>
 
 <br>+15% to 25% Attack Speed<br>
 
-<br>+1 Socket | Forged from non-reactive industrial polymers. |
+| Forged from non-reactive industrial polymers. |
 | R-R04 | **Engineer's Calibration Ring** | Ring | 62 | +75 to 115 Core Stat<br>
 
 <br>+10% to 18% Crit Chance<br>
 
 <br>+30% to 50% Crit Damage<br>
 
-<br>+1 to 2 Sockets | Features a rotating bezel used to measure distances. |
+| Features a rotating bezel used to measure distances. |
 | R-R05 | **Mainframe Core-Loop** | Ring | 70 | +125 to 185 Core Stat<br>
 
 <br>+15% to 25% All Resist<br>
 
 <br>+15% to 25% Boss Damage<br>
 
-<br>+1 to 2 Sockets | Forged from a melted processing chip. |
+| Forged from a melted processing chip. |
 
 ### 4. Unique Finger Items (4 Fixed Modifiers)
 
@@ -303,7 +303,7 @@ This document contains the foundational database for all **Neck** (Amulets, Neck
 
 <br>+50% Crit Damage<br>
 
-<br>+1 Socket | Expands and contracts based on the wearer's pulse. |
+| Expands and contracts based on the wearer's pulse. |
 
 ### 5. Legendary Finger Items (4-5 Random Modifiers + 1 Unique Trait)
 
@@ -317,32 +317,32 @@ This document contains the foundational database for all **Neck** (Amulets, Neck
 
 <br>+15% to 30% Fire Resist<br>
 
-<br>+1 Socket | **Kindling:** Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat. |
+| **Kindling:** Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat. |
 | R-L02 | **Abyssal Pressure-Band** | Band | 40 | +55 to 85 Core Stat<br>
 
 <br>+15% to 25% Attack/Cast Spd<br>
 
 <br>+25% to 40% Void Resist<br>
 
-<br>+1 Socket | **Implosion:** Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP. |
+| **Implosion:** Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP. |
 | R-L03 | **Chimera's Eye-Ring** | Signet | 55 | +85 to 125 STR & INT<br>
 
 <br>+12% to 20% Crit Chance<br>
 
 <br>+40% to 80% Crit Damage<br>
 
-<br>+1 to 2 Sockets | **Feral Insight:** Your Critical Hits ignore 100% of the enemy's Elemental Resistances. |
+| **Feral Insight:** Your Critical Hits ignore 100% of the enemy's Elemental Resistances. |
 | R-L04 | **Ascendant's Gear-Loop** | Ring | 65 | +115 to 165 Core Stat<br>
 
 <br>+20% to 30% All Resist<br>
 
 <br>+20% to 40% Magic Find<br>
 
-<br>+1 to 2 Sockets | **Clockstopper:** Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn. |
+| **Clockstopper:** Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn. |
 | R-L05 | **The Prime Band** | Band | 70 | +190 to 270 Core Stat<br>
 
 <br>+25% to 40% Crit Chance<br>
 
 <br>+100% to 150% Crit Damage<br>
 
-<br>+2 Sockets | **Buffer Overflow:** If you deal damage that exceeds an enemy's remaining HP, the excess damage chains to a second random enemy in the room. |
+| **Buffer Overflow:** If you deal damage that exceeds an enemy's remaining HP, the excess damage chains to a second random enemy in the room. |
