@@ -58,17 +58,18 @@ lib/
 
 ## 📚 Documentation
 
-Detailed game design and technical documents are located in [`docs/`](file:///d:/code/Vagabond-Hero/docs):
+Detailed game design and technical documents are located in [`docs/`](docs):
 
-- [Architecture Guide](file:///d:/code/Vagabond-Hero/docs/architecture.md) — Technical layers, database schemas, and state flow.
-- [Game Mechanics](file:///d:/code/Vagabond-Hero/docs/mechanics.md) — Navigation grids, leveling, classes, loot formulas, and combat rules.
-- [AI Agent Specifications](file:///d:/code/Vagabond-Hero/docs/agents.md) — Technical roles, design patterns, and code generation guidelines.
+- [Implementation Roadmap](docs/roadmap.md) — Phased delivery plan for `/landing`, `/web`, and `/mobile`.
+- [Architecture Guide](docs/architecture.md) — Technical layers, database schemas, and state flow.
+- [Game Mechanics](docs/mechanics.md) — Navigation grids, leveling, classes, loot formulas, and combat rules.
+- [AI Agent Specifications](docs/agents.md) — Technical roles, design patterns, and code generation guidelines.
 - **Story Acts:**
-  - [Act I: The Ashen Awakening](file:///d:/code/Vagabond-Hero/docs/story/act1.md)
-  - [Act II: The Sunken Core](file:///d:/code/Vagabond-Hero/docs/story/act2.md)
-  - [Act III: Spire of the Glitched Sky](file:///d:/code/Vagabond-Hero/docs/story/act3.md)
-  - [Act IV: The Void Foundry](file:///d:/code/Vagabond-Hero/docs/story/act4.md)
-  - [Act V: The Terminal of Creation](file:///d:/code/Vagabond-Hero/docs/story/act5.md)
+  - [Act I: The Ashen Awakening](docs/story/act1.md)
+  - [Act II: The Sunken Core](docs/story/act2.md)
+  - [Act III: Spire of the Glitched Sky](docs/story/act3.md)
+  - [Act IV: The Void Foundry](docs/story/act4.md)
+  - [Act V: The Terminal of Creation](docs/story/act5.md)
 
 ---
 
@@ -78,23 +79,67 @@ Detailed game design and technical documents are located in [`docs/`](file:///d:
 
 - [Flutter SDK](https://docs.flutter.dev/get-started/install) (3.x recommended)
 - Dart SDK (included with Flutter)
+- Python 3.x, Node.js (`npx serve`), or any static HTTP server (for the landing page)
 
-### Setup & Installation
+### 🌐 Running the Landing Page Locally
+
+The landing page (`/landing`) is built with vanilla HTML5, CSS3, and JavaScript, requiring zero build toolchains.
+
+```bash
+# Option 1: Using Python
+python -m http.server 8085 --directory landing
+
+# Option 2: Using Node.js npx
+npx serve landing
+
+# Option 3: Direct browser opening
+# Open landing/index.html directly in any web browser
+```
+
+Visit `http://localhost:8085` in your browser.
+
+When pushed to the `main` branch, the landing page and web game demo are automatically deployed to GitHub Pages via [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml).
+
+### 📱 Game Setup & Installation (Mobile & Web)
 
 ```bash
 # Clone the repository
 git clone https://github.com/tildemark/Vagabond-Hero.git
-cd Vagabond-Hero
+cd Vagabond-Hero/mobile
 
-# Fetch dependencies (once project packages are set up)
+# Fetch dependencies
 flutter pub get
 
-# Generate Drift and Freezed code
+# Generate Drift code
 dart run build_runner build --delete-conflicting-outputs
 
-# Launch on device or emulator
+# Launch on mobile device or emulator
 flutter run
+
+# Launch on web browser
+flutter run -d chrome
 ```
+
+---
+
+## 🚀 CI/CD Pipelines
+
+- **GitHub Pages Deployment ([.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml))**:
+  - Compiles the Flutter Web release bundle.
+  - Deploys the root landing page (`/`) and the live browser game demo (`/play/`) to GitHub Pages on every push to `main`.
+- **Android Release APK ([.github/workflows/build-mobile-apk.yml](.github/workflows/build-mobile-apk.yml))**:
+  - Runs Drift code generation, test suites, and compiles release `app-release.apk`.
+  - Automatically attaches the APK to GitHub Releases on tag pushes (`v*`).
+
+---
+
+## 📜 Recent Updates
+
+- **Phase 1 (Core Engine)**: Cross-platform Flutter engine with Drift SQLite relational persistence, Riverpod state management, Act I room traversal, and turn-based combat.
+- **Phase 2 (Mobile App)**: Android branding, launcher icons, tactile haptic feedback on combat/navigation, and inventory bottom sheets.
+- **Phase 3 (Web App)**: Desktop keyboard hotkeys (WASD, Space, 1, I), production CanvasKit/Wasm compilation, and browser save storage.
+- **Phase 4 (Landing Page)**: Dark fantasy terminal landing page with interactive MUD simulation and direct APK download links.
+- **Phase 5 (CI/CD Pipeline)**: GitHub Actions workflows for automated GitHub Pages hosting and Android APK release generation.
 
 ---
 

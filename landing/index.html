@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vagabond Hero — Dark Fantasy Text RPG (Download APK & Web Demo)</title>
+  <meta name="description" content="An offline-first, dark fantasy isekai text-based RPG. Explore the Shattered Expanse, loot Diablo-style gear, and survive tactical turn-based battles. Download Android APK or play in browser." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/app-icon.jpg" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="brand">
+      <img src="assets/images/app-icon.jpg" alt="Vagabond Hero Icon" class="brand-icon" />
+      <span class="brand-name">Vagabond Hero</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features" class="nav-link">Features</a></li>
+      <li><a href="#terminal" class="nav-link">Terminal Preview</a></li>
+      <li><a href="#story" class="nav-link">The 5 Acts</a></li>
+      <li><a href="#download" class="nav-link">Download</a></li>
+      <li><a href="https://github.com/tildemark/Vagabond-Hero" target="_blank" rel="noopener" class="nav-link">GitHub</a></li>
+    </ul>
+    <a href="#download" class="nav-cta">Get Android APK</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        <span>ISEKAI TEXT RPG • OFFLINE FIRST</span>
+      </div>
+      <h1 class="hero-title">
+        The Terminal Shattered.
+        <span>You Awoke in Grey Ash.</span>
+      </h1>
+      <p class="hero-description">
+        You were compiling a legacy MUD script when your screen erupted into blinding light. Now trapped within the fractured digital realm of the <strong>Shattered Expanse</strong>, navigate deadly nodes, roll tactical dice, and master Diablo-style procedural loot.
+      </p>
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+          </svg>
+          Download APK (v1.0.0)
+        </a>
+        <a href="#terminal" class="btn btn-secondary" id="play-demo-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Interactive Preview
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span>⚡ 100% Offline SQLite (Drift)</span>
+        <span>⚔️ Turn-Based Tactical Combat</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <img src="assets/images/hero-banner.jpg" alt="Vagabond Hero Shattered Expanse artwork" class="hero-image" />
+      <div class="visual-badge">
+        <span>NODE 101 // PETRIFIED CLEARING</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Interactive Terminal Simulation -->
+  <section class="section" id="terminal">
+    <div class="section-header">
+      <span class="section-tag">Interactive Preview</span>
+      <h2 class="section-title">The MUD Engine in Action</h2>
+      <p class="section-subtitle">Experience how Vagabond Hero blends atmospheric text descriptions, procedural dice mechanics, and tactical combat.</p>
+    </div>
+
+    <div class="terminal-container">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot green"></div>
+        </div>
+        <div class="terminal-title">TERMINAL://VAGABOND-HERO/NODE_101.CORE</div>
+        <div style="width: 40px;"></div>
+      </div>
+      <div class="terminal-body" id="term-output">
+        <div class="term-line system">[SYSTEM INITIALIZED]: Core Drift Database loaded. Player: Vagabond (Novice, Lv 1)</div>
+        <div class="term-line lore">You awaken lying against cold stone. The canopy overhead is composed of petrified oak branches frozen in charcoal-grey ash. A cracked CRT terminal monolith hums weakly to your north.</div>
+        <div class="term-line system">Exits detected: [NORTH: Ancient Monolith] [EAST: Ash Trail]</div>
+      </div>
+      <div class="term-controls">
+        <button class="term-btn" onclick="termAction('north')">⬆️ Move North</button>
+        <button class="term-btn" onclick="termAction('east')">➡️ Move East</button>
+        <button class="term-btn" onclick="termAction('scavenge')">🔍 Scavenge Room</button>
+        <button class="term-btn" onclick="termAction('attack')">⚔️ Strike Enemy</button>
+        <button class="term-btn" onclick="termAction('reset')">🔄 Clear Terminal</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="section" id="features">
+    <div class="section-header">
+      <span class="section-tag">Mechanics & Architecture</span>
+      <h2 class="section-title">Deep ARPG Systems, Pure Text Immersion</h2>
+      <p class="section-subtitle">Built with a reactive clean architecture. No artificial microtransactions, no mandatory cloud connectivity.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">💾</div>
+        <h3 class="feature-title">Offline-First Determinism</h3>
+        <p class="feature-desc">All game progression, dynamic loot instances, room states, and bestiary records persist inside an offline SQLite database via Drift. Play anywhere with zero latency.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💎</div>
+        <h3 class="feature-title">Diablo-Style Loot & Sockets</h3>
+        <p class="feature-desc">Procedural drops across 5 rarity tiers: <em>Normal, Magic, Rare, Legendary, Set</em>. Roll custom prefixes, suffixes, and slot Chipped-to-Perfect gems to tailor your build.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⚔️</div>
+        <h3 class="feature-title">Tactical Turn-Based Combat</h3>
+        <p class="feature-desc">Dynamic initiative order, accuracy vs evasion checks, condition damage (Bleed, Shock, Glitch), and tactical skill choices powered by our pure Dart combat engine.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3 class="feature-title">Branching Class Evolutions</h3>
+        <p class="feature-desc">Start as a humble Vagabond. At Lv 20, choose your path: Juggernaut, Phantom, Weaver, or Warden. Master specialized Lv 50 Ascensions like Blood Mage or Void-Knight.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h3 class="feature-title">Node & Grid Exploration</h3>
+        <p class="feature-desc">Traverse 5 expansive Acts with 5-6 major Nodes each containing 20-50 interconnected rooms with cardinal directions, hidden caches, and roaming bosses.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🐾</div>
+        <h3 class="feature-title">Companions & Echo Mastery</h3>
+        <p class="feature-desc">Equip mercenaries for frontline pressure and summon utility pets for auto-salvaging. Push beyond level cap with the post-cap Echo Point progression system.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Acts Section -->
+  <section class="section" id="story">
+    <div class="section-header">
+      <span class="section-tag">Story Campaign</span>
+      <h2 class="section-title">Journey Through the 5 Acts</h2>
+      <p class="section-subtitle">Ascend from the ashen outskirts to the ancient Terminal of Creation.</p>
+    </div>
+
+    <div class="acts-timeline">
+      <div class="act-card">
+        <div class="act-num">ACT I</div>
+        <h4 class="act-title">The Ashen Awakening</h4>
+        <p class="act-desc">Awaken in the Petrified Woods. Reconstruct broken terminal memory blocks and slay the Glitched Husk.</p>
+      </div>
+      <div class="act-card">
+        <div class="act-num">ACT II</div>
+        <h4 class="act-title">The Sunken Core</h4>
+        <p class="act-desc">Descend into ancient coolant pipelines and flooded subterranean servers corrupted by cyber-fungal rot.</p>
+      </div>
+      <div class="act-card">
+        <div class="act-num">ACT III</div>
+        <h4 class="act-title">Spire of Glitched Sky</h4>
+        <p class="act-desc">Climb shattered floating megaliths defying gravity as digital storms tear through the atmosphere.</p>
+      </div>
+      <div class="act-card">
+        <div class="act-num">ACT IV</div>
+        <h4 class="act-title">The Void Foundry</h4>
+        <p class="act-desc">Brave the autonomous smelting crucibles where rogue system demons forge dark matter armaments.</p>
+      </div>
+      <div class="act-card">
+        <div class="act-num">ACT V</div>
+        <h4 class="act-title">Terminal of Creation</h4>
+        <p class="act-desc">Stand before the Prime Kernel. Decide the fate of the Shattered Expanse—or execute system reboot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section class="section" id="download">
+    <div class="download-box">
+      <h2 class="download-title">Enter the Shattered Expanse</h2>
+      <p class="download-subtitle">Grab the latest build for Android, or play directly in your web browser with local storage persistence.</p>
+      
+      <div class="download-options">
+        <a href="https://github.com/tildemark/Vagabond-Hero/releases/latest" target="_blank" rel="noopener" class="apk-card">
+          <div class="apk-icon">🤖</div>
+          <div class="apk-info">
+            <div class="apk-label">Android Release</div>
+            <div class="apk-name">Download APK</div>
+            <div class="apk-meta">v1.0.0-preview • Direct GitHub Asset</div>
+          </div>
+        </a>
+
+        <a href="play/" class="apk-card" style="border-color: var(--accent-gold); background: rgba(246, 200, 107, 0.08);">
+          <div class="apk-icon">🌐</div>
+          <div class="apk-info">
+            <div class="apk-label" style="color: var(--accent-gold);">Zero Install</div>
+            <div class="apk-name">Play Web Version</div>
+            <div class="apk-meta">Runs in Chrome, Edge, Safari, Firefox</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 Vagabond Hero. Open-source text RPG created with Flutter & Drift.</p>
+      <div class="footer-links">
+        <a href="https://github.com/tildemark/Vagabond-Hero" target="_blank" rel="noopener">GitHub Repository</a>
+        <a href="https://github.com/tildemark/Vagabond-Hero/blob/main/docs/architecture.md" target="_blank" rel="noopener">Architecture</a>
+        <a href="https://github.com/tildemark/Vagabond-Hero/blob/main/docs/mechanics.md" target="_blank" rel="noopener">Mechanics</a>
+        <a href="https://github.com/tildemark/Vagabond-Hero/releases" target="_blank" rel="noopener">Releases</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Terminal Script -->
+  <script>
+    const termOutput = document.getElementById('term-output');
+    
+    const responses = {
+      north: [
+        { text: "> move north", type: "" },
+        { text: "You step cautiously toward the humming monolith. Phosphorescent moss clings to its chassis.", type: "lore" },
+        { text: "Node 102: [ANCIENT MONOLITH CLEARING] reached. Discovered terminal access port.", type: "system" }
+      ],
+      east: [
+        { text: "> move east", type: "" },
+        { text: "You traverse an ashen path flanked by withered monoliths. A chill digital wind howls.", type: "lore" },
+        { text: "Node 103: [ASH TRAIL] reached. Hostile signature detected ahead.", type: "system" }
+      ],
+      scavenge: [
+        { text: "> search area", type: "" },
+        { text: "Rolling Investigation [d20 + 2] = 17 (Success!)", type: "system" },
+        { text: "Found [Rusted Shiv] (Normal Dagger, 4-8 DMG) and [Chipped Emerald] (+3 Poison DMG)!", type: "loot" }
+      ],
+      attack: [
+        { text: "> strike glitched husk", type: "" },
+        { text: "Initiative rolled: Vagabond [18] vs Glitched Husk [11]. You take the opening blow.", type: "system" },
+        { text: "CRITICAL HIT! Dealt 24 Physical Damage! Enemy obliterated into fragmented memory bits.", type: "combat" },
+        { text: "Gained 45 EXP and 12 Silver Prisms.", type: "loot" }
+      ]
+    };
+
+    function termAction(action) {
+      if (action === 'reset') {
+        termOutput.innerHTML = `
+          <div class="term-line system">[SYSTEM RESET]: Terminal buffer cleared.</div>
+          <div class="term-line lore">You awaken lying against cold stone. The canopy overhead is composed of petrified oak branches frozen in charcoal-grey ash.</div>
+        `;
+        return;
+      }
+
+      const lines = responses[action];
+      if (!lines) return;
+
+      lines.forEach(item => {
+        const div = document.createElement('div');
+        div.className = `term-line ${item.type}`;
+        div.textContent = item.text;
+        termOutput.appendChild(div);
+      });
+
+      termOutput.scrollTop = termOutput.scrollHeight;
+    }
+  </script>
+</body>
+</html>
