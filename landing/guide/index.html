@@ -55,6 +55,7 @@
   <div class="guide-tabs-nav">
     <button class="guide-tab-btn active" onclick="switchGuideTab('items')">⚔️ Items & Gear</button>
     <button class="guide-tab-btn" onclick="switchGuideTab('classes')">🛡️ Classes & Skills</button>
+    <button class="guide-tab-btn" onclick="switchGuideTab('roadmap')">🗺️ Evolution Roadmap & Matrix</button>
     <button class="guide-tab-btn" onclick="switchGuideTab('mobs')">👾 Bestiary / Mobs</button>
     <button class="guide-tab-btn" onclick="switchGuideTab('attributes')">📊 Stats & Attributes</button>
     <button class="guide-tab-btn" onclick="switchGuideTab('gems')">💎 Gems & Sockets</button>
@@ -215,18 +216,112 @@
          ========================================================= -->
     <section id="tab-classes" class="guide-section">
       <div class="guide-header-box">
-        <h2 class="guide-header-title"><span>🛡️</span> Class Evolution Dossiers & Skill Codices</h2>
+        <h2 class="guide-header-title"><span>🛡️</span> Class Progression & Skill Codices</h2>
         <p class="guide-header-desc">
-          Explore the Shattered Expanse class by class. Every adventurer starts as a resilient <strong>Vagabond</strong> before awakening into one of four archetypes, specializing into advanced subclasses, and achieving godlike Pinnacle mastery.
+          Every wanderer begins as an unspecialized <strong>Vagabond</strong>. Master field survival techniques before choosing your First Job Awakening at Level 20.
         </p>
       </div>
 
-      <!-- Class Dossier Selector Strip -->
+      <!-- =========================================================
+           TOP PROMINENT SECTION: THE VAGABOND (BASE CLASS LV 1–20)
+           ========================================================= -->
+      <div class="vagabond-spotlight-box" style="margin-bottom: 2.5rem;">
+        <div class="dossier-hero-card vagabond-theme">
+          <div class="dossier-header-top">
+            <div class="dossier-title-area">
+              <div class="dossier-class-icon">🎒</div>
+              <div>
+                <div class="dossier-class-name">The Vagabond</div>
+                <div class="dossier-class-subtitle">Tier 1 Universal Starting Survivor • Levels 1–20 (All Adventurers Start Here)</div>
+              </div>
+            </div>
+            <div class="dossier-spec-pills">
+              <span class="dossier-spec-pill" style="border-color: #f59e0b; color: #f59e0b;">Resource: Grit (0–100)</span>
+              <span class="dossier-spec-pill">Primary: All Balanced</span>
+              <span class="dossier-spec-pill">Armor: Scrap & Rags</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Every hero in the Shattered Expanse starts here. Stripped of memories and divine favor, the Vagabond survives purely on grit, scavenged scraps, and raw adaptability. They possess heightened baseline luck to unearth relics and emergency triage techniques to bandage wounds in hostile territory before choosing their awakened path.
+          </p>
+
+          <div class="dossier-stats-grid">
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Resource Mechanics</div>
+              <div class="dossier-stat-value" style="color: #f59e0b;">Grit (0–100)</div>
+              <div class="dossier-stat-desc">Starts at 50. Generates <strong>+10/turn</strong>, <strong>+15 when struck</strong>, and <strong>+5 on basic strikes</strong>. Sustains triage & escape rolls.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Stat Growth per Level</div>
+              <div class="dossier-stat-value">+3 Attribute Points</div>
+              <div class="dossier-stat-desc">Automatic growth: <strong>+5 Max HP</strong> and <strong>+1 to All Stats</strong> (STR/AGI/INT/STA) automatically per level up.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Evolution Milestone</div>
+              <div class="dossier-stat-value" style="color: var(--accent-gold);">Level 20 Job Awakening</div>
+              <div class="dossier-stat-desc">Upon conquering Act I's trial, awaken into the <strong>Juggernaut</strong>, <strong>Phantom</strong>, <strong>Weaver</strong>, or <strong>Warden</strong> below.</div>
+            </div>
+          </div>
+
+          <!-- Vagabond Skills Roster Inside Spotlight -->
+          <h4 style="font-family: var(--font-serif); color: var(--accent-gold); margin: 1.5rem 0 0.75rem 0; font-size: 1.05rem;">
+            🎒 Vagabond Survival Skills (Levels 1–20)
+          </h4>
+          <div class="skill-list" style="margin-top: 0.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🗡️</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Scavenger's Strike [Level 1]</span>
+                  <span class="skill-cost-badge">0 Grit • Generates +5 Grit • 0 Turn CD</span>
+                </div>
+                <p class="skill-desc">Basic survival strike dealing 100% Weapon Damage. Has a 10% chance to dislodge 1–5 Silver Prisms from the enemy.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🩹</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Patch Up [Level 5]</span>
+                  <span class="skill-cost-badge">30 Grit • Cooldown: 4 Turns</span>
+                </div>
+                <p class="skill-desc">Emergency field triage that immediately restores 15% Maximum HP. Inoperable while suffering from active Bleeding or Poison DoTs.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🏃</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Desperate Flee [Level 15]</span>
+                  <span class="skill-cost-badge">20 Grit • Cooldown: 1 Turn</span>
+                </div>
+                <p class="skill-desc">Attempt an evasion roll to disengage and escape from combat (50% base success rate). Automatically fails in Boss encounters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           FIRST JOB CHANGE AWAKENING LINEAGES (LEVEL 21+)
+           ========================================================= -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+          <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 0; font-size: 1.3rem;">
+            ⚔️ First Job Change Lineages (Levels 21–70+ Pinnacle)
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.86rem; margin: 0.25rem 0 0 0;">
+            Select a specialized class lineage below to view its complete identity, resource engine, 2nd job subclasses, and full skill timeline.
+          </p>
+        </div>
+      </div>
+
+      <!-- Class Dossier Selector Strip (First Job Lineages) -->
       <div class="class-dossier-nav" role="tablist">
-        <button class="class-dossier-btn active" data-class="Vagabond" onclick="switchClassDossier('Vagabond', this)">
-          <span>🎒</span> Vagabond (Survivor Lv 1–20)
-        </button>
-        <button class="class-dossier-btn" data-class="Juggernaut" onclick="switchClassDossier('Juggernaut', this)">
+        <button class="class-dossier-btn active" data-class="Juggernaut" onclick="switchClassDossier('Juggernaut', this)">
           <span>🛡️</span> Juggernaut Lineage (STR)
         </button>
         <button class="class-dossier-btn" data-class="Phantom" onclick="switchClassDossier('Phantom', this)">
@@ -238,98 +333,12 @@
         <button class="class-dossier-btn" data-class="Warden" onclick="switchClassDossier('Warden', this)">
           <span>🌿</span> Warden Lineage (Hybrid)
         </button>
-        <button class="class-dossier-btn" data-class="matrix" onclick="switchClassDossier('matrix', this)">
-          <span>📊</span> Evolution Roadmap & Matrix
-        </button>
       </div>
 
       <!-- =========================================================
-           1. VAGABOND DOSSIER (THE SURVIVOR)
+           1. JUGGERNAUT LINEAGE DOSSIER
            ========================================================= -->
-      <div class="class-dossier-panel active" id="dossier-Vagabond">
-        <div class="dossier-hero-card vagabond-theme">
-          <div class="dossier-header-top">
-            <div class="dossier-title-area">
-              <div class="dossier-class-icon">🎒</div>
-              <div>
-                <div class="dossier-class-name">The Vagabond</div>
-                <div class="dossier-class-subtitle">Tier 1 Starting Survivor • Levels 1–20</div>
-              </div>
-            </div>
-            <div class="dossier-spec-pills">
-              <span class="dossier-spec-pill" style="border-color: #f59e0b; color: #f59e0b;">Resource: Grit (0–100)</span>
-              <span class="dossier-spec-pill">Primary: All Balanced</span>
-              <span class="dossier-spec-pill">Armor: Scrap & Rags</span>
-            </div>
-          </div>
-
-          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-            Every hero in the Shattered Expanse starts here. Stripped of memories and divine favor, the Vagabond survives purely on grit, scavenged scraps, and raw adaptability. They possess heightened baseline luck to unearth relics and emergency triage techniques to bandage wounds in hostile territory.
-          </p>
-
-          <div class="dossier-stats-grid">
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Resource Mechanics</div>
-              <div class="dossier-stat-value" style="color: #f59e0b;">Grit (0–100)</div>
-              <div class="dossier-stat-desc">Starts at 50. Generates <strong>+10/turn</strong>, <strong>+15 when struck</strong>, and <strong>+5 on basic strikes</strong>. Powers survival triage.</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Stat Growth per Level</div>
-              <div class="dossier-stat-value">+3 Attribute Points</div>
-              <div class="dossier-stat-desc">Automatic growth: <strong>+5 Max HP</strong> and <strong>+1 to All Stats</strong> (STR/AGI/INT/STA) automatically per level up.</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Evolution Milestone</div>
-              <div class="dossier-stat-value" style="color: var(--accent-gold);">Level 20 Job Awakening</div>
-              <div class="dossier-stat-desc">Complete Act I Awakening trials to choose between Juggernaut, Phantom, Weaver, or Warden.</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Vagabond Skills -->
-        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin-bottom: 0.75rem;">
-          🎒 Vagabond Active Skills (Levels 1–20)
-        </h3>
-        <div class="skill-list">
-          <div class="skill-card">
-            <div class="skill-icon">🗡️</div>
-            <div class="skill-content">
-              <div class="skill-header">
-                <span class="skill-name">Scavenger's Strike [Level 1]</span>
-                <span class="skill-cost-badge">0 Grit • Generates +5 Grit • 0 Turn CD</span>
-              </div>
-              <p class="skill-desc">Basic survival strike dealing 100% Weapon Damage. Has a 10% chance to dislodge 1–5 Silver Prisms from the enemy.</p>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <div class="skill-icon">🩹</div>
-            <div class="skill-content">
-              <div class="skill-header">
-                <span class="skill-name">Patch Up [Level 5]</span>
-                <span class="skill-cost-badge">30 Grit • Cooldown: 4 Turns</span>
-              </div>
-              <p class="skill-desc">Emergency field triage that immediately restores 15% Maximum HP. Inoperable while suffering from active Bleeding or Poison DoTs.</p>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <div class="skill-icon">🏃</div>
-            <div class="skill-content">
-              <div class="skill-header">
-                <span class="skill-name">Desperate Flee [Level 15]</span>
-                <span class="skill-cost-badge">20 Grit • Cooldown: 1 Turn</span>
-              </div>
-              <p class="skill-desc">Attempt an evasion roll to disengage and escape from combat (50% base success rate). Automatically fails in Boss encounters.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- =========================================================
-           2. JUGGERNAUT LINEAGE DOSSIER
-           ========================================================= -->
-      <div class="class-dossier-panel" id="dossier-Juggernaut">
+      <div class="class-dossier-panel active" id="dossier-Juggernaut">
         <div class="dossier-hero-card juggernaut-theme">
           <div class="dossier-header-top">
             <div class="dossier-title-area">
@@ -504,7 +513,7 @@
       </div>
 
       <!-- =========================================================
-           3. PHANTOM LINEAGE DOSSIER
+           2. PHANTOM LINEAGE DOSSIER
            ========================================================= -->
       <div class="class-dossier-panel" id="dossier-Phantom">
         <div class="dossier-hero-card phantom-theme">
@@ -681,7 +690,7 @@
       </div>
 
       <!-- =========================================================
-           4. WEAVER LINEAGE DOSSIER
+           3. WEAVER LINEAGE DOSSIER
            ========================================================= -->
       <div class="class-dossier-panel" id="dossier-Weaver">
         <div class="dossier-hero-card weaver-theme">
@@ -858,7 +867,7 @@
       </div>
 
       <!-- =========================================================
-           5. WARDEN LINEAGE DOSSIER
+           4. WARDEN LINEAGE DOSSIER
            ========================================================= -->
       <div class="class-dossier-panel" id="dossier-Warden">
         <div class="dossier-hero-card warden-theme">
@@ -1033,257 +1042,264 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- =========================================================
-           6. ROADMAP & COMPARISON MATRIX PANEL
-           ========================================================= -->
-      <div class="class-dossier-panel" id="dossier-matrix">
-        <!-- 4-Tier Progression Roadmap -->
-        <div class="progression-tree-box">
-          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">
-            The 4-Stage Evolution Path (Lv 1 → 70+ Echo)
+    <!-- =========================================================
+         TAB 3: EVOLUTION ROADMAP & COMPARISON MATRIX (DEDICATED SECTION)
+         ========================================================= -->
+    <section id="tab-roadmap" class="guide-section">
+      <div class="guide-header-box">
+        <h2 class="guide-header-title"><span>🗺️</span> 4-Tier Evolution Roadmap & Comparison Matrix</h2>
+        <p class="guide-header-desc">
+          High-level architectural progression of *Vagabond Hero*. From survivor beginnings at Tier 1 to infinite Echo specialization at Level 70+.
+        </p>
+      </div>
+
+      <!-- 4-Tier Progression Roadmap -->
+      <div class="progression-tree-box">
+        <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">
+          The 4-Stage Evolution Path (Lv 1 → 70+ Echo)
+        </div>
+        
+        <div class="progression-steps-grid">
+          <!-- Tier 1 -->
+          <div class="tier-step-card tier-step-1">
+            <span class="tier-badge">Tier 1 • Levels 1–20</span>
+            <div class="tier-title">🎒 The Vagabond</div>
+            <p class="tier-desc">The universal starting survivor. All players begin here, relying on scrap weapons, emergency triage, and high resourcefulness.</p>
+            <ul class="tier-meta-list">
+              <li><strong>Resource:</strong> <code>Grit</code> (0–100)</li>
+              <li><strong>Stat Growth:</strong> +3 Points/Lv (+1 to All Auto)</li>
+              <li><strong>Milestone:</strong> Level 20 Job Choice</li>
+            </ul>
           </div>
-          
-          <div class="progression-steps-grid">
-            <!-- Tier 1 -->
-            <div class="tier-step-card tier-step-1">
-              <span class="tier-badge">Tier 1 • Levels 1–20</span>
-              <div class="tier-title">🎒 The Vagabond</div>
-              <p class="tier-desc">The universal starting survivor. All players begin here, relying on scrap weapons, emergency triage, and high resourcefulness.</p>
-              <ul class="tier-meta-list">
-                <li><strong>Resource:</strong> <code>Grit</code> (0–100)</li>
-                <li><strong>Stat Growth:</strong> +3 Points/Lv (+1 to All Auto)</li>
-                <li><strong>Milestone:</strong> Level 20 Job Choice</li>
-              </ul>
-            </div>
 
-            <!-- Tier 2 -->
-            <div class="tier-step-card tier-step-2">
-              <span class="tier-badge">Tier 2 • Levels 21–50</span>
-              <div class="tier-title">⚔️ First Job Awakening</div>
-              <p class="tier-desc">Specialization unlocks into one of four archetypes: Juggernaut (STR), Phantom (AGI), Weaver (INT), or Warden (Hybrid/STA).</p>
-              <ul class="tier-meta-list">
-                <li><strong>Resource:</strong> Fury / Energy / Mana / Animus</li>
-                <li><strong>Stat Growth:</strong> +5 Points/Lv (+1 Core Stat Auto)</li>
-                <li><strong>Milestone:</strong> Level 50 Subclass Choice</li>
-              </ul>
-            </div>
+          <!-- Tier 2 -->
+          <div class="tier-step-card tier-step-2">
+            <span class="tier-badge">Tier 2 • Levels 21–50</span>
+            <div class="tier-title">⚔️ First Job Awakening</div>
+            <p class="tier-desc">Specialization unlocks into one of four archetypes: Juggernaut (STR), Phantom (AGI), Weaver (INT), or Warden (Hybrid/STA).</p>
+            <ul class="tier-meta-list">
+              <li><strong>Resource:</strong> Fury / Energy / Mana / Animus</li>
+              <li><strong>Stat Growth:</strong> +5 Points/Lv (+1 Core Stat Auto)</li>
+              <li><strong>Milestone:</strong> Level 50 Subclass Choice</li>
+            </ul>
+          </div>
 
-            <!-- Tier 3 -->
-            <div class="tier-step-card tier-step-3">
-              <span class="tier-badge">Tier 3 • Levels 51–70</span>
-              <div class="tier-title">🔮 Second Job Mastery</div>
-              <p class="tier-desc">Each archetype branches into two advanced subclasses (e.g. Berserker vs. Void-Knight, Assassin vs. Rift-Sniper, Elementalist vs. Blood Mage).</p>
-              <ul class="tier-meta-list">
-                <li><strong>Resource:</strong> Subclass Evolution Mechanics</li>
-                <li><strong>Stat Growth:</strong> +6 Points/Lv (+15 Max HP/Lv)</li>
-                <li><strong>Milestone:</strong> Breaking the Core Quest</li>
-              </ul>
-            </div>
+          <!-- Tier 3 -->
+          <div class="tier-step-card tier-step-3">
+            <span class="tier-badge">Tier 3 • Levels 51–70</span>
+            <div class="tier-title">🔮 Second Job Mastery</div>
+            <p class="tier-desc">Each archetype branches into two advanced subclasses (e.g. Berserker vs. Void-Knight, Assassin vs. Rift-Sniper, Elementalist vs. Blood Mage).</p>
+            <ul class="tier-meta-list">
+              <li><strong>Resource:</strong> Subclass Evolution Mechanics</li>
+              <li><strong>Stat Growth:</strong> +6 Points/Lv (+15 Max HP/Lv)</li>
+              <li><strong>Milestone:</strong> Breaking the Core Quest</li>
+            </ul>
+          </div>
 
-            <!-- Tier 4 -->
-            <div class="tier-step-card tier-step-4" title="Level 70+ Echo System: Allocate Echo Points into Crit Chance, Boss Damage, All Resist, Reflect, CDR, Life Steal, Evade, Armor, and Magic Find">
-              <span class="tier-badge">Tier 4 • Level 70+ Pinnacle</span>
-              <div class="tier-title">👑 Pinnacle & Echoes</div>
-              <p class="tier-desc">Unlocked post-"Breaking the Core". Unlocks reality-breaking capstone skills, Corrupted (Red) gear permission, and infinite Echo levels.</p>
-              <ul class="tier-meta-list">
-                <li><strong>Echo Offense:</strong> <span>Crit Chance, Boss Dmg, Crit Dmg, Spd</span></li>
-                <li><strong>Echo Defense:</strong> <span>All Resist, Reflect, Evade, Armor</span></li>
-                <li><strong>Echo Utility:</strong> <span>CDR, Life Steal, Magic Find, Gold</span></li>
-                <li><strong>Progression:</strong> +1 Echo Point per Echo Lv</li>
-              </ul>
-            </div>
+          <!-- Tier 4 -->
+          <div class="tier-step-card tier-step-4" title="Level 70+ Echo System: Allocate Echo Points into Crit Chance, Boss Damage, All Resist, Reflect, CDR, Life Steal, Evade, Armor, and Magic Find">
+            <span class="tier-badge">Tier 4 • Level 70+ Pinnacle</span>
+            <div class="tier-title">👑 Pinnacle & Echoes</div>
+            <p class="tier-desc">Unlocked post-"Breaking the Core". Unlocks reality-breaking capstone skills, Corrupted (Red) gear permission, and infinite Echo levels.</p>
+            <ul class="tier-meta-list">
+              <li><strong>Echo Offense:</strong> <span>Crit Chance, Boss Dmg, Crit Dmg, Spd</span></li>
+              <li><strong>Echo Defense:</strong> <span>All Resist, Reflect, Evade, Armor</span></li>
+              <li><strong>Echo Utility:</strong> <span>CDR, Life Steal, Magic Find, Gold</span></li>
+              <li><strong>Progression:</strong> +1 Echo Point per Echo Lv</li>
+            </ul>
           </div>
         </div>
+      </div>
 
-        <!-- Job Comparison Matrix -->
-        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin-bottom: 0.75rem;">
-          📊 Job Evolution & Archetype Comparison Matrix
-        </h3>
-        <div class="matrix-container">
-          <table class="matrix-table">
-            <thead>
-              <tr>
-                <th>Job / Class</th>
-                <th>Tier & Level</th>
-                <th>Primary Attribute</th>
-                <th>Secondary Resource</th>
-                <th>Armor & Gear Type</th>
-                <th>Defining Tactical Advantage</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="matrix-class-cell">🎒 Vagabond</td>
-                <td>Tier 1 • Lv 1–20</td>
-                <td><span class="stat-pill stat-all">All Balanced</span></td>
-                <td><code>Grit (0–100)</code></td>
-                <td>Cloth, Rags, & Scrap Metal</td>
-                <td>High baseline Gold find, emergency field triage, and trap/terrain immunity.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🛡️ Juggernaut</td>
-                <td>Tier 2 • Lv 21–50</td>
-                <td><span class="stat-pill stat-str">Strength (STR)</span></td>
-                <td><code>Fury (0–100)</code></td>
-                <td>Heavy Plate & Tower Shields</td>
-                <td>Unstoppable physical damage, threat control (Taunt), and armor shredding.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">⚡ Phantom</td>
-                <td>Tier 2 • Lv 21–50</td>
-                <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
-                <td><code>Energy (0–100)</code></td>
-                <td>Finesse Leathers & Wraps</td>
-                <td>Extreme Evasion, rapid multi-hit combos, and stacking lethal neurotoxin.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🔮 Weaver</td>
-                <td>Tier 2 • Lv 21–50</td>
-                <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
-                <td><code>Mana (Deep Pool)</code></td>
-                <td>Arcane Silk Robes</td>
-                <td>100% accurate homing spells, void barriers, and massive AoE elemental devastation.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🌿 Warden</td>
-                <td>Tier 2 • Lv 21–50</td>
-                <td><span class="stat-pill stat-sta">STA / INT / STR</span></td>
-                <td><code>Animus (0–100)</code></td>
-                <td>Mail, Totems, & Regalia</td>
-                <td>Autonomous pet combat, debuff transference, and life-leeching root barriers.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🪓 Berserker</td>
-                <td>Tier 3 • Lv 51–70</td>
-                <td><span class="stat-pill stat-str">Strength (STR)</span></td>
-                <td><code>Bloodrage / Fury</code></td>
-                <td>Spiked Plates & 2H Axes</td>
-                <td>Low-HP damage scaling (Frenzy), massive life-steal, and reckless cleaves.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🌌 Void-Knight</td>
-                <td>Tier 3 • Lv 51–70</td>
-                <td><span class="stat-pill stat-str">STR / STA</span></td>
-                <td><code>Resolve / Fury</code></td>
-                <td>Bastion Plates & Shields</td>
-                <td>100% Armor-to-Damage conversion, kinetic reflection, and damage absorption.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🗡️ Assassin</td>
-                <td>Tier 3 • Lv 51–70</td>
-                <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
-                <td><code>Energy + Combo</code></td>
-                <td>Shadow Cloaks & Kris</td>
-                <td>Guaranteed stealth criticals, poison detonations, and bypassing target evasion.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🎯 Rift-Sniper</td>
-                <td>Tier 3 • Lv 51–70</td>
-                <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
-                <td><code>Focus / Energy</code></td>
-                <td>Camouflage & Crossbows</td>
-                <td>100% Armor penetration, charged 350% piercing shots, and caltrop room control.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🔥 Elementalist</td>
-                <td>Tier 3 • Lv 51–70</td>
-                <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
-                <td><code>Mana & Tri-Flux</code></td>
-                <td>Prismatic Robes & Staffs</td>
-                <td>Fire/Ice/Lightning cycle, double actions per turn, and cataclysmic meteor strikes.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🩸 Blood Mage</td>
-                <td>Tier 3 • Lv 51–70</td>
-                <td><span class="stat-pill stat-int">INT / STA</span></td>
-                <td><code>Blood Essence / HP</code></td>
-                <td>Sanguine Vestments</td>
-                <td>Multiplies spell damage by 2x via HP sacrifice, pet sacrifice full recovery.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">💀 Necromancer</td>
-                <td>Tier 3 • Lv 51–70</td>
-                <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
-                <td><code>Animus & Corpses</code></td>
-                <td>Shrouds & Scythes</td>
-                <td>Up to 3 skeletal frost mages, corpse explosion AoE, and minion resurrection.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🐾 Druid</td>
-                <td>Tier 3 • Lv 51–70</td>
-                <td><span class="stat-pill stat-sta">STR & INT Hybrid</span></td>
-                <td><code>Animus & Primal</code></td>
-                <td>Beast Carapaces & Antlers</td>
-                <td>Chimera shapeshifting, double claw strikes, and +100% Total Armor Barkskin.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">💥 World-Breaker</td>
-                <td>Tier 4 • Lv 70+ Pinnacle</td>
-                <td><span class="stat-pill stat-str">Strength (STR)</span></td>
-                <td><code>Pinnacle Fury</code></td>
-                <td>Cataclysmic Plate</td>
-                <td><strong>Obliterate:</strong> 500% execution strike that resets its cooldown to 0 on kill.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🛡️ Aegis Lord</td>
-                <td>Tier 4 • Lv 70+ Pinnacle</td>
-                <td><span class="stat-pill stat-str">STR / STA</span></td>
-                <td><code>Pinnacle Resolve</code></td>
-                <td>Bastion Aegis Plating</td>
-                <td><strong>Absolute Defense:</strong> 2 turns of total invulnerability + 300% damage reflection.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">⏳ Shadow-Walker</td>
-                <td>Tier 4 • Lv 70+ Pinnacle</td>
-                <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
-                <td><code>Pinnacle Energy</code></td>
-                <td>Eclipse Shroud</td>
-                <td><strong>Death Mark:</strong> Detonates for 50% of all damage taken during countdown.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🏹 Void-Stalker</td>
-                <td>Tier 4 • Lv 70+ Pinnacle</td>
-                <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
-                <td><code>Pinnacle Focus</code></td>
-                <td>Horizon Calibrator</td>
-                <td><strong>Dimensional Piercer:</strong> Permanently deletes 20% of the enemy's Maximum HP.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">⌛ Arch-Mage</td>
-                <td>Tier 4 • Lv 70+ Pinnacle</td>
-                <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
-                <td><code>Pinnacle Mana</code></td>
-                <td>Paradox Robes</td>
-                <td><strong>Time Stop:</strong> Freezes global combat; player takes 3 consecutive free turns.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🩸 Crimson Sovereign</td>
-                <td>Tier 4 • Lv 70+ Pinnacle</td>
-                <td><span class="stat-pill stat-int">INT / STA</span></td>
-                <td><code>Pinnacle Blood</code></td>
-                <td>Sovereign's Regalia</td>
-                <td><strong>Blood Boil:</strong> Sacrifices HP down to 1 for a 500% AoE nuclear blast.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">👑 Death-Caller</td>
-                <td>Tier 4 • Lv 70+ Pinnacle</td>
-                <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
-                <td><code>Pinnacle Animus</code></td>
-                <td>Apocalypse Shroud</td>
-                <td><strong>Army of the Damned:</strong> Instantly summons 5 elite exploding skeletons.</td>
-              </tr>
-              <tr>
-                <td class="matrix-class-cell">🦁 Chimera-Lord</td>
-                <td>Tier 4 • Lv 70+ Pinnacle</td>
-                <td><span class="stat-pill stat-sta">STR & INT</span></td>
-                <td><code>Pinnacle Primal</code></td>
-                <td>Apex Tendons</td>
-                <td><strong>Apex Evolution:</strong> Permanent Chimera Form + 10% team healing on all hits.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <!-- Job Comparison Matrix -->
+      <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin-bottom: 0.75rem;">
+        📊 Job Evolution & Archetype Comparison Matrix
+      </h3>
+      <div class="matrix-container">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>Job / Class</th>
+              <th>Tier & Level</th>
+              <th>Primary Attribute</th>
+              <th>Secondary Resource</th>
+              <th>Armor & Gear Type</th>
+              <th>Defining Tactical Advantage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="matrix-class-cell">🎒 Vagabond</td>
+              <td>Tier 1 • Lv 1–20</td>
+              <td><span class="stat-pill stat-all">All Balanced</span></td>
+              <td><code>Grit (0–100)</code></td>
+              <td>Cloth, Rags, & Scrap Metal</td>
+              <td>High baseline Gold find, emergency field triage, and trap/terrain immunity.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🛡️ Juggernaut</td>
+              <td>Tier 2 • Lv 21–50</td>
+              <td><span class="stat-pill stat-str">Strength (STR)</span></td>
+              <td><code>Fury (0–100)</code></td>
+              <td>Heavy Plate & Tower Shields</td>
+              <td>Unstoppable physical damage, threat control (Taunt), and armor shredding.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">⚡ Phantom</td>
+              <td>Tier 2 • Lv 21–50</td>
+              <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
+              <td><code>Energy (0–100)</code></td>
+              <td>Finesse Leathers & Wraps</td>
+              <td>Extreme Evasion, rapid multi-hit combos, and stacking lethal neurotoxin.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🔮 Weaver</td>
+              <td>Tier 2 • Lv 21–50</td>
+              <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
+              <td><code>Mana (Deep Pool)</code></td>
+              <td>Arcane Silk Robes</td>
+              <td>100% accurate homing spells, void barriers, and massive AoE elemental devastation.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🌿 Warden</td>
+              <td>Tier 2 • Lv 21–50</td>
+              <td><span class="stat-pill stat-sta">STA / INT / STR</span></td>
+              <td><code>Animus (0–100)</code></td>
+              <td>Mail, Totems, & Regalia</td>
+              <td>Autonomous pet combat, debuff transference, and life-leeching root barriers.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🪓 Berserker</td>
+              <td>Tier 3 • Lv 51–70</td>
+              <td><span class="stat-pill stat-str">Strength (STR)</span></td>
+              <td><code>Bloodrage / Fury</code></td>
+              <td>Spiked Plates & 2H Axes</td>
+              <td>Low-HP damage scaling (Frenzy), massive life-steal, and reckless cleaves.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🌌 Void-Knight</td>
+              <td>Tier 3 • Lv 51–70</td>
+              <td><span class="stat-pill stat-str">STR / STA</span></td>
+              <td><code>Resolve / Fury</code></td>
+              <td>Bastion Plates & Shields</td>
+              <td>100% Armor-to-Damage conversion, kinetic reflection, and damage absorption.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🗡️ Assassin</td>
+              <td>Tier 3 • Lv 51–70</td>
+              <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
+              <td><code>Energy + Combo</code></td>
+              <td>Shadow Cloaks & Kris</td>
+              <td>Guaranteed stealth criticals, poison detonations, and bypassing target evasion.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🎯 Rift-Sniper</td>
+              <td>Tier 3 • Lv 51–70</td>
+              <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
+              <td><code>Focus / Energy</code></td>
+              <td>Camouflage & Crossbows</td>
+              <td>100% Armor penetration, charged 350% piercing shots, and caltrop room control.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🔥 Elementalist</td>
+              <td>Tier 3 • Lv 51–70</td>
+              <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
+              <td><code>Mana & Tri-Flux</code></td>
+              <td>Prismatic Robes & Staffs</td>
+              <td>Fire/Ice/Lightning cycle, double actions per turn, and cataclysmic meteor strikes.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🩸 Blood Mage</td>
+              <td>Tier 3 • Lv 51–70</td>
+              <td><span class="stat-pill stat-int">INT / STA</span></td>
+              <td><code>Blood Essence / HP</code></td>
+              <td>Sanguine Vestments</td>
+              <td>Multiplies spell damage by 2x via HP sacrifice, pet sacrifice full recovery.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">💀 Necromancer</td>
+              <td>Tier 3 • Lv 51–70</td>
+              <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
+              <td><code>Animus & Corpses</code></td>
+              <td>Shrouds & Scythes</td>
+              <td>Up to 3 skeletal frost mages, corpse explosion AoE, and minion resurrection.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🐾 Druid</td>
+              <td>Tier 3 • Lv 51–70</td>
+              <td><span class="stat-pill stat-sta">STR & INT Hybrid</span></td>
+              <td><code>Animus & Primal</code></td>
+              <td>Beast Carapaces & Antlers</td>
+              <td>Chimera shapeshifting, double claw strikes, and +100% Total Armor Barkskin.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">💥 World-Breaker</td>
+              <td>Tier 4 • Lv 70+ Pinnacle</td>
+              <td><span class="stat-pill stat-str">Strength (STR)</span></td>
+              <td><code>Pinnacle Fury</code></td>
+              <td>Cataclysmic Plate</td>
+              <td><strong>Obliterate:</strong> 500% execution strike that resets its cooldown to 0 on kill.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🛡️ Aegis Lord</td>
+              <td>Tier 4 • Lv 70+ Pinnacle</td>
+              <td><span class="stat-pill stat-str">STR / STA</span></td>
+              <td><code>Pinnacle Resolve</code></td>
+              <td>Bastion Aegis Plating</td>
+              <td><strong>Absolute Defense:</strong> 2 turns of total invulnerability + 300% damage reflection.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">⏳ Shadow-Walker</td>
+              <td>Tier 4 • Lv 70+ Pinnacle</td>
+              <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
+              <td><code>Pinnacle Energy</code></td>
+              <td>Eclipse Shroud</td>
+              <td><strong>Death Mark:</strong> Detonates for 50% of all damage taken during countdown.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🏹 Void-Stalker</td>
+              <td>Tier 4 • Lv 70+ Pinnacle</td>
+              <td><span class="stat-pill stat-agi">Agility (AGI)</span></td>
+              <td><code>Pinnacle Focus</code></td>
+              <td>Horizon Calibrator</td>
+              <td><strong>Dimensional Piercer:</strong> Permanently deletes 20% of the enemy's Maximum HP.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">⌛ Arch-Mage</td>
+              <td>Tier 4 • Lv 70+ Pinnacle</td>
+              <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
+              <td><code>Pinnacle Mana</code></td>
+              <td>Paradox Robes</td>
+              <td><strong>Time Stop:</strong> Freezes global combat; player takes 3 consecutive free turns.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🩸 Crimson Sovereign</td>
+              <td>Tier 4 • Lv 70+ Pinnacle</td>
+              <td><span class="stat-pill stat-int">INT / STA</span></td>
+              <td><code>Pinnacle Blood</code></td>
+              <td>Sovereign's Regalia</td>
+              <td><strong>Blood Boil:</strong> Sacrifices HP down to 1 for a 500% AoE nuclear blast.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">👑 Death-Caller</td>
+              <td>Tier 4 • Lv 70+ Pinnacle</td>
+              <td><span class="stat-pill stat-int">Intelligence (INT)</span></td>
+              <td><code>Pinnacle Animus</code></td>
+              <td>Apocalypse Shroud</td>
+              <td><strong>Army of the Damned:</strong> Instantly summons 5 elite exploding skeletons.</td>
+            </tr>
+            <tr>
+              <td class="matrix-class-cell">🦁 Chimera-Lord</td>
+              <td>Tier 4 • Lv 70+ Pinnacle</td>
+              <td><span class="stat-pill stat-sta">STR & INT</span></td>
+              <td><code>Pinnacle Primal</code></td>
+              <td>Apex Tendons</td>
+              <td><strong>Apex Evolution:</strong> Permanent Chimera Form + 10% team healing on all hits.</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
