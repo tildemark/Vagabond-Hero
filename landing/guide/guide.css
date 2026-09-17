@@ -254,7 +254,7 @@
   background: transparent;
   border: 1px solid transparent;
   color: var(--text-muted);
-  padding: 0.45rem 0.75rem;
+  padding: 0.45rem 0.65rem;
   border-radius: 4px;
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -264,20 +264,35 @@
   align-items: center;
   gap: 0.35rem;
   transition: all 0.2s ease;
+  position: relative;
+}
+
+.slot-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.slot-label {
+  font-weight: 500;
 }
 
 .slot-btn:hover {
   color: var(--text-bright);
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
 }
 
 .slot-btn.active {
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(56, 189, 248, 0.14);
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
   font-weight: 600;
-  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+.slot-btn.active .slot-label {
+  font-weight: 700;
 }
 
 .slot-count-badge {
