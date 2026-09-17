@@ -13,7 +13,8 @@
     "description": "Simple rags wrapped around the hands to prevent blisters.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Wraps"
+    "rawType": "Wraps",
+    "classTag": "All Classes"
   },
   {
     "id": "A-C02",
@@ -29,7 +30,8 @@
     "description": "Thick leather gloves, useful for digging through the ash.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-C03",
@@ -45,7 +47,8 @@
     "description": "Heavy forearm guards. The hinges are rusted stiff.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "All Classes"
   },
   {
     "id": "A-C04",
@@ -61,7 +64,8 @@
     "description": "Boiled leather reinforced with scrap metal.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Armbands"
+    "rawType": "Armbands",
+    "classTag": "All Classes"
   },
   {
     "id": "A-C05",
@@ -77,7 +81,8 @@
     "description": "Thick iron gloves that restrict finger movement but block blades.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Gauntlets"
+    "rawType": "Gauntlets",
+    "classTag": "All Classes"
   },
   {
     "id": "A-C06",
@@ -93,7 +98,8 @@
     "description": "Extremely light, providing decent protection without sacrificing dexterity.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-C07",
@@ -109,7 +115,8 @@
     "description": "Industrial forearm plating salvaged from old pumping machinery.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "All Classes"
   },
   {
     "id": "A-C08",
@@ -125,7 +132,8 @@
     "description": "Forged from petrified fog. They hum with latent energy.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "Warden"
   },
   {
     "id": "A-C09",
@@ -141,7 +149,8 @@
     "description": "Interlocking gears over the knuckles allow for crushing strikes.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Gauntlets"
+    "rawType": "Gauntlets",
+    "classTag": "All Classes"
   },
   {
     "id": "A-C10",
@@ -157,7 +166,8 @@
     "description": "Holographic shields that project outward from the wrists.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "All Classes"
   },
   {
     "id": "A-M01",
@@ -175,7 +185,8 @@
       "+2 to 8 Core Stat   +2% to 5% Attack Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-M02",
@@ -193,7 +204,8 @@
       "+10 to 20 Core Stat   +5% to 10% Cast Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Wraps"
+    "rawType": "Wraps",
+    "classTag": "All Classes"
   },
   {
     "id": "A-M03",
@@ -211,7 +223,8 @@
       "+25 to 40 Core Stat   +5% to 15% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "All Classes"
   },
   {
     "id": "A-M04",
@@ -229,7 +242,8 @@
       "+40 to 65 Core Stat   +2% to 5% Crit Chance"
     ],
     "uniqueTrait": "",
-    "rawType": "Gauntlets"
+    "rawType": "Gauntlets",
+    "classTag": "All Classes"
   },
   {
     "id": "A-M05",
@@ -247,7 +261,8 @@
       "+80 to 120 Core Stat   +5% to 10% Evasion"
     ],
     "uniqueTrait": "",
-    "rawType": "Armbands"
+    "rawType": "Armbands",
+    "classTag": "All Classes"
   },
   {
     "id": "A-R01",
@@ -263,7 +278,8 @@
     "description": "Excellent for blocking strikes in close-quarters combat.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "All Classes"
   },
   {
     "id": "A-R02",
@@ -279,7 +295,8 @@
     "description": "Muffles the sound of your weapon being drawn.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-R03",
@@ -295,7 +312,8 @@
     "description": "Thick rubberized material designed for handling toxic sludge.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-R04",
@@ -311,7 +329,8 @@
     "description": "Fingers are lined with precision micro-tools.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-R05",
@@ -327,7 +346,8 @@
     "description": "Heat sinks vent directly from the wrists.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "All Classes"
   },
   {
     "id": "A-U01",
@@ -345,7 +365,8 @@
       "+15 Agility   +10% Attack Speed   +15% Poison Resist   +3% Crit Chance"
     ],
     "uniqueTrait": "",
-    "rawType": "Wraps"
+    "rawType": "Wraps",
+    "classTag": "All Classes"
   },
   {
     "id": "A-U02",
@@ -363,7 +384,8 @@
       "+35 Intelligence   +15% Cast Speed   +10% Magic Damage   +5% Life Steal"
     ],
     "uniqueTrait": "",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "All Classes"
   },
   {
     "id": "A-U03",
@@ -381,7 +403,8 @@
       "+60 Strength   +15% Evasion   +10% Attack Speed   +10% Crit Damage"
     ],
     "uniqueTrait": "",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-U04",
@@ -399,7 +422,8 @@
       "+100 Stamina   +400 Max HP   +20% Armor   +15 Damage Reflect"
     ],
     "uniqueTrait": "",
-    "rawType": "Gauntlets"
+    "rawType": "Gauntlets",
+    "classTag": "All Classes"
   },
   {
     "id": "A-U05",
@@ -415,7 +439,8 @@
     "description": "Grants the wearer pixel-perfect precision.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-L01",
@@ -431,7 +456,8 @@
     "description": "Ignite: Every consecutive Physical attack against the same target increases your Attack Speed by 10% and adds flat Fire damage. Resets if you change targets.",
     "modifiers": [],
     "uniqueTrait": "Ignite: Every consecutive Physical attack against the same target increases your Attack Speed by 10% and adds flat Fire damage. Resets if you change targets.",
-    "rawType": "Gauntlets"
+    "rawType": "Gauntlets",
+    "classTag": "All Classes"
   },
   {
     "id": "A-L02",
@@ -447,7 +473,8 @@
     "description": "Spatial Tear: Your melee attacks gain the 'Ranged' property. You no longer trigger enemy melee Counter-Attacks.",
     "modifiers": [],
     "uniqueTrait": "Spatial Tear: Your melee attacks gain the 'Ranged' property. You no longer trigger enemy melee Counter-Attacks.",
-    "rawType": "Wraps"
+    "rawType": "Wraps",
+    "classTag": "All Classes"
   },
   {
     "id": "A-L03",
@@ -463,7 +490,8 @@
     "description": "Savage Toxin: Critical Hits simultaneously apply both a Bleed (STR-based) and Poison (INT-based) DoT to the target.",
     "modifiers": [],
     "uniqueTrait": "Savage Toxin: Critical Hits simultaneously apply both a Bleed (STR-based) and Poison (INT-based) DoT to the target.",
-    "rawType": "Gloves"
+    "rawType": "Gloves",
+    "classTag": "All Classes"
   },
   {
     "id": "A-L04",
@@ -479,7 +507,8 @@
     "description": "Double Strike: You have a 25% chance to instantly repeat your Basic Attack or Spell for 0 Mana.",
     "modifiers": [],
     "uniqueTrait": "Double Strike: You have a 25% chance to instantly repeat your Basic Attack or Spell for 0 Mana.",
-    "rawType": "Bracers"
+    "rawType": "Bracers",
+    "classTag": "All Classes"
   },
   {
     "id": "A-L05",
@@ -495,7 +524,8 @@
     "description": "Fatal Error: Critical Hits execute non-boss enemies instantly. Critical Hits against Bosses deal 300% damage instead of 150%.",
     "modifiers": [],
     "uniqueTrait": "Fatal Error: Critical Hits execute non-boss enemies instantly. Critical Hits against Bosses deal 300% damage instead of 150%.",
-    "rawType": "Gauntlets"
+    "rawType": "Gauntlets",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C01",
@@ -511,7 +541,8 @@
     "description": "Simple leather straps over a hardened wooden sole.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Sandals"
+    "rawType": "Sandals",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C02",
@@ -527,7 +558,8 @@
     "description": "Worn, cracked leather boots patched with twine.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C03",
@@ -543,7 +575,8 @@
     "description": "Heavy metal boots that echo loudly on stone surfaces.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Sabatons"
+    "rawType": "Sabatons",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C04",
@@ -559,7 +592,8 @@
     "description": "Thick, sturdy boots ideal for long treks through the fog.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C05",
@@ -575,7 +609,8 @@
     "description": "Standard-issue footwear for the Hold's heavy infantry.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Sabatons"
+    "rawType": "Sabatons",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C06",
@@ -591,7 +626,8 @@
     "description": "Surprisingly durable and completely silent when walking.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Shoes"
+    "rawType": "Shoes",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C07",
@@ -607,7 +643,8 @@
     "description": "Weighted diving boots with ribbed copper soles.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C08",
@@ -623,7 +660,8 @@
     "description": "Shoes woven from ambient fog. They leave no footprints.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Shoes"
+    "rawType": "Shoes",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C09",
@@ -639,7 +677,8 @@
     "description": "Outfitted with tiny stabilizing gyros in the heels.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Sabatons"
+    "rawType": "Sabatons",
+    "classTag": "All Classes"
   },
   {
     "id": "F-C10",
@@ -655,7 +694,8 @@
     "description": "Emits a hard-light platform beneath your feet with every step.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-M01",
@@ -673,7 +713,8 @@
       "+3 to 8 Core Stat   +3% to 8% Movement Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Shoes"
+    "rawType": "Shoes",
+    "classTag": "All Classes"
   },
   {
     "id": "F-M02",
@@ -691,7 +732,8 @@
       "+10 to 20 Core Stat   +2% to 6% Evasion"
     ],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-M03",
@@ -709,7 +751,8 @@
       "+25 to 40 Core Stat   +5% to 15% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Sandals"
+    "rawType": "Sandals",
+    "classTag": "All Classes"
   },
   {
     "id": "F-M04",
@@ -727,7 +770,8 @@
       "+40 to 65 Core Stat   +10% to 20% Ice Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Sabatons"
+    "rawType": "Sabatons",
+    "classTag": "All Classes"
   },
   {
     "id": "F-M05",
@@ -745,7 +789,8 @@
       "+80 to 120 Core Stat   +5% to 12% Movement Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Shoes"
+    "rawType": "Shoes",
+    "classTag": "All Classes"
   },
   {
     "id": "F-R01",
@@ -761,7 +806,8 @@
     "description": "Spiked soles provide an unyielding defensive stance.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Sabatons"
+    "rawType": "Sabatons",
+    "classTag": "All Classes"
   },
   {
     "id": "F-R02",
@@ -777,7 +823,8 @@
     "description": "The leather seems to absorb ambient sound.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-R03",
@@ -793,7 +840,8 @@
     "description": "Knee-high rubber waders designed for the toxic sumps.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-R04",
@@ -809,7 +857,8 @@
     "description": "Reinforced with solid brass toe caps to prevent crushing.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-R05",
@@ -825,7 +874,8 @@
     "description": "Server-grade grounding boots that negate static feedback.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-U01",
@@ -843,7 +893,8 @@
       "+15 Agility   +15% Movement Speed   +10% Evasion   +15% Poison Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Shoes"
+    "rawType": "Shoes",
+    "classTag": "All Classes"
   },
   {
     "id": "F-U02",
@@ -861,7 +912,8 @@
       "+35 Intelligence   +100 Max Mana   +15% Movement Speed   +5% Life Steal"
     ],
     "uniqueTrait": "",
-    "rawType": "Sandals"
+    "rawType": "Sandals",
+    "classTag": "All Classes"
   },
   {
     "id": "F-U03",
@@ -879,7 +931,8 @@
       "+60 Strength   +20% Evasion   +20% Attack Speed   +20% Lightning Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-U04",
@@ -897,7 +950,8 @@
       "+100 Stamina   +350 Max HP   +25% Armor   +30% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Sabatons"
+    "rawType": "Sabatons",
+    "classTag": "All Classes"
   },
   {
     "id": "F-U05",
@@ -913,7 +967,8 @@
     "description": "Hovering a few inches off the ground entirely.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Shoes"
+    "rawType": "Shoes",
+    "classTag": "All Classes"
   },
   {
     "id": "F-L01",
@@ -929,7 +984,8 @@
     "description": "Scorched Earth: You leave a trail of fire. Enemies that engage you in melee combat take 25% of your Strength as Fire damage per turn.",
     "modifiers": [],
     "uniqueTrait": "Scorched Earth: You leave a trail of fire. Enemies that engage you in melee combat take 25% of your Strength as Fire damage per turn.",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-L02",
@@ -945,7 +1001,8 @@
     "description": "Unencumbered: You are completely immune to environmental movement penalties and all slow/snare debuffs.",
     "modifiers": [],
     "uniqueTrait": "Unencumbered: You are completely immune to environmental movement penalties and all slow/snare debuffs.",
-    "rawType": "Shoes"
+    "rawType": "Shoes",
+    "classTag": "All Classes"
   },
   {
     "id": "F-L03",
@@ -961,7 +1018,8 @@
     "description": "Feral Leap: Selecting the 'Flee' command in combat now executes a damaging leap attack instead, dealing 150% Physical damage before escaping.",
     "modifiers": [],
     "uniqueTrait": "Feral Leap: Selecting the 'Flee' command in combat now executes a damaging leap attack instead, dealing 150% Physical damage before escaping.",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-L04",
@@ -977,7 +1035,8 @@
     "description": "Momentum: Every time you successfully Evade an attack, your Critical Hit Chance is increased by 10% for your next turn.",
     "modifiers": [],
     "uniqueTrait": "Momentum: Every time you successfully Evade an attack, your Critical Hit Chance is increased by 10% for your next turn.",
-    "rawType": "Boots"
+    "rawType": "Boots",
+    "classTag": "All Classes"
   },
   {
     "id": "F-L05",
@@ -993,7 +1052,8 @@
     "description": "Teleportation: Your movement instantly transitions you between Rooms. You can bypass locked doors or environmental hazards without taking damage.",
     "modifiers": [],
     "uniqueTrait": "Teleportation: Your movement instantly transitions you between Rooms. You can bypass locked doors or environmental hazards without taking damage.",
-    "rawType": "Sabatons"
+    "rawType": "Sabatons",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C01",
@@ -1009,7 +1069,8 @@
     "description": "A simple cloth cap, permanently stained grey.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cap"
+    "rawType": "Cap",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C02",
@@ -1025,7 +1086,8 @@
     "description": "Offers little protection, but hides your face from the fog.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Hood"
+    "rawType": "Hood",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C03",
@@ -1041,7 +1103,8 @@
     "description": "Heavy, uncomfortable, and smells of old blood.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C04",
@@ -1057,7 +1120,8 @@
     "description": "A hardened leather facepiece worn by old-world scavengers.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Mask"
+    "rawType": "Mask",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C05",
@@ -1073,7 +1137,8 @@
     "description": "A heavy bucket of copper that protects against blunt trauma.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C06",
@@ -1089,7 +1154,8 @@
     "description": "Spun from the bioluminescent webs of the Whispering Hollow.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Hood"
+    "rawType": "Hood",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C07",
@@ -1105,7 +1171,8 @@
     "description": "A bulky brass dome with a shattered glass visor.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C08",
@@ -1121,7 +1188,8 @@
     "description": "Forged from petrified fog. Unnaturally lightweight.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Mask"
+    "rawType": "Mask",
+    "classTag": "Warden"
   },
   {
     "id": "H-C09",
@@ -1137,7 +1205,8 @@
     "description": "A ticking, mechanical helmet that keeps the wearer's head warm.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-C10",
@@ -1153,7 +1222,8 @@
     "description": "A holographic hood generated by server-side armor protocols.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Hood"
+    "rawType": "Hood",
+    "classTag": "All Classes"
   },
   {
     "id": "H-M01",
@@ -1171,7 +1241,8 @@
       "+3 to 8 Core Stat   +10 to 25 Max HP"
     ],
     "uniqueTrait": "",
-    "rawType": "Cap"
+    "rawType": "Cap",
+    "classTag": "All Classes"
   },
   {
     "id": "H-M02",
@@ -1189,7 +1260,8 @@
       "+10 to 20 Core Stat   +2% to 5% All Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Mask"
+    "rawType": "Mask",
+    "classTag": "All Classes"
   },
   {
     "id": "H-M03",
@@ -1207,7 +1279,8 @@
       "+25 to 40 Core Stat   +5% to 15% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Hood"
+    "rawType": "Hood",
+    "classTag": "All Classes"
   },
   {
     "id": "H-M04",
@@ -1225,7 +1298,8 @@
       "+40 to 65 Core Stat   +10% to 20% Ice Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-M05",
@@ -1243,7 +1317,8 @@
       "+80 to 120 Core Stat   +5% to 10% Evasion"
     ],
     "uniqueTrait": "",
-    "rawType": "Mask"
+    "rawType": "Mask",
+    "classTag": "All Classes"
   },
   {
     "id": "H-R01",
@@ -1259,7 +1334,8 @@
     "description": "Standard issue for the Hold's elite defenders.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-R02",
@@ -1275,7 +1351,8 @@
     "description": "Shadows naturally cling to the fabric.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Hood"
+    "rawType": "Hood",
+    "classTag": "Weaver"
   },
   {
     "id": "H-R03",
@@ -1291,7 +1368,8 @@
     "description": "Essential for surviving the Rusting Aqueducts.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Mask"
+    "rawType": "Mask",
+    "classTag": "All Classes"
   },
   {
     "id": "H-R04",
@@ -1307,7 +1385,8 @@
     "description": "Lenses crafted from polished clock-crystals.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cap"
+    "rawType": "Cap",
+    "classTag": "All Classes"
   },
   {
     "id": "H-R05",
@@ -1323,7 +1402,8 @@
     "description": "A jagged halo of pure processing power.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-U01",
@@ -1341,7 +1421,8 @@
       "+15 Agility   +50 Max HP   +15% Poison Resist   +5% Attack Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Mask"
+    "rawType": "Mask",
+    "classTag": "All Classes"
   },
   {
     "id": "H-U02",
@@ -1359,7 +1440,8 @@
       "+35 Intelligence   +100 Max Mana   +10% Magic Damage   +5% Life Steal"
     ],
     "uniqueTrait": "",
-    "rawType": "Hood"
+    "rawType": "Hood",
+    "classTag": "All Classes"
   },
   {
     "id": "H-U03",
@@ -1377,7 +1459,8 @@
       "+60 Strength   +15% Evasion   +10% Movement Speed   +20% Lightning Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-U04",
@@ -1395,7 +1478,8 @@
       "+100 Stamina   +500 Max HP   +25% Armor   +30% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-U05",
@@ -1411,7 +1495,8 @@
     "description": "A floating ring of golden code. Perfect for endgame farming.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cap"
+    "rawType": "Cap",
+    "classTag": "All Classes"
   },
   {
     "id": "H-L01",
@@ -1427,7 +1512,8 @@
     "description": "Ember-Flesh: Whenever you take physical damage, you have a 25% chance to retaliate with a burst of Fire Damage equal to 50% of your Strength.",
     "modifiers": [],
     "uniqueTrait": "Ember-Flesh: Whenever you take physical damage, you have a 25% chance to retaliate with a burst of Fire Damage equal to 50% of your Strength.",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "H-L02",
@@ -1443,7 +1529,8 @@
     "description": "Deep Vision: You are immune to all Evasion debuffs. Furthermore, you gain +100% Critical Hit Chance against any enemy below 30% HP.",
     "modifiers": [],
     "uniqueTrait": "Deep Vision: You are immune to all Evasion debuffs. Furthermore, you gain +100% Critical Hit Chance against any enemy below 30% HP.",
-    "rawType": "Mask"
+    "rawType": "Mask",
+    "classTag": "All Classes"
   },
   {
     "id": "H-L03",
@@ -1459,7 +1546,8 @@
     "description": "Two-Faced: Your Physical attacks deal an additional 15% Magic Damage, and your Magic attacks deal an additional 15% Physical Damage.",
     "modifiers": [],
     "uniqueTrait": "Two-Faced: Your Physical attacks deal an additional 15% Magic Damage, and your Magic attacks deal an additional 15% Physical Damage.",
-    "rawType": "Mask"
+    "rawType": "Mask",
+    "classTag": "All Classes"
   },
   {
     "id": "H-L04",
@@ -1475,7 +1563,8 @@
     "description": "Rewind: Once per combat, if an enemy attack would reduce you to 0 HP, time reverses. You negate the damage and restore 30% of your Max HP instead.",
     "modifiers": [],
     "uniqueTrait": "Rewind: Once per combat, if an enemy attack would reduce you to 0 HP, time reverses. You negate the damage and restore 30% of your Max HP instead.",
-    "rawType": "Hood"
+    "rawType": "Hood",
+    "classTag": "All Classes"
   },
   {
     "id": "H-L05",
@@ -1491,7 +1580,8 @@
     "description": "Root Access: Every 5th attack you land ignores 100% of the enemy's Armor and Resistances, dealing True Damage.",
     "modifiers": [],
     "uniqueTrait": "Root Access: Every 5th attack you land ignores 100% of the enemy's Armor and Resistances, dealing True Damage.",
-    "rawType": "Helm"
+    "rawType": "Helm",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C01",
@@ -1507,7 +1597,8 @@
     "description": "A frayed piece of twine holding a smooth stone.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Necklace"
+    "rawType": "Necklace",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C02",
@@ -1523,7 +1614,8 @@
     "description": "A broken chain salvaged from a forgotten ruin.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Necklace"
+    "rawType": "Necklace",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C03",
@@ -1539,7 +1631,8 @@
     "description": "Leaves a green ring of oxidation around the wearer's neck.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Choker"
+    "rawType": "Choker",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C04",
@@ -1555,7 +1648,8 @@
     "description": "Stamped with a faded crest of Oakhaven.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C05",
@@ -1571,7 +1665,8 @@
     "description": "Iron tags bearing the ID of a fallen Hold defender.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Necklace"
+    "rawType": "Necklace",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C06",
@@ -1587,7 +1682,8 @@
     "description": "Untarnished silver that feels cool against the skin.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Necklace"
+    "rawType": "Necklace",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C07",
@@ -1603,7 +1699,8 @@
     "description": "Watertight and heavily pressurized. The locket is rusted shut.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C08",
@@ -1619,7 +1716,8 @@
     "description": "A shard of frozen fog that pulses with a faint heartbeat.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C09",
@@ -1635,7 +1733,8 @@
     "description": "A band of interlocking gears that tick in time with your pulse.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Choker"
+    "rawType": "Choker",
+    "classTag": "All Classes"
   },
   {
     "id": "N-C10",
@@ -1651,7 +1750,8 @@
     "description": "A glowing ring of code that hovers just above the collarbone.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Choker"
+    "rawType": "Choker",
+    "classTag": "All Classes"
   },
   {
     "id": "N-M01",
@@ -1669,7 +1769,8 @@
       "+5 to 10 Core Stat   +20 to 40 Max HP"
     ],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-M02",
@@ -1687,7 +1788,8 @@
       "+15 to 25 Core Stat   +30 to 60 Max Mana"
     ],
     "uniqueTrait": "",
-    "rawType": "Necklace"
+    "rawType": "Necklace",
+    "classTag": "All Classes"
   },
   {
     "id": "N-M03",
@@ -1705,7 +1807,8 @@
       "+30 to 45 Core Stat   +10% to 20% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Choker"
+    "rawType": "Choker",
+    "classTag": "All Classes"
   },
   {
     "id": "N-M04",
@@ -1723,7 +1826,8 @@
       "+50 to 75 Core Stat   +15% to 25% Ice Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-M05",
@@ -1741,7 +1845,8 @@
       "+90 to 130 Core Stat   +5% to 10% Cooldown Reduc."
     ],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-R01",
@@ -1757,7 +1862,8 @@
     "description": "A polished iron shield worn on a heavy chain.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-R02",
@@ -1773,7 +1879,8 @@
     "description": "Crafted from a material that swallows ambient light.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Choker"
+    "rawType": "Choker",
+    "classTag": "All Classes"
   },
   {
     "id": "N-R03",
@@ -1789,7 +1896,8 @@
     "description": "Contains a tiny, functional air purification filter.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-R04",
@@ -1805,7 +1913,8 @@
     "description": "Strung with various microscopic calibration tools.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Necklace"
+    "rawType": "Necklace",
+    "classTag": "All Classes"
   },
   {
     "id": "N-R05",
@@ -1821,7 +1930,8 @@
     "description": "A severed fiber-optic node leaking raw processing power.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-U01",
@@ -1839,7 +1949,8 @@
       "+20 Agility   +50 Max HP   +15% Poison Resist   +5% Life Steal"
     ],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Warden"
   },
   {
     "id": "N-U02",
@@ -1857,7 +1968,8 @@
       "+40 Intelligence   +150 Max Mana   +15% Magic Damage   +10% Cast Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-U03",
@@ -1875,7 +1987,8 @@
       "+70 Strength   +15% Evasion   +15% Attack Speed   +25% Lightning Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Necklace"
+    "rawType": "Necklace",
+    "classTag": "All Classes"
   },
   {
     "id": "N-U04",
@@ -1893,7 +2006,8 @@
       "+110 Stamina   +500 Max HP   +20% Armor   +35% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-U05",
@@ -1909,7 +2023,8 @@
     "description": "The needle always points toward the nearest system anomaly.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-L01",
@@ -1925,7 +2040,8 @@
     "description": "Phoenix Down: Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node).",
     "modifiers": [],
     "uniqueTrait": "Phoenix Down: Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node).",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-L02",
@@ -1941,7 +2057,8 @@
     "description": "Deep Magic: Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost.",
     "modifiers": [],
     "uniqueTrait": "Deep Magic: Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost.",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-L03",
@@ -1957,7 +2074,8 @@
     "description": "Blood Bond: 50% of all healing and Life Steal you receive is also applied to your active Companion.",
     "modifiers": [],
     "uniqueTrait": "Blood Bond: 50% of all healing and Life Steal you receive is also applied to your active Companion.",
-    "rawType": "Choker"
+    "rawType": "Choker",
+    "classTag": "All Classes"
   },
   {
     "id": "N-L04",
@@ -1973,7 +2091,8 @@
     "description": "Overtime: Every time you kill an enemy, you instantly gain a free, immediate turn.",
     "modifiers": [],
     "uniqueTrait": "Overtime: Every time you kill an enemy, you instantly gain a free, immediate turn.",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "N-L05",
@@ -1989,7 +2108,8 @@
     "description": "Admin Privilege: You are completely immune to all enemy Critical Hits and 'Execute' mechanics.",
     "modifiers": [],
     "uniqueTrait": "Admin Privilege: You are completely immune to all enemy Critical Hits and 'Execute' mechanics.",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C01",
@@ -2005,7 +2125,8 @@
     "description": "Splintery and fragile, carved from petrified wood.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Warden"
   },
   {
     "id": "R-C02",
@@ -2021,7 +2142,8 @@
     "description": "A simple loop of hammered copper.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C03",
@@ -2037,7 +2159,8 @@
     "description": "Flakes of rust rub off onto your skin.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C04",
@@ -2053,7 +2176,8 @@
     "description": "The seal on the signet has been ground smooth.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Signet"
+    "rawType": "Signet",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C05",
@@ -2069,7 +2193,8 @@
     "description": "Bears the shield-and-anchor crest of the Hold.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Signet"
+    "rawType": "Signet",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C06",
@@ -2085,7 +2210,8 @@
     "description": "A clean, bright band that resists tarnishing.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C07",
@@ -2101,7 +2227,8 @@
     "description": "Originally a pipe fitting from the Sunken City.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C08",
@@ -2117,7 +2244,8 @@
     "description": "A perfect circle of frozen fog.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C09",
@@ -2133,7 +2261,8 @@
     "description": "The metal is warm and vibrates softly.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "R-C10",
@@ -2149,7 +2278,8 @@
     "description": "A ring of light that resizes perfectly to your finger.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Signet"
+    "rawType": "Signet",
+    "classTag": "All Classes"
   },
   {
     "id": "R-M01",
@@ -2167,7 +2297,8 @@
       "+4 to 8 Core Stat   +2% to 5% Crit Chance"
     ],
     "uniqueTrait": "",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "R-M02",
@@ -2185,7 +2316,8 @@
       "+12 to 22 Core Stat   +10% to 20% Magic Damage"
     ],
     "uniqueTrait": "",
-    "rawType": "Signet"
+    "rawType": "Signet",
+    "classTag": "All Classes"
   },
   {
     "id": "R-M03",
@@ -2203,7 +2335,8 @@
       "+25 to 40 Core Stat   +5% to 15% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-M04",
@@ -2221,7 +2354,8 @@
       "+45 to 70 Core Stat   +3% to 8% Crit Chance"
     ],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-M05",
@@ -2239,7 +2373,8 @@
       "+85 to 125 Core Stat   +10% to 20% Magic Find"
     ],
     "uniqueTrait": "",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "R-R01",
@@ -2255,7 +2390,8 @@
     "description": "Granted to veterans who survived their first Void storm.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Signet"
+    "rawType": "Signet",
+    "classTag": "All Classes"
   },
   {
     "id": "R-R02",
@@ -2271,7 +2407,8 @@
     "description": "The gemstone is replaced by a void of absolute black.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-R03",
@@ -2287,7 +2424,8 @@
     "description": "Forged from non-reactive industrial polymers.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "R-R04",
@@ -2303,7 +2441,8 @@
     "description": "Features a rotating bezel used to measure distances.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-R05",
@@ -2319,7 +2458,8 @@
     "description": "Forged from a melted processing chip.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-U01",
@@ -2337,7 +2477,8 @@
       "+18 Agility   +5% Crit Chance   +20% Crit Damage   +15% Poison Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-U02",
@@ -2355,7 +2496,8 @@
       "+38 Intelligence   +10% Cast Speed   +15% Magic Damage   +10% All Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "R-U03",
@@ -2373,7 +2515,8 @@
       "+65 Strength   +10% Crit Chance   +15% Attack Speed   +25% Lightning Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-U04",
@@ -2391,7 +2534,8 @@
       "+105 Stamina   +400 Max HP   +15% Armor   +10 Damage Reflect"
     ],
     "uniqueTrait": "",
-    "rawType": "Signet"
+    "rawType": "Signet",
+    "classTag": "All Classes"
   },
   {
     "id": "R-U05",
@@ -2407,7 +2551,8 @@
     "description": "Expands and contracts based on the wearer's pulse.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-L01",
@@ -2423,7 +2568,8 @@
     "description": "Kindling: Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat.",
     "modifiers": [],
     "uniqueTrait": "Kindling: Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat.",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-L02",
@@ -2439,7 +2585,8 @@
     "description": "Implosion: Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP.",
     "modifiers": [],
     "uniqueTrait": "Implosion: Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP.",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "R-L03",
@@ -2455,7 +2602,8 @@
     "description": "Feral Insight: Your Critical Hits ignore 100% of the enemy's Elemental Resistances.",
     "modifiers": [],
     "uniqueTrait": "Feral Insight: Your Critical Hits ignore 100% of the enemy's Elemental Resistances.",
-    "rawType": "Signet"
+    "rawType": "Signet",
+    "classTag": "All Classes"
   },
   {
     "id": "R-L04",
@@ -2471,7 +2619,8 @@
     "description": "Clockstopper: Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn.",
     "modifiers": [],
     "uniqueTrait": "Clockstopper: Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn.",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "All Classes"
   },
   {
     "id": "R-L05",
@@ -2487,7 +2636,8 @@
     "description": "Buffer Overflow: If you deal damage that exceeds an enemy's remaining HP, the excess damage chains to a second random enemy in the room.",
     "modifiers": [],
     "uniqueTrait": "Buffer Overflow: If you deal damage that exceeds an enemy's remaining HP, the excess damage chains to a second random enemy in the room.",
-    "rawType": "Band"
+    "rawType": "Band",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C01",
@@ -2503,7 +2653,8 @@
     "description": "Stiff with dried mud and grey ash.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Pants"
+    "rawType": "Pants",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C02",
@@ -2519,7 +2670,8 @@
     "description": "Thick canvas that prevents the local flora from tearing up your legs.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Trousers"
+    "rawType": "Trousers",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C03",
@@ -2535,7 +2687,8 @@
     "description": "Heavy and clunky, significantly slowing the wearer's stride.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C04",
@@ -2551,7 +2704,8 @@
     "description": "Cured leather plates strapped tightly over padded trousers.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Legguards"
+    "rawType": "Legguards",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C05",
@@ -2567,7 +2721,8 @@
     "description": "Sturdy iron armor issued to the defenders of the Hold.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C06",
@@ -2583,7 +2738,8 @@
     "description": "Woven from spider silk, offering surprisingly high tensile strength.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Skirt"
+    "rawType": "Skirt",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C07",
@@ -2599,7 +2755,8 @@
     "description": "Thick industrial thigh guards designed to withstand extreme pressure.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cuisses"
+    "rawType": "Cuisses",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C08",
@@ -2615,7 +2772,8 @@
     "description": "Fabric that seems to absorb the ambient light around it.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Pants"
+    "rawType": "Pants",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C09",
@@ -2631,7 +2789,8 @@
     "description": "Emits a rhythmic mechanical whir with every step you take.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "L-C10",
@@ -2647,7 +2806,8 @@
     "description": "Project overlapping geometric shields around the wearer's legs.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Legguards"
+    "rawType": "Legguards",
+    "classTag": "All Classes"
   },
   {
     "id": "L-M01",
@@ -2665,7 +2825,8 @@
       "+3 to 8 Core Stat   +2% to 5% Movement Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Trousers"
+    "rawType": "Trousers",
+    "classTag": "All Classes"
   },
   {
     "id": "L-M02",
@@ -2683,7 +2844,8 @@
       "+10 to 20 Core Stat   +20 to 50 Max Mana"
     ],
     "uniqueTrait": "",
-    "rawType": "Skirt"
+    "rawType": "Skirt",
+    "classTag": "All Classes"
   },
   {
     "id": "L-M03",
@@ -2701,7 +2863,8 @@
       "+25 to 40 Core Stat   +5% to 15% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Legguards"
+    "rawType": "Legguards",
+    "classTag": "All Classes"
   },
   {
     "id": "L-M04",
@@ -2719,7 +2882,8 @@
       "+40 to 65 Core Stat   +5% to 10% Evasion"
     ],
     "uniqueTrait": "",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "L-M05",
@@ -2737,7 +2901,8 @@
       "+80 to 120 Core Stat   +5% to 10% Movement Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Pants"
+    "rawType": "Pants",
+    "classTag": "All Classes"
   },
   {
     "id": "L-R01",
@@ -2753,7 +2918,8 @@
     "description": "Battle-scarred leg plates that have seen countless skirmishes.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "L-R02",
@@ -2769,7 +2935,8 @@
     "description": "The fabric blurs when you move, making you hard to target.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Trousers"
+    "rawType": "Trousers",
+    "classTag": "All Classes"
   },
   {
     "id": "L-R03",
@@ -2785,7 +2952,8 @@
     "description": "Fully sealed with airtight rubberized joints.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Legguards"
+    "rawType": "Legguards",
+    "classTag": "All Classes"
   },
   {
     "id": "L-R04",
@@ -2801,7 +2969,8 @@
     "description": "Lined with copper wire to ground out electrical charges.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Trousers"
+    "rawType": "Trousers",
+    "classTag": "All Classes"
   },
   {
     "id": "L-R05",
@@ -2817,7 +2986,8 @@
     "description": "High-density ceramic plates wired directly to the server core.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "L-U01",
@@ -2835,7 +3005,8 @@
       "+15 Agility   +50 Max HP   +10% Evasion   +15% Poison Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Legguards"
+    "rawType": "Legguards",
+    "classTag": "All Classes"
   },
   {
     "id": "L-U02",
@@ -2853,7 +3024,8 @@
       "+35 Intelligence   +120 Max Mana   +15% Movement Speed   +5% Life Steal"
     ],
     "uniqueTrait": "",
-    "rawType": "Skirt"
+    "rawType": "Skirt",
+    "classTag": "All Classes"
   },
   {
     "id": "L-U03",
@@ -2871,7 +3043,8 @@
       "+60 Strength   +15% Evasion   +20% Attack Speed   +20% Lightning Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "L-U04",
@@ -2889,7 +3062,8 @@
       "+100 Stamina   +450 Max HP   +25% Armor   +30% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Cuisses"
+    "rawType": "Cuisses",
+    "classTag": "All Classes"
   },
   {
     "id": "L-U05",
@@ -2905,7 +3079,8 @@
     "description": "Exoskeletal braces that entirely negate the effects of fatigue.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Legguards"
+    "rawType": "Legguards",
+    "classTag": "All Classes"
   },
   {
     "id": "L-L01",
@@ -2921,7 +3096,8 @@
     "description": "Unmovable: You are completely immune to all Stun, Knockback, and Root debuffs.",
     "modifiers": [],
     "uniqueTrait": "Unmovable: You are completely immune to all Stun, Knockback, and Root debuffs.",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "L-L02",
@@ -2937,7 +3113,8 @@
     "description": "Deep Current: Whenever you successfully Evade an attack, your next action costs 0 Mana and does not consume your turn.",
     "modifiers": [],
     "uniqueTrait": "Deep Current: Whenever you successfully Evade an attack, your next action costs 0 Mana and does not consume your turn.",
-    "rawType": "Pants"
+    "rawType": "Pants",
+    "classTag": "All Classes"
   },
   {
     "id": "L-L03",
@@ -2953,7 +3130,8 @@
     "description": "Predator's Pounce: Your very first attack in any combat encounter deals 250% damage and guarantees a Critical Hit.",
     "modifiers": [],
     "uniqueTrait": "Predator's Pounce: Your very first attack in any combat encounter deals 250% damage and guarantees a Critical Hit.",
-    "rawType": "Legguards"
+    "rawType": "Legguards",
+    "classTag": "All Classes"
   },
   {
     "id": "L-L04",
@@ -2969,7 +3147,8 @@
     "description": "Clockwork Steps: For every turn that passes in combat, your Evasion increases by 2%, up to a maximum of 20%.",
     "modifiers": [],
     "uniqueTrait": "Clockwork Steps: For every turn that passes in combat, your Evasion increases by 2%, up to a maximum of 20%.",
-    "rawType": "Trousers"
+    "rawType": "Trousers",
+    "classTag": "All Classes"
   },
   {
     "id": "L-L05",
@@ -2985,7 +3164,8 @@
     "description": "System Bypass: You are entirely immune to environmental damage, traps, and passive Node debuffs (e.g., Toxic drains, Chill effects).",
     "modifiers": [],
     "uniqueTrait": "System Bypass: You are entirely immune to environmental damage, traps, and passive Node debuffs (e.g., Toxic drains, Chill effects).",
-    "rawType": "Greaves"
+    "rawType": "Greaves",
+    "classTag": "All Classes"
   },
   {
     "id": "SJ1-01",
@@ -3001,7 +3181,8 @@
     "description": "A solid iron faceplate with no eye slits.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SJ1-02",
@@ -3017,7 +3198,8 @@
     "description": "Ridiculously heavy plate armor.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SJ1-03",
@@ -3035,7 +3217,8 @@
       "+30 STR   +30 Damage Reflect"
     ],
     "uniqueTrait": "",
-    "rawType": "Off-Hand"
+    "rawType": "Off-Hand",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SJ2-01",
@@ -3051,7 +3234,8 @@
     "description": "A glowing brass whistle.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SJ2-02",
@@ -3069,7 +3253,8 @@
       "+35 STR   +15% Movement Spd"
     ],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SJ2-03",
@@ -3085,7 +3270,8 @@
     "description": "A massive hammer that crackles with kinetic energy.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Mace"
+    "rawType": "2H Mace",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SJ3-01",
@@ -3101,7 +3287,8 @@
     "description": "A wrestling belt won in the old fighting pits.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Waist"
+    "rawType": "Waist",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SJ3-02",
@@ -3117,7 +3304,8 @@
     "description": "Armbands that pulse like veins.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SJ3-03",
@@ -3133,7 +3321,8 @@
     "description": "A ring holding a drop of crystallized giant's blood.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Juggernaut"
   },
   {
     "id": "SP1-01",
@@ -3151,7 +3340,8 @@
       "+35 AGI   +15 Flat Poison Dmg"
     ],
     "uniqueTrait": "",
-    "rawType": "1H Dagger"
+    "rawType": "1H Dagger",
+    "classTag": "Phantom"
   },
   {
     "id": "SP1-02",
@@ -3169,7 +3359,8 @@
       "+35 AGI   +15% Attack Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "1H Dagger"
+    "rawType": "1H Dagger",
+    "classTag": "Phantom"
   },
   {
     "id": "SP1-03",
@@ -3185,7 +3376,8 @@
     "description": "Woven from the skin of an Abyssal snake.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Phantom"
   },
   {
     "id": "SP2-01",
@@ -3201,7 +3393,8 @@
     "description": "Your face is entirely obscured by magical shadow.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Phantom"
   },
   {
     "id": "SP2-02",
@@ -3217,7 +3410,8 @@
     "description": "Muffles the sound of your weapons being drawn.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Phantom"
   },
   {
     "id": "SP2-03",
@@ -3235,7 +3429,8 @@
       "+10% Crit Chance   +15% Movement Spd"
     ],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Phantom"
   },
   {
     "id": "SP3-01",
@@ -3251,7 +3446,8 @@
     "description": "The bowstring hums with contained wind.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Bow"
+    "rawType": "2H Bow",
+    "classTag": "Phantom"
   },
   {
     "id": "SP3-02",
@@ -3267,7 +3463,8 @@
     "description": "So light they feel like wearing nothing.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Phantom"
   },
   {
     "id": "SP3-03",
@@ -3283,7 +3480,8 @@
     "description": "Carved with the symbol of a tornado.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Phantom"
   },
   {
     "id": "SW1-01",
@@ -3299,7 +3497,8 @@
     "description": "Topped with a rotating, multi-faceted crystal.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Staff"
+    "rawType": "2H Staff",
+    "classTag": "Weaver"
   },
   {
     "id": "SW1-02",
@@ -3315,7 +3514,8 @@
     "description": "A floating crown of pure arcane energy.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Weaver"
   },
   {
     "id": "SW1-03",
@@ -3333,7 +3533,8 @@
       "+30 INT   +20% Crit Chance"
     ],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Weaver"
   },
   {
     "id": "SW2-01",
@@ -3349,7 +3550,8 @@
     "description": "Woven from the physical manifestation of the Void.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Weaver"
   },
   {
     "id": "SW2-02",
@@ -3365,7 +3567,8 @@
     "description": "A glowing orb held in the palm of the hand.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Off-Hand"
+    "rawType": "Off-Hand",
+    "classTag": "Weaver"
   },
   {
     "id": "SW2-03",
@@ -3383,7 +3586,8 @@
       "+30 INT   +20% Mana Regen"
     ],
     "uniqueTrait": "",
-    "rawType": "Waist"
+    "rawType": "Waist",
+    "classTag": "Weaver"
   },
   {
     "id": "SW3-01",
@@ -3399,7 +3603,8 @@
     "description": "Shaped like an infinity symbol at the tip.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Wand"
+    "rawType": "1H Wand",
+    "classTag": "Weaver"
   },
   {
     "id": "SW3-02",
@@ -3415,7 +3620,8 @@
     "description": "Your fingers blur when weaving spell components.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Weaver"
   },
   {
     "id": "SW3-03",
@@ -3433,7 +3639,8 @@
       "+15% Cooldown Reduc.   +10% Magic Dmg"
     ],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Weaver"
   },
   {
     "id": "SD1-01",
@@ -3449,7 +3656,8 @@
     "description": "Used to direct the pack, not strike them.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Whip"
+    "rawType": "1H Whip",
+    "classTag": "Warden"
   },
   {
     "id": "SD1-02",
@@ -3465,7 +3673,8 @@
     "description": "Carved with the roaring face of a chimera.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Off-Hand"
+    "rawType": "Off-Hand",
+    "classTag": "Warden"
   },
   {
     "id": "SD1-03",
@@ -3481,7 +3690,8 @@
     "description": "Thick leather reinforced with bone plates.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Warden"
   },
   {
     "id": "SD2-01",
@@ -3497,7 +3707,8 @@
     "description": "A spear made entirely of twisted, living thorns.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Spear"
+    "rawType": "2H Spear",
+    "classTag": "Warden"
   },
   {
     "id": "SD2-02",
@@ -3513,7 +3724,8 @@
     "description": "Roots occasionally attempt to anchor you to the ground.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Warden"
   },
   {
     "id": "SD2-03",
@@ -3531,7 +3743,8 @@
       "+10% Life Steal   +50 Max HP"
     ],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Warden"
   },
   {
     "id": "SD3-01",
@@ -3547,7 +3760,8 @@
     "description": "Connected to your spine by ethereal blue threads.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Warden"
   },
   {
     "id": "SD3-02",
@@ -3563,7 +3777,8 @@
     "description": "A belt that feels like it's squeezing you just a bit too tight.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Waist"
+    "rawType": "Waist",
+    "classTag": "Warden"
   },
   {
     "id": "SD3-03",
@@ -3581,7 +3796,8 @@
       "+20% Boss Damage   +100 Max Mana"
     ],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Warden"
   },
   {
     "id": "S3-B01",
@@ -3597,7 +3813,8 @@
     "description": "A jagged, open-faced helmet stained crimson.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-B02",
@@ -3613,7 +3830,8 @@
     "description": "Spiked on the inside to keep the wearer enraged.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-B03",
@@ -3629,7 +3847,8 @@
     "description": "A ring of jagged bone.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-V01",
@@ -3645,7 +3864,8 @@
     "description": "Massive shoulder guards that absorb kinetic force.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-V02",
@@ -3661,7 +3881,8 @@
     "description": "Grounding plates that prevent you from being moved.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Legs"
+    "rawType": "Legs",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-V03",
@@ -3677,7 +3898,8 @@
     "description": "A miniature black hole held in a magnetic field.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-J01",
@@ -3693,7 +3915,8 @@
     "description": "A crown of dark iron fit for a conqueror.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-J02",
@@ -3709,7 +3932,8 @@
     "description": "Your grip strength is amplified tenfold.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-J03",
@@ -3725,7 +3949,8 @@
     "description": "Bears the seal of the shattered server admin.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S3-A01",
@@ -3741,7 +3966,8 @@
     "description": "A rebreather filtering out your own toxic fumes.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-A02",
@@ -3757,7 +3983,8 @@
     "description": "Lined with hidden vials of acidic venom.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-A03",
@@ -3773,7 +4000,8 @@
     "description": "A hollow ring concealing a lethal needle.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-R01",
@@ -3789,7 +4017,8 @@
     "description": "A heads-up display calculating wind and drop.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-R02",
@@ -3805,7 +4034,8 @@
     "description": "Anchors you perfectly to the ground when firing.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-R03",
@@ -3821,7 +4051,8 @@
     "description": "A targeting laser worn around the neck.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-P01",
@@ -3837,7 +4068,8 @@
     "description": "Fabric that phases in and out of the physical realm.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-P02",
@@ -3853,7 +4085,8 @@
     "description": "Your hands leave motion-blurred trails in the air.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-P03",
@@ -3869,7 +4102,8 @@
     "description": "Completely invisible to the naked eye.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Phantom"
   },
   {
     "id": "S3-E01",
@@ -3885,7 +4119,8 @@
     "description": "A halo of shifting elemental energy.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-E02",
@@ -3901,7 +4136,8 @@
     "description": "Weaves different elemental threads based on your stance.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-E03",
@@ -3917,7 +4153,8 @@
     "description": "A perfectly cut tri-color gemstone.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-M01",
@@ -3933,7 +4170,8 @@
     "description": "The cloth is perpetually damp with blood.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-M02",
@@ -3949,7 +4187,8 @@
     "description": "Deep scars cover the wrists under these wraps.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-M03",
@@ -3965,7 +4204,8 @@
     "description": "A silver ring inset with a crystallized drop of blood.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-W01",
@@ -3981,7 +4221,8 @@
     "description": "Woven from the source code of the Astral Servers.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-W02",
@@ -3997,7 +4238,8 @@
     "description": "You hover slightly off the digital floor.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-W03",
@@ -4013,7 +4255,8 @@
     "description": "A belt that actively rewinds time around your spells.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Waist"
+    "rawType": "Waist",
+    "classTag": "Weaver"
   },
   {
     "id": "S3-N01",
@@ -4029,7 +4272,8 @@
     "description": "A terrifying skull mask wreathed in blue flame.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Warden"
   },
   {
     "id": "S3-N02",
@@ -4045,7 +4289,8 @@
     "description": "Whispers of the damned emanate from the folds.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Warden"
   },
   {
     "id": "S3-N03",
@@ -4061,7 +4306,8 @@
     "description": "A ring that hums with necromantic energy.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Warden"
   },
   {
     "id": "S3-D01",
@@ -4077,7 +4323,8 @@
     "description": "A heavy hood adorned with beast fur and fangs.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Warden"
   },
   {
     "id": "S3-D02",
@@ -4093,7 +4340,8 @@
     "description": "Gauntlets that extend razor-sharp claws when making a fist.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Warden"
   },
   {
     "id": "S3-D03",
@@ -4109,7 +4357,8 @@
     "description": "A belt woven from incredibly tough, living vines.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Waist"
+    "rawType": "Waist",
+    "classTag": "Warden"
   },
   {
     "id": "S3-W04",
@@ -4125,7 +4374,8 @@
     "description": "Wood from Oakhaven, petrified by the Void.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Warden"
   },
   {
     "id": "S3-W05",
@@ -4141,7 +4391,8 @@
     "description": "Roots spread from the soles to anchor you when struck.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Warden"
   },
   {
     "id": "S3-W06",
@@ -4157,7 +4408,8 @@
     "description": "Two intertwined rings, representing the master and the beast.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Warden"
   },
   {
     "id": "S4-WB1",
@@ -4173,7 +4425,8 @@
     "description": "A helm forged from the debris of a deleted sector.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-WB2",
@@ -4189,7 +4442,8 @@
     "description": "The metal is perpetually white-hot.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-WB3",
@@ -4205,7 +4459,8 @@
     "description": "A ring of condensed gravity.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-AL1",
@@ -4221,7 +4476,8 @@
     "description": "Emits a hard-light barrier extending 10 feet out.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-AL2",
@@ -4237,7 +4493,8 @@
     "description": "Anchors the wearer directly to the server's root code.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Legs"
+    "rawType": "Legs",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-AL3",
@@ -4253,7 +4510,8 @@
     "description": "A tiny, contained supernova.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-JE1",
@@ -4269,7 +4527,8 @@
     "description": "Worn by the original server moderators.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-JE2",
@@ -4285,7 +4544,8 @@
     "description": "Your punches can shatter digital reality.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-JE3",
@@ -4301,7 +4561,8 @@
     "description": "Grants write-permission to the game engine.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Juggernaut"
   },
   {
     "id": "S4-SW1",
@@ -4317,7 +4578,8 @@
     "description": "A mask made of absolute, light-devouring void.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-SW2",
@@ -4333,7 +4595,8 @@
     "description": "Blends flawlessly into the Unallocated Space.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-SW3",
@@ -4349,7 +4612,8 @@
     "description": "Continuously leaks corrupted data.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-VS1",
@@ -4365,7 +4629,8 @@
     "description": "Calculates trajectories across parallel dimensions.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-VS2",
@@ -4381,7 +4646,8 @@
     "description": "Grants the ability to walk on the air itself.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-VS3",
@@ -4397,7 +4663,8 @@
     "description": "A quantum targeting lens.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-PA1",
@@ -4413,7 +4680,8 @@
     "description": "Woven from the source code of deleted player characters.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-PA2",
@@ -4429,7 +4697,8 @@
     "description": "Your strikes pass cleanly through physical armor.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-PA3",
@@ -4445,7 +4714,8 @@
     "description": "A ring that exists only in your peripheral vision.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Phantom"
   },
   {
     "id": "S4-AM1",
@@ -4461,7 +4731,8 @@
     "description": "A halo of golden gears spinning backward.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-AM2",
@@ -4477,7 +4748,8 @@
     "description": "The fabric depicts stars that have yet to be born.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-AM3",
@@ -4493,7 +4765,8 @@
     "description": "A clock-face permanently stuck at 12:00.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-CS1",
@@ -4509,7 +4782,8 @@
     "description": "A crown of crystallized blood hovering over a red hood.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-CS2",
@@ -4525,7 +4799,8 @@
     "description": "Covered in runes written in the blood of dead servers.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-CS3",
@@ -4541,7 +4816,8 @@
     "description": "Pulses like an anatomical heart.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-PW1",
@@ -4557,7 +4833,8 @@
     "description": "Woven directly into the game's rendering engine.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-PW2",
@@ -4573,7 +4850,8 @@
     "description": "You do not walk; the world moves around you.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-PW3",
@@ -4589,7 +4867,8 @@
     "description": "An admin console strapped to your waist.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Waist"
+    "rawType": "Waist",
+    "classTag": "Weaver"
   },
   {
     "id": "S4-DC1",
@@ -4605,7 +4884,8 @@
     "description": "A terrifying skull mask wreathed in green hellfire.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Warden"
   },
   {
     "id": "S4-DC2",
@@ -4621,7 +4901,8 @@
     "description": "Shadows physically reach out from the fabric.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Warden"
   },
   {
     "id": "S4-DC3",
@@ -4637,7 +4918,8 @@
     "description": "Bound with the souls of corrupted admin programs.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Ring"
+    "rawType": "Ring",
+    "classTag": "Warden"
   },
   {
     "id": "S4-CL1",
@@ -4653,7 +4935,8 @@
     "description": "Merges the traits of a dragon, wolf, and void-beast.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head"
+    "rawType": "Head",
+    "classTag": "Warden"
   },
   {
     "id": "S4-CL2",
@@ -4669,7 +4952,8 @@
     "description": "Unbreakable talons crackling with aether.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Arms"
+    "rawType": "Arms",
+    "classTag": "Warden"
   },
   {
     "id": "S4-CL3",
@@ -4685,7 +4969,8 @@
     "description": "A belt of living, glowing tendons.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Waist"
+    "rawType": "Waist",
+    "classTag": "Warden"
   },
   {
     "id": "S4-PW4",
@@ -4701,7 +4986,8 @@
     "description": "Woven from the master framework of Oakhaven.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso"
+    "rawType": "Torso",
+    "classTag": "Warden"
   },
   {
     "id": "S4-PW5",
@@ -4717,7 +5003,8 @@
     "description": "Roots from these boots tap directly into the server database.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet"
+    "rawType": "Feet",
+    "classTag": "Warden"
   },
   {
     "id": "S4-PW6",
@@ -4733,7 +5020,8 @@
     "description": "A master-key glowing with blinding white light.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Amulet"
+    "rawType": "Amulet",
+    "classTag": "Warden"
   },
   {
     "id": "S1-V01",
@@ -4749,7 +5037,8 @@
     "description": "A dusty hood that smells of old parchment and ozone.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Head (Hood)"
+    "rawType": "Head (Hood)",
+    "classTag": "Vagabond"
   },
   {
     "id": "S1-V02",
@@ -4765,7 +5054,8 @@
     "description": "Woven with protective runes that glow faintly in the dark.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Torso (Shirt)"
+    "rawType": "Torso (Shirt)",
+    "classTag": "Vagabond"
   },
   {
     "id": "S1-V03",
@@ -4781,7 +5071,8 @@
     "description": "A simple wooden band that vibrates when near unexplored rooms.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Finger (Ring)"
+    "rawType": "Finger (Ring)",
+    "classTag": "Vagabond"
   },
   {
     "id": "S2-V01",
@@ -4797,7 +5088,8 @@
     "description": "A rusted grappling hook repurposed as a brutal melee weapon.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "L-Hand (1H)"
+    "rawType": "L-Hand (1H)",
+    "classTag": "Vagabond"
   },
   {
     "id": "S2-V02",
@@ -4813,7 +5105,8 @@
     "description": "Literally a dented trash can lid, painted with a crude smiley face.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "R-Hand (Shield)"
+    "rawType": "R-Hand (Shield)",
+    "classTag": "Vagabond"
   },
   {
     "id": "S2-V03",
@@ -4829,7 +5122,8 @@
     "description": "Covered in clinking pouches overflowing with junk and coins.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Waist (Belt)"
+    "rawType": "Waist (Belt)",
+    "classTag": "Vagabond"
   },
   {
     "id": "S2-V04",
@@ -4845,7 +5139,8 @@
     "description": "Lightweight boots designed to outrun trouble with heavy pockets.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Feet (Boots)"
+    "rawType": "Feet (Boots)",
+    "classTag": "Vagabond"
   },
   {
     "id": "T-C01",
@@ -4861,7 +5156,8 @@
     "description": "A plain linen shirt, worn thin by the ash winds.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Shirt"
+    "rawType": "Shirt",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C02",
@@ -4877,7 +5173,8 @@
     "description": "Thick, padded cloth that offers basic protection from bites and scratches.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Tunic"
+    "rawType": "Tunic",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C03",
@@ -4893,7 +5190,8 @@
     "description": "The links are brittle and snap easily, but it beats bare skin.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Chainmail"
+    "rawType": "Chainmail",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C04",
@@ -4909,7 +5207,8 @@
     "description": "Cured with unnatural chemicals to resist the Void fog.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cuirass"
+    "rawType": "Cuirass",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C05",
@@ -4925,7 +5224,8 @@
     "description": "Standard issue heavy armor forged in the Vanguard's Hold.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Plate"
+    "rawType": "Plate",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C06",
@@ -4941,7 +5241,8 @@
     "description": "Woven tightly from spider silk, it hums with latent energy.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Coat"
+    "rawType": "Coat",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C07",
@@ -4957,7 +5258,8 @@
     "description": "An industrial exoskeleton frame used by deep-trench divers.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Harness"
+    "rawType": "Harness",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C08",
@@ -4973,7 +5275,8 @@
     "description": "Fabric that phase-shifts slightly, making the wearer hard to focus on.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Robe"
+    "rawType": "Robe",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C09",
@@ -4989,7 +5292,8 @@
     "description": "Emits a rhythmic ticking sound; the metal feels warm to the touch.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Plate"
+    "rawType": "Plate",
+    "classTag": "All Classes"
   },
   {
     "id": "T-C10",
@@ -5005,7 +5309,8 @@
     "description": "A chest piece made entirely of hard-light polygons and projected code.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cuirass"
+    "rawType": "Cuirass",
+    "classTag": "All Classes"
   },
   {
     "id": "T-M01",
@@ -5023,7 +5328,8 @@
       "+4 to 10 Core Stat   +15 to 30 Max HP"
     ],
     "uniqueTrait": "",
-    "rawType": "Shirt"
+    "rawType": "Shirt",
+    "classTag": "All Classes"
   },
   {
     "id": "T-M02",
@@ -5041,7 +5347,8 @@
       "+15 to 25 Core Stat   +20 to 50 Max Mana"
     ],
     "uniqueTrait": "",
-    "rawType": "Robe"
+    "rawType": "Robe",
+    "classTag": "All Classes"
   },
   {
     "id": "T-M03",
@@ -5059,7 +5366,8 @@
       "+30 to 50 Core Stat   +10% to 20% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Harness"
+    "rawType": "Harness",
+    "classTag": "All Classes"
   },
   {
     "id": "T-M04",
@@ -5077,7 +5385,8 @@
       "+50 to 80 Core Stat   +5% to 15% Total Armor"
     ],
     "uniqueTrait": "",
-    "rawType": "Chainmail"
+    "rawType": "Chainmail",
+    "classTag": "All Classes"
   },
   {
     "id": "T-M05",
@@ -5095,7 +5404,8 @@
       "+90 to 140 Core Stat   +8% to 15% Evasion"
     ],
     "uniqueTrait": "",
-    "rawType": "Coat"
+    "rawType": "Coat",
+    "classTag": "All Classes"
   },
   {
     "id": "T-R01",
@@ -5111,7 +5421,8 @@
     "description": "A dented but incredibly sturdy piece of pre-Severance armor.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Plate"
+    "rawType": "Plate",
+    "classTag": "All Classes"
   },
   {
     "id": "T-R02",
@@ -5127,7 +5438,8 @@
     "description": "Absorbs ambient light, making the wearer difficult to track.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Tunic"
+    "rawType": "Tunic",
+    "classTag": "All Classes"
   },
   {
     "id": "T-R03",
@@ -5143,7 +5455,8 @@
     "description": "Heavy rubber and brass, built for the toxic aqueducts.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Harness"
+    "rawType": "Harness",
+    "classTag": "All Classes"
   },
   {
     "id": "T-R04",
@@ -5159,7 +5472,8 @@
     "description": "Fitted with exhaust valves that vent excess thermal energy.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Plate"
+    "rawType": "Plate",
+    "classTag": "All Classes"
   },
   {
     "id": "T-R05",
@@ -5175,7 +5489,8 @@
     "description": "A high-tech chassis that interfaces directly with your nervous system.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cuirass"
+    "rawType": "Cuirass",
+    "classTag": "All Classes"
   },
   {
     "id": "T-U01",
@@ -5193,7 +5508,8 @@
       "+20 Agility   +60 Max HP   +20% Poison Resist   +15 Damage Reflect (Thorns)"
     ],
     "uniqueTrait": "",
-    "rawType": "Cuirass"
+    "rawType": "Cuirass",
+    "classTag": "All Classes"
   },
   {
     "id": "T-U02",
@@ -5211,7 +5527,8 @@
       "+45 Intelligence   +150 Max Mana   +15% Magic Damage   +10% Cast Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Robe"
+    "rawType": "Robe",
+    "classTag": "All Classes"
   },
   {
     "id": "T-U03",
@@ -5229,7 +5546,8 @@
       "+75 Strength   +20% Evasion   +15% Movement Speed   +25% Lightning Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Coat"
+    "rawType": "Coat",
+    "classTag": "All Classes"
   },
   {
     "id": "T-U04",
@@ -5247,7 +5565,8 @@
       "+120 Stamina   +600 Max HP   +30% Armor   +40% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Plate"
+    "rawType": "Plate",
+    "classTag": "All Classes"
   },
   {
     "id": "T-U05",
@@ -5263,7 +5582,8 @@
     "description": "A floating rig of server racks that orbits the wearer's torso.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Harness"
+    "rawType": "Harness",
+    "classTag": "All Classes"
   },
   {
     "id": "T-L01",
@@ -5279,7 +5599,8 @@
     "description": "Molten Core: Enemies that strike you in melee are Ignited, taking Fire Damage equal to 10% of their Max HP over 3 turns.",
     "modifiers": [],
     "uniqueTrait": "Molten Core: Enemies that strike you in melee are Ignited, taking Fire Damage equal to 10% of their Max HP over 3 turns.",
-    "rawType": "Plate"
+    "rawType": "Plate",
+    "classTag": "All Classes"
   },
   {
     "id": "T-L02",
@@ -5295,7 +5616,8 @@
     "description": "Void Siphon: 30% of all damage you take is converted into Mana. If your Mana is full, the excess heals you instead.",
     "modifiers": [],
     "uniqueTrait": "Void Siphon: 30% of all damage you take is converted into Mana. If your Mana is full, the excess heals you instead.",
-    "rawType": "Robe"
+    "rawType": "Robe",
+    "classTag": "All Classes"
   },
   {
     "id": "T-L03",
@@ -5311,7 +5633,8 @@
     "description": "Apex Hide: You take 25% less damage from Bosses and Elite enemies.",
     "modifiers": [],
     "uniqueTrait": "Apex Hide: You take 25% less damage from Bosses and Elite enemies.",
-    "rawType": "Coat"
+    "rawType": "Coat",
+    "classTag": "All Classes"
   },
   {
     "id": "T-L04",
@@ -5327,7 +5650,8 @@
     "description": "Overclock: Every time you take damage, your Attack Speed and Cast Speed increase by 10%. Stacks up to 5 times. Lasts until the end of combat.",
     "modifiers": [],
     "uniqueTrait": "Overclock: Every time you take damage, your Attack Speed and Cast Speed increase by 10%. Stacks up to 5 times. Lasts until the end of combat.",
-    "rawType": "Cuirass"
+    "rawType": "Cuirass",
+    "classTag": "All Classes"
   },
   {
     "id": "T-L05",
@@ -5343,7 +5667,8 @@
     "description": "God Mode: At the start of every combat encounter, you gain a hard-light shield equal to 100% of your Max HP.",
     "modifiers": [],
     "uniqueTrait": "God Mode: At the start of every combat encounter, you gain a hard-light shield equal to 100% of your Max HP.",
-    "rawType": "Plate"
+    "rawType": "Plate",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C01",
@@ -5359,7 +5684,8 @@
     "description": "Dried, petrified grass twisted into a fragile rope.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cord"
+    "rawType": "Cord",
+    "classTag": "Warden"
   },
   {
     "id": "W-C02",
@@ -5375,7 +5701,8 @@
     "description": "A strip of torn fabric used to hold pants up.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Sash"
+    "rawType": "Sash",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C03",
@@ -5391,7 +5718,8 @@
     "description": "Stiff, uncomfortable, but features a rusted iron buckle.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C04",
@@ -5407,7 +5735,8 @@
     "description": "Heavy metal links that clink loudly when you walk.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Girdle"
+    "rawType": "Girdle",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C05",
@@ -5423,7 +5752,8 @@
     "description": "Features numerous empty pouches for holding supplies.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C06",
@@ -5439,7 +5769,8 @@
     "description": "Surprisingly strong for being so thin and lightweight.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Sash"
+    "rawType": "Sash",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C07",
@@ -5455,7 +5786,8 @@
     "description": "Lined with heavy lead blocks to counteract buoyancy.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C08",
@@ -5471,7 +5803,8 @@
     "description": "Woven from the ambient digital fog; feels cold to the touch.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cord"
+    "rawType": "Cord",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C09",
@@ -5487,7 +5820,8 @@
     "description": "Interlocking brass plates that adjust to your breathing.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Girdle"
+    "rawType": "Girdle",
+    "classTag": "All Classes"
   },
   {
     "id": "W-C10",
@@ -5503,7 +5837,8 @@
     "description": "A floating band of holograms that locks around your waist.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-M01",
@@ -5521,7 +5856,8 @@
       "+2 to 8 Core Stat   +10 to 20 Max HP"
     ],
     "uniqueTrait": "",
-    "rawType": "Sash"
+    "rawType": "Sash",
+    "classTag": "All Classes"
   },
   {
     "id": "W-M02",
@@ -5539,7 +5875,8 @@
       "+10 to 20 Core Stat   +15 to 40 Max Mana"
     ],
     "uniqueTrait": "",
-    "rawType": "Cord"
+    "rawType": "Cord",
+    "classTag": "All Classes"
   },
   {
     "id": "W-M03",
@@ -5557,7 +5894,8 @@
       "+20 to 35 Core Stat   +5% to 15% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-M04",
@@ -5575,7 +5913,8 @@
       "+35 to 60 Core Stat   +10% to 20% Ice Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Girdle"
+    "rawType": "Girdle",
+    "classTag": "All Classes"
   },
   {
     "id": "W-M05",
@@ -5593,7 +5932,8 @@
       "+70 to 110 Core Stat   +5% to 10% Evasion"
     ],
     "uniqueTrait": "",
-    "rawType": "Sash"
+    "rawType": "Sash",
+    "classTag": "All Classes"
   },
   {
     "id": "W-R01",
@@ -5609,7 +5949,8 @@
     "description": "A thick leather belt reinforced with iron studs.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Girdle"
+    "rawType": "Girdle",
+    "classTag": "All Classes"
   },
   {
     "id": "W-R02",
@@ -5625,7 +5966,8 @@
     "description": "Makes your footsteps completely silent.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Sash"
+    "rawType": "Sash",
+    "classTag": "All Classes"
   },
   {
     "id": "W-R03",
@@ -5641,7 +5983,8 @@
     "description": "Covered in padded vials and glass tubes.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-R04",
@@ -5657,7 +6000,8 @@
     "description": "Contains an array of miniature ticking clocks and tools.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-R05",
@@ -5673,7 +6017,8 @@
     "description": "A thick fiber-optic cable ripped directly from a server.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Cord"
+    "rawType": "Cord",
+    "classTag": "All Classes"
   },
   {
     "id": "W-U01",
@@ -5691,7 +6036,8 @@
       "+15 Agility   +40 Max HP   +15% Poison Resist   +10% Movement Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "Sash"
+    "rawType": "Sash",
+    "classTag": "All Classes"
   },
   {
     "id": "W-U02",
@@ -5709,7 +6055,8 @@
       "+30 Intelligence   +100 Max Mana   +10% Magic Damage   +10% Cooldown Reduction"
     ],
     "uniqueTrait": "",
-    "rawType": "Girdle"
+    "rawType": "Girdle",
+    "classTag": "All Classes"
   },
   {
     "id": "W-U03",
@@ -5727,7 +6074,8 @@
       "+50 Strength   +15% Evasion   +10% Attack Speed   +20% Lightning Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Cord"
+    "rawType": "Cord",
+    "classTag": "All Classes"
   },
   {
     "id": "W-U04",
@@ -5745,7 +6093,8 @@
       "+90 Stamina   +400 Max HP   +20% Armor   +30% Water Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-U05",
@@ -5761,7 +6110,8 @@
     "description": "Contains holographic tools that phase into reality when needed.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-L01",
@@ -5777,7 +6127,8 @@
     "description": "Ember Flask: Whenever you use a healing potion, you unleash a shockwave of Fire Damage equal to 100% of your Strength to all enemies.",
     "modifiers": [],
     "uniqueTrait": "Ember Flask: Whenever you use a healing potion, you unleash a shockwave of Fire Damage equal to 100% of your Strength to all enemies.",
-    "rawType": "Girdle"
+    "rawType": "Girdle",
+    "classTag": "All Classes"
   },
   {
     "id": "W-L02",
@@ -5793,7 +6144,8 @@
     "description": "Crush Depth: Enemies that begin their turn in the same room as you have their Evasion and Attack Speed permanently reduced by 15%.",
     "modifiers": [],
     "uniqueTrait": "Crush Depth: Enemies that begin their turn in the same room as you have their Evasion and Attack Speed permanently reduced by 15%.",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W-L03",
@@ -5809,7 +6161,8 @@
     "description": "Beast Blood: Potion effects and base HP regeneration are multiplied by 300%, but your base Armor is reduced by 25%.",
     "modifiers": [],
     "uniqueTrait": "Beast Blood: Potion effects and base HP regeneration are multiplied by 300%, but your base Armor is reduced by 25%.",
-    "rawType": "Cord"
+    "rawType": "Cord",
+    "classTag": "All Classes"
   },
   {
     "id": "W-L04",
@@ -5825,7 +6178,8 @@
     "description": "Tick-Tock: Every 3rd attack you make instantly reduces the cooldown of all your active skills by 1 turn.",
     "modifiers": [],
     "uniqueTrait": "Tick-Tock: Every 3rd attack you make instantly reduces the cooldown of all your active skills by 1 turn.",
-    "rawType": "Sash"
+    "rawType": "Sash",
+    "classTag": "All Classes"
   },
   {
     "id": "W-L05",
@@ -5841,7 +6195,8 @@
     "description": "Memory Leak: Every attack you land steals 5% of the enemy's maximum damage output and adds it to your own for the remainder of the battle.",
     "modifiers": [],
     "uniqueTrait": "Memory Leak: Every attack you land steals 5% of the enemy's maximum damage output and adds it to your own for the remainder of the battle.",
-    "rawType": "Belt"
+    "rawType": "Belt",
+    "classTag": "All Classes"
   },
   {
     "id": "W2-J01",
@@ -5857,7 +6212,8 @@
     "description": "A blade as wide as a man's torso.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Sword"
+    "rawType": "2H Sword",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W2-J02",
@@ -5873,7 +6229,8 @@
     "description": "Top-heavy and brutal; designed to shatter armor.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Mace"
+    "rawType": "1H Mace",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W2-J03",
@@ -5889,7 +6246,8 @@
     "description": "Heavily chipped from severing bone.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Axe"
+    "rawType": "2H Axe",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W2-J04",
@@ -5905,7 +6263,8 @@
     "description": "Steadfast: While you have a Shield equipped, your Weapon Damage is increased by 30%.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Sword"
+    "rawType": "1H Sword",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W2-J05",
@@ -5921,7 +6280,8 @@
     "description": "Seismic Slam: Your Physical attacks unleash a shockwave, dealing 30% of the initial damage to all other enemies in the room.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Mace"
+    "rawType": "2H Mace",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W2-P01",
@@ -5937,7 +6297,8 @@
     "description": "The jagged edge guarantees severe bleeding.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Dagger"
+    "rawType": "1H Dagger",
+    "classTag": "Phantom"
   },
   {
     "id": "W2-P02",
@@ -5953,7 +6314,8 @@
     "description": "Fires arrows with terrifying velocity.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Bow"
+    "rawType": "2H Bow",
+    "classTag": "Phantom"
   },
   {
     "id": "W2-P03",
@@ -5969,7 +6331,8 @@
     "description": "Perfectly balanced for lightning-fast thrusts.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Sword"
+    "rawType": "1H Sword",
+    "classTag": "Phantom"
   },
   {
     "id": "W2-P04",
@@ -5985,7 +6348,8 @@
     "description": "Crimson Thirst: Every application of Bleed or Poison on an enemy increases your Life Steal by 5%.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Dagger"
+    "rawType": "1H Dagger",
+    "classTag": "Phantom"
   },
   {
     "id": "W2-P05",
@@ -6001,7 +6365,8 @@
     "description": "Ghost-String: Attacking from Stealth has a 50% chance to NOT break your stealth, allowing consecutive critical hits.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Bow"
+    "rawType": "2H Bow",
+    "classTag": "Phantom"
   },
   {
     "id": "W2-W01",
@@ -6017,7 +6382,8 @@
     "description": "A conductive rod that focuses raw magic efficiently.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Wand"
+    "rawType": "1H Wand",
+    "classTag": "Weaver"
   },
   {
     "id": "W2-W02",
@@ -6033,7 +6399,8 @@
     "description": "Etched with glowing geometric runes.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Staff"
+    "rawType": "2H Staff",
+    "classTag": "Weaver"
   },
   {
     "id": "W2-W03",
@@ -6049,7 +6416,8 @@
     "description": "Held in the off-hand to amplify magical output.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Off-Hand"
+    "rawType": "Off-Hand",
+    "classTag": "Weaver"
   },
   {
     "id": "W2-W04",
@@ -6065,7 +6433,8 @@
     "description": "Overload: Every 3rd spell you cast strikes twice, with the second strike dealing 50% damage.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Wand"
+    "rawType": "1H Wand",
+    "classTag": "Weaver"
   },
   {
     "id": "W2-W05",
@@ -6081,7 +6450,8 @@
     "description": "Feedback Loop: Casting the same spell two turns in a row reduces its Mana cost to 0 on the second cast.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Staff"
+    "rawType": "2H Staff",
+    "classTag": "Weaver"
   },
   {
     "id": "W2-D01",
@@ -6097,7 +6467,8 @@
     "description": "Covered in thorns that secrete a mild neurotoxin.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Whip"
+    "rawType": "1H Whip",
+    "classTag": "Warden"
   },
   {
     "id": "W2-D02",
@@ -6113,7 +6484,8 @@
     "description": "A wooden totem that pulses like a beating heart.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Off-Hand"
+    "rawType": "Off-Hand",
+    "classTag": "Warden"
   },
   {
     "id": "W2-D03",
@@ -6129,7 +6501,8 @@
     "description": "A long spear used to direct packs of summoned beasts.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Spear"
+    "rawType": "2H Spear",
+    "classTag": "Warden"
   },
   {
     "id": "W2-D04",
@@ -6145,7 +6518,8 @@
     "description": "Pack Leader: Your active Summon mirrors your attacks, dealing 30% of your weapon damage as bonus Magic Damage.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Whip"
+    "rawType": "1H Whip",
+    "classTag": "Warden"
   },
   {
     "id": "W2-D05",
@@ -6161,7 +6535,8 @@
     "description": "Symbiosis: Whenever your active Summon deals damage, you are healed for 25% of the damage dealt.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Off-Hand"
+    "rawType": "Off-Hand",
+    "classTag": "Warden"
   },
   {
     "id": "W3-J01",
@@ -6177,7 +6552,8 @@
     "description": "A terrifyingly heavy axe meant for executions.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W3-J02",
@@ -6193,7 +6569,8 @@
     "description": "Flanged to catch and tear through enemy plating.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W3-J03",
@@ -6209,7 +6586,8 @@
     "description": "Frenzy: For every 10% of HP you are missing, your Base Weapon Damage increases by 15%.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W3-J04",
@@ -6225,7 +6603,8 @@
     "description": "Singularity: Your weapon damage is now calculated entirely using your Total Armor instead of Strength.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W3-J05",
@@ -6241,7 +6620,8 @@
     "description": "Executioner: Deals 200% damage to targets below 20% HP.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Juggernaut"
   },
   {
     "id": "W3-P01",
@@ -6257,7 +6637,8 @@
     "description": "The blade weeps toxic fluid continuously.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Phantom"
   },
   {
     "id": "W3-P02",
@@ -6273,7 +6654,8 @@
     "description": "High-tension cables allow for piercing shots.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Phantom"
   },
   {
     "id": "W3-P03",
@@ -6289,7 +6671,8 @@
     "description": "Toxic Shock: When an enemy reaches 5 stacks of Poison, the stacks detonate, dealing 500% AGI damage instantly.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Phantom"
   },
   {
     "id": "W3-P04",
@@ -6305,7 +6688,8 @@
     "description": "Headshot: Your Critical Hits ignore 100% of the enemy's Evasion and Armor.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Phantom"
   },
   {
     "id": "W3-P05",
@@ -6321,7 +6705,8 @@
     "description": "Vanish: Killing an enemy instantly grants you Stealth (Shadow Cloak) for 1 turn.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Phantom"
   },
   {
     "id": "W3-W01",
@@ -6337,7 +6722,8 @@
     "description": "Embedded with a Ruby, Sapphire, and Topaz.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Weaver"
   },
   {
     "id": "W3-W02",
@@ -6353,7 +6739,8 @@
     "description": "Used for bloodletting rituals.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Weaver"
   },
   {
     "id": "W3-W03",
@@ -6369,7 +6756,8 @@
     "description": "Prismatic: Your spells deal Fire, Ice, and Lightning damage simultaneously, applying the debuffs of all three elements.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Weaver"
   },
   {
     "id": "W3-W04",
@@ -6385,7 +6773,8 @@
     "description": "Blood Price: Magic Damage is multiplied by 2x, but your spells now cost 20% of your Current HP per cast.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Weaver"
   },
   {
     "id": "W3-W05",
@@ -6401,7 +6790,8 @@
     "description": "Aether-Tap: Converts 50% of your Max Mana into raw Base Weapon Damage.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Weaver"
   },
   {
     "id": "W3-D01",
@@ -6417,7 +6807,8 @@
     "description": "Rusted and dull, but imbued with dark magic.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Warden"
   },
   {
     "id": "W3-D02",
@@ -6433,7 +6824,8 @@
     "description": "A massive two-handed weapon carved from a beast's femur.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Warden"
   },
   {
     "id": "W3-D03",
@@ -6449,7 +6841,8 @@
     "description": "Macabre: When an enemy dies, it is instantly resurrected as a Skeletal Minion that fights for you until the end of the Node.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Warden"
   },
   {
     "id": "W3-D04",
@@ -6465,7 +6858,8 @@
     "description": "Wild-Shape: While in Chimera Form, your attacks hit twice, and you are immune to all debuffs.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Warden"
   },
   {
     "id": "W3-D05",
@@ -6481,7 +6875,8 @@
     "description": "Ancestral Spirit: Replaces your active Pet with an invincible Ancient Spirit that heals you for 10% of your Max HP every turn.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": ""
+    "rawType": "",
+    "classTag": "Warden"
   },
   {
     "id": "W1-C01",
@@ -6497,7 +6892,8 @@
     "description": "A brittle blade scavenged from a corpse.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Dagger"
+    "rawType": "1H Dagger",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-C02",
@@ -6513,7 +6909,8 @@
     "description": "Heavy and unwieldy, but it crushes skulls well enough.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Staff"
+    "rawType": "2H Staff",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-C03",
@@ -6529,7 +6926,8 @@
     "description": "Better than blocking with your bare forearm.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Shield"
+    "rawType": "Shield",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-C04",
@@ -6545,7 +6943,8 @@
     "description": "The edge is dull, acting more like a club than a blade.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Sword"
+    "rawType": "1H Sword",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-C05",
@@ -6561,7 +6960,8 @@
     "description": "The string looks ready to snap at any moment.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Bow"
+    "rawType": "2H Bow",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-C06",
@@ -6577,7 +6977,8 @@
     "description": "Bound in rusted iron rings.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Shield"
+    "rawType": "Shield",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-C07",
@@ -6593,7 +6994,8 @@
     "description": "Used by the butchers of old Oakhaven.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Axe"
+    "rawType": "1H Axe",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-C08",
@@ -6609,7 +7011,8 @@
     "description": "The wood is petrified, making it incredibly dense.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Staff"
+    "rawType": "2H Staff",
+    "classTag": "Warden"
   },
   {
     "id": "W1-C09",
@@ -6625,7 +7028,8 @@
     "description": "Standard issue for new recruits at the Vanguard's Hold.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Shield"
+    "rawType": "Shield",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-C10",
@@ -6641,7 +7045,8 @@
     "description": "A clean, sharp blade forged by Garrick the Smith.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Sword"
+    "rawType": "2H Sword",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-M01",
@@ -6659,7 +7064,8 @@
       "+2 to 5 Intelligence   +5 to 15 Max Mana"
     ],
     "uniqueTrait": "",
-    "rawType": "1H Wand"
+    "rawType": "1H Wand",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-M02",
@@ -6677,7 +7083,8 @@
       "+3 to 8 Strength   +2% to 5% Block Chance"
     ],
     "uniqueTrait": "",
-    "rawType": "Shield"
+    "rawType": "Shield",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-M03",
@@ -6695,7 +7102,8 @@
       "+5 to 12 Agility   +2% to 5% Crit Chance"
     ],
     "uniqueTrait": "",
-    "rawType": "1H Dagger"
+    "rawType": "1H Dagger",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-M04",
@@ -6713,7 +7121,8 @@
       "+8 to 15 Core Stat   +5% to 10% Attack Speed"
     ],
     "uniqueTrait": "",
-    "rawType": "2H Spear"
+    "rawType": "2H Spear",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-M05",
@@ -6731,7 +7140,8 @@
       "+10 to 20 Core Stat   +5 to 12 Flat Void Dmg"
     ],
     "uniqueTrait": "",
-    "rawType": "1H Mace"
+    "rawType": "1H Mace",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-R01",
@@ -6747,7 +7157,8 @@
     "description": "Painted with the faded crest of a forgotten kingdom.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "Shield"
+    "rawType": "Shield",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-R02",
@@ -6763,7 +7174,8 @@
     "description": "The blade absorbs light, creating a localized shadow.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Dagger"
+    "rawType": "1H Dagger",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-R03",
@@ -6779,7 +7191,8 @@
     "description": "Strung with incredibly tense spider silk.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Bow"
+    "rawType": "2H Bow",
+    "classTag": "Weaver"
   },
   {
     "id": "W1-R04",
@@ -6795,7 +7208,8 @@
     "description": "A heavy industrial tool repurposed for crushing skulls.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "1H Mace"
+    "rawType": "1H Mace",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-R05",
@@ -6811,7 +7225,8 @@
     "description": "Originally used to corral toxic sludge-beasts.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Spear"
+    "rawType": "2H Spear",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-U01",
@@ -6829,7 +7244,8 @@
       "+10 Agility   +5% Attack Speed   +10% Poison Resist   +5% Life Steal"
     ],
     "uniqueTrait": "",
-    "rawType": "1H Dagger"
+    "rawType": "1H Dagger",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-U02",
@@ -6847,7 +7263,8 @@
       "+15 STR / AGI   +15 Flat Poison Dmg   +10% Crit Chance   +20% Crit Damage"
     ],
     "uniqueTrait": "",
-    "rawType": "1H Sword"
+    "rawType": "1H Sword",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-U03",
@@ -6865,7 +7282,8 @@
       "+25 Strength   +20 Flat Fire Dmg   +15% Area of Effect Dmg   -10% Attack Speed (Debuff)"
     ],
     "uniqueTrait": "",
-    "rawType": "2H Mace"
+    "rawType": "2H Mace",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-U04",
@@ -6883,7 +7301,8 @@
       "+20 Agility   +10% Evasion   +10% Movement Speed   +20% Lightning Resist"
     ],
     "uniqueTrait": "",
-    "rawType": "Shield"
+    "rawType": "Shield",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-U05",
@@ -6899,7 +7318,8 @@
     "description": "The very axe that tore the fabric of Act 1 apart.",
     "modifiers": [],
     "uniqueTrait": "",
-    "rawType": "2H Axe"
+    "rawType": "2H Axe",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-L01",
@@ -6915,7 +7335,8 @@
     "description": "Ignition: Critical Hits ignite the enemy, dealing an additional 50% of the initial hit's damage over 2 turns.",
     "modifiers": [],
     "uniqueTrait": "Ignition: Critical Hits ignite the enemy, dealing an additional 50% of the initial hit's damage over 2 turns.",
-    "rawType": "1H Mace"
+    "rawType": "1H Mace",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-L02",
@@ -6931,7 +7352,8 @@
     "description": "Entangle: Your basic attacks have a 20% chance to root the enemy, preventing them from using Evasion for 3 turns.",
     "modifiers": [],
     "uniqueTrait": "Entangle: Your basic attacks have a 20% chance to root the enemy, preventing them from using Evasion for 3 turns.",
-    "rawType": "2H Bow"
+    "rawType": "2H Bow",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-L03",
@@ -6947,7 +7369,8 @@
     "description": "Phalanx: While equipped, your active Companion takes 50% less damage from all sources.",
     "modifiers": [],
     "uniqueTrait": "Phalanx: While equipped, your active Companion takes 50% less damage from all sources.",
-    "rawType": "Shield"
+    "rawType": "Shield",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-L04",
@@ -6963,7 +7386,8 @@
     "description": "Glitch-Strike: 10% chance on hit to instantly deal damage equal to 15% of the enemy's Current HP (bypasses armor).",
     "modifiers": [],
     "uniqueTrait": "Glitch-Strike: 10% chance on hit to instantly deal damage equal to 15% of the enemy's Current HP (bypasses armor).",
-    "rawType": "1H Sword"
+    "rawType": "1H Sword",
+    "classTag": "All Classes"
   },
   {
     "id": "W1-L05",
@@ -6979,6 +7403,7 @@
     "description": "Overgrowth: Casting a spell heals you for 10% of your Max HP. If you are at full HP, it grants a temporary armor shield instead.",
     "modifiers": [],
     "uniqueTrait": "Overgrowth: Casting a spell heals you for 10% of your Max HP. If you are at full HP, it grants a temporary armor shield instead.",
-    "rawType": "2H Staff"
+    "rawType": "2H Staff",
+    "classTag": "All Classes"
   }
 ]

@@ -84,7 +84,7 @@
         <button class="filter-btn" onclick="setRarityFilter('legendary', this)">Legendary</button>
         <button class="filter-btn" onclick="setRarityFilter('set', this)">Set</button>
 
-        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-left: 0.75rem; font-weight: 600;">SLOT:</span>
+        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); margin-left: 0.5rem; font-weight: 600;">SLOT:</span>
         <select class="filter-select" id="slot-select" onchange="setSlotFilter(this.value)">
           <option value="all">All Equipment Slots</option>
           <option value="Weapon">Weapons (1H / 2H / Shields)</option>
@@ -96,6 +96,24 @@
           <option value="Feet">Feet (Boots / Sabatons)</option>
           <option value="Neck">Neck (Amulets / Chokers)</option>
           <option value="Ring">Fingers (Rings / Signets)</option>
+        </select>
+
+        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #f43f5e; margin-left: 0.5rem; font-weight: 600;">CLASS:</span>
+        <select class="filter-select" id="class-select" onchange="setClassFilter(this.value)">
+          <option value="all">All Archetypes & Subclasses</option>
+          <option value="Juggernaut">Juggernaut (Berserker / Void-Knight)</option>
+          <option value="Phantom">Phantom (Assassin / Rift-Sniper)</option>
+          <option value="Weaver">Weaver (Elementalist / Blood Mage)</option>
+          <option value="Warden">Warden (Necromancer / Druid)</option>
+          <option value="Vagabond">Vagabond (Novice Survivor)</option>
+        </select>
+
+        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: #a78bfa; margin-left: 0.5rem; font-weight: 600;">SORT:</span>
+        <select class="filter-select" id="sort-select" onchange="setSortOrder(this.value)">
+          <option value="level-asc">Level: Low to High</option>
+          <option value="level-desc">Level: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+          <option value="power-desc">Base Stat: Highest First</option>
         </select>
 
         <input type="text" class="search-input" id="item-search" placeholder="Search 425 items..." oninput="handleSearch(this.value)" />
@@ -629,6 +647,8 @@
     let filteredItems = [];
     let currentRarity = 'all';
     let currentSlot = 'all';
+    let currentClass = 'all';
+    let currentSort = 'level-asc';
     let searchQuery = '';
     let currentPage = 1;
     const itemsPerPage = 18;
@@ -675,6 +695,17 @@
       applyFilters();
     }
 
+    function setClassFilter(cls) {
+      currentClass = cls;
+      currentPage = 1;
+      applyFilters();
+    }
+
+    function setSortOrder(order) {
+      currentSort = order;
+      applyFilters();
+    }
+
     function handleSearch(q) {
       searchQuery = q.toLowerCase().trim();
       currentPage = 1;
@@ -695,6 +726,12 @@
           if (it.baseType !== currentSlot && it.equipSlot !== currentSlot) return false;
         }
 
+        // Class filter
+        if (currentClass !== 'all') {
+          const itemCls = it.classTag || 'All Classes';
+          if (itemCls !== 'All Classes' && itemCls !== currentClass) return false;
+        }
+
         // Search query
         if (searchQuery) {
           const matchName = it.name.toLowerCase().includes(searchQuery);
@@ -702,10 +739,24 @@
           const matchId = it.id.toLowerCase().includes(searchQuery);
           const matchMods = (it.modifiers || []).some(m => m.toLowerCase().includes(searchQuery));
           const matchTrait = (it.uniqueTrait || '').toLowerCase().includes(searchQuery);
-          if (!matchName && !matchDesc && !matchId && !matchMods && !matchTrait) return false;
+          const matchCls = (it.classTag || '').toLowerCase().includes(searchQuery);
+          if (!matchName && !matchDesc && !matchId && !matchMods && !matchTrait && !matchCls) return false;
         }
 
         return true;
+      });
+
+      // Sort items
+      filteredItems.sort((a, b) => {
+        if (currentSort === 'level-asc') return a.reqLvl - b.reqLvl;
+        if (currentSort === 'level-desc') return b.reqLvl - a.reqLvl;
+        if (currentSort === 'name-asc') return a.name.localeCompare(b.name);
+        if (currentSort === 'power-desc') {
+          const powerA = Math.max(a.maxDamage, a.armorValue);
+          const powerB = Math.max(b.maxDamage, b.armorValue);
+          return powerB - powerA;
+        }
+        return 0;
       });
 
       renderItems();
@@ -772,12 +823,17 @@
         const traitHtml = it.uniqueTrait ? 
           `<li class="card-affix affix-legendary">Trait: ${escapeHtml(it.uniqueTrait)}</li>` : '';
 
+        const cls = it.classTag || 'All Classes';
+        const clsSlug = cls.toLowerCase().replace(/\s+/g, '-');
+        const classBadgeHtml = `<span class="class-badge-tag class-tag-${clsSlug}">${cls}</span>`;
+
         return `
           <div class="arpg-card ${rarityClass}">
             <div class="card-top">
               <div class="card-title-group">
                 <div class="card-title">${escapeHtml(it.name)}</div>
                 <div class="card-meta">${escapeHtml(it.rawType || it.baseType)} • [${it.id}] • Req Lv ${it.reqLvl}</div>
+                ${classBadgeHtml}
               </div>
               <span class="card-badge">${it.rarity}</span>
             </div>
