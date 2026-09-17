@@ -106,25 +106,73 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                                 Text(
                                   'Lv.${player.level}',
                                   style: GoogleFonts.jetBrainsMono(
-                                    fontSize: 11,
+                                    fontSize: 10.5,
+                                    fontWeight: FontWeight.bold,
                                     color: GameColors.goldAccent,
                                   ),
                                 ),
-                                const SizedBox(width: 6),
+                                const SizedBox(width: 5),
                                 Text(
-                                  '${player.currentHp}/${player.baseHp}',
+                                  'HP ${player.currentHp}/${player.baseHp}',
                                   style: GoogleFonts.jetBrainsMono(
-                                    fontSize: 11,
+                                    fontSize: 10.5,
                                     color: player.currentHp < (player.baseHp * 0.3)
                                         ? GameColors.crimsonBlood
                                         : GameColors.terminalGreen,
                                   ),
                                 ),
-                                const SizedBox(width: 6),
+                                const SizedBox(width: 5),
+                                // Dynamic Secondary Resource (Grit, Fury, Energy, Mana, Animus)
+                                () {
+                                  final (resLabel, resVal, resMax, resColor) = switch (player.jobClass) {
+                                    'Juggernaut' || 'Berserker' || 'Void-Knight' => (
+                                        'FURY',
+                                        25,
+                                        100,
+                                        const Color(0xFFEF4444)
+                                      ),
+                                    'Phantom' || 'Assassin' || 'Rift-Sniper' => (
+                                        'NRG',
+                                        80,
+                                        100,
+                                        const Color(0xFFF59E0B)
+                                      ),
+                                    'Weaver' || 'Elementalist' || 'Blood Mage' => (
+                                        'MP',
+                                        (50 + player.intelligence * 5),
+                                        (50 + player.intelligence * 5),
+                                        const Color(0xFF38BDF8)
+                                      ),
+                                    'Warden' || 'Necromancer' || 'Druid' => (
+                                        'ANM',
+                                        45,
+                                        100,
+                                        const Color(0xFF10B981)
+                                      ),
+                                    _ => ('GRIT', 60, 100, const Color(0xFFB45309)),
+                                  };
+                                  return Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                                    decoration: BoxDecoration(
+                                      color: resColor.withValues(alpha: 0.15),
+                                      borderRadius: BorderRadius.circular(3),
+                                      border: Border.all(color: resColor.withValues(alpha: 0.5), width: 0.6),
+                                    ),
+                                    child: Text(
+                                      '$resLabel $resVal/$resMax',
+                                      style: GoogleFonts.jetBrainsMono(
+                                        fontSize: 9.5,
+                                        fontWeight: FontWeight.bold,
+                                        color: resColor,
+                                      ),
+                                    ),
+                                  );
+                                }(),
+                                const SizedBox(width: 5),
                                 Text(
                                   '💎${player.silverPrisms}',
                                   style: GoogleFonts.jetBrainsMono(
-                                    fontSize: 11,
+                                    fontSize: 10.5,
                                     color: GameColors.cyanRune,
                                   ),
                                 ),
@@ -133,14 +181,14 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                           ),
                         ),
                         IconButton(
-                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          padding: const EdgeInsets.symmetric(horizontal: 6),
                           constraints: const BoxConstraints(),
                           icon: const Icon(Icons.backpack_outlined,
-                              size: 20, color: GameColors.cyanRune),
+                              size: 19, color: GameColors.cyanRune),
                           tooltip: 'Inventory',
                           onPressed: () => _showInventoryModal(context, ref),
                         ),
-                        const SizedBox(width: 6),
+                        const SizedBox(width: 4),
                       ],
                     ),
               loading: () => const SizedBox(),
@@ -739,7 +787,41 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                               int bonusInt = 0;
                               int bonusSta = 0;
                               int bonusVit = 0;
+                              
+                              // Elemental damage bonuses
+                              int fireDmg = 0;
+                              int iceDmg = 0;
+                              int poisonDmg = 0;
+                              int voidDmg = 0;
+                              int lightningDmg = 0;
+
+                              // Resistances
+                              int fireResist = 0;
+                              int iceResist = 0;
+                              int poisonResist = 0;
+                              int voidResist = 0;
+                              int lightningResist = 0;
+                              int waterResist = 0;
+                              int allResist = 0;
+
+                              // Utility & Combat Modifiers
+                              int lifeSteal = 0;
+                              int damageReflect = 0;
+                              int magicFind = 0;
+                              int goldDropRate = 0;
+                              int expGained = 0;
+                              int bossDamage = 0;
+                              int cooldownReduction = 0;
+                              int attackSpeed = 0;
+                              int castSpeed = 0;
+
                               final specialBuffs = <String>[];
+
+                              // Helper to parse percentages/values from modifier strings
+                              int parseVal(String str) {
+                                final match = RegExp(r'([+-]?\d+)').firstMatch(str);
+                                return match != null ? int.tryParse(match.group(1) ?? '0') ?? 0 : 0;
+                              }
 
                               for (final item in equippedItems) {
                                 gearMinDmg += item.minDamage;
@@ -758,18 +840,53 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                                         bonusSta += (bs['STA'] as num?)?.toInt() ?? 0;
                                         bonusVit += (bs['VIT'] as num?)?.toInt() ?? 0;
                                       }
+
+                                      final allTextMods = <String>[];
                                       final bList = decoded['buffs'] as List<dynamic>?;
-                                      if (bList != null) {
-                                        specialBuffs.addAll(bList.map((e) => e.toString()));
-                                      }
+                                      if (bList != null) allTextMods.addAll(bList.map((e) => e.toString()));
                                       final rolls = decoded['statRolls'] as List<dynamic>?;
-                                      if (rolls != null) {
-                                        specialBuffs.addAll(rolls.map((e) => e.toString()));
-                                      }
+                                      if (rolls != null) allTextMods.addAll(rolls.map((e) => e.toString()));
                                       final others = decoded['otherModifiers'] as List<dynamic>?;
-                                      if (others != null) {
-                                        specialBuffs.addAll(others.map((e) => e.toString()));
+                                      if (others != null) allTextMods.addAll(others.map((e) => e.toString()));
+
+                                      for (final mod in allTextMods) {
+                                        specialBuffs.add(mod);
+                                        final lower = mod.toLowerCase();
+                                        final val = parseVal(mod);
+
+                                        if (lower.contains('all resist')) {
+                                          allResist += val;
+                                        } else if (lower.contains('fire resist')) {
+                                          fireResist += val;
+                                        } else if (lower.contains('ice resist') || lower.contains('cold resist')) {
+                                          iceResist += val;
+                                        } else if (lower.contains('poison resist')) {
+                                          poisonResist += val;
+                                        } else if (lower.contains('void resist')) {
+                                          voidResist += val;
+                                        } else if (lower.contains('lightning resist')) {
+                                          lightningResist += val;
+                                        } else if (lower.contains('water resist')) {
+                                          waterResist += val;
+                                        }
+
+                                        if (lower.contains('fire damage')) fireDmg += val;
+                                        if (lower.contains('ice damage') || lower.contains('cold damage')) iceDmg += val;
+                                        if (lower.contains('poison damage')) poisonDmg += val;
+                                        if (lower.contains('void damage') || lower.contains('shadow damage')) voidDmg += val;
+                                        if (lower.contains('lightning damage')) lightningDmg += val;
+
+                                        if (lower.contains('life-steal') || lower.contains('life steal')) lifeSteal += val;
+                                        if (lower.contains('reflect') || lower.contains('thorns')) damageReflect += val;
+                                        if (lower.contains('magic find')) magicFind += val;
+                                        if (lower.contains('gold drop') || lower.contains('gold rate')) goldDropRate += val;
+                                        if (lower.contains('exp gain') || lower.contains('exp rate')) expGained += val;
+                                        if (lower.contains('boss damage')) bossDamage += val;
+                                        if (lower.contains('cooldown')) cooldownReduction += val;
+                                        if (lower.contains('attack speed')) attackSpeed += val;
+                                        if (lower.contains('cast speed')) castSpeed += val;
                                       }
+
                                       final ut = decoded['uniqueTrait'] as String?;
                                       if (ut != null && ut.isNotEmpty) {
                                         specialBuffs.add('★ $ut');
@@ -900,6 +1017,58 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                                               : GameColors.terminalGreen,
                                         ),
                                         const SizedBox(height: 10),
+                                        // Dynamic Secondary Resource Bar
+                                        () {
+                                          final (resLabel, resVal, resMax, resColor, resDesc) = switch (player.jobClass) {
+                                            'Juggernaut' || 'Berserker' || 'Void-Knight' => (
+                                                'FURY (COMBAT GENERATION)',
+                                                25,
+                                                100,
+                                                const Color(0xFFEF4444),
+                                                'Generated on hit/damage taken'
+                                              ),
+                                            'Phantom' || 'Assassin' || 'Rift-Sniper' => (
+                                                'ENERGY (HIGH-SPEED STAMINA)',
+                                                80,
+                                                100,
+                                                const Color(0xFFF59E0B),
+                                                '+25 regenerated per turn'
+                                              ),
+                                            'Weaver' || 'Elementalist' || 'Blood Mage' => (
+                                                'MANA (ARCANE RESERVOIR)',
+                                                (50 + totalInt * 5),
+                                                (50 + totalInt * 5),
+                                                const Color(0xFF38BDF8),
+                                                'Derived from Intelligence'
+                                              ),
+                                            'Warden' || 'Necromancer' || 'Druid' => (
+                                                'ANIMUS (PACK RESONANCE)',
+                                                45,
+                                                100,
+                                                const Color(0xFF10B981),
+                                                'Generated by companion attacks'
+                                              ),
+                                            _ => (
+                                                'GRIT (SURVIVOR WILLPOWER)',
+                                                60,
+                                                100,
+                                                const Color(0xFFB45309),
+                                                'Gained during turns & taking hits'
+                                              ),
+                                          };
+                                          final resPct = (resVal / resMax).clamp(0.0, 1.0);
+                                          return Column(
+                                            children: [
+                                              _DossierBar(
+                                                label: resLabel,
+                                                valueText: '$resVal / $resMax ($resDesc)',
+                                                fraction: resPct,
+                                                color: resColor,
+                                              ),
+                                              const SizedBox(height: 10),
+                                            ],
+                                          );
+                                        }(),
                                         _DossierBar(
                                           label: 'EXPERIENCE PROGRESS',
                                           valueText: '${player.currentExp} / ${player.maxExp} (${(expPct * 100).toStringAsFixed(0)}%)',
@@ -1047,6 +1216,197 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                                           value: '$totalInt',
                                           subtext: 'Base ${player.intelligence} + Gear $bonusInt (Magic power & resists)',
                                           color: GameColors.goldAccent,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 14),
+
+                                  // Elemental Infusions (Fire, Ice, Poison, Void, Lightning)
+                                  _StatsSectionTitle(title: 'ELEMENTAL INFUSIONS & OFFENSE', icon: Icons.local_fire_department, color: const Color(0xFFF97316)),
+                                  const SizedBox(height: 6),
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.bgSurface,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(color: GameColors.borderSubtle),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        _StatDetailRow(
+                                          label: 'Fire Damage',
+                                          value: fireDmg > 0 ? '+$fireDmg' : '0',
+                                          subtext: 'Applies Burn DoT over turns',
+                                          color: const Color(0xFFEF4444),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Ice / Frost Damage',
+                                          value: iceDmg > 0 ? '+$iceDmg' : '0',
+                                          subtext: 'Slows enemy attack & cast speed',
+                                          color: const Color(0xFF38BDF8),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Poison Damage',
+                                          value: poisonDmg > 0 ? '+$poisonDmg' : '0',
+                                          subtext: 'Stacking toxic corrosion',
+                                          color: const Color(0xFF22C55E),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Void / Shadow Damage',
+                                          value: voidDmg > 0 ? '+$voidDmg' : '0',
+                                          subtext: 'Corrupts enemy code & armor',
+                                          color: const Color(0xFFA855F7),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Lightning Damage',
+                                          value: lightningDmg > 0 ? '+$lightningDmg' : '0',
+                                          subtext: 'High variance & chain procs',
+                                          color: const Color(0xFFFBBF24),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 14),
+
+                                  // Elemental Resistances (Max 75% cap)
+                                  _StatsSectionTitle(title: 'ELEMENTAL RESISTANCES', icon: Icons.shield_outlined, color: const Color(0xFF38BDF8)),
+                                  const SizedBox(height: 6),
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.bgSurface,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(color: GameColors.borderSubtle),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        _StatDetailRow(
+                                          label: 'All Resistances Bonus',
+                                          value: '$allResist%',
+                                          subtext: 'Universal mitigation across all schools',
+                                          color: const Color(0xFF38BDF8),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Fire Resistance',
+                                          value: '${(fireResist + allResist).clamp(0, 75)}%',
+                                          subtext: 'Cap 75% (Base: $fireResist% + All: $allResist%)',
+                                          color: const Color(0xFFEF4444),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Ice / Cold Resistance',
+                                          value: '${(iceResist + allResist).clamp(0, 75)}%',
+                                          subtext: 'Cap 75% (Base: $iceResist% + All: $allResist%)',
+                                          color: const Color(0xFF38BDF8),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Poison Resistance',
+                                          value: '${(poisonResist + allResist).clamp(0, 75)}%',
+                                          subtext: 'Cap 75% (Base: $poisonResist% + All: $allResist%)',
+                                          color: const Color(0xFF22C55E),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Void Resistance',
+                                          value: '${(voidResist + allResist).clamp(0, 75)}%',
+                                          subtext: 'Cap 75% (Base: $voidResist% + All: $allResist%)',
+                                          color: const Color(0xFFA855F7),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Lightning Resistance',
+                                          value: '${(lightningResist + allResist).clamp(0, 75)}%',
+                                          subtext: 'Cap 75% (Base: $lightningResist% + All: $allResist%)',
+                                          color: const Color(0xFFFBBF24),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Water / Pressure Resistance',
+                                          value: '${(waterResist + allResist).clamp(0, 75)}%',
+                                          subtext: 'Cap 75% (Base: $waterResist% + All: $allResist%)',
+                                          color: const Color(0xFF06B6D4),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 14),
+
+                                  // Combat Utility, Leech, Reflect, Luck & Drop Rates
+                                  _StatsSectionTitle(title: 'COMBAT UTILITY & LUCK', icon: Icons.casino, color: GameColors.goldAccent),
+                                  const SizedBox(height: 6),
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.bgSurface,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(color: GameColors.borderSubtle),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        _StatDetailRow(
+                                          label: 'Life Steal (Leech)',
+                                          value: '$lifeSteal%',
+                                          subtext: 'Heals for % of physical/skill damage dealt',
+                                          color: GameColors.crimsonBlood,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Damage Reflect (Thorns)',
+                                          value: damageReflect > 0 ? '$damageReflect DMG' : '0',
+                                          subtext: 'Retaliates when struck by melee attacks',
+                                          color: const Color(0xFFF59E0B),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Magic Find (Item Quality Luck)',
+                                          value: '+$magicFind%',
+                                          subtext: 'Increases chance of Rare, Unique & Legendary drops',
+                                          color: GameColors.goldAccent,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Gold / Silver Drop Rate',
+                                          value: '+$goldDropRate%',
+                                          subtext: 'Bonus currency drops from enemies & caches',
+                                          color: GameColors.cyanRune,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Experience (EXP) Boost',
+                                          value: '+$expGained%',
+                                          subtext: 'Accelerates character level progression',
+                                          color: const Color(0xFF10B981),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Boss Damage Multiplier',
+                                          value: '+$bossDamage%',
+                                          subtext: 'Multiplicative damage dealt to Echoes & Bosses',
+                                          color: GameColors.crimsonBlood,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Cooldown Reduction (CDR)',
+                                          value: '$cooldownReduction%',
+                                          subtext: 'Reduces turn cooldowns on active skills',
+                                          color: const Color(0xFF8B5CF6),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Attack / Cast Speed',
+                                          value: '+${attackSpeed + castSpeed}%',
+                                          subtext: 'Atk: +$attackSpeed%, Cast: +$castSpeed%',
+                                          color: GameColors.cyanRune,
                                         ),
                                       ],
                                     ),

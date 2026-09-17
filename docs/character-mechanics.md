@@ -18,7 +18,29 @@ Character progression is strictly bracketed by Job Changes.
 
 ---
 
-## 2. Phase 1: The Survivor (Levels 1 - 20)
+## 2. Dynamic Class-Specific Secondary Resources
+
+Unlike traditional RPGs that force all archetypes into a generic Mana pool, *Vagabond Hero* gives each class archetype a mechanically distinct resource with its own generation, expenditure, and HUD theme:
+
+| Class Archetype | Resource Name | UI Theme & Color | Generation & Mechanics |
+| :--- | :--- | :--- | :--- |
+| **Vagabond** *(Survivor)* | **`Grit`** (0 – 100) | 🟤 Bronze (`#B45309`) | **Survival Willpower:** Starts at 50. Gains +10 per turn, +15 when struck, +5 on basic attack. Spent on survival maneuvers (*Patch Up*, *Desperate Flee*). |
+| **Juggernaut** *(Strength)* | **`Fury`** (0 – 100) | 🔴 Molten Crimson (`#DC2626`) | **Combat Escalation:** Starts at 0. Generated when hitting enemies (+10) or taking hits (+15). Slowly decays out of combat (-10/room). Spent on devastating physical smashes. |
+| **Phantom** *(Agility)* | **`Energy`** (0 – 100) | 🟡 Electric Amber (`#F59E0B`) | **High-Speed Stamina:** Starts full at 100. Regenerates rapidly (+25 per turn). Skills consume chunks of Energy for high-tempo combo chains. |
+| **Weaver** *(Intelligence)* | **`Mana`** (0 – Max Mana) | 🔵 Arcane Azure (`#38BDF8`) | **Deep Arcane Reservoir:** Derived directly from Intelligence (Base 50 + INT * 5). Siphon and cycle spells manage this deep reserve for massive spell bursts. |
+| **Warden** *(Summon/Utility)* | **`Animus`** (0 – 100) | 🟢 Emerald Life (`#10B981`) | **Pack Resonance:** Starts at 30. Generated when your Summon strikes (+15) or when leeching life from targets (+10). Sustains companions and nature barriers. |
+
+### Subclass Evolution (2nd Job Awakening):
+* **Berserker:** **`Bloodrage`** (Fury generation doubles when under 50% HP; skills can consume health for guaranteed crits).
+* **Void-Knight:** **`Resolve`** (Generates resource directly from mitigated and reflected damage).
+* **Assassin:** **`Energy + Combo Points`** (Build 1–5 combo points with Flurry, spend with Eviscerate).
+* **Rift-Sniper:** **`Focus`** (Maximized by standing still, spent on massive charge shots).
+* **Blood Mage:** **`Blood Essence`** (Completely replaces Mana with raw HP costs and overheal shields).
+* **Elementalist:** **`Tri-Flux`** (Cycles Fire, Ice, and Lightning charges for spell resonance).
+
+---
+
+## 3. Phase 1: The Survivor (Levels 1 - 20)
 
 All players start here. Skills are basic, focusing on surviving the initial encounters.
 
@@ -66,43 +88,43 @@ Advanced classes branch into pure offense, pure defense, or hybrid utility.
 
 ### Berserker (from Juggernaut)
 
-* **[Lv 51] Reckless Swing:** Deals 200% Physical Damage, but you take 10% of your current HP in recoil damage.
-* **[Lv 60] Bloodlust (Buff):** For 3 turns, your Life Steal is increased by 20%, but your Armor drops to 0.
+* **[Lv 51] Reckless Swing:** Deals 200% Physical Damage, but you take 10% of your current HP in recoil damage. (Cost: 10% Current HP, Cooldown: 2 Turns)
+* **[Lv 60] Bloodlust (Buff):** For 3 turns, your Life Steal is increased by 20%, but your Armor drops to 0. (Cooldown: 5 Turns)
 
 ### Void-Knight (from Juggernaut)
 
-* **[Lv 51] Shield Bash:** Deals Physical Damage equal to 100% of your Total Armor. Stuns non-boss enemies for 1 turn.
-* **[Lv 60] Void Bulwark:** Absorbs all damage for 1 turn, storing it. Next turn, unleashes 50% of the stored damage as an AoE blast.
+* **[Lv 51] Shield Bash:** Deals Physical Damage equal to 100% of your Total Armor. Stuns non-boss enemies for 1 turn. (Cooldown: 3 Turns)
+* **[Lv 60] Void Bulwark:** Absorbs all damage for 1 turn, storing it. Next turn, unleashes 50% of the stored damage as an AoE blast. (Cooldown: 6 Turns)
 
 ### Assassin (from Phantom)
 
-* **[Lv 51] Eviscerate:** Deals massive damage based on the number of Poison/Bleed stacks currently on the enemy, then consumes the stacks.
-* **[Lv 60] Shadow Cloak:** Enter stealth for 2 turns. Enemies cannot target you (they will target your Companion or skip). Your next attack from stealth is a guaranteed Critical Hit.
+* **[Lv 51] Eviscerate:** Deals massive damage based on the number of Poison/Bleed stacks currently on the enemy, then consumes the stacks. (Cooldown: 2 Turns)
+* **[Lv 60] Shadow Cloak:** Enter stealth for 2 turns. Enemies cannot target you (they will target your Companion or skip). Your next attack from stealth is a guaranteed Critical Hit. (Cooldown: 5 Turns)
 
 ### Rift-Sniper (from Phantom)
 
-* **[Lv 51] Aimed Shot:** Takes 1 turn to charge. On the 2nd turn, deals 350% Finesse Damage with 100% Armor Penetration.
-* **[Lv 60] Caltrops:** Throws spikes on the ground. Enemies take physical damage every time they execute a melee attack.
+* **[Lv 51] Aimed Shot:** Takes 1 turn to charge. On the 2nd turn, deals 350% Finesse Damage with 100% Armor Penetration. (Cooldown: 4 Turns)
+* **[Lv 60] Caltrops:** Throws spikes on the ground. Enemies take physical damage every time they execute a melee attack for 3 turns. (Cooldown: 4 Turns)
 
 ### Elementalist (from Weaver)
 
-* **[Lv 51] Elemental Cycle:** Cycles your active stance (Fire -> Ice -> Lightning). Fire grants +Damage, Ice grants +Armor, Lightning grants +Speed (allows 2 actions per turn).
-* **[Lv 60] Cataclysm:** Summons a meteor of your current active element, dealing 250% AoE Magic Damage.
+* **[Lv 51] Elemental Cycle:** Cycles your active stance (Fire -> Ice -> Lightning). Fire grants +Damage, Ice grants +Armor, Lightning grants +Speed (allows 2 actions per turn). (Cost: 15 Mana, Cooldown: 1 Turn)
+* **[Lv 60] Cataclysm:** Summons a meteor of your current active element, dealing 250% AoE Magic Damage. (Cost: 40 Mana, Cooldown: 5 Turns)
 
 ### Blood Mage (from Weaver)
 
-* **[Lv 51] Hemorrhage:** Deals 150% Magic Damage. Costs 10% of your Max HP instead of Mana.
-* **[Lv 60] Crimson Pact:** Kills your active Companion instantly to restore 100% of your HP and Mana. (Can only be used once per Node).
+* **[Lv 51] Hemorrhage:** Deals 150% Magic Damage. Costs 10% of your Max HP instead of Mana. (Cost: 10% Max HP, Cooldown: 1 Turn)
+* **[Lv 60] Crimson Pact:** Kills your active Companion instantly to restore 100% of your HP and Mana. (Can only be used once per Node, Cooldown: 99 Turns)
 
 ### Necromancer (from Warden)
 
-* **[Lv 51] Raise Skeletal Mage:** Summons a ranged caster that deals Ice damage. You can have up to 3 skeletons active at once.
-* **[Lv 60] Corpse Explosion:** Detonates a dead enemy, dealing 100% of its Max HP as AoE damage to all remaining enemies.
+* **[Lv 51] Raise Skeletal Mage:** Summons a ranged caster that deals Ice damage. You can have up to 3 skeletons active at once. (Cost: 25 Mana, Cooldown: 3 Turns)
+* **[Lv 60] Corpse Explosion:** Detonates a dead enemy, dealing 100% of its Max HP as AoE damage to all remaining enemies. (Cost: 35 Mana, Cooldown: 2 Turns)
 
 ### Druid (from Warden)
 
-* **[Lv 51] Chimera Shift:** Transform into a Void-Beast for 4 turns. Replaces your spells with massive physical melee attacks that scale off both STR and INT.
-* **[Lv 60] Barkskin:** Increases your Total Armor by 100% and makes you immune to Critical Hits for 3 turns.
+* **[Lv 51] Chimera Shift:** Transform into a Void-Beast for 4 turns. Replaces your spells with massive physical melee attacks that scale off both STR and INT. (Cooldown: 6 Turns)
+* **[Lv 60] Barkskin:** Increases your Total Armor by 100% and makes you immune to Critical Hits for 3 turns. (Cooldown: 5 Turns)
 
 ---
 
@@ -112,32 +134,32 @@ Unlocked only after the "Breaking the Core" quest. These skills break standard g
 
 ### World-Breaker (from Berserker)
 
-* **[Lv 70] Obliterate:** A catastrophic swing dealing 500% Physical Damage. If this kills the target, the cooldown instantly resets.
+* **[Lv 70] Obliterate:** A catastrophic swing dealing 500% Physical Damage. If this kills the target, the cooldown instantly resets. (Cost: 20% Current HP, Cooldown: 4 Turns)
 
 ### Aegis Lord (from Void-Knight)
 
-* **[Lv 70] Absolute Defense:** For 2 turns, you are entirely immune to all forms of damage and instantly reflect any incoming attacks at 300% power.
+* **[Lv 70] Absolute Defense:** For 2 turns, you are entirely immune to all forms of damage and instantly reflect any incoming attacks at 300% power. (Cooldown: 7 Turns)
 
 ### Shadow-Walker (from Assassin)
 
-* **[Lv 70] Death Mark:** Marks a target. After 3 turns, the mark detonates, dealing true damage equal to 50% of the damage the target took during the countdown.
+* **[Lv 70] Death Mark:** Marks a target. After 3 turns, the mark detonates, dealing true damage equal to 50% of the damage the target took during the countdown. (Cooldown: 5 Turns)
 
 ### Void-Stalker (from Rift-Sniper)
 
-* **[Lv 70] Dimensional Piercer:** Fires a shot that completely ignores the target's HP bar and directly attacks their Max HP stat, permanently reducing it by 20% for the remainder of the battle.
+* **[Lv 70] Dimensional Piercer:** Fires a shot that completely ignores the target's HP bar and directly attacks their Max HP stat, permanently reducing it by 20% for the remainder of the battle. (Cooldown: 4 Turns)
 
 ### Arch-Mage (from Elementalist)
 
-* **[Lv 70] Time Stop:** Freezes time. You take 3 consecutive turns back-to-back while the enemy and combat log are paused.
+* **[Lv 70] Time Stop:** Freezes time. You take 3 consecutive turns back-to-back while the enemy and combat log are paused. (Cost: 60 Mana, Cooldown: 8 Turns)
 
 ### Crimson Sovereign (from Blood Mage)
 
-* **[Lv 70] Blood Boil:** Converts your entire HP pool (leaving you at 1 HP) into raw Magic Damage, unleashing an AoE blast that deals damage equal to 5x the HP sacrificed.
+* **[Lv 70] Blood Boil:** Converts your entire HP pool (leaving you at 1 HP) into raw Magic Damage, unleashing an AoE blast that deals damage equal to 5x the HP sacrificed. (Cost: All HP down to 1, Cooldown: 8 Turns)
 
 ### Death-Caller (from Necromancer)
 
-* **[Lv 70] Army of the Damned:** Instantly summons 5 max-level elite skeletons that bypass the summon limit. They explode on death for massive Void damage.
+* **[Lv 70] Army of the Damned:** Instantly summons 5 max-level elite skeletons that bypass the summon limit. They explode on death for massive Void damage. (Cost: 80 Mana, Cooldown: 8 Turns)
 
 ### Chimera-Lord (from Druid)
 
-* **[Lv 70] Apex Evolution:** Passively merge all forms. You permanently gain the buffs of Chimera Shift without needing to transform, and every attack heals you and your companions for 10% of the damage dealt.
+* **[Lv 70] Apex Evolution:** Passively merge all forms. You permanently gain the buffs of Chimera Shift without needing to transform, and every attack heals you and your companions for 10% of the damage dealt. (Passive: Always Active, Cooldown: 0 Turns)
