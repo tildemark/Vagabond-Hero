@@ -97,7 +97,7 @@ $$\text{Damage} = \text{BaseDamage} \times \left(1 + (\text{MobLevel} \times \te
 | :--- | :--- | :--- | :--- |
 | **Glass-Daemon** | Daemon | 51 - 60 | Fires razor-sharp light fragments that ignore 20% of player armor. |
 | **Bit-Stream Serpent** | Daemon | 51 - 60 | A serpentine entity of pure light. Applies *Silence*, preventing the player from using active skills for 1 turn. |
-| **Memory-Leak Spectre** | Undead | 58 - 65 | Drains 5% of the player's current Mana or stamina pool on every successful hit. |
+| **Memory-Leak Spectre** | Undead | 58 - 65 | Drains 10% of the player's current Secondary Resource (Grit, Fury, Energy, Mana, or Animus) on every successful hit. |
 | **Firewall Seraph** | Construct | 60 - 70 | Rings of eyes that cast hard-light shields on other mobs in the room. |
 | **Packet-Storm Daemon** | Daemon | 63 - 70 | Periodically splits into two lesser daemons at 50% HP, forcing target prioritization. |
 | **The Prime Override** | Final Boss | 70 | Mirrors player stats in Phase 1; initiates the 4-turn *Fatal Exception* instant-wipe timer in Phase 2. |

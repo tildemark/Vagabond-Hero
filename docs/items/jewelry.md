@@ -30,7 +30,7 @@ This document contains the foundational database for all **Neck** (Amulets, Neck
 
 ### 2. Magic Neck Items (1-2 Random Modifiers)
 
-*Rolls modifiers from the Utility/Magic pool (Max Mana, All Resistances, Core Stats).*
+*Rolls modifiers from the Utility/Resource pool (Max Secondary Resource [Mana/Grit/Fury/Energy/Animus], All Resistances, Core Stats).*
 
 | ID | Item Name | Type | Req Lvl | Modifier Ranges (1 to 2 Rolls) | Description |
 | --- | --- | --- | --- | --- | --- |

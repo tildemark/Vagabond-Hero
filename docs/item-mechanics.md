@@ -102,45 +102,37 @@ When generating a Magic, Rare, or Legendary item, the `LootGenerator` will rando
 * **Primary Attributes:**
 * *Strength:* Increases Physical Damage (Swords/Axes/Maces) and Total Armor.
 * *Agility:* Increases Ranged/Finesse Damage (Daggers/Bows) and Evasion.
-* *Intelligence:* Increases Magic Damage and Maximum Mana/Energy.
-* *Stamina:* Increases Maximum HP and Out-of-Combat Regeneration.
+* *Intelligence:* Increases Magic Damage and Maximum Mana/Secondary Resource scaling.
+* *Stamina:* Increases Maximum HP (+10 HP per STA) and Total Armor (+1 Armor per 4 STA).
 
 * **Offensive Modifiers:**
-* * Flat Elemental Damage (Fire, Ice, Poison, Void).
-
+* * Flat Elemental Damage (Fire, Ice, Poison, Void, Lightning).
 * * % Critical Hit Chance (Cap: 75%).
-
 * * % Critical Hit Damage (Base is 150%).
-
 * * % Attack Speed / Cast Speed.
-
 * * % Boss Damage (Multiplicative damage against Echoes).
-
 * * % Life Steal (Heal for a % of damage dealt).
 
 * **Defensive Modifiers:**
 * * Flat Armor or + % Total Armor.
-
 * * Flat Max HP or + % Total HP.
-
-* * % Elemental Resistances (Fire, Ice, Poison, Void - Cap: 75%).
-
-* * % All Resistances.
-
+* * % Elemental Resistances (Fire, Ice, Poison, Void, Lightning, Water - Cap: 75%).
+* * % All Resistances (Capped at 75%).
 * * Flat Damage Reflect (Thorns - Deals damage back when struck).
-
 * * % Evasion (Chance to dodge an attack completely).
-
 * * Range / Melee Avoidance (Chance to avoid taking melee counter-attack damage).
 
-* **Utility Modifiers:**
+* **Utility & Resource Modifiers:**
 * * % Magic Find (Increases the chance an item rolls as Rare or Legendary).
-
 * * % Gold Drop Rate.
-
 * * % EXP Gained.
-
-* * Maximum Mana / Mana Regeneration.
+* * % Cooldown Reduction (Reduces skill turn cooldowns).
+* * Class Secondary Resource Boosts:
+  * Vagabond: +Grit Generation (+1 to +5 Grit on turn/attack)
+  * Juggernaut: +Fury Generation (+2 to +8 Fury on hit)
+  * Phantom: +Max Energy (+10 to +30 Energy) / Energy Regen
+  * Weaver: +Max Mana (+20 to +150 Mana) / Mana Regen
+  * Warden: +Animus Resonance (+5 to +20 Animus capacity)
 
 ---
 
@@ -153,7 +145,7 @@ Gems provide different stats based on where they are slotted:
 | Gem Type | In Weapon (Offense) | In Armor / Head / Legs (Defense) | In Jewelry (Utility) |
 | --- | --- | --- | --- |
 | **Ruby (Fire)** | + Flat Fire Damage | + Flat Max HP | + % Fire Resistance |
-| **Sapphire (Ice)** | + Flat Ice Damage | + Flat Max Mana | + % Ice Resistance |
+| **Sapphire (Ice)** | + Flat Ice Damage | + Max Resource (Mana / Grit / Fury / Energy / Animus) | + % Ice Resistance |
 | **Emerald (Poison)** | + Flat Poison Damage | + Flat Armor | + % Poison Resistance |
 | **Amethyst (Void)** | + Flat Void Damage | + % Damage Reflect (Thorns) | + % Void Resistance |
 | **Diamond (Core)** | + % Boss Damage | + % All Resistances | + % Magic Find |

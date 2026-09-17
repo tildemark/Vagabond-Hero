@@ -5,7 +5,7 @@
 
 This document contains the foundational database for all **Waist** slot items (Belts, Sashes, Girdles, Cords, Bandoliers) spanning Levels 1 to 70. This structure maps directly into the `ItemTemplates` and `ItemInstances` Drift database tables.
 
-*Note: Waist items generally have lower base armor than Torso or Head slots, but they frequently roll utility modifiers like Potion Effectiveness, Cooldown Reduction, and Max Mana.*
+*Note: Waist items generally have lower base armor than Torso or Head slots, but they frequently roll utility modifiers like Potion Effectiveness, Cooldown Reduction, and Max Secondary Resource (Grit, Fury, Energy, Mana, Animus).*
 
 ## Rarity Rules
 
