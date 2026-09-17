@@ -64,11 +64,24 @@ Characters earn attribute points upon every level up to tailor their build towar
   * Gain **6 Free Attribute Points** per level.
   * Specialized Subclass bonuses activate (+15 Max HP/level, high affix multipliers).
 * **Level 70+ (The Infinite Echo System):**
-  * Standard level progression caps at 70. Further EXP is converted into **Echo Levels**.
-  * Each Echo Level awards **1 Echo Point** to invest in micro-perks:
-    * *Offense:* +0.2% Crit Damage, +0.1% Attack/Cast Speed, +0.2% Elemental Damage.
-    * *Defense:* +0.2% Total Armor, +0.1% Life Steal, +0.2% All-Resistances (75% hard cap).
-    * *Utility:* +0.5% Gold Drop Rate, +0.5% Magic Find (Luck), +0.2% Resource Generation.
+  * Standard level progression caps at 70. Further EXP is converted into **Echo Levels** (infinite paragon-style scaling).
+  * Each Echo Level awards **1 Echo Point** to allocate into specialized stat pools:
+    * ⚔️ **Offense Pool:**
+      * **Critical Hit Chance:** `+0.1%` per point (Cap: +10%).
+      * **Critical Hit Damage:** `+0.2%` per point (Uncapped).
+      * **Boss Damage:** `+0.25%` per point (Uncapped).
+      * **Attack / Cast Speed:** `+0.1%` per point (Cap: +15%).
+    * 🛡️ **Defense Pool:**
+      * **All Resistances:** `+0.2%` per point (Subject to 75% elemental hard cap).
+      * **Damage Reflect (Thorns):** `+2 Flat Reflect + 0.15%` per point (Uncapped).
+      * **Evasion (Evade):** `+0.1%` per point (Cap: +15%).
+      * **Total Armor:** `+0.2%` per point (Uncapped).
+    * 🩸 **Utility & Recovery Pool:**
+      * **Life Steal:** `+0.1%` per point (Cap: +10%).
+      * **Cooldown Reduction (CDR):** `+0.15%` per point (Cap: +20%).
+      * **Magic Find (Luck):** `+0.5%` per point (Uncapped).
+      * **Gold Drop Rate:** `+0.5%` per point (Uncapped).
+      * **Resource Generation:** `+0.2%` per point (Uncapped).
 
 ---
 
