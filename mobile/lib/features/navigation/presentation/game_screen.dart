@@ -72,72 +72,66 @@ class _GameScreenState extends ConsumerState<GameScreen> {
       },
       child: Scaffold(
         backgroundColor: GameColors.bgPrimary,
-      appBar: AppBar(
-        backgroundColor: GameColors.bgSecondary,
-        elevation: 0,
-        title: Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              decoration: BoxDecoration(
-                border: Border.all(color: GameColors.cyanRune),
-                borderRadius: BorderRadius.circular(4),
-              ),
-              child: Text(
-                'VAGABOND HERO',
-                style: GoogleFonts.cinzel(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  letterSpacing: 2,
-                ),
-              ),
+        appBar: AppBar(
+          backgroundColor: GameColors.bgSecondary,
+          elevation: 0,
+          titleSpacing: 12,
+          title: Text(
+            'VAGABOND HERO',
+            style: GoogleFonts.cinzel(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+              letterSpacing: 1.5,
             ),
-            const Spacer(),
+          ),
+          actions: [
             playerAsync.when(
               data: (player) => player == null
                   ? const SizedBox()
                   : Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'Lv.${player.level} ${player.jobClass}',
+                          'Lv.${player.level}',
                           style: GoogleFonts.jetBrainsMono(
-                            fontSize: 12,
+                            fontSize: 11,
                             color: GameColors.goldAccent,
                           ),
                         ),
-                        const SizedBox(width: 8),
+                        const SizedBox(width: 6),
                         Text(
-                          'HP: ${player.currentHp}/${player.baseHp}',
+                          '${player.currentHp}/${player.baseHp}',
                           style: GoogleFonts.jetBrainsMono(
-                            fontSize: 12,
+                            fontSize: 11,
                             color: player.currentHp < (player.baseHp * 0.3)
                                 ? GameColors.crimsonBlood
                                 : GameColors.terminalGreen,
                           ),
                         ),
-                        const SizedBox(width: 8),
+                        const SizedBox(width: 6),
                         Text(
-                          '💎 ${player.silverPrisms}',
+                          '💎${player.silverPrisms}',
                           style: GoogleFonts.jetBrainsMono(
-                            fontSize: 12,
+                            fontSize: 11,
                             color: GameColors.cyanRune,
                           ),
                         ),
-                        const SizedBox(width: 6),
                         IconButton(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          constraints: const BoxConstraints(),
                           icon: const Icon(Icons.backpack_outlined,
                               size: 20, color: GameColors.cyanRune),
                           tooltip: 'Inventory',
                           onPressed: () => _showInventoryModal(context, ref),
                         ),
+                        const SizedBox(width: 6),
                       ],
                     ),
               loading: () => const SizedBox(),
               error: (_, _) => const SizedBox(),
             ),
           ],
-        ),
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(1.0),
           child: Container(color: GameColors.borderSubtle, height: 1.0),
