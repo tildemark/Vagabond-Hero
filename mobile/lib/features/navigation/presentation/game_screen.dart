@@ -737,6 +737,7 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                               int bonusStr = 0;
                               int bonusAgi = 0;
                               int bonusInt = 0;
+                              int bonusSta = 0;
                               int bonusVit = 0;
                               final specialBuffs = <String>[];
 
@@ -754,6 +755,7 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                                         bonusStr += (bs['STR'] as num?)?.toInt() ?? 0;
                                         bonusAgi += (bs['AGI'] as num?)?.toInt() ?? 0;
                                         bonusInt += (bs['INT'] as num?)?.toInt() ?? 0;
+                                        bonusSta += (bs['STA'] as num?)?.toInt() ?? 0;
                                         bonusVit += (bs['VIT'] as num?)?.toInt() ?? 0;
                                       }
                                       final bList = decoded['buffs'] as List<dynamic>?;
@@ -780,7 +782,11 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                               final totalStr = player.strength + bonusStr;
                               final totalAgi = player.agility + bonusAgi;
                               final totalInt = player.intelligence + bonusInt;
-                              final effectiveMaxHp = player.baseHp + (bonusVit * 5);
+                              final totalSta = player.stamina + bonusSta;
+                              // Stamina provides +10 Max HP per point (plus legacy VIT*5 if present)
+                              final effectiveMaxHp = player.baseHp + (totalSta * 10) + (bonusVit * 5);
+                              // Stamina provides +1 Armor per 4 points
+                              final totalArmor = gearArmor + (totalSta ~/ 4);
 
                               // Combat stats
                               final baseAtkMin = 4 + (totalStr ~/ 3);
@@ -791,8 +797,8 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                               final critChance = (10.0 + (totalAgi * 0.5)).toStringAsFixed(1);
                               final critDmg = (150.0 + (totalAgi * 1.0)).toInt();
                               final evasion = (5.0 + (totalAgi * 0.4)).toStringAsFixed(1);
-                              final dmgReduction = gearArmor > 0
-                                  ? ((gearArmor / (gearArmor + 50)) * 100).toStringAsFixed(1)
+                              final dmgReduction = totalArmor > 0
+                                  ? ((totalArmor / (totalArmor + 50)) * 100).toStringAsFixed(1)
                                   : '0.0';
 
                               final hpPct = player.currentHp / effectiveMaxHp.clamp(1, 9999);
@@ -979,8 +985,8 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                                       children: [
                                         _StatDetailRow(
                                           label: 'Total Armor Value',
-                                          value: '$gearArmor ARM',
-                                          subtext: 'Equipped gear rating',
+                                          value: '$totalArmor ARM',
+                                          subtext: 'Gear: $gearArmor + Stamina: +${totalSta ~/ 4}',
                                           color: GameColors.terminalGreen,
                                         ),
                                         const Divider(color: GameColors.borderSubtle, height: 14),
@@ -1015,6 +1021,13 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
                                     ),
                                     child: Column(
                                       children: [
+                                        _StatDetailRow(
+                                          label: 'STAMINA (STA)',
+                                          value: '$totalSta',
+                                          subtext: 'Base ${player.stamina} + Gear $bonusSta (+${totalSta * 10} Max HP, +${totalSta ~/ 4} Armor)',
+                                          color: const Color(0xFF10B981),
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
                                         _StatDetailRow(
                                           label: 'STRENGTH (STR)',
                                           value: '$totalStr',

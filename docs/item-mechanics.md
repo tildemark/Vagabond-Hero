@@ -1,0 +1,171 @@
+# Vagabond Hero: Comprehensive Item & Loot Mechanics Design Document
+
+## 1. Equippable Body Parts (Slots)
+
+The player and their primary Companion can equip items in the following distinct slots. Two-handed weapons will automatically lock the Off-Hand slot.
+
+* **Head:** Hats, Caps, Helmets, Masks, Hoods.
+* **Neck:** Necklaces, Amulets, Chokers.
+* **Torso:** Chest Plates, Shirts, Robes, Harnesses.
+* **Waist:** Belts, Sashes, Girdles.
+* **Arms:** Bracers, Gauntlets, Gloves, Armbands.
+* **Legs:** Pants, Greaves, Legguards, Skirts.
+* **Feet:** Shoes, Sandals, Boots, Sabatons.
+* **L-Finger:** Rings, Bands.
+* **R-Finger:** Rings, Bands.
+* **L-Hand (Main Hand):** 1H Weapons, 2H Weapons.
+* **R-Hand (Off-Hand):** Shields, Magic Focuses, Quivers, Dual-Wield 1H Weapons.
+
+---
+
+## 2. The "Smart Loot" & Affix Pool System
+
+To prevent the frustration of a Strength-based melee character receiving useless +Mana modifiers, the game utilizes a **Smart Loot System** with weighted Affix Pools.
+
+1. **Class-Weighted Drops (80/20 Rule):** When an item drops, there is an 80% chance it rolls an Item Base suitable for the player's current Job. The remaining 20% drops random loot (useful for equipping Companions or selling for gold).
+2. **Affix Pools by Item Base:** Modifiers are restricted by the weapon/armor type.
+
+* *Physical Weapons (Swords, Axes):* Can only roll from the Melee Affix Pool (+Strength, +Bleed, +Attack Speed).
+* *Magical Weapons (Staffs, Wands):* Can only roll from the Magic Affix Pool (+Intelligence, +Mana, +Cast Speed).
+* *Armor/Jewelry:* Rolls from a Universal Defense Pool (+Max HP, +Resistances, +Agility/Armor), but heavily weights the core stat of the player's current class (e.g., Juggernauts will see +Strength on their armor far more often than +Intelligence).
+
+---
+
+## 3. Rarity Tiers & Modifier Budgets
+
+An item's Rarity dictates how many randomly generated modifiers (Affixes) it receives.
+
+| Rarity | UI Color | Modifier Count | Item Behavior |
+| --- | --- | --- | --- |
+| **Common** | White | 0 Modifiers | Base stats only (Damage or Armor). Serves as early game gear or crafting salvage. |
+| **Magic** | Blue | 1 to 2 Modifiers | Minor buffs. Rolls 1 Prefix and 1 Suffix maximum. |
+| **Rare** | Yellow | 3 to 4 Modifiers | The backbone of builds. Can roll very high stat values on its 4 modifiers. |
+| **Unique** | Purple | 4 Modifiers | Fixed static drops from specific mini-bosses. Good, predictable stats. |
+| **Legendary** | Orange | 4 to 5 + Trait | Rolls high stats PLUS one hard-coded **Unique Trait** that fundamentally alters gameplay (e.g., "Attacks hit 3 targets"). |
+| **Set** | Green | 4 + Set Bonus | Wearing 2, 3, or 4 pieces of the same named set grants massive synergistic passive abilities. |
+| **Glitched** | Red/Glitch | 5 Modifiers | *New Game+ / Post-Echo Quest.* Grants a game-breaking buff tied to a severe, build-defining debuff. |
+
+### Post-Echo Quest: Glitched Modifier Infusion (Corrupted Drops)
+Once the player completes the **Level 70 Echo Quest ("Breaking the Core")** and unlocks Pinnacle progression:
+* **Hybrid Glitched Drops:** Any newly dropped **Legendary** or **Set** item has a baseline **10% chance** (scalable via Echo Mutators) to roll a **Glitched Modifier**.
+* **Extra Modifier Budget:** This Glitched modifier is added as an **additional bonus modifier** beyond the item's standard modifier cap, accompanied by the distinctive Glitched visual aura in the UI.
+* **Dual Nature:** The injected Glitched affix rolls one game-breaking positive attribute paired with an equally disruptive penalty (e.g. `+250% Skill Damage` paired with `Cannot Evade attacks` or `Consumes 5% Max HP on action`).
+* **Preserves Base Identity:** Legendary items retain their hard-coded Unique Trait, and Set items retain their set piece identity and set bonuses while carrying the Glitched modifier.
+
+---
+
+## 4. Stat Allocation & Item Level Scaling
+
+The power of an item's Base Stats (raw Damage/Armor) and its Modifiers (+Strength, +Fire Damage) is determined by the **Item Level (iLvl)**, which matches the level of the monster that dropped it.
+
+Here is the scaling structure across the game's progression phases:
+
+### Phase 1: The Survivor (Levels 1 - 20)
+
+* **Focus:** Learning mechanics, simple survival, generic gear.
+* **Base Weapon Damage:** 2 – 25
+* **Base Armor (Per Piece):** 1 – 15
+* **Modifier Values:** Core Stats (+1 to +10), Health (+5 to +30), Resistances (+2% to +5%).
+* **Equip Rules:** Usable by any "Vagabond" base class.
+
+### Phase 2: The First Awakening (Levels 21 - 50)
+
+* **Focus:** Elemental damage, critical hits, establishing a build identity.
+* **Base Weapon Damage:** 30 – 120
+* **Base Armor (Per Piece):** 20 – 80
+* **Modifier Values:** Core Stats (+15 to +45), Health (+50 to +200), Resistances (+10% to +20%).
+* **Equip Rules:** Many items now require the player to have completed their 1st Job Change (e.g., "Requires: Juggernaut, Phantom, Weaver, or Warden").
+
+### Phase 3: The Ascendant (Levels 51 - 70)
+
+* **Focus:** Massive synergistic Set items, optimizing sockets, preparing for endgame.
+* **Base Weapon Damage:** 150 – 400
+* **Base Armor (Per Piece):** 100 – 250
+* **Modifier Values:** Core Stats (+50 to +120), Health (+300 to +800), Resistances (+25% to +40%).
+* **Equip Rules:** High-tier Legendaries require the 2nd Job Change (e.g., "Requires: Void-Knight or Blood Mage").
+
+### Phase 4: Pinnacle Mastery (Level 70 / 3rd Job Change)
+
+* **Focus:** God-tier scaling, Echo Point grinding, Glitched items & Corrupted Infusions.
+* **Base Weapon Damage:** 500 – 1,200+
+* **Base Armor (Per Piece):** 300 – 600+
+* **Modifier Values:** Core Stats (+150 to +300+), Health (+1,000+), Resistances (Capped at 75%).
+* **Equip Rules:** Requires the 3rd Job Change (Pinnacle Class). These items push the boundaries of the game's math and allow the player to survive the "Unallocated Space" (Act 5).
+* **Corrupted Item Drops:** Defeating post-Echo Quest bosses and navigating corrupted rift nodes gives drops a chance to infuse an extra **Glitched Modifier** onto Legendary and Set items, creating hybrid power spikes.
+
+---
+
+## 5. Core Attributes & Modifier Types
+
+When generating a Magic, Rare, or Legendary item, the `LootGenerator` will randomly select from these modifier categories based on the Item Base's Affix Pool.
+
+* **Primary Attributes:**
+* *Strength:* Increases Physical Damage (Swords/Axes/Maces) and Total Armor.
+* *Agility:* Increases Ranged/Finesse Damage (Daggers/Bows) and Evasion.
+* *Intelligence:* Increases Magic Damage and Maximum Mana/Energy.
+* *Stamina:* Increases Maximum HP and Out-of-Combat Regeneration.
+
+* **Offensive Modifiers:**
+* * Flat Elemental Damage (Fire, Ice, Poison, Void).
+
+* * % Critical Hit Chance (Cap: 75%).
+
+* * % Critical Hit Damage (Base is 150%).
+
+* * % Attack Speed / Cast Speed.
+
+* * % Boss Damage (Multiplicative damage against Echoes).
+
+* * % Life Steal (Heal for a % of damage dealt).
+
+* **Defensive Modifiers:**
+* * Flat Armor or + % Total Armor.
+
+* * Flat Max HP or + % Total HP.
+
+* * % Elemental Resistances (Fire, Ice, Poison, Void - Cap: 75%).
+
+* * % All Resistances.
+
+* * Flat Damage Reflect (Thorns - Deals damage back when struck).
+
+* * % Evasion (Chance to dodge an attack completely).
+
+* * Range / Melee Avoidance (Chance to avoid taking melee counter-attack damage).
+
+* **Utility Modifiers:**
+* * % Magic Find (Increases the chance an item rolls as Rare or Legendary).
+
+* * % Gold Drop Rate.
+
+* * % EXP Gained.
+
+* * Maximum Mana / Mana Regeneration.
+
+---
+
+## 6. The Gem & Socketing Mechanics
+
+Items from Level 15 onward have a chance to drop with empty Sockets (Max 3 for Weapons/Torso, Max 1 or 2 for other slots).
+
+Gems provide different stats based on where they are slotted:
+
+| Gem Type | In Weapon (Offense) | In Armor / Head / Legs (Defense) | In Jewelry (Utility) |
+| --- | --- | --- | --- |
+| **Ruby (Fire)** | + Flat Fire Damage | + Flat Max HP | + % Fire Resistance |
+| **Sapphire (Ice)** | + Flat Ice Damage | + Flat Max Mana | + % Ice Resistance |
+| **Emerald (Poison)** | + Flat Poison Damage | + Flat Armor | + % Poison Resistance |
+| **Amethyst (Void)** | + Flat Void Damage | + % Damage Reflect (Thorns) | + % Void Resistance |
+| **Diamond (Core)** | + % Boss Damage | + % All Resistances | + % Magic Find |
+| **Topaz (Wealth)** | + % Life Steal | + % Evasion | + % Gold Drop Rate |
+| **Pearl (Swiftness)** | + % Attack Speed | + % Movement / Travel Speed | + % EXP Gained |
+
+**Gem Tier Combining (Blacksmith Forge):**
+Players combine 3 gems of the same tier (plus gold) to upgrade them to the next tier:
+
+1. **Chipped** (Lvl 1+)
+2. **Flawed** (Lvl 15+)
+3. **Regular** (Lvl 30+)
+4. **Flawless** (Lvl 50+)
+5. **Perfect** (Lvl 70)
+6. **Radiant** (Act 5 / New Game+ Only)

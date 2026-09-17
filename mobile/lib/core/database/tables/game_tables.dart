@@ -13,6 +13,7 @@ class Players extends Table {
   IntColumn get strength => integer().withDefault(const Constant(10))();
   IntColumn get agility => integer().withDefault(const Constant(10))();
   IntColumn get intelligence => integer().withDefault(const Constant(10))();
+  IntColumn get stamina => integer().withDefault(const Constant(10))();
   IntColumn get currentRoomId => integer().withDefault(const Constant(101))();
   IntColumn get silverPrisms => integer().withDefault(const Constant(0))();
 }

@@ -69,7 +69,7 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen>
   @override
   void initState() {
     super.initState();
-    _tab = TabController(length: 2, vsync: this);
+    _tab = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -133,6 +133,7 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen>
             tabs: const [
               Tab(text: '⚔  EQUIPPED'),
               Tab(text: '🎒  BAG'),
+              Tab(text: '💎  GEMS'),
             ],
           ),
         ),
@@ -149,13 +150,15 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen>
                 for (final s in _slots)
                   s: items.where((i) => i.isEquipped && i.equipSlot == s).firstOrNull
               };
-              final bag = items.where((i) => !i.isEquipped).toList();
+              final bag = items.where((i) => !i.isEquipped && i.baseType != 'Gem').toList();
+              final gems = items.where((i) => i.baseType == 'Gem').toList();
 
               return TabBarView(
                 controller: _tab,
                 children: [
                   _EquippedTab(equipped: equipped, bag: bag),
                   _BagTab(items: bag, equipped: equipped),
+                  _GemsTab(items: gems),
                 ],
               );
             },
@@ -659,6 +662,18 @@ class _BagItemCard extends StatelessWidget {
     this.onEquip,
   });
 
+  Map<String, dynamic> _parseMetadata(ItemData d) {
+    try {
+      if (d.modifiersJson.trim().isNotEmpty) {
+        final decoded = jsonDecode(d.modifiersJson);
+        if (decoded is Map<String, dynamic>) {
+          return decoded;
+        }
+      }
+    } catch (_) {}
+    return {};
+  }
+
   @override
   Widget build(BuildContext context) {
     final rc = _rarityColor(item.rarity);
@@ -672,13 +687,42 @@ class _BagItemCard extends StatelessWidget {
         item.baseType == 'Feet' ||
         item.baseType == 'Ring';
 
-    // Comparison deltas vs currently equipped piece
+    // Parse baseStats from item and equipped piece
+    final itemMeta = _parseMetadata(item);
+    final itemBs = (itemMeta['baseStats'] as Map<String, dynamic>?) ?? {};
+    final itemSta = (itemBs['STA'] as num?)?.toInt() ?? 0;
+    final itemStr = (itemBs['STR'] as num?)?.toInt() ?? 0;
+    final itemAgi = (itemBs['AGI'] as num?)?.toInt() ?? 0;
+    final itemInt = (itemBs['INT'] as num?)?.toInt() ?? 0;
+
     final cmp = equippedInSlot;
+    final cmpMeta = cmp != null ? _parseMetadata(cmp) : <String, dynamic>{};
+    final cmpBs = (cmpMeta['baseStats'] as Map<String, dynamic>?) ?? {};
+    final cmpSta = (cmpBs['STA'] as num?)?.toInt() ?? 0;
+    final cmpStr = (cmpBs['STR'] as num?)?.toInt() ?? 0;
+    final cmpAgi = (cmpBs['AGI'] as num?)?.toInt() ?? 0;
+    final cmpInt = (cmpBs['INT'] as num?)?.toInt() ?? 0;
+
+    // Stat deltas
     final dmgDelta = cmp != null
         ? ((item.minDamage + item.maxDamage) ~/ 2) -
             ((cmp.minDamage + cmp.maxDamage) ~/ 2)
-        : null;
-    final armDelta = cmp != null ? item.armorValue - cmp.armorValue : null;
+        : (item.minDamage > 0 || item.maxDamage > 0
+            ? ((item.minDamage + item.maxDamage) ~/ 2)
+            : null);
+
+    // Total armor delta = gear armor difference + STA armor difference (1 ARM per 4 STA)
+    final itemTotalArm = item.armorValue + (itemSta ~/ 4);
+    final cmpTotalArm = cmp != null ? (cmp.armorValue + (cmpSta ~/ 4)) : 0;
+    final armDelta = cmp != null ? (itemTotalArm - cmpTotalArm) : (item.armorValue > 0 ? item.armorValue : null);
+
+    // HP delta = 10 Max HP per STA
+    final hpDelta = cmp != null ? ((itemSta - cmpSta) * 10) : (itemSta > 0 ? itemSta * 10 : null);
+
+    final staDelta = cmp != null ? (itemSta - cmpSta) : (itemSta > 0 ? itemSta : null);
+    final strDelta = cmp != null ? (itemStr - cmpStr) : (itemStr > 0 ? itemStr : null);
+    final agiDelta = cmp != null ? (itemAgi - cmpAgi) : (itemAgi > 0 ? itemAgi : null);
+    final intDelta = cmp != null ? (itemInt - cmpInt) : (itemInt > 0 ? itemInt : null);
 
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
@@ -687,16 +731,18 @@ class _BagItemCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         border: Border.all(color: rc.withValues(alpha: 0.4)),
       ),
-      child: ListTile(
-        onTap: () {
-          showItemDetailModal(
-            context: context,
-            item: item,
-            isEquipped: false,
-            onAction: onEquip ?? () {},
-          );
-        },
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+      child: Material(
+        color: Colors.transparent,
+        child: ListTile(
+          onTap: () {
+            showItemDetailModal(
+              context: context,
+              item: item,
+              isEquipped: false,
+              onAction: onEquip ?? () {},
+            );
+          },
+        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
         leading: Container(
           width: 38,
           height: 38,
@@ -733,7 +779,8 @@ class _BagItemCard extends StatelessWidget {
                 color: GameColors.textMuted,
               ),
             ),
-            const SizedBox(height: 2),
+            const SizedBox(height: 4),
+            // Primary weapon/armor stat line
             Row(
               children: [
                 if (item.minDamage > 0) ...[
@@ -742,6 +789,7 @@ class _BagItemCard extends StatelessWidget {
                     ' ${item.minDamage}–${item.maxDamage}',
                     style: GoogleFonts.jetBrainsMono(
                       fontSize: 10,
+                      fontWeight: FontWeight.bold,
                       color: GameColors.crimsonBlood,
                     ),
                   ),
@@ -750,37 +798,37 @@ class _BagItemCard extends StatelessWidget {
                 if (item.armorValue > 0) ...[
                   const Icon(Icons.shield, size: 11, color: GameColors.terminalGreen),
                   Text(
-                    ' ${item.armorValue}',
+                    ' +${item.armorValue}',
                     style: GoogleFonts.jetBrainsMono(
                       fontSize: 10,
+                      fontWeight: FontWeight.bold,
                       color: GameColors.terminalGreen,
                     ),
                   ),
                   const SizedBox(width: 8),
                 ],
-                // Comparison delta
+              ],
+            ),
+            const SizedBox(height: 4),
+            // Comparison Stat Pills (Green = Positive, Red = Negative)
+            Wrap(
+              spacing: 6,
+              runSpacing: 4,
+              children: [
                 if (dmgDelta != null && dmgDelta != 0)
-                  Text(
-                    'DMG ${dmgDelta > 0 ? "+" : ""}$dmgDelta',
-                    style: GoogleFonts.jetBrainsMono(
-                      fontSize: 10,
-                      color: dmgDelta > 0
-                          ? GameColors.terminalGreen
-                          : GameColors.crimsonBlood,
-                    ),
-                  ),
-                if (armDelta != null && armDelta != 0) ...[
-                  const SizedBox(width: 4),
-                  Text(
-                    'ARM ${armDelta > 0 ? "+" : ""}$armDelta',
-                    style: GoogleFonts.jetBrainsMono(
-                      fontSize: 10,
-                      color: armDelta > 0
-                          ? GameColors.terminalGreen
-                          : GameColors.crimsonBlood,
-                    ),
-                  ),
-                ],
+                  _StatDeltaPill(label: 'DMG', delta: dmgDelta),
+                if (armDelta != null && armDelta != 0)
+                  _StatDeltaPill(label: 'ARM', delta: armDelta),
+                if (hpDelta != null && hpDelta != 0)
+                  _StatDeltaPill(label: 'HP', delta: hpDelta),
+                if (staDelta != null && staDelta != 0)
+                  _StatDeltaPill(label: 'STA', delta: staDelta),
+                if (strDelta != null && strDelta != 0)
+                  _StatDeltaPill(label: 'STR', delta: strDelta),
+                if (agiDelta != null && agiDelta != 0)
+                  _StatDeltaPill(label: 'AGI', delta: agiDelta),
+                if (intDelta != null && intDelta != 0)
+                  _StatDeltaPill(label: 'INT', delta: intDelta),
               ],
             ),
           ],
@@ -808,7 +856,208 @@ class _BagItemCard extends StatelessWidget {
                 ),
               )
             : null,
+        ),
       ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Stat Delta Badge (Green for positive, Red for negative)
+// ─────────────────────────────────────────────────────────────────────────────
+class _StatDeltaPill extends StatelessWidget {
+  final String label;
+  final int delta;
+  const _StatDeltaPill({required this.label, required this.delta});
+
+  @override
+  Widget build(BuildContext context) {
+    final isPos = delta > 0;
+    final color = isPos ? const Color(0xFF10B981) : const Color(0xFFEF4444);
+    final sign = isPos ? '+' : '';
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.14),
+        borderRadius: BorderRadius.circular(4),
+        border: Border.all(color: color.withValues(alpha: 0.4), width: 0.8),
+      ),
+      child: Text(
+        '$sign$delta $label',
+        style: GoogleFonts.jetBrainsMono(
+          fontSize: 9,
+          fontWeight: FontWeight.bold,
+          color: color,
+        ),
+      ),
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Tab 3: Gems Bag View
+// ─────────────────────────────────────────────────────────────────────────────
+class _GemsTab extends StatelessWidget {
+  final List<ItemData> items;
+  const _GemsTab({required this.items});
+
+  @override
+  Widget build(BuildContext context) {
+    if (items.isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.diamond_outlined, size: 40, color: GameColors.textDim),
+            const SizedBox(height: 8),
+            Text(
+              'No gems found in satchel.\nDefeat rare enemies or find caches to discover socketable gems.',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.inter(
+                color: GameColors.textDim,
+                fontSize: 12,
+                height: 1.4,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ListView.builder(
+      padding: const EdgeInsets.fromLTRB(12, 12, 12, 80),
+      itemCount: items.length,
+      itemBuilder: (ctx, i) {
+        final gem = items[i];
+        final rc = _rarityColor(gem.rarity);
+
+        Map<String, dynamic> meta = {};
+        try {
+          if (gem.modifiersJson.trim().isNotEmpty) {
+            final decoded = jsonDecode(gem.modifiersJson);
+            if (decoded is Map<String, dynamic>) meta = decoded;
+          }
+        } catch (_) {}
+
+        final socketType = meta['socketType'] as String? ?? 'Socketable Gem';
+        final wBonus = meta['socketBonusWeapon'] as String? ?? '';
+        final aBonus = meta['socketBonusArmor'] as String? ?? '';
+
+        return Container(
+          margin: const EdgeInsets.only(bottom: 8),
+          decoration: BoxDecoration(
+            color: rc.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: rc.withValues(alpha: 0.5)),
+          ),
+          child: Material(
+            color: Colors.transparent,
+            child: ListTile(
+              onTap: () {
+                showItemDetailModal(
+                  context: ctx,
+                  item: gem,
+                  isEquipped: false,
+                  onAction: () {},
+                );
+              },
+              contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+            leading: Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: rc.withValues(alpha: 0.18),
+                shape: BoxShape.circle,
+                border: Border.all(color: rc.withValues(alpha: 0.6)),
+              ),
+              child: Icon(Icons.diamond, size: 20, color: rc),
+            ),
+            title: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    gem.name,
+                    style: GoogleFonts.cinzel(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: rc,
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: Colors.black38,
+                    borderRadius: BorderRadius.circular(4),
+                    border: Border.all(color: rc.withValues(alpha: 0.3)),
+                  ),
+                  child: Text(
+                    gem.rarity.toUpperCase(),
+                    style: GoogleFonts.jetBrainsMono(
+                      fontSize: 8.5,
+                      fontWeight: FontWeight.bold,
+                      color: rc,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            subtitle: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 2),
+                Text(
+                  socketType,
+                  style: GoogleFonts.jetBrainsMono(
+                    fontSize: 9.5,
+                    color: GameColors.textMuted,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                if (wBonus.isNotEmpty)
+                  Row(
+                    children: [
+                      const Icon(Icons.flash_on, size: 10, color: GameColors.crimsonBlood),
+                      const SizedBox(width: 4),
+                      Expanded(
+                        child: Text(
+                          'Weapon: $wBonus',
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 9,
+                            color: GameColors.textDim,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                if (aBonus.isNotEmpty)
+                  Row(
+                    children: [
+                      const Icon(Icons.shield, size: 10, color: GameColors.terminalGreen),
+                      const SizedBox(width: 4),
+                      Expanded(
+                        child: Text(
+                          'Armor: $aBonus',
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 9,
+                            color: GameColors.textDim,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+              ],
+            ),
+            trailing: const Icon(Icons.chevron_right, size: 18, color: GameColors.textDim),
+            ),
+          ),
+        );
+      },
     );
   }
 }

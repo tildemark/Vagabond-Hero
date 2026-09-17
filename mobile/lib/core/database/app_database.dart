@@ -35,6 +35,7 @@ class AppDatabase extends _$AppDatabase {
               strength: const Value(12),
               agility: const Value(10),
               intelligence: const Value(10),
+              stamina: const Value(10),
               currentRoomId: const Value(101),
               silverPrisms: const Value(25),
             ),
@@ -138,7 +139,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(true),
               equipSlot: const Value('Chest'),
               armorValue: const Value(4),
-              modifiersJson: const Value('{"description":"Coarse linen reinforced with cured beast hide stitches.","baseStats":{"VIT":3}}'),
+              modifiersJson: const Value('{"description":"Coarse linen reinforced with cured beast hide stitches.","baseStats":{"STA":4,"STR":1}}'),
               ownerId: const Value(1),
             ),
           );
@@ -182,7 +183,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('Arms'),
               armorValue: const Value(2),
-              modifiersJson: const Value('{"description":"Heavy leather wrapped around iron splints.","baseStats":{"STR":2}}'),
+              modifiersJson: const Value('{"description":"Heavy leather wrapped around iron splints.","baseStats":{"STR":2,"STA":2}}'),
               ownerId: const Value(1),
             ),
           );
@@ -196,7 +197,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('Waist'),
               armorValue: const Value(2),
-              modifiersJson: const Value('{"description":"A flexible girdle adorned with utility pouches.","baseStats":{"VIT":2}}'),
+              modifiersJson: const Value('{"description":"A flexible girdle adorned with utility pouches.","baseStats":{"STA":3}}'),
               ownerId: const Value(1),
             ),
           );
@@ -225,7 +226,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('RingR'),
               armorValue: const Value(2),
-              modifiersJson: const Value('{"description":"The heirloom ring of a forgotten crypt-keeper.","baseStats":{"STR":3,"VIT":4},"buffs":["+12% Critical Hit Damage"],"otherModifiers":["+4% Life-Steal on Hit"]}'),
+              modifiersJson: const Value('{"description":"The heirloom ring of a forgotten crypt-keeper.","baseStats":{"STR":3,"STA":3},"buffs":["+12% Critical Hit Damage"],"otherModifiers":["+4% Life-Steal on Hit"]}'),
               ownerId: const Value(1),
             ),
           );
@@ -239,7 +240,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('Feet'),
               armorValue: const Value(3),
-              modifiersJson: const Value('{"description":"Tough hide boots designed to weather sharp obsidian terrain."}'),
+              modifiersJson: const Value('{"description":"Tough hide boots designed to weather sharp obsidian terrain.","baseStats":{"STA":2}}'),
               ownerId: const Value(1),
             ),
           );
@@ -279,7 +280,7 @@ class AppDatabase extends _$AppDatabase {
               socketCount: const Value(1),
               modifiersJson: const Value(
                 '{"description":"Crown of the submerged sovereign, encrusted with barnacles that bleed cold brine.",'
-                '"baseStats":{"VIT":8,"STR":6},'
+                '"baseStats":{"STA":6,"STR":6},'
                 '"buffs":["+8% Maximum Health"],'
                 '"set":{"name":"The Drowned King\'s Regalia","pieces":["Plate Armor","Helmet","Boots"],'
                 '"bonuses":[{"count":2,"desc":"+25% Cold & Water Resistance"},{"count":3,"desc":"Attacks trigger a tidal surge dealing 60% weapon damage to all enemies."}]}}'
@@ -305,6 +306,97 @@ class AppDatabase extends _$AppDatabase {
                 '"buffs":["+40% Critical Strike Chance","+80% Attack Speed"],'
                 '"glitch":{"positive":"+300% Total Damage dealt across all weapons and skills.",'
                 '"penalty":"Fatal Vulnerability: Maximum HP is permanently capped at 1 while equipped."}}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          // ── Seed Gems (Dedicated Gem Bag) ──────────────────────────────
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'gem_ruby_01',
+              name: 'Chipped Ruby',
+              baseType: 'Gem',
+              rarity: const Value('Normal'),
+              isEquipped: const Value(false),
+              modifiersJson: const Value(
+                '{"description":"A rough crimson crystal pulsing with inner thermal embers.",'
+                '"socketType":"Ruby (Fire / Physical)",'
+                '"socketBonusWeapon":"+3 Fire Damage on Hit",'
+                '"socketBonusArmor":"+15 Maximum Health",'
+                '"buffs":["Socket in Weapon or Armor"]}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'gem_sapphire_01',
+              name: 'Flawed Sapphire',
+              baseType: 'Gem',
+              rarity: const Value('Magic'),
+              isEquipped: const Value(false),
+              modifiersJson: const Value(
+                '{"description":"Cold azure stone extracted from the frozen subterranean springs.",'
+                '"socketType":"Sapphire (Frost / Focus)",'
+                '"socketBonusWeapon":"+5 Cold Damage, 10% Chance to Chill",'
+                '"socketBonusArmor":"+20 Focus Pool & +5 Cold Resistance",'
+                '"buffs":["Socket in Weapon or Armor"]}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'gem_emerald_01',
+              name: 'Chipped Emerald',
+              baseType: 'Gem',
+              rarity: const Value('Normal'),
+              isEquipped: const Value(false),
+              modifiersJson: const Value(
+                '{"description":"A glistening green jewel that secretes a subtle venomous resin.",'
+                '"socketType":"Emerald (Poison / Agility)",'
+                '"socketBonusWeapon":"+8 Poison Damage over 3 seconds",'
+                '"socketBonusArmor":"+4 Agility & +10 Poison Resistance",'
+                '"buffs":["Socket in Weapon or Armor"]}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'gem_amethyst_01',
+              name: 'Regular Amethyst',
+              baseType: 'Gem',
+              rarity: const Value('Rare'),
+              isEquipped: const Value(false),
+              modifiersJson: const Value(
+                '{"description":"A flawless violet gem radiating intense psychic static.",'
+                '"socketType":"Amethyst (Void / Leech)",'
+                '"socketBonusWeapon":"+4% Life-Steal on Hit",'
+                '"socketBonusArmor":"+8 Stamina (+80 Max HP)",'
+                '"buffs":["Socket in Weapon or Armor"]}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'gem_diamond_01',
+              name: 'Flawed Diamond',
+              baseType: 'Gem',
+              rarity: const Value('Magic'),
+              isEquipped: const Value(false),
+              modifiersJson: const Value(
+                '{"description":"Unblemished prismatic diamond refracting ambient light into blinding shards.",'
+                '"socketType":"Diamond (Radiance / All Resist)",'
+                '"socketBonusWeapon":"+10% Critical Strike Multiplier",'
+                '"socketBonusArmor":"+6 All Elemental Resistances & +3 Armor",'
+                '"buffs":["Socket in Weapon or Armor"]}'
               ),
               ownerId: const Value(1),
             ),

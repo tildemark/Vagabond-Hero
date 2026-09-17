@@ -136,6 +136,18 @@ class $PlayersTable extends Players with TableInfo<$PlayersTable, PlayerData> {
     requiredDuringInsert: false,
     defaultValue: const Constant(10),
   );
+  static const VerificationMeta _staminaMeta = const VerificationMeta(
+    'stamina',
+  );
+  @override
+  late final GeneratedColumn<int> stamina = GeneratedColumn<int>(
+    'stamina',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(10),
+  );
   static const VerificationMeta _currentRoomIdMeta = const VerificationMeta(
     'currentRoomId',
   );
@@ -173,6 +185,7 @@ class $PlayersTable extends Players with TableInfo<$PlayersTable, PlayerData> {
     strength,
     agility,
     intelligence,
+    stamina,
     currentRoomId,
     silverPrisms,
   ];
@@ -256,6 +269,12 @@ class $PlayersTable extends Players with TableInfo<$PlayersTable, PlayerData> {
         ),
       );
     }
+    if (data.containsKey('stamina')) {
+      context.handle(
+        _staminaMeta,
+        stamina.isAcceptableOrUnknown(data['stamina']!, _staminaMeta),
+      );
+    }
     if (data.containsKey('current_room_id')) {
       context.handle(
         _currentRoomIdMeta,
@@ -327,6 +346,10 @@ class $PlayersTable extends Players with TableInfo<$PlayersTable, PlayerData> {
         DriftSqlType.int,
         data['${effectivePrefix}intelligence'],
       )!,
+      stamina: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}stamina'],
+      )!,
       currentRoomId: attachedDatabase.typeMapping.read(
         DriftSqlType.int,
         data['${effectivePrefix}current_room_id'],
@@ -356,6 +379,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
   final int strength;
   final int agility;
   final int intelligence;
+  final int stamina;
   final int currentRoomId;
   final int silverPrisms;
   const PlayerData({
@@ -370,6 +394,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     required this.strength,
     required this.agility,
     required this.intelligence,
+    required this.stamina,
     required this.currentRoomId,
     required this.silverPrisms,
   });
@@ -387,6 +412,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     map['strength'] = Variable<int>(strength);
     map['agility'] = Variable<int>(agility);
     map['intelligence'] = Variable<int>(intelligence);
+    map['stamina'] = Variable<int>(stamina);
     map['current_room_id'] = Variable<int>(currentRoomId);
     map['silver_prisms'] = Variable<int>(silverPrisms);
     return map;
@@ -405,6 +431,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
       strength: Value(strength),
       agility: Value(agility),
       intelligence: Value(intelligence),
+      stamina: Value(stamina),
       currentRoomId: Value(currentRoomId),
       silverPrisms: Value(silverPrisms),
     );
@@ -427,6 +454,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
       strength: serializer.fromJson<int>(json['strength']),
       agility: serializer.fromJson<int>(json['agility']),
       intelligence: serializer.fromJson<int>(json['intelligence']),
+      stamina: serializer.fromJson<int>(json['stamina']),
       currentRoomId: serializer.fromJson<int>(json['currentRoomId']),
       silverPrisms: serializer.fromJson<int>(json['silverPrisms']),
     );
@@ -446,6 +474,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
       'strength': serializer.toJson<int>(strength),
       'agility': serializer.toJson<int>(agility),
       'intelligence': serializer.toJson<int>(intelligence),
+      'stamina': serializer.toJson<int>(stamina),
       'currentRoomId': serializer.toJson<int>(currentRoomId),
       'silverPrisms': serializer.toJson<int>(silverPrisms),
     };
@@ -463,6 +492,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     int? strength,
     int? agility,
     int? intelligence,
+    int? stamina,
     int? currentRoomId,
     int? silverPrisms,
   }) => PlayerData(
@@ -477,6 +507,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     strength: strength ?? this.strength,
     agility: agility ?? this.agility,
     intelligence: intelligence ?? this.intelligence,
+    stamina: stamina ?? this.stamina,
     currentRoomId: currentRoomId ?? this.currentRoomId,
     silverPrisms: silverPrisms ?? this.silverPrisms,
   );
@@ -497,6 +528,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
       intelligence: data.intelligence.present
           ? data.intelligence.value
           : this.intelligence,
+      stamina: data.stamina.present ? data.stamina.value : this.stamina,
       currentRoomId: data.currentRoomId.present
           ? data.currentRoomId.value
           : this.currentRoomId,
@@ -520,6 +552,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
           ..write('strength: $strength, ')
           ..write('agility: $agility, ')
           ..write('intelligence: $intelligence, ')
+          ..write('stamina: $stamina, ')
           ..write('currentRoomId: $currentRoomId, ')
           ..write('silverPrisms: $silverPrisms')
           ..write(')'))
@@ -539,6 +572,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     strength,
     agility,
     intelligence,
+    stamina,
     currentRoomId,
     silverPrisms,
   );
@@ -557,6 +591,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
           other.strength == this.strength &&
           other.agility == this.agility &&
           other.intelligence == this.intelligence &&
+          other.stamina == this.stamina &&
           other.currentRoomId == this.currentRoomId &&
           other.silverPrisms == this.silverPrisms);
 }
@@ -573,6 +608,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
   final Value<int> strength;
   final Value<int> agility;
   final Value<int> intelligence;
+  final Value<int> stamina;
   final Value<int> currentRoomId;
   final Value<int> silverPrisms;
   const PlayersCompanion({
@@ -587,6 +623,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     this.strength = const Value.absent(),
     this.agility = const Value.absent(),
     this.intelligence = const Value.absent(),
+    this.stamina = const Value.absent(),
     this.currentRoomId = const Value.absent(),
     this.silverPrisms = const Value.absent(),
   });
@@ -602,6 +639,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     this.strength = const Value.absent(),
     this.agility = const Value.absent(),
     this.intelligence = const Value.absent(),
+    this.stamina = const Value.absent(),
     this.currentRoomId = const Value.absent(),
     this.silverPrisms = const Value.absent(),
   }) : name = Value(name);
@@ -617,6 +655,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     Expression<int>? strength,
     Expression<int>? agility,
     Expression<int>? intelligence,
+    Expression<int>? stamina,
     Expression<int>? currentRoomId,
     Expression<int>? silverPrisms,
   }) {
@@ -632,6 +671,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
       if (strength != null) 'strength': strength,
       if (agility != null) 'agility': agility,
       if (intelligence != null) 'intelligence': intelligence,
+      if (stamina != null) 'stamina': stamina,
       if (currentRoomId != null) 'current_room_id': currentRoomId,
       if (silverPrisms != null) 'silver_prisms': silverPrisms,
     });
@@ -649,6 +689,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     Value<int>? strength,
     Value<int>? agility,
     Value<int>? intelligence,
+    Value<int>? stamina,
     Value<int>? currentRoomId,
     Value<int>? silverPrisms,
   }) {
@@ -664,6 +705,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
       strength: strength ?? this.strength,
       agility: agility ?? this.agility,
       intelligence: intelligence ?? this.intelligence,
+      stamina: stamina ?? this.stamina,
       currentRoomId: currentRoomId ?? this.currentRoomId,
       silverPrisms: silverPrisms ?? this.silverPrisms,
     );
@@ -705,6 +747,9 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     if (intelligence.present) {
       map['intelligence'] = Variable<int>(intelligence.value);
     }
+    if (stamina.present) {
+      map['stamina'] = Variable<int>(stamina.value);
+    }
     if (currentRoomId.present) {
       map['current_room_id'] = Variable<int>(currentRoomId.value);
     }
@@ -728,6 +773,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
           ..write('strength: $strength, ')
           ..write('agility: $agility, ')
           ..write('intelligence: $intelligence, ')
+          ..write('stamina: $stamina, ')
           ..write('currentRoomId: $currentRoomId, ')
           ..write('silverPrisms: $silverPrisms')
           ..write(')'))
@@ -2839,6 +2885,7 @@ typedef $$PlayersTableCreateCompanionBuilder =
       Value<int> strength,
       Value<int> agility,
       Value<int> intelligence,
+      Value<int> stamina,
       Value<int> currentRoomId,
       Value<int> silverPrisms,
     });
@@ -2855,6 +2902,7 @@ typedef $$PlayersTableUpdateCompanionBuilder =
       Value<int> strength,
       Value<int> agility,
       Value<int> intelligence,
+      Value<int> stamina,
       Value<int> currentRoomId,
       Value<int> silverPrisms,
     });
@@ -2920,6 +2968,11 @@ class $$PlayersTableFilterComposer
 
   ColumnFilters<int> get intelligence => $composableBuilder(
     column: $table.intelligence,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get stamina => $composableBuilder(
+    column: $table.stamina,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -2998,6 +3051,11 @@ class $$PlayersTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get stamina => $composableBuilder(
+    column: $table.stamina,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<int> get currentRoomId => $composableBuilder(
     column: $table.currentRoomId,
     builder: (column) => ColumnOrderings(column),
@@ -3055,6 +3113,9 @@ class $$PlayersTableAnnotationComposer
     builder: (column) => column,
   );
 
+  GeneratedColumn<int> get stamina =>
+      $composableBuilder(column: $table.stamina, builder: (column) => column);
+
   GeneratedColumn<int> get currentRoomId => $composableBuilder(
     column: $table.currentRoomId,
     builder: (column) => column,
@@ -3108,6 +3169,7 @@ class $$PlayersTableTableManager
                 Value<int> strength = const Value.absent(),
                 Value<int> agility = const Value.absent(),
                 Value<int> intelligence = const Value.absent(),
+                Value<int> stamina = const Value.absent(),
                 Value<int> currentRoomId = const Value.absent(),
                 Value<int> silverPrisms = const Value.absent(),
               }) => PlayersCompanion(
@@ -3122,6 +3184,7 @@ class $$PlayersTableTableManager
                 strength: strength,
                 agility: agility,
                 intelligence: intelligence,
+                stamina: stamina,
                 currentRoomId: currentRoomId,
                 silverPrisms: silverPrisms,
               ),
@@ -3138,6 +3201,7 @@ class $$PlayersTableTableManager
                 Value<int> strength = const Value.absent(),
                 Value<int> agility = const Value.absent(),
                 Value<int> intelligence = const Value.absent(),
+                Value<int> stamina = const Value.absent(),
                 Value<int> currentRoomId = const Value.absent(),
                 Value<int> silverPrisms = const Value.absent(),
               }) => PlayersCompanion.insert(
@@ -3152,6 +3216,7 @@ class $$PlayersTableTableManager
                 strength: strength,
                 agility: agility,
                 intelligence: intelligence,
+                stamina: stamina,
                 currentRoomId: currentRoomId,
                 silverPrisms: silverPrisms,
               ),
