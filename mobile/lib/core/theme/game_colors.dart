@@ -21,6 +21,7 @@ class GameColors {
   static const Color rarityRare = Color(0xFFFACC15); // Yellow Gold
   static const Color rarityLegendary = Color(0xFFFB923C); // Amber/Orange
   static const Color raritySet = Color(0xFF4ADE80); // Bright Green
+  static const Color rarityGlitched = Color(0xFFFF0055); // Cyber/Void Neon Red
 
   // Text
   static const Color textMain = Color(0xFFE2E8F0);
@@ -28,4 +29,21 @@ class GameColors {
   static const Color textDim = Color(0xFF4B5563);
   static const Color borderSubtle = Color(0xFF26334B);
   static const Color borderActive = Color(0xFF00F2FE);
+
+  static Color forRarity(String? rarity) {
+    switch (rarity) {
+      case 'Magic':
+        return rarityMagic;
+      case 'Rare':
+        return rarityRare;
+      case 'Legendary':
+        return rarityLegendary;
+      case 'Set':
+        return raritySet;
+      case 'Glitched':
+        return rarityGlitched;
+      default:
+        return rarityNormal;
+    }
+  }
 }

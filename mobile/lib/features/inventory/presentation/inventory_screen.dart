@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,18 +50,7 @@ final _slotLabel = {
   'OffHand': 'OFF HAND',
 };
 
-Color _rarityColor(String rarity) {
-  switch (rarity) {
-    case 'Magic':
-      return GameColors.rarityMagic;
-    case 'Rare':
-      return GameColors.rarityRare;
-    case 'Legendary':
-      return GameColors.rarityLegendary;
-    default:
-      return GameColors.rarityNormal;
-  }
-}
+Color _rarityColor(String rarity) => GameColors.forRarity(rarity);
 
 // ─────────────────────────────────────────────────────────────────────────────
 //  Main modal widget
@@ -202,7 +192,7 @@ class _EquippedTab extends ConsumerWidget {
           _SlotCard(
             slot: 'Head',
             item: equipped['Head'],
-            onTap: () => _pickForSlot(context, ref, svc, 'Head', bag),
+            onTap: () => _handleSlotTap(context, ref, svc, 'Head', equipped['Head'], bag),
             onUnequip: equipped['Head'] != null
                 ? () => svc.unequip(equipped['Head']!)
                 : null,
@@ -213,7 +203,7 @@ class _EquippedTab extends ConsumerWidget {
           _SlotCard(
             slot: 'Neck',
             item: equipped['Neck'],
-            onTap: () => _pickForSlot(context, ref, svc, 'Neck', bag),
+            onTap: () => _handleSlotTap(context, ref, svc, 'Neck', equipped['Neck'], bag),
             onUnequip: equipped['Neck'] != null
                 ? () => svc.unequip(equipped['Neck']!)
                 : null,
@@ -224,7 +214,7 @@ class _EquippedTab extends ConsumerWidget {
           _SlotCard(
             slot: 'Chest',
             item: equipped['Chest'],
-            onTap: () => _pickForSlot(context, ref, svc, 'Chest', bag),
+            onTap: () => _handleSlotTap(context, ref, svc, 'Chest', equipped['Chest'], bag),
             onUnequip: equipped['Chest'] != null
                 ? () => svc.unequip(equipped['Chest']!)
                 : null,
@@ -238,7 +228,7 @@ class _EquippedTab extends ConsumerWidget {
                 child: _SlotCard(
                   slot: 'Arms',
                   item: equipped['Arms'],
-                  onTap: () => _pickForSlot(context, ref, svc, 'Arms', bag),
+                  onTap: () => _handleSlotTap(context, ref, svc, 'Arms', equipped['Arms'], bag),
                   onUnequip: equipped['Arms'] != null
                       ? () => svc.unequip(equipped['Arms']!)
                       : null,
@@ -249,7 +239,7 @@ class _EquippedTab extends ConsumerWidget {
                 child: _SlotCard(
                   slot: 'Waist',
                   item: equipped['Waist'],
-                  onTap: () => _pickForSlot(context, ref, svc, 'Waist', bag),
+                  onTap: () => _handleSlotTap(context, ref, svc, 'Waist', equipped['Waist'], bag),
                   onUnequip: equipped['Waist'] != null
                       ? () => svc.unequip(equipped['Waist']!)
                       : null,
@@ -266,7 +256,7 @@ class _EquippedTab extends ConsumerWidget {
                 child: _SlotCard(
                   slot: 'MainHand',
                   item: equipped['MainHand'],
-                  onTap: () => _pickForSlot(context, ref, svc, 'MainHand', bag),
+                  onTap: () => _handleSlotTap(context, ref, svc, 'MainHand', equipped['MainHand'], bag),
                   onUnequip: equipped['MainHand'] != null
                       ? () => svc.unequip(equipped['MainHand']!)
                       : null,
@@ -277,7 +267,7 @@ class _EquippedTab extends ConsumerWidget {
                 child: _SlotCard(
                   slot: 'OffHand',
                   item: equipped['OffHand'],
-                  onTap: () => _pickForSlot(context, ref, svc, 'OffHand', bag),
+                  onTap: () => _handleSlotTap(context, ref, svc, 'OffHand', equipped['OffHand'], bag),
                   onUnequip: equipped['OffHand'] != null
                       ? () => svc.unequip(equipped['OffHand']!)
                       : null,
@@ -294,7 +284,7 @@ class _EquippedTab extends ConsumerWidget {
                 child: _SlotCard(
                   slot: 'RingL',
                   item: equipped['RingL'],
-                  onTap: () => _pickForSlot(context, ref, svc, 'RingL', bag),
+                  onTap: () => _handleSlotTap(context, ref, svc, 'RingL', equipped['RingL'], bag),
                   onUnequip: equipped['RingL'] != null
                       ? () => svc.unequip(equipped['RingL']!)
                       : null,
@@ -305,7 +295,7 @@ class _EquippedTab extends ConsumerWidget {
                 child: _SlotCard(
                   slot: 'RingR',
                   item: equipped['RingR'],
-                  onTap: () => _pickForSlot(context, ref, svc, 'RingR', bag),
+                  onTap: () => _handleSlotTap(context, ref, svc, 'RingR', equipped['RingR'], bag),
                   onUnequip: equipped['RingR'] != null
                       ? () => svc.unequip(equipped['RingR']!)
                       : null,
@@ -319,7 +309,7 @@ class _EquippedTab extends ConsumerWidget {
           _SlotCard(
             slot: 'Feet',
             item: equipped['Feet'],
-            onTap: () => _pickForSlot(context, ref, svc, 'Feet', bag),
+            onTap: () => _handleSlotTap(context, ref, svc, 'Feet', equipped['Feet'], bag),
             onUnequip: equipped['Feet'] != null
                 ? () => svc.unequip(equipped['Feet']!)
                 : null,
@@ -327,6 +317,28 @@ class _EquippedTab extends ConsumerWidget {
         ],
       ),
     );
+  }
+
+  void _handleSlotTap(
+    BuildContext context,
+    WidgetRef ref,
+    EquipmentService svc,
+    String slot,
+    ItemData? item,
+    List<ItemData> bag,
+  ) {
+    if (item != null) {
+      // Show rich item detail modal with unequip action
+      showItemDetailModal(
+        context: context,
+        item: item,
+        isEquipped: true,
+        onAction: () => svc.unequip(item),
+      );
+    } else {
+      // Pick item to equip into this empty slot
+      _pickForSlot(context, ref, svc, slot, bag);
+    }
   }
 
   Future<void> _pickForSlot(
@@ -619,7 +631,7 @@ class _BagTab extends ConsumerWidget {
     }
 
     return ListView.builder(
-      padding: const EdgeInsets.all(12),
+      padding: const EdgeInsets.fromLTRB(12, 12, 12, 80),
       itemCount: items.length,
       itemBuilder: (_, i) {
         final item = items[i];
@@ -676,6 +688,14 @@ class _BagItemCard extends StatelessWidget {
         border: Border.all(color: rc.withValues(alpha: 0.4)),
       ),
       child: ListTile(
+        onTap: () {
+          showItemDetailModal(
+            context: context,
+            item: item,
+            isEquipped: false,
+            onAction: onEquip ?? () {},
+          );
+        },
         contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
         leading: Container(
           width: 38,
@@ -862,6 +882,718 @@ class _ItemPickerSheet extends StatelessWidget {
         ),
         const SizedBox(height: 16),
       ],
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Rich Item Detail Sheet
+// ─────────────────────────────────────────────────────────────────────────────
+void showItemDetailModal({
+  required BuildContext context,
+  required ItemData item,
+  required bool isEquipped,
+  required VoidCallback onAction,
+}) {
+  showModalBottomSheet(
+    context: context,
+    isScrollControlled: true,
+    useRootNavigator: true,
+    backgroundColor: GameColors.bgSecondary,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      side: BorderSide(color: GameColors.borderSubtle),
+    ),
+    builder: (ctx) => FractionallySizedBox(
+      heightFactor: 0.88,
+      child: _ItemDetailSheet(
+        item: item,
+        isEquipped: isEquipped,
+        onAction: onAction,
+      ),
+    ),
+  );
+}
+
+class _ItemDetailSheet extends StatelessWidget {
+  final ItemData item;
+  final bool isEquipped;
+  final VoidCallback onAction;
+
+  const _ItemDetailSheet({
+    required this.item,
+    required this.isEquipped,
+    required this.onAction,
+  });
+
+  Map<String, dynamic> _parseMetadata() {
+    try {
+      if (item.modifiersJson.trim().isNotEmpty) {
+        final decoded = jsonDecode(item.modifiersJson);
+        if (decoded is Map<String, dynamic>) {
+          return decoded;
+        }
+      }
+    } catch (_) {}
+    return {};
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final rc = _rarityColor(item.rarity);
+    final meta = _parseMetadata();
+
+    final desc = meta['description'] as String? ??
+        'An artefact found amidst the shattered ruins of the old world.';
+    final baseStats = meta['baseStats'] as Map<String, dynamic>? ?? {};
+    final buffs = (meta['buffs'] as List<dynamic>?)?.map((e) => e.toString()).toList() ?? [];
+    final statRolls = (meta['statRolls'] as List<dynamic>?)?.map((e) => e.toString()).toList() ?? [];
+    final uniqueTrait = meta['uniqueTrait'] as String?;
+    final otherModifiers = (meta['otherModifiers'] as List<dynamic>?)?.map((e) => e.toString()).toList() ?? [];
+    final setInfo = meta['set'] as Map<String, dynamic>?;
+    final glitchInfo = meta['glitch'] as Map<String, dynamic>?;
+
+    final slotName = _slotLabel[item.equipSlot] ?? item.equipSlot ?? item.baseType.toUpperCase();
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        children: [
+              // Handle
+              Container(
+                margin: const EdgeInsets.only(top: 10, bottom: 8),
+                width: 38,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: GameColors.borderSubtle,
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+
+              // Scrollable content
+              Expanded(
+                child: ListView(
+                  children: [
+                    // Header card with glowing rarity border
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: rc.withValues(alpha: 0.08),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: rc.withValues(alpha: 0.6), width: 1.5),
+                        boxShadow: [
+                          BoxShadow(
+                            color: rc.withValues(alpha: 0.15),
+                            blurRadius: 10,
+                            spreadRadius: 1,
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        children: [
+                          // Icon & Socket Indicator
+                          Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              Container(
+                                width: 52,
+                                height: 52,
+                                decoration: BoxDecoration(
+                                  color: rc.withValues(alpha: 0.2),
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(color: rc),
+                                ),
+                                child: Icon(
+                                  _slotIcon[item.equipSlot] ??
+                                      (item.baseType == 'Weapon'
+                                          ? Icons.colorize
+                                          : item.baseType == 'Ring'
+                                              ? Icons.radio_button_unchecked
+                                              : Icons.shield_outlined),
+                                  size: 28,
+                                  color: rc,
+                                ),
+                              ),
+                              if (item.socketCount > 0)
+                                Positioned(
+                                  bottom: -4,
+                                  right: -4,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.bgPrimary,
+                                      borderRadius: BorderRadius.circular(4),
+                                      border: Border.all(color: GameColors.cyanRune, width: 1),
+                                    ),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: List.generate(
+                                        item.socketCount,
+                                        (i) => Container(
+                                          margin: const EdgeInsets.symmetric(horizontal: 1.5),
+                                          width: 6,
+                                          height: 6,
+                                          decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            border: Border.all(color: GameColors.cyanRune, width: 1),
+                                            color: GameColors.bgSecondary,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                            ],
+                          ),
+                          const SizedBox(width: 12),
+                          // Name, Rarity, Slot badges
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  item.name,
+                                  style: GoogleFonts.cinzel(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                    color: rc,
+                                  ),
+                                ),
+                                const SizedBox(height: 3),
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                      decoration: BoxDecoration(
+                                        color: rc.withValues(alpha: 0.2),
+                                        borderRadius: BorderRadius.circular(4),
+                                      ),
+                                      child: Text(
+                                        item.rarity.toUpperCase(),
+                                        style: GoogleFonts.jetBrainsMono(
+                                          fontSize: 9.5,
+                                          fontWeight: FontWeight.bold,
+                                          color: rc,
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 6),
+                                    Text(
+                                      '•  $slotName',
+                                      style: GoogleFonts.jetBrainsMono(
+                                        fontSize: 9.5,
+                                        color: GameColors.textMuted,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 4),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                                  decoration: BoxDecoration(
+                                    color: isEquipped
+                                        ? GameColors.terminalGreen.withValues(alpha: 0.15)
+                                        : Colors.white.withValues(alpha: 0.05),
+                                    borderRadius: BorderRadius.circular(4),
+                                    border: Border.all(
+                                      color: isEquipped
+                                          ? GameColors.terminalGreen.withValues(alpha: 0.6)
+                                          : GameColors.borderSubtle,
+                                    ),
+                                  ),
+                                  child: Text(
+                                    isEquipped ? '✓ EQUIPPED IN SLOT' : '🎒 IN SATCHEL',
+                                    style: GoogleFonts.jetBrainsMono(
+                                      fontSize: 9,
+                                      fontWeight: FontWeight.bold,
+                                      color: isEquipped
+                                          ? GameColors.terminalGreen
+                                          : GameColors.textMuted,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    const SizedBox(height: 12),
+
+                    // Lore Description
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                      decoration: BoxDecoration(
+                        color: GameColors.bgCard.withValues(alpha: 0.6),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: GameColors.borderSubtle),
+                      ),
+                      child: Text(
+                        '"$desc"',
+                        style: GoogleFonts.inter(
+                          fontSize: 11.5,
+                          fontStyle: FontStyle.italic,
+                          color: GameColors.textMuted,
+                          height: 1.4,
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 12),
+
+                    // Primary Combat Power (Attack, Armor, Sockets)
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: GameColors.bgCard,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: GameColors.borderSubtle),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          _DetailCombatStat(
+                            icon: Icons.flash_on,
+                            label: 'ATTACK POWER',
+                            value: item.minDamage > 0
+                                ? '${item.minDamage} – ${item.maxDamage}'
+                                : '—',
+                            color: GameColors.crimsonBlood,
+                          ),
+                          Container(width: 1, height: 32, color: GameColors.borderSubtle),
+                          _DetailCombatStat(
+                            icon: Icons.shield,
+                            label: 'ARMOR VALUE',
+                            value: item.armorValue > 0 ? '+${item.armorValue}' : '—',
+                            color: GameColors.terminalGreen,
+                          ),
+                          Container(width: 1, height: 32, color: GameColors.borderSubtle),
+                          _DetailCombatStat(
+                            icon: Icons.adjust,
+                            label: 'SOCKETS',
+                            value: '${item.socketCount} Open',
+                            color: GameColors.cyanRune,
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    // Base Stats (STR, AGI, INT, VIT)
+                    if (baseStats.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      _SectionHeader(title: 'BASE ATTRIBUTES', icon: Icons.insights),
+                      const SizedBox(height: 6),
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 6,
+                        children: baseStats.entries.map((e) {
+                          return Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                            decoration: BoxDecoration(
+                              color: GameColors.bgSurface,
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(color: GameColors.goldAccent.withValues(alpha: 0.4)),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  '+${e.value} ',
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                    color: GameColors.goldAccent,
+                                  ),
+                                ),
+                                Text(
+                                  e.key,
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 11,
+                                    color: GameColors.textMain,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                    ],
+
+                    // Buffs & Stat Rolls
+                    if (buffs.isNotEmpty || statRolls.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      _SectionHeader(title: 'BUFFS & STAT ROLLS', icon: Icons.bolt),
+                      const SizedBox(height: 6),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: GameColors.bgSurface,
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: GameColors.borderSubtle),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            ...buffs.map((b) => _AffixRow(text: b, color: GameColors.cyanRune)),
+                            ...statRolls.map((s) => _AffixRow(text: s, color: GameColors.rarityMagic)),
+                          ],
+                        ),
+                      ),
+                    ],
+
+                    // Unique Legendary Trait
+                    if (uniqueTrait != null && uniqueTrait.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      _SectionHeader(title: 'UNIQUE TRAIT', icon: Icons.stars, color: GameColors.goldAccent),
+                      const SizedBox(height: 6),
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: GameColors.goldAccent.withValues(alpha: 0.08),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: GameColors.goldAccent.withValues(alpha: 0.6)),
+                        ),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Icon(Icons.auto_awesome, size: 16, color: GameColors.goldAccent),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                uniqueTrait,
+                                style: GoogleFonts.inter(
+                                  fontSize: 11.5,
+                                  fontWeight: FontWeight.w600,
+                                  color: GameColors.goldAccent,
+                                  height: 1.4,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+
+                    // Other Modifiers (Life-steal, elemental res, etc.)
+                    if (otherModifiers.isNotEmpty) ...[
+                      const SizedBox(height: 12),
+                      _SectionHeader(title: 'ADDITIONAL MODIFIERS', icon: Icons.auto_fix_high),
+                      const SizedBox(height: 6),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                          color: GameColors.bgSurface,
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: GameColors.borderSubtle),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: otherModifiers.map((m) => _AffixRow(text: m, color: GameColors.voidPurple)).toList(),
+                        ),
+                      ),
+                    ],
+
+                    // Set Modifiers
+                    if (setInfo != null) ...[
+                      const SizedBox(height: 12),
+                      _SectionHeader(
+                        title: 'SET: ${(setInfo['name'] ?? 'ANCIENT SET').toString().toUpperCase()}',
+                        icon: Icons.hub,
+                        color: GameColors.raritySet,
+                      ),
+                      const SizedBox(height: 6),
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: GameColors.raritySet.withValues(alpha: 0.06),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: GameColors.raritySet.withValues(alpha: 0.5)),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (setInfo['pieces'] != null)
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 8),
+                                child: Text(
+                                  'Pieces: ${(setInfo['pieces'] as List<dynamic>).join(', ')}',
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 10,
+                                    color: GameColors.textMuted,
+                                  ),
+                                ),
+                              ),
+                            if (setInfo['bonuses'] != null)
+                              ...(setInfo['bonuses'] as List<dynamic>).map((b) {
+                                final count = b['count'];
+                                final desc = b['desc'];
+                                return Padding(
+                                  padding: const EdgeInsets.symmetric(vertical: 3),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '($count) Set: ',
+                                        style: GoogleFonts.jetBrainsMono(
+                                          fontSize: 10.5,
+                                          fontWeight: FontWeight.bold,
+                                          color: GameColors.raritySet,
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Text(
+                                          '$desc',
+                                          style: GoogleFonts.inter(
+                                            fontSize: 11,
+                                            color: GameColors.textMain,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }),
+                          ],
+                        ),
+                      ),
+                    ],
+
+                    // Glitch Modifiers
+                    if (glitchInfo != null) ...[
+                      const SizedBox(height: 12),
+                      _SectionHeader(
+                        title: 'CORRUPTED / GLITCH MODIFIERS',
+                        icon: Icons.warning_amber_rounded,
+                        color: GameColors.rarityGlitched,
+                      ),
+                      const SizedBox(height: 6),
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: GameColors.rarityGlitched.withValues(alpha: 0.08),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: GameColors.rarityGlitched.withValues(alpha: 0.8), width: 1.5),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (glitchInfo['positive'] != null)
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Icon(Icons.add_circle, size: 15, color: GameColors.terminalGreen),
+                                  const SizedBox(width: 6),
+                                  Expanded(
+                                    child: Text(
+                                      '${glitchInfo['positive']}',
+                                      style: GoogleFonts.jetBrainsMono(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        color: GameColors.terminalGreen,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            if (glitchInfo['penalty'] != null) ...[
+                              const SizedBox(height: 6),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Icon(Icons.remove_circle, size: 15, color: GameColors.rarityGlitched),
+                                  const SizedBox(width: 6),
+                                  Expanded(
+                                    child: Text(
+                                      '${glitchInfo['penalty']}',
+                                      style: GoogleFonts.jetBrainsMono(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        color: GameColors.rarityGlitched,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ],
+                        ),
+                      ),
+                    ],
+
+                    const SizedBox(height: 24),
+                  ],
+                ),
+              ),
+
+              // Action Buttons Row
+              SafeArea(
+                top: false,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 12),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: GameColors.borderSubtle),
+                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          onPressed: () => Navigator.pop(context),
+                          child: Text(
+                            'CLOSE',
+                            style: GoogleFonts.jetBrainsMono(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: GameColors.textMuted,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: isEquipped
+                                ? GameColors.crimsonBlood.withValues(alpha: 0.2)
+                                : rc.withValues(alpha: 0.25),
+                            foregroundColor: isEquipped ? GameColors.crimsonBlood : rc,
+                            side: BorderSide(
+                              color: isEquipped ? GameColors.crimsonBlood : rc,
+                              width: 1.2,
+                            ),
+                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          onPressed: () {
+                            Navigator.pop(context);
+                            onAction();
+                          },
+                          child: Text(
+                            isEquipped ? 'UNEQUIP' : 'EQUIP NOW',
+                            style: GoogleFonts.jetBrainsMono(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+  }
+}
+
+class _DetailCombatStat extends StatelessWidget {
+  final IconData icon;
+  final String label, value;
+  final Color color;
+
+  const _DetailCombatStat({
+    required this.icon,
+    required this.label,
+    required this.value,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 14, color: color),
+            const SizedBox(width: 4),
+            Text(
+              value,
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 13,
+                fontWeight: FontWeight.bold,
+                color: color,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 2),
+        Text(
+          label,
+          style: GoogleFonts.jetBrainsMono(
+            fontSize: 8.5,
+            color: GameColors.textMuted,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _SectionHeader extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  final Color color;
+
+  const _SectionHeader({
+    required this.title,
+    required this.icon,
+    this.color = GameColors.textMuted,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Icon(icon, size: 13, color: color),
+        const SizedBox(width: 6),
+        Text(
+          title,
+          style: GoogleFonts.jetBrainsMono(
+            fontSize: 10,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.8,
+            color: color,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class _AffixRow extends StatelessWidget {
+  final String text;
+  final Color color;
+
+  const _AffixRow({required this.text, required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 2.5),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: const EdgeInsets.only(top: 5, right: 6),
+            width: 4,
+            height: 4,
+            decoration: BoxDecoration(color: color, shape: BoxShape.circle),
+          ),
+          Expanded(
+            child: Text(
+              text,
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 10.5,
+                color: GameColors.textMain,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

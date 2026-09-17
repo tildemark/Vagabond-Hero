@@ -122,6 +122,9 @@ class AppDatabase extends _$AppDatabase {
               equipSlot: const Value('MainHand'),
               minDamage: const Value(3),
               maxDamage: const Value(6),
+              armorValue: const Value(0),
+              socketCount: const Value(1),
+              modifiersJson: const Value('{"description":"A nicked iron shiv favored by scavengers in the lower ruins."}'),
               ownerId: const Value(1),
             ),
           );
@@ -135,6 +138,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(true),
               equipSlot: const Value('Chest'),
               armorValue: const Value(4),
+              modifiersJson: const Value('{"description":"Coarse linen reinforced with cured beast hide stitches.","baseStats":{"VIT":3}}'),
               ownerId: const Value(1),
             ),
           );
@@ -148,6 +152,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('Head'),
               armorValue: const Value(2),
+              modifiersJson: const Value('{"description":"Woven from fire-retardant threads steeped in mountain ash.","baseStats":{"AGI":3},"buffs":["+5% Evasion Rate"]}'),
               ownerId: const Value(1),
             ),
           );
@@ -163,6 +168,7 @@ class AppDatabase extends _$AppDatabase {
               minDamage: const Value(1),
               maxDamage: const Value(2),
               armorValue: const Value(1),
+              modifiersJson: const Value('{"description":"A cloudy gem humming with faint resonance from the deep rifts.","baseStats":{"INT":4},"buffs":["+8 Max Mana / Focus"]}'),
               ownerId: const Value(1),
             ),
           );
@@ -176,6 +182,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('Arms'),
               armorValue: const Value(2),
+              modifiersJson: const Value('{"description":"Heavy leather wrapped around iron splints.","baseStats":{"STR":2}}'),
               ownerId: const Value(1),
             ),
           );
@@ -189,6 +196,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('Waist'),
               armorValue: const Value(2),
+              modifiersJson: const Value('{"description":"A flexible girdle adorned with utility pouches.","baseStats":{"VIT":2}}'),
               ownerId: const Value(1),
             ),
           );
@@ -203,6 +211,7 @@ class AppDatabase extends _$AppDatabase {
               equipSlot: const Value('RingL'),
               minDamage: const Value(1),
               maxDamage: const Value(3),
+              modifiersJson: const Value('{"description":"Polished silver carved with miniature wards.","statRolls":["+5% Critical Hit Chance"]}'),
               ownerId: const Value(1),
             ),
           );
@@ -216,6 +225,7 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('RingR'),
               armorValue: const Value(2),
+              modifiersJson: const Value('{"description":"The heirloom ring of a forgotten crypt-keeper.","baseStats":{"STR":3,"VIT":4},"buffs":["+12% Critical Hit Damage"],"otherModifiers":["+4% Life-Steal on Hit"]}'),
               ownerId: const Value(1),
             ),
           );
@@ -229,6 +239,73 @@ class AppDatabase extends _$AppDatabase {
               isEquipped: const Value(false),
               equipSlot: const Value('Feet'),
               armorValue: const Value(3),
+              modifiersJson: const Value('{"description":"Tough hide boots designed to weather sharp obsidian terrain."}'),
+              ownerId: const Value(1),
+            ),
+          );
+
+          // ── Showcase Items: Legendary, Set, and Glitched ────────────────
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'showcase_legendary_01',
+              name: 'Voidcaller Wand',
+              baseType: 'Weapon',
+              rarity: const Value('Legendary'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('MainHand'),
+              minDamage: const Value(14),
+              maxDamage: const Value(28),
+              socketCount: const Value(2),
+              modifiersJson: const Value(
+                '{"description":"Hewn from petrified abyssal driftwood. Echoes of silent screams linger on its tip.",'
+                '"baseStats":{"INT":12,"STR":4},'
+                '"buffs":["+18% Shadow Damage","+10% Cast Speed"],'
+                '"uniqueTrait":"Echo of the Void: Attacks unleash a secondary dark shockwave dealing 40% weapon damage.",'
+                '"otherModifiers":["+6% Life-Steal","+15 Shadow Resistance"]}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'showcase_set_01',
+              name: "Drowned King's Helm",
+              baseType: 'Head',
+              rarity: const Value('Set'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('Head'),
+              armorValue: const Value(12),
+              socketCount: const Value(1),
+              modifiersJson: const Value(
+                '{"description":"Crown of the submerged sovereign, encrusted with barnacles that bleed cold brine.",'
+                '"baseStats":{"VIT":8,"STR":6},'
+                '"buffs":["+8% Maximum Health"],'
+                '"set":{"name":"The Drowned King\'s Regalia","pieces":["Plate Armor","Helmet","Boots"],'
+                '"bonuses":[{"count":2,"desc":"+25% Cold & Water Resistance"},{"count":3,"desc":"Attacks trigger a tidal surge dealing 60% weapon damage to all enemies."}]}}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'showcase_glitched_01',
+              name: 'Fragment of the Null',
+              baseType: 'Weapon',
+              rarity: const Value('Glitched'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('OffHand'),
+              minDamage: const Value(35),
+              maxDamage: const Value(60),
+              socketCount: const Value(3),
+              modifiersJson: const Value(
+                '{"description":"Anomalous digital artefact from Act 5. The reality around this crystal visibly stutters and tears.",'
+                '"baseStats":{"STR":20,"AGI":15},'
+                '"buffs":["+40% Critical Strike Chance","+80% Attack Speed"],'
+                '"glitch":{"positive":"+300% Total Damage dealt across all weapons and skills.",'
+                '"penalty":"Fatal Vulnerability: Maximum HP is permanently capped at 1 while equipped."}}'
+              ),
               ownerId: const Value(1),
             ),
           );

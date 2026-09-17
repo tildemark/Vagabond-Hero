@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -94,29 +95,41 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                   : Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text(
-                          'Lv.${player.level}',
-                          style: GoogleFonts.jetBrainsMono(
-                            fontSize: 11,
-                            color: GameColors.goldAccent,
-                          ),
-                        ),
-                        const SizedBox(width: 6),
-                        Text(
-                          '${player.currentHp}/${player.baseHp}',
-                          style: GoogleFonts.jetBrainsMono(
-                            fontSize: 11,
-                            color: player.currentHp < (player.baseHp * 0.3)
-                                ? GameColors.crimsonBlood
-                                : GameColors.terminalGreen,
-                          ),
-                        ),
-                        const SizedBox(width: 6),
-                        Text(
-                          '💎${player.silverPrisms}',
-                          style: GoogleFonts.jetBrainsMono(
-                            fontSize: 11,
-                            color: GameColors.cyanRune,
+                        InkWell(
+                          borderRadius: BorderRadius.circular(6),
+                          onTap: () => _showStatusModal(context, ref),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  'Lv.${player.level}',
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 11,
+                                    color: GameColors.goldAccent,
+                                  ),
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  '${player.currentHp}/${player.baseHp}',
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 11,
+                                    color: player.currentHp < (player.baseHp * 0.3)
+                                        ? GameColors.crimsonBlood
+                                        : GameColors.terminalGreen,
+                                  ),
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  '💎${player.silverPrisms}',
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 11,
+                                    color: GameColors.cyanRune,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         IconButton(
@@ -644,6 +657,7 @@ void _showInventoryModal(BuildContext context, WidgetRef ref) {
 void _showStatusModal(BuildContext context, WidgetRef ref) {
   showModalBottomSheet(
     context: context,
+    isScrollControlled: true,
     backgroundColor: GameColors.bgSecondary,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
@@ -653,129 +667,437 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
       return Consumer(
         builder: (context, sheetRef, _) {
           final playerAsync = sheetRef.watch(playerStreamProvider);
-          return Container(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Header
-                Row(
+          final itemsAsync = sheetRef.watch(playerInventoryProvider);
+
+          return DraggableScrollableSheet(
+            expand: false,
+            initialChildSize: 0.85,
+            minChildSize: 0.5,
+            maxChildSize: 0.95,
+            builder: (context, scrollCtrl) {
+              return Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
                   children: [
-                    const Icon(Icons.account_circle,
-                        color: GameColors.goldAccent, size: 20),
-                    const SizedBox(width: 8),
-                    Text(
-                      'CHARACTER STATUS',
-                      style: GoogleFonts.cinzel(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        letterSpacing: 1,
+                    // Handle
+                    Container(
+                      margin: const EdgeInsets.only(top: 10, bottom: 8),
+                      width: 38,
+                      height: 4,
+                      decoration: BoxDecoration(
+                        color: GameColors.borderSubtle,
+                        borderRadius: BorderRadius.circular(2),
                       ),
                     ),
-                    const Spacer(),
-                    IconButton(
-                      icon: const Icon(Icons.close,
-                          color: GameColors.textMuted, size: 20),
-                      onPressed: () => Navigator.pop(context),
+
+                    // Header
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.account_circle,
+                              color: GameColors.goldAccent, size: 22),
+                          const SizedBox(width: 8),
+                          Text(
+                            'CHARACTER DOSSIER',
+                            style: GoogleFonts.cinzel(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              letterSpacing: 1.2,
+                            ),
+                          ),
+                          const Spacer(),
+                          IconButton(
+                            icon: const Icon(Icons.close,
+                                color: GameColors.textMuted, size: 20),
+                            onPressed: () => Navigator.pop(context),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const Divider(color: GameColors.borderSubtle, height: 1),
+
+                    // Content
+                    Expanded(
+                      child: playerAsync.when(
+                        data: (player) {
+                          if (player == null) {
+                            return const Center(child: Text('No player data.'));
+                          }
+
+                          return itemsAsync.when(
+                            data: (items) {
+                              final equippedItems = items.where((i) => i.isEquipped).toList();
+
+                              // Aggregate gear stats
+                              int gearMinDmg = 0;
+                              int gearMaxDmg = 0;
+                              int gearArmor = 0;
+                              int bonusStr = 0;
+                              int bonusAgi = 0;
+                              int bonusInt = 0;
+                              int bonusVit = 0;
+                              final specialBuffs = <String>[];
+
+                              for (final item in equippedItems) {
+                                gearMinDmg += item.minDamage;
+                                gearMaxDmg += item.maxDamage;
+                                gearArmor += item.armorValue;
+
+                                if (item.modifiersJson.trim().isNotEmpty) {
+                                  try {
+                                    final decoded = jsonDecode(item.modifiersJson);
+                                    if (decoded is Map<String, dynamic>) {
+                                      final bs = decoded['baseStats'] as Map<String, dynamic>?;
+                                      if (bs != null) {
+                                        bonusStr += (bs['STR'] as num?)?.toInt() ?? 0;
+                                        bonusAgi += (bs['AGI'] as num?)?.toInt() ?? 0;
+                                        bonusInt += (bs['INT'] as num?)?.toInt() ?? 0;
+                                        bonusVit += (bs['VIT'] as num?)?.toInt() ?? 0;
+                                      }
+                                      final bList = decoded['buffs'] as List<dynamic>?;
+                                      if (bList != null) {
+                                        specialBuffs.addAll(bList.map((e) => e.toString()));
+                                      }
+                                      final rolls = decoded['statRolls'] as List<dynamic>?;
+                                      if (rolls != null) {
+                                        specialBuffs.addAll(rolls.map((e) => e.toString()));
+                                      }
+                                      final others = decoded['otherModifiers'] as List<dynamic>?;
+                                      if (others != null) {
+                                        specialBuffs.addAll(others.map((e) => e.toString()));
+                                      }
+                                      final ut = decoded['uniqueTrait'] as String?;
+                                      if (ut != null && ut.isNotEmpty) {
+                                        specialBuffs.add('★ $ut');
+                                      }
+                                    }
+                                  } catch (_) {}
+                                }
+                              }
+
+                              final totalStr = player.strength + bonusStr;
+                              final totalAgi = player.agility + bonusAgi;
+                              final totalInt = player.intelligence + bonusInt;
+                              final effectiveMaxHp = player.baseHp + (bonusVit * 5);
+
+                              // Combat stats
+                              final baseAtkMin = 4 + (totalStr ~/ 3);
+                              final baseAtkMax = 8 + (totalStr ~/ 3);
+                              final totalMinAtk = baseAtkMin + gearMinDmg;
+                              final totalMaxAtk = baseAtkMax + gearMaxDmg;
+
+                              final critChance = (10.0 + (totalAgi * 0.5)).toStringAsFixed(1);
+                              final critDmg = (150.0 + (totalAgi * 1.0)).toInt();
+                              final evasion = (5.0 + (totalAgi * 0.4)).toStringAsFixed(1);
+                              final dmgReduction = gearArmor > 0
+                                  ? ((gearArmor / (gearArmor + 50)) * 100).toStringAsFixed(1)
+                                  : '0.0';
+
+                              final hpPct = player.currentHp / effectiveMaxHp.clamp(1, 9999);
+                              final expPct = player.currentExp / player.maxExp.clamp(1, 999999);
+
+                              return ListView(
+                                controller: scrollCtrl,
+                                padding: const EdgeInsets.symmetric(vertical: 12),
+                                children: [
+                                  // Identity Hero Card
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.goldAccent.withValues(alpha: 0.08),
+                                      borderRadius: BorderRadius.circular(10),
+                                      border: Border.all(
+                                        color: GameColors.goldAccent.withValues(alpha: 0.5),
+                                      ),
+                                    ),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                          width: 44,
+                                          height: 44,
+                                          decoration: BoxDecoration(
+                                            color: GameColors.goldAccent.withValues(alpha: 0.15),
+                                            shape: BoxShape.circle,
+                                            border: Border.all(color: GameColors.goldAccent),
+                                          ),
+                                          child: const Icon(Icons.shield_moon,
+                                              size: 24, color: GameColors.goldAccent),
+                                        ),
+                                        const SizedBox(width: 12),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                player.name.toUpperCase(),
+                                                style: GoogleFonts.cinzel(
+                                                  fontSize: 16,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                              const SizedBox(height: 2),
+                                              Text(
+                                                '${player.jobClass}  •  Act I Vagabond',
+                                                style: GoogleFonts.jetBrainsMono(
+                                                  fontSize: 11,
+                                                  color: GameColors.goldAccent,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.end,
+                                          children: [
+                                            Text(
+                                              'LEVEL',
+                                              style: GoogleFonts.jetBrainsMono(
+                                                fontSize: 9,
+                                                color: GameColors.textMuted,
+                                              ),
+                                            ),
+                                            Text(
+                                              '${player.level}',
+                                              style: GoogleFonts.cinzel(
+                                                fontSize: 22,
+                                                fontWeight: FontWeight.bold,
+                                                color: GameColors.cyanRune,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 14),
+
+                                  // Vitals & Progression Bars (HP, EXP, Currency)
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.bgCard,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(color: GameColors.borderSubtle),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        _DossierBar(
+                                          label: 'HEALTH POINTS',
+                                          valueText: '${player.currentHp} / $effectiveMaxHp',
+                                          fraction: hpPct,
+                                          color: hpPct < 0.3
+                                              ? GameColors.crimsonBlood
+                                              : GameColors.terminalGreen,
+                                        ),
+                                        const SizedBox(height: 10),
+                                        _DossierBar(
+                                          label: 'EXPERIENCE PROGRESS',
+                                          valueText: '${player.currentExp} / ${player.maxExp} (${(expPct * 100).toStringAsFixed(0)}%)',
+                                          fraction: expPct,
+                                          color: GameColors.cyanRune,
+                                        ),
+                                        const SizedBox(height: 10),
+                                        Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              '💎 SILVER PRISMS',
+                                              style: GoogleFonts.jetBrainsMono(
+                                                fontSize: 11,
+                                                color: GameColors.textMuted,
+                                              ),
+                                            ),
+                                            Text(
+                                              '${player.silverPrisms}',
+                                              style: GoogleFonts.jetBrainsMono(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                                color: GameColors.cyanRune,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 14),
+
+                                  // Offense Section
+                                  _StatsSectionTitle(title: 'COMBAT OFFENSE', icon: Icons.flash_on, color: GameColors.crimsonBlood),
+                                  const SizedBox(height: 6),
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.bgSurface,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(color: GameColors.borderSubtle),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        _StatDetailRow(
+                                          label: 'Total Attack Range',
+                                          value: '$totalMinAtk – $totalMaxAtk DMG',
+                                          subtext: '(Base: $baseAtkMin–$baseAtkMax, Gear: +$gearMinDmg–$gearMaxDmg)',
+                                          color: GameColors.crimsonBlood,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Critical Strike Chance',
+                                          value: '$critChance%',
+                                          subtext: 'Base 10% + 0.5%/AGI',
+                                          color: GameColors.goldAccent,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Critical Damage Multiplier',
+                                          value: '$critDmg%',
+                                          subtext: 'Base 150% + 1.0%/AGI',
+                                          color: GameColors.goldAccent,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 14),
+
+                                  // Defense Section
+                                  _StatsSectionTitle(title: 'DEFENSE & SURVIVAL', icon: Icons.shield, color: GameColors.terminalGreen),
+                                  const SizedBox(height: 6),
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.bgSurface,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(color: GameColors.borderSubtle),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        _StatDetailRow(
+                                          label: 'Total Armor Value',
+                                          value: '$gearArmor ARM',
+                                          subtext: 'Equipped gear rating',
+                                          color: GameColors.terminalGreen,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Physical Damage Mitigation',
+                                          value: '$dmgReduction%',
+                                          subtext: 'Estimated mitigation formula',
+                                          color: GameColors.terminalGreen,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'Evasion & Dodge Chance',
+                                          value: '$evasion%',
+                                          subtext: 'Base 5% + 0.4%/AGI',
+                                          color: GameColors.cyanRune,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                  const SizedBox(height: 14),
+
+                                  // Attributes Section
+                                  _StatsSectionTitle(title: 'CORE ATTRIBUTES', icon: Icons.insights, color: GameColors.goldAccent),
+                                  const SizedBox(height: 6),
+                                  Container(
+                                    padding: const EdgeInsets.all(12),
+                                    decoration: BoxDecoration(
+                                      color: GameColors.bgSurface,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: Border.all(color: GameColors.borderSubtle),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        _StatDetailRow(
+                                          label: 'STRENGTH (STR)',
+                                          value: '$totalStr',
+                                          subtext: 'Base ${player.strength} + Gear $bonusStr (+${totalStr ~/ 3} Bonus DMG)',
+                                          color: GameColors.crimsonBlood,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'AGILITY (AGI)',
+                                          value: '$totalAgi',
+                                          subtext: 'Base ${player.agility} + Gear $bonusAgi (Boosts Crit & Dodge)',
+                                          color: GameColors.terminalGreen,
+                                        ),
+                                        const Divider(color: GameColors.borderSubtle, height: 14),
+                                        _StatDetailRow(
+                                          label: 'INTELLIGENCE (INT)',
+                                          value: '$totalInt',
+                                          subtext: 'Base ${player.intelligence} + Gear $bonusInt (Magic power & resists)',
+                                          color: GameColors.goldAccent,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+
+                                  // Active Bonuses & Modifiers
+                                  if (specialBuffs.isNotEmpty) ...[
+                                    const SizedBox(height: 14),
+                                    _StatsSectionTitle(title: 'EQUIPMENT MODIFIERS & TRAITS', icon: Icons.auto_awesome, color: GameColors.cyanRune),
+                                    const SizedBox(height: 6),
+                                    Container(
+                                      padding: const EdgeInsets.all(12),
+                                      decoration: BoxDecoration(
+                                        color: GameColors.bgSurface,
+                                        borderRadius: BorderRadius.circular(8),
+                                        border: Border.all(color: GameColors.cyanRune.withValues(alpha: 0.4)),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: specialBuffs.map((b) {
+                                          return Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: 3),
+                                            child: Row(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                const Icon(Icons.check_circle_outline, size: 14, color: GameColors.cyanRune),
+                                                const SizedBox(width: 8),
+                                                Expanded(
+                                                  child: Text(
+                                                    b,
+                                                    style: GoogleFonts.jetBrainsMono(
+                                                      fontSize: 11,
+                                                      color: GameColors.textMain,
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          );
+                                        }).toList(),
+                                      ),
+                                    ),
+                                  ],
+
+                                  const SizedBox(height: 24),
+                                ],
+                              );
+                            },
+                            loading: () => const Center(
+                              child: CircularProgressIndicator(color: GameColors.goldAccent),
+                            ),
+                            error: (e, _) => Center(child: Text('Error loading equipment: $e')),
+                          );
+                        },
+                        loading: () => const Center(
+                          child: CircularProgressIndicator(color: GameColors.goldAccent),
+                        ),
+                        error: (e, _) => Center(child: Text('Error: $e')),
+                      ),
                     ),
                   ],
                 ),
-                const Divider(color: GameColors.borderSubtle),
-                const SizedBox(height: 8),
-                playerAsync.when(
-                  data: (player) {
-                    if (player == null) {
-                      return const Center(child: Text('No player data.'));
-                    }
-                    final hpPct = player.currentHp / player.baseHp;
-                    return Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        // Stat rows
-                        _StatRow(
-                          label: 'Level',
-                          value: '${player.level}',
-                          color: GameColors.goldAccent,
-                        ),
-                        const SizedBox(height: 10),
-                        _StatRow(
-                          label: 'HP',
-                          value: '${player.currentHp} / ${player.baseHp}',
-                          color: hpPct < 0.3
-                              ? GameColors.crimsonBlood
-                              : GameColors.terminalGreen,
-                        ),
-                        const SizedBox(height: 6),
-                        // HP bar
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(4),
-                          child: LinearProgressIndicator(
-                            value: hpPct.clamp(0.0, 1.0),
-                            minHeight: 6,
-                            backgroundColor:
-                                GameColors.borderSubtle.withValues(alpha: 0.4),
-                            valueColor: AlwaysStoppedAnimation(
-                              hpPct < 0.3
-                                  ? GameColors.crimsonBlood
-                                  : GameColors.terminalGreen,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        _StatRow(
-                          label: 'EXP',
-                          value: '${player.currentExp} / ${player.maxExp}',
-                          color: GameColors.cyanRune,
-                        ),
-                        const SizedBox(height: 6),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(4),
-                          child: LinearProgressIndicator(
-                            value: (player.currentExp / player.maxExp.clamp(1, player.maxExp)).clamp(0.0, 1.0),
-                            minHeight: 6,
-                            backgroundColor:
-                                GameColors.borderSubtle.withValues(alpha: 0.4),
-                            valueColor: const AlwaysStoppedAnimation(
-                                GameColors.cyanRune),
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        _StatRow(
-                          label: '💎 Prisms',
-                          value: '${player.silverPrisms}',
-                          color: GameColors.cyanRune,
-                        ),
-                        const SizedBox(height: 10),
-                        _StatRow(
-                          label: 'STR',
-                          value: '${player.strength}',
-                          color: GameColors.crimsonBlood,
-                        ),
-                        const SizedBox(height: 4),
-                        _StatRow(
-                          label: 'AGI',
-                          value: '${player.agility}',
-                          color: GameColors.terminalGreen,
-                        ),
-                        const SizedBox(height: 4),
-                        _StatRow(
-                          label: 'INT',
-                          value: '${player.intelligence}',
-                          color: GameColors.goldAccent,
-                        ),
-                      ],
-                    );
-                  },
-                  loading: () => const Center(
-                    child: CircularProgressIndicator(
-                        color: GameColors.goldAccent),
-                  ),
-                  error: (e, _) => Center(child: Text('Error: $e')),
-                ),
-              ],
-            ),
+              );
+            },
           );
         },
       );
@@ -783,14 +1105,14 @@ void _showStatusModal(BuildContext context, WidgetRef ref) {
   );
 }
 
-class _StatRow extends StatelessWidget {
-  final String label;
-  final String value;
+class _StatsSectionTitle extends StatelessWidget {
+  final String title;
+  final IconData icon;
   final Color color;
 
-  const _StatRow({
-    required this.label,
-    required this.value,
+  const _StatsSectionTitle({
+    required this.title,
+    required this.icon,
     required this.color,
   });
 
@@ -798,14 +1120,63 @@ class _StatRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        Icon(icon, size: 14, color: color),
+        const SizedBox(width: 6),
         Text(
-          label,
-          style: GoogleFonts.inter(
-            fontSize: 13,
-            color: GameColors.textMuted,
+          title,
+          style: GoogleFonts.jetBrainsMono(
+            fontSize: 10.5,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 0.8,
+            color: color,
           ),
         ),
-        const Spacer(),
+      ],
+    );
+  }
+}
+
+class _StatDetailRow extends StatelessWidget {
+  final String label;
+  final String value;
+  final String subtext;
+  final Color color;
+
+  const _StatDetailRow({
+    required this.label,
+    required this.value,
+    required this.subtext,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                label,
+                style: GoogleFonts.inter(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: GameColors.textMain,
+                ),
+              ),
+              if (subtext.isNotEmpty)
+                Text(
+                  subtext,
+                  style: GoogleFonts.jetBrainsMono(
+                    fontSize: 9.5,
+                    color: GameColors.textMuted,
+                  ),
+                ),
+            ],
+          ),
+        ),
         Text(
           value,
           style: GoogleFonts.jetBrainsMono(
@@ -818,6 +1189,60 @@ class _StatRow extends StatelessWidget {
     );
   }
 }
+
+class _DossierBar extends StatelessWidget {
+  final String label;
+  final String valueText;
+  final double fraction;
+  final Color color;
+
+  const _DossierBar({
+    required this.label,
+    required this.valueText,
+    required this.fraction,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              label,
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 10,
+                color: GameColors.textMuted,
+              ),
+            ),
+            Text(
+              valueText,
+              style: GoogleFonts.jetBrainsMono(
+                fontSize: 10.5,
+                fontWeight: FontWeight.bold,
+                color: color,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 4),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(3),
+          child: LinearProgressIndicator(
+            value: fraction.clamp(0.0, 1.0),
+            minHeight: 6,
+            backgroundColor: GameColors.borderSubtle.withValues(alpha: 0.4),
+            valueColor: AlwaysStoppedAnimation(color),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+
 
 // ─── World Map Modal ──────────────────────────────────────────────────────────
 void _showMapModal(BuildContext context, WidgetRef ref) {
