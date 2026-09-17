@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Guide & Codex — Vagabond Hero (Items, Classes, Skills, Mobs, Attributes)</title>
+  <meta name="description" content="Official Diablo-style game guide and codex for Vagabond Hero. Comprehensive database of legendary items, set gear, class skills, secondary resources, bestiary mobs, and core combat attributes." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="../assets/images/app-icon.jpg" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="guide.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- Main Navigation -->
+  <nav class="navbar">
+    <a href="../" class="brand">
+      <img src="../assets/images/app-icon.jpg" alt="Vagabond Hero Icon" class="brand-icon" />
+      <span class="brand-name">Vagabond Hero</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../#features" class="nav-link">Features</a></li>
+      <li><a href="../#terminal" class="nav-link">Terminal Preview</a></li>
+      <li><a href="../#story" class="nav-link">The 5 Acts</a></li>
+      <li><a href="index.html" class="nav-link active" style="color: var(--accent-gold);">📜 Game Guide</a></li>
+      <li><a href="../#download" class="nav-link">Download</a></li>
+      <li><a href="https://github.com/tildemark/Vagabond-Hero" target="_blank" rel="noopener" class="nav-link">GitHub</a></li>
+    </ul>
+    <a href="../#download" class="nav-cta">Get Android APK</a>
+  </nav>
+
+  <!-- Game Guide Hero -->
+  <header class="guide-hero">
+    <img src="../assets/images/game-guide-banner.jpg" alt="Vagabond Hero Codex Banner" class="guide-hero-banner" />
+    <div class="hero-badge" style="margin-bottom: 0.75rem;">
+      <span class="badge-pulse"></span>
+      <span>COMPREHENSIVE ARPG CODEX & DATABASE</span>
+    </div>
+    <h1 class="guide-title">The Grand Grimoire of the Expanse</h1>
+    <p class="guide-subtitle">
+      A comprehensive compendium detailing equipment slots, modifier budgets, legendary uniques, class awakenings, turn cooldowns, bestiary encounters, and socketing mechanics.
+    </p>
+  </header>
+
+  <!-- Codex Tab Navigation -->
+  <div class="guide-tabs-nav">
+    <button class="guide-tab-btn active" onclick="switchGuideTab('items')">⚔️ Items & Gear</button>
+    <button class="guide-tab-btn" onclick="switchGuideTab('classes')">🛡️ Classes & Skills</button>
+    <button class="guide-tab-btn" onclick="switchGuideTab('mobs')">👾 Bestiary / Mobs</button>
+    <button class="guide-tab-btn" onclick="switchGuideTab('attributes')">📊 Stats & Attributes</button>
+    <button class="guide-tab-btn" onclick="switchGuideTab('gems')">💎 Gems & Sockets</button>
+    <button class="guide-tab-btn" onclick="switchGuideTab('echoes')">⚡ Glitched & Echoes</button>
+  </div>
+
+  <main class="guide-container">
+
+    <!-- =========================================================
+         TAB 1: ITEMS & GEAR COMPENDIUM
+         ========================================================= -->
+    <section id="tab-items" class="guide-section active">
+      <div class="guide-header-box">
+        <h2 class="guide-header-title"><span>⚔️</span> Procedural Items, Sets & Legendaries</h2>
+        <p class="guide-header-desc">
+          Equipment spans 11 slots: Head, Neck, Torso, Waist, Arms, Legs, Feet, 2 Rings, Main Hand, and Off-Hand. Loot is governed by smart affix weighting (80/20 rule) ensuring drop relevance.
+        </p>
+      </div>
+
+      <div class="filter-bar">
+        <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">FILTER:</span>
+        <button class="filter-btn active" onclick="filterItems('all', this)">All Tiers</button>
+        <button class="filter-btn" onclick="filterItems('legendary', this)">Legendary (Orange)</button>
+        <button class="filter-btn" onclick="filterItems('set', this)">Set Pieces (Green)</button>
+        <button class="filter-btn" onclick="filterItems('glitched', this)">Glitched (Red)</button>
+        <button class="filter-btn" onclick="filterItems('weapons', this)">Weapons</button>
+        <button class="filter-btn" onclick="filterItems('armor', this)">Armor & Jewelry</button>
+        <input type="text" class="search-input" id="item-search" placeholder="Search gear name or affix..." oninput="searchItems(this.value)" />
+      </div>
+
+      <div class="cards-grid" id="items-grid">
+        
+        <!-- Legendary: The Carnage Engine -->
+        <div class="diablo-card legendary" data-type="weapons" data-tier="legendary">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">The Carnage Engine</div>
+              <div class="card-meta">2H Greataxe • Req Lv 60 • Berserker</div>
+            </div>
+            <span class="card-badge">Legendary</span>
+          </div>
+          <div class="card-stat-hero">
+            <div class="stat-hero-value">180 – 240</div>
+            <div class="stat-hero-label">Base Physical Damage</div>
+          </div>
+          <ul class="card-affixes">
+            <li class="card-affix">+130 to +180 Strength</li>
+            <li class="card-affix">+20% to +35% Attack Speed</li>
+            <li class="card-affix">3 Open Sockets (Ruby/Topaz)</li>
+            <li class="card-affix affix-legendary">Trait [Frenzy]: For every 10% HP missing, Base Weapon Damage increases by 15%.</li>
+          </ul>
+          <div class="card-lore">"When the pain becomes rhythm, the slaughter becomes art."</div>
+        </div>
+
+        <!-- Legendary: The Event Horizon -->
+        <div class="diablo-card legendary" data-type="weapons" data-tier="legendary">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">The Event Horizon</div>
+              <div class="card-meta">1H Flanged Mace • Req Lv 65 • Void-Knight</div>
+            </div>
+            <span class="card-badge">Legendary</span>
+          </div>
+          <div class="card-stat-hero">
+            <div class="stat-hero-value">110 – 140</div>
+            <div class="stat-hero-label">Base Physical Damage</div>
+          </div>
+          <ul class="card-affixes">
+            <li class="card-affix">+150 to +200 Strength / Stamina</li>
+            <li class="card-affix">+25% to +40% Total Armor</li>
+            <li class="card-affix">+15% Damage Reflect (Thorns)</li>
+            <li class="card-affix affix-legendary">Trait [Singularity]: Weapon damage scales 100% off Total Armor instead of Strength.</li>
+          </ul>
+          <div class="card-lore">"A gravity well forged from petrified server cores."</div>
+        </div>
+
+        <!-- Legendary: The Widow-Maker -->
+        <div class="diablo-card legendary" data-type="weapons" data-tier="legendary">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">The Widow-Maker</div>
+              <div class="card-meta">1H Kris Dagger • Req Lv 60 • Assassin</div>
+            </div>
+            <span class="card-badge">Legendary</span>
+          </div>
+          <div class="card-stat-hero">
+            <div class="stat-hero-value">95 – 130</div>
+            <div class="stat-hero-label">Base Finesse Damage</div>
+          </div>
+          <ul class="card-affixes">
+            <li class="card-affix">+130 to +180 Agility</li>
+            <li class="card-affix">+20% to +30% Attack Speed</li>
+            <li class="card-affix">+45 Flat Poison Damage</li>
+            <li class="card-affix affix-legendary">Trait [Toxic Shock]: At 5 Poison stacks, stacks detonate instantly for 500% AGI damage.</li>
+          </ul>
+          <div class="card-lore">"A single puncture invites an ocean of necrotic decay."</div>
+        </div>
+
+        <!-- Legendary: Spire of the Archon -->
+        <div class="diablo-card legendary" data-type="weapons" data-tier="legendary">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">Spire of the Archon</div>
+              <div class="card-meta">2H Mage-Staff • Req Lv 45 • Weaver</div>
+            </div>
+            <span class="card-badge">Legendary</span>
+          </div>
+          <div class="card-stat-hero">
+            <div class="stat-hero-value">60 – 80</div>
+            <div class="stat-hero-label">Base Magic Damage</div>
+          </div>
+          <ul class="card-affixes">
+            <li class="card-affix">+60 to +85 Intelligence</li>
+            <li class="card-affix">+100 to +200 Max Mana</li>
+            <li class="card-affix">2 Open Sockets</li>
+            <li class="card-affix affix-legendary">Trait [Feedback Loop]: Casting the same spell 2 turns in a row makes the 2nd cast cost 0 Mana.</li>
+          </ul>
+          <div class="card-lore">"Resonates with the foundational humming of the Shattered Expanse."</div>
+        </div>
+
+        <!-- Set: Bastion's Carapace -->
+        <div class="diablo-card set" data-type="armor" data-tier="set">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">Bastion's Carapace</div>
+              <div class="card-meta">Torso Plate • The Iron Bastion (1/3) • Lv 35</div>
+            </div>
+            <span class="card-badge">Set Piece</span>
+          </div>
+          <div class="card-stat-hero">
+            <div class="stat-hero-value">160 Armor</div>
+            <div class="stat-hero-label">Base Physical Mitigation</div>
+          </div>
+          <ul class="card-affixes">
+            <li class="card-affix">+60 Stamina (+600 HP, +15 Armor)</li>
+            <li class="card-affix">+200 Flat Maximum HP</li>
+            <li class="card-affix">2 Sockets</li>
+            <li class="card-affix affix-set">[2-Piece Set]: +20% Total Armor</li>
+            <li class="card-affix affix-set">[3-Piece - Spiked Barricade]: Reflects 100% of damage mitigated by armor back to attackers.</li>
+          </ul>
+          <div class="card-lore">"Hewn from the blast doors of the Deep Reactor."</div>
+        </div>
+
+        <!-- Set: Drowned King's Crown -->
+        <div class="diablo-card set" data-type="armor" data-tier="set">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">Drowned King's Crest</div>
+              <div class="card-meta">Headpiece • Sunken Royalty (1/3) • Lv 28</div>
+            </div>
+            <span class="card-badge">Set Piece</span>
+          </div>
+          <div class="card-stat-hero">
+            <div class="stat-hero-value">75 Armor</div>
+            <div class="stat-hero-label">Base Physical Mitigation</div>
+          </div>
+          <ul class="card-affixes">
+            <li class="card-affix">+35 Stamina / Intelligence</li>
+            <li class="card-affix">+25% Water / Ice Resistance</li>
+            <li class="card-affix affix-set">[2-Piece Set]: +20% Water Resistance & +15% Max HP</li>
+            <li class="card-affix affix-set">[3-Piece]: Attacks unleash a tidal wave dealing 50% weapon damage to all enemies.</li>
+          </ul>
+          <div class="card-lore">"Salt encrusts the dead jewels of an extinct civilization."</div>
+        </div>
+
+        <!-- Glitched: Fragment of the Null Pointer -->
+        <div class="diablo-card glitched" data-type="armor" data-tier="glitched">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">Fragment of the Null Pointer</div>
+              <div class="card-meta">Amulet • Post-Echo Corrupted Drop • Lv 70</div>
+            </div>
+            <span class="card-badge">Glitched</span>
+          </div>
+          <div class="card-stat-hero">
+            <div class="stat-hero-value">0 Armor</div>
+            <div class="stat-hero-label">Raw Corrupted Anomaly</div>
+          </div>
+          <ul class="card-affixes">
+            <li class="card-affix affix-glitch-pos">GLITCH BONUS: +250% All Elemental Infusion Damage</li>
+            <li class="card-affix affix-glitch-pos">GLITCH BONUS: +50% Critical Hit Chance (Overcap)</li>
+            <li class="card-affix affix-glitch-neg">CORRUPTION PENALTY: Cannot Evade attacks (Evasion locked to 0%)</li>
+            <li class="card-affix affix-glitch-neg">CORRUPTION PENALTY: Consumes 4% Current HP on every combat action</li>
+          </ul>
+          <div class="card-lore">"0x00000000 - MEMORY VIOLATION: Memory could not be read."</div>
+        </div>
+
+        <!-- Glitched: Voidcaller's Wand -->
+        <div class="diablo-card glitched" data-type="weapons" data-tier="glitched">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">Voidcaller's Wand [Corrupted]</div>
+              <div class="card-meta">1H Wand • Echo Level 70+ • Weaver / Warden</div>
+            </div>
+            <span class="card-badge">Glitched</span>
+          </div>
+          <div class="card-stat-hero">
+            <div class="stat-hero-value">340 – 480</div>
+            <div class="stat-hero-label">Base Arcane Damage</div>
+          </div>
+          <ul class="card-affixes">
+            <li class="card-affix">+180 Intelligence</li>
+            <li class="card-affix affix-glitch-pos">GLITCH BONUS: All spells trigger an extra cast simultaneously</li>
+            <li class="card-affix affix-glitch-neg">CORRUPTION PENALTY: Maximum Mana reduced by 50%</li>
+            <li class="card-affix">Trait: Void Singularity on Critical Strike</li>
+          </ul>
+          <div class="card-lore">"Spits broken data packets instead of fireballs."</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TAB 2: CLASSES & DYNAMIC RESOURCES
+         ========================================================= -->
+    <section id="tab-classes" class="guide-section">
+      <div class="guide-header-box">
+        <h2 class="guide-header-title"><span>🛡️</span> Class Progression & Dynamic Secondary Resources</h2>
+        <p class="guide-header-desc">
+          Unlike generic RPGs that lock every archetype into standard Mana, Vagabond Hero provides dynamic resources with unique generation loops, HUD colors, and playstyle requirements.
+        </p>
+      </div>
+
+      <div class="class-overview-banner">
+        <div class="class-pill vagabond">
+          <div class="class-pill-name">Vagabond</div>
+          <span class="class-resource-tag res-grit">Resource: Grit (0–100)</span>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 4px;">
+            Base survivor class (Lv 1–20). Willpower generated by surviving hits (+15) and basic attacks (+5).
+          </p>
+        </div>
+
+        <div class="class-pill juggernaut">
+          <div class="class-pill-name">Juggernaut</div>
+          <span class="class-resource-tag res-fury">Resource: Fury (0–100)</span>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 4px;">
+            Melee titan. Builds Fury through combat clash (+10 hit, +15 struck). Decays outside battle.
+          </p>
+        </div>
+
+        <div class="class-pill phantom">
+          <div class="class-pill-name">Phantom</div>
+          <span class="class-resource-tag res-energy">Resource: Energy (0–100)</span>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 4px;">
+            Agility striker. Starts at 100 with rapid turn regeneration (+25/turn) for lethal multi-hit combos.
+          </p>
+        </div>
+
+        <div class="class-pill weaver">
+          <div class="class-pill-name">Weaver</div>
+          <span class="class-resource-tag res-mana">Resource: Mana (0–Max MP)</span>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 4px;">
+            Deep arcane reservoir scaled from INT (Base 50 + INT * 5). High spell costs balanced by siphons.
+          </p>
+        </div>
+
+        <div class="class-pill warden">
+          <div class="class-pill-name">Warden</div>
+          <span class="class-resource-tag res-animus">Resource: Animus (0–100)</span>
+          <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 4px;">
+            Pack master. Generated through summon attacks (+15) and life leeching (+10) to sustain barriers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Skill Trees Breakdown -->
+      <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin-bottom: 1rem;">Core Skill Codices & Cooldown Mechanics</h3>
+      <div class="skill-list">
+        
+        <!-- Scavenger's Strike -->
+        <div class="skill-card">
+          <div class="skill-icon">🗡️</div>
+          <div class="skill-content">
+            <div class="skill-header">
+              <span class="skill-name">Scavenger's Strike [Lv 1 Vagabond]</span>
+              <span class="skill-cost-badge">0 Grit • Generates +5 Grit • 0 Turn CD</span>
+            </div>
+            <p class="skill-desc">Basic melee strike dealing 100% Weapon Damage. 10% chance to dislodge 1–5 Silver Prisms from the target.</p>
+          </div>
+        </div>
+
+        <!-- Patch Up -->
+        <div class="skill-card">
+          <div class="skill-icon">🩹</div>
+          <div class="skill-content">
+            <div class="skill-header">
+              <span class="skill-name">Patch Up [Lv 5 Vagabond]</span>
+              <span class="skill-cost-badge">30 Grit • Cooldown: 4 Turns</span>
+            </div>
+            <p class="skill-desc">Emergency field triage that immediately restores 15% Maximum HP. Inoperable while suffering from Bleeding or Poison DoTs.</p>
+          </div>
+        </div>
+
+        <!-- Heavy Smash -->
+        <div class="skill-card">
+          <div class="skill-icon">🔨</div>
+          <div class="skill-content">
+            <div class="skill-header">
+              <span class="skill-name">Heavy Smash [Lv 21 Juggernaut]</span>
+              <span class="skill-cost-badge">20 Fury • Cooldown: 2 Turns</span>
+            </div>
+            <p class="skill-desc">Overhead crushing blow dealing 140% Physical Damage and reducing target Evasion by 10% for 2 turns.</p>
+          </div>
+        </div>
+
+        <!-- Flurry -->
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <div class="skill-content">
+            <div class="skill-header">
+              <span class="skill-name">Flurry [Lv 21 Phantom]</span>
+              <span class="skill-cost-badge">25 Energy • Cooldown: 0 Turns</span>
+            </div>
+            <p class="skill-desc">High-speed dual strike, each blow inflicting 70% Finesse Damage with double the trigger chance for on-hit elemental affixes.</p>
+          </div>
+        </div>
+
+        <!-- Arcane Bolt -->
+        <div class="skill-card">
+          <div class="skill-icon">🔮</div>
+          <div class="skill-content">
+            <div class="skill-header">
+              <span class="skill-name">Arcane Bolt [Lv 21 Weaver]</span>
+              <span class="skill-cost-badge">10 Mana • Cooldown: 0 Turns</span>
+            </div>
+            <p class="skill-desc">Launches a homing lance of pure arcane energy dealing 130% Magic Damage. Automatically bypasses enemy Evasion (Never misses).</p>
+          </div>
+        </div>
+
+        <!-- Summon Void-Pup -->
+        <div class="skill-card">
+          <div class="skill-icon">🐺</div>
+          <div class="skill-content">
+            <div class="skill-header">
+              <span class="skill-name">Summon Void-Pup [Lv 21 Warden]</span>
+              <span class="skill-cost-badge">30 Animus • Cooldown: 8 Turns</span>
+            </div>
+            <p class="skill-desc">Conjures a pet beast with 30% of player Max HP. Automatically strikes every turn for 50% INT damage and generates +15 Animus.</p>
+          </div>
+        </div>
+
+        <!-- Obliterate -->
+        <div class="skill-card" style="border-color: rgba(220, 38, 38, 0.4); background: rgba(220, 38, 38, 0.04);">
+          <div class="skill-icon" style="border-color: #dc2626;">💥</div>
+          <div class="skill-content">
+            <div class="skill-header">
+              <span class="skill-name">Obliterate [Lv 70 World-Breaker Pinnacle]</span>
+              <span class="skill-cost-badge">60 Fury + 20% HP • Cooldown: 4 Turns</span>
+            </div>
+            <p class="skill-desc">A reality-rending execution strike dealing 500% Physical Damage. If this strike slays the target, its cooldown instantly resets to 0.</p>
+          </div>
+        </div>
+
+        <!-- Time Stop -->
+        <div class="skill-card" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.04);">
+          <div class="skill-icon" style="border-color: #38bdf8;">⏳</div>
+          <div class="skill-content">
+            <div class="skill-header">
+              <span class="skill-name">Time Stop [Lv 70 Arch-Mage Pinnacle]</span>
+              <span class="skill-cost-badge">60 Mana • Cooldown: 8 Turns</span>
+            </div>
+            <p class="skill-desc">Freezes the global combat ticks. Player takes 3 consecutive turns back-to-back while enemies and environmental DoTs remain completely frozen.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TAB 3: BESTIARY & MOBS
+         ========================================================= -->
+    <section id="tab-mobs" class="guide-section">
+      <div class="guide-header-box">
+        <h2 class="guide-header-title"><span>👾</span> The Bestiary of the Shattered Expanse</h2>
+        <p class="guide-header-desc">
+          Enemies scale dynamically based on node coordinates and level using procedural multipliers: <code>HP = BaseHP × (1 + Level × Scaling)^1.2</code>.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        
+        <!-- Void-Rat -->
+        <div class="mob-card mob-type-beast">
+          <div class="mob-header">
+            <span class="mob-name">Void-Rat</span>
+            <span class="mob-level-pill">Lv 1 – 5</span>
+          </div>
+          <div class="mob-act-tag">ACT I: THE ASHEN WOODS • BEAST</div>
+          <div class="mob-trait-box">
+            <strong>Signature Trait:</strong> High attack speed, fragile HP. Inflicts stackable <em>Bleed</em> (scales off Agility).
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Common scavenger rodent corrupted by dark matter seepages in the clearing.</p>
+        </div>
+
+        <!-- Thorn-Back Crawler -->
+        <div class="mob-card mob-type-beast">
+          <div class="mob-header">
+            <span class="mob-name">Thorn-Back Crawler</span>
+            <span class="mob-level-pill">Lv 7 – 14</span>
+          </div>
+          <div class="mob-act-tag">ACT I: THE ASHEN WOODS • BEAST</div>
+          <div class="mob-trait-box">
+            <strong>Signature Trait:</strong> 10% Native Armor. Reflects 15% physical damage back to melee attackers as Thorns.
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Armored carapace beast that punishes unmitigated physical assault.</p>
+        </div>
+
+        <!-- Barnacle-Encrusted Golem -->
+        <div class="mob-card mob-type-construct">
+          <div class="mob-header">
+            <span class="mob-name">Barnacle Golem</span>
+            <span class="mob-level-pill">Lv 21 – 28</span>
+          </div>
+          <div class="mob-act-tag">ACT II: SUNKEN CITY • CONSTRUCT</div>
+          <div class="mob-trait-box">
+            <strong>Signature Trait:</strong> Extremely High Armor. Immune to Bleed; critically vulnerable to Lightning/Shock spells.
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Ancient maintenance automaton submerged in saltwater for centuries.</p>
+        </div>
+
+        <!-- Memory-Leak Spectre -->
+        <div class="mob-card mob-type-undead">
+          <div class="mob-header">
+            <span class="mob-name">Memory-Leak Spectre</span>
+            <span class="mob-level-pill">Lv 58 – 65</span>
+          </div>
+          <div class="mob-act-tag">ACT IV: ASTRAL SERVERS • UNDEAD</div>
+          <div class="mob-trait-box">
+            <strong>Signature Trait:</strong> Drains 10% of player's active Secondary Resource (Grit, Fury, Energy, Mana, or Animus) per hit.
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">A ghost formed from unreleased heap allocations wandering the server aisles.</p>
+        </div>
+
+        <!-- The Whispering Broodmother -->
+        <div class="mob-card mob-type-boss">
+          <div class="mob-header">
+            <span class="mob-name">The Whispering Broodmother</span>
+            <span class="mob-level-pill">Lv 15 [Mini-Boss]</span>
+          </div>
+          <div class="mob-act-tag">ACT I APEX • DAEMON / BEAST</div>
+          <div class="mob-trait-box">
+            <strong>Boss Mechanic:</strong> Every 3 turns, wraps the player in web tokens, disabling the Potion belt slot for 2 turns.
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Guards the ancient waypoint into the Sunken Core.</p>
+        </div>
+
+        <!-- The Garbage Collector -->
+        <div class="mob-card mob-type-boss">
+          <div class="mob-header">
+            <span class="mob-name">The Garbage Collector</span>
+            <span class="mob-level-pill">Lv 70+ [Endgame Boss]</span>
+          </div>
+          <div class="mob-act-tag">ACT V: UNALLOCATED SPACE • GLITCH</div>
+          <div class="mob-trait-box">
+            <strong>Annihilation Protocol:</strong> Permanently deletes player UI action buttons turn-by-turn until defeated.
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">The final automated kernel daemon tasked with purging all living memory threads.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TAB 4: STATS, ATTRIBUTES & FORMULAS
+         ========================================================= -->
+    <section id="tab-attributes" class="guide-section">
+      <div class="guide-header-box">
+        <h2 class="guide-header-title"><span>📊</span> Core Attributes & Mathematical Formulas</h2>
+        <p class="guide-header-desc">
+          Vagabond Hero computes character defense, damage mitigation, and utility through clear, deterministic formulas.
+        </p>
+      </div>
+
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <thead>
+            <tr>
+              <th>Core Attribute</th>
+              <th>Primary Effects</th>
+              <th>Secondary Conversions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Strength (STR)</strong></td>
+              <td>Increases Physical Damage (Swords, Maces, Axes)</td>
+              <td>+1 Base Armor per 2 STR points</td>
+            </tr>
+            <tr>
+              <td><strong>Agility (AGI)</strong></td>
+              <td>Increases Finesse/Ranged Damage (Daggers, Bows)</td>
+              <td>+0.1% Evasion & +0.1% Critical Chance per AGI</td>
+            </tr>
+            <tr>
+              <td><strong>Intelligence (INT)</strong></td>
+              <td>Increases Magic Damage (Wands, Staffs, Spells)</td>
+              <td>+5 Max Mana per INT point (Weavers) & Elemental Resists</td>
+            </tr>
+            <tr>
+              <td><strong>Stamina (STA)</strong></td>
+              <td>Core Survival Attribute</td>
+              <td><strong>+10 Maximum HP</strong> per STA point & <strong>+1 Armor</strong> per 4 STA</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-family: var(--font-serif); color: var(--accent-gold); margin-bottom: 1rem;">Elemental Infusions & Combat Utility Caps</h3>
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <thead>
+            <tr>
+              <th>Combat Stat</th>
+              <th>Type</th>
+              <th>Hard Cap</th>
+              <th>Description & Synergy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Elemental Resistances</strong></td>
+              <td>Defensive</td>
+              <td><strong>75%</strong></td>
+              <td>Fire, Ice, Poison, Void, Lightning, and Water damage reduction.</td>
+            </tr>
+            <tr>
+              <td><strong>Critical Strike Chance</strong></td>
+              <td>Offensive</td>
+              <td><strong>75%</strong></td>
+              <td>Base Critical Hit Damage starts at 150% and scales with gear.</td>
+            </tr>
+            <tr>
+              <td><strong>Life Steal</strong></td>
+              <td>Sustain</td>
+              <td><strong>30%</strong></td>
+              <td>Heals character for a % of actual unmitigated damage dealt.</td>
+            </tr>
+            <tr>
+              <td><strong>Damage Reflect (Thorns)</strong></td>
+              <td>Counter</td>
+              <td>Uncapped</td>
+              <td>Deals flat and % reflected physical damage back when struck.</td>
+            </tr>
+            <tr>
+              <td><strong>Cooldown Reduction (CDR)</strong></td>
+              <td>Utility</td>
+              <td><strong>50%</strong></td>
+              <td>Reduces active skill turn cooldowns (rounded to nearest integer).</td>
+            </tr>
+            <tr>
+              <td><strong>Magic Find (MF)</strong></td>
+              <td>Loot Pool</td>
+              <td>Uncapped</td>
+              <td>Increases probability that procedural drops roll as Rare or Legendary.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         TAB 5: GEMS & SOCKETING
+         ========================================================= -->
+    <section id="tab-gems" class="guide-section">
+      <div class="guide-header-box">
+        <h2 class="guide-header-title"><span>💎</span> The Gem Forge & Socketing Matrix</h2>
+        <p class="guide-header-desc">
+          Socketable gems drop from Level 15 onward. Sockets vary by slot (up to 3 in Weapons & Torso). Slotting gems grants distinct bonuses depending on whether inserted into Weapons, Armor, or Jewelry.
+        </p>
+      </div>
+
+      <div class="guide-table-wrap">
+        <table class="guide-table">
+          <thead>
+            <tr>
+              <th>Gem Type</th>
+              <th>Weapon Slot (Offense)</th>
+              <th>Armor / Head / Legs (Defense)</th>
+              <th>Jewelry Slot (Utility)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="gem-ruby">Ruby (Fire)</td>
+              <td>+ Flat Fire Damage</td>
+              <td>+ Flat Max HP</td>
+              <td>+ % Fire Resistance</td>
+            </tr>
+            <tr>
+              <td class="gem-sapphire">Sapphire (Ice)</td>
+              <td>+ Flat Ice Damage</td>
+              <td>+ Max Secondary Resource (Grit/Fury/Energy/Mana/Animus)</td>
+              <td>+ % Ice Resistance</td>
+            </tr>
+            <tr>
+              <td class="gem-emerald">Emerald (Poison)</td>
+              <td>+ Flat Poison Damage</td>
+              <td>+ Flat Armor</td>
+              <td>+ % Poison Resistance</td>
+            </tr>
+            <tr>
+              <td class="gem-amethyst">Amethyst (Void)</td>
+              <td>+ Flat Void Damage</td>
+              <td>+ % Damage Reflect (Thorns)</td>
+              <td>+ % Void Resistance</td>
+            </tr>
+            <tr>
+              <td class="gem-diamond">Diamond (Core)</td>
+              <td>+ % Boss Damage</td>
+              <td>+ % All Resistances</td>
+              <td>+ % Magic Find (Loot Rarity)</td>
+            </tr>
+            <tr>
+              <td class="gem-topaz">Topaz (Wealth)</td>
+              <td>+ % Life Steal</td>
+              <td>+ % Evasion</td>
+              <td>+ % Gold Drop Rate</td>
+            </tr>
+            <tr>
+              <td class="gem-pearl">Pearl (Swiftness)</td>
+              <td>+ % Attack Speed</td>
+              <td>+ % Movement / Avoidance</td>
+              <td>+ % EXP Gained Boost</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin-bottom: 0.75rem;">Tier Combining Formula (The Blacksmith)</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+        Combine <strong>3 Gems of the same tier</strong> plus Silver Prisms at any Waypoint Anvil to synthesize the next tier:
+        <br>
+        <code>Chipped (Lv 1+) ➔ Flawed (Lv 15+) ➔ Regular (Lv 30+) ➔ Flawless (Lv 50+) ➔ Perfect (Lv 70) ➔ Radiant (Act 5 Glitched)</code>
+      </p>
+    </section>
+
+    <!-- =========================================================
+         TAB 6: GLITCHED ITEMS & ECHO SYSTEM
+         ========================================================= -->
+    <section id="tab-echoes" class="guide-section">
+      <div class="guide-header-box">
+        <h2 class="guide-header-title"><span>⚡</span> Glitched Modifiers & The Level 70 Echo Quest</h2>
+        <p class="guide-header-desc">
+          Progression beyond Level 70 is unlocked via the pinnacle quest <strong>"Breaking the Core"</strong>. Completing it grants access to Glitched (Red) item drops and Paragon-style Echo micro-allocation.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="diablo-card glitched">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">Corrupted Item Infusion</div>
+              <div class="card-meta">Post-Echo Pinnacle Mechanics</div>
+            </div>
+            <span class="card-badge">System Rule</span>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-main); margin-bottom: 0.75rem;">
+            Once "Breaking the Core" is cleared, all newly dropped Legendary and Set items have a <strong>10% baseline probability</strong> to roll a Glitched Modifier on top of their normal modifier budget.
+          </p>
+          <ul class="card-affixes">
+            <li class="card-affix affix-glitch-pos">Positive Effect: Massive god-tier buffs (+250% skill dmg, double casts, etc.).</li>
+            <li class="card-affix affix-glitch-neg">Negative Penalty: Severe build constraints (-50% Max Mana, zero evasion, HP recoil).</li>
+          </ul>
+        </div>
+
+        <div class="diablo-card unique">
+          <div class="card-top">
+            <div class="card-title-group">
+              <div class="card-title">The Echo Point System</div>
+              <div class="card-meta">Infinite Level 70+ Progression</div>
+            </div>
+            <span class="card-badge">Paragon</span>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-main); margin-bottom: 0.75rem;">
+            EXP earned after Level 70 fills the Echo Bar. Each Echo Level grants 1 point for micro-optimizations:
+          </p>
+          <ul class="card-affixes">
+            <li class="card-affix">Offense: +0.2% Crit Damage, +0.1% Attack Speed, +0.2% Elemental Infusion.</li>
+            <li class="card-affix">Defense: +0.2% Armor, +0.1% Life Steal, +0.2% All-Resist.</li>
+            <li class="card-affix">Utility: +0.5% Gold Drop Rate, +0.5% Magic Find, +0.2% Resource Generation.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2026 Vagabond Hero. Open-source dark fantasy text RPG created with Flutter & Drift.</p>
+      <div class="footer-links">
+        <a href="../">Home</a>
+        <a href="../#download">Download APK</a>
+        <a href="https://github.com/tildemark/Vagabond-Hero" target="_blank" rel="noopener">GitHub Repository</a>
+        <a href="https://github.com/tildemark/Vagabond-Hero/tree/main/docs" target="_blank" rel="noopener">Markdown Docs</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Filtering & Tab Script -->
+  <script>
+    function switchGuideTab(tabId) {
+      document.querySelectorAll('.guide-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.guide-section').forEach(sec => sec.classList.remove('active'));
+
+      event.currentTarget.classList.add('active');
+      const targetSec = document.getElementById('tab-' + tabId);
+      if (targetSec) {
+        targetSec.classList.add('active');
+      }
+    }
+
+    function filterItems(category, btn) {
+      const parent = btn.parentElement;
+      parent.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#items-grid .diablo-card');
+      cards.forEach(card => {
+        const tier = card.getAttribute('data-tier');
+        const type = card.getAttribute('data-type');
+        if (category === 'all') {
+          card.style.display = 'flex';
+        } else if (category === tier || category === type) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function searchItems(query) {
+      const q = query.toLowerCase().trim();
+      const cards = document.querySelectorAll('#items-grid .diablo-card');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

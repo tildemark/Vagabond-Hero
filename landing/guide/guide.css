@@ -1,0 +1,650 @@
+/* =========================================================
+   VAGABOND HERO — ARPG COMPREHENSIVE GAME GUIDE STYLES
+   Diablo / Grim Dawn Inspired Dark Runic Grimoire Theme
+   ========================================================= */
+
+.guide-hero {
+  position: relative;
+  padding: 5rem 2rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at 50% 20%, rgba(0, 242, 254, 0.08) 0%, transparent 60%);
+}
+
+.guide-hero-banner {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 242, 254, 0.2);
+  margin-bottom: 2rem;
+}
+
+.guide-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  color: var(--text-bright);
+  text-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.guide-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+/* Guide Navigation Tabs */
+.guide-tabs-nav {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: sticky;
+  top: 73px;
+  z-index: 90;
+  background: rgba(10, 12, 16, 0.95);
+  backdrop-filter: blur(14px);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.guide-tab-btn {
+  background: rgba(18, 24, 38, 0.8);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.guide-tab-btn:hover {
+  border-color: var(--accent-cyan);
+  color: var(--text-bright);
+  background: rgba(0, 242, 254, 0.08);
+  transform: translateY(-2px);
+}
+
+.guide-tab-btn.active {
+  background: linear-gradient(135deg, rgba(0, 242, 254, 0.25), rgba(79, 172, 254, 0.15));
+  border-color: var(--accent-cyan);
+  color: var(--text-bright);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+  font-weight: 600;
+}
+
+/* Guide Container */
+.guide-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 5rem;
+}
+
+.guide-section {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.guide-section.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.guide-header-box {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.guide-header-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--accent-gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.guide-header-desc {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 900px;
+}
+
+/* Filter controls inside sections */
+.filter-bar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  align-items: center;
+  background: rgba(18, 24, 38, 0.5);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  color: var(--text-bright);
+  background: rgba(255,255,255,0.05);
+}
+
+.filter-btn.active {
+  background: rgba(246, 200, 107, 0.15);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* Search input */
+.search-input {
+  background: #07090e;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-bright);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  width: 250px;
+  margin-left: auto;
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+/* =========================================================
+   DIABLO-STYLE ITEM & CODEX CARDS
+   ========================================================= */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.diablo-card {
+  background: #090c12;
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border: 1px solid rgba(72, 94, 138, 0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diablo-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Rarity Accents */
+.diablo-card.common {
+  border-color: #94a3b8;
+}
+.diablo-card.common:hover {
+  box-shadow: 0 8px 30px rgba(148, 163, 184, 0.2);
+}
+
+.diablo-card.magic {
+  border-color: #38bdf8;
+}
+.diablo-card.magic:hover {
+  box-shadow: 0 8px 30px rgba(56, 189, 248, 0.25);
+}
+
+.diablo-card.rare {
+  border-color: #facc15;
+}
+.diablo-card.rare:hover {
+  box-shadow: 0 8px 30px rgba(250, 204, 21, 0.3);
+}
+
+.diablo-card.unique {
+  border-color: #c084fc;
+}
+.diablo-card.unique:hover {
+  box-shadow: 0 8px 30px rgba(192, 132, 252, 0.35);
+}
+
+.diablo-card.legendary {
+  border-color: #fb923c;
+  background: radial-gradient(circle at 50% 0%, rgba(251, 146, 60, 0.08) 0%, #090c12 70%);
+}
+.diablo-card.legendary:hover {
+  box-shadow: 0 8px 35px rgba(251, 146, 60, 0.4);
+}
+
+.diablo-card.set {
+  border-color: #4ade80;
+  background: radial-gradient(circle at 50% 0%, rgba(74, 222, 128, 0.08) 0%, #090c12 70%);
+}
+.diablo-card.set:hover {
+  box-shadow: 0 8px 35px rgba(74, 222, 128, 0.4);
+}
+
+.diablo-card.glitched {
+  border-color: #f43f5e;
+  background: radial-gradient(circle at 50% 0%, rgba(244, 63, 94, 0.12) 0%, #090c12 70%);
+  animation: glitchPulse 4s infinite alternate;
+}
+.diablo-card.glitched:hover {
+  box-shadow: 0 8px 40px rgba(244, 63, 94, 0.5);
+}
+
+@keyframes glitchPulse {
+  0% { border-color: #f43f5e; }
+  50% { border-color: #ec4899; }
+  100% { border-color: #f43f5e; }
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.card-title-group {
+  flex: 1;
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.2rem;
+}
+
+.common .card-title { color: #f1f5f9; }
+.magic .card-title { color: #38bdf8; }
+.rare .card-title { color: #facc15; }
+.unique .card-title { color: #c084fc; }
+.legendary .card-title { color: #fb923c; }
+.set .card-title { color: #4ade80; }
+.glitched .card-title { color: #f43f5e; }
+
+.card-meta {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.card-badge {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.06);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.common .card-badge { color: #cbd5e1; border: 1px solid #64748b; }
+.magic .card-badge { color: #7dd3fc; border: 1px solid #0284c7; }
+.rare .card-badge { color: #fde047; border: 1px solid #ca8a04; }
+.unique .card-badge { color: #e9d5ff; border: 1px solid #9333ea; }
+.legendary .card-badge { color: #fdba74; border: 1px solid #ea580c; }
+.set .card-badge { color: #86efac; border: 1px solid #16a34a; }
+.glitched .card-badge { color: #fda4af; border: 1px solid #e11d48; }
+
+.card-stat-hero {
+  background: rgba(0,0,0,0.4);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.85rem;
+  border-left: 3px solid var(--accent-cyan);
+}
+
+.stat-hero-value {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.stat-hero-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.card-affixes {
+  list-style: none;
+  margin-bottom: 0.85rem;
+  flex: 1;
+}
+
+.card-affix {
+  font-size: 0.85rem;
+  color: #93c5fd;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.card-affix::before {
+  content: "•";
+  color: var(--accent-cyan);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.affix-legendary {
+  color: #fb923c !important;
+  font-weight: 600;
+}
+
+.affix-set {
+  color: #4ade80 !important;
+  font-weight: 600;
+}
+
+.affix-glitch-pos {
+  color: #f43f5e !important;
+  font-weight: 600;
+}
+
+.affix-glitch-neg {
+  color: #ef4444 !important;
+  font-style: italic;
+}
+
+.card-lore {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #64748b;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 0.6rem;
+  margin-top: auto;
+}
+
+/* =========================================================
+   DIABLO SKILL TREES & CLASSES STYLING
+   ========================================================= */
+
+.class-overview-banner {
+  background: rgba(18, 24, 38, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.class-pill {
+  background: #080b10;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.class-pill::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; width: 4px; height: 100%;
+}
+
+.class-pill.vagabond::before { background: #b45309; }
+.class-pill.juggernaut::before { background: #dc2626; }
+.class-pill.phantom::before { background: #f59e0b; }
+.class-pill.weaver::before { background: #38bdf8; }
+.class-pill.warden::before { background: #10b981; }
+
+.class-pill-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.class-resource-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  align-self: flex-start;
+  font-weight: 600;
+}
+
+.res-grit { background: rgba(180, 83, 9, 0.2); color: #f59e0b; border: 1px solid #b45309; }
+.res-fury { background: rgba(220, 38, 38, 0.2); color: #f87171; border: 1px solid #dc2626; }
+.res-energy { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid #d97706; }
+.res-mana { background: rgba(56, 189, 248, 0.2); color: #7dd3fc; border: 1px solid #0284c7; }
+.res-animus { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid #059669; }
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-card {
+  background: #0b0f17;
+  border: 1px solid rgba(72, 94, 138, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.skill-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.skill-content {
+  flex: 1;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-name {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.skill-cost-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  background: rgba(246, 200, 107, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(246, 200, 107, 0.3);
+}
+
+.skill-desc {
+  font-size: 0.88rem;
+  color: var(--text-main);
+  line-height: 1.45;
+}
+
+/* =========================================================
+   BESTIARY / MOBS STYLING
+   ========================================================= */
+
+.mob-card {
+  background: #0a0d14;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mob-type-beast { border-top: 3px solid #f59e0b; }
+.mob-type-undead { border-top: 3px solid #8b5cf6; }
+.mob-type-construct { border-top: 3px solid #38bdf8; }
+.mob-type-daemon { border-top: 3px solid #ef4444; }
+.mob-type-glitch { border-top: 3px solid #ec4899; }
+.mob-type-boss { border-top: 3px solid #f43f5e; box-shadow: 0 0 20px rgba(244, 63, 94, 0.2); }
+
+.mob-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.mob-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.mob-level-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  color: var(--accent-gold);
+}
+
+.mob-act-tag {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.mob-trait-box {
+  background: rgba(0,0,0,0.3);
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-main);
+  border-left: 2px solid var(--accent-crimson);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+/* =========================================================
+   STATS, FORMULAS & MODIFIERS TABLE
+   ========================================================= */
+
+.guide-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: #080a0f;
+}
+
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.guide-table th {
+  background: #0d121c;
+  padding: 0.85rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent-cyan);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.guide-table td {
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid rgba(72, 94, 138, 0.15);
+  color: var(--text-main);
+}
+
+.guide-table tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+.gem-ruby { color: #f87171; font-weight: 600; }
+.gem-sapphire { color: #38bdf8; font-weight: 600; }
+.gem-emerald { color: #34d399; font-weight: 600; }
+.gem-amethyst { color: #c084fc; font-weight: 600; }
+.gem-diamond { color: #f1f5f9; font-weight: 600; }
+.gem-topaz { color: #fbbf24; font-weight: 600; }
+.gem-pearl { color: #e2e8f0; font-weight: 600; }
+
+@media (max-width: 768px) {
+  .guide-hero {
+    padding: 3rem 1rem 2rem;
+  }
+  .guide-container {
+    padding: 1.5rem 1rem;
+  }
+  .search-input {
+    width: 100%;
+    margin-left: 0;
+  }
+}
