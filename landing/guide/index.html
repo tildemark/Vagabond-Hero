@@ -605,20 +605,6 @@
 
   <!-- Interactive Filtering & Tab Script -->
   <script>
-    function switchGuideTab(tabId) {
-      document.querySelectorAll('.guide-tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.guide-section').forEach(sec => sec.classList.remove('active'));
-
-      event.currentTarget.classList.add('active');
-      const targetSec = document.getElementById('tab-' + tabId);
-      if (targetSec) {
-        targetSec.classList.add('active');
-      }
-    }
-
-    function filterItems(category, btn) {
-  <!-- Interactive Filtering & Tab Script -->
-  <script>
     let allItems = [];
     let filteredItems = [];
     let currentRarity = 'all';
@@ -834,8 +820,12 @@
                 .replace(/'/g, '&#039;');
     }
 
-    // Auto initialize on DOM ready
-    window.addEventListener('DOMContentLoaded', loadItemDatabase);
+    // Auto initialize on DOM ready or immediate if already loaded
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', loadItemDatabase);
+    } else {
+      loadItemDatabase();
+    }
   </script>
 </body>
 </html>
