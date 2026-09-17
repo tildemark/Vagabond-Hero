@@ -136,32 +136,32 @@
           2. Compare Equipment Slots (Lv 1–70):
         </div>
         <div class="slot-deck" id="slot-deck-bar">
-          <button class="slot-btn active" data-slot="all" title="View all equipment slots (425 items)" onclick="selectSlotFilter('all', this)">
-            <span class="slot-icon">🌐</span> <span class="slot-label">All</span> <span class="slot-count-badge" id="slot-count-all">425</span>
+          <button class="slot-btn active" data-slot="all" title="View all equipment slots (458 items)" onclick="selectSlotFilter('all', this)">
+            <span class="slot-icon">🌐</span> <span class="slot-label">All</span> <span class="slot-count-badge" id="slot-count-all">458</span>
           </button>
           <button class="slot-btn" data-slot="Head" title="Head Slot: Helms, Hoods, Caps, & Masks" onclick="selectSlotFilter('Head', this)">
-            <span class="slot-icon">🪖</span> <span class="slot-label">Head</span> <span class="slot-count-badge" id="slot-count-Head">51</span>
+            <span class="slot-icon">🪖</span> <span class="slot-label">Head</span> <span class="slot-count-badge" id="slot-count-Head">56</span>
           </button>
           <button class="slot-btn" data-slot="Chest" title="Torso Slot: Chestplates, Robes, Shirts, & Carapaces" onclick="selectSlotFilter('Chest', this)">
-            <span class="slot-icon">🥋</span> <span class="slot-label">Torso</span> <span class="slot-count-badge" id="slot-count-Chest">81</span>
+            <span class="slot-icon">🥋</span> <span class="slot-label">Torso</span> <span class="slot-count-badge" id="slot-count-Chest">86</span>
           </button>
           <button class="slot-btn" data-slot="Arms" title="Arms Slot: Gauntlets, Gloves, Bracers, & Wraps" onclick="selectSlotFilter('Arms', this)">
-            <span class="slot-icon">🧤</span> <span class="slot-label">Arms</span> <span class="slot-count-badge" id="slot-count-Arms">30</span>
+            <span class="slot-icon">🧤</span> <span class="slot-label">Arms</span> <span class="slot-count-badge" id="slot-count-Arms">35</span>
           </button>
           <button class="slot-btn" data-slot="Waist" title="Waist Slot: Belts, Sashes, Girdles, & Cords" onclick="selectSlotFilter('Waist', this)">
-            <span class="slot-icon">🎗️</span> <span class="slot-label">Waist</span> <span class="slot-count-badge" id="slot-count-Waist">31</span>
+            <span class="slot-icon">🎗️</span> <span class="slot-label">Waist</span> <span class="slot-count-badge" id="slot-count-Waist">36</span>
           </button>
           <button class="slot-btn" data-slot="Legs" title="Legs Slot: Greaves, Pants, Legguards, & Skirts" onclick="selectSlotFilter('Legs', this)">
-            <span class="slot-icon">👖</span> <span class="slot-label">Legs</span> <span class="slot-count-badge" id="slot-count-Legs">30</span>
+            <span class="slot-icon">👖</span> <span class="slot-label">Legs</span> <span class="slot-count-badge" id="slot-count-Legs">35</span>
           </button>
           <button class="slot-btn" data-slot="Feet" title="Feet Slot: Boots, Sabatons, Shoes, & Sandals" onclick="selectSlotFilter('Feet', this)">
-            <span class="slot-icon">🥾</span> <span class="slot-label">Feet</span> <span class="slot-count-badge" id="slot-count-Feet">31</span>
+            <span class="slot-icon">🥾</span> <span class="slot-label">Feet</span> <span class="slot-count-badge" id="slot-count-Feet">36</span>
           </button>
           <button class="slot-btn" data-slot="Weapon" title="Main-Hand Slot: Swords, Axes, Maces, Bows, Wands, & Staffs" onclick="selectSlotFilter('Weapon', this)">
-            <span class="slot-icon">⚔️</span> <span class="slot-label">Weapons</span> <span class="slot-count-badge" id="slot-count-Weapon">78</span>
+            <span class="slot-icon">⚔️</span> <span class="slot-label">Weapons</span> <span class="slot-count-badge" id="slot-count-Weapon">68</span>
           </button>
           <button class="slot-btn" data-slot="OffHand" title="Off-Hand Slot: Shields, Bucklers, & Focuses" onclick="selectSlotFilter('OffHand', this)">
-            <span class="slot-icon">🛡️</span> <span class="slot-label">Off-Hands</span> <span class="slot-count-badge" id="slot-count-OffHand">14</span>
+            <span class="slot-icon">🛡️</span> <span class="slot-label">Off-Hands</span> <span class="slot-count-badge" id="slot-count-OffHand">17</span>
           </button>
           <button class="slot-btn" data-slot="Neck" title="Neck Slot: Amulets, Necklaces, & Chokers" onclick="selectSlotFilter('Neck', this)">
             <span class="slot-icon">📿</span> <span class="slot-label">Neck</span> <span class="slot-count-badge" id="slot-count-Neck">41</span>
@@ -762,6 +762,7 @@
     function getItemSlotCategory(it) {
       const es = it.equipSlot || '';
       const bt = it.baseType || '';
+      if (es === 'OffHand' || bt === 'OffHand' || bt === 'Shield') return 'OffHand';
       if (es === 'Head' || bt === 'Head') return 'Head';
       if (es === 'Chest' || bt === 'Chest' || bt === 'Armor') return 'Chest';
       if (es === 'Arms' || bt === 'Arms') return 'Arms';
@@ -769,7 +770,6 @@
       if (es === 'Legs' || bt === 'Legs') return 'Legs';
       if (es === 'Feet' || bt === 'Feet') return 'Feet';
       if (es === 'MainHand' || bt === 'Weapon') return 'Weapon';
-      if (es === 'OffHand' || bt === 'Shield') return 'OffHand';
       if (es === 'Neck' || bt === 'Neck') return 'Neck';
       if (es === 'RingL' || bt === 'Ring') return 'Ring';
       return bt || es || 'Other';
