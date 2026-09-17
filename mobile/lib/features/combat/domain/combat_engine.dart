@@ -2,8 +2,10 @@ import 'dart:math';
 import 'package:drift/drift.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'dart:convert';
 import '../../../core/database/app_database.dart';
 import '../../../core/database/database_providers.dart';
+import '../../../core/database/item_templates.dart';
 
 final combatLogProvider =
     NotifierProvider<CombatLogNotifier, List<String>>(CombatLogNotifier.new);
@@ -105,6 +107,39 @@ class CombatEngine {
           ),
         );
       }
+
+      // Roll canonical item drop from kItemTemplates (50% drop rate)
+      if (_rng.nextDouble() < 0.50 && kItemTemplates.isNotEmpty) {
+        final template = kItemTemplates[_rng.nextInt(kItemTemplates.length)];
+        final droppedId = 'drop_${template.id}_${DateTime.now().millisecondsSinceEpoch}';
+        
+        final modJson = jsonEncode({
+          'description': template.description,
+          'modifiers': template.modifiers,
+          'uniqueTrait': template.uniqueTrait,
+          'reqLvl': template.reqLvl,
+        });
+
+        await _db.into(_db.items).insert(
+          ItemsCompanion.insert(
+            id: droppedId,
+            name: template.name,
+            baseType: template.baseType,
+            rarity: Value(template.rarity),
+            isEquipped: const Value(false),
+            equipSlot: Value(template.equipSlot),
+            minDamage: Value(template.minDamage),
+            maxDamage: Value(template.maxDamage),
+            armorValue: Value(template.armorValue),
+            socketCount: Value(template.socketCount),
+            modifiersJson: Value(modJson),
+            ownerId: Value(player.id),
+          ),
+        );
+
+        logNotifier.addLog('💎 Loot Discovered! Acquired [${template.name}] (${template.rarity})!');
+      }
+
       return;
     }
 

@@ -138,7 +138,7 @@
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   align-items: center;
   background: rgba(18, 24, 38, 0.5);
   padding: 0.75rem 1rem;
@@ -189,6 +189,71 @@
   border-color: var(--accent-cyan);
 }
 
+.filter-select {
+  background: #07090e;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.45rem 0.8rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+.items-counter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  padding: 0 0.5rem;
+}
+
+/* Pagination bar */
+.pagination-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.page-btn {
+  background: #080b10;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.45rem 0.85rem;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  border-color: var(--accent-cyan);
+  color: var(--text-bright);
+}
+
+.page-btn.active {
+  background: rgba(0, 242, 254, 0.2);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 /* =========================================================
    ARPG ITEM & CODEX CARDS
    ========================================================= */
@@ -216,10 +281,10 @@
 }
 
 /* Rarity Accents */
-.arpg-card.common {
+.arpg-card.normal, .arpg-card.common {
   border-color: #94a3b8;
 }
-.arpg-card.common:hover {
+.arpg-card.normal:hover, .arpg-card.common:hover {
   box-shadow: 0 8px 30px rgba(148, 163, 184, 0.2);
 }
 
@@ -294,7 +359,7 @@
   margin-bottom: 0.2rem;
 }
 
-.common .card-title { color: #f1f5f9; }
+.normal .card-title, .common .card-title { color: #f1f5f9; }
 .magic .card-title { color: #38bdf8; }
 .rare .card-title { color: #facc15; }
 .unique .card-title { color: #c084fc; }
@@ -318,7 +383,7 @@
   font-weight: 600;
 }
 
-.common .card-badge { color: #cbd5e1; border: 1px solid #64748b; }
+.normal .card-badge, .common .card-badge { color: #cbd5e1; border: 1px solid #64748b; }
 .magic .card-badge { color: #7dd3fc; border: 1px solid #0284c7; }
 .rare .card-badge { color: #fde047; border: 1px solid #ca8a04; }
 .unique .card-badge { color: #e9d5ff; border: 1px solid #9333ea; }
