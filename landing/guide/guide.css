@@ -140,7 +140,7 @@
 /* Step 1: Class Selector Deck */
 .class-deck {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
   gap: 0.75rem;
   margin-bottom: 1.25rem;
 }
@@ -191,12 +191,14 @@
   font-size: 1.6rem;
   line-height: 1;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+  flex-shrink: 0;
 }
 
 .class-card-info {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  flex: 1;
 }
 
 .class-card-title {
@@ -218,6 +220,12 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.class-card-count {
+  color: var(--accent-cyan);
+  font-weight: 600;
+  font-size: 0.7rem;
 }
 
 /* Class Accent Color Overrides */
