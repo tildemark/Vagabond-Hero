@@ -1,0 +1,139 @@
+Here is the comprehensive Game Mechanics Document for **Vagabond Hero**.
+
+First, let's clarify the world structure, as this is crucial for your text-based UI.
+
+## I. World Navigation & Structure (The "1 to 6" Clarification)
+
+The numbers 1 to 6 in the previous outlines referred to **Nodes** (Dungeons/Hubs), not individual Rooms.
+
+* **Acts (Regions):** The game has 5 Acts.
+* **Nodes (Maps):** Each Act contains 5 to 6 Nodes. A Node is a self-contained map grid (e.g., "The Sunken Chapel").
+* **Rooms (The Grid):** A single Node contains **20 to 50 Rooms**.
+
+**How NSEW Movement Works:**
+You do not just click a button to teleport to the boss. The Node is a 2D grid mapped out in your Drift database.
+
+1. **Story Rooms:** The specific numbered rooms in the previous scripts (e.g., Room 101, Room 102) are fixed points of interest where the story advances or bosses reside.
+2. **Wilderness/Filler Rooms:** To get from the Entrance (Room 101) to the Boss (Room 105), the player must navigate North, South, East, or West through randomly generated hallway/forest rooms.
+3. **Random Encounters:** While walking through these filler rooms, the player will trigger random encounters (Mob fights, trapped chests, or hidden merchants). Moving around the grid is how the player grinds for EXP and Loot before facing the boss.
+
+---
+
+## II. Player Progression & Leveling
+
+Progression is split into two phases: the Base Game cap, and the Endgame infinite scaling.
+
+* **Max Player Level:** 70.
+* **Base Stats:** Strength (Physical Dmg/Armor), Dexterity (Evasion/Crit), Intelligence (Magic Dmg/Resist), Vitality (Max HP).
+* **The Echo System (Level 70+):** Once you hit Level 70, you stop gaining standard levels. EXP goes toward "Echo Levels" (similar to Diablo's Paragon system). Every Echo Level grants 1 Echo Point.
+* **Echo Point Allocation:** Points are spent on infinite, fractional micro-stats.
+* *Offense:* +0.2% Critical Hit Damage, +0.1% Attack Speed.
+* *Defense:* +0.2% Armor, +0.1% Life-Steal.
+* *Utility:* +0.5% Gold Drop Rate, +0.5% Magic Find (Loot Rarity).
+
+
+
+---
+
+## III. Classes & Job Evolutions
+
+Players start as a Level 1 Vagabond. At Level 20, they choose a Base Class. At Level 50, they Ascend to their final Job.
+
+| Base Class (Lv 20) | Awakening (Lv 50) | Focus & Mechanics |
+| --- | --- | --- |
+| **Juggernaut** (Str) | **Berserker** | Massive physical burst damage; deals more damage the lower their HP gets. |
+|  | **Void-Knight** | Ultimate tank; uses a shield to absorb damage and reflect it back via Void spikes. |
+| **Phantom** (Dex) | **Assassin** | Dual-wielding; relies on stacking Bleed and Poison damage over time (DoT) effects. |
+|  | **Rift-Sniper** | Ranged physical; relies on high Evasion and guaranteed Critical Hits from stealth. |
+| **Weaver** (Int) | **Elementalist** | Pure AoE magic damage; cycles between Fire, Ice, and Lightning to exploit enemy weaknesses. |
+|  | **Blood Mage** | Spends their own HP to cast devastating spells, then uses life-steal to recover it. |
+| **Warden** (Summon) | **Necromancer** | Summons skeletons to attack automatically each turn; curses enemies to lower their armor. |
+|  | **Druid** | Transforms into Void-beasts for hybrid melee/magic stats; summons spirit vines to entangle foes. |
+
+---
+
+## IV. Companions & Pets
+
+You can equip **one Companion** and **one Pet** at the same time.
+
+### Companions (Mercenaries)
+
+Companions act autonomously in the combat text log right after the player's turn. You must gear them with weapons and armor to keep them alive.
+
+* **The Squire (Tank):** High HP, heavy armor. Casts "Taunt" to force the enemy to attack them instead of you.
+* **The Exiled Rogue (DPS):** Low HP, high attack speed. Occasionally casts "Expose Weakness" to guarantee your next hit is a Critical.
+* **The Oracle (Healer):** Deals zero damage. Casts healing spells and cleanses debuffs (like Poison or Frostbite) from the player.
+
+### Pets (Utility Familiars)
+
+Pets do not fight and cannot be killed. They provide quality-of-life (QoL) and passive buffs.
+
+* **Void-Hound:** Auto-loots Gold and Normal/Magic items after combat so you don't have to tap the UI.
+* **Treasure Goblin:** Grants a permanent +15% boost to Magic Find (increases chance of Legendary drops).
+* **Glow-Moth:** Acts as a torch, revealing the layout of adjacent grid rooms without having to walk into them.
+
+---
+
+## V. Loot Rarity & Item Modifiers
+
+Equipment occupies the following slots: **Weapon, Off-Hand (Shield/Focus), Helmet, Chest, Gloves, Boots, Amulet, Ring 1, Ring 2.**
+
+| Rarity Tier | Color | Modifier Count | Defining Feature |
+| --- | --- | --- | --- |
+| **Normal** | White | 0 Modifiers | Base stats only. |
+| **Magic** | Blue | 1 - 2 Modifiers | Minor buffs (e.g., +5 Strength). |
+| **Rare** | Yellow | 3 - 4 Modifiers | High stat rolls; the core of mid-game builds. |
+| **Legendary** | Orange | 4 - 5 Modifiers | Rolls 1 **Unique Trait** (e.g., "Fireball casts twice"). |
+| **Set** | Green | 4 - 5 Modifiers | Grants massive bonuses if you wear matching pieces. |
+| **Glitched** | Glitch/Red | 5 Modifiers | *Act 5 only.* Massive buff + massive penalty (e.g., +300% Damage, but Maximum HP is capped at 1). |
+
+### Set Items Mechanics
+
+Set items are themed around specific bosses or lore. Wearing multiple pieces of the same set activates hidden tiers of power.
+
+* *Example: The Drowned King's Regalia (Plate Armor, Helmet, Boots).*
+* **2-Piece Bonus:** +20% Water Resistance.
+* **3-Piece Bonus:** Your physical attacks now unleash a wave of liquid void, dealing 50% weapon damage to all enemies in the room.
+
+
+
+---
+
+## VI. Gem System & Socketing
+
+Items can drop with 1 to 3 empty sockets. You visit the Blacksmith to slot gems into them. The stat a gem provides changes based on the equipment slot.
+
+| Gem Type | In Weapon | In Armor/Helm | In Jewelry (Rings/Amulet) |
+| --- | --- | --- | --- |
+| **Ruby** | + Flat Fire Damage | + Max HP | + % Fire Resistance |
+| **Sapphire** | + Flat Ice Damage | + Max Mana/Energy | + % Ice Resistance |
+| **Topaz** | + Flat Lightning Dmg | + % Evasion | + % Lightning Resistance |
+| **Emerald** | + % Critical Hit Dmg | + % Gold Drop Rate | + % Poison Resistance |
+| **Amethyst** | + % Life-Steal | + % Armor | + % Void Resistance |
+| **Diamond** | + % Damage against Bosses | + % All Resistances | + % Magic Find |
+
+### Combining Gems (The Forge)
+
+Gems drop in various tiers. You combine them at the Blacksmith UI to create higher tiers.
+
+* **Formula:** 3 Gems of Tier X + Gold = 1 Gem of Tier Y.
+* **Tiers:** Chipped ➔ Flawed ➔ Regular ➔ Flawless ➔ Perfect ➔ *Radiant (Act 5 New Game+ only).*
+
+---
+
+## VII. Additional Mechanics
+
+### 1. Durability and Repair
+
+Weapons and armor lose durability as you take and deal damage. If durability reaches 0, the item isn't destroyed, but its stats are reduced to 0 until you return to a Safe Hub and pay the Blacksmith gold to repair it.
+
+### 2. The Mutator System (Act 5 & Endless Mode)
+
+Once the player unlocks the "Debug Console" in Act 5, they can apply Mutators to the game world. These make the game much harder but drastically increase the drop rate of Set and Legendary items.
+
+* *Mutator 1: "Memory Leak"* - Enemy HP regenerates 5% every turn. (+50% Magic Find).
+* *Mutator 2: "Hardcore Mode"* - If you die, your save file is deleted. (+300% Magic Find, Exclusive Leaderboard).
+
+### 3. Fast Travel (Waypoints)
+
+Players do not need to manually walk through Act 1 to get to Act 4. Each Safe Hub contains a **Void-Anchor** (Waypoint). Once discovered, the player can instantly fast-travel between Safe Hubs from the main menu UI.
