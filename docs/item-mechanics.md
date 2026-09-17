@@ -44,8 +44,21 @@ Modifiers can be **Permanent** (fixed inherent properties derived from the item'
 | **Rare** | Yellow | Base Stat + 1 Core Stat + 1 Random Modifier + 1 Optional Modifier | Mid-game build backbone. Guarantees **1 Core Stat**, **1 Random Affix** (e.g. Crit, Attack Speed, Reflect, Elemental Dmg), and **1 Optional Modifier**. |
 | **Relic** | Purple | Base Stat + 1 Core Stat + 1 Permanent Modifier (Does Not Change) + 2 Random Modifiers | Unique identity equipment. Features **1 Core Stat**, **1 Permanent Thematic Modifier** fixed to the item's identity/name (e.g., Venom items always rolling Poison, Nimble items always rolling Speed), and **2 Random Class Affixes**. |
 | **Mythic** | Orange | High Base Stat + 1 High Permanent Modifier (Does Not Change) + 2 Random Modifiers | Pinnacle class armaments. Rolls **elevated High Base Stats**, **1 High Permanent Thematic Trait/Affix** that never changes, and **2 high-tier Random Class Modifiers**. |
-| **Set** | Green | High Base Stat + 1 High Stat Modifier + 2 Random Modifiers + Set Attribute | Coordinated synergy armor and weapons. Features **High Base Stats**, **1 High Stat Modifier**, **2 Random Modifiers**, and the distinctive **Set Attribute bonus** (active at 2, 3, or 4 equipped pieces). |
+| **Set** | Green | High Base Stat + 1 High Stat Modifier + 2 Random Modifiers + Tiered Set Attributes | Coordinated synergy gear. Features **High Base Stats**, **1 High Stat Modifier**, **2 Random Modifiers**, and **Tiered Set Bonuses** that activate incrementally as 2, 3, or 4 set pieces are equipped. |
 | **Corrupted** | Red/Glitch | As Is + Corrupted Modifier Infusion | *Post-Echo Pinnacle Drops.* Preserves the item's existing tier budget while injecting a game-breaking **Corrupted Modifier** (immense buff paired with a severe, build-testing debuff). |
+
+### Set Collection Mechanics: Partial (Incomplete) vs. Complete Sets
+Set items reward players progressively as they collect pieces—players **do not** need the complete set to gain powerful bonuses:
+1. **2-Piece Threshold (Partial Set Collected):**
+   * Unlocks immediately upon equipping any 2 pieces of the same named set.
+   * Delivers an essential, foundational passive stat buff tailored to the archetype (e.g. `+20% to +100% Total Armor`, `+15% to +50% Physical Damage`, `+25% to +50% EXP/Gold`, or `+30% Maximum HP`).
+2. **3-Piece Threshold (Complete or Advanced Set):**
+   * For standard 3-piece sets, this activates the signature capstone ability that fundamentally modifies gameplay (e.g. *Spiked Barricade* reflecting 100% mitigated damage, *Death Wish* granting permanent stun immunity and double attack speed, or *Echo Casting* mirroring spells).
+   * For 4-piece sets (such as *The Ash-Walker's Hoard*), the 3-piece threshold unlocks an intermediate power spike (e.g. `+30% Magic Find`).
+3. **4-Piece Threshold (Pinnacle Vagrant Set):**
+   * Unlocks the ultimate capstone utility (e.g. *One Man's Trash* dropping free gems/consumables and healing on gold pickup).
+4. **Item Tooltip & UI Display:**
+   * In the game inventory and web codex, all set pieces list the **full tier progression** (`[2-Piece]`, `[3-Piece]`, `[4-Piece]`) so players can easily see both the partial collection buffs and the complete set capstone. Active tiers glow in vibrant emerald green, while uncollected tiers remain muted.
 
 ---
 

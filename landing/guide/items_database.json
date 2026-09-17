@@ -3705,7 +3705,8 @@
       "+40 STR",
       "+10% Block",
       "+1 Random Class Modifier",
-      "Set Attribute (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
+      "Set (The Iron Bastion) [2-Piece]: +20% Total Armor.",
+      "Set (The Iron Bastion) [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -3727,7 +3728,8 @@
       "+60 STA",
       "+200 Max HP",
       "+1 Random Class Modifier",
-      "Set Attribute (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
+      "Set (The Iron Bastion) [2-Piece]: +20% Total Armor.",
+      "Set (The Iron Bastion) [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -3749,7 +3751,8 @@
       "+30 STR",
       "+30 Damage Reflect",
       "+1 Random Class Modifier",
-      "Set Attribute (The Iron Bastion): [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
+      "Set (The Iron Bastion) [2-Piece]: +20% Total Armor.",
+      "Set (The Iron Bastion) [3-Piece - \"Spiked Barricade\"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Off-Hand",
@@ -3771,7 +3774,8 @@
       "+40 STR",
       "+20% Cooldown Reduc.",
       "+1 Random Class Modifier",
-      "Set Attribute (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
+      "Set (Warlord's Fury) [2-Piece]: +15% Physical Damage.",
+      "Set (Warlord's Fury) [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -3793,7 +3797,8 @@
       "+35 STR",
       "+15% Movement Spd",
       "+1 Random Class Modifier",
-      "Set Attribute (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
+      "Set (Warlord's Fury) [2-Piece]: +15% Physical Damage.",
+      "Set (Warlord's Fury) [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -3815,7 +3820,8 @@
       "+50 STR",
       "+20% Boss Damage",
       "+1 Random Class Modifier",
-      "Set Attribute (Warlord's Fury): [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
+      "Set (Warlord's Fury) [2-Piece]: +15% Physical Damage.",
+      "Set (Warlord's Fury) [3-Piece - \"Challenge Accepted\"]: Using 'Taunt' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%."
     ],
     "uniqueTrait": "",
     "rawType": "2H Mace",
@@ -3837,7 +3843,8 @@
       "+50 STA",
       "+25% HP Regen",
       "+1 Random Class Modifier",
-      "Set Attribute (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
+      "Set (Goliath's Endurance) [2-Piece]: +30% Maximum HP.",
+      "Set (Goliath's Endurance) [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -3859,7 +3866,8 @@
       "+40 STR",
       "+15% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
+      "Set (Goliath's Endurance) [2-Piece]: +30% Maximum HP.",
+      "Set (Goliath's Endurance) [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -3881,7 +3889,8 @@
       "+300 Max HP",
       "+10% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Goliath's Endurance): [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
+      "Set (Goliath's Endurance) [2-Piece]: +30% Maximum HP.",
+      "Set (Goliath's Endurance) [3-Piece - \"Unstoppable Healing\"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -3903,7 +3912,8 @@
       "+35 AGI",
       "+15 Flat Poison Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
+      "Set (The Viper's Kiss) [2-Piece]: +30% Poison and Bleed Damage.",
+      "Set (The Viper's Kiss) [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
     ],
     "uniqueTrait": "",
     "rawType": "1H Dagger",
@@ -3925,7 +3935,8 @@
       "+35 AGI",
       "+15% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
+      "Set (The Viper's Kiss) [2-Piece]: +30% Poison and Bleed Damage.",
+      "Set (The Viper's Kiss) [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
     ],
     "uniqueTrait": "",
     "rawType": "1H Dagger",
@@ -3947,7 +3958,8 @@
       "+40 AGI",
       "+30% Poison Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (The Viper's Kiss): [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
+      "Set (The Viper's Kiss) [2-Piece]: +30% Poison and Bleed Damage.",
+      "Set (The Viper's Kiss) [3-Piece - \"Toxic Shock\"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -3969,7 +3981,8 @@
       "+40 AGI",
       "+10% Evasion",
       "+1 Random Class Modifier",
-      "Set Attribute (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
+      "Set (Shadow-Walker's Shroud) [2-Piece]: +15% Base Evasion.",
+      "Set (Shadow-Walker's Shroud) [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -3991,7 +4004,8 @@
       "+35 AGI",
       "+20% Crit Damage",
       "+1 Random Class Modifier",
-      "Set Attribute (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
+      "Set (Shadow-Walker's Shroud) [2-Piece]: +15% Base Evasion.",
+      "Set (Shadow-Walker's Shroud) [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4013,7 +4027,8 @@
       "+10% Crit Chance",
       "+15% Movement Spd",
       "+1 Random Class Modifier",
-      "Set Attribute (Shadow-Walker's Shroud): [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
+      "Set (Shadow-Walker's Shroud) [2-Piece]: +15% Base Evasion.",
+      "Set (Shadow-Walker's Shroud) [3-Piece - \"Perfect Counter\"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4035,7 +4050,8 @@
       "+50 AGI",
       "+15% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
+      "Set (The Bladed Gale) [2-Piece]: +20% Attack Speed.",
+      "Set (The Bladed Gale) [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
     ],
     "uniqueTrait": "",
     "rawType": "2H Bow",
@@ -4057,7 +4073,8 @@
       "+40 AGI",
       "+20% Movement Spd",
       "+1 Random Class Modifier",
-      "Set Attribute (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
+      "Set (The Bladed Gale) [2-Piece]: +20% Attack Speed.",
+      "Set (The Bladed Gale) [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -4079,7 +4096,8 @@
       "+20 AGI",
       "+10% Evasion",
       "+1 Random Class Modifier",
-      "Set Attribute (The Bladed Gale): [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
+      "Set (The Bladed Gale) [2-Piece]: +20% Attack Speed.",
+      "Set (The Bladed Gale) [3-Piece - \"Tempest Strikes\"]: The Phantom's 'Flurry' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4101,7 +4119,8 @@
       "+50 INT",
       "+15% Cast Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
+      "Set (Archmage's Genesis) [2-Piece]: +20% Magic Damage.",
+      "Set (Archmage's Genesis) [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "2H Staff",
@@ -4123,7 +4142,8 @@
       "+40 INT",
       "+10% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
+      "Set (Archmage's Genesis) [2-Piece]: +20% Magic Damage.",
+      "Set (Archmage's Genesis) [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4145,7 +4165,8 @@
       "+30 INT",
       "+20% Crit Chance",
       "+1 Random Class Modifier",
-      "Set Attribute (Archmage's Genesis): [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
+      "Set (Archmage's Genesis) [2-Piece]: +20% Magic Damage.",
+      "Set (Archmage's Genesis) [3-Piece - \"Echo Casting\"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -4167,7 +4188,8 @@
       "+45 INT",
       "+100 Max Mana",
       "+1 Random Class Modifier",
-      "Set Attribute (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
+      "Set (Aether-Weaver's Shell) [2-Piece]: +50% Maximum Mana.",
+      "Set (Aether-Weaver's Shell) [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4189,7 +4211,8 @@
       "+35 STA",
       "+150 Max Mana",
       "+1 Random Class Modifier",
-      "Set Attribute (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
+      "Set (Aether-Weaver's Shell) [2-Piece]: +50% Maximum Mana.",
+      "Set (Aether-Weaver's Shell) [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Off-Hand",
@@ -4211,7 +4234,8 @@
       "+30 INT",
       "+20% Mana Regen",
       "+1 Random Class Modifier",
-      "Set Attribute (Aether-Weaver's Shell): [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
+      "Set (Aether-Weaver's Shell) [2-Piece]: +50% Maximum Mana.",
+      "Set (Aether-Weaver's Shell) [3-Piece - \"Kinetic Conversion\"]: While 'Mana Shield' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -4233,7 +4257,8 @@
       "+40 INT",
       "+10% Cooldown Reduc.",
       "+1 Random Class Modifier",
-      "Set Attribute (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
+      "Set (The Infinite Loop) [2-Piece]: +25% Cast Speed & +15% Cooldown Reduction.",
+      "Set (The Infinite Loop) [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "1H Wand",
@@ -4255,7 +4280,8 @@
       "+35 INT",
       "+15% Cast Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
+      "Set (The Infinite Loop) [2-Piece]: +25% Cast Speed & +15% Cooldown Reduction.",
+      "Set (The Infinite Loop) [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4277,7 +4303,8 @@
       "+15% Cooldown Reduc.",
       "+10% Magic Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (The Infinite Loop): [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
+      "Set (The Infinite Loop) [2-Piece]: +25% Cast Speed & +15% Cooldown Reduction.",
+      "Set (The Infinite Loop) [3-Piece - \"Stack Overflow\"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4299,7 +4326,8 @@
       "+35 INT",
       "+15% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
+      "Set (Beast-Master's Call) [2-Piece]: +40% Summon Maximum HP.",
+      "Set (Beast-Master's Call) [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
     ],
     "uniqueTrait": "",
     "rawType": "1H Whip",
@@ -4321,7 +4349,8 @@
       "+40 STA",
       "+20% Summon HP",
       "+1 Random Class Modifier",
-      "Set Attribute (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
+      "Set (Beast-Master's Call) [2-Piece]: +40% Summon Maximum HP.",
+      "Set (Beast-Master's Call) [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
     ],
     "uniqueTrait": "",
     "rawType": "Off-Hand",
@@ -4343,7 +4372,8 @@
       "+30 STR",
       "+250 Max HP",
       "+1 Random Class Modifier",
-      "Set Attribute (Beast-Master's Call): [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
+      "Set (Beast-Master's Call) [2-Piece]: +40% Summon Maximum HP.",
+      "Set (Beast-Master's Call) [3-Piece - \"Alpha Predator\"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4365,7 +4395,8 @@
       "+45 INT/STA",
       "+15 Flat Poison",
       "+1 Random Class Modifier",
-      "Set Attribute (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
+      "Set (The Overgrowth) [2-Piece]: +20% Life Steal for you and your Summon.",
+      "Set (The Overgrowth) [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "2H Spear",
@@ -4387,7 +4418,8 @@
       "+35 STA",
       "+10% HP Regen",
       "+1 Random Class Modifier",
-      "Set Attribute (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
+      "Set (The Overgrowth) [2-Piece]: +20% Life Steal for you and your Summon.",
+      "Set (The Overgrowth) [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -4409,7 +4441,8 @@
       "+10% Life Steal",
       "+50 Max HP",
       "+1 Random Class Modifier",
-      "Set Attribute (The Overgrowth): [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
+      "Set (The Overgrowth) [2-Piece]: +20% Life Steal for you and your Summon.",
+      "Set (The Overgrowth) [3-Piece - \"Choking Weeds\"]: The 'Leeching Vines' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4431,7 +4464,8 @@
       "+40 STA",
       "+15% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
+      "Set (Soul-Tether Regalia) [2-Piece]: +25% All Resistances.",
+      "Set (Soul-Tether Regalia) [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4453,7 +4487,8 @@
       "+35 INT",
       "+15% Potion Effect",
       "+1 Random Class Modifier",
-      "Set Attribute (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
+      "Set (Soul-Tether Regalia) [2-Piece]: +25% All Resistances.",
+      "Set (Soul-Tether Regalia) [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -4475,7 +4510,8 @@
       "+20% Boss Damage",
       "+100 Max Mana",
       "+1 Random Class Modifier",
-      "Set Attribute (Soul-Tether Regalia): [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
+      "Set (Soul-Tether Regalia) [2-Piece]: +25% All Resistances.",
+      "Set (Soul-Tether Regalia) [3-Piece - \"Masochistic Link\"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -4497,7 +4533,8 @@
       "+60 STR",
       "+15% Crit Damage",
       "+1 Random Class Modifier",
-      "Set Attribute (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
+      "Set (The Blood-Crazed) [2-Piece]: +30% Physical Damage.",
+      "Set (The Blood-Crazed) [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4519,7 +4556,8 @@
       "+80 STR",
       "+10% Life Steal",
       "+1 Random Class Modifier",
-      "Set Attribute (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
+      "Set (The Blood-Crazed) [2-Piece]: +30% Physical Damage.",
+      "Set (The Blood-Crazed) [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4541,7 +4579,8 @@
       "+15% Attack Speed",
       "+10% Boss Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (The Blood-Crazed): [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
+      "Set (The Blood-Crazed) [2-Piece]: +30% Physical Damage.",
+      "Set (The Blood-Crazed) [3-Piece - \"Death Wish\"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4563,7 +4602,8 @@
       "+70 STA",
       "+20 Damage Reflect",
       "+1 Random Class Modifier",
-      "Set Attribute (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
+      "Set (The Abyssal Aegis) [2-Piece]: +40% Total Armor.",
+      "Set (The Abyssal Aegis) [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4585,7 +4625,8 @@
       "+60 STR",
       "+20% Void Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
+      "Set (The Abyssal Aegis) [2-Piece]: +40% Total Armor.",
+      "Set (The Abyssal Aegis) [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
     ],
     "uniqueTrait": "",
     "rawType": "Legs",
@@ -4607,7 +4648,8 @@
       "+20% Block Chance",
       "+500 Max HP",
       "+1 Random Class Modifier",
-      "Set Attribute (The Abyssal Aegis): [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
+      "Set (The Abyssal Aegis) [2-Piece]: +40% Total Armor.",
+      "Set (The Abyssal Aegis) [3-Piece - \"Void Singularity\"]: When you use 'Void Bulwark', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -4629,7 +4671,8 @@
       "+80 STR/STA",
       "+15% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
+      "Set (The Warlord's Zenith) [2-Piece]: +25% Boss Damage & +25% All Resistances.",
+      "Set (The Warlord's Zenith) [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4651,7 +4694,8 @@
       "+70 STR",
       "+20% Crit Damage",
       "+1 Random Class Modifier",
-      "Set Attribute (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
+      "Set (The Warlord's Zenith) [2-Piece]: +25% Boss Damage & +25% All Resistances.",
+      "Set (The Warlord's Zenith) [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4673,7 +4717,8 @@
       "+20% Boss Damage",
       "+10% Armor Pen",
       "+1 Random Class Modifier",
-      "Set Attribute (The Warlord's Zenith): [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
+      "Set (The Warlord's Zenith) [2-Piece]: +25% Boss Damage & +25% All Resistances.",
+      "Set (The Warlord's Zenith) [3-Piece - \"Guillotine\"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4695,7 +4740,8 @@
       "+60 AGI",
       "+20% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
+      "Set (Nightshade Syndicate) [2-Piece]: +40% Poison Damage.",
+      "Set (Nightshade Syndicate) [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4717,7 +4763,8 @@
       "+75 AGI",
       "+15% Evasion",
       "+1 Random Class Modifier",
-      "Set Attribute (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
+      "Set (Nightshade Syndicate) [2-Piece]: +40% Poison Damage.",
+      "Set (Nightshade Syndicate) [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4739,7 +4786,8 @@
       "+15 Flat Poison Dmg",
       "+15% Crit Chance",
       "+1 Random Class Modifier",
-      "Set Attribute (Nightshade Syndicate): [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
+      "Set (Nightshade Syndicate) [2-Piece]: +40% Poison Damage.",
+      "Set (Nightshade Syndicate) [3-Piece - \"Toxic Overload\"]: Your 'Eviscerate' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4824,7 +4872,8 @@
       "+80 AGI",
       "+20% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
+      "Set (Ghost-Walk Regalia) [2-Piece]: +20% Base Evasion.",
+      "Set (Ghost-Walk Regalia) [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4846,7 +4895,8 @@
       "+70 AGI",
       "+25% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
+      "Set (Ghost-Walk Regalia) [2-Piece]: +20% Base Evasion.",
+      "Set (Ghost-Walk Regalia) [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -4868,7 +4918,8 @@
       "+15% Evasion",
       "+20% Magic Find",
       "+1 Random Class Modifier",
-      "Set Attribute (Ghost-Walk Regalia): [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
+      "Set (Ghost-Walk Regalia) [2-Piece]: +20% Base Evasion.",
+      "Set (Ghost-Walk Regalia) [3-Piece - \"Untouchable\"]: Taking damage instantly triggers 'Shadow Cloak' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns)."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -4890,7 +4941,8 @@
       "+70 INT",
       "+15% Cast Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
+      "Set (Prismatic Convergence) [2-Piece]: +25% Fire, Ice, and Lightning Damage.",
+      "Set (Prismatic Convergence) [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -4912,7 +4964,8 @@
       "+80 INT",
       "+20% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
+      "Set (Prismatic Convergence) [2-Piece]: +25% Fire, Ice, and Lightning Damage.",
+      "Set (Prismatic Convergence) [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -4934,7 +4987,8 @@
       "+200 Max Mana",
       "+15% Magic Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (Prismatic Convergence): [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
+      "Set (Prismatic Convergence) [2-Piece]: +25% Fire, Ice, and Lightning Damage.",
+      "Set (Prismatic Convergence) [3-Piece - \"Grand Convergence\"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next 'Cataclysm' costs 0 Mana and deals 300% damage."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5016,7 +5070,8 @@
       "+90 INT",
       "+400 Max Mana",
       "+1 Random Class Modifier",
-      "Set Attribute (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
+      "Set (Aetherial Ascendant) [2-Piece]: +30% Cooldown Reduction.",
+      "Set (Aetherial Ascendant) [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5038,7 +5093,8 @@
       "+70 INT",
       "+20% Movement Spd",
       "+1 Random Class Modifier",
-      "Set Attribute (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
+      "Set (Aetherial Ascendant) [2-Piece]: +30% Cooldown Reduction.",
+      "Set (Aetherial Ascendant) [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -5060,7 +5116,8 @@
       "+25% Cast Speed",
       "+10% Cooldown Reduc.",
       "+1 Random Class Modifier",
-      "Set Attribute (Aetherial Ascendant): [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
+      "Set (Aetherial Ascendant) [2-Piece]: +30% Cooldown Reduction.",
+      "Set (Aetherial Ascendant) [3-Piece - \"Infinite Reservoir\"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -5082,7 +5139,8 @@
       "+65 INT",
       "+20% Summon HP",
       "+1 Random Class Modifier",
-      "Set Attribute (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
+      "Set (Grave-Lord's Dominion) [2-Piece]: +50% Maximum Summon HP & +25% Summon Damage.",
+      "Set (Grave-Lord's Dominion) [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5104,7 +5162,8 @@
       "+80 INT",
       "+30% Void Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
+      "Set (Grave-Lord's Dominion) [2-Piece]: +50% Maximum Summon HP & +25% Summon Damage.",
+      "Set (Grave-Lord's Dominion) [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5126,7 +5185,8 @@
       "+10% Cooldown Reduc.",
       "+15% Boss Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (Grave-Lord's Dominion): [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
+      "Set (Grave-Lord's Dominion) [2-Piece]: +50% Maximum Summon HP & +25% Summon Damage.",
+      "Set (Grave-Lord's Dominion) [3-Piece - \"Macabre Symphony\"]: When a Skeletal Mage dies, it automatically casts 'Corpse Explosion' on itself for free."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5148,7 +5208,8 @@
       "+60 STR/INT",
       "+15% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
+      "Set (Chimera's Aspect) [2-Piece]: +20% Strength and +20% Intelligence.",
+      "Set (Chimera's Aspect) [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5170,7 +5231,8 @@
       "+50 STR/INT",
       "+20% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
+      "Set (Chimera's Aspect) [2-Piece]: +20% Strength and +20% Intelligence.",
+      "Set (Chimera's Aspect) [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5192,7 +5254,8 @@
       "+400 Max HP",
       "+20% Crit Chance",
       "+1 Random Class Modifier",
-      "Set Attribute (Chimera's Aspect): [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
+      "Set (Chimera's Aspect) [2-Piece]: +20% Strength and +20% Intelligence.",
+      "Set (Chimera's Aspect) [3-Piece - \"Apex Evolution\"]: While in 'Chimera Form', your physical attacks also cast a random elemental spell at the target for 0 Mana."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -5214,7 +5277,8 @@
       "+90 STA",
       "+15% Life Steal",
       "+1 Random Class Modifier",
-      "Set Attribute (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
+      "Set (Echoes of the Wild) [2-Piece]: +30% Maximum HP & +30% Armor.",
+      "Set (Echoes of the Wild) [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5236,7 +5300,8 @@
       "+70 STA",
       "+20% Movement Spd",
       "+1 Random Class Modifier",
-      "Set Attribute (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
+      "Set (Echoes of the Wild) [2-Piece]: +30% Maximum HP & +30% Armor.",
+      "Set (Echoes of the Wild) [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -5258,7 +5323,8 @@
       "+100 INT/STA",
       "+15% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Echoes of the Wild): [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
+      "Set (Echoes of the Wild) [2-Piece]: +30% Maximum HP & +30% Armor.",
+      "Set (Echoes of the Wild) [3-Piece - \"Soul Bound\"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5280,7 +5346,8 @@
       "+120 STR",
       "+25% Crit Damage",
       "+1 Random Class Modifier",
-      "Set Attribute (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
+      "Set (World-Breaker's Cataclysm) [2-Piece]: +50% Physical Damage & +30% Armor Penetration.",
+      "Set (World-Breaker's Cataclysm) [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5302,7 +5369,8 @@
       "+150 STR",
       "+500 Max HP",
       "+1 Random Class Modifier",
-      "Set Attribute (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
+      "Set (World-Breaker's Cataclysm) [2-Piece]: +50% Physical Damage & +30% Armor Penetration.",
+      "Set (World-Breaker's Cataclysm) [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5324,7 +5392,8 @@
       "+30% Attack Speed",
       "+20% Boss Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (World-Breaker's Cataclysm): [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
+      "Set (World-Breaker's Cataclysm) [2-Piece]: +50% Physical Damage & +30% Armor Penetration.",
+      "Set (World-Breaker's Cataclysm) [3-Piece - \"System Crash\"]: If 'Obliterate' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5346,7 +5415,8 @@
       "+100 STA",
       "+50 Damage Reflect",
       "+1 Random Class Modifier",
-      "Set Attribute (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
+      "Set (Aegis Lord's Bastion) [2-Piece]: +100% Total Armor.",
+      "Set (Aegis Lord's Bastion) [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5368,7 +5438,8 @@
       "+120 STR",
       "+30% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
+      "Set (Aegis Lord's Bastion) [2-Piece]: +100% Total Armor.",
+      "Set (Aegis Lord's Bastion) [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
     ],
     "uniqueTrait": "",
     "rawType": "Legs",
@@ -5390,7 +5461,8 @@
       "+40% Block Chance",
       "+1000 Max HP",
       "+1 Random Class Modifier",
-      "Set Attribute (Aegis Lord's Bastion): [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
+      "Set (Aegis Lord's Bastion) [2-Piece]: +100% Total Armor.",
+      "Set (Aegis Lord's Bastion) [3-Piece - \"Event Horizon\"]: Your 'Absolute Defense' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5412,7 +5484,8 @@
       "+150 STR/STA",
       "+20% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
+      "Set (Prime Enforcer's Plating) [2-Piece]: +50% Maximum HP & +30% Boss Damage.",
+      "Set (Prime Enforcer's Plating) [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5434,7 +5507,8 @@
       "+100 STR",
       "+50% Crit Damage",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
+      "Set (Prime Enforcer's Plating) [2-Piece]: +50% Maximum HP & +30% Boss Damage.",
+      "Set (Prime Enforcer's Plating) [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5456,7 +5530,8 @@
       "+25% Boss Damage",
       "+20% Armor Pen",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Enforcer's Plating): [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
+      "Set (Prime Enforcer's Plating) [2-Piece]: +50% Maximum HP & +30% Boss Damage.",
+      "Set (Prime Enforcer's Plating) [3-Piece - \"Admin Privileges\"]: You become entirely immune to the 'Null Space' and 'Omega-Wipe' instant game-over mechanics. Fatal damage instead leaves you at 1 HP."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5478,7 +5553,8 @@
       "+120 AGI",
       "+30% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
+      "Set (Shadow-Walker's Eclipse) [2-Piece]: +40% Base Evasion & +30% Movement Speed.",
+      "Set (Shadow-Walker's Eclipse) [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5500,7 +5576,8 @@
       "+150 AGI",
       "+20% Evasion",
       "+1 Random Class Modifier",
-      "Set Attribute (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
+      "Set (Shadow-Walker's Eclipse) [2-Piece]: +40% Base Evasion & +30% Movement Speed.",
+      "Set (Shadow-Walker's Eclipse) [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5522,7 +5599,8 @@
       "+50 Flat Poison Dmg",
       "+20% Crit Chance",
       "+1 Random Class Modifier",
-      "Set Attribute (Shadow-Walker's Eclipse): [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
+      "Set (Shadow-Walker's Eclipse) [2-Piece]: +40% Base Evasion & +30% Movement Speed.",
+      "Set (Shadow-Walker's Eclipse) [3-Piece - \"The Reaper's Toll\"]: The 'Death Mark' skill now detonates after 1 turn instead of 3, and ignoring an enemy's HP cap, instantly executing Bosses below 20% HP."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5544,7 +5622,8 @@
       "+140 AGI",
       "+25% Crit Chance",
       "+1 Random Class Modifier",
-      "Set Attribute (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
+      "Set (Void-Stalker's Horizon) [2-Piece]: +50% Armor Penetration & +50% Critical Damage.",
+      "Set (Void-Stalker's Horizon) [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5566,7 +5645,8 @@
       "+100 AGI",
       "+30% Movement Spd",
       "+1 Random Class Modifier",
-      "Set Attribute (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
+      "Set (Void-Stalker's Horizon) [2-Piece]: +50% Armor Penetration & +50% Critical Damage.",
+      "Set (Void-Stalker's Horizon) [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -5588,7 +5668,8 @@
       "+100% Crit Damage",
       "+15% Cooldown Reduc.",
       "+1 Random Class Modifier",
-      "Set Attribute (Void-Stalker's Horizon): [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
+      "Set (Void-Stalker's Horizon) [2-Piece]: +50% Armor Penetration & +50% Critical Damage.",
+      "Set (Void-Stalker's Horizon) [3-Piece - \"Delete Key\"]: 'Dimensional Piercer' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5610,7 +5691,8 @@
       "+160 AGI",
       "+30% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
+      "Set (Prime Assassin's Shroud) [2-Piece]: +30% Base Evasion & +30% Critical Hit Chance.",
+      "Set (Prime Assassin's Shroud) [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5632,7 +5714,8 @@
       "+120 AGI",
       "+35% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
+      "Set (Prime Assassin's Shroud) [2-Piece]: +30% Base Evasion & +30% Critical Hit Chance.",
+      "Set (Prime Assassin's Shroud) [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5654,7 +5737,8 @@
       "+20% Evasion",
       "+40% Magic Find",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Assassin's Shroud): [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
+      "Set (Prime Assassin's Shroud) [2-Piece]: +30% Base Evasion & +30% Critical Hit Chance.",
+      "Set (Prime Assassin's Shroud) [3-Piece - \"Ghost in the Machine\"]: You are permanently considered to be in 'Stealth' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5676,7 +5760,8 @@
       "+140 INT",
       "+25% Cast Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
+      "Set (Arch-Mage's Paradox) [2-Piece]: +50% Magic Damage & +40% Cast Speed.",
+      "Set (Arch-Mage's Paradox) [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5698,7 +5783,8 @@
       "+160 INT",
       "+30% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
+      "Set (Arch-Mage's Paradox) [2-Piece]: +50% Magic Damage & +40% Cast Speed.",
+      "Set (Arch-Mage's Paradox) [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5720,7 +5806,8 @@
       "+500 Max Mana",
       "+25% Magic Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (Arch-Mage's Paradox): [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
+      "Set (Arch-Mage's Paradox) [2-Piece]: +50% Magic Damage & +40% Cast Speed.",
+      "Set (Arch-Mage's Paradox) [3-Piece - \"Chronos Shift\"]: 'Time Stop' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your 'Omni-Caster' trait now triggers at a 60% chance."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -5742,7 +5829,8 @@
       "+120 INT/STA",
       "+800 Max HP",
       "+1 Random Class Modifier",
-      "Set Attribute (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
+      "Set (Crimson Sovereign's Court) [2-Piece]: +50% Maximum HP & +50% Life Steal.",
+      "Set (Crimson Sovereign's Court) [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5764,7 +5852,8 @@
       "+100 INT",
       "+30% Cast Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
+      "Set (Crimson Sovereign's Court) [2-Piece]: +50% Maximum HP & +50% Life Steal.",
+      "Set (Crimson Sovereign's Court) [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5786,7 +5875,8 @@
       "+25% Life Steal",
       "+30% Magic Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (Crimson Sovereign's Court): [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
+      "Set (Crimson Sovereign's Court) [2-Piece]: +50% Maximum HP & +50% Life Steal.",
+      "Set (Crimson Sovereign's Court) [3-Piece - \"Hemomancy\"]: 'Blood Boil' no longer leaves you at 1 HP. Instead, it consumes your 'Overheal' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5808,7 +5898,8 @@
       "+180 INT",
       "+1000 Max Mana",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
+      "Set (Prime Compiler's Array) [2-Piece]: +50% Cooldown Reduction.",
+      "Set (Prime Compiler's Array) [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5830,7 +5921,8 @@
       "+120 INT",
       "+30% Movement Spd",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
+      "Set (Prime Compiler's Array) [2-Piece]: +50% Cooldown Reduction.",
+      "Set (Prime Compiler's Array) [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -5852,7 +5944,8 @@
       "+40% Cast Speed",
       "+20% Cooldown Reduc.",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Compiler's Array): [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
+      "Set (Prime Compiler's Array) [2-Piece]: +50% Cooldown Reduction.",
+      "Set (Prime Compiler's Array) [3-Piece - \"God-Mode Activated\"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -5874,7 +5967,8 @@
       "+140 INT",
       "+40% Summon HP",
       "+1 Random Class Modifier",
-      "Set Attribute (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
+      "Set (Death-Caller's Apocalypse) [2-Piece]: +100% Maximum Summon HP & +50% Summon Damage.",
+      "Set (Death-Caller's Apocalypse) [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5896,7 +5990,8 @@
       "+160 INT",
       "+40% Void Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
+      "Set (Death-Caller's Apocalypse) [2-Piece]: +100% Maximum Summon HP & +50% Summon Damage.",
+      "Set (Death-Caller's Apocalypse) [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -5918,7 +6013,8 @@
       "+20% Cooldown Reduc.",
       "+30% Boss Dmg",
       "+1 Random Class Modifier",
-      "Set Attribute (Death-Caller's Apocalypse): [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
+      "Set (Death-Caller's Apocalypse) [2-Piece]: +100% Maximum Summon HP & +50% Summon Damage.",
+      "Set (Death-Caller's Apocalypse) [3-Piece - \"The Endless March\"]: The 'Army of the Damned' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place."
     ],
     "uniqueTrait": "",
     "rawType": "Ring",
@@ -5940,7 +6036,8 @@
       "+100 STR/INT",
       "+25% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
+      "Set (Chimera-Lord's Apex) [2-Piece]: +40% Strength, +40% Intelligence, +40% Stamina.",
+      "Set (Chimera-Lord's Apex) [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
     ],
     "uniqueTrait": "",
     "rawType": "Head",
@@ -5962,7 +6059,8 @@
       "+100 STR/INT",
       "+30% Attack Speed",
       "+1 Random Class Modifier",
-      "Set Attribute (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
+      "Set (Chimera-Lord's Apex) [2-Piece]: +40% Strength, +40% Intelligence, +40% Stamina.",
+      "Set (Chimera-Lord's Apex) [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
     ],
     "uniqueTrait": "",
     "rawType": "Arms",
@@ -5984,7 +6082,8 @@
       "+800 Max HP",
       "+30% Crit Chance",
       "+1 Random Class Modifier",
-      "Set Attribute (Chimera-Lord's Apex): [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
+      "Set (Chimera-Lord's Apex) [2-Piece]: +40% Strength, +40% Intelligence, +40% Stamina.",
+      "Set (Chimera-Lord's Apex) [3-Piece - \"Perfect Organism\"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt."
     ],
     "uniqueTrait": "",
     "rawType": "Waist",
@@ -6006,7 +6105,8 @@
       "+180 STA",
       "+25% Life Steal",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
+      "Set (Prime Architect's Command) [2-Piece]: +50% Maximum HP & +50% Armor.",
+      "Set (Prime Architect's Command) [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
     ],
     "uniqueTrait": "",
     "rawType": "Torso",
@@ -6028,7 +6128,8 @@
       "+140 STA",
       "+30% Movement Spd",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
+      "Set (Prime Architect's Command) [2-Piece]: +50% Maximum HP & +50% Armor.",
+      "Set (Prime Architect's Command) [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
     ],
     "uniqueTrait": "",
     "rawType": "Feet",
@@ -6050,7 +6151,8 @@
       "+200 INT/STA",
       "+25% All Resist",
       "+1 Random Class Modifier",
-      "Set Attribute (Prime Architect's Command): [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
+      "Set (Prime Architect's Command) [2-Piece]: +50% Maximum HP & +50% Armor.",
+      "Set (Prime Architect's Command) [3-Piece - \"Root Access\"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn."
     ],
     "uniqueTrait": "",
     "rawType": "Amulet",
@@ -6072,7 +6174,8 @@
       "+15 All Stats",
       "+10% EXP Gained",
       "+20 Max HP",
-      "Set Attribute (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
+      "Set (The Scholar's Pilgrimage) [2-Piece Bonus]: +25% EXP Gained from all sources.",
+      "Set (The Scholar's Pilgrimage) [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
     ],
     "uniqueTrait": "",
     "rawType": "Head (Hood)",
@@ -6094,7 +6197,8 @@
       "+25 All Stats",
       "+15% EXP Gained",
       "+5% Evasion",
-      "Set Attribute (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
+      "Set (The Scholar's Pilgrimage) [2-Piece Bonus]: +25% EXP Gained from all sources.",
+      "Set (The Scholar's Pilgrimage) [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
     ],
     "uniqueTrait": "",
     "rawType": "Torso (Shirt)",
@@ -6116,7 +6220,8 @@
       "+10% EXP Gained",
       "+10% Cooldown Reduc.",
       "+5% All Resist",
-      "Set Attribute (Prime Architect's Command): [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
+      "Set (The Scholar's Pilgrimage) [2-Piece Bonus]: +25% EXP Gained from all sources.",
+      "Set (The Scholar's Pilgrimage) [3-Piece Bonus - \"Enlightened Grind\"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub."
     ],
     "uniqueTrait": "",
     "rawType": "Finger (Ring)",
@@ -6138,7 +6243,9 @@
       "+20 Agility",
       "+15% Gold Drop Rate",
       "+5% Attack Speed",
-      "Set Attribute (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
+      "Set (The Ash-Walker's Hoard) [2-Piece Bonus]: +50% Gold Drop Rate.",
+      "Set (The Ash-Walker's Hoard) [3-Piece Bonus]: +30% Magic Find.",
+      "Set (The Ash-Walker's Hoard) [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
     ],
     "uniqueTrait": "",
     "rawType": "L-Hand (1H)",
@@ -6160,7 +6267,9 @@
       "+20 Stamina",
       "+15% Magic Find",
       "+5% Block Chance",
-      "Set Attribute (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
+      "Set (The Ash-Walker's Hoard) [2-Piece Bonus]: +50% Gold Drop Rate.",
+      "Set (The Ash-Walker's Hoard) [3-Piece Bonus]: +30% Magic Find.",
+      "Set (The Ash-Walker's Hoard) [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
     ],
     "uniqueTrait": "",
     "rawType": "R-Hand (Shield)",
@@ -6182,7 +6291,9 @@
       "+15 All Stats",
       "+20% Potion Effect",
       "+15% Gold Drop Rate",
-      "Set Attribute (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
+      "Set (The Ash-Walker's Hoard) [2-Piece Bonus]: +50% Gold Drop Rate.",
+      "Set (The Ash-Walker's Hoard) [3-Piece Bonus]: +30% Magic Find.",
+      "Set (The Ash-Walker's Hoard) [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
     ],
     "uniqueTrait": "",
     "rawType": "Waist (Belt)",
@@ -6204,7 +6315,9 @@
       "+20 Agility",
       "+10% Movement Speed",
       "+15% Magic Find",
-      "Set Attribute (Prime Architect's Command): [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
+      "Set (The Ash-Walker's Hoard) [2-Piece Bonus]: +50% Gold Drop Rate.",
+      "Set (The Ash-Walker's Hoard) [3-Piece Bonus]: +30% Magic Find.",
+      "Set (The Ash-Walker's Hoard) [4-Piece Bonus - \"One Man's Trash\"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted."
     ],
     "uniqueTrait": "",
     "rawType": "Feet (Boots)",

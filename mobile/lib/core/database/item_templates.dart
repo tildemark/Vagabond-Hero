@@ -2746,7 +2746,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 95,
     socketCount: 0,
     description: 'A solid iron faceplate with no eye slits.',
-    modifiers: ['+40 STR', '+10% Block', '+1 Random Class Modifier', 'Set Attribute (The Iron Bastion): [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
+    modifiers: ['+40 STR', '+10% Block', '+1 Random Class Modifier', 'Set (The Iron Bastion) [2-Piece]: +20% Total Armor.', 'Set (The Iron Bastion) [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2761,7 +2761,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 160,
     socketCount: 0,
     description: 'Ridiculously heavy plate armor.',
-    modifiers: ['+60 STA', '+200 Max HP', '+1 Random Class Modifier', 'Set Attribute (The Iron Bastion): [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
+    modifiers: ['+60 STA', '+200 Max HP', '+1 Random Class Modifier', 'Set (The Iron Bastion) [2-Piece]: +20% Total Armor.', 'Set (The Iron Bastion) [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2776,7 +2776,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 120,
     socketCount: 0,
     description: 'A towering shield resembling a vault door.',
-    modifiers: ['+30 STR', '+30 Damage Reflect', '+1 Random Class Modifier', 'Set Attribute (The Iron Bastion): [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
+    modifiers: ['+30 STR', '+30 Damage Reflect', '+1 Random Class Modifier', 'Set (The Iron Bastion) [2-Piece]: +20% Total Armor.', 'Set (The Iron Bastion) [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2791,7 +2791,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A glowing brass whistle.',
-    modifiers: ['+40 STR', '+20% Cooldown Reduc.', '+1 Random Class Modifier', 'Set Attribute (Warlord\'s Fury): [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
+    modifiers: ['+40 STR', '+20% Cooldown Reduc.', '+1 Random Class Modifier', 'Set (Warlord\'s Fury) [2-Piece]: +15% Physical Damage.', 'Set (Warlord\'s Fury) [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2806,7 +2806,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'Boots tipped with solid steel spikes.',
-    modifiers: ['+35 STR', '+15% Movement Spd', '+1 Random Class Modifier', 'Set Attribute (Warlord\'s Fury): [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
+    modifiers: ['+35 STR', '+15% Movement Spd', '+1 Random Class Modifier', 'Set (Warlord\'s Fury) [2-Piece]: +15% Physical Damage.', 'Set (Warlord\'s Fury) [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2821,7 +2821,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A massive hammer that crackles with kinetic energy.',
-    modifiers: ['+50 STR', '+20% Boss Damage', '+1 Random Class Modifier', 'Set Attribute (Warlord\'s Fury): [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
+    modifiers: ['+50 STR', '+20% Boss Damage', '+1 Random Class Modifier', 'Set (Warlord\'s Fury) [2-Piece]: +15% Physical Damage.', 'Set (Warlord\'s Fury) [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2836,7 +2836,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 45,
     socketCount: 0,
     description: 'A wrestling belt won in the old fighting pits.',
-    modifiers: ['+50 STA', '+25% HP Regen', '+1 Random Class Modifier', 'Set Attribute (Goliath\'s Endurance): [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
+    modifiers: ['+50 STA', '+25% HP Regen', '+1 Random Class Modifier', 'Set (Goliath\'s Endurance) [2-Piece]: +30% Maximum HP.', 'Set (Goliath\'s Endurance) [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2851,7 +2851,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 70,
     socketCount: 0,
     description: 'Armbands that pulse like veins.',
-    modifiers: ['+40 STR', '+15% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (Goliath\'s Endurance): [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
+    modifiers: ['+40 STR', '+15% Attack Speed', '+1 Random Class Modifier', 'Set (Goliath\'s Endurance) [2-Piece]: +30% Maximum HP.', 'Set (Goliath\'s Endurance) [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2866,7 +2866,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring holding a drop of crystallized giant\'s blood.',
-    modifiers: ['+300 Max HP', '+10% All Resist', '+1 Random Class Modifier', 'Set Attribute (Goliath\'s Endurance): [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
+    modifiers: ['+300 Max HP', '+10% All Resist', '+1 Random Class Modifier', 'Set (Goliath\'s Endurance) [2-Piece]: +30% Maximum HP.', 'Set (Goliath\'s Endurance) [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2881,7 +2881,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A sickly green blade that continuously weeps.',
-    modifiers: ['+35 AGI', '+15 Flat Poison Dmg', '+1 Random Class Modifier', 'Set Attribute (The Viper\'s Kiss): [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
+    modifiers: ['+35 AGI', '+15 Flat Poison Dmg', '+1 Random Class Modifier', 'Set (The Viper\'s Kiss) [2-Piece]: +30% Poison and Bleed Damage.', 'Set (The Viper\'s Kiss) [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2896,7 +2896,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Serrated to cause maximum bleeding.',
-    modifiers: ['+35 AGI', '+15% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (The Viper\'s Kiss): [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
+    modifiers: ['+35 AGI', '+15% Attack Speed', '+1 Random Class Modifier', 'Set (The Viper\'s Kiss) [2-Piece]: +30% Poison and Bleed Damage.', 'Set (The Viper\'s Kiss) [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2911,7 +2911,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 95,
     socketCount: 0,
     description: 'Woven from the skin of an Abyssal snake.',
-    modifiers: ['+40 AGI', '+30% Poison Resist', '+1 Random Class Modifier', 'Set Attribute (The Viper\'s Kiss): [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
+    modifiers: ['+40 AGI', '+30% Poison Resist', '+1 Random Class Modifier', 'Set (The Viper\'s Kiss) [2-Piece]: +30% Poison and Bleed Damage.', 'Set (The Viper\'s Kiss) [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2926,7 +2926,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 70,
     socketCount: 0,
     description: 'Your face is entirely obscured by magical shadow.',
-    modifiers: ['+40 AGI', '+10% Evasion', '+1 Random Class Modifier', 'Set Attribute (Shadow-Walker\'s Shroud): [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
+    modifiers: ['+40 AGI', '+10% Evasion', '+1 Random Class Modifier', 'Set (Shadow-Walker\'s Shroud) [2-Piece]: +15% Base Evasion.', 'Set (Shadow-Walker\'s Shroud) [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2941,7 +2941,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 50,
     socketCount: 0,
     description: 'Muffles the sound of your weapons being drawn.',
-    modifiers: ['+35 AGI', '+20% Crit Damage', '+1 Random Class Modifier', 'Set Attribute (Shadow-Walker\'s Shroud): [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
+    modifiers: ['+35 AGI', '+20% Crit Damage', '+1 Random Class Modifier', 'Set (Shadow-Walker\'s Shroud) [2-Piece]: +15% Base Evasion.', 'Set (Shadow-Walker\'s Shroud) [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2956,7 +2956,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring forged from absolute darkness.',
-    modifiers: ['+10% Crit Chance', '+15% Movement Spd', '+1 Random Class Modifier', 'Set Attribute (Shadow-Walker\'s Shroud): [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
+    modifiers: ['+10% Crit Chance', '+15% Movement Spd', '+1 Random Class Modifier', 'Set (Shadow-Walker\'s Shroud) [2-Piece]: +15% Base Evasion.', 'Set (Shadow-Walker\'s Shroud) [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2971,7 +2971,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The bowstring hums with contained wind.',
-    modifiers: ['+50 AGI', '+15% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (The Bladed Gale): [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
+    modifiers: ['+50 AGI', '+15% Attack Speed', '+1 Random Class Modifier', 'Set (The Bladed Gale) [2-Piece]: +20% Attack Speed.', 'Set (The Bladed Gale) [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2986,7 +2986,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 60,
     socketCount: 0,
     description: 'So light they feel like wearing nothing.',
-    modifiers: ['+40 AGI', '+20% Movement Spd', '+1 Random Class Modifier', 'Set Attribute (The Bladed Gale): [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
+    modifiers: ['+40 AGI', '+20% Movement Spd', '+1 Random Class Modifier', 'Set (The Bladed Gale) [2-Piece]: +20% Attack Speed.', 'Set (The Bladed Gale) [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3001,7 +3001,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Carved with the symbol of a tornado.',
-    modifiers: ['+20 AGI', '+10% Evasion', '+1 Random Class Modifier', 'Set Attribute (The Bladed Gale): [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
+    modifiers: ['+20 AGI', '+10% Evasion', '+1 Random Class Modifier', 'Set (The Bladed Gale) [2-Piece]: +20% Attack Speed.', 'Set (The Bladed Gale) [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3016,7 +3016,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Topped with a rotating, multi-faceted crystal.',
-    modifiers: ['+50 INT', '+15% Cast Speed', '+1 Random Class Modifier', 'Set Attribute (Archmage\'s Genesis): [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
+    modifiers: ['+50 INT', '+15% Cast Speed', '+1 Random Class Modifier', 'Set (Archmage\'s Genesis) [2-Piece]: +20% Magic Damage.', 'Set (Archmage\'s Genesis) [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3031,7 +3031,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 60,
     socketCount: 0,
     description: 'A floating crown of pure arcane energy.',
-    modifiers: ['+40 INT', '+10% All Resist', '+1 Random Class Modifier', 'Set Attribute (Archmage\'s Genesis): [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
+    modifiers: ['+40 INT', '+10% All Resist', '+1 Random Class Modifier', 'Set (Archmage\'s Genesis) [2-Piece]: +20% Magic Damage.', 'Set (Archmage\'s Genesis) [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3046,7 +3046,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The gem constantly changes color (Fire/Ice/Lightning).',
-    modifiers: ['+30 INT', '+20% Crit Chance', '+1 Random Class Modifier', 'Set Attribute (Archmage\'s Genesis): [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
+    modifiers: ['+30 INT', '+20% Crit Chance', '+1 Random Class Modifier', 'Set (Archmage\'s Genesis) [2-Piece]: +20% Magic Damage.', 'Set (Archmage\'s Genesis) [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3061,7 +3061,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 110,
     socketCount: 0,
     description: 'Woven from the physical manifestation of the Void.',
-    modifiers: ['+45 INT', '+100 Max Mana', '+1 Random Class Modifier', 'Set Attribute (Aether-Weaver\'s Shell): [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
+    modifiers: ['+45 INT', '+100 Max Mana', '+1 Random Class Modifier', 'Set (Aether-Weaver\'s Shell) [2-Piece]: +50% Maximum Mana.', 'Set (Aether-Weaver\'s Shell) [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3076,7 +3076,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A glowing orb held in the palm of the hand.',
-    modifiers: ['+35 STA', '+150 Max Mana', '+1 Random Class Modifier', 'Set Attribute (Aether-Weaver\'s Shell): [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
+    modifiers: ['+35 STA', '+150 Max Mana', '+1 Random Class Modifier', 'Set (Aether-Weaver\'s Shell) [2-Piece]: +50% Maximum Mana.', 'Set (Aether-Weaver\'s Shell) [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3091,7 +3091,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 30,
     socketCount: 0,
     description: 'A belt made of braided starlight.',
-    modifiers: ['+30 INT', '+20% Mana Regen', '+1 Random Class Modifier', 'Set Attribute (Aether-Weaver\'s Shell): [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
+    modifiers: ['+30 INT', '+20% Mana Regen', '+1 Random Class Modifier', 'Set (Aether-Weaver\'s Shell) [2-Piece]: +50% Maximum Mana.', 'Set (Aether-Weaver\'s Shell) [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3106,7 +3106,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Shaped like an infinity symbol at the tip.',
-    modifiers: ['+40 INT', '+10% Cooldown Reduc.', '+1 Random Class Modifier', 'Set Attribute (The Infinite Loop): [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
+    modifiers: ['+40 INT', '+10% Cooldown Reduc.', '+1 Random Class Modifier', 'Set (The Infinite Loop) [2-Piece]: +25% Cast Speed & +15% Cooldown Reduction.', 'Set (The Infinite Loop) [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3121,7 +3121,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 45,
     socketCount: 0,
     description: 'Your fingers blur when weaving spell components.',
-    modifiers: ['+35 INT', '+15% Cast Speed', '+1 Random Class Modifier', 'Set Attribute (The Infinite Loop): [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
+    modifiers: ['+35 INT', '+15% Cast Speed', '+1 Random Class Modifier', 'Set (The Infinite Loop) [2-Piece]: +25% Cast Speed & +15% Cooldown Reduction.', 'Set (The Infinite Loop) [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3136,7 +3136,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A Moebius strip forged from silver.',
-    modifiers: ['+15% Cooldown Reduc.', '+10% Magic Dmg', '+1 Random Class Modifier', 'Set Attribute (The Infinite Loop): [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
+    modifiers: ['+15% Cooldown Reduc.', '+10% Magic Dmg', '+1 Random Class Modifier', 'Set (The Infinite Loop) [2-Piece]: +25% Cast Speed & +15% Cooldown Reduction.', 'Set (The Infinite Loop) [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3151,7 +3151,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Used to direct the pack, not strike them.',
-    modifiers: ['+35 INT', '+15% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (Beast-Master\'s Call): [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
+    modifiers: ['+35 INT', '+15% Attack Speed', '+1 Random Class Modifier', 'Set (Beast-Master\'s Call) [2-Piece]: +40% Summon Maximum HP.', 'Set (Beast-Master\'s Call) [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3166,7 +3166,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Carved with the roaring face of a chimera.',
-    modifiers: ['+40 STA', '+20% Summon HP', '+1 Random Class Modifier', 'Set Attribute (Beast-Master\'s Call): [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
+    modifiers: ['+40 STA', '+20% Summon HP', '+1 Random Class Modifier', 'Set (Beast-Master\'s Call) [2-Piece]: +40% Summon Maximum HP.', 'Set (Beast-Master\'s Call) [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3181,7 +3181,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 120,
     socketCount: 0,
     description: 'Thick leather reinforced with bone plates.',
-    modifiers: ['+30 STR', '+250 Max HP', '+1 Random Class Modifier', 'Set Attribute (Beast-Master\'s Call): [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
+    modifiers: ['+30 STR', '+250 Max HP', '+1 Random Class Modifier', 'Set (Beast-Master\'s Call) [2-Piece]: +40% Summon Maximum HP.', 'Set (Beast-Master\'s Call) [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3196,7 +3196,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A spear made entirely of twisted, living thorns.',
-    modifiers: ['+45 INT/STA', '+15 Flat Poison', '+1 Random Class Modifier', 'Set Attribute (The Overgrowth): [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
+    modifiers: ['+45 INT/STA', '+15 Flat Poison', '+1 Random Class Modifier', 'Set (The Overgrowth) [2-Piece]: +20% Life Steal for you and your Summon.', 'Set (The Overgrowth) [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3211,7 +3211,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 65,
     socketCount: 0,
     description: 'Roots occasionally attempt to anchor you to the ground.',
-    modifiers: ['+35 STA', '+10% HP Regen', '+1 Random Class Modifier', 'Set Attribute (The Overgrowth): [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
+    modifiers: ['+35 STA', '+10% HP Regen', '+1 Random Class Modifier', 'Set (The Overgrowth) [2-Piece]: +20% Life Steal for you and your Summon.', 'Set (The Overgrowth) [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3226,7 +3226,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring of petrified moss.',
-    modifiers: ['+10% Life Steal', '+50 Max HP', '+1 Random Class Modifier', 'Set Attribute (The Overgrowth): [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
+    modifiers: ['+10% Life Steal', '+50 Max HP', '+1 Random Class Modifier', 'Set (The Overgrowth) [2-Piece]: +20% Life Steal for you and your Summon.', 'Set (The Overgrowth) [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3241,7 +3241,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'Connected to your spine by ethereal blue threads.',
-    modifiers: ['+40 STA', '+15% All Resist', '+1 Random Class Modifier', 'Set Attribute (Soul-Tether Regalia): [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
+    modifiers: ['+40 STA', '+15% All Resist', '+1 Random Class Modifier', 'Set (Soul-Tether Regalia) [2-Piece]: +25% All Resistances.', 'Set (Soul-Tether Regalia) [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3256,7 +3256,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 40,
     socketCount: 0,
     description: 'A belt that feels like it\'s squeezing you just a bit too tight.',
-    modifiers: ['+35 INT', '+15% Potion Effect', '+1 Random Class Modifier', 'Set Attribute (Soul-Tether Regalia): [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
+    modifiers: ['+35 INT', '+15% Potion Effect', '+1 Random Class Modifier', 'Set (Soul-Tether Regalia) [2-Piece]: +25% All Resistances.', 'Set (Soul-Tether Regalia) [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3271,7 +3271,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The gemstone beats in sync with your heart.',
-    modifiers: ['+20% Boss Damage', '+100 Max Mana', '+1 Random Class Modifier', 'Set Attribute (Soul-Tether Regalia): [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
+    modifiers: ['+20% Boss Damage', '+100 Max Mana', '+1 Random Class Modifier', 'Set (Soul-Tether Regalia) [2-Piece]: +25% All Resistances.', 'Set (Soul-Tether Regalia) [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3286,7 +3286,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 160,
     socketCount: 0,
     description: 'A jagged, open-faced helmet stained crimson.',
-    modifiers: ['+60 STR', '+15% Crit Damage', '+1 Random Class Modifier', 'Set Attribute (The Blood-Crazed): [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
+    modifiers: ['+60 STR', '+15% Crit Damage', '+1 Random Class Modifier', 'Set (The Blood-Crazed) [2-Piece]: +30% Physical Damage.', 'Set (The Blood-Crazed) [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3301,7 +3301,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 240,
     socketCount: 0,
     description: 'Spiked on the inside to keep the wearer enraged.',
-    modifiers: ['+80 STR', '+10% Life Steal', '+1 Random Class Modifier', 'Set Attribute (The Blood-Crazed): [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
+    modifiers: ['+80 STR', '+10% Life Steal', '+1 Random Class Modifier', 'Set (The Blood-Crazed) [2-Piece]: +30% Physical Damage.', 'Set (The Blood-Crazed) [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3316,7 +3316,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring of jagged bone.',
-    modifiers: ['+15% Attack Speed', '+10% Boss Dmg', '+1 Random Class Modifier', 'Set Attribute (The Blood-Crazed): [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
+    modifiers: ['+15% Attack Speed', '+10% Boss Dmg', '+1 Random Class Modifier', 'Set (The Blood-Crazed) [2-Piece]: +30% Physical Damage.', 'Set (The Blood-Crazed) [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3331,7 +3331,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 150,
     socketCount: 0,
     description: 'Massive shoulder guards that absorb kinetic force.',
-    modifiers: ['+70 STA', '+20 Damage Reflect', '+1 Random Class Modifier', 'Set Attribute (The Abyssal Aegis): [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
+    modifiers: ['+70 STA', '+20 Damage Reflect', '+1 Random Class Modifier', 'Set (The Abyssal Aegis) [2-Piece]: +40% Total Armor.', 'Set (The Abyssal Aegis) [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3346,7 +3346,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 190,
     socketCount: 0,
     description: 'Grounding plates that prevent you from being moved.',
-    modifiers: ['+60 STR', '+20% Void Resist', '+1 Random Class Modifier', 'Set Attribute (The Abyssal Aegis): [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
+    modifiers: ['+60 STR', '+20% Void Resist', '+1 Random Class Modifier', 'Set (The Abyssal Aegis) [2-Piece]: +40% Total Armor.', 'Set (The Abyssal Aegis) [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3361,7 +3361,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A miniature black hole held in a magnetic field.',
-    modifiers: ['+20% Block Chance', '+500 Max HP', '+1 Random Class Modifier', 'Set Attribute (The Abyssal Aegis): [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
+    modifiers: ['+20% Block Chance', '+500 Max HP', '+1 Random Class Modifier', 'Set (The Abyssal Aegis) [2-Piece]: +40% Total Armor.', 'Set (The Abyssal Aegis) [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3376,7 +3376,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'A crown of dark iron fit for a conqueror.',
-    modifiers: ['+80 STR/STA', '+15% All Resist', '+1 Random Class Modifier', 'Set Attribute (The Warlord\'s Zenith): [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
+    modifiers: ['+80 STR/STA', '+15% All Resist', '+1 Random Class Modifier', 'Set (The Warlord\'s Zenith) [2-Piece]: +25% Boss Damage & +25% All Resistances.', 'Set (The Warlord\'s Zenith) [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3391,7 +3391,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 140,
     socketCount: 0,
     description: 'Your grip strength is amplified tenfold.',
-    modifiers: ['+70 STR', '+20% Crit Damage', '+1 Random Class Modifier', 'Set Attribute (The Warlord\'s Zenith): [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
+    modifiers: ['+70 STR', '+20% Crit Damage', '+1 Random Class Modifier', 'Set (The Warlord\'s Zenith) [2-Piece]: +25% Boss Damage & +25% All Resistances.', 'Set (The Warlord\'s Zenith) [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3406,7 +3406,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Bears the seal of the shattered server admin.',
-    modifiers: ['+20% Boss Damage', '+10% Armor Pen', '+1 Random Class Modifier', 'Set Attribute (The Warlord\'s Zenith): [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
+    modifiers: ['+20% Boss Damage', '+10% Armor Pen', '+1 Random Class Modifier', 'Set (The Warlord\'s Zenith) [2-Piece]: +25% Boss Damage & +25% All Resistances.', 'Set (The Warlord\'s Zenith) [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3421,7 +3421,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 110,
     socketCount: 0,
     description: 'A rebreather filtering out your own toxic fumes.',
-    modifiers: ['+60 AGI', '+20% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (Nightshade Syndicate): [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
+    modifiers: ['+60 AGI', '+20% Attack Speed', '+1 Random Class Modifier', 'Set (Nightshade Syndicate) [2-Piece]: +40% Poison Damage.', 'Set (Nightshade Syndicate) [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3436,7 +3436,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'Lined with hidden vials of acidic venom.',
-    modifiers: ['+75 AGI', '+15% Evasion', '+1 Random Class Modifier', 'Set Attribute (Nightshade Syndicate): [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
+    modifiers: ['+75 AGI', '+15% Evasion', '+1 Random Class Modifier', 'Set (Nightshade Syndicate) [2-Piece]: +40% Poison Damage.', 'Set (Nightshade Syndicate) [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3451,7 +3451,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A hollow ring concealing a lethal needle.',
-    modifiers: ['+15 Flat Poison Dmg', '+15% Crit Chance', '+1 Random Class Modifier', 'Set Attribute (Nightshade Syndicate): [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
+    modifiers: ['+15 Flat Poison Dmg', '+15% Crit Chance', '+1 Random Class Modifier', 'Set (Nightshade Syndicate) [2-Piece]: +40% Poison Damage.', 'Set (Nightshade Syndicate) [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3511,7 +3511,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'Fabric that phases in and out of the physical realm.',
-    modifiers: ['+80 AGI', '+20% All Resist', '+1 Random Class Modifier', 'Set Attribute (Ghost-Walk Regalia): [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
+    modifiers: ['+80 AGI', '+20% All Resist', '+1 Random Class Modifier', 'Set (Ghost-Walk Regalia) [2-Piece]: +20% Base Evasion.', 'Set (Ghost-Walk Regalia) [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3526,7 +3526,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 100,
     socketCount: 0,
     description: 'Your hands leave motion-blurred trails in the air.',
-    modifiers: ['+70 AGI', '+25% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (Ghost-Walk Regalia): [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
+    modifiers: ['+70 AGI', '+25% Attack Speed', '+1 Random Class Modifier', 'Set (Ghost-Walk Regalia) [2-Piece]: +20% Base Evasion.', 'Set (Ghost-Walk Regalia) [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3541,7 +3541,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Completely invisible to the naked eye.',
-    modifiers: ['+15% Evasion', '+20% Magic Find', '+1 Random Class Modifier', 'Set Attribute (Ghost-Walk Regalia): [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
+    modifiers: ['+15% Evasion', '+20% Magic Find', '+1 Random Class Modifier', 'Set (Ghost-Walk Regalia) [2-Piece]: +20% Base Evasion.', 'Set (Ghost-Walk Regalia) [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3556,7 +3556,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 90,
     socketCount: 0,
     description: 'A halo of shifting elemental energy.',
-    modifiers: ['+70 INT', '+15% Cast Speed', '+1 Random Class Modifier', 'Set Attribute (Prismatic Convergence): [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
+    modifiers: ['+70 INT', '+15% Cast Speed', '+1 Random Class Modifier', 'Set (Prismatic Convergence) [2-Piece]: +25% Fire, Ice, and Lightning Damage.', 'Set (Prismatic Convergence) [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3571,7 +3571,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 160,
     socketCount: 0,
     description: 'Weaves different elemental threads based on your stance.',
-    modifiers: ['+80 INT', '+20% All Resist', '+1 Random Class Modifier', 'Set Attribute (Prismatic Convergence): [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
+    modifiers: ['+80 INT', '+20% All Resist', '+1 Random Class Modifier', 'Set (Prismatic Convergence) [2-Piece]: +25% Fire, Ice, and Lightning Damage.', 'Set (Prismatic Convergence) [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3586,7 +3586,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A perfectly cut tri-color gemstone.',
-    modifiers: ['+200 Max Mana', '+15% Magic Dmg', '+1 Random Class Modifier', 'Set Attribute (Prismatic Convergence): [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
+    modifiers: ['+200 Max Mana', '+15% Magic Dmg', '+1 Random Class Modifier', 'Set (Prismatic Convergence) [2-Piece]: +25% Fire, Ice, and Lightning Damage.', 'Set (Prismatic Convergence) [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3646,7 +3646,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 190,
     socketCount: 0,
     description: 'Woven from the source code of the Astral Servers.',
-    modifiers: ['+90 INT', '+400 Max Mana', '+1 Random Class Modifier', 'Set Attribute (Aetherial Ascendant): [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
+    modifiers: ['+90 INT', '+400 Max Mana', '+1 Random Class Modifier', 'Set (Aetherial Ascendant) [2-Piece]: +30% Cooldown Reduction.', 'Set (Aetherial Ascendant) [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3661,7 +3661,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 90,
     socketCount: 0,
     description: 'You hover slightly off the digital floor.',
-    modifiers: ['+70 INT', '+20% Movement Spd', '+1 Random Class Modifier', 'Set Attribute (Aetherial Ascendant): [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
+    modifiers: ['+70 INT', '+20% Movement Spd', '+1 Random Class Modifier', 'Set (Aetherial Ascendant) [2-Piece]: +30% Cooldown Reduction.', 'Set (Aetherial Ascendant) [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3676,7 +3676,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 60,
     socketCount: 0,
     description: 'A belt that actively rewinds time around your spells.',
-    modifiers: ['+25% Cast Speed', '+10% Cooldown Reduc.', '+1 Random Class Modifier', 'Set Attribute (Aetherial Ascendant): [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
+    modifiers: ['+25% Cast Speed', '+10% Cooldown Reduc.', '+1 Random Class Modifier', 'Set (Aetherial Ascendant) [2-Piece]: +30% Cooldown Reduction.', 'Set (Aetherial Ascendant) [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3691,7 +3691,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 110,
     socketCount: 0,
     description: 'A terrifying skull mask wreathed in blue flame.',
-    modifiers: ['+65 INT', '+20% Summon HP', '+1 Random Class Modifier', 'Set Attribute (Grave-Lord\'s Dominion): [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
+    modifiers: ['+65 INT', '+20% Summon HP', '+1 Random Class Modifier', 'Set (Grave-Lord\'s Dominion) [2-Piece]: +50% Maximum Summon HP & +25% Summon Damage.', 'Set (Grave-Lord\'s Dominion) [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3706,7 +3706,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 170,
     socketCount: 0,
     description: 'Whispers of the damned emanate from the folds.',
-    modifiers: ['+80 INT', '+30% Void Resist', '+1 Random Class Modifier', 'Set Attribute (Grave-Lord\'s Dominion): [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
+    modifiers: ['+80 INT', '+30% Void Resist', '+1 Random Class Modifier', 'Set (Grave-Lord\'s Dominion) [2-Piece]: +50% Maximum Summon HP & +25% Summon Damage.', 'Set (Grave-Lord\'s Dominion) [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3721,7 +3721,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring that hums with necromantic energy.',
-    modifiers: ['+10% Cooldown Reduc.', '+15% Boss Dmg', '+1 Random Class Modifier', 'Set Attribute (Grave-Lord\'s Dominion): [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
+    modifiers: ['+10% Cooldown Reduc.', '+15% Boss Dmg', '+1 Random Class Modifier', 'Set (Grave-Lord\'s Dominion) [2-Piece]: +50% Maximum Summon HP & +25% Summon Damage.', 'Set (Grave-Lord\'s Dominion) [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3736,7 +3736,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 130,
     socketCount: 0,
     description: 'A heavy hood adorned with beast fur and fangs.',
-    modifiers: ['+60 STR/INT', '+15% All Resist', '+1 Random Class Modifier', 'Set Attribute (Chimera\'s Aspect): [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
+    modifiers: ['+60 STR/INT', '+15% All Resist', '+1 Random Class Modifier', 'Set (Chimera\'s Aspect) [2-Piece]: +20% Strength and +20% Intelligence.', 'Set (Chimera\'s Aspect) [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3751,7 +3751,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 100,
     socketCount: 0,
     description: 'Gauntlets that extend razor-sharp claws when making a fist.',
-    modifiers: ['+50 STR/INT', '+20% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (Chimera\'s Aspect): [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
+    modifiers: ['+50 STR/INT', '+20% Attack Speed', '+1 Random Class Modifier', 'Set (Chimera\'s Aspect) [2-Piece]: +20% Strength and +20% Intelligence.', 'Set (Chimera\'s Aspect) [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3766,7 +3766,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'A belt woven from incredibly tough, living vines.',
-    modifiers: ['+400 Max HP', '+20% Crit Chance', '+1 Random Class Modifier', 'Set Attribute (Chimera\'s Aspect): [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
+    modifiers: ['+400 Max HP', '+20% Crit Chance', '+1 Random Class Modifier', 'Set (Chimera\'s Aspect) [2-Piece]: +20% Strength and +20% Intelligence.', 'Set (Chimera\'s Aspect) [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3781,7 +3781,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 220,
     socketCount: 0,
     description: 'Wood from Oakhaven, petrified by the Void.',
-    modifiers: ['+90 STA', '+15% Life Steal', '+1 Random Class Modifier', 'Set Attribute (Echoes of the Wild): [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
+    modifiers: ['+90 STA', '+15% Life Steal', '+1 Random Class Modifier', 'Set (Echoes of the Wild) [2-Piece]: +30% Maximum HP & +30% Armor.', 'Set (Echoes of the Wild) [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3796,7 +3796,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 120,
     socketCount: 0,
     description: 'Roots spread from the soles to anchor you when struck.',
-    modifiers: ['+70 STA', '+20% Movement Spd', '+1 Random Class Modifier', 'Set Attribute (Echoes of the Wild): [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
+    modifiers: ['+70 STA', '+20% Movement Spd', '+1 Random Class Modifier', 'Set (Echoes of the Wild) [2-Piece]: +30% Maximum HP & +30% Armor.', 'Set (Echoes of the Wild) [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3811,7 +3811,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Two intertwined rings, representing the master and the beast.',
-    modifiers: ['+100 INT/STA', '+15% All Resist', '+1 Random Class Modifier', 'Set Attribute (Echoes of the Wild): [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
+    modifiers: ['+100 INT/STA', '+15% All Resist', '+1 Random Class Modifier', 'Set (Echoes of the Wild) [2-Piece]: +30% Maximum HP & +30% Armor.', 'Set (Echoes of the Wild) [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3826,7 +3826,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 380,
     socketCount: 0,
     description: 'A helm forged from the debris of a deleted sector.',
-    modifiers: ['+120 STR', '+25% Crit Damage', '+1 Random Class Modifier', 'Set Attribute (World-Breaker\'s Cataclysm): [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
+    modifiers: ['+120 STR', '+25% Crit Damage', '+1 Random Class Modifier', 'Set (World-Breaker\'s Cataclysm) [2-Piece]: +50% Physical Damage & +30% Armor Penetration.', 'Set (World-Breaker\'s Cataclysm) [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3841,7 +3841,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 600,
     socketCount: 0,
     description: 'The metal is perpetually white-hot.',
-    modifiers: ['+150 STR', '+500 Max HP', '+1 Random Class Modifier', 'Set Attribute (World-Breaker\'s Cataclysm): [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
+    modifiers: ['+150 STR', '+500 Max HP', '+1 Random Class Modifier', 'Set (World-Breaker\'s Cataclysm) [2-Piece]: +50% Physical Damage & +30% Armor Penetration.', 'Set (World-Breaker\'s Cataclysm) [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3856,7 +3856,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring of condensed gravity.',
-    modifiers: ['+30% Attack Speed', '+20% Boss Dmg', '+1 Random Class Modifier', 'Set Attribute (World-Breaker\'s Cataclysm): [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
+    modifiers: ['+30% Attack Speed', '+20% Boss Dmg', '+1 Random Class Modifier', 'Set (World-Breaker\'s Cataclysm) [2-Piece]: +50% Physical Damage & +30% Armor Penetration.', 'Set (World-Breaker\'s Cataclysm) [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3871,7 +3871,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 300,
     socketCount: 0,
     description: 'Emits a hard-light barrier extending 10 feet out.',
-    modifiers: ['+100 STA', '+50 Damage Reflect', '+1 Random Class Modifier', 'Set Attribute (Aegis Lord\'s Bastion): [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
+    modifiers: ['+100 STA', '+50 Damage Reflect', '+1 Random Class Modifier', 'Set (Aegis Lord\'s Bastion) [2-Piece]: +100% Total Armor.', 'Set (Aegis Lord\'s Bastion) [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3886,7 +3886,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 450,
     socketCount: 0,
     description: 'Anchors the wearer directly to the server\'s root code.',
-    modifiers: ['+120 STR', '+30% All Resist', '+1 Random Class Modifier', 'Set Attribute (Aegis Lord\'s Bastion): [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
+    modifiers: ['+120 STR', '+30% All Resist', '+1 Random Class Modifier', 'Set (Aegis Lord\'s Bastion) [2-Piece]: +100% Total Armor.', 'Set (Aegis Lord\'s Bastion) [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3901,7 +3901,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A tiny, contained supernova.',
-    modifiers: ['+40% Block Chance', '+1000 Max HP', '+1 Random Class Modifier', 'Set Attribute (Aegis Lord\'s Bastion): [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
+    modifiers: ['+40% Block Chance', '+1000 Max HP', '+1 Random Class Modifier', 'Set (Aegis Lord\'s Bastion) [2-Piece]: +100% Total Armor.', 'Set (Aegis Lord\'s Bastion) [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3916,7 +3916,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 400,
     socketCount: 0,
     description: 'Worn by the original server moderators.',
-    modifiers: ['+150 STR/STA', '+20% All Resist', '+1 Random Class Modifier', 'Set Attribute (Prime Enforcer\'s Plating): [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
+    modifiers: ['+150 STR/STA', '+20% All Resist', '+1 Random Class Modifier', 'Set (Prime Enforcer\'s Plating) [2-Piece]: +50% Maximum HP & +30% Boss Damage.', 'Set (Prime Enforcer\'s Plating) [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3931,7 +3931,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 280,
     socketCount: 0,
     description: 'Your punches can shatter digital reality.',
-    modifiers: ['+100 STR', '+50% Crit Damage', '+1 Random Class Modifier', 'Set Attribute (Prime Enforcer\'s Plating): [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
+    modifiers: ['+100 STR', '+50% Crit Damage', '+1 Random Class Modifier', 'Set (Prime Enforcer\'s Plating) [2-Piece]: +50% Maximum HP & +30% Boss Damage.', 'Set (Prime Enforcer\'s Plating) [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3946,7 +3946,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Grants write-permission to the game engine.',
-    modifiers: ['+25% Boss Damage', '+20% Armor Pen', '+1 Random Class Modifier', 'Set Attribute (Prime Enforcer\'s Plating): [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
+    modifiers: ['+25% Boss Damage', '+20% Armor Pen', '+1 Random Class Modifier', 'Set (Prime Enforcer\'s Plating) [2-Piece]: +50% Maximum HP & +30% Boss Damage.', 'Set (Prime Enforcer\'s Plating) [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3961,7 +3961,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 250,
     socketCount: 0,
     description: 'A mask made of absolute, light-devouring void.',
-    modifiers: ['+120 AGI', '+30% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (Shadow-Walker\'s Eclipse): [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
+    modifiers: ['+120 AGI', '+30% Attack Speed', '+1 Random Class Modifier', 'Set (Shadow-Walker\'s Eclipse) [2-Piece]: +40% Base Evasion & +30% Movement Speed.', 'Set (Shadow-Walker\'s Eclipse) [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3976,7 +3976,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 400,
     socketCount: 0,
     description: 'Blends flawlessly into the Unallocated Space.',
-    modifiers: ['+150 AGI', '+20% Evasion', '+1 Random Class Modifier', 'Set Attribute (Shadow-Walker\'s Eclipse): [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
+    modifiers: ['+150 AGI', '+20% Evasion', '+1 Random Class Modifier', 'Set (Shadow-Walker\'s Eclipse) [2-Piece]: +40% Base Evasion & +30% Movement Speed.', 'Set (Shadow-Walker\'s Eclipse) [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3991,7 +3991,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Continuously leaks corrupted data.',
-    modifiers: ['+50 Flat Poison Dmg', '+20% Crit Chance', '+1 Random Class Modifier', 'Set Attribute (Shadow-Walker\'s Eclipse): [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
+    modifiers: ['+50 Flat Poison Dmg', '+20% Crit Chance', '+1 Random Class Modifier', 'Set (Shadow-Walker\'s Eclipse) [2-Piece]: +40% Base Evasion & +30% Movement Speed.', 'Set (Shadow-Walker\'s Eclipse) [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4006,7 +4006,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 280,
     socketCount: 0,
     description: 'Calculates trajectories across parallel dimensions.',
-    modifiers: ['+140 AGI', '+25% Crit Chance', '+1 Random Class Modifier', 'Set Attribute (Void-Stalker\'s Horizon): [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
+    modifiers: ['+140 AGI', '+25% Crit Chance', '+1 Random Class Modifier', 'Set (Void-Stalker\'s Horizon) [2-Piece]: +50% Armor Penetration & +50% Critical Damage.', 'Set (Void-Stalker\'s Horizon) [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4021,7 +4021,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 250,
     socketCount: 0,
     description: 'Grants the ability to walk on the air itself.',
-    modifiers: ['+100 AGI', '+30% Movement Spd', '+1 Random Class Modifier', 'Set Attribute (Void-Stalker\'s Horizon): [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
+    modifiers: ['+100 AGI', '+30% Movement Spd', '+1 Random Class Modifier', 'Set (Void-Stalker\'s Horizon) [2-Piece]: +50% Armor Penetration & +50% Critical Damage.', 'Set (Void-Stalker\'s Horizon) [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4036,7 +4036,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A quantum targeting lens.',
-    modifiers: ['+100% Crit Damage', '+15% Cooldown Reduc.', '+1 Random Class Modifier', 'Set Attribute (Void-Stalker\'s Horizon): [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
+    modifiers: ['+100% Crit Damage', '+15% Cooldown Reduc.', '+1 Random Class Modifier', 'Set (Void-Stalker\'s Horizon) [2-Piece]: +50% Armor Penetration & +50% Critical Damage.', 'Set (Void-Stalker\'s Horizon) [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4051,7 +4051,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 420,
     socketCount: 0,
     description: 'Woven from the source code of deleted player characters.',
-    modifiers: ['+160 AGI', '+30% All Resist', '+1 Random Class Modifier', 'Set Attribute (Prime Assassin\'s Shroud): [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
+    modifiers: ['+160 AGI', '+30% All Resist', '+1 Random Class Modifier', 'Set (Prime Assassin\'s Shroud) [2-Piece]: +30% Base Evasion & +30% Critical Hit Chance.', 'Set (Prime Assassin\'s Shroud) [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4066,7 +4066,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 220,
     socketCount: 0,
     description: 'Your strikes pass cleanly through physical armor.',
-    modifiers: ['+120 AGI', '+35% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (Prime Assassin\'s Shroud): [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
+    modifiers: ['+120 AGI', '+35% Attack Speed', '+1 Random Class Modifier', 'Set (Prime Assassin\'s Shroud) [2-Piece]: +30% Base Evasion & +30% Critical Hit Chance.', 'Set (Prime Assassin\'s Shroud) [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4081,7 +4081,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring that exists only in your peripheral vision.',
-    modifiers: ['+20% Evasion', '+40% Magic Find', '+1 Random Class Modifier', 'Set Attribute (Prime Assassin\'s Shroud): [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
+    modifiers: ['+20% Evasion', '+40% Magic Find', '+1 Random Class Modifier', 'Set (Prime Assassin\'s Shroud) [2-Piece]: +30% Base Evasion & +30% Critical Hit Chance.', 'Set (Prime Assassin\'s Shroud) [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4096,7 +4096,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'A halo of golden gears spinning backward.',
-    modifiers: ['+140 INT', '+25% Cast Speed', '+1 Random Class Modifier', 'Set Attribute (Arch-Mage\'s Paradox): [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
+    modifiers: ['+140 INT', '+25% Cast Speed', '+1 Random Class Modifier', 'Set (Arch-Mage\'s Paradox) [2-Piece]: +50% Magic Damage & +40% Cast Speed.', 'Set (Arch-Mage\'s Paradox) [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4111,7 +4111,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 380,
     socketCount: 0,
     description: 'The fabric depicts stars that have yet to be born.',
-    modifiers: ['+160 INT', '+30% All Resist', '+1 Random Class Modifier', 'Set Attribute (Arch-Mage\'s Paradox): [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
+    modifiers: ['+160 INT', '+30% All Resist', '+1 Random Class Modifier', 'Set (Arch-Mage\'s Paradox) [2-Piece]: +50% Magic Damage & +40% Cast Speed.', 'Set (Arch-Mage\'s Paradox) [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4126,7 +4126,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A clock-face permanently stuck at 12:00.',
-    modifiers: ['+500 Max Mana', '+25% Magic Dmg', '+1 Random Class Modifier', 'Set Attribute (Arch-Mage\'s Paradox): [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
+    modifiers: ['+500 Max Mana', '+25% Magic Dmg', '+1 Random Class Modifier', 'Set (Arch-Mage\'s Paradox) [2-Piece]: +50% Magic Damage & +40% Cast Speed.', 'Set (Arch-Mage\'s Paradox) [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4141,7 +4141,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 220,
     socketCount: 0,
     description: 'A crown of crystallized blood hovering over a red hood.',
-    modifiers: ['+120 INT/STA', '+800 Max HP', '+1 Random Class Modifier', 'Set Attribute (Crimson Sovereign\'s Court): [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
+    modifiers: ['+120 INT/STA', '+800 Max HP', '+1 Random Class Modifier', 'Set (Crimson Sovereign\'s Court) [2-Piece]: +50% Maximum HP & +50% Life Steal.', 'Set (Crimson Sovereign\'s Court) [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4156,7 +4156,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'Covered in runes written in the blood of dead servers.',
-    modifiers: ['+100 INT', '+30% Cast Speed', '+1 Random Class Modifier', 'Set Attribute (Crimson Sovereign\'s Court): [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
+    modifiers: ['+100 INT', '+30% Cast Speed', '+1 Random Class Modifier', 'Set (Crimson Sovereign\'s Court) [2-Piece]: +50% Maximum HP & +50% Life Steal.', 'Set (Crimson Sovereign\'s Court) [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4171,7 +4171,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Pulses like an anatomical heart.',
-    modifiers: ['+25% Life Steal', '+30% Magic Dmg', '+1 Random Class Modifier', 'Set Attribute (Crimson Sovereign\'s Court): [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
+    modifiers: ['+25% Life Steal', '+30% Magic Dmg', '+1 Random Class Modifier', 'Set (Crimson Sovereign\'s Court) [2-Piece]: +50% Maximum HP & +50% Life Steal.', 'Set (Crimson Sovereign\'s Court) [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4186,7 +4186,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 450,
     socketCount: 0,
     description: 'Woven directly into the game\'s rendering engine.',
-    modifiers: ['+180 INT', '+1000 Max Mana', '+1 Random Class Modifier', 'Set Attribute (Prime Compiler\'s Array): [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
+    modifiers: ['+180 INT', '+1000 Max Mana', '+1 Random Class Modifier', 'Set (Prime Compiler\'s Array) [2-Piece]: +50% Cooldown Reduction.', 'Set (Prime Compiler\'s Array) [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4201,7 +4201,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'You do not walk; the world moves around you.',
-    modifiers: ['+120 INT', '+30% Movement Spd', '+1 Random Class Modifier', 'Set Attribute (Prime Compiler\'s Array): [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
+    modifiers: ['+120 INT', '+30% Movement Spd', '+1 Random Class Modifier', 'Set (Prime Compiler\'s Array) [2-Piece]: +50% Cooldown Reduction.', 'Set (Prime Compiler\'s Array) [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4216,7 +4216,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 140,
     socketCount: 0,
     description: 'An admin console strapped to your waist.',
-    modifiers: ['+40% Cast Speed', '+20% Cooldown Reduc.', '+1 Random Class Modifier', 'Set Attribute (Prime Compiler\'s Array): [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
+    modifiers: ['+40% Cast Speed', '+20% Cooldown Reduc.', '+1 Random Class Modifier', 'Set (Prime Compiler\'s Array) [2-Piece]: +50% Cooldown Reduction.', 'Set (Prime Compiler\'s Array) [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4231,7 +4231,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 260,
     socketCount: 0,
     description: 'A terrifying skull mask wreathed in green hellfire.',
-    modifiers: ['+140 INT', '+40% Summon HP', '+1 Random Class Modifier', 'Set Attribute (Death-Caller\'s Apocalypse): [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
+    modifiers: ['+140 INT', '+40% Summon HP', '+1 Random Class Modifier', 'Set (Death-Caller\'s Apocalypse) [2-Piece]: +100% Maximum Summon HP & +50% Summon Damage.', 'Set (Death-Caller\'s Apocalypse) [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4246,7 +4246,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 400,
     socketCount: 0,
     description: 'Shadows physically reach out from the fabric.',
-    modifiers: ['+160 INT', '+40% Void Resist', '+1 Random Class Modifier', 'Set Attribute (Death-Caller\'s Apocalypse): [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
+    modifiers: ['+160 INT', '+40% Void Resist', '+1 Random Class Modifier', 'Set (Death-Caller\'s Apocalypse) [2-Piece]: +100% Maximum Summon HP & +50% Summon Damage.', 'Set (Death-Caller\'s Apocalypse) [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4261,7 +4261,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Bound with the souls of corrupted admin programs.',
-    modifiers: ['+20% Cooldown Reduc.', '+30% Boss Dmg', '+1 Random Class Modifier', 'Set Attribute (Death-Caller\'s Apocalypse): [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
+    modifiers: ['+20% Cooldown Reduc.', '+30% Boss Dmg', '+1 Random Class Modifier', 'Set (Death-Caller\'s Apocalypse) [2-Piece]: +100% Maximum Summon HP & +50% Summon Damage.', 'Set (Death-Caller\'s Apocalypse) [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4276,7 +4276,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 320,
     socketCount: 0,
     description: 'Merges the traits of a dragon, wolf, and void-beast.',
-    modifiers: ['+100 STR/INT', '+25% All Resist', '+1 Random Class Modifier', 'Set Attribute (Chimera-Lord\'s Apex): [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
+    modifiers: ['+100 STR/INT', '+25% All Resist', '+1 Random Class Modifier', 'Set (Chimera-Lord\'s Apex) [2-Piece]: +40% Strength, +40% Intelligence, +40% Stamina.', 'Set (Chimera-Lord\'s Apex) [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4291,7 +4291,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 240,
     socketCount: 0,
     description: 'Unbreakable talons crackling with aether.',
-    modifiers: ['+100 STR/INT', '+30% Attack Speed', '+1 Random Class Modifier', 'Set Attribute (Chimera-Lord\'s Apex): [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
+    modifiers: ['+100 STR/INT', '+30% Attack Speed', '+1 Random Class Modifier', 'Set (Chimera-Lord\'s Apex) [2-Piece]: +40% Strength, +40% Intelligence, +40% Stamina.', 'Set (Chimera-Lord\'s Apex) [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4306,7 +4306,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'A belt of living, glowing tendons.',
-    modifiers: ['+800 Max HP', '+30% Crit Chance', '+1 Random Class Modifier', 'Set Attribute (Chimera-Lord\'s Apex): [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
+    modifiers: ['+800 Max HP', '+30% Crit Chance', '+1 Random Class Modifier', 'Set (Chimera-Lord\'s Apex) [2-Piece]: +40% Strength, +40% Intelligence, +40% Stamina.', 'Set (Chimera-Lord\'s Apex) [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4321,7 +4321,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 500,
     socketCount: 0,
     description: 'Woven from the master framework of Oakhaven.',
-    modifiers: ['+180 STA', '+25% Life Steal', '+1 Random Class Modifier', 'Set Attribute (Prime Architect\'s Command): [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
+    modifiers: ['+180 STA', '+25% Life Steal', '+1 Random Class Modifier', 'Set (Prime Architect\'s Command) [2-Piece]: +50% Maximum HP & +50% Armor.', 'Set (Prime Architect\'s Command) [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4336,7 +4336,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 280,
     socketCount: 0,
     description: 'Roots from these boots tap directly into the server database.',
-    modifiers: ['+140 STA', '+30% Movement Spd', '+1 Random Class Modifier', 'Set Attribute (Prime Architect\'s Command): [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
+    modifiers: ['+140 STA', '+30% Movement Spd', '+1 Random Class Modifier', 'Set (Prime Architect\'s Command) [2-Piece]: +50% Maximum HP & +50% Armor.', 'Set (Prime Architect\'s Command) [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4351,7 +4351,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A master-key glowing with blinding white light.',
-    modifiers: ['+200 INT/STA', '+25% All Resist', '+1 Random Class Modifier', 'Set Attribute (Prime Architect\'s Command): [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
+    modifiers: ['+200 INT/STA', '+25% All Resist', '+1 Random Class Modifier', 'Set (Prime Architect\'s Command) [2-Piece]: +50% Maximum HP & +50% Armor.', 'Set (Prime Architect\'s Command) [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4366,7 +4366,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 22,
     socketCount: 0,
     description: 'A dusty hood that smells of old parchment and ozone.',
-    modifiers: ['+15 All Stats', '+10% EXP Gained', '+20 Max HP', 'Set Attribute (Prime Architect\'s Command): [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
+    modifiers: ['+15 All Stats', '+10% EXP Gained', '+20 Max HP', 'Set (The Scholar\'s Pilgrimage) [2-Piece Bonus]: +25% EXP Gained from all sources.', 'Set (The Scholar\'s Pilgrimage) [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4381,7 +4381,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 35,
     socketCount: 0,
     description: 'Woven with protective runes that glow faintly in the dark.',
-    modifiers: ['+25 All Stats', '+15% EXP Gained', '+5% Evasion', 'Set Attribute (Prime Architect\'s Command): [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
+    modifiers: ['+25 All Stats', '+15% EXP Gained', '+5% Evasion', 'Set (The Scholar\'s Pilgrimage) [2-Piece Bonus]: +25% EXP Gained from all sources.', 'Set (The Scholar\'s Pilgrimage) [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4396,7 +4396,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A simple wooden band that vibrates when near unexplored rooms.',
-    modifiers: ['+10% EXP Gained', '+10% Cooldown Reduc.', '+5% All Resist', 'Set Attribute (Prime Architect\'s Command): [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
+    modifiers: ['+10% EXP Gained', '+10% Cooldown Reduc.', '+5% All Resist', 'Set (The Scholar\'s Pilgrimage) [2-Piece Bonus]: +25% EXP Gained from all sources.', 'Set (The Scholar\'s Pilgrimage) [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4411,7 +4411,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 21,
     socketCount: 0,
     description: 'A rusted grappling hook repurposed as a brutal melee weapon.',
-    modifiers: ['+20 Agility', '+15% Gold Drop Rate', '+5% Attack Speed', 'Set Attribute (Prime Architect\'s Command): [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
+    modifiers: ['+20 Agility', '+15% Gold Drop Rate', '+5% Attack Speed', 'Set (The Ash-Walker\'s Hoard) [2-Piece Bonus]: +50% Gold Drop Rate.', 'Set (The Ash-Walker\'s Hoard) [3-Piece Bonus]: +30% Magic Find.', 'Set (The Ash-Walker\'s Hoard) [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4426,7 +4426,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 20,
     socketCount: 0,
     description: 'Literally a dented trash can lid, painted with a crude smiley face.',
-    modifiers: ['+20 Stamina', '+15% Magic Find', '+5% Block Chance', 'Set Attribute (Prime Architect\'s Command): [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
+    modifiers: ['+20 Stamina', '+15% Magic Find', '+5% Block Chance', 'Set (The Ash-Walker\'s Hoard) [2-Piece Bonus]: +50% Gold Drop Rate.', 'Set (The Ash-Walker\'s Hoard) [3-Piece Bonus]: +30% Magic Find.', 'Set (The Ash-Walker\'s Hoard) [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4441,7 +4441,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 15,
     socketCount: 0,
     description: 'Covered in clinking pouches overflowing with junk and coins.',
-    modifiers: ['+15 All Stats', '+20% Potion Effect', '+15% Gold Drop Rate', 'Set Attribute (Prime Architect\'s Command): [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
+    modifiers: ['+15 All Stats', '+20% Potion Effect', '+15% Gold Drop Rate', 'Set (The Ash-Walker\'s Hoard) [2-Piece Bonus]: +50% Gold Drop Rate.', 'Set (The Ash-Walker\'s Hoard) [3-Piece Bonus]: +30% Magic Find.', 'Set (The Ash-Walker\'s Hoard) [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4456,7 +4456,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 25,
     socketCount: 0,
     description: 'Lightweight boots designed to outrun trouble with heavy pockets.',
-    modifiers: ['+20 Agility', '+10% Movement Speed', '+15% Magic Find', 'Set Attribute (Prime Architect\'s Command): [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
+    modifiers: ['+20 Agility', '+10% Movement Speed', '+15% Magic Find', 'Set (The Ash-Walker\'s Hoard) [2-Piece Bonus]: +50% Gold Drop Rate.', 'Set (The Ash-Walker\'s Hoard) [3-Piece Bonus]: +30% Magic Find.', 'Set (The Ash-Walker\'s Hoard) [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
     uniqueTrait: '',
   ),
   ItemTemplate(

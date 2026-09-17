@@ -991,7 +991,7 @@
             extraClass = 'affix-optional';
           } else if (mod.includes('(Permanent)')) {
             extraClass = 'affix-permanent';
-          } else if (mod.startsWith('Set Attribute') || mod.startsWith('Set Bonus')) {
+          } else if (mod.startsWith('Set (') || mod.startsWith('Set Attribute') || mod.startsWith('Set Bonus')) {
             extraClass = 'affix-set';
           } else if (displayRarity === 'Mythic') {
             extraClass = 'affix-legendary';

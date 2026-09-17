@@ -50,24 +50,21 @@ for it in db_items:
     else:
         parsed_raw_mods[sid] = []
 
+# Parse ALL tier bonuses (e.g. 2-Piece, 3-Piece, 4-Piece) for each set item
 set_bonuses = {}
-current_set_name = None
-current_set_bonus = None
 for fpath in sorted(glob.glob(f'{DOCS_DIR}/set-*.md')):
     with open(fpath, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
-    for l in lines:
-        l_str = l.strip()
-        m_set = re.search(r'### Set \d+:\s*(.+)', l_str)
-        if m_set:
-            current_set_name = m_set.group(1).strip()
-        m_bonus = re.search(r'\*\s*(\[\d+-Piece[^\]]*\]:.+)', l_str)
-        if m_bonus:
-            current_set_bonus = m_bonus.group(1).strip()
-        m_id = re.search(r'\|\s*(S[A-Z0-9\-]+)\s*\|', l_str)
-        if m_id:
-            s_id = m_id.group(1).strip()
-            set_bonuses[s_id] = (current_set_name, current_set_bonus)
+        text = f.read()
+    
+    blocks = re.split(r'(?m)^(?:### Set \d+:|## SET \d+:)\s*', text)
+    for b in blocks[1:]:
+        lines = b.strip().split('\n')
+        set_name = lines[0].strip()
+        raw_bonuses = re.findall(r'\*\s*(\[\d+-Piece[^\]]*\]:.+)', b)
+        clean_bonuses = [re.sub(r'\*\*', '', b_str).strip() for b_str in raw_bonuses]
+        item_ids = re.findall(r'\|\s*(S[A-Z0-9\-]+)\s*\|', b)
+        for i_id in item_ids:
+            set_bonuses[i_id] = (set_name, clean_bonuses)
 
 # Thematic Permanent Stats for Mythic Weapons
 MYTHIC_PERM_AFFIXES = {
@@ -155,19 +152,20 @@ for it in db_items:
         stat_affix2 = extracted_mods[2] if len(extracted_mods) >= 3 else '+1 High Random Class Affix'
         
         final_mods = [perm_affix, stat_affix1, stat_affix2]
-        # Ensure uniqueTrait is set for the mythic signature
         if not it_copy.get('uniqueTrait') and it_copy.get('description'):
             it_copy['uniqueTrait'] = it_copy['description']
             
     elif rarity == 'Set':
-        # +1 high base stat + 1 high stat modifier + 2 random modifier + set attribute
+        # +1 high base stat + 1 high stat modifier + 2 random modifier + tiered set attributes
         set_info = set_bonuses.get(it_id)
         final_mods = list(extracted_mods)
         if len(final_mods) == 2:
             final_mods.append('+1 Random Class Modifier')
-        if set_info and set_info[1]:
-            clean_bonus = re.sub(r'\*\*', '', set_info[1])
-            final_mods.append(f'Set Attribute ({set_info[0]}): {clean_bonus}')
+        
+        if set_info:
+            set_name, tiered_bonuses = set_info
+            for b in tiered_bonuses:
+                final_mods.append(f'Set ({set_name}) {b}')
             
     it_copy['modifiers'] = final_mods
     updated_items.append(it_copy)
