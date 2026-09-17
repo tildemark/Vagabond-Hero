@@ -111,7 +111,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          // Seed starter item in inventory
+          // Seed starter items in inventory
           await into(items).insert(
             ItemsCompanion.insert(
               id: 'starter_dagger_01',
@@ -122,6 +122,113 @@ class AppDatabase extends _$AppDatabase {
               equipSlot: const Value('MainHand'),
               minDamage: const Value(3),
               maxDamage: const Value(6),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_chest_01',
+              name: 'Drifter Tunic',
+              baseType: 'Chest',
+              rarity: const Value('Normal'),
+              isEquipped: const Value(true),
+              equipSlot: const Value('Chest'),
+              armorValue: const Value(4),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_head_01',
+              name: 'Ashbound Hood',
+              baseType: 'Head',
+              rarity: const Value('Magic'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('Head'),
+              armorValue: const Value(2),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_neck_01',
+              name: 'Opal Pendant',
+              baseType: 'Neck',
+              rarity: const Value('Magic'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('Neck'),
+              minDamage: const Value(1),
+              maxDamage: const Value(2),
+              armorValue: const Value(1),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_arms_01',
+              name: 'Reinforced Bracers',
+              baseType: 'Arms',
+              rarity: const Value('Normal'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('Arms'),
+              armorValue: const Value(2),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_waist_01',
+              name: 'Riven Leather Sash',
+              baseType: 'Waist',
+              rarity: const Value('Normal'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('Waist'),
+              armorValue: const Value(2),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_ring_01',
+              name: 'Silver Coil Band',
+              baseType: 'Ring',
+              rarity: const Value('Magic'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('RingL'),
+              minDamage: const Value(1),
+              maxDamage: const Value(3),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_ring_02',
+              name: 'Glinting Signet',
+              baseType: 'Ring',
+              rarity: const Value('Rare'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('RingR'),
+              armorValue: const Value(2),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_feet_01',
+              name: 'Dust Strider Boots',
+              baseType: 'Feet',
+              rarity: const Value('Normal'),
+              isEquipped: const Value(false),
+              equipSlot: const Value('Feet'),
+              armorValue: const Value(3),
               ownerId: const Value(1),
             ),
           );

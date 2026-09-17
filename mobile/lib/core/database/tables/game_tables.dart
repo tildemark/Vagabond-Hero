@@ -47,7 +47,7 @@ class Items extends Table {
   TextColumn get baseType => text()(); // 'Weapon', 'Armor', 'Helm', 'Boots', 'Gem', 'Potion'
   TextColumn get rarity => text().withDefault(const Constant('Normal'))(); // Normal, Magic, Rare, Legendary, Set
   BoolColumn get isEquipped => boolean().withDefault(const Constant(false))();
-  TextColumn get equipSlot => text().nullable()(); // 'MainHand', 'OffHand', 'Head', 'Chest', 'Feet'
+  TextColumn get equipSlot => text().nullable()(); // 'Head', 'Chest', 'Waist', 'Arms', 'Feet', 'Neck', 'RingL', 'RingR', 'MainHand', 'OffHand'
   
   IntColumn get minDamage => integer().withDefault(const Constant(0))();
   IntColumn get maxDamage => integer().withDefault(const Constant(0))();
