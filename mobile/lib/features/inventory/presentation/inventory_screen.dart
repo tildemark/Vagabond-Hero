@@ -189,13 +189,13 @@ class _EquippedTab extends ConsumerWidget {
     final svc = ref.read(equipmentServiceProvider);
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.fromLTRB(14, 10, 14, 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           // Total stats summary
           _StatsSummary(equipped: equipped),
-          const SizedBox(height: 14),
+          const SizedBox(height: 12),
 
           // ── Paper doll slots ──────────────────────────────
           // Head
@@ -244,7 +244,7 @@ class _EquippedTab extends ConsumerWidget {
                       : null,
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 6),
               Expanded(
                 child: _SlotCard(
                   slot: 'Waist',
@@ -272,7 +272,7 @@ class _EquippedTab extends ConsumerWidget {
                       : null,
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 6),
               Expanded(
                 child: _SlotCard(
                   slot: 'OffHand',
@@ -300,7 +300,7 @@ class _EquippedTab extends ConsumerWidget {
                       : null,
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 6),
               Expanded(
                 child: _SlotCard(
                   slot: 'RingR',
@@ -324,7 +324,6 @@ class _EquippedTab extends ConsumerWidget {
                 ? () => svc.unequip(equipped['Feet']!)
                 : null,
           ),
-          const SizedBox(height: 12),
         ],
       ),
     );
@@ -410,15 +409,15 @@ class _SlotCard extends StatelessWidget {
           children: [
             // Slot icon
             Container(
-              width: 30,
-              height: 30,
+              width: 28,
+              height: 28,
               decoration: BoxDecoration(
                 color: hasItem ? rc.withValues(alpha: 0.15) : Colors.black26,
                 borderRadius: BorderRadius.circular(6),
               ),
               child: Icon(
                 _slotIcon[slot] ?? Icons.help_outline,
-                size: 16,
+                size: 15,
                 color: hasItem ? rc : GameColors.textDim,
               ),
             ),
@@ -439,7 +438,7 @@ class _SlotCard extends StatelessWidget {
                             color: rc,
                           ),
                         ),
-                        const SizedBox(height: 2),
+                        const SizedBox(height: 1),
                         Row(
                           children: [
                             Flexible(
@@ -495,7 +494,7 @@ class _SlotCard extends StatelessWidget {
               GestureDetector(
                 onTap: onUnequip,
                 child: const Padding(
-                  padding: EdgeInsets.all(4.0),
+                  padding: EdgeInsets.all(3.0),
                   child: Icon(Icons.remove_circle_outline,
                       size: 16, color: GameColors.textDim),
                 ),
