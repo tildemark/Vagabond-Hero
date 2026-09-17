@@ -1,4 +1,4 @@
-// GENERATED ITEM TEMPLATES FROM /docs/items (NEW RARITIES: Common, Magic, Rare, Relic, Mythic, Set, Corrupted)
+// GENERATED ITEM TEMPLATES FROM /docs/items
 // Comprehensive database of 425 canonical equipment items
 
 class ItemTemplate {
@@ -46,7 +46,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 2,
     socketCount: 0,
     description: 'Simple rags wrapped around the hands to prevent blisters.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -61,7 +61,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 4,
     socketCount: 0,
     description: 'Thick leather gloves, useful for digging through the ash.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -76,7 +76,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 11,
     socketCount: 0,
     description: 'Heavy forearm guards. The hinges are rusted stiff.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -91,7 +91,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 17,
     socketCount: 0,
     description: 'Boiled leather reinforced with scrap metal.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -106,7 +106,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 30,
     socketCount: 0,
     description: 'Thick iron gloves that restrict finger movement but block blades.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -121,7 +121,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 47,
     socketCount: 0,
     description: 'Extremely light, providing decent protection without sacrificing dexterity.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -136,7 +136,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 75,
     socketCount: 0,
     description: 'Industrial forearm plating salvaged from old pumping machinery.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -151,7 +151,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 115,
     socketCount: 0,
     description: 'Forged from petrified fog. They hum with latent energy.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -166,7 +166,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'Interlocking gears over the knuckles allow for crushing strikes.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -181,7 +181,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 275,
     socketCount: 0,
     description: 'Holographic shields that project outward from the wrists.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -196,7 +196,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 6,
     socketCount: 0,
     description: 'The ash makes the grip surprisingly secure.',
-    modifiers: ['+2 to 8 Core Stat   +2% to 5% Attack Speed'],
+    modifiers: ['+2 to 8 Core Stat', '+2% to 5% Attack Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -211,7 +211,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 24,
     socketCount: 0,
     description: 'Stained with strange, glowing ink.',
-    modifiers: ['+10 to 20 Core Stat   +5% to 10% Cast Speed'],
+    modifiers: ['+10 to 20 Core Stat', '+5% to 10% Cast Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -226,7 +226,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 52,
     socketCount: 0,
     description: 'Slimy to the touch but highly resistant to pressure.',
-    modifiers: ['+25 to 40 Core Stat   +5% to 15% Water Resist'],
+    modifiers: ['+25 to 40 Core Stat', '+5% to 15% Water Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -241,7 +241,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 97,
     socketCount: 0,
     description: 'Leaves a trail of cold vapor when you swing your weapon.',
-    modifiers: ['+40 to 65 Core Stat   +2% to 5% Crit Chance'],
+    modifiers: ['+40 to 65 Core Stat', '+2% to 5% Crit Chance (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -256,7 +256,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 197,
     socketCount: 0,
     description: 'Code pulses rapidly up and down your forearms.',
-    modifiers: ['+80 to 120 Core Stat   +5% to 10% Evasion'],
+    modifiers: ['+80 to 120 Core Stat', '+5% to 10% Evasion (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -271,7 +271,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 18,
     socketCount: 0,
     description: 'Excellent for blocking strikes in close-quarters combat.',
-    modifiers: [],
+    modifiers: ['+15 to 25 STR/STA', '+40 to 80 Max HP', '+5 to 15 Damage Reflect (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -286,7 +286,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 47,
     socketCount: 0,
     description: 'Muffles the sound of your weapon being drawn.',
-    modifiers: [],
+    modifiers: ['+25 to 45 INT/AGI', '+5% to 12% Attack Speed', '+3% to 8% Crit Chance (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -301,7 +301,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'Thick rubberized material designed for handling toxic sludge.',
-    modifiers: [],
+    modifiers: ['+40 to 70 Core Stat', '+15% to 30% Poison Resist', '+10% to 20% Cast Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -316,7 +316,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 147,
     socketCount: 0,
     description: 'Fingers are lined with precision micro-tools.',
-    modifiers: [],
+    modifiers: ['+70 to 110 Core Stat', '+10% to 18% Attack Speed', '+15% to 25% Magic Find (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -331,7 +331,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 290,
     socketCount: 0,
     description: 'Heat sinks vent directly from the wrists.',
-    modifiers: [],
+    modifiers: ['+120 to 180 Core Stat', '+10% to 20% Crit Chance', '+15% to 25% All Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -346,7 +346,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 22,
     socketCount: 0,
     description: 'Thin, incredibly strong, and slightly sticky.',
-    modifiers: ['+15 Agility   +10% Attack Speed   +15% Poison Resist   +3% Crit Chance'],
+    modifiers: ['+15 Agility', '+10% Attack Speed', '+15% Poison Resist', '+3% Crit Chance'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -361,7 +361,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 60,
     socketCount: 0,
     description: 'Shackles once worn by the devout, now weaponized.',
-    modifiers: ['+35 Intelligence   +15% Cast Speed   +10% Magic Damage   +5% Life Steal'],
+    modifiers: ['+35 Intelligence', '+15% Cast Speed', '+10% Magic Damage', '+5% Life Steal'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -376,7 +376,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 100,
     socketCount: 0,
     description: 'Tipped with jagged shards of pure lightning-glass.',
-    modifiers: ['+60 Strength   +15% Evasion   +10% Attack Speed   +10% Crit Damage'],
+    modifiers: ['+60 Strength', '+15% Evasion', '+10% Attack Speed', '+10% Crit Damage'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -391,7 +391,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 185,
     socketCount: 0,
     description: 'Heavy diving gloves reinforced with lead knuckles.',
-    modifiers: ['+100 Stamina   +400 Max HP   +20% Armor   +15 Damage Reflect'],
+    modifiers: ['+100 Stamina', '+400 Max HP', '+20% Armor', '+15 Damage Reflect'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -406,7 +406,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 350,
     socketCount: 0,
     description: 'Grants the wearer pixel-perfect precision.',
-    modifiers: [],
+    modifiers: ['+150 All Stats', '+25% Attack/Cast Speed', '+15% Boss Damage'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -421,7 +421,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 35,
     socketCount: 0,
     description: 'Ignite: Every consecutive Physical attack against the same target increases your Attack Speed by 10% and adds flat Fire damage. Resets if you change targets.',
-    modifiers: [],
+    modifiers: ['+20 to 40 Core Stat', '+5% to 15% Attack Speed', '+10% to 20% Fire Resist'],
     uniqueTrait: 'Ignite: Every consecutive Physical attack against the same target increases your Attack Speed by 10% and adds flat Fire damage. Resets if you change targets.',
   ),
   ItemTemplate(
@@ -436,7 +436,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 97,
     socketCount: 0,
     description: 'Spatial Tear: Your melee attacks gain the \'Ranged\' property. You no longer trigger enemy melee Counter-Attacks.',
-    modifiers: [],
+    modifiers: ['+50 to 80 Core Stat', '+10% to 20% Cast Speed', '+20% to 35% Void Resist'],
     uniqueTrait: 'Spatial Tear: Your melee attacks gain the \'Ranged\' property. You no longer trigger enemy melee Counter-Attacks.',
   ),
   ItemTemplate(
@@ -451,7 +451,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 160,
     socketCount: 0,
     description: 'Savage Toxin: Critical Hits simultaneously apply both a Bleed (STR-based) and Poison (INT-based) DoT to the target.',
-    modifiers: [],
+    modifiers: ['+80 to 120 STR & INT', '+10% to 20% Crit Chance', '+10% to 20% Life Steal'],
     uniqueTrait: 'Savage Toxin: Critical Hits simultaneously apply both a Bleed (STR-based) and Poison (INT-based) DoT to the target.',
   ),
   ItemTemplate(
@@ -466,7 +466,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 235,
     socketCount: 0,
     description: 'Double Strike: You have a 25% chance to instantly repeat your Basic Attack or Spell for 0 Mana.',
-    modifiers: [],
+    modifiers: ['+110 to 160 Core Stat', '+15% to 25% All Resist', '+15% to 25% Attack Speed'],
     uniqueTrait: 'Double Strike: You have a 25% chance to instantly repeat your Basic Attack or Spell for 0 Mana.',
   ),
   ItemTemplate(
@@ -481,7 +481,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 415,
     socketCount: 0,
     description: 'Fatal Error: Critical Hits execute non-boss enemies instantly. Critical Hits against Bosses deal 300% damage instead of 150%.',
-    modifiers: [],
+    modifiers: ['+180 to 250 Core Stat', '+20% to 30% Crit Chance', '+50% to 100% Crit Damage'],
     uniqueTrait: 'Fatal Error: Critical Hits execute non-boss enemies instantly. Critical Hits against Bosses deal 300% damage instead of 150%.',
   ),
   ItemTemplate(
@@ -496,7 +496,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 2,
     socketCount: 0,
     description: 'Simple leather straps over a hardened wooden sole.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -511,7 +511,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 5,
     socketCount: 0,
     description: 'Worn, cracked leather boots patched with twine.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -526,7 +526,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 13,
     socketCount: 0,
     description: 'Heavy metal boots that echo loudly on stone surfaces.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -541,7 +541,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 21,
     socketCount: 0,
     description: 'Thick, sturdy boots ideal for long treks through the fog.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -556,7 +556,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 37,
     socketCount: 0,
     description: 'Standard-issue footwear for the Hold\'s heavy infantry.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -571,7 +571,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 52,
     socketCount: 0,
     description: 'Surprisingly durable and completely silent when walking.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -586,7 +586,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 85,
     socketCount: 0,
     description: 'Weighted diving boots with ribbed copper soles.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -601,7 +601,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 125,
     socketCount: 0,
     description: 'Shoes woven from ambient fog. They leave no footprints.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -616,7 +616,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 190,
     socketCount: 0,
     description: 'Outfitted with tiny stabilizing gyros in the heels.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -631,7 +631,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 280,
     socketCount: 0,
     description: 'Emits a hard-light platform beneath your feet with every step.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -646,7 +646,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 9,
     socketCount: 0,
     description: 'Bound tightly, these wraps provide excellent arch support.',
-    modifiers: ['+3 to 8 Core Stat   +3% to 8% Movement Speed'],
+    modifiers: ['+3 to 8 Core Stat', '+3% to 8% Movement Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -661,7 +661,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 28,
     socketCount: 0,
     description: 'Worn thin from endless, obsessive pacing in the chapel.',
-    modifiers: ['+10 to 20 Core Stat   +2% to 6% Evasion'],
+    modifiers: ['+10 to 20 Core Stat', '+2% to 6% Evasion (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -676,7 +676,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 67,
     socketCount: 0,
     description: 'Slimy, but grants excellent traction on wet surfaces.',
-    modifiers: ['+25 to 40 Core Stat   +5% to 15% Water Resist'],
+    modifiers: ['+25 to 40 Core Stat', '+5% to 15% Water Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -691,7 +691,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 115,
     socketCount: 0,
     description: 'The metal clings dangerously to bare skin.',
-    modifiers: ['+40 to 65 Core Stat   +10% to 20% Ice Resist'],
+    modifiers: ['+40 to 65 Core Stat', '+10% to 20% Ice Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -706,7 +706,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 215,
     socketCount: 0,
     description: 'Sleek, digital footwear that glides over the grid.',
-    modifiers: ['+80 to 120 Core Stat   +5% to 12% Movement Speed'],
+    modifiers: ['+80 to 120 Core Stat', '+5% to 12% Movement Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -721,7 +721,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 24,
     socketCount: 0,
     description: 'Spiked soles provide an unyielding defensive stance.',
-    modifiers: [],
+    modifiers: ['+15 to 25 STR/STA', '+30 to 70 Max HP', '+3% to 7% Armor (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -736,7 +736,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 57,
     socketCount: 0,
     description: 'The leather seems to absorb ambient sound.',
-    modifiers: [],
+    modifiers: ['+25 to 45 INT/AGI', '+8% to 15% Evasion', '+10% Movement Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -751,7 +751,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 97,
     socketCount: 0,
     description: 'Knee-high rubber waders designed for the toxic sumps.',
-    modifiers: [],
+    modifiers: ['+40 to 70 Core Stat', '+15% to 30% Poison Resist', '+10% to 20% HP Regen (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -766,7 +766,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 165,
     socketCount: 0,
     description: 'Reinforced with solid brass toe caps to prevent crushing.',
-    modifiers: [],
+    modifiers: ['+70 to 110 Core Stat', '+10% to 20% Evasion', '+15% to 25% Magic Find (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -781,7 +781,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 310,
     socketCount: 0,
     description: 'Server-grade grounding boots that negate static feedback.',
-    modifiers: [],
+    modifiers: ['+120 to 180 Core Stat', '+400 to 700 Max HP', '+15% to 25% All Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -796,7 +796,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 25,
     socketCount: 0,
     description: 'Chitinous shoes that allow the wearer to grip vertical surfaces.',
-    modifiers: ['+15 Agility   +15% Movement Speed   +10% Evasion   +15% Poison Resist'],
+    modifiers: ['+15 Agility', '+15% Movement Speed', '+10% Evasion', '+15% Poison Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -811,7 +811,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 65,
     socketCount: 0,
     description: 'Lined with sharp stones to ensure every step is painful.',
-    modifiers: ['+35 Intelligence   +100 Max Mana   +15% Movement Speed   +5% Life Steal'],
+    modifiers: ['+35 Intelligence', '+100 Max Mana', '+15% Movement Speed', '+5% Life Steal'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -826,7 +826,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 115,
     socketCount: 0,
     description: 'Massive bird-like claws that dig fiercely into the ground.',
-    modifiers: ['+60 Strength   +20% Evasion   +20% Attack Speed   +20% Lightning Resist'],
+    modifiers: ['+60 Strength', '+20% Evasion', '+20% Attack Speed', '+20% Lightning Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -841,7 +841,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 215,
     socketCount: 0,
     description: 'Lead-filled boots that make dodging almost impossible.',
-    modifiers: ['+100 Stamina   +350 Max HP   +25% Armor   +30% Water Resist'],
+    modifiers: ['+100 Stamina', '+350 Max HP', '+25% Armor', '+30% Water Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -856,7 +856,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 400,
     socketCount: 0,
     description: 'Hovering a few inches off the ground entirely.',
-    modifiers: [],
+    modifiers: ['+150 All Stats', '+25% Movement Speed', '+15% Boss Damage'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -871,7 +871,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 42,
     socketCount: 0,
     description: 'Scorched Earth: You leave a trail of fire. Enemies that engage you in melee combat take 25% of your Strength as Fire damage per turn.',
-    modifiers: [],
+    modifiers: ['+20 to 40 Core Stat', '+60 to 120 Max HP', '+10% to 20% Fire Resist'],
     uniqueTrait: 'Scorched Earth: You leave a trail of fire. Enemies that engage you in melee combat take 25% of your Strength as Fire damage per turn.',
   ),
   ItemTemplate(
@@ -886,7 +886,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 115,
     socketCount: 0,
     description: 'Unencumbered: You are completely immune to environmental movement penalties and all slow/snare debuffs.',
-    modifiers: [],
+    modifiers: ['+50 to 80 Core Stat', '+15% to 25% Evasion', '+20% to 35% Void Resist'],
     uniqueTrait: 'Unencumbered: You are completely immune to environmental movement penalties and all slow/snare debuffs.',
   ),
   ItemTemplate(
@@ -901,7 +901,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'Feral Leap: Selecting the \'Flee\' command in combat now executes a damaging leap attack instead, dealing 150% Physical damage before escaping.',
-    modifiers: [],
+    modifiers: ['+80 to 120 STR & INT', '+250 to 450 Max HP', '+10% to 20% Evasion'],
     uniqueTrait: 'Feral Leap: Selecting the \'Flee\' command in combat now executes a damaging leap attack instead, dealing 150% Physical damage before escaping.',
   ),
   ItemTemplate(
@@ -916,7 +916,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 265,
     socketCount: 0,
     description: 'Momentum: Every time you successfully Evade an attack, your Critical Hit Chance is increased by 10% for your next turn.',
-    modifiers: [],
+    modifiers: ['+110 to 160 Core Stat', '+15% to 25% All Resist', '+20% to 30% Movement Speed'],
     uniqueTrait: 'Momentum: Every time you successfully Evade an attack, your Critical Hit Chance is increased by 10% for your next turn.',
   ),
   ItemTemplate(
@@ -931,7 +931,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 460,
     socketCount: 0,
     description: 'Teleportation: Your movement instantly transitions you between Rooms. You can bypass locked doors or environmental hazards without taking damage.',
-    modifiers: [],
+    modifiers: ['+180 to 250 Core Stat', '+600 to 1000 Max HP', '+20% to 40% Magic Find'],
     uniqueTrait: 'Teleportation: Your movement instantly transitions you between Rooms. You can bypass locked doors or environmental hazards without taking damage.',
   ),
   ItemTemplate(
@@ -946,7 +946,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 2,
     socketCount: 0,
     description: 'A simple cloth cap, permanently stained grey.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -961,7 +961,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 6,
     socketCount: 0,
     description: 'Offers little protection, but hides your face from the fog.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -976,7 +976,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 15,
     socketCount: 0,
     description: 'Heavy, uncomfortable, and smells of old blood.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -991,7 +991,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 22,
     socketCount: 0,
     description: 'A hardened leather facepiece worn by old-world scavengers.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1006,7 +1006,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 40,
     socketCount: 0,
     description: 'A heavy bucket of copper that protects against blunt trauma.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1021,7 +1021,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 57,
     socketCount: 0,
     description: 'Spun from the bioluminescent webs of the Whispering Hollow.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1036,7 +1036,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 90,
     socketCount: 0,
     description: 'A bulky brass dome with a shattered glass visor.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1051,7 +1051,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 132,
     socketCount: 0,
     description: 'Forged from petrified fog. Unnaturally lightweight.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1066,7 +1066,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'A ticking, mechanical helmet that keeps the wearer\'s head warm.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1081,7 +1081,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 325,
     socketCount: 0,
     description: 'A holographic hood generated by server-side armor protocols.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1096,7 +1096,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 10,
     socketCount: 0,
     description: 'Fungal spores emit a faint, calming light.',
-    modifiers: ['+3 to 8 Core Stat   +10 to 25 Max HP'],
+    modifiers: ['+3 to 8 Core Stat', '+10 to 25 Max HP (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1111,7 +1111,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 31,
     socketCount: 0,
     description: 'Worn by the corrupted worshippers of the Void.',
-    modifiers: ['+10 to 20 Core Stat   +2% to 5% All Resist'],
+    modifiers: ['+10 to 20 Core Stat', '+2% to 5% All Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1126,7 +1126,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 72,
     socketCount: 0,
     description: 'Smells of ozone and salt. Constantly drips digital water.',
-    modifiers: ['+25 to 40 Core Stat   +5% to 15% Water Resist'],
+    modifiers: ['+25 to 40 Core Stat', '+5% to 15% Water Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1141,7 +1141,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 125,
     socketCount: 0,
     description: 'The brass is permanently coated in a layer of blue frost.',
-    modifiers: ['+40 to 65 Core Stat   +10% to 20% Ice Resist'],
+    modifiers: ['+40 to 65 Core Stat', '+10% to 20% Ice Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1156,7 +1156,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 235,
     socketCount: 0,
     description: 'Woven from the raw data streams of the Astral Servers.',
-    modifiers: ['+80 to 120 Core Stat   +5% to 10% Evasion'],
+    modifiers: ['+80 to 120 Core Stat', '+5% to 10% Evasion (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1171,7 +1171,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 26,
     socketCount: 0,
     description: 'Standard issue for the Hold\'s elite defenders.',
-    modifiers: [],
+    modifiers: ['+15 to 25 STR', '+40 to 80 Max HP', '+2% to 6% Armor (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1186,7 +1186,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 62,
     socketCount: 0,
     description: 'Shadows naturally cling to the fabric.',
-    modifiers: [],
+    modifiers: ['+25 to 45 INT/AGI', '+5% to 10% Evasion', '+50 to 120 Max Mana (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1201,7 +1201,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 107,
     socketCount: 0,
     description: 'Essential for surviving the Rusting Aqueducts.',
-    modifiers: [],
+    modifiers: ['+40 to 70 Core Stat', '+15% to 30% Poison Resist', '+10% to 20% HP Regen (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1216,7 +1216,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'Lenses crafted from polished clock-crystals.',
-    modifiers: [],
+    modifiers: ['+70 to 110 Core Stat', '+5% to 12% Crit Chance', '+15% to 25% Magic Find (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1231,7 +1231,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 360,
     socketCount: 0,
     description: 'A jagged halo of pure processing power.',
-    modifiers: [],
+    modifiers: ['+120 to 180 Core Stat', '+500 to 800 Max HP', '+15% to 25% All Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1246,7 +1246,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 28,
     socketCount: 0,
     description: 'Carved from the fangs of the Whispering Hollow\'s queen.',
-    modifiers: ['+15 Agility   +50 Max HP   +15% Poison Resist   +5% Attack Speed'],
+    modifiers: ['+15 Agility', '+50 Max HP', '+15% Poison Resist', '+5% Attack Speed'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1261,7 +1261,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 75,
     socketCount: 0,
     description: 'Tears of liquid void constantly stream down the fabric.',
-    modifiers: ['+35 Intelligence   +100 Max Mana   +10% Magic Damage   +5% Life Steal'],
+    modifiers: ['+35 Intelligence', '+100 Max Mana', '+10% Magic Damage', '+5% Life Steal'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1276,7 +1276,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 125,
     socketCount: 0,
     description: 'A helmet fashioned from razor-sharp glass feathers.',
-    modifiers: ['+60 Strength   +15% Evasion   +10% Movement Speed   +20% Lightning Resist'],
+    modifiers: ['+60 Strength', '+15% Evasion', '+10% Movement Speed', '+20% Lightning Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1291,7 +1291,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 240,
     socketCount: 0,
     description: 'A heavy diving helmet. You can hear the ocean inside.',
-    modifiers: ['+100 Stamina   +500 Max HP   +25% Armor   +30% Water Resist'],
+    modifiers: ['+100 Stamina', '+500 Max HP', '+25% Armor', '+30% Water Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1306,7 +1306,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 450,
     socketCount: 0,
     description: 'A floating ring of golden code. Perfect for endgame farming.',
-    modifiers: [],
+    modifiers: ['+150 All Stats', '+20% Boss Damage', '+15% Cooldown Reduction'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1321,7 +1321,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 47,
     socketCount: 0,
     description: 'Ember-Flesh: Whenever you take physical damage, you have a 25% chance to retaliate with a burst of Fire Damage equal to 50% of your Strength.',
-    modifiers: [],
+    modifiers: ['+20 to 40 Core Stat', '+80 to 150 Max HP', '+10% to 20% Fire Resist'],
     uniqueTrait: 'Ember-Flesh: Whenever you take physical damage, you have a 25% chance to retaliate with a burst of Fire Damage equal to 50% of your Strength.',
   ),
   ItemTemplate(
@@ -1336,7 +1336,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 125,
     socketCount: 0,
     description: 'Deep Vision: You are immune to all Evasion debuffs. Furthermore, you gain +100% Critical Hit Chance against any enemy below 30% HP.',
-    modifiers: [],
+    modifiers: ['+50 to 80 Core Stat', '+200 to 350 Max HP', '+15% to 30% Void Resist'],
     uniqueTrait: 'Deep Vision: You are immune to all Evasion debuffs. Furthermore, you gain +100% Critical Hit Chance against any enemy below 30% HP.',
   ),
   ItemTemplate(
@@ -1351,7 +1351,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'Two-Faced: Your Physical attacks deal an additional 15% Magic Damage, and your Magic attacks deal an additional 15% Physical Damage.',
-    modifiers: [],
+    modifiers: ['+80 to 120 STR & INT', '+300 to 500 Max HP', '+10% to 15% Life Steal'],
     uniqueTrait: 'Two-Faced: Your Physical attacks deal an additional 15% Magic Damage, and your Magic attacks deal an additional 15% Physical Damage.',
   ),
   ItemTemplate(
@@ -1366,7 +1366,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 285,
     socketCount: 0,
     description: 'Rewind: Once per combat, if an enemy attack would reduce you to 0 HP, time reverses. You negate the damage and restore 30% of your Max HP instead.',
-    modifiers: [],
+    modifiers: ['+110 to 160 Core Stat', '+15% to 25% All Resist', '+10% to 20% Attack Speed'],
     uniqueTrait: 'Rewind: Once per combat, if an enemy attack would reduce you to 0 HP, time reverses. You negate the damage and restore 30% of your Max HP instead.',
   ),
   ItemTemplate(
@@ -1381,7 +1381,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 500,
     socketCount: 0,
     description: 'Root Access: Every 5th attack you land ignores 100% of the enemy\'s Armor and Resistances, dealing True Damage.',
-    modifiers: [],
+    modifiers: ['+180 to 250 Core Stat', '+800 to 1200 Max HP', '+20% to 40% Magic Find'],
     uniqueTrait: 'Root Access: Every 5th attack you land ignores 100% of the enemy\'s Armor and Resistances, dealing True Damage.',
   ),
   ItemTemplate(
@@ -1396,7 +1396,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A frayed piece of twine holding a smooth stone.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1411,7 +1411,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A broken chain salvaged from a forgotten ruin.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1426,7 +1426,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Leaves a green ring of oxidation around the wearer\'s neck.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1441,7 +1441,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Stamped with a faded crest of Oakhaven.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1456,7 +1456,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Iron tags bearing the ID of a fallen Hold defender.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1471,7 +1471,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Untarnished silver that feels cool against the skin.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1486,7 +1486,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Watertight and heavily pressurized. The locket is rusted shut.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1501,7 +1501,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A shard of frozen fog that pulses with a faint heartbeat.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1516,7 +1516,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A band of interlocking gears that tick in time with your pulse.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1531,7 +1531,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A glowing ring of code that hovers just above the collarbone.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1546,7 +1546,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The locket feels unnaturally heavy.',
-    modifiers: ['+5 to 10 Core Stat   +20 to 40 Max HP'],
+    modifiers: ['The locket feels unnaturally heavy.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1561,7 +1561,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Beads made of polished bone and blue glass.',
-    modifiers: ['+15 to 25 Core Stat   +30 to 60 Max Mana'],
+    modifiers: ['Beads made of polished bone and blue glass.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1576,7 +1576,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'constantly drips saltwater, no matter how dry the air is.',
-    modifiers: ['+30 to 45 Core Stat   +10% to 20% Water Resist'],
+    modifiers: ['constantly drips saltwater, no matter how dry the air is.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1591,7 +1591,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A shard of true-ice that never melts.',
-    modifiers: ['+50 to 75 Core Stat   +15% to 25% Ice Resist'],
+    modifiers: ['A shard of true-ice that never melts.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1606,7 +1606,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A crystalline drive containing corrupted sector data.',
-    modifiers: ['+90 to 130 Core Stat   +5% to 10% Cooldown Reduc.'],
+    modifiers: ['A crystalline drive containing corrupted sector data.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1621,7 +1621,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A polished iron shield worn on a heavy chain.',
-    modifiers: [],
+    modifiers: ['A polished iron shield worn on a heavy chain.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1636,7 +1636,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Crafted from a material that swallows ambient light.',
-    modifiers: [],
+    modifiers: ['Crafted from a material that swallows ambient light.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1651,7 +1651,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Contains a tiny, functional air purification filter.',
-    modifiers: [],
+    modifiers: ['Contains a tiny, functional air purification filter.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1666,7 +1666,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Strung with various microscopic calibration tools.',
-    modifiers: [],
+    modifiers: ['Strung with various microscopic calibration tools.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1681,7 +1681,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A severed fiber-optic node leaking raw processing power.',
-    modifiers: [],
+    modifiers: ['A severed fiber-optic node leaking raw processing power.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1696,7 +1696,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A petrified, glowing blue eye that tracks your enemies.',
-    modifiers: ['+20 Agility   +50 Max HP   +15% Poison Resist   +5% Life Steal'],
+    modifiers: ['A petrified, glowing blue eye that tracks your enemies.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1711,7 +1711,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A twisted geometric shape that induces migraines in non-believers.',
-    modifiers: ['+40 Intelligence   +150 Max Mana   +15% Magic Damage   +10% Cast Speed'],
+    modifiers: ['A twisted geometric shape that induces migraines in non-believers.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1726,7 +1726,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Threaded on a wire of pure static electricity.',
-    modifiers: ['+70 Strength   +15% Evasion   +15% Attack Speed   +25% Lightning Resist'],
+    modifiers: ['Threaded on a wire of pure static electricity.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1741,7 +1741,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'An old-world police badge, heavy with the weight of the deep.',
-    modifiers: ['+110 Stamina   +500 Max HP   +20% Armor   +35% Water Resist'],
+    modifiers: ['An old-world police badge, heavy with the weight of the deep.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1756,7 +1756,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The needle always points toward the nearest system anomaly.',
-    modifiers: [],
+    modifiers: ['The needle always points toward the nearest system anomaly.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1771,7 +1771,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Phoenix Down: Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node).',
-    modifiers: [],
+    modifiers: ['**Phoenix Down:** Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node).'],
     uniqueTrait: 'Phoenix Down: Upon taking fatal damage, you explode for 200% Fire Damage and instantly revive with 25% HP. (Once per Node).',
   ),
   ItemTemplate(
@@ -1786,7 +1786,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Deep Magic: Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost.',
-    modifiers: [],
+    modifiers: ['**Deep Magic:** Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost.'],
     uniqueTrait: 'Deep Magic: Your spells cost 0 Mana, but instead drain HP equal to 50% of the original Mana cost.',
   ),
   ItemTemplate(
@@ -1801,7 +1801,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Blood Bond: 50% of all healing and Life Steal you receive is also applied to your active Companion.',
-    modifiers: [],
+    modifiers: ['**Blood Bond:** 50% of all healing and Life Steal you receive is also applied to your active Companion.'],
     uniqueTrait: 'Blood Bond: 50% of all healing and Life Steal you receive is also applied to your active Companion.',
   ),
   ItemTemplate(
@@ -1816,7 +1816,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Overtime: Every time you kill an enemy, you instantly gain a free, immediate turn.',
-    modifiers: [],
+    modifiers: ['**Overtime:** Every time you kill an enemy, you instantly gain a free, immediate turn.'],
     uniqueTrait: 'Overtime: Every time you kill an enemy, you instantly gain a free, immediate turn.',
   ),
   ItemTemplate(
@@ -1831,7 +1831,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Admin Privilege: You are completely immune to all enemy Critical Hits and \'Execute\' mechanics.',
-    modifiers: [],
+    modifiers: ['**Admin Privilege:** You are completely immune to all enemy Critical Hits and \'Execute\' mechanics.'],
     uniqueTrait: 'Admin Privilege: You are completely immune to all enemy Critical Hits and \'Execute\' mechanics.',
   ),
   ItemTemplate(
@@ -1846,7 +1846,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Splintery and fragile, carved from petrified wood.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1861,7 +1861,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A simple loop of hammered copper.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1876,7 +1876,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Flakes of rust rub off onto your skin.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1891,7 +1891,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The seal on the signet has been ground smooth.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1906,7 +1906,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Bears the shield-and-anchor crest of the Hold.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1921,7 +1921,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A clean, bright band that resists tarnishing.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1936,7 +1936,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Originally a pipe fitting from the Sunken City.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1951,7 +1951,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A perfect circle of frozen fog.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1966,7 +1966,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The metal is warm and vibrates softly.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1981,7 +1981,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring of light that resizes perfectly to your finger.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -1996,7 +1996,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The ash seems baked into the metal itself.',
-    modifiers: ['+4 to 8 Core Stat   +2% to 5% Crit Chance'],
+    modifiers: ['The ash seems baked into the metal itself.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2011,7 +2011,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Bears a geometric rune of the Void.',
-    modifiers: ['+12 to 22 Core Stat   +10% to 20% Magic Damage'],
+    modifiers: ['Bears a geometric rune of the Void.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2026,7 +2026,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Smells of brine and glowing algae.',
-    modifiers: ['+25 to 40 Core Stat   +5% to 15% Water Resist'],
+    modifiers: ['Smells of brine and glowing algae.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2041,7 +2041,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Leaves a layer of frost on the wearer\'s hand.',
-    modifiers: ['+45 to 70 Core Stat   +3% to 8% Crit Chance'],
+    modifiers: ['Leaves a layer of frost on the wearer\'s hand.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2056,7 +2056,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Text scrolls endlessly around the inside of the band.',
-    modifiers: ['+85 to 125 Core Stat   +10% to 20% Magic Find'],
+    modifiers: ['Text scrolls endlessly around the inside of the band.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2071,7 +2071,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Granted to veterans who survived their first Void storm.',
-    modifiers: [],
+    modifiers: ['Granted to veterans who survived their first Void storm.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2086,7 +2086,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The gemstone is replaced by a void of absolute black.',
-    modifiers: [],
+    modifiers: ['The gemstone is replaced by a void of absolute black.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2101,7 +2101,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Forged from non-reactive industrial polymers.',
-    modifiers: [],
+    modifiers: ['Forged from non-reactive industrial polymers.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2116,7 +2116,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Features a rotating bezel used to measure distances.',
-    modifiers: [],
+    modifiers: ['Features a rotating bezel used to measure distances.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2131,7 +2131,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Forged from a melted processing chip.',
-    modifiers: [],
+    modifiers: ['Forged from a melted processing chip.', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2146,7 +2146,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A hollow spider fang wrapped around a copper wire.',
-    modifiers: ['+18 Agility   +5% Crit Chance   +20% Crit Damage   +15% Poison Resist'],
+    modifiers: ['A hollow spider fang wrapped around a copper wire.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2161,7 +2161,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Painfully tight, a constant reminder of duty.',
-    modifiers: ['+38 Intelligence   +10% Cast Speed   +15% Magic Damage   +10% All Resist'],
+    modifiers: ['Painfully tight, a constant reminder of duty.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2176,7 +2176,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A razor-sharp talon curled into a ring.',
-    modifiers: ['+65 Strength   +10% Crit Chance   +15% Attack Speed   +25% Lightning Resist'],
+    modifiers: ['A razor-sharp talon curled into a ring.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2191,7 +2191,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Used to stamp official warrants in the Sunken City.',
-    modifiers: ['+105 Stamina   +400 Max HP   +15% Armor   +10 Damage Reflect'],
+    modifiers: ['Used to stamp official warrants in the Sunken City.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2206,7 +2206,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Expands and contracts based on the wearer\'s pulse.',
-    modifiers: [],
+    modifiers: ['Expands and contracts based on the wearer\'s pulse.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2221,7 +2221,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Kindling: Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat.',
-    modifiers: [],
+    modifiers: ['**Kindling:** Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat.'],
     uniqueTrait: 'Kindling: Every Critical Hit you land adds a stacking 5% Fire Damage buff to your attacks for the rest of combat.',
   ),
   ItemTemplate(
@@ -2236,7 +2236,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Implosion: Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP.',
-    modifiers: [],
+    modifiers: ['**Implosion:** Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP.'],
     uniqueTrait: 'Implosion: Enemies that strike you in melee take Void damage equal to 10% of their own Maximum HP.',
   ),
   ItemTemplate(
@@ -2251,7 +2251,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Feral Insight: Your Critical Hits ignore 100% of the enemy\'s Elemental Resistances.',
-    modifiers: [],
+    modifiers: ['**Feral Insight:** Your Critical Hits ignore 100% of the enemy\'s Elemental Resistances.'],
     uniqueTrait: 'Feral Insight: Your Critical Hits ignore 100% of the enemy\'s Elemental Resistances.',
   ),
   ItemTemplate(
@@ -2266,7 +2266,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Clockstopper: Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn.',
-    modifiers: [],
+    modifiers: ['**Clockstopper:** Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn.'],
     uniqueTrait: 'Clockstopper: Your first attack against any Boss-level enemy deals 300% damage and stuns them for 1 turn.',
   ),
   ItemTemplate(
@@ -2281,7 +2281,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Buffer Overflow: If you deal damage that exceeds an enemy\'s remaining HP, the excess damage chains to a second random enemy in the room.',
-    modifiers: [],
+    modifiers: ['**Buffer Overflow:** If you deal damage that exceeds an enemy\'s remaining HP, the excess damage chains to a second random enemy in the room.'],
     uniqueTrait: 'Buffer Overflow: If you deal damage that exceeds an enemy\'s remaining HP, the excess damage chains to a second random enemy in the room.',
   ),
   ItemTemplate(
@@ -2296,7 +2296,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 3,
     socketCount: 0,
     description: 'Stiff with dried mud and grey ash.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2311,7 +2311,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 7,
     socketCount: 0,
     description: 'Thick canvas that prevents the local flora from tearing up your legs.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2326,7 +2326,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 17,
     socketCount: 0,
     description: 'Heavy and clunky, significantly slowing the wearer\'s stride.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2341,7 +2341,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 25,
     socketCount: 0,
     description: 'Cured leather plates strapped tightly over padded trousers.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2356,7 +2356,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 44,
     socketCount: 0,
     description: 'Sturdy iron armor issued to the defenders of the Hold.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2371,7 +2371,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 65,
     socketCount: 0,
     description: 'Woven from spider silk, offering surprisingly high tensile strength.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2386,7 +2386,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 97,
     socketCount: 0,
     description: 'Thick industrial thigh guards designed to withstand extreme pressure.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2401,7 +2401,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 147,
     socketCount: 0,
     description: 'Fabric that seems to absorb the ambient light around it.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2416,7 +2416,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 225,
     socketCount: 0,
     description: 'Emits a rhythmic mechanical whir with every step you take.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2431,7 +2431,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 330,
     socketCount: 0,
     description: 'Project overlapping geometric shields around the wearer\'s legs.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2446,7 +2446,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 11,
     socketCount: 0,
     description: 'The ash coating strangely dampens the sound of your footsteps.',
-    modifiers: ['+3 to 8 Core Stat   +2% to 5% Movement Speed'],
+    modifiers: ['+3 to 8 Core Stat', '+2% to 5% Movement Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2461,7 +2461,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 35,
     socketCount: 0,
     description: 'The hem is stained with glowing blue void-fluid.',
-    modifiers: ['+10 to 20 Core Stat   +20 to 50 Max Mana'],
+    modifiers: ['+10 to 20 Core Stat', '+20 to 50 Max Mana (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2476,7 +2476,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'Clings uncomfortably tight but repels the crushing deep.',
-    modifiers: ['+25 to 40 Core Stat   +5% to 15% Water Resist'],
+    modifiers: ['+25 to 40 Core Stat', '+5% to 15% Water Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2491,7 +2491,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 135,
     socketCount: 0,
     description: 'The joints are stiff with ice, forcing a rigid posture.',
-    modifiers: ['+40 to 65 Core Stat   +5% to 10% Evasion'],
+    modifiers: ['+40 to 65 Core Stat', '+5% to 10% Evasion (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2506,7 +2506,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 255,
     socketCount: 0,
     description: 'Vertical lines of code constantly cascade down the fabric.',
-    modifiers: ['+80 to 120 Core Stat   +5% to 10% Movement Speed'],
+    modifiers: ['+80 to 120 Core Stat', '+5% to 10% Movement Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2521,7 +2521,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 30,
     socketCount: 0,
     description: 'Battle-scarred leg plates that have seen countless skirmishes.',
-    modifiers: [],
+    modifiers: ['+15 to 25 STR/STA', '+50 to 90 Max HP', '+2% to 6% Armor (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2536,7 +2536,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 70,
     socketCount: 0,
     description: 'The fabric blurs when you move, making you hard to target.',
-    modifiers: [],
+    modifiers: ['+25 to 45 INT/AGI', '+5% to 12% Evasion', '+10% Movement Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2551,7 +2551,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 115,
     socketCount: 0,
     description: 'Fully sealed with airtight rubberized joints.',
-    modifiers: [],
+    modifiers: ['+40 to 70 Core Stat', '+15% to 30% Poison Resist', '+10% to 20% HP Regen (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2566,7 +2566,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 195,
     socketCount: 0,
     description: 'Lined with copper wire to ground out electrical charges.',
-    modifiers: [],
+    modifiers: ['+70 to 110 Core Stat', '+10% to 20% Evasion', '+15% to 25% Magic Find (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2581,7 +2581,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 365,
     socketCount: 0,
     description: 'High-density ceramic plates wired directly to the server core.',
-    modifiers: [],
+    modifiers: ['+120 to 180 Core Stat', '+500 to 800 Max HP', '+15% to 25% All Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2596,7 +2596,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 30,
     socketCount: 0,
     description: 'Chitinous plating that flexes naturally with the wearer\'s joints.',
-    modifiers: ['+15 Agility   +50 Max HP   +10% Evasion   +15% Poison Resist'],
+    modifiers: ['+15 Agility', '+50 Max HP', '+10% Evasion', '+15% Poison Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2611,7 +2611,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'Torn and frayed, yet it sweeps across the floor without a sound.',
-    modifiers: ['+35 Intelligence   +120 Max Mana   +15% Movement Speed   +5% Life Steal'],
+    modifiers: ['+35 Intelligence', '+120 Max Mana', '+15% Movement Speed', '+5% Life Steal'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2626,7 +2626,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 140,
     socketCount: 0,
     description: 'Forged to resemble the powerful legs of a predatory bird.',
-    modifiers: ['+60 Strength   +15% Evasion   +20% Attack Speed   +20% Lightning Resist'],
+    modifiers: ['+60 Strength', '+15% Evasion', '+20% Attack Speed', '+20% Lightning Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2641,7 +2641,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 260,
     socketCount: 0,
     description: 'So heavy they leave permanent indentations in the digital stone.',
-    modifiers: ['+100 Stamina   +450 Max HP   +25% Armor   +30% Water Resist'],
+    modifiers: ['+100 Stamina', '+450 Max HP', '+25% Armor', '+30% Water Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2656,7 +2656,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 480,
     socketCount: 0,
     description: 'Exoskeletal braces that entirely negate the effects of fatigue.',
-    modifiers: [],
+    modifiers: ['+150 All Stats', '+15% Boss Damage', '+20% Movement Speed'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2671,7 +2671,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 52,
     socketCount: 0,
     description: 'Unmovable: You are completely immune to all Stun, Knockback, and Root debuffs.',
-    modifiers: [],
+    modifiers: ['+20 to 40 Core Stat', '+80 to 150 Max HP', '+10% to 20% Fire Resist'],
     uniqueTrait: 'Unmovable: You are completely immune to all Stun, Knockback, and Root debuffs.',
   ),
   ItemTemplate(
@@ -2686,7 +2686,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 140,
     socketCount: 0,
     description: 'Deep Current: Whenever you successfully Evade an attack, your next action costs 0 Mana and does not consume your turn.',
-    modifiers: [],
+    modifiers: ['+50 to 80 Core Stat', '+10% to 20% Evasion', '+20% to 35% Void Resist'],
     uniqueTrait: 'Deep Current: Whenever you successfully Evade an attack, your next action costs 0 Mana and does not consume your turn.',
   ),
   ItemTemplate(
@@ -2701,7 +2701,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 215,
     socketCount: 0,
     description: 'Predator\'s Pounce: Your very first attack in any combat encounter deals 250% damage and guarantees a Critical Hit.',
-    modifiers: [],
+    modifiers: ['+80 to 120 STR & INT', '+300 to 500 Max HP', '+10% to 15% Life Steal'],
     uniqueTrait: 'Predator\'s Pounce: Your very first attack in any combat encounter deals 250% damage and guarantees a Critical Hit.',
   ),
   ItemTemplate(
@@ -2716,7 +2716,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 310,
     socketCount: 0,
     description: 'Clockwork Steps: For every turn that passes in combat, your Evasion increases by 2%, up to a maximum of 20%.',
-    modifiers: [],
+    modifiers: ['+110 to 160 Core Stat', '+15% to 25% All Resist', '+15% to 25% Movement Speed'],
     uniqueTrait: 'Clockwork Steps: For every turn that passes in combat, your Evasion increases by 2%, up to a maximum of 20%.',
   ),
   ItemTemplate(
@@ -2731,7 +2731,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 550,
     socketCount: 0,
     description: 'System Bypass: You are entirely immune to environmental damage, traps, and passive Node debuffs (e.g., Toxic drains, Chill effects).',
-    modifiers: [],
+    modifiers: ['+180 to 250 Core Stat', '+800 to 1200 Max HP', '+20% to 40% Magic Find'],
     uniqueTrait: 'System Bypass: You are entirely immune to environmental damage, traps, and passive Node debuffs (e.g., Toxic drains, Chill effects).',
   ),
   ItemTemplate(
@@ -2746,7 +2746,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 95,
     socketCount: 0,
     description: 'A solid iron faceplate with no eye slits.',
-    modifiers: [],
+    modifiers: ['+40 STR', '+10% Block', 'Set Bonus (The Iron Bastion): [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2761,7 +2761,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 160,
     socketCount: 0,
     description: 'Ridiculously heavy plate armor.',
-    modifiers: [],
+    modifiers: ['+60 STA', '+200 Max HP', 'Set Bonus (The Iron Bastion): [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2776,7 +2776,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 120,
     socketCount: 0,
     description: 'A towering shield resembling a vault door.',
-    modifiers: ['+30 STR   +30 Damage Reflect'],
+    modifiers: ['+30 STR', '+30 Damage Reflect', 'Set Bonus (The Iron Bastion): [3-Piece - "Spiked Barricade"]: Whenever you successfully Block or mitigate damage with Armor, you reflect 100% of the mitigated damage back to the attacker as Physical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2791,7 +2791,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A glowing brass whistle.',
-    modifiers: [],
+    modifiers: ['+40 STR', '+20% Cooldown Reduc.', 'Set Bonus (Warlord\'s Fury): [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2806,7 +2806,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'Boots tipped with solid steel spikes.',
-    modifiers: ['+35 STR   +15% Movement Spd'],
+    modifiers: ['+35 STR', '+15% Movement Spd', 'Set Bonus (Warlord\'s Fury): [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2821,7 +2821,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A massive hammer that crackles with kinetic energy.',
-    modifiers: [],
+    modifiers: ['+50 STR', '+20% Boss Damage', 'Set Bonus (Warlord\'s Fury): [3-Piece - "Challenge Accepted"]: Using \'Taunt\' no longer costs a turn. While an enemy is Taunted, your Critical Hit Chance against them increases by 30%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2836,7 +2836,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 45,
     socketCount: 0,
     description: 'A wrestling belt won in the old fighting pits.',
-    modifiers: [],
+    modifiers: ['+50 STA', '+25% HP Regen', 'Set Bonus (Goliath\'s Endurance): [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2851,7 +2851,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 70,
     socketCount: 0,
     description: 'Armbands that pulse like veins.',
-    modifiers: [],
+    modifiers: ['+40 STR', '+15% Attack Speed', 'Set Bonus (Goliath\'s Endurance): [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2866,7 +2866,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring holding a drop of crystallized giant\'s blood.',
-    modifiers: [],
+    modifiers: ['+300 Max HP', '+10% All Resist', 'Set Bonus (Goliath\'s Endurance): [3-Piece - "Unstoppable Healing"]: At the end of every turn, you regenerate 5% of your *missing* HP. This healing doubles if you are below 30% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2881,7 +2881,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A sickly green blade that continuously weeps.',
-    modifiers: ['+35 AGI   +15 Flat Poison Dmg'],
+    modifiers: ['+35 AGI', '+15 Flat Poison Dmg', 'Set Bonus (The Viper\'s Kiss): [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2896,7 +2896,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Serrated to cause maximum bleeding.',
-    modifiers: ['+35 AGI   +15% Attack Speed'],
+    modifiers: ['+35 AGI', '+15% Attack Speed', 'Set Bonus (The Viper\'s Kiss): [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2911,7 +2911,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 95,
     socketCount: 0,
     description: 'Woven from the skin of an Abyssal snake.',
-    modifiers: [],
+    modifiers: ['+40 AGI', '+30% Poison Resist', 'Set Bonus (The Viper\'s Kiss): [3-Piece - "Toxic Shock"]: When an enemy reaches 3 stacks of Poison or Bleed, your basic attacks against them deal an immediate burst of True Damage based on your Agility.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2926,7 +2926,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 70,
     socketCount: 0,
     description: 'Your face is entirely obscured by magical shadow.',
-    modifiers: [],
+    modifiers: ['+40 AGI', '+10% Evasion', 'Set Bonus (Shadow-Walker\'s Shroud): [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2941,7 +2941,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 50,
     socketCount: 0,
     description: 'Muffles the sound of your weapons being drawn.',
-    modifiers: [],
+    modifiers: ['+35 AGI', '+20% Crit Damage', 'Set Bonus (Shadow-Walker\'s Shroud): [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2956,7 +2956,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring forged from absolute darkness.',
-    modifiers: ['+10% Crit Chance   +15% Movement Spd'],
+    modifiers: ['+10% Crit Chance', '+15% Movement Spd', 'Set Bonus (Shadow-Walker\'s Shroud): [3-Piece - "Perfect Counter"]: Whenever you successfully Evade an attack, your next action gains +100% Critical Hit Chance and +50% Critical Damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2971,7 +2971,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The bowstring hums with contained wind.',
-    modifiers: [],
+    modifiers: ['+50 AGI', '+15% Attack Speed', 'Set Bonus (The Bladed Gale): [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -2986,7 +2986,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 60,
     socketCount: 0,
     description: 'So light they feel like wearing nothing.',
-    modifiers: [],
+    modifiers: ['+40 AGI', '+20% Movement Spd', 'Set Bonus (The Bladed Gale): [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3001,7 +3001,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Carved with the symbol of a tornado.',
-    modifiers: [],
+    modifiers: ['+20 AGI', '+10% Evasion', 'Set Bonus (The Bladed Gale): [3-Piece - "Tempest Strikes"]: The Phantom\'s \'Flurry\' skill now strikes 3 times instead of 2. Basic attacks have a 20% chance to strike a second time instantly.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3016,7 +3016,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Topped with a rotating, multi-faceted crystal.',
-    modifiers: [],
+    modifiers: ['+50 INT', '+15% Cast Speed', 'Set Bonus (Archmage\'s Genesis): [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3031,7 +3031,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 60,
     socketCount: 0,
     description: 'A floating crown of pure arcane energy.',
-    modifiers: [],
+    modifiers: ['+40 INT', '+10% All Resist', 'Set Bonus (Archmage\'s Genesis): [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3046,7 +3046,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The gem constantly changes color (Fire/Ice/Lightning).',
-    modifiers: ['+30 INT   +20% Crit Chance'],
+    modifiers: ['+30 INT', '+20% Crit Chance', 'Set Bonus (Archmage\'s Genesis): [3-Piece - "Echo Casting"]: Every time you cast a spell, there is a 25% chance an identical copy of the spell is cast immediately for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3061,7 +3061,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 110,
     socketCount: 0,
     description: 'Woven from the physical manifestation of the Void.',
-    modifiers: [],
+    modifiers: ['+45 INT', '+100 Max Mana', 'Set Bonus (Aether-Weaver\'s Shell): [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3076,7 +3076,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A glowing orb held in the palm of the hand.',
-    modifiers: [],
+    modifiers: ['+35 STA', '+150 Max Mana', 'Set Bonus (Aether-Weaver\'s Shell): [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3091,7 +3091,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 30,
     socketCount: 0,
     description: 'A belt made of braided starlight.',
-    modifiers: ['+30 INT   +20% Mana Regen'],
+    modifiers: ['+30 INT', '+20% Mana Regen', 'Set Bonus (Aether-Weaver\'s Shell): [3-Piece - "Kinetic Conversion"]: While \'Mana Shield\' is active, 10% of all damage you take is converted *back* into Mana. Your spells deal bonus damage equal to 5% of your Current Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3106,7 +3106,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Shaped like an infinity symbol at the tip.',
-    modifiers: [],
+    modifiers: ['+40 INT', '+10% Cooldown Reduc.', 'Set Bonus (The Infinite Loop): [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3121,7 +3121,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 45,
     socketCount: 0,
     description: 'Your fingers blur when weaving spell components.',
-    modifiers: [],
+    modifiers: ['+35 INT', '+15% Cast Speed', 'Set Bonus (The Infinite Loop): [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3136,7 +3136,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A Moebius strip forged from silver.',
-    modifiers: ['+15% Cooldown Reduc.   +10% Magic Dmg'],
+    modifiers: ['+15% Cooldown Reduc.', '+10% Magic Dmg', 'Set Bonus (The Infinite Loop): [3-Piece - "Stack Overflow"]: Every 3rd spell you cast costs 0 Mana and reduces the cooldown of all other active skills by 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3151,7 +3151,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Used to direct the pack, not strike them.',
-    modifiers: [],
+    modifiers: ['+35 INT', '+15% Attack Speed', 'Set Bonus (Beast-Master\'s Call): [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3166,7 +3166,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Carved with the roaring face of a chimera.',
-    modifiers: [],
+    modifiers: ['+40 STA', '+20% Summon HP', 'Set Bonus (Beast-Master\'s Call): [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3181,7 +3181,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 120,
     socketCount: 0,
     description: 'Thick leather reinforced with bone plates.',
-    modifiers: [],
+    modifiers: ['+30 STR', '+250 Max HP', 'Set Bonus (Beast-Master\'s Call): [3-Piece - "Alpha Predator"]: Your active Summon deals 50% more damage and automatically Taunts enemies, forcing them to attack the Summon instead of you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3196,7 +3196,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A spear made entirely of twisted, living thorns.',
-    modifiers: [],
+    modifiers: ['+45 INT/STA', '+15 Flat Poison', 'Set Bonus (The Overgrowth): [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3211,7 +3211,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 65,
     socketCount: 0,
     description: 'Roots occasionally attempt to anchor you to the ground.',
-    modifiers: [],
+    modifiers: ['+35 STA', '+10% HP Regen', 'Set Bonus (The Overgrowth): [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3226,7 +3226,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring of petrified moss.',
-    modifiers: ['+10% Life Steal   +50 Max HP'],
+    modifiers: ['+10% Life Steal', '+50 Max HP', 'Set Bonus (The Overgrowth): [3-Piece - "Choking Weeds"]: The \'Leeching Vines\' skill now hits ALL enemies in the room instead of a single target, and immobilizes them for 1 turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3241,7 +3241,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'Connected to your spine by ethereal blue threads.',
-    modifiers: [],
+    modifiers: ['+40 STA', '+15% All Resist', 'Set Bonus (Soul-Tether Regalia): [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3256,7 +3256,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 40,
     socketCount: 0,
     description: 'A belt that feels like it\'s squeezing you just a bit too tight.',
-    modifiers: [],
+    modifiers: ['+35 INT', '+15% Potion Effect', 'Set Bonus (Soul-Tether Regalia): [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3271,7 +3271,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The gemstone beats in sync with your heart.',
-    modifiers: ['+20% Boss Damage   +100 Max Mana'],
+    modifiers: ['+20% Boss Damage', '+100 Max Mana', 'Set Bonus (Soul-Tether Regalia): [3-Piece - "Masochistic Link"]: You can no longer be damaged by Poison, Bleed, or Burn DoT effects. Instead, these effects HEAL you for the damage they would have caused.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3286,7 +3286,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 160,
     socketCount: 0,
     description: 'A jagged, open-faced helmet stained crimson.',
-    modifiers: [],
+    modifiers: ['+60 STR', '+15% Crit Damage', 'Set Bonus (The Blood-Crazed): [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3301,7 +3301,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 240,
     socketCount: 0,
     description: 'Spiked on the inside to keep the wearer enraged.',
-    modifiers: [],
+    modifiers: ['+80 STR', '+10% Life Steal', 'Set Bonus (The Blood-Crazed): [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3316,7 +3316,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring of jagged bone.',
-    modifiers: [],
+    modifiers: ['+15% Attack Speed', '+10% Boss Dmg', 'Set Bonus (The Blood-Crazed): [3-Piece - "Death Wish"]: You can no longer be healed above 50% Maximum HP. However, you are permanently immune to Stuns, and your base Attack Speed is doubled.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3331,7 +3331,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 150,
     socketCount: 0,
     description: 'Massive shoulder guards that absorb kinetic force.',
-    modifiers: [],
+    modifiers: ['+70 STA', '+20 Damage Reflect', 'Set Bonus (The Abyssal Aegis): [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3346,7 +3346,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 190,
     socketCount: 0,
     description: 'Grounding plates that prevent you from being moved.',
-    modifiers: [],
+    modifiers: ['+60 STR', '+20% Void Resist', 'Set Bonus (The Abyssal Aegis): [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3361,7 +3361,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A miniature black hole held in a magnetic field.',
-    modifiers: [],
+    modifiers: ['+20% Block Chance', '+500 Max HP', 'Set Bonus (The Abyssal Aegis): [3-Piece - "Void Singularity"]: When you use \'Void Bulwark\', you taunt all enemies in the room. The stored damage unleashes as a guaranteed Critical Hit.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3376,7 +3376,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'A crown of dark iron fit for a conqueror.',
-    modifiers: [],
+    modifiers: ['+80 STR/STA', '+15% All Resist', 'Set Bonus (The Warlord\'s Zenith): [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3391,7 +3391,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 140,
     socketCount: 0,
     description: 'Your grip strength is amplified tenfold.',
-    modifiers: [],
+    modifiers: ['+70 STR', '+20% Crit Damage', 'Set Bonus (The Warlord\'s Zenith): [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3406,7 +3406,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Bears the seal of the shattered server admin.',
-    modifiers: [],
+    modifiers: ['+20% Boss Damage', '+10% Armor Pen', 'Set Bonus (The Warlord\'s Zenith): [3-Piece - "Guillotine"]: Any non-boss enemy that drops below 15% HP is instantly Executed. Bosses below 10% HP take triple damage from your physical attacks.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3421,7 +3421,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 110,
     socketCount: 0,
     description: 'A rebreather filtering out your own toxic fumes.',
-    modifiers: [],
+    modifiers: ['+60 AGI', '+20% Attack Speed', 'Set Bonus (Nightshade Syndicate): [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3436,7 +3436,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'Lined with hidden vials of acidic venom.',
-    modifiers: [],
+    modifiers: ['+75 AGI', '+15% Evasion', 'Set Bonus (Nightshade Syndicate): [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3451,7 +3451,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A hollow ring concealing a lethal needle.',
-    modifiers: [],
+    modifiers: ['+15 Flat Poison Dmg', '+15% Crit Chance', 'Set Bonus (Nightshade Syndicate): [3-Piece - "Toxic Overload"]: Your \'Eviscerate\' skill no longer consumes the Poison/Bleed stacks on the target, allowing you to repeatedly detonate them every turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3466,7 +3466,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 120,
     socketCount: 0,
     description: 'A heads-up display calculating wind and drop.',
-    modifiers: [],
+    modifiers: ['+70 AGI', '+20% Crit Chance', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3481,7 +3481,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 110,
     socketCount: 0,
     description: 'Anchors you perfectly to the ground when firing.',
-    modifiers: [],
+    modifiers: ['+60 AGI', '+20% Movement Spd', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3496,7 +3496,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A targeting laser worn around the neck.',
-    modifiers: [],
+    modifiers: ['+50% Crit Damage', '+10% Cooldown Reduc.', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3511,7 +3511,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'Fabric that phases in and out of the physical realm.',
-    modifiers: [],
+    modifiers: ['+80 AGI', '+20% All Resist', 'Set Bonus (Ghost-Walk Regalia): [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3526,7 +3526,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 100,
     socketCount: 0,
     description: 'Your hands leave motion-blurred trails in the air.',
-    modifiers: [],
+    modifiers: ['+70 AGI', '+25% Attack Speed', 'Set Bonus (Ghost-Walk Regalia): [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3541,7 +3541,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Completely invisible to the naked eye.',
-    modifiers: [],
+    modifiers: ['+15% Evasion', '+20% Magic Find', 'Set Bonus (Ghost-Walk Regalia): [3-Piece - "Untouchable"]: Taking damage instantly triggers \'Shadow Cloak\' (Stealth) for free, resetting your position and dropping enemy aggro. (Can occur once every 4 turns).'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3556,7 +3556,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 90,
     socketCount: 0,
     description: 'A halo of shifting elemental energy.',
-    modifiers: [],
+    modifiers: ['+70 INT', '+15% Cast Speed', 'Set Bonus (Prismatic Convergence): [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3571,7 +3571,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 160,
     socketCount: 0,
     description: 'Weaves different elemental threads based on your stance.',
-    modifiers: [],
+    modifiers: ['+80 INT', '+20% All Resist', 'Set Bonus (Prismatic Convergence): [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3586,7 +3586,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A perfectly cut tri-color gemstone.',
-    modifiers: [],
+    modifiers: ['+200 Max Mana', '+15% Magic Dmg', 'Set Bonus (Prismatic Convergence): [3-Piece - "Grand Convergence"]: When you successfully cast a Fire, Ice, and Lightning spell in consecutive turns, your next \'Cataclysm\' costs 0 Mana and deals 300% damage.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3601,7 +3601,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 100,
     socketCount: 0,
     description: 'The cloth is perpetually damp with blood.',
-    modifiers: [],
+    modifiers: ['+70 INT/STA', '+300 Max HP (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3616,7 +3616,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'Deep scars cover the wrists under these wraps.',
-    modifiers: [],
+    modifiers: ['+60 INT', '+20% Cast Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3631,7 +3631,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A silver ring inset with a crystallized drop of blood.',
-    modifiers: [],
+    modifiers: ['+15% Life Steal', '+20% Magic Dmg (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3646,7 +3646,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 190,
     socketCount: 0,
     description: 'Woven from the source code of the Astral Servers.',
-    modifiers: [],
+    modifiers: ['+90 INT', '+400 Max Mana', 'Set Bonus (Aetherial Ascendant): [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3661,7 +3661,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 90,
     socketCount: 0,
     description: 'You hover slightly off the digital floor.',
-    modifiers: [],
+    modifiers: ['+70 INT', '+20% Movement Spd', 'Set Bonus (Aetherial Ascendant): [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3676,7 +3676,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 60,
     socketCount: 0,
     description: 'A belt that actively rewinds time around your spells.',
-    modifiers: [],
+    modifiers: ['+25% Cast Speed', '+10% Cooldown Reduc.', 'Set Bonus (Aetherial Ascendant): [3-Piece - "Infinite Reservoir"]: Whenever you consume Mana, you gain a stacking shield equal to 50% of the Mana spent. This shield lasts until broken.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3691,7 +3691,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 110,
     socketCount: 0,
     description: 'A terrifying skull mask wreathed in blue flame.',
-    modifiers: [],
+    modifiers: ['+65 INT', '+20% Summon HP', 'Set Bonus (Grave-Lord\'s Dominion): [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3706,7 +3706,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 170,
     socketCount: 0,
     description: 'Whispers of the damned emanate from the folds.',
-    modifiers: [],
+    modifiers: ['+80 INT', '+30% Void Resist', 'Set Bonus (Grave-Lord\'s Dominion): [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3721,7 +3721,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring that hums with necromantic energy.',
-    modifiers: [],
+    modifiers: ['+10% Cooldown Reduc.', '+15% Boss Dmg', 'Set Bonus (Grave-Lord\'s Dominion): [3-Piece - "Macabre Symphony"]: When a Skeletal Mage dies, it automatically casts \'Corpse Explosion\' on itself for free.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3736,7 +3736,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 130,
     socketCount: 0,
     description: 'A heavy hood adorned with beast fur and fangs.',
-    modifiers: [],
+    modifiers: ['+60 STR/INT', '+15% All Resist', 'Set Bonus (Chimera\'s Aspect): [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3751,7 +3751,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 100,
     socketCount: 0,
     description: 'Gauntlets that extend razor-sharp claws when making a fist.',
-    modifiers: [],
+    modifiers: ['+50 STR/INT', '+20% Attack Speed', 'Set Bonus (Chimera\'s Aspect): [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3766,7 +3766,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 80,
     socketCount: 0,
     description: 'A belt woven from incredibly tough, living vines.',
-    modifiers: [],
+    modifiers: ['+400 Max HP', '+20% Crit Chance', 'Set Bonus (Chimera\'s Aspect): [3-Piece - "Apex Evolution"]: While in \'Chimera Form\', your physical attacks also cast a random elemental spell at the target for 0 Mana.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3781,7 +3781,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 220,
     socketCount: 0,
     description: 'Wood from Oakhaven, petrified by the Void.',
-    modifiers: [],
+    modifiers: ['+90 STA', '+15% Life Steal', 'Set Bonus (Echoes of the Wild): [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3796,7 +3796,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 120,
     socketCount: 0,
     description: 'Roots spread from the soles to anchor you when struck.',
-    modifiers: [],
+    modifiers: ['+70 STA', '+20% Movement Spd', 'Set Bonus (Echoes of the Wild): [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3811,7 +3811,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Two intertwined rings, representing the master and the beast.',
-    modifiers: [],
+    modifiers: ['+100 INT/STA', '+15% All Resist', 'Set Bonus (Echoes of the Wild): [3-Piece - "Soul Bound"]: The Warden and their active Summon share a single, combined HP bar. If the Summon is alive, neither of you can be reduced below 1 HP from a single attack.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3826,7 +3826,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 380,
     socketCount: 0,
     description: 'A helm forged from the debris of a deleted sector.',
-    modifiers: [],
+    modifiers: ['+120 STR', '+25% Crit Damage', 'Set Bonus (World-Breaker\'s Cataclysm): [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3841,7 +3841,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 600,
     socketCount: 0,
     description: 'The metal is perpetually white-hot.',
-    modifiers: [],
+    modifiers: ['+150 STR', '+500 Max HP', 'Set Bonus (World-Breaker\'s Cataclysm): [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3856,7 +3856,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring of condensed gravity.',
-    modifiers: [],
+    modifiers: ['+30% Attack Speed', '+20% Boss Dmg', 'Set Bonus (World-Breaker\'s Cataclysm): [3-Piece - "System Crash"]: If \'Obliterate\' kills an enemy, the overkill damage is permanently added to your Base Weapon Damage for the remainder of the Node.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3871,7 +3871,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 300,
     socketCount: 0,
     description: 'Emits a hard-light barrier extending 10 feet out.',
-    modifiers: [],
+    modifiers: ['+100 STA', '+50 Damage Reflect', 'Set Bonus (Aegis Lord\'s Bastion): [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3886,7 +3886,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 450,
     socketCount: 0,
     description: 'Anchors the wearer directly to the server\'s root code.',
-    modifiers: [],
+    modifiers: ['+120 STR', '+30% All Resist', 'Set Bonus (Aegis Lord\'s Bastion): [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3901,7 +3901,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A tiny, contained supernova.',
-    modifiers: [],
+    modifiers: ['+40% Block Chance', '+1000 Max HP', 'Set Bonus (Aegis Lord\'s Bastion): [3-Piece - "Event Horizon"]: Your \'Absolute Defense\' skill now lasts for 3 turns instead of 2. Enemies that strike you while it is active have their Base Armor permanently reduced to 0.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3916,7 +3916,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 400,
     socketCount: 0,
     description: 'Worn by the original server moderators.',
-    modifiers: [],
+    modifiers: ['+150 STR/STA', '+20% All Resist', 'Set Bonus (Prime Enforcer\'s Plating): [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3931,7 +3931,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 280,
     socketCount: 0,
     description: 'Your punches can shatter digital reality.',
-    modifiers: [],
+    modifiers: ['+100 STR', '+50% Crit Damage', 'Set Bonus (Prime Enforcer\'s Plating): [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3946,7 +3946,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Grants write-permission to the game engine.',
-    modifiers: [],
+    modifiers: ['+25% Boss Damage', '+20% Armor Pen', 'Set Bonus (Prime Enforcer\'s Plating): [3-Piece - "Admin Privileges"]: You become entirely immune to the \'Null Space\' and \'Omega-Wipe\' instant game-over mechanics. Fatal damage instead leaves you at 1 HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3961,7 +3961,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 250,
     socketCount: 0,
     description: 'A mask made of absolute, light-devouring void.',
-    modifiers: [],
+    modifiers: ['+120 AGI', '+30% Attack Speed', 'Set Bonus (Shadow-Walker\'s Eclipse): [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3976,7 +3976,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 400,
     socketCount: 0,
     description: 'Blends flawlessly into the Unallocated Space.',
-    modifiers: [],
+    modifiers: ['+150 AGI', '+20% Evasion', 'Set Bonus (Shadow-Walker\'s Eclipse): [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -3991,7 +3991,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Continuously leaks corrupted data.',
-    modifiers: [],
+    modifiers: ['+50 Flat Poison Dmg', '+20% Crit Chance', 'Set Bonus (Shadow-Walker\'s Eclipse): [3-Piece - "The Reaper\'s Toll"]: The \'Death Mark\' skill now detonates after 1 turn instead of 3, and ignoring an enemy\'s HP cap, instantly executing Bosses below 20% HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4006,7 +4006,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 280,
     socketCount: 0,
     description: 'Calculates trajectories across parallel dimensions.',
-    modifiers: [],
+    modifiers: ['+140 AGI', '+25% Crit Chance', 'Set Bonus (Void-Stalker\'s Horizon): [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4021,7 +4021,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 250,
     socketCount: 0,
     description: 'Grants the ability to walk on the air itself.',
-    modifiers: [],
+    modifiers: ['+100 AGI', '+30% Movement Spd', 'Set Bonus (Void-Stalker\'s Horizon): [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4036,7 +4036,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A quantum targeting lens.',
-    modifiers: [],
+    modifiers: ['+100% Crit Damage', '+15% Cooldown Reduc.', 'Set Bonus (Void-Stalker\'s Horizon): [3-Piece - "Delete Key"]: \'Dimensional Piercer\' now chains to every enemy in the room. The permanent Max HP reduction is increased from 20% to 40%.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4051,7 +4051,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 420,
     socketCount: 0,
     description: 'Woven from the source code of deleted player characters.',
-    modifiers: [],
+    modifiers: ['+160 AGI', '+30% All Resist', 'Set Bonus (Prime Assassin\'s Shroud): [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4066,7 +4066,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 220,
     socketCount: 0,
     description: 'Your strikes pass cleanly through physical armor.',
-    modifiers: [],
+    modifiers: ['+120 AGI', '+35% Attack Speed', 'Set Bonus (Prime Assassin\'s Shroud): [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4081,7 +4081,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A ring that exists only in your peripheral vision.',
-    modifiers: [],
+    modifiers: ['+20% Evasion', '+40% Magic Find', 'Set Bonus (Prime Assassin\'s Shroud): [3-Piece - "Ghost in the Machine"]: You are permanently considered to be in \'Stealth\' mode. Enemies have a 50% chance to completely skip their turn because they cannot locate you.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4096,7 +4096,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'A halo of golden gears spinning backward.',
-    modifiers: [],
+    modifiers: ['+140 INT', '+25% Cast Speed', 'Set Bonus (Arch-Mage\'s Paradox): [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4111,7 +4111,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 380,
     socketCount: 0,
     description: 'The fabric depicts stars that have yet to be born.',
-    modifiers: [],
+    modifiers: ['+160 INT', '+30% All Resist', 'Set Bonus (Arch-Mage\'s Paradox): [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4126,7 +4126,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A clock-face permanently stuck at 12:00.',
-    modifiers: [],
+    modifiers: ['+500 Max Mana', '+25% Magic Dmg', 'Set Bonus (Arch-Mage\'s Paradox): [3-Piece - "Chronos Shift"]: \'Time Stop\' no longer has a cooldown. Instead, it costs 50% of your Maximum Mana to cast. Your \'Omni-Caster\' trait now triggers at a 60% chance.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4141,7 +4141,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 220,
     socketCount: 0,
     description: 'A crown of crystallized blood hovering over a red hood.',
-    modifiers: [],
+    modifiers: ['+120 INT/STA', '+800 Max HP', 'Set Bonus (Crimson Sovereign\'s Court): [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4156,7 +4156,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'Covered in runes written in the blood of dead servers.',
-    modifiers: [],
+    modifiers: ['+100 INT', '+30% Cast Speed', 'Set Bonus (Crimson Sovereign\'s Court): [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4171,7 +4171,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Pulses like an anatomical heart.',
-    modifiers: [],
+    modifiers: ['+25% Life Steal', '+30% Magic Dmg', 'Set Bonus (Crimson Sovereign\'s Court): [3-Piece - "Hemomancy"]: \'Blood Boil\' no longer leaves you at 1 HP. Instead, it consumes your \'Overheal\' Blood Shield first. If it kills an enemy, you instantly regenerate 100% of your HP.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4186,7 +4186,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 450,
     socketCount: 0,
     description: 'Woven directly into the game\'s rendering engine.',
-    modifiers: [],
+    modifiers: ['+180 INT', '+1000 Max Mana', 'Set Bonus (Prime Compiler\'s Array): [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4201,7 +4201,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 200,
     socketCount: 0,
     description: 'You do not walk; the world moves around you.',
-    modifiers: [],
+    modifiers: ['+120 INT', '+30% Movement Spd', 'Set Bonus (Prime Compiler\'s Array): [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4216,7 +4216,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 140,
     socketCount: 0,
     description: 'An admin console strapped to your waist.',
-    modifiers: [],
+    modifiers: ['+40% Cast Speed', '+20% Cooldown Reduc.', 'Set Bonus (Prime Compiler\'s Array): [3-Piece - "God-Mode Activated"]: All spells cost 0 Mana and 0 HP. Your Magic Damage is multiplied by the amount of unspent Mana you currently have.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4231,7 +4231,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 260,
     socketCount: 0,
     description: 'A terrifying skull mask wreathed in green hellfire.',
-    modifiers: [],
+    modifiers: ['+140 INT', '+40% Summon HP', 'Set Bonus (Death-Caller\'s Apocalypse): [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4246,7 +4246,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 400,
     socketCount: 0,
     description: 'Shadows physically reach out from the fabric.',
-    modifiers: [],
+    modifiers: ['+160 INT', '+40% Void Resist', 'Set Bonus (Death-Caller\'s Apocalypse): [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4261,7 +4261,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Bound with the souls of corrupted admin programs.',
-    modifiers: [],
+    modifiers: ['+20% Cooldown Reduc.', '+30% Boss Dmg', 'Set Bonus (Death-Caller\'s Apocalypse): [3-Piece - "The Endless March"]: The \'Army of the Damned\' skill no longer has a summon limit. Every time a skeletal minion explodes, it summons two more in its place.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4276,7 +4276,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 320,
     socketCount: 0,
     description: 'Merges the traits of a dragon, wolf, and void-beast.',
-    modifiers: [],
+    modifiers: ['+100 STR/INT', '+25% All Resist', 'Set Bonus (Chimera-Lord\'s Apex): [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4291,7 +4291,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 240,
     socketCount: 0,
     description: 'Unbreakable talons crackling with aether.',
-    modifiers: [],
+    modifiers: ['+100 STR/INT', '+30% Attack Speed', 'Set Bonus (Chimera-Lord\'s Apex): [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4306,7 +4306,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'A belt of living, glowing tendons.',
-    modifiers: [],
+    modifiers: ['+800 Max HP', '+30% Crit Chance', 'Set Bonus (Chimera-Lord\'s Apex): [3-Piece - "Perfect Organism"]: Your attacks now deal Physical, Fire, Ice, Lightning, and Void damage simultaneously. You heal for 100% of all damage dealt.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4321,7 +4321,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 500,
     socketCount: 0,
     description: 'Woven from the master framework of Oakhaven.',
-    modifiers: [],
+    modifiers: ['+180 STA', '+25% Life Steal', 'Set Bonus (Prime Architect\'s Command): [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4336,7 +4336,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 280,
     socketCount: 0,
     description: 'Roots from these boots tap directly into the server database.',
-    modifiers: [],
+    modifiers: ['+140 STA', '+30% Movement Spd', 'Set Bonus (Prime Architect\'s Command): [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4351,7 +4351,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A master-key glowing with blinding white light.',
-    modifiers: [],
+    modifiers: ['+200 INT/STA', '+25% All Resist', 'Set Bonus (Prime Architect\'s Command): [3-Piece - "Root Access"]: Your active Companion/Pet is completely Invulnerable to all damage and debuffs. They gain 100% of your Core Stats and attack twice per turn.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4366,7 +4366,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 22,
     socketCount: 0,
     description: 'A dusty hood that smells of old parchment and ozone.',
-    modifiers: [],
+    modifiers: ['+15 All Stats', '+10% EXP Gained', '+20 Max HP', 'Set Bonus (Prime Architect\'s Command): [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4381,7 +4381,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 35,
     socketCount: 0,
     description: 'Woven with protective runes that glow faintly in the dark.',
-    modifiers: [],
+    modifiers: ['+25 All Stats', '+15% EXP Gained', '+5% Evasion', 'Set Bonus (Prime Architect\'s Command): [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4396,7 +4396,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A simple wooden band that vibrates when near unexplored rooms.',
-    modifiers: [],
+    modifiers: ['+10% EXP Gained', '+10% Cooldown Reduc.', '+5% All Resist', 'Set Bonus (Prime Architect\'s Command): [3-Piece Bonus - "Enlightened Grind"]: Killing an enemy grants a stacking buff called *Momentum*. Each stack grants +5% EXP and +5% Movement/Attack Speed (Max 10 stacks). The buff resets if you return to a Safe Hub.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4411,7 +4411,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 21,
     socketCount: 0,
     description: 'A rusted grappling hook repurposed as a brutal melee weapon.',
-    modifiers: [],
+    modifiers: ['+20 Agility', '+15% Gold Drop Rate', '+5% Attack Speed', 'Set Bonus (Prime Architect\'s Command): [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4426,7 +4426,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 20,
     socketCount: 0,
     description: 'Literally a dented trash can lid, painted with a crude smiley face.',
-    modifiers: [],
+    modifiers: ['+20 Stamina', '+15% Magic Find', '+5% Block Chance', 'Set Bonus (Prime Architect\'s Command): [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4441,7 +4441,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 15,
     socketCount: 0,
     description: 'Covered in clinking pouches overflowing with junk and coins.',
-    modifiers: [],
+    modifiers: ['+15 All Stats', '+20% Potion Effect', '+15% Gold Drop Rate', 'Set Bonus (Prime Architect\'s Command): [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4456,7 +4456,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 25,
     socketCount: 0,
     description: 'Lightweight boots designed to outrun trouble with heavy pockets.',
-    modifiers: [],
+    modifiers: ['+20 Agility', '+10% Movement Speed', '+15% Magic Find', 'Set Bonus (Prime Architect\'s Command): [4-Piece Bonus - "One Man\'s Trash"]: Defeating an enemy has a 15% chance to instantly drop a random Consumable or Gem. Additionally, picking up Gold heals you for 2% of your Max HP per coin looted.'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4471,7 +4471,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 4,
     socketCount: 0,
     description: 'A plain linen shirt, worn thin by the ash winds.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4486,7 +4486,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 10,
     socketCount: 0,
     description: 'Thick, padded cloth that offers basic protection from bites and scratches.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4501,7 +4501,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 21,
     socketCount: 0,
     description: 'The links are brittle and snap easily, but it beats bare skin.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4516,7 +4516,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 31,
     socketCount: 0,
     description: 'Cured with unnatural chemicals to resist the Void fog.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4531,7 +4531,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 57,
     socketCount: 0,
     description: 'Standard issue heavy armor forged in the Vanguard\'s Hold.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4546,7 +4546,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 85,
     socketCount: 0,
     description: 'Woven tightly from spider silk, it hums with latent energy.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4561,7 +4561,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 125,
     socketCount: 0,
     description: 'An industrial exoskeleton frame used by deep-trench divers.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4576,7 +4576,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 190,
     socketCount: 0,
     description: 'Fabric that phase-shifts slightly, making the wearer hard to focus on.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4591,7 +4591,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 285,
     socketCount: 0,
     description: 'Emits a rhythmic ticking sound; the metal feels warm to the touch.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4606,7 +4606,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 440,
     socketCount: 0,
     description: 'A chest piece made entirely of hard-light polygons and projected code.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4621,7 +4621,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 15,
     socketCount: 0,
     description: 'The ash woven into the fabric seems to absorb minor impacts.',
-    modifiers: ['+4 to 10 Core Stat   +15 to 30 Max HP'],
+    modifiers: ['+4 to 10 Core Stat', '+15 to 30 Max HP (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4636,7 +4636,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 46,
     socketCount: 0,
     description: 'Worn by those who worship the geometry of the Severance.',
-    modifiers: ['+15 to 25 Core Stat   +20 to 50 Max Mana'],
+    modifiers: ['+15 to 25 Core Stat', '+20 to 50 Max Mana (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4651,7 +4651,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 102,
     socketCount: 0,
     description: 'Smells terrible, but repels the crushing depths of the Sunken City.',
-    modifiers: ['+30 to 50 Core Stat   +10% to 20% Water Resist'],
+    modifiers: ['+30 to 50 Core Stat', '+10% to 20% Water Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4666,7 +4666,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 175,
     socketCount: 0,
     description: 'The metal links are frozen solid, yet remain perfectly flexible.',
-    modifiers: ['+50 to 80 Core Stat   +5% to 15% Total Armor'],
+    modifiers: ['+50 to 80 Core Stat', '+5% to 15% Total Armor (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4681,7 +4681,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 330,
     socketCount: 0,
     description: 'A long coat that trails off into cascading green binary code.',
-    modifiers: ['+90 to 140 Core Stat   +8% to 15% Evasion'],
+    modifiers: ['+90 to 140 Core Stat', '+8% to 15% Evasion (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4696,7 +4696,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 40,
     socketCount: 0,
     description: 'A dented but incredibly sturdy piece of pre-Severance armor.',
-    modifiers: [],
+    modifiers: ['+15 to 30 STR/STA', '+60 to 100 Max HP', '+5% to 10% Armor (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4711,7 +4711,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 92,
     socketCount: 0,
     description: 'Absorbs ambient light, making the wearer difficult to track.',
-    modifiers: [],
+    modifiers: ['+30 to 55 INT/AGI', '+8% to 15% Evasion', '+60 to 150 Max Mana (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4726,7 +4726,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 147,
     socketCount: 0,
     description: 'Heavy rubber and brass, built for the toxic aqueducts.',
-    modifiers: [],
+    modifiers: ['+50 to 85 Core Stat', '+20% to 40% Poison Resist', '+15% to 30% HP Regen (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4741,7 +4741,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 245,
     socketCount: 0,
     description: 'Fitted with exhaust valves that vent excess thermal energy.',
-    modifiers: [],
+    modifiers: ['+80 to 130 Core Stat', '+20% to 35% Fire Resist', '+15% to 25% Magic Find (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4756,7 +4756,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 470,
     socketCount: 0,
     description: 'A high-tech chassis that interfaces directly with your nervous system.',
-    modifiers: [],
+    modifiers: ['+140 to 200 Core Stat', '+600 to 1000 Max HP', '+15% to 25% All Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4771,7 +4771,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 40,
     socketCount: 0,
     description: 'An exoskeleton ripped from a massive spider. Still twitches.',
-    modifiers: ['+20 Agility   +60 Max HP   +20% Poison Resist   +15 Damage Reflect (Thorns)'],
+    modifiers: ['+20 Agility', '+60 Max HP', '+20% Poison Resist', '+15 Damage Reflect (Thorns)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4786,7 +4786,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 105,
     socketCount: 0,
     description: 'Lined with sharp barbs on the inside to keep the wearer focused.',
-    modifiers: ['+45 Intelligence   +150 Max Mana   +15% Magic Damage   +10% Cast Speed'],
+    modifiers: ['+45 Intelligence', '+150 Max Mana', '+15% Magic Damage', '+10% Cast Speed'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4801,7 +4801,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 180,
     socketCount: 0,
     description: 'A mantle of glass feathers that conduct electricity harmlessly away.',
-    modifiers: ['+75 Strength   +20% Evasion   +15% Movement Speed   +25% Lightning Resist'],
+    modifiers: ['+75 Strength', '+20% Evasion', '+15% Movement Speed', '+25% Lightning Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4816,7 +4816,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 320,
     socketCount: 0,
     description: 'Enormously heavy; forces the wearer to walk with a lumbering gait.',
-    modifiers: ['+120 Stamina   +600 Max HP   +30% Armor   +40% Water Resist'],
+    modifiers: ['+120 Stamina', '+600 Max HP', '+30% Armor', '+40% Water Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4831,7 +4831,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 600,
     socketCount: 0,
     description: 'A floating rig of server racks that orbits the wearer\'s torso.',
-    modifiers: [],
+    modifiers: ['+180 All Stats', '+15% Boss Damage', '+20% Cooldown Reduction'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4846,7 +4846,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 65,
     socketCount: 0,
     description: 'Molten Core: Enemies that strike you in melee are Ignited, taking Fire Damage equal to 10% of their Max HP over 3 turns.',
-    modifiers: [],
+    modifiers: ['+25 to 50 Core Stat', '+100 to 200 Max HP', '+15% to 30% Fire Resist'],
     uniqueTrait: 'Molten Core: Enemies that strike you in melee are Ignited, taking Fire Damage equal to 10% of their Max HP over 3 turns.',
   ),
   ItemTemplate(
@@ -4861,7 +4861,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 170,
     socketCount: 0,
     description: 'Void Siphon: 30% of all damage you take is converted into Mana. If your Mana is full, the excess heals you instead.',
-    modifiers: [],
+    modifiers: ['+60 to 100 Core Stat', '+250 to 450 Max Mana', '+20% to 40% Void Resist'],
     uniqueTrait: 'Void Siphon: 30% of all damage you take is converted into Mana. If your Mana is full, the excess heals you instead.',
   ),
   ItemTemplate(
@@ -4876,7 +4876,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 270,
     socketCount: 0,
     description: 'Apex Hide: You take 25% less damage from Bosses and Elite enemies.',
-    modifiers: [],
+    modifiers: ['+90 to 140 STR & INT', '+400 to 700 Max HP', '+15% to 25% Life Steal'],
     uniqueTrait: 'Apex Hide: You take 25% less damage from Bosses and Elite enemies.',
   ),
   ItemTemplate(
@@ -4891,7 +4891,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 385,
     socketCount: 0,
     description: 'Overclock: Every time you take damage, your Attack Speed and Cast Speed increase by 10%. Stacks up to 5 times. Lasts until the end of combat.',
-    modifiers: [],
+    modifiers: ['+120 to 180 Core Stat', '+20% to 30% All Resist', '+15% to 25% Attack Speed'],
     uniqueTrait: 'Overclock: Every time you take damage, your Attack Speed and Cast Speed increase by 10%. Stacks up to 5 times. Lasts until the end of combat.',
   ),
   ItemTemplate(
@@ -4906,7 +4906,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 725,
     socketCount: 0,
     description: 'God Mode: At the start of every combat encounter, you gain a hard-light shield equal to 100% of your Max HP.',
-    modifiers: [],
+    modifiers: ['+200 to 300 Core Stat', '+1000 to 1500 Max HP', '+25% to 50% Magic Find'],
     uniqueTrait: 'God Mode: At the start of every combat encounter, you gain a hard-light shield equal to 100% of your Max HP.',
   ),
   ItemTemplate(
@@ -4921,7 +4921,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 1,
     socketCount: 0,
     description: 'Dried, petrified grass twisted into a fragile rope.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4936,7 +4936,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 3,
     socketCount: 0,
     description: 'A strip of torn fabric used to hold pants up.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4951,7 +4951,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 6,
     socketCount: 0,
     description: 'Stiff, uncomfortable, but features a rusted iron buckle.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4966,7 +4966,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 10,
     socketCount: 0,
     description: 'Heavy metal links that clink loudly when you walk.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4981,7 +4981,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 18,
     socketCount: 0,
     description: 'Features numerous empty pouches for holding supplies.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -4996,7 +4996,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 30,
     socketCount: 0,
     description: 'Surprisingly strong for being so thin and lightweight.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5011,7 +5011,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 42,
     socketCount: 0,
     description: 'Lined with heavy lead blocks to counteract buoyancy.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5026,7 +5026,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 65,
     socketCount: 0,
     description: 'Woven from the ambient digital fog; feels cold to the touch.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5041,7 +5041,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 97,
     socketCount: 0,
     description: 'Interlocking brass plates that adjust to your breathing.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5056,7 +5056,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 145,
     socketCount: 0,
     description: 'A floating band of holograms that locks around your waist.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5071,7 +5071,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 5,
     socketCount: 0,
     description: 'The grey ash seems permanently fused to the fabric.',
-    modifiers: ['+2 to 8 Core Stat   +10 to 20 Max HP'],
+    modifiers: ['+2 to 8 Core Stat', '+10 to 20 Max HP (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5086,7 +5086,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 14,
     socketCount: 0,
     description: 'Used in dark rituals; it hums with dark magic.',
-    modifiers: ['+10 to 20 Core Stat   +15 to 40 Max Mana'],
+    modifiers: ['+10 to 20 Core Stat', '+15 to 40 Max Mana (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5101,7 +5101,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 33,
     socketCount: 0,
     description: 'Dripping wet and encrusted with glowing barnacles.',
-    modifiers: ['+20 to 35 Core Stat   +5% to 15% Water Resist'],
+    modifiers: ['+20 to 35 Core Stat', '+5% to 15% Water Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5116,7 +5116,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 57,
     socketCount: 0,
     description: 'The leather is stiff from absolute zero temperatures.',
-    modifiers: ['+35 to 60 Core Stat   +10% to 20% Ice Resist'],
+    modifiers: ['+35 to 60 Core Stat', '+10% to 20% Ice Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5131,7 +5131,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 112,
     socketCount: 0,
     description: 'Flowing green code constantly scrolls across the cloth.',
-    modifiers: ['+70 to 110 Core Stat   +5% to 10% Evasion'],
+    modifiers: ['+70 to 110 Core Stat', '+5% to 10% Evasion (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5146,7 +5146,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 12,
     socketCount: 0,
     description: 'A thick leather belt reinforced with iron studs.',
-    modifiers: [],
+    modifiers: ['+10 to 20 STR/STA', '+30 to 60 Max HP', '+2% to 5% Armor (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5161,7 +5161,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 26,
     socketCount: 0,
     description: 'Makes your footsteps completely silent.',
-    modifiers: [],
+    modifiers: ['+20 to 40 INT/AGI', '+5% to 10% Evasion', '+40 to 100 Max Mana (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5176,7 +5176,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 47,
     socketCount: 0,
     description: 'Covered in padded vials and glass tubes.',
-    modifiers: [],
+    modifiers: ['+35 to 65 Core Stat', '+15% to 30% Potion Effect', '+10% to 20% HP Regen (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5191,7 +5191,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 85,
     socketCount: 0,
     description: 'Contains an array of miniature ticking clocks and tools.',
-    modifiers: [],
+    modifiers: ['+60 to 100 Core Stat', '+10% to 20% Cooldown Reduc.', '+15% to 25% Magic Find (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5206,7 +5206,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 155,
     socketCount: 0,
     description: 'A thick fiber-optic cable ripped directly from a server.',
-    modifiers: [],
+    modifiers: ['+100 to 160 Core Stat', '+300 to 600 Max HP', '+15% to 25% All Resist (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5221,7 +5221,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 15,
     socketCount: 0,
     description: 'Binds tightly to the wearer, secreting a faint paralyzing toxin.',
-    modifiers: ['+15 Agility   +40 Max HP   +15% Poison Resist   +10% Movement Speed'],
+    modifiers: ['+15 Agility', '+40 Max HP', '+15% Poison Resist', '+10% Movement Speed'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5236,7 +5236,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 35,
     socketCount: 0,
     description: 'Heavy, rusted iron chains worn as a twisted form of penance.',
-    modifiers: ['+30 Intelligence   +100 Max Mana   +10% Magic Damage   +10% Cooldown Reduction'],
+    modifiers: ['+30 Intelligence', '+100 Max Mana', '+10% Magic Damage', '+10% Cooldown Reduction'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5251,7 +5251,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 60,
     socketCount: 0,
     description: 'Woven from razor-sharp glass fibers that spark when rubbed.',
-    modifiers: ['+50 Strength   +15% Evasion   +10% Attack Speed   +20% Lightning Resist'],
+    modifiers: ['+50 Strength', '+15% Evasion', '+10% Attack Speed', '+20% Lightning Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5266,7 +5266,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 105,
     socketCount: 0,
     description: 'An actual ship\'s chain wrapped multiple times around the waist.',
-    modifiers: ['+90 Stamina   +400 Max HP   +20% Armor   +30% Water Resist'],
+    modifiers: ['+90 Stamina', '+400 Max HP', '+20% Armor', '+30% Water Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5281,7 +5281,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 190,
     socketCount: 0,
     description: 'Contains holographic tools that phase into reality when needed.',
-    modifiers: [],
+    modifiers: ['+130 All Stats', '+15% Boss Damage', '+25% Potion Effect'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5296,7 +5296,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 21,
     socketCount: 0,
     description: 'Ember Flask: Whenever you use a healing potion, you unleash a shockwave of Fire Damage equal to 100% of your Strength to all enemies.',
-    modifiers: [],
+    modifiers: ['+20 to 40 Core Stat', '+60 to 120 Max HP', '+10% to 20% Fire Resist'],
     uniqueTrait: 'Ember Flask: Whenever you use a healing potion, you unleash a shockwave of Fire Damage equal to 100% of your Strength to all enemies.',
   ),
   ItemTemplate(
@@ -5311,7 +5311,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 52,
     socketCount: 0,
     description: 'Crush Depth: Enemies that begin their turn in the same room as you have their Evasion and Attack Speed permanently reduced by 15%.',
-    modifiers: [],
+    modifiers: ['+40 to 75 Core Stat', '+150 to 250 Max Mana', '+20% to 35% Void Resist'],
     uniqueTrait: 'Crush Depth: Enemies that begin their turn in the same room as you have their Evasion and Attack Speed permanently reduced by 15%.',
   ),
   ItemTemplate(
@@ -5326,7 +5326,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 85,
     socketCount: 0,
     description: 'Beast Blood: Potion effects and base HP regeneration are multiplied by 300%, but your base Armor is reduced by 25%.',
-    modifiers: [],
+    modifiers: ['+70 to 110 STR & INT', '+250 to 450 Max HP', '+10% to 20% Life Steal'],
     uniqueTrait: 'Beast Blood: Potion effects and base HP regeneration are multiplied by 300%, but your base Armor is reduced by 25%.',
   ),
   ItemTemplate(
@@ -5341,7 +5341,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 127,
     socketCount: 0,
     description: 'Tick-Tock: Every 3rd attack you make instantly reduces the cooldown of all your active skills by 1 turn.',
-    modifiers: [],
+    modifiers: ['+100 to 150 Core Stat', '+15% to 25% All Resist', '+15% to 25% Cooldown Reduc.'],
     uniqueTrait: 'Tick-Tock: Every 3rd attack you make instantly reduces the cooldown of all your active skills by 1 turn.',
   ),
   ItemTemplate(
@@ -5356,7 +5356,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 220,
     socketCount: 0,
     description: 'Memory Leak: Every attack you land steals 5% of the enemy\'s maximum damage output and adds it to your own for the remainder of the battle.',
-    modifiers: [],
+    modifiers: ['+150 to 220 Core Stat', '+600 to 900 Max HP', '+25% to 45% Magic Find'],
     uniqueTrait: 'Memory Leak: Every attack you land steals 5% of the enemy\'s maximum damage output and adds it to your own for the remainder of the battle.',
   ),
   ItemTemplate(
@@ -5371,7 +5371,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A blade as wide as a man\'s torso.',
-    modifiers: [],
+    modifiers: ['35 - 50 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5386,7 +5386,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Top-heavy and brutal; designed to shatter armor.',
-    modifiers: [],
+    modifiers: ['22 - 32 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5401,7 +5401,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Heavily chipped from severing bone.',
-    modifiers: [],
+    modifiers: ['45 - 60 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5416,7 +5416,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Steadfast: While you have a Shield equipped, your Weapon Damage is increased by 30%.',
-    modifiers: [],
+    modifiers: ['+45 to 70 STR/STA', '+15% to 25% Armor'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5431,7 +5431,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Seismic Slam: Your Physical attacks unleash a shockwave, dealing 30% of the initial damage to all other enemies in the room.',
-    modifiers: [],
+    modifiers: ['+60 to 85 STR', '+20% to 40% Crit Dmg'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5446,7 +5446,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The jagged edge guarantees severe bleeding.',
-    modifiers: [],
+    modifiers: ['18 - 26 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5461,7 +5461,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Fires arrows with terrifying velocity.',
-    modifiers: [],
+    modifiers: ['30 - 45 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5476,7 +5476,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Perfectly balanced for lightning-fast thrusts.',
-    modifiers: [],
+    modifiers: ['28 - 38 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5491,7 +5491,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Crimson Thirst: Every application of Bleed or Poison on an enemy increases your Life Steal by 5%.',
-    modifiers: [],
+    modifiers: ['+45 to 70 AGI', '+15% to 25% Life Steal'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5506,7 +5506,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Ghost-String: Attacking from Stealth has a 50% chance to NOT break your stealth, allowing consecutive critical hits.',
-    modifiers: [],
+    modifiers: ['+60 to 85 AGI', '+50% to 100% Crit Dmg'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5521,7 +5521,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A conductive rod that focuses raw magic efficiently.',
-    modifiers: [],
+    modifiers: ['15 - 22 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5536,7 +5536,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Etched with glowing geometric runes.',
-    modifiers: [],
+    modifiers: ['28 - 42 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5551,7 +5551,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Held in the off-hand to amplify magical output.',
-    modifiers: [],
+    modifiers: ['*None*', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5566,7 +5566,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Overload: Every 3rd spell you cast strikes twice, with the second strike dealing 50% damage.',
-    modifiers: [],
+    modifiers: ['+45 to 70 INT', '+15% to 25% All Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5581,7 +5581,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Feedback Loop: Casting the same spell two turns in a row reduces its Mana cost to 0 on the second cast.',
-    modifiers: [],
+    modifiers: ['+60 to 85 INT', '+100 to 200 Max Mana'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5596,7 +5596,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Covered in thorns that secrete a mild neurotoxin.',
-    modifiers: [],
+    modifiers: ['20 - 28 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5611,7 +5611,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A wooden totem that pulses like a beating heart.',
-    modifiers: [],
+    modifiers: ['*None*', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5626,7 +5626,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A long spear used to direct packs of summoned beasts.',
-    modifiers: [],
+    modifiers: ['40 - 55 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5641,7 +5641,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Pack Leader: Your active Summon mirrors your attacks, dealing 30% of your weapon damage as bonus Magic Damage.',
-    modifiers: [],
+    modifiers: ['+45 to 70 INT/STA', '+10% to 20% Boss Dmg'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5656,7 +5656,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Symbiosis: Whenever your active Summon deals damage, you are healed for 25% of the damage dealt.',
-    modifiers: [],
+    modifiers: ['+60 to 85 INT/STA', '+15% to 25% All Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5671,7 +5671,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A terrifyingly heavy axe meant for executions.',
-    modifiers: [],
+    modifiers: ['110 - 150 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5686,7 +5686,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Flanged to catch and tear through enemy plating.',
-    modifiers: [],
+    modifiers: ['70 - 95 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5701,7 +5701,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Frenzy: For every 10% of HP you are missing, your Base Weapon Damage increases by 15%.',
-    modifiers: [],
+    modifiers: ['+130 to 180 STR', '+20% to 35% Attack Spd'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5716,7 +5716,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Singularity: Your weapon damage is now calculated entirely using your Total Armor instead of Strength.',
-    modifiers: [],
+    modifiers: ['+150 to 200 STR/STA', '+20% to 40% Armor'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5731,7 +5731,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Executioner: Deals 200% damage to targets below 20% HP.',
-    modifiers: [],
+    modifiers: ['+170 to 220 STR', '+30% to 50% Boss Dmg'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5746,7 +5746,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The blade weeps toxic fluid continuously.',
-    modifiers: [],
+    modifiers: ['65 - 85 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5761,7 +5761,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'High-tension cables allow for piercing shots.',
-    modifiers: [],
+    modifiers: ['120 - 160 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5776,7 +5776,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Toxic Shock: When an enemy reaches 5 stacks of Poison, the stacks detonate, dealing 500% AGI damage instantly.',
-    modifiers: [],
+    modifiers: ['+130 to 180 AGI', '+20% to 30% Attack Spd'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5791,7 +5791,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Headshot: Your Critical Hits ignore 100% of the enemy\'s Evasion and Armor.',
-    modifiers: [],
+    modifiers: ['+150 to 200 AGI', '+100% to 150% Crit Dmg'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5806,7 +5806,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Vanish: Killing an enemy instantly grants you Stealth (Shadow Cloak) for 1 turn.',
-    modifiers: [],
+    modifiers: ['+170 to 220 AGI', '+20% to 30% Evasion'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5821,7 +5821,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Embedded with a Ruby, Sapphire, and Topaz.',
-    modifiers: [],
+    modifiers: ['90 - 130 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5836,7 +5836,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Used for bloodletting rituals.',
-    modifiers: [],
+    modifiers: ['70 - 95 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5851,7 +5851,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Prismatic: Your spells deal Fire, Ice, and Lightning damage simultaneously, applying the debuffs of all three elements.',
-    modifiers: [],
+    modifiers: ['+130 to 180 INT', '+20% to 30% Cast Spd'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5866,7 +5866,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Blood Price: Magic Damage is multiplied by 2x, but your spells now cost 20% of your Current HP per cast.',
-    modifiers: [],
+    modifiers: ['+150 to 200 INT', '+15% to 25% Life Steal'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5881,7 +5881,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Aether-Tap: Converts 50% of your Max Mana into raw Base Weapon Damage.',
-    modifiers: [],
+    modifiers: ['+170 to 220 INT', '+300 to 500 Max Mana'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5896,7 +5896,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Rusted and dull, but imbued with dark magic.',
-    modifiers: [],
+    modifiers: ['100 - 140 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5911,7 +5911,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A massive two-handed weapon carved from a beast\'s femur.',
-    modifiers: [],
+    modifiers: ['110 - 150 Dmg', '+1 Random Modifier (Class Pool)', '+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5926,7 +5926,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Macabre: When an enemy dies, it is instantly resurrected as a Skeletal Minion that fights for you until the end of the Node.',
-    modifiers: [],
+    modifiers: ['+130 to 180 INT', '+25% to 40% Magic Find'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5941,7 +5941,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Wild-Shape: While in Chimera Form, your attacks hit twice, and you are immune to all debuffs.',
-    modifiers: [],
+    modifiers: ['+100 to 150 STR & INT', '+20% to 30% Crit Chance'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5956,7 +5956,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Ancestral Spirit: Replaces your active Pet with an invincible Ancient Spirit that heals you for 10% of your Max HP every turn.',
-    modifiers: [],
+    modifiers: ['+170 to 220 INT/STA', '+500 to 800 Max HP'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5971,7 +5971,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A brittle blade scavenged from a corpse.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -5986,7 +5986,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Heavy and unwieldy, but it crushes skulls well enough.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6001,7 +6001,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Better than blocking with your bare forearm.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6016,7 +6016,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The edge is dull, acting more like a club than a blade.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6031,7 +6031,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The string looks ready to snap at any moment.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6046,7 +6046,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Bound in rusted iron rings.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6061,7 +6061,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Used by the butchers of old Oakhaven.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6076,7 +6076,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The wood is petrified, making it incredibly dense.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6091,7 +6091,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Standard issue for new recruits at the Vanguard\'s Hold.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6106,7 +6106,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A clean, sharp blade forged by Garrick the Smith.',
-    modifiers: [],
+    modifiers: ['+1 Optional Modifier (Class-Weighted Roll)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6121,7 +6121,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Emits a faint blue bioluminescence in the dark.',
-    modifiers: ['+2 to 5 Intelligence   +5 to 15 Max Mana'],
+    modifiers: ['+2 to 5 Intelligence', '+5 to 15 Max Mana (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6136,7 +6136,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Smells of the sea, even in the middle of the ash plains.',
-    modifiers: ['+3 to 8 Strength   +2% to 5% Block Chance'],
+    modifiers: ['+3 to 8 Strength', '+2% to 5% Block Chance (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6151,7 +6151,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The blade is serrated and stained with dried blood.',
-    modifiers: ['+5 to 12 Agility   +2% to 5% Crit Chance'],
+    modifiers: ['+5 to 12 Agility', '+2% to 5% Crit Chance (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6166,7 +6166,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Keeps feral Void-beasts at a safe distance.',
-    modifiers: ['+8 to 15 Core Stat   +5% to 10% Attack Speed'],
+    modifiers: ['+8 to 15 Core Stat', '+5% to 10% Attack Speed (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6181,7 +6181,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The head of the mace phases slightly out of reality.',
-    modifiers: ['+10 to 20 Core Stat   +5 to 12 Flat Void Dmg'],
+    modifiers: ['+10 to 20 Core Stat', '+5 to 12 Flat Void Dmg (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6196,7 +6196,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Painted with the faded crest of a forgotten kingdom.',
-    modifiers: [],
+    modifiers: ['+5 to 10 STR/STA', '+20 to 40 Max HP', '+3% to 6% Block (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6211,7 +6211,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The blade absorbs light, creating a localized shadow.',
-    modifiers: [],
+    modifiers: ['+8 to 15 AGI', '+4% to 8% Crit Chance', '+10% to 20% Crit Dmg (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6226,7 +6226,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Strung with incredibly tense spider silk.',
-    modifiers: [],
+    modifiers: ['+12 to 22 AGI/INT', '+10% to 15% Attack Speed', '+5 to 15 Flat Poison Dmg (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6241,7 +6241,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A heavy industrial tool repurposed for crushing skulls.',
-    modifiers: [],
+    modifiers: ['+15 to 25 STR', '+5% to 10% Armor', '+10% to 20% Boss Dmg (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6256,7 +6256,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Originally used to corral toxic sludge-beasts.',
-    modifiers: [],
+    modifiers: ['+18 to 28 Core Stat', '+15% to 25% Poison Resist', '+10 to 20 Flat Lightning Dmg (Optional)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6271,7 +6271,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Disgusting, but highly effective for quick, bleeding strikes.',
-    modifiers: ['+10 Agility   +5% Attack Speed   +10% Poison Resist   +5% Life Steal'],
+    modifiers: ['+10 Agility', '+5% Attack Speed', '+10% Poison Resist', '+5% Life Steal'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6286,7 +6286,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Constantly drips a highly acidic, glowing venom.',
-    modifiers: ['+15 STR / AGI   +15 Flat Poison Dmg   +10% Crit Chance   +20% Crit Damage'],
+    modifiers: ['+15 STR / AGI', '+15 Flat Poison Dmg', '+10% Crit Chance', '+20% Crit Damage'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6301,7 +6301,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Swings slowly, but hits with the force of a meteor.',
-    modifiers: ['+25 Strength   +20 Flat Fire Dmg   +15% Area of Effect Dmg   -10% Attack Speed (Debuff)'],
+    modifiers: ['+25 Strength', '+20 Flat Fire Dmg', '+15% Area of Effect Dmg', '-10% Attack Speed (Debuff)'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6316,7 +6316,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'A shield made of glass feathers that deflects both blades and magic.',
-    modifiers: ['+20 Agility   +10% Evasion   +10% Movement Speed   +20% Lightning Resist'],
+    modifiers: ['+20 Agility', '+10% Evasion', '+10% Movement Speed', '+20% Lightning Resist'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6331,7 +6331,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'The very axe that tore the fabric of Act 1 apart.',
-    modifiers: [],
+    modifiers: ['+35 Strength', '+25% Boss Damage', '+15% Armor Penetration'],
     uniqueTrait: '',
   ),
   ItemTemplate(
@@ -6346,7 +6346,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Ignition: Critical Hits ignite the enemy, dealing an additional 50% of the initial hit\'s damage over 2 turns.',
-    modifiers: [],
+    modifiers: ['+15 to 25 STR/INT', '+5% to 10% Crit Chance', '+10 to 20 Flat Fire Dmg'],
     uniqueTrait: 'Ignition: Critical Hits ignite the enemy, dealing an additional 50% of the initial hit\'s damage over 2 turns.',
   ),
   ItemTemplate(
@@ -6361,7 +6361,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Entangle: Your basic attacks have a 20% chance to root the enemy, preventing them from using Evasion for 3 turns.',
-    modifiers: [],
+    modifiers: ['+20 to 30 AGI', '+10% to 20% Attack Speed', '+15% to 25% Poison Resist'],
     uniqueTrait: 'Entangle: Your basic attacks have a 20% chance to root the enemy, preventing them from using Evasion for 3 turns.',
   ),
   ItemTemplate(
@@ -6376,7 +6376,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Phalanx: While equipped, your active Companion takes 50% less damage from all sources.',
-    modifiers: [],
+    modifiers: ['+25 to 35 STR/STA', '+100 to 150 Max HP', '+5% to 15% Block Chance'],
     uniqueTrait: 'Phalanx: While equipped, your active Companion takes 50% less damage from all sources.',
   ),
   ItemTemplate(
@@ -6391,7 +6391,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Glitch-Strike: 10% chance on hit to instantly deal damage equal to 15% of the enemy\'s Current HP (bypasses armor).',
-    modifiers: [],
+    modifiers: ['+30 to 45 Core Stat', '+15% to 25% Crit Damage', '+15 to 30 Flat Void Dmg'],
     uniqueTrait: 'Glitch-Strike: 10% chance on hit to instantly deal damage equal to 15% of the enemy\'s Current HP (bypasses armor).',
   ),
   ItemTemplate(
@@ -6406,7 +6406,7 @@ const List<ItemTemplate> kItemTemplates = [
     armorValue: 0,
     socketCount: 0,
     description: 'Overgrowth: Casting a spell heals you for 10% of your Max HP. If you are at full HP, it grants a temporary armor shield instead.',
-    modifiers: [],
+    modifiers: ['+40 to 60 INT', '+100 to 200 Max Mana', '+15% to 25% Cast Speed'],
     uniqueTrait: 'Overgrowth: Casting a spell heals you for 10% of your Max HP. If you are at full HP, it grants a temporary armor shield instead.',
   ),
 ];

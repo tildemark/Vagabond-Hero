@@ -68,9 +68,9 @@
          ========================================================= -->
     <section id="tab-items" class="guide-section active">
       <div class="guide-header-box">
-        <h2 class="guide-header-title"><span>⚔️</span> Equipment Directory & Codex</h2>
+        <h2 class="guide-header-title"><span>⚔️</span> Equipment Directory & Class Loot Codex</h2>
         <p class="guide-header-desc">
-          Browse items by character archetype, compare progression from Level 1 to 70 slot-by-slot, and filter by rarity tier. Under the <strong>Artisan Socketing System</strong>, sockets never consume modifier rolls and can be forged into gear by Garrick the Artificer.
+          Equipment drops are dynamically weighted to your active hero class. Tiers define modifier composition: <strong>Common</strong> (Base + 1 Optional), <strong>Magic</strong> (Base + 1 Random + 1 Optional), <strong>Rare</strong> (Base + 2 Random + 1 Optional), <strong>Relic</strong> (Base + 1 Unique + 2 Random), <strong>Mythic</strong> (High Base + 1 Unique Trait + 1 High Stat + 1 Random), <strong>Set</strong> (High Base + 1 High Stat + 2 Random + Set Bonus), and <strong>Corrupted</strong> (+Corrupted Infusion).
         </p>
       </div>
 
@@ -973,11 +973,31 @@
           `;
         }
 
-        const affixesHtml = (it.modifiers || []).map(mod => {
+        const rawModifiers = it.modifiers || [];
+        const splitModifiers = [];
+        rawModifiers.forEach(m => {
+          if (m.includes('   ')) {
+            m.split(/\s{3,}/).forEach(part => {
+              if (part.trim()) splitModifiers.push(part.trim());
+            });
+          } else {
+            splitModifiers.push(m);
+          }
+        });
+
+        const affixesHtml = splitModifiers.map(mod => {
           let extraClass = '';
-          if (displayRarity === 'Mythic') extraClass = 'affix-legendary';
-          if (displayRarity === 'Set') extraClass = 'affix-set';
-          if (displayRarity === 'Corrupted') extraClass = 'affix-glitch-pos';
+          if (mod.includes('(Optional)')) {
+            extraClass = 'affix-optional';
+          } else if (mod.startsWith('Set Bonus')) {
+            extraClass = 'affix-set';
+          } else if (displayRarity === 'Mythic') {
+            extraClass = 'affix-legendary';
+          } else if (displayRarity === 'Relic') {
+            extraClass = 'affix-unique';
+          } else if (displayRarity === 'Corrupted') {
+            extraClass = 'affix-glitch-pos';
+          }
           return `<li class="card-affix ${extraClass}">${escapeHtml(mod)}</li>`;
         }).join('');
 
@@ -985,7 +1005,7 @@
           `<li class="card-affix" style="color: var(--accent-cyan); font-weight: 600;">💎 ${it.socketCount} Open Socket${it.socketCount > 1 ? 's' : ''}</li>` : '';
 
         const traitHtml = it.uniqueTrait ? 
-          `<li class="card-affix affix-legendary">Trait: ${escapeHtml(it.uniqueTrait)}</li>` : '';
+          `<li class="card-affix affix-legendary"><strong>Unique Trait:</strong> ${escapeHtml(it.uniqueTrait)}</li>` : '';
 
         const cls = it.classTag || 'All Classes';
         const clsSlug = cls.toLowerCase().replace(/\s+/g, '-');

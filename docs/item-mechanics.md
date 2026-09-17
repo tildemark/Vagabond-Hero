@@ -31,26 +31,19 @@ To prevent the frustration of a Strength-based melee character receiving useless
 
 ---
 
-## 3. Rarity Tiers & Modifier Budgets
+## 3. Rarity Tiers & Modifier Budgets (Class-Related Drops)
 
-An item's Rarity dictates how many randomly generated modifiers (Affixes) it receives.
+Drops are strictly related to the player's current character class. An item's Rarity dictates its base stats, signature traits, class affixes, and optional modifier rolls.
 
-| Rarity | UI Color | Modifier Count | Item Behavior |
+| Rarity | UI Color | Modifier Composition | Item Behavior & Budget Rule |
 | --- | --- | --- | --- |
-| **Common** | White | 0 Modifiers | Base stats only (Damage or Armor). Serves as early game gear or crafting salvage. |
-| **Magic** | Blue | 1 to 2 Modifiers | Minor buffs. Rolls 1 Prefix and 1 Suffix maximum. |
-| **Rare** | Yellow | 3 to 4 Modifiers | The backbone of builds. Can roll very high stat values on its 4 modifiers. |
-| **Relic** | Purple | 4 Modifiers | Fixed static drops from specific mini-bosses. Good, predictable stats. |
-| **Mythic** | Orange | 4 to 5 + Trait | Rolls high stats PLUS one hard-coded **Unique Trait** that fundamentally alters gameplay (e.g., "Attacks hit 3 targets"). |
-| **Set** | Green | 4 + Set Bonus | Wearing 2, 3, or 4 pieces of the same named set grants massive synergistic passive abilities. |
-| **Corrupted** | Red/Glitch | 5 Modifiers | *New Game+ / Post-Echo Quest.* Grants a game-breaking buff tied to a severe, build-defining debuff. |
-
-### Post-Echo Quest: Corrupted Modifier Infusion (Corrupted Drops)
-Once the player completes the **Level 70 Echo Quest ("Breaking the Core")** and unlocks Pinnacle progression:
-* **Hybrid Corrupted Drops:** Any newly dropped **Mythic** or **Set** item has a baseline **10% chance** (scalable via Echo Mutators) to roll a **Corrupted Modifier**.
-* **Extra Modifier Budget:** This Corrupted modifier is added as an **additional bonus modifier** beyond the item's standard modifier cap, accompanied by the distinctive Glitched visual aura in the UI.
-* **Dual Nature:** The injected Corrupted affix rolls one game-breaking positive attribute paired with an equally disruptive penalty (e.g. `+250% Skill Damage` paired with `Cannot Evade attacks` or `Consumes 5% Max HP on action`).
-* **Preserves Base Identity:** Mythic items retain their hard-coded Unique Trait, and Set items retain their set piece identity and set bonuses while carrying the Corrupted modifier.
+| **Common** | White | Base Stat + 1 Optional Modifier | Baseline equipment with authentic base stats (Damage or Armor) plus **1 Optional Modifier** rolled from the player's class pool. |
+| **Magic** | Blue | Base Stat + 1 Random Modifier + 1 Optional Modifier | Standard enchanted gear. Always rolls **1 guaranteed random class modifier** and **1 optional modifier** for early build customization. |
+| **Rare** | Yellow | Base Stat + 2 Random Modifiers + 1 Optional Modifier | The leveling and mid-game backbone. Guarantees **2 random class modifiers** plus **1 optional modifier** with elevated stat ranges. |
+| **Relic** | Purple | Base Stat + 1 Unique Modifier + 2 Random Modifiers | Fixed identity equipment drops. Possesses **1 signature Unique Modifier** (unique to the specific item identity) plus **2 random class-weighted modifiers**. |
+| **Mythic** | Orange | High Base Stat + 1 Unique Modifier + 1 High Stat Modifier + 1 Random Modifier | Pinnacle class weapons and armor. Rolls **amplified High Base Stats**, **1 signature Unique Trait** (gameplay-altering rule), **1 High Stat Modifier**, and **1 random class modifier**. |
+| **Set** | Green | High Base Stat + 1 High Stat Modifier + 2 Random Modifiers + Set Attribute | Synergy armor and armaments. Features **High Base Stats**, **1 High Stat Modifier**, **2 random class modifiers**, and the distinctive **Set Attribute bonus** active at 2, 3, or 4 pieces. |
+| **Corrupted** | Red/Glitch | As Is + Corrupted Modifier Infusion | *Post-Echo Pinnacle Drops.* Injects a game-breaking **Corrupted Modifier** (immense buff paired with a severe, build-testing drawback) on top of the item's existing budget. |
 
 ---
 
