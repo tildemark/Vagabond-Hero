@@ -6,6 +6,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:vagabond_hero/core/database/database_providers.dart';
 import 'package:vagabond_hero/core/theme/game_colors.dart';
 import 'package:vagabond_hero/features/combat/domain/combat_engine.dart';
+import 'package:vagabond_hero/features/inventory/presentation/inventory_screen.dart';
+import 'package:vagabond_hero/features/minimap/presentation/minimap_widget.dart';
 import 'package:vagabond_hero/features/navigation/domain/navigation_controller.dart';
 
 class GameScreen extends ConsumerStatefulWidget {
@@ -365,9 +367,9 @@ class _GameScreenState extends ConsumerState<GameScreen> {
               ),
             ),
 
-            // Bottom Navigation Controls
+            // Bottom Control Bar: D-Pad + Actions
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: const BoxDecoration(
                 color: GameColors.bgSecondary,
                 border: Border(
@@ -379,31 +381,130 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                   if (room == null) return const SizedBox();
                   final nav = ref.read(navigationControllerProvider);
                   return Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      _NavButton(
-                        label: 'North',
-                        icon: Icons.arrow_upward,
-                        enabled: room.northExitId != null,
-                        onPressed: () => nav.moveTo(Direction.north),
+                      // ── D-Pad ──────────────────────────────
+                      SizedBox(
+                        width: 120,
+                        height: 120,
+                        child: Stack(
+                          alignment: Alignment.center,
+                          children: [
+                            // North
+                            Positioned(
+                              top: 0,
+                              left: 0,
+                              right: 0,
+                              child: Center(
+                                child: _DPadButton(
+                                  icon: Icons.keyboard_arrow_up,
+                                  enabled: room.northExitId != null,
+                                  tooltip: 'North',
+                                  onPressed: () => nav.moveTo(Direction.north),
+                                ),
+                              ),
+                            ),
+                            // South
+                            Positioned(
+                              bottom: 0,
+                              left: 0,
+                              right: 0,
+                              child: Center(
+                                child: _DPadButton(
+                                  icon: Icons.keyboard_arrow_down,
+                                  enabled: room.southExitId != null,
+                                  tooltip: 'South',
+                                  onPressed: () => nav.moveTo(Direction.south),
+                                ),
+                              ),
+                            ),
+                            // West
+                            Positioned(
+                              left: 0,
+                              top: 0,
+                              bottom: 0,
+                              child: Center(
+                                child: _DPadButton(
+                                  icon: Icons.keyboard_arrow_left,
+                                  enabled: room.westExitId != null,
+                                  tooltip: 'West',
+                                  onPressed: () => nav.moveTo(Direction.west),
+                                ),
+                              ),
+                            ),
+                            // East
+                            Positioned(
+                              right: 0,
+                              top: 0,
+                              bottom: 0,
+                              child: Center(
+                                child: _DPadButton(
+                                  icon: Icons.keyboard_arrow_right,
+                                  enabled: room.eastExitId != null,
+                                  tooltip: 'East',
+                                  onPressed: () => nav.moveTo(Direction.east),
+                                ),
+                              ),
+                            ),
+                            // Centre dot
+                            Container(
+                              width: 10,
+                              height: 10,
+                              decoration: const BoxDecoration(
+                                color: GameColors.borderSubtle,
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                      _NavButton(
-                        label: 'South',
-                        icon: Icons.arrow_downward,
-                        enabled: room.southExitId != null,
-                        onPressed: () => nav.moveTo(Direction.south),
-                      ),
-                      _NavButton(
-                        label: 'West',
-                        icon: Icons.arrow_back,
-                        enabled: room.westExitId != null,
-                        onPressed: () => nav.moveTo(Direction.west),
-                      ),
-                      _NavButton(
-                        label: 'East',
-                        icon: Icons.arrow_forward,
-                        enabled: room.eastExitId != null,
-                        onPressed: () => nav.moveTo(Direction.east),
+
+                      const Spacer(),
+
+                      // ── Action Buttons ──────────────────────
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          // Attack nearest mob
+                          _ActionButton(
+                            icon: Icons.gps_fixed,
+                            label: 'ATK',
+                            color: GameColors.crimsonBlood,
+                            tooltip: 'Attack nearest mob [Space]',
+                            onPressed: () {
+                              final mobs = ref.read(currentRoomMobsProvider).value ?? [];
+                              if (mobs.isNotEmpty) {
+                                ref.read(combatEngineProvider).attackMob(mobs.first);
+                              }
+                            },
+                          ),
+                          const SizedBox(height: 8),
+                          // Inventory
+                          _ActionButton(
+                            icon: Icons.backpack_outlined,
+                            label: 'BAG',
+                            color: GameColors.cyanRune,
+                            tooltip: 'Inventory [I]',
+                            onPressed: () => _showInventoryModal(context, ref),
+                          ),
+                          const SizedBox(height: 8),
+                          // Player status sheet
+                          _ActionButton(
+                            icon: Icons.person_outline,
+                            label: 'STAT',
+                            color: GameColors.goldAccent,
+                            tooltip: 'Character Status',
+                            onPressed: () => _showStatusModal(context, ref),
+                          ),
+                          const SizedBox(height: 8),
+                          // World map
+                          _ActionButton(
+                            icon: Icons.map_outlined,
+                            label: 'MAP',
+                            color: const Color(0xFF8B5CF6),
+                            tooltip: 'World Map',
+                            onPressed: () => _showMapModal(context, ref),
+                          ),
+                        ],
                       ),
                     ],
                   );
@@ -420,40 +521,127 @@ class _GameScreenState extends ConsumerState<GameScreen> {
   }
 }
 
-class _NavButton extends StatelessWidget {
-  final String label;
+// ─── D-Pad arrow button ───────────────────────────────────────────────────────
+class _DPadButton extends StatelessWidget {
   final IconData icon;
   final bool enabled;
+  final String tooltip;
   final VoidCallback onPressed;
 
-  const _NavButton({
-    required this.label,
+  const _DPadButton({
     required this.icon,
     required this.enabled,
+    required this.tooltip,
     required this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton.icon(
-      style: OutlinedButton.styleFrom(
-        foregroundColor: enabled ? GameColors.cyanRune : GameColors.textDim,
-        side: BorderSide(
-          color: enabled ? GameColors.cyanDim : GameColors.borderSubtle,
+    final color = enabled ? GameColors.cyanRune : GameColors.textDim;
+    return Tooltip(
+      message: tooltip,
+      child: InkWell(
+        onTap: enabled ? onPressed : null,
+        borderRadius: BorderRadius.circular(8),
+        splashColor: GameColors.cyanRune.withValues(alpha: 0.2),
+        child: Container(
+          width: 36,
+          height: 36,
+          decoration: BoxDecoration(
+            color: enabled
+                ? GameColors.cyanRune.withValues(alpha: 0.08)
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(
+              color: enabled ? GameColors.cyanDim : GameColors.borderSubtle,
+              width: 1,
+            ),
+          ),
+          child: Icon(icon, size: 22, color: color),
         ),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       ),
-      onPressed: enabled ? onPressed : null,
-      icon: Icon(icon, size: 16),
-      label: Text(
-        label,
-        style: GoogleFonts.inter(fontSize: 12),
+    );
+  }
+}
+
+// ─── Sidebar action button ────────────────────────────────────────────────────
+class _ActionButton extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final Color color;
+  final String tooltip;
+  final VoidCallback onPressed;
+
+  const _ActionButton({
+    required this.icon,
+    required this.label,
+    required this.color,
+    required this.tooltip,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Tooltip(
+      message: tooltip,
+      child: InkWell(
+        onTap: onPressed,
+        borderRadius: BorderRadius.circular(8),
+        child: Container(
+          width: 56,
+          height: 28,
+          decoration: BoxDecoration(
+            color: color.withValues(alpha: 0.12),
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(color: color.withValues(alpha: 0.6), width: 1),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, size: 13, color: color),
+              const SizedBox(width: 3),
+              Text(
+                label,
+                style: GoogleFonts.jetBrainsMono(
+                  fontSize: 9,
+                  fontWeight: FontWeight.bold,
+                  color: color,
+                  letterSpacing: 0.5,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
 }
 
 void _showInventoryModal(BuildContext context, WidgetRef ref) {
+  showModalBottomSheet(
+    context: context,
+    isScrollControlled: true,
+    backgroundColor: GameColors.bgSecondary,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      side: BorderSide(color: GameColors.borderSubtle),
+    ),
+    builder: (context) {
+      return DraggableScrollableSheet(
+        expand: false,
+        initialChildSize: 0.85,
+        minChildSize: 0.5,
+        maxChildSize: 0.95,
+        builder: (context, scrollController) {
+          return const InventoryScreen();
+        },
+      );
+    },
+  );
+}
+
+// ─── Character Status Modal ───────────────────────────────────────────────────
+void _showStatusModal(BuildContext context, WidgetRef ref) {
   showModalBottomSheet(
     context: context,
     backgroundColor: GameColors.bgSecondary,
@@ -464,129 +652,233 @@ void _showInventoryModal(BuildContext context, WidgetRef ref) {
     builder: (context) {
       return Consumer(
         builder: (context, sheetRef, _) {
-          final itemsAsync = sheetRef.watch(playerInventoryProvider);
-
+          final playerAsync = sheetRef.watch(playerStreamProvider);
           return Container(
             padding: const EdgeInsets.all(20),
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
               children: [
-                const Icon(Icons.backpack, color: GameColors.cyanRune, size: 20),
-                const SizedBox(width: 8),
-                Text(
-                  'INVENTORY & GEAR',
-                  style: GoogleFonts.cinzel(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    letterSpacing: 1,
-                  ),
+                // Header
+                Row(
+                  children: [
+                    const Icon(Icons.account_circle,
+                        color: GameColors.goldAccent, size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      'CHARACTER STATUS',
+                      style: GoogleFonts.cinzel(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      icon: const Icon(Icons.close,
+                          color: GameColors.textMuted, size: 20),
+                      onPressed: () => Navigator.pop(context),
+                    ),
+                  ],
                 ),
-                const Spacer(),
-                IconButton(
-                  icon: const Icon(Icons.close, color: GameColors.textMuted, size: 20),
-                  onPressed: () => Navigator.pop(context),
+                const Divider(color: GameColors.borderSubtle),
+                const SizedBox(height: 8),
+                playerAsync.when(
+                  data: (player) {
+                    if (player == null) {
+                      return const Center(child: Text('No player data.'));
+                    }
+                    final hpPct = player.currentHp / player.baseHp;
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Stat rows
+                        _StatRow(
+                          label: 'Level',
+                          value: '${player.level}',
+                          color: GameColors.goldAccent,
+                        ),
+                        const SizedBox(height: 10),
+                        _StatRow(
+                          label: 'HP',
+                          value: '${player.currentHp} / ${player.baseHp}',
+                          color: hpPct < 0.3
+                              ? GameColors.crimsonBlood
+                              : GameColors.terminalGreen,
+                        ),
+                        const SizedBox(height: 6),
+                        // HP bar
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: LinearProgressIndicator(
+                            value: hpPct.clamp(0.0, 1.0),
+                            minHeight: 6,
+                            backgroundColor:
+                                GameColors.borderSubtle.withValues(alpha: 0.4),
+                            valueColor: AlwaysStoppedAnimation(
+                              hpPct < 0.3
+                                  ? GameColors.crimsonBlood
+                                  : GameColors.terminalGreen,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        _StatRow(
+                          label: 'EXP',
+                          value: '${player.currentExp} / ${player.maxExp}',
+                          color: GameColors.cyanRune,
+                        ),
+                        const SizedBox(height: 6),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(4),
+                          child: LinearProgressIndicator(
+                            value: (player.currentExp / player.maxExp.clamp(1, player.maxExp)).clamp(0.0, 1.0),
+                            minHeight: 6,
+                            backgroundColor:
+                                GameColors.borderSubtle.withValues(alpha: 0.4),
+                            valueColor: const AlwaysStoppedAnimation(
+                                GameColors.cyanRune),
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        _StatRow(
+                          label: '💎 Prisms',
+                          value: '${player.silverPrisms}',
+                          color: GameColors.cyanRune,
+                        ),
+                        const SizedBox(height: 10),
+                        _StatRow(
+                          label: 'STR',
+                          value: '${player.strength}',
+                          color: GameColors.crimsonBlood,
+                        ),
+                        const SizedBox(height: 4),
+                        _StatRow(
+                          label: 'AGI',
+                          value: '${player.agility}',
+                          color: GameColors.terminalGreen,
+                        ),
+                        const SizedBox(height: 4),
+                        _StatRow(
+                          label: 'INT',
+                          value: '${player.intelligence}',
+                          color: GameColors.goldAccent,
+                        ),
+                      ],
+                    );
+                  },
+                  loading: () => const Center(
+                    child: CircularProgressIndicator(
+                        color: GameColors.goldAccent),
+                  ),
+                  error: (e, _) => Center(child: Text('Error: $e')),
                 ),
               ],
             ),
-            const Divider(color: GameColors.borderSubtle),
-            const SizedBox(height: 8),
-            Expanded(
-              child: itemsAsync.when(
-                data: (items) {
-                  if (items.isEmpty) {
-                    return Center(
-                      child: Text(
-                        'Your satchel is currently empty.',
-                        style: GoogleFonts.inter(
-                          color: GameColors.textDim,
-                          fontStyle: FontStyle.italic,
-                        ),
-                      ),
-                    );
-                  }
-                  return ListView.builder(
-                    itemCount: items.length,
-                    itemBuilder: (context, index) {
-                      final item = items[index];
-                      Color rarityColor = GameColors.rarityNormal;
-                      if (item.rarity == 'Magic') rarityColor = GameColors.rarityMagic;
-                      if (item.rarity == 'Rare') rarityColor = GameColors.rarityRare;
-                      if (item.rarity == 'Legendary') rarityColor = GameColors.rarityLegendary;
-
-                      return Container(
-                        margin: const EdgeInsets.only(bottom: 8),
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: GameColors.bgCard,
-                          borderRadius: BorderRadius.circular(8),
-                          border: Border.all(color: rarityColor.withValues(alpha: 0.5)),
-                        ),
-                        child: Row(
-                          children: [
-                            Icon(
-                              item.baseType == 'Weapon'
-                                  ? Icons.colorize
-                                  : Icons.shield_outlined,
-                              color: rarityColor,
-                              size: 22,
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    item.name,
-                                    style: GoogleFonts.inter(
-                                      fontWeight: FontWeight.bold,
-                                      color: rarityColor,
-                                    ),
-                                  ),
-                                  Text(
-                                    '${item.rarity} ${item.baseType} • DMG: ${item.minDamage}-${item.maxDamage}',
-                                    style: GoogleFonts.jetBrainsMono(
-                                      fontSize: 11,
-                                      color: GameColors.textMuted,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            if (item.isEquipped)
-                              Container(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 6, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: GameColors.cyanRune.withValues(alpha: 0.2),
-                                  borderRadius: BorderRadius.circular(4),
-                                  border: Border.all(color: GameColors.cyanRune),
-                                ),
-                                child: Text(
-                                  'EQUIPPED',
-                                  style: GoogleFonts.jetBrainsMono(
-                                    fontSize: 9,
-                                    color: GameColors.cyanRune,
-                                  ),
-                                ),
-                              ),
-                          ],
-                        ),
-                      );
-                    },
-                  );
-                },
-                loading: () => const Center(
-                  child: CircularProgressIndicator(color: GameColors.cyanRune),
-                ),
-                error: (e, _) => Center(child: Text('Error: $e')),
-              ),
-            ),
-          ],
-        ),
+          );
+        },
       );
+    },
+  );
+}
+
+class _StatRow extends StatelessWidget {
+  final String label;
+  final String value;
+  final Color color;
+
+  const _StatRow({
+    required this.label,
+    required this.value,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          label,
+          style: GoogleFonts.inter(
+            fontSize: 13,
+            color: GameColors.textMuted,
+          ),
+        ),
+        const Spacer(),
+        Text(
+          value,
+          style: GoogleFonts.jetBrainsMono(
+            fontSize: 13,
+            fontWeight: FontWeight.bold,
+            color: color,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+// ─── World Map Modal ──────────────────────────────────────────────────────────
+void _showMapModal(BuildContext context, WidgetRef ref) {
+  showModalBottomSheet(
+    context: context,
+    isScrollControlled: true,
+    backgroundColor: GameColors.bgSecondary,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      side: BorderSide(color: GameColors.borderSubtle),
+    ),
+    builder: (context) {
+      return DraggableScrollableSheet(
+        expand: false,
+        initialChildSize: 0.82,
+        minChildSize: 0.5,
+        maxChildSize: 0.95,
+        builder: (context, scrollController) {
+          return Column(
+            children: [
+              // Handle bar
+              Container(
+                margin: const EdgeInsets.only(top: 10, bottom: 4),
+                width: 36,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: GameColors.borderSubtle,
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+              // Header
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                child: Row(
+                  children: [
+                    const Icon(Icons.map_outlined,
+                        color: Color(0xFF8B5CF6), size: 20),
+                    const SizedBox(width: 8),
+                    Text(
+                      'WORLD MAP',
+                      style: GoogleFonts.cinzel(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      icon: const Icon(Icons.close,
+                          color: GameColors.textMuted, size: 20),
+                      onPressed: () => Navigator.pop(context),
+                    ),
+                  ],
+                ),
+              ),
+              const Divider(color: GameColors.borderSubtle, height: 1),
+              // Map body
+              const Expanded(child: MinimapWidget()),
+            ],
+          );
         },
       );
     },

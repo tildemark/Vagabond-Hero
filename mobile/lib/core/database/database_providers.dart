@@ -39,3 +39,11 @@ final playerInventoryProvider = StreamProvider.autoDispose<List<ItemData>>((ref)
   final db = ref.watch(databaseProvider);
   return (db.select(db.items)..where((tbl) => tbl.ownerId.equals(1))).watch();
 });
+
+// Streams ALL rooms as a lookup map (used by minimap)
+final allRoomsProvider = StreamProvider<Map<int, RoomData>>((ref) {
+  final db = ref.watch(databaseProvider);
+  return db.select(db.rooms).watch().map((rows) {
+    return {for (final r in rows) r.id: r};
+  });
+});
