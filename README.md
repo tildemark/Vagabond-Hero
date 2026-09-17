@@ -8,7 +8,7 @@ An offline-first, dark fantasy isekai text-based RPG mobile game built with **Fl
 
 You were staring at a terminal, compiling a legacy MUD script, when the screen shattered into blinding white light. You awaken not in your room, but in a petrified forest coated in grey ash within the **Shattered Expanse**—a fractured digital/magical realm governed by Nodes, Acts, and ancient system prompts.
 
-*Vagabond Hero* blends classic text-heavy MUD dungeon crawling with modern ARPG mechanics: grid exploration, turn-based tactical combat, branching job classes, and Diablo-style procedural loot.
+*Vagabond Hero* blends classic text-heavy MUD dungeon crawling with modern ARPG mechanics: grid exploration, turn-based tactical combat, branching job classes, and deep procedural ARPG loot.
 
 ---
 
@@ -17,7 +17,7 @@ You were staring at a terminal, compiling a legacy MUD script, when the screen s
 - **Offline-First & Deterministic:** Powered by an offline SQLite database via Drift. No mandatory server connection required.
 - **Node & Grid Navigation:** 5 Acts, each with 5–6 major Nodes containing 20–50 interconnected rooms with cardinal (NSEW) traversal and random encounters.
 - **Turn-Based Combat:** Tactical turn-order mechanics, damage calculations, condition effects, and scrolling combat logs.
-- **Diablo-Style Loot & Gem Sockets:** Procedural drops across 5 rarity tiers (*Normal*, *Magic*, *Rare*, *Legendary*, *Set*) with randomized affixes and socketable gems (Chipped to Perfect).
+- **Procedural ARPG Loot & Gem Sockets:** Procedural drops across 5 rarity tiers (*Normal*, *Magic*, *Rare*, *Legendary*, *Set*) with randomized affixes and socketable gems (Chipped to Perfect).
 - **Branching Class Evolutions:**
   - **Lv 1:** Vagabond (Novice)
   - **Lv 20 Base Classes:** Juggernaut, Phantom, Weaver, Warden

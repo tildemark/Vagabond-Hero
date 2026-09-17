@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Game Guide & Codex — Vagabond Hero (Items, Classes, Skills, Mobs, Attributes)</title>
-  <meta name="description" content="Official Diablo-style game guide and codex for Vagabond Hero. Comprehensive database of legendary items, set gear, class skills, secondary resources, bestiary mobs, and core combat attributes." />
+  <meta name="description" content="Official ARPG game guide and codex for Vagabond Hero. Comprehensive database of legendary items, set gear, class skills, secondary resources, bestiary mobs, and core combat attributes." />
   
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="../assets/images/app-icon.jpg" />
@@ -88,7 +88,7 @@
       <div class="cards-grid" id="items-grid">
         
         <!-- Legendary: The Carnage Engine -->
-        <div class="diablo-card legendary" data-type="weapons" data-tier="legendary">
+        <div class="arpg-card legendary" data-type="weapons" data-tier="legendary">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">The Carnage Engine</div>
@@ -110,7 +110,7 @@
         </div>
 
         <!-- Legendary: The Event Horizon -->
-        <div class="diablo-card legendary" data-type="weapons" data-tier="legendary">
+        <div class="arpg-card legendary" data-type="weapons" data-tier="legendary">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">The Event Horizon</div>
@@ -132,7 +132,7 @@
         </div>
 
         <!-- Legendary: The Widow-Maker -->
-        <div class="diablo-card legendary" data-type="weapons" data-tier="legendary">
+        <div class="arpg-card legendary" data-type="weapons" data-tier="legendary">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">The Widow-Maker</div>
@@ -154,7 +154,7 @@
         </div>
 
         <!-- Legendary: Spire of the Archon -->
-        <div class="diablo-card legendary" data-type="weapons" data-tier="legendary">
+        <div class="arpg-card legendary" data-type="weapons" data-tier="legendary">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">Spire of the Archon</div>
@@ -176,7 +176,7 @@
         </div>
 
         <!-- Set: Bastion's Carapace -->
-        <div class="diablo-card set" data-type="armor" data-tier="set">
+        <div class="arpg-card set" data-type="armor" data-tier="set">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">Bastion's Carapace</div>
@@ -199,7 +199,7 @@
         </div>
 
         <!-- Set: Drowned King's Crown -->
-        <div class="diablo-card set" data-type="armor" data-tier="set">
+        <div class="arpg-card set" data-type="armor" data-tier="set">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">Drowned King's Crest</div>
@@ -221,7 +221,7 @@
         </div>
 
         <!-- Glitched: Fragment of the Null Pointer -->
-        <div class="diablo-card glitched" data-type="armor" data-tier="glitched">
+        <div class="arpg-card glitched" data-type="armor" data-tier="glitched">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">Fragment of the Null Pointer</div>
@@ -243,7 +243,7 @@
         </div>
 
         <!-- Glitched: Voidcaller's Wand -->
-        <div class="diablo-card glitched" data-type="weapons" data-tier="glitched">
+        <div class="arpg-card glitched" data-type="weapons" data-tier="glitched">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">Voidcaller's Wand [Corrupted]</div>
@@ -703,7 +703,7 @@
       </div>
 
       <div class="cards-grid">
-        <div class="diablo-card glitched">
+        <div class="arpg-card glitched">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">Corrupted Item Infusion</div>
@@ -720,7 +720,7 @@
           </ul>
         </div>
 
-        <div class="diablo-card unique">
+        <div class="arpg-card unique">
           <div class="card-top">
             <div class="card-title-group">
               <div class="card-title">The Echo Point System</div>
@@ -773,7 +773,7 @@
       parent.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      const cards = document.querySelectorAll('#items-grid .diablo-card');
+      const cards = document.querySelectorAll('#items-grid .arpg-card');
       cards.forEach(card => {
         const tier = card.getAttribute('data-tier');
         const type = card.getAttribute('data-type');
@@ -789,7 +789,7 @@
 
     function searchItems(query) {
       const q = query.toLowerCase().trim();
-      const cards = document.querySelectorAll('#items-grid .diablo-card');
+      const cards = document.querySelectorAll('#items-grid .arpg-card');
       cards.forEach(card => {
         const text = card.textContent.toLowerCase();
         if (text.includes(q)) {

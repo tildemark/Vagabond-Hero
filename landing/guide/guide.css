@@ -1,6 +1,6 @@
 /* =========================================================
    VAGABOND HERO — ARPG COMPREHENSIVE GAME GUIDE STYLES
-   Diablo / Grim Dawn Inspired Dark Runic Grimoire Theme
+   Dark Fantasy Runic Grimoire Theme
    ========================================================= */
 
 .guide-hero {
@@ -190,7 +190,7 @@
 }
 
 /* =========================================================
-   DIABLO-STYLE ITEM & CODEX CARDS
+   ARPG ITEM & CODEX CARDS
    ========================================================= */
 
 .cards-grid {
@@ -199,7 +199,7 @@
   gap: 1.5rem;
 }
 
-.diablo-card {
+.arpg-card {
   background: #090c12;
   border-radius: var(--radius-md);
   padding: 1.25rem;
@@ -211,61 +211,61 @@
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.diablo-card:hover {
+.arpg-card:hover {
   transform: translateY(-4px);
 }
 
 /* Rarity Accents */
-.diablo-card.common {
+.arpg-card.common {
   border-color: #94a3b8;
 }
-.diablo-card.common:hover {
+.arpg-card.common:hover {
   box-shadow: 0 8px 30px rgba(148, 163, 184, 0.2);
 }
 
-.diablo-card.magic {
+.arpg-card.magic {
   border-color: #38bdf8;
 }
-.diablo-card.magic:hover {
+.arpg-card.magic:hover {
   box-shadow: 0 8px 30px rgba(56, 189, 248, 0.25);
 }
 
-.diablo-card.rare {
+.arpg-card.rare {
   border-color: #facc15;
 }
-.diablo-card.rare:hover {
+.arpg-card.rare:hover {
   box-shadow: 0 8px 30px rgba(250, 204, 21, 0.3);
 }
 
-.diablo-card.unique {
+.arpg-card.unique {
   border-color: #c084fc;
 }
-.diablo-card.unique:hover {
+.arpg-card.unique:hover {
   box-shadow: 0 8px 30px rgba(192, 132, 252, 0.35);
 }
 
-.diablo-card.legendary {
+.arpg-card.legendary {
   border-color: #fb923c;
   background: radial-gradient(circle at 50% 0%, rgba(251, 146, 60, 0.08) 0%, #090c12 70%);
 }
-.diablo-card.legendary:hover {
+.arpg-card.legendary:hover {
   box-shadow: 0 8px 35px rgba(251, 146, 60, 0.4);
 }
 
-.diablo-card.set {
+.arpg-card.set {
   border-color: #4ade80;
   background: radial-gradient(circle at 50% 0%, rgba(74, 222, 128, 0.08) 0%, #090c12 70%);
 }
-.diablo-card.set:hover {
+.arpg-card.set:hover {
   box-shadow: 0 8px 35px rgba(74, 222, 128, 0.4);
 }
 
-.diablo-card.glitched {
+.arpg-card.glitched {
   border-color: #f43f5e;
   background: radial-gradient(circle at 50% 0%, rgba(244, 63, 94, 0.12) 0%, #090c12 70%);
   animation: glitchPulse 4s infinite alternate;
 }
-.diablo-card.glitched:hover {
+.arpg-card.glitched:hover {
   box-shadow: 0 8px 40px rgba(244, 63, 94, 0.5);
 }
 
@@ -401,7 +401,7 @@
 }
 
 /* =========================================================
-   DIABLO SKILL TREES & CLASSES STYLING
+   CLASS SKILL TREES & PROGRESSION STYLING
    ========================================================= */
 
 .class-overview-banner {

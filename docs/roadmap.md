@@ -49,8 +49,8 @@ Vagabond-Hero/
 3. **Core Domain Mechanics**:
    - `NavigationService`: Room traversal, cardinal exits, fog-of-war tracking.
    - `CombatEngine`: Initiative rolls, action points, accuracy checks, damage formulas.
-   - `LootGenerator`: Diablo-style procedural item generation (affixes, rarity tiers, sockets).
-   - `Character & Leveling`: Stat calculations, job advancement curves (Vagabond -> Juggernaut/Weaver/Phantom/Warden).
+    - `LootGenerator`: Procedural ARPG item generation (affixes, rarity tiers, sockets).
+    - `Character & Leveling`: Stat calculations, job advancement curves (Vagabond -> Juggernaut/Weaver/Phantom/Warden).
 
 ---
 
@@ -92,7 +92,7 @@ Vagabond-Hero/
 1. **Aesthetic & Layout**:
    - Theme: Dark ashen console / fractured digital fantasy styling (glowing runes, glitch effects, typography matching game lore).
    - Hero Section: Striking game title, elevator pitch ("The Shattered Expanse awaits"), prominent **[Download APK (Android)]** and **[Play Web Version]** call-to-action buttons.
-   - Features Grid: Diablo-style loot, 5 Acts, class ascensions, offline-first SQLite highlights.
+   - Features Grid: Procedural ARPG loot, 5 Acts, class ascensions, offline-first SQLite highlights.
    - Interactive Preview / Lore Terminal: Interactive mini-terminal snippet or preview link to the web game.
    - Release Notes & Version Tracker: Direct links to latest GitHub release assets.
 2. **GitHub Pages Deployment Setup**:

@@ -47,7 +47,7 @@ Implement the following Drift tables:
    - If a room has a live Mob, disable movement. Show Attack buttons.
    - Turn-based: Player attacks -> subtract Mob HP. Mob attacks -> subtract Player HP.
    - Log all actions to a scrolling text list in the UI (e.g., "You strike the Void-Rat for 12 damage").
-3. **The Diablo-Style Loot System:**
+3. **The Procedural ARPG Loot System:**
    - When a mob dies, trigger `LootGenerator`.
    - Scale item level to player level. Max item/player level is 70.
    - Rarity dictates modifiers: Normal (0), Magic (1-2), Rare (3-4), Legendary (1 unique trait).
@@ -63,5 +63,5 @@ Please execute this build in the following sequence:
 2. Build the `app_database.dart` and define the 4 core tables. Run build_runner.
 3. Create the `Navigation` feature: a Riverpod provider that fetches the current room and a UI that displays the text and directional buttons.
 4. Create the `Combat` feature: the math engine, the turn sequence, and the scrolling text battle log.
-5. Create the `Inventory` feature: the item data classes, the loot generation math based on the Diablo 3 rarity system, and a simple inventory screen.
+5. Create the `Inventory` feature: the item data classes, the loot generation math based on procedural ARPG itemization, and a simple inventory screen.
 
