@@ -16,6 +16,27 @@
   -->
   <base href="$FLUTTER_BASE_HREF">
 
+  <!-- Cross-Origin Isolation: required for WebAssembly (sqlite3.wasm + drift_worker.js) on GitHub Pages -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Register COOP/COEP header-injection service worker before Flutter loads.
+      // On first load the SW installs and the page reloads once automatically.
+      window.addEventListener('load', async () => {
+        try {
+          const reg = await navigator.serviceWorker.register('coi-serviceworker.js');
+          // If the SW was just installed, reload so it can intercept all fetches.
+          if (reg.installing) {
+            reg.installing.addEventListener('statechange', (e) => {
+              if (e.target.state === 'activated') window.location.reload();
+            });
+          }
+        } catch (e) {
+          console.warn('[coi] Service worker registration failed:', e);
+        }
+      });
+    }
+  </script>
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="Vagabond Hero — Dark fantasy isekai text-based RPG.">
