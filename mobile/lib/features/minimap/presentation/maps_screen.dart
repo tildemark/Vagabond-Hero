@@ -249,19 +249,32 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
             Expanded(
               child: Stack(
                 children: [
-                  InteractiveViewer(
-                    boundaryMargin: const EdgeInsets.all(120),
-                    minScale: 0.5,
-                    maxScale: 2.5,
-                    child: CustomPaint(
-                      size: const Size(900, 900),
-                      painter: _ExpandedAreaMapPainter(
-                        nodes: nodes,
-                        currentRoomId: currentRoomId,
-                        activeMobs: activeMobs,
-                        selectedRoomId: _selectedRoom?.id,
-                      ),
-                    ),
+                  LayoutBuilder(
+                    builder: (context, constraints) {
+                      final maxCol = nodes.map((n) => n.col).fold(0, math.max);
+                      final minCol = nodes.map((n) => n.col).fold(0, math.min);
+                      final maxRow = nodes.map((n) => n.row).fold(0, math.max);
+                      final minRow = nodes.map((n) => n.row).fold(0, math.min);
+
+                      final spanW = ((maxCol - minCol + 3) * 64.0).clamp(constraints.maxWidth, 1800.0);
+                      final spanH = ((maxRow - minRow + 3) * 64.0).clamp(constraints.maxHeight, 1800.0);
+                      final canvasSize = Size(spanW, spanH);
+
+                      return InteractiveViewer(
+                        boundaryMargin: const EdgeInsets.all(160),
+                        minScale: 0.3,
+                        maxScale: 2.5,
+                        child: CustomPaint(
+                          size: canvasSize,
+                          painter: _ExpandedAreaMapPainter(
+                            nodes: nodes,
+                            currentRoomId: currentRoomId,
+                            activeMobs: activeMobs,
+                            selectedRoomId: _selectedRoom?.id,
+                          ),
+                        ),
+                      );
+                    },
                   ),
 
                   // Selected room preview card overlay at bottom

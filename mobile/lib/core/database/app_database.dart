@@ -15,39 +15,62 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase.forTesting(super.connection);
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
+        beforeOpen: (details) async {
+          // Always ensure rooms are updated with latest exits and new rooms exist
+          await _seedAllRoomsAndMobs();
+        },
+        onUpgrade: (Migrator m, int from, int to) async {
+          if (from < 2) {
+            try {
+              await m.addColumn(players, players.actsCompleted);
+            } catch (_) {}
+            try {
+              await m.addColumn(mobs, mobs.isMiniBoss);
+            } catch (_) {}
+
+            await _seedAllRoomsAndMobs();
+          }
+        },
         onCreate: (Migrator m) async {
           await m.createAll();
+          await _seedDefaultPlayer();
+          await _seedAllRoomsAndMobs();
+          await _seedStarterItems();
+        },
+      );
 
-          // Seed default player
-          await into(players).insert(
-            PlayersCompanion.insert(
-              name: 'Vagabond',
-              jobClass: const Value('Vagabond'),
-              level: const Value(1),
-              currentExp: const Value(0),
-              maxExp: const Value(100),
-              baseHp: const Value(50),
-              currentHp: const Value(50),
-              strength: const Value(12),
-              agility: const Value(10),
-              intelligence: const Value(10),
-              stamina: const Value(10),
-              currentRoomId: const Value(101),
-              silverPrisms: const Value(25),
-            ),
-          );
+  Future<void> _seedDefaultPlayer() async {
+    await into(players).insert(
+      PlayersCompanion.insert(
+        name: 'Vagabond',
+        jobClass: const Value('Vagabond'),
+        level: const Value(1),
+        currentExp: const Value(0),
+        maxExp: const Value(100),
+        baseHp: const Value(50),
+        currentHp: const Value(50),
+        strength: const Value(12),
+        agility: const Value(10),
+        intelligence: const Value(10),
+        stamina: const Value(10),
+        currentRoomId: const Value(101),
+        silverPrisms: const Value(25),
+      ),
+    );
+  }
 
-          // ──────────────────────────────────────────────────────────────────────────
-          // Seed Act I Rooms (Non-linear branching graph across Nodes 1-6 + Gateway)
-          // ──────────────────────────────────────────────────────────────────────────
+  Future<void> _seedAllRoomsAndMobs() async {
+    // ──────────────────────────────────────────────────────────────────────────
+    // Seed Act I Rooms (Non-linear branching graph across Nodes 1-6 + Gateway)
+    // ──────────────────────────────────────────────────────────────────────────
 
-          // ── Node 1: The Shattered Clearing & Smuggler's Crevasse
-          await into(rooms).insert(
-            RoomsCompanion.insert(
+    // ── Node 1: The Shattered Clearing & Smuggler's Crevasse
+    await into(rooms).insertOnConflictUpdate(
+      RoomsCompanion.insert(
               id: const Value(101),
               act: 1,
               title: 'The Ashen Bed',
@@ -59,7 +82,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(102),
               act: 1,
@@ -72,7 +95,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(103),
               act: 1,
@@ -85,7 +108,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(104),
               act: 1,
@@ -101,7 +124,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Alternate Branch A: Smuggler's Crevasse (Bypasses Spider Dungeon)
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(105),
               act: 1,
@@ -114,7 +137,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(106),
               act: 1,
@@ -128,7 +151,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Node 2: The Whispering Hollow (Spider Dungeon)
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(201),
               act: 1,
@@ -141,7 +164,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(202),
               act: 1,
@@ -155,7 +178,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(203),
               act: 1,
@@ -167,7 +190,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(204),
               act: 1,
@@ -181,7 +204,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Node 3: The Vanguard\'s Hold (Safe Hub)
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(301),
               act: 1,
@@ -195,7 +218,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(302),
               act: 1,
@@ -210,7 +233,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(303),
               act: 1,
@@ -222,7 +245,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(304),
               act: 1,
@@ -235,7 +258,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Node 4: The Sunken Chapel & Catacombs
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(401),
               act: 1,
@@ -248,7 +271,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(402),
               act: 1,
@@ -263,7 +286,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(403),
               act: 1,
@@ -276,7 +299,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Alternate Branch B: The Weeping Catacombs
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(405),
               act: 1,
@@ -289,7 +312,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(406),
               act: 1,
@@ -302,7 +325,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(404),
               act: 1,
@@ -317,7 +340,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Node 5: The Charred Canopy & Glass Aerie
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(501),
               act: 1,
@@ -330,7 +353,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(502),
               act: 1,
@@ -345,7 +368,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Alternate Branch C: Glass Aerie Cliff Shortcut
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(504),
               act: 1,
@@ -358,7 +381,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(503),
               act: 1,
@@ -372,7 +395,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Node 6: The Ashen Crater (Act 1 Climax)
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(601),
               act: 1,
@@ -386,7 +409,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(602),
               act: 1,
@@ -399,7 +422,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(603),
               act: 1,
@@ -412,7 +435,7 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(604),
               act: 1,
@@ -426,7 +449,7 @@ class AppDatabase extends _$AppDatabase {
           );
 
           // ── Act II Initial Room (Arrival Plate)
-          await into(rooms).insert(
+          await into(rooms).insertOnConflictUpdate(
             RoomsCompanion.insert(
               id: const Value(2101),
               act: 2,
@@ -606,7 +629,9 @@ class AppDatabase extends _$AppDatabase {
               isMiniBoss: const Value(true),
             ),
           );
+  }
 
+  Future<void> _seedStarterItems() async {
           // Seed starter items in inventory
           await into(items).insert(
             ItemsCompanion.insert(
@@ -896,8 +921,7 @@ class AppDatabase extends _$AppDatabase {
               ownerId: const Value(1),
             ),
           );
-        },
-      );
+  }
 }
 
 /// Opens (or creates) the SQLite database file in the app documents directory,
