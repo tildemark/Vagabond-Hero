@@ -172,6 +172,18 @@ class $PlayersTable extends Players with TableInfo<$PlayersTable, PlayerData> {
     requiredDuringInsert: false,
     defaultValue: const Constant(0),
   );
+  static const VerificationMeta _actsCompletedMeta = const VerificationMeta(
+    'actsCompleted',
+  );
+  @override
+  late final GeneratedColumn<int> actsCompleted = GeneratedColumn<int>(
+    'acts_completed',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -188,6 +200,7 @@ class $PlayersTable extends Players with TableInfo<$PlayersTable, PlayerData> {
     stamina,
     currentRoomId,
     silverPrisms,
+    actsCompleted,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -293,6 +306,15 @@ class $PlayersTable extends Players with TableInfo<$PlayersTable, PlayerData> {
         ),
       );
     }
+    if (data.containsKey('acts_completed')) {
+      context.handle(
+        _actsCompletedMeta,
+        actsCompleted.isAcceptableOrUnknown(
+          data['acts_completed']!,
+          _actsCompletedMeta,
+        ),
+      );
+    }
     return context;
   }
 
@@ -358,6 +380,10 @@ class $PlayersTable extends Players with TableInfo<$PlayersTable, PlayerData> {
         DriftSqlType.int,
         data['${effectivePrefix}silver_prisms'],
       )!,
+      actsCompleted: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}acts_completed'],
+      )!,
     );
   }
 
@@ -382,6 +408,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
   final int stamina;
   final int currentRoomId;
   final int silverPrisms;
+  final int actsCompleted;
   const PlayerData({
     required this.id,
     required this.name,
@@ -397,6 +424,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     required this.stamina,
     required this.currentRoomId,
     required this.silverPrisms,
+    required this.actsCompleted,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -415,6 +443,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     map['stamina'] = Variable<int>(stamina);
     map['current_room_id'] = Variable<int>(currentRoomId);
     map['silver_prisms'] = Variable<int>(silverPrisms);
+    map['acts_completed'] = Variable<int>(actsCompleted);
     return map;
   }
 
@@ -434,6 +463,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
       stamina: Value(stamina),
       currentRoomId: Value(currentRoomId),
       silverPrisms: Value(silverPrisms),
+      actsCompleted: Value(actsCompleted),
     );
   }
 
@@ -457,6 +487,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
       stamina: serializer.fromJson<int>(json['stamina']),
       currentRoomId: serializer.fromJson<int>(json['currentRoomId']),
       silverPrisms: serializer.fromJson<int>(json['silverPrisms']),
+      actsCompleted: serializer.fromJson<int>(json['actsCompleted']),
     );
   }
   @override
@@ -477,6 +508,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
       'stamina': serializer.toJson<int>(stamina),
       'currentRoomId': serializer.toJson<int>(currentRoomId),
       'silverPrisms': serializer.toJson<int>(silverPrisms),
+      'actsCompleted': serializer.toJson<int>(actsCompleted),
     };
   }
 
@@ -495,6 +527,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     int? stamina,
     int? currentRoomId,
     int? silverPrisms,
+    int? actsCompleted,
   }) => PlayerData(
     id: id ?? this.id,
     name: name ?? this.name,
@@ -510,6 +543,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     stamina: stamina ?? this.stamina,
     currentRoomId: currentRoomId ?? this.currentRoomId,
     silverPrisms: silverPrisms ?? this.silverPrisms,
+    actsCompleted: actsCompleted ?? this.actsCompleted,
   );
   PlayerData copyWithCompanion(PlayersCompanion data) {
     return PlayerData(
@@ -535,6 +569,9 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
       silverPrisms: data.silverPrisms.present
           ? data.silverPrisms.value
           : this.silverPrisms,
+      actsCompleted: data.actsCompleted.present
+          ? data.actsCompleted.value
+          : this.actsCompleted,
     );
   }
 
@@ -554,7 +591,8 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
           ..write('intelligence: $intelligence, ')
           ..write('stamina: $stamina, ')
           ..write('currentRoomId: $currentRoomId, ')
-          ..write('silverPrisms: $silverPrisms')
+          ..write('silverPrisms: $silverPrisms, ')
+          ..write('actsCompleted: $actsCompleted')
           ..write(')'))
         .toString();
   }
@@ -575,6 +613,7 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
     stamina,
     currentRoomId,
     silverPrisms,
+    actsCompleted,
   );
   @override
   bool operator ==(Object other) =>
@@ -593,7 +632,8 @@ class PlayerData extends DataClass implements Insertable<PlayerData> {
           other.intelligence == this.intelligence &&
           other.stamina == this.stamina &&
           other.currentRoomId == this.currentRoomId &&
-          other.silverPrisms == this.silverPrisms);
+          other.silverPrisms == this.silverPrisms &&
+          other.actsCompleted == this.actsCompleted);
 }
 
 class PlayersCompanion extends UpdateCompanion<PlayerData> {
@@ -611,6 +651,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
   final Value<int> stamina;
   final Value<int> currentRoomId;
   final Value<int> silverPrisms;
+  final Value<int> actsCompleted;
   const PlayersCompanion({
     this.id = const Value.absent(),
     this.name = const Value.absent(),
@@ -626,6 +667,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     this.stamina = const Value.absent(),
     this.currentRoomId = const Value.absent(),
     this.silverPrisms = const Value.absent(),
+    this.actsCompleted = const Value.absent(),
   });
   PlayersCompanion.insert({
     this.id = const Value.absent(),
@@ -642,6 +684,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     this.stamina = const Value.absent(),
     this.currentRoomId = const Value.absent(),
     this.silverPrisms = const Value.absent(),
+    this.actsCompleted = const Value.absent(),
   }) : name = Value(name);
   static Insertable<PlayerData> custom({
     Expression<int>? id,
@@ -658,6 +701,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     Expression<int>? stamina,
     Expression<int>? currentRoomId,
     Expression<int>? silverPrisms,
+    Expression<int>? actsCompleted,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -674,6 +718,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
       if (stamina != null) 'stamina': stamina,
       if (currentRoomId != null) 'current_room_id': currentRoomId,
       if (silverPrisms != null) 'silver_prisms': silverPrisms,
+      if (actsCompleted != null) 'acts_completed': actsCompleted,
     });
   }
 
@@ -692,6 +737,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     Value<int>? stamina,
     Value<int>? currentRoomId,
     Value<int>? silverPrisms,
+    Value<int>? actsCompleted,
   }) {
     return PlayersCompanion(
       id: id ?? this.id,
@@ -708,6 +754,7 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
       stamina: stamina ?? this.stamina,
       currentRoomId: currentRoomId ?? this.currentRoomId,
       silverPrisms: silverPrisms ?? this.silverPrisms,
+      actsCompleted: actsCompleted ?? this.actsCompleted,
     );
   }
 
@@ -756,6 +803,9 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
     if (silverPrisms.present) {
       map['silver_prisms'] = Variable<int>(silverPrisms.value);
     }
+    if (actsCompleted.present) {
+      map['acts_completed'] = Variable<int>(actsCompleted.value);
+    }
     return map;
   }
 
@@ -775,7 +825,8 @@ class PlayersCompanion extends UpdateCompanion<PlayerData> {
           ..write('intelligence: $intelligence, ')
           ..write('stamina: $stamina, ')
           ..write('currentRoomId: $currentRoomId, ')
-          ..write('silverPrisms: $silverPrisms')
+          ..write('silverPrisms: $silverPrisms, ')
+          ..write('actsCompleted: $actsCompleted')
           ..write(')'))
         .toString();
   }
@@ -2291,6 +2342,21 @@ class $MobsTable extends Mobs with TableInfo<$MobsTable, MobData> {
     ),
     defaultValue: const Constant(true),
   );
+  static const VerificationMeta _isMiniBossMeta = const VerificationMeta(
+    'isMiniBoss',
+  );
+  @override
+  late final GeneratedColumn<bool> isMiniBoss = GeneratedColumn<bool>(
+    'is_mini_boss',
+    aliasedName,
+    false,
+    type: DriftSqlType.bool,
+    requiredDuringInsert: false,
+    defaultConstraints: GeneratedColumn.constraintIsAlways(
+      'CHECK ("is_mini_boss" IN (0, 1))',
+    ),
+    defaultValue: const Constant(false),
+  );
   static const VerificationMeta _dropTableJsonMeta = const VerificationMeta(
     'dropTableJson',
   );
@@ -2316,6 +2382,7 @@ class $MobsTable extends Mobs with TableInfo<$MobsTable, MobData> {
     armor,
     expReward,
     isAlive,
+    isMiniBoss,
     dropTableJson,
   ];
   @override
@@ -2409,6 +2476,15 @@ class $MobsTable extends Mobs with TableInfo<$MobsTable, MobData> {
         isAlive.isAcceptableOrUnknown(data['is_alive']!, _isAliveMeta),
       );
     }
+    if (data.containsKey('is_mini_boss')) {
+      context.handle(
+        _isMiniBossMeta,
+        isMiniBoss.isAcceptableOrUnknown(
+          data['is_mini_boss']!,
+          _isMiniBossMeta,
+        ),
+      );
+    }
     if (data.containsKey('drop_table_json')) {
       context.handle(
         _dropTableJsonMeta,
@@ -2471,6 +2547,10 @@ class $MobsTable extends Mobs with TableInfo<$MobsTable, MobData> {
         DriftSqlType.bool,
         data['${effectivePrefix}is_alive'],
       )!,
+      isMiniBoss: attachedDatabase.typeMapping.read(
+        DriftSqlType.bool,
+        data['${effectivePrefix}is_mini_boss'],
+      )!,
       dropTableJson: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}drop_table_json'],
@@ -2496,6 +2576,7 @@ class MobData extends DataClass implements Insertable<MobData> {
   final int armor;
   final int expReward;
   final bool isAlive;
+  final bool isMiniBoss;
   final String dropTableJson;
   const MobData({
     required this.id,
@@ -2509,6 +2590,7 @@ class MobData extends DataClass implements Insertable<MobData> {
     required this.armor,
     required this.expReward,
     required this.isAlive,
+    required this.isMiniBoss,
     required this.dropTableJson,
   });
   @override
@@ -2525,6 +2607,7 @@ class MobData extends DataClass implements Insertable<MobData> {
     map['armor'] = Variable<int>(armor);
     map['exp_reward'] = Variable<int>(expReward);
     map['is_alive'] = Variable<bool>(isAlive);
+    map['is_mini_boss'] = Variable<bool>(isMiniBoss);
     map['drop_table_json'] = Variable<String>(dropTableJson);
     return map;
   }
@@ -2542,6 +2625,7 @@ class MobData extends DataClass implements Insertable<MobData> {
       armor: Value(armor),
       expReward: Value(expReward),
       isAlive: Value(isAlive),
+      isMiniBoss: Value(isMiniBoss),
       dropTableJson: Value(dropTableJson),
     );
   }
@@ -2563,6 +2647,7 @@ class MobData extends DataClass implements Insertable<MobData> {
       armor: serializer.fromJson<int>(json['armor']),
       expReward: serializer.fromJson<int>(json['expReward']),
       isAlive: serializer.fromJson<bool>(json['isAlive']),
+      isMiniBoss: serializer.fromJson<bool>(json['isMiniBoss']),
       dropTableJson: serializer.fromJson<String>(json['dropTableJson']),
     );
   }
@@ -2581,6 +2666,7 @@ class MobData extends DataClass implements Insertable<MobData> {
       'armor': serializer.toJson<int>(armor),
       'expReward': serializer.toJson<int>(expReward),
       'isAlive': serializer.toJson<bool>(isAlive),
+      'isMiniBoss': serializer.toJson<bool>(isMiniBoss),
       'dropTableJson': serializer.toJson<String>(dropTableJson),
     };
   }
@@ -2597,6 +2683,7 @@ class MobData extends DataClass implements Insertable<MobData> {
     int? armor,
     int? expReward,
     bool? isAlive,
+    bool? isMiniBoss,
     String? dropTableJson,
   }) => MobData(
     id: id ?? this.id,
@@ -2610,6 +2697,7 @@ class MobData extends DataClass implements Insertable<MobData> {
     armor: armor ?? this.armor,
     expReward: expReward ?? this.expReward,
     isAlive: isAlive ?? this.isAlive,
+    isMiniBoss: isMiniBoss ?? this.isMiniBoss,
     dropTableJson: dropTableJson ?? this.dropTableJson,
   );
   MobData copyWithCompanion(MobsCompanion data) {
@@ -2625,6 +2713,9 @@ class MobData extends DataClass implements Insertable<MobData> {
       armor: data.armor.present ? data.armor.value : this.armor,
       expReward: data.expReward.present ? data.expReward.value : this.expReward,
       isAlive: data.isAlive.present ? data.isAlive.value : this.isAlive,
+      isMiniBoss: data.isMiniBoss.present
+          ? data.isMiniBoss.value
+          : this.isMiniBoss,
       dropTableJson: data.dropTableJson.present
           ? data.dropTableJson.value
           : this.dropTableJson,
@@ -2645,6 +2736,7 @@ class MobData extends DataClass implements Insertable<MobData> {
           ..write('armor: $armor, ')
           ..write('expReward: $expReward, ')
           ..write('isAlive: $isAlive, ')
+          ..write('isMiniBoss: $isMiniBoss, ')
           ..write('dropTableJson: $dropTableJson')
           ..write(')'))
         .toString();
@@ -2663,6 +2755,7 @@ class MobData extends DataClass implements Insertable<MobData> {
     armor,
     expReward,
     isAlive,
+    isMiniBoss,
     dropTableJson,
   );
   @override
@@ -2680,6 +2773,7 @@ class MobData extends DataClass implements Insertable<MobData> {
           other.armor == this.armor &&
           other.expReward == this.expReward &&
           other.isAlive == this.isAlive &&
+          other.isMiniBoss == this.isMiniBoss &&
           other.dropTableJson == this.dropTableJson);
 }
 
@@ -2695,6 +2789,7 @@ class MobsCompanion extends UpdateCompanion<MobData> {
   final Value<int> armor;
   final Value<int> expReward;
   final Value<bool> isAlive;
+  final Value<bool> isMiniBoss;
   final Value<String> dropTableJson;
   const MobsCompanion({
     this.id = const Value.absent(),
@@ -2708,6 +2803,7 @@ class MobsCompanion extends UpdateCompanion<MobData> {
     this.armor = const Value.absent(),
     this.expReward = const Value.absent(),
     this.isAlive = const Value.absent(),
+    this.isMiniBoss = const Value.absent(),
     this.dropTableJson = const Value.absent(),
   });
   MobsCompanion.insert({
@@ -2722,6 +2818,7 @@ class MobsCompanion extends UpdateCompanion<MobData> {
     this.armor = const Value.absent(),
     required int expReward,
     this.isAlive = const Value.absent(),
+    this.isMiniBoss = const Value.absent(),
     this.dropTableJson = const Value.absent(),
   }) : roomId = Value(roomId),
        name = Value(name),
@@ -2743,6 +2840,7 @@ class MobsCompanion extends UpdateCompanion<MobData> {
     Expression<int>? armor,
     Expression<int>? expReward,
     Expression<bool>? isAlive,
+    Expression<bool>? isMiniBoss,
     Expression<String>? dropTableJson,
   }) {
     return RawValuesInsertable({
@@ -2757,6 +2855,7 @@ class MobsCompanion extends UpdateCompanion<MobData> {
       if (armor != null) 'armor': armor,
       if (expReward != null) 'exp_reward': expReward,
       if (isAlive != null) 'is_alive': isAlive,
+      if (isMiniBoss != null) 'is_mini_boss': isMiniBoss,
       if (dropTableJson != null) 'drop_table_json': dropTableJson,
     });
   }
@@ -2773,6 +2872,7 @@ class MobsCompanion extends UpdateCompanion<MobData> {
     Value<int>? armor,
     Value<int>? expReward,
     Value<bool>? isAlive,
+    Value<bool>? isMiniBoss,
     Value<String>? dropTableJson,
   }) {
     return MobsCompanion(
@@ -2787,6 +2887,7 @@ class MobsCompanion extends UpdateCompanion<MobData> {
       armor: armor ?? this.armor,
       expReward: expReward ?? this.expReward,
       isAlive: isAlive ?? this.isAlive,
+      isMiniBoss: isMiniBoss ?? this.isMiniBoss,
       dropTableJson: dropTableJson ?? this.dropTableJson,
     );
   }
@@ -2827,6 +2928,9 @@ class MobsCompanion extends UpdateCompanion<MobData> {
     if (isAlive.present) {
       map['is_alive'] = Variable<bool>(isAlive.value);
     }
+    if (isMiniBoss.present) {
+      map['is_mini_boss'] = Variable<bool>(isMiniBoss.value);
+    }
     if (dropTableJson.present) {
       map['drop_table_json'] = Variable<String>(dropTableJson.value);
     }
@@ -2847,6 +2951,7 @@ class MobsCompanion extends UpdateCompanion<MobData> {
           ..write('armor: $armor, ')
           ..write('expReward: $expReward, ')
           ..write('isAlive: $isAlive, ')
+          ..write('isMiniBoss: $isMiniBoss, ')
           ..write('dropTableJson: $dropTableJson')
           ..write(')'))
         .toString();
@@ -2888,6 +2993,7 @@ typedef $$PlayersTableCreateCompanionBuilder =
       Value<int> stamina,
       Value<int> currentRoomId,
       Value<int> silverPrisms,
+      Value<int> actsCompleted,
     });
 typedef $$PlayersTableUpdateCompanionBuilder =
     PlayersCompanion Function({
@@ -2905,6 +3011,7 @@ typedef $$PlayersTableUpdateCompanionBuilder =
       Value<int> stamina,
       Value<int> currentRoomId,
       Value<int> silverPrisms,
+      Value<int> actsCompleted,
     });
 
 class $$PlayersTableFilterComposer
@@ -2983,6 +3090,11 @@ class $$PlayersTableFilterComposer
 
   ColumnFilters<int> get silverPrisms => $composableBuilder(
     column: $table.silverPrisms,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get actsCompleted => $composableBuilder(
+    column: $table.actsCompleted,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -3065,6 +3177,11 @@ class $$PlayersTableOrderingComposer
     column: $table.silverPrisms,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<int> get actsCompleted => $composableBuilder(
+    column: $table.actsCompleted,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$PlayersTableAnnotationComposer
@@ -3125,6 +3242,11 @@ class $$PlayersTableAnnotationComposer
     column: $table.silverPrisms,
     builder: (column) => column,
   );
+
+  GeneratedColumn<int> get actsCompleted => $composableBuilder(
+    column: $table.actsCompleted,
+    builder: (column) => column,
+  );
 }
 
 class $$PlayersTableTableManager
@@ -3172,6 +3294,7 @@ class $$PlayersTableTableManager
                 Value<int> stamina = const Value.absent(),
                 Value<int> currentRoomId = const Value.absent(),
                 Value<int> silverPrisms = const Value.absent(),
+                Value<int> actsCompleted = const Value.absent(),
               }) => PlayersCompanion(
                 id: id,
                 name: name,
@@ -3187,6 +3310,7 @@ class $$PlayersTableTableManager
                 stamina: stamina,
                 currentRoomId: currentRoomId,
                 silverPrisms: silverPrisms,
+                actsCompleted: actsCompleted,
               ),
           createCompanionCallback:
               ({
@@ -3204,6 +3328,7 @@ class $$PlayersTableTableManager
                 Value<int> stamina = const Value.absent(),
                 Value<int> currentRoomId = const Value.absent(),
                 Value<int> silverPrisms = const Value.absent(),
+                Value<int> actsCompleted = const Value.absent(),
               }) => PlayersCompanion.insert(
                 id: id,
                 name: name,
@@ -3219,6 +3344,7 @@ class $$PlayersTableTableManager
                 stamina: stamina,
                 currentRoomId: currentRoomId,
                 silverPrisms: silverPrisms,
+                actsCompleted: actsCompleted,
               ),
           withReferenceMapper: (p0) => p0
               .map(
@@ -3933,6 +4059,7 @@ typedef $$MobsTableCreateCompanionBuilder =
       Value<int> armor,
       required int expReward,
       Value<bool> isAlive,
+      Value<bool> isMiniBoss,
       Value<String> dropTableJson,
     });
 typedef $$MobsTableUpdateCompanionBuilder =
@@ -3948,6 +4075,7 @@ typedef $$MobsTableUpdateCompanionBuilder =
       Value<int> armor,
       Value<int> expReward,
       Value<bool> isAlive,
+      Value<bool> isMiniBoss,
       Value<String> dropTableJson,
     });
 
@@ -4011,6 +4139,11 @@ class $$MobsTableFilterComposer extends Composer<_$AppDatabase, $MobsTable> {
 
   ColumnFilters<bool> get isAlive => $composableBuilder(
     column: $table.isAlive,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<bool> get isMiniBoss => $composableBuilder(
+    column: $table.isMiniBoss,
     builder: (column) => ColumnFilters(column),
   );
 
@@ -4083,6 +4216,11 @@ class $$MobsTableOrderingComposer extends Composer<_$AppDatabase, $MobsTable> {
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<bool> get isMiniBoss => $composableBuilder(
+    column: $table.isMiniBoss,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get dropTableJson => $composableBuilder(
     column: $table.dropTableJson,
     builder: (column) => ColumnOrderings(column),
@@ -4131,6 +4269,11 @@ class $$MobsTableAnnotationComposer
   GeneratedColumn<bool> get isAlive =>
       $composableBuilder(column: $table.isAlive, builder: (column) => column);
 
+  GeneratedColumn<bool> get isMiniBoss => $composableBuilder(
+    column: $table.isMiniBoss,
+    builder: (column) => column,
+  );
+
   GeneratedColumn<String> get dropTableJson => $composableBuilder(
     column: $table.dropTableJson,
     builder: (column) => column,
@@ -4176,6 +4319,7 @@ class $$MobsTableTableManager
                 Value<int> armor = const Value.absent(),
                 Value<int> expReward = const Value.absent(),
                 Value<bool> isAlive = const Value.absent(),
+                Value<bool> isMiniBoss = const Value.absent(),
                 Value<String> dropTableJson = const Value.absent(),
               }) => MobsCompanion(
                 id: id,
@@ -4189,6 +4333,7 @@ class $$MobsTableTableManager
                 armor: armor,
                 expReward: expReward,
                 isAlive: isAlive,
+                isMiniBoss: isMiniBoss,
                 dropTableJson: dropTableJson,
               ),
           createCompanionCallback:
@@ -4204,6 +4349,7 @@ class $$MobsTableTableManager
                 Value<int> armor = const Value.absent(),
                 required int expReward,
                 Value<bool> isAlive = const Value.absent(),
+                Value<bool> isMiniBoss = const Value.absent(),
                 Value<String> dropTableJson = const Value.absent(),
               }) => MobsCompanion.insert(
                 id: id,
@@ -4217,6 +4363,7 @@ class $$MobsTableTableManager
                 armor: armor,
                 expReward: expReward,
                 isAlive: isAlive,
+                isMiniBoss: isMiniBoss,
                 dropTableJson: dropTableJson,
               ),
           withReferenceMapper: (p0) => p0

@@ -16,6 +16,7 @@ class Players extends Table {
   IntColumn get stamina => integer().withDefault(const Constant(10))();
   IntColumn get currentRoomId => integer().withDefault(const Constant(101))();
   IntColumn get silverPrisms => integer().withDefault(const Constant(0))();
+  IntColumn get actsCompleted => integer().withDefault(const Constant(0))();
 }
 
 @DataClassName('RoomData')
@@ -75,5 +76,6 @@ class Mobs extends Table {
   IntColumn get armor => integer().withDefault(const Constant(0))();
   IntColumn get expReward => integer()();
   BoolColumn get isAlive => boolean().withDefault(const Constant(true))();
+  BoolColumn get isMiniBoss => boolean().withDefault(const Constant(false))();
   TextColumn get dropTableJson => text().withDefault(const Constant('[]'))();
 }

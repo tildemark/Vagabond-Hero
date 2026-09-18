@@ -1,4 +1,4 @@
-﻿import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -8,6 +8,7 @@ import 'package:vagabond_hero/core/database/database_providers.dart';
 import 'package:vagabond_hero/core/theme/game_colors.dart';
 import 'package:vagabond_hero/features/character/presentation/new_player_screen.dart';
 import 'package:vagabond_hero/features/inventory/presentation/inventory_screen.dart';
+import 'package:vagabond_hero/features/minimap/presentation/maps_screen.dart';
 import 'package:vagabond_hero/features/navigation/presentation/game_screen.dart';
 
 class DashboardScreen extends ConsumerWidget {
@@ -204,7 +205,7 @@ class DashboardScreen extends ConsumerWidget {
                             icon: Icons.shield_outlined,
                             iconColor: const Color(0xFFA855F7),
                             title: 'ARMORY & BAG',
-                            subtitle: '${inventoryAsync.value?.length ?? 0} relics gathered',
+                            subtitle: '${inventoryAsync.value?.length ?? 0} relics',
                             onTap: () {
                               HapticFeedback.selectionClick();
                               showModalBottomSheet(
@@ -216,15 +217,34 @@ class DashboardScreen extends ConsumerWidget {
                             },
                           ),
                         ),
-                        const SizedBox(width: 12),
-                        // World Guide / Lore preview
+                        const SizedBox(width: 8),
+                        // World Map / Cartography launcher
+                        Expanded(
+                          child: _buildActionTile(
+                            context: context,
+                            icon: Icons.public_outlined,
+                            iconColor: const Color(0xFF8B5CF6),
+                            title: 'WORLD MAP',
+                            subtitle: '5 Acts • Teleport',
+                            onTap: () {
+                              HapticFeedback.selectionClick();
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (_) => const MapsScreen(initialTabIndex: 1),
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        // Codex & Lore modal
                         Expanded(
                           child: _buildActionTile(
                             context: context,
                             icon: Icons.menu_book_rounded,
                             iconColor: GameColors.terminalGreen,
-                            title: 'CODEX & LORE',
-                            subtitle: '5 Acts • 21 Classes',
+                            title: 'CODEX',
+                            subtitle: 'Class Paths',
                             onTap: () => _showCodexModal(context),
                           ),
                         ),

@@ -8,7 +8,7 @@ import 'package:vagabond_hero/core/database/database_providers.dart';
 import 'package:vagabond_hero/core/theme/game_colors.dart';
 import 'package:vagabond_hero/features/combat/domain/combat_engine.dart';
 import 'package:vagabond_hero/features/inventory/presentation/inventory_screen.dart';
-import 'package:vagabond_hero/features/minimap/presentation/minimap_widget.dart';
+import 'package:vagabond_hero/features/minimap/presentation/maps_screen.dart';
 import 'package:vagabond_hero/features/navigation/domain/navigation_controller.dart';
 
 class GameScreen extends ConsumerStatefulWidget {
@@ -545,7 +545,28 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                               }
                             },
                           ),
-                          const SizedBox(height: 8),
+                          const SizedBox(height: 6),
+                          // Flee / Disengage from combat (especially rare mini-bosses)
+                          _ActionButton(
+                            icon: Icons.run_circle_outlined,
+                            label: 'FLEE',
+                            color: const Color(0xFFF97316),
+                            tooltip: 'Flee / Disengage',
+                            onPressed: () {
+                              final mobs = ref.read(currentRoomMobsProvider).value ?? [];
+                              if (mobs.isNotEmpty) {
+                                ref.read(combatEngineProvider).fleeCombat(mobs.first);
+                              } else {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text('No active threat to flee from.'),
+                                    duration: Duration(seconds: 1),
+                                  ),
+                                );
+                              }
+                            },
+                          ),
+                          const SizedBox(height: 6),
                           // Inventory
                           _ActionButton(
                             icon: Icons.backpack_outlined,
@@ -554,23 +575,19 @@ class _GameScreenState extends ConsumerState<GameScreen> {
                             tooltip: 'Inventory [I]',
                             onPressed: () => _showInventoryModal(context, ref),
                           ),
-                          const SizedBox(height: 8),
-                          // Player status sheet
-                          _ActionButton(
-                            icon: Icons.person_outline,
-                            label: 'STAT',
-                            color: GameColors.goldAccent,
-                            tooltip: 'Character Status',
-                            onPressed: () => _showStatusModal(context, ref),
-                          ),
-                          const SizedBox(height: 8),
-                          // World map
+                          const SizedBox(height: 6),
+                          // World & Area maps
                           _ActionButton(
                             icon: Icons.map_outlined,
                             label: 'MAP',
                             color: const Color(0xFF8B5CF6),
-                            tooltip: 'World Map',
-                            onPressed: () => _showMapModal(context, ref),
+                            tooltip: 'Cartography & World Map',
+                            onPressed: () {
+                              HapticFeedback.selectionClick();
+                              Navigator.of(context).push(
+                                MaterialPageRoute(builder: (_) => const MapsScreen()),
+                              );
+                            },
                           ),
                         ],
                       ),
@@ -1620,72 +1637,4 @@ class _DossierBar extends StatelessWidget {
       ],
     );
   }
-}
-
-
-
-// ─── World Map Modal ──────────────────────────────────────────────────────────
-void _showMapModal(BuildContext context, WidgetRef ref) {
-  showModalBottomSheet(
-    context: context,
-    isScrollControlled: true,
-    backgroundColor: GameColors.bgSecondary,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
-      side: BorderSide(color: GameColors.borderSubtle),
-    ),
-    builder: (context) {
-      return DraggableScrollableSheet(
-        expand: false,
-        initialChildSize: 0.82,
-        minChildSize: 0.5,
-        maxChildSize: 0.95,
-        builder: (context, scrollController) {
-          return Column(
-            children: [
-              // Handle bar
-              Container(
-                margin: const EdgeInsets.only(top: 10, bottom: 4),
-                width: 36,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: GameColors.borderSubtle,
-                  borderRadius: BorderRadius.circular(2),
-                ),
-              ),
-              // Header
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-                child: Row(
-                  children: [
-                    const Icon(Icons.map_outlined,
-                        color: Color(0xFF8B5CF6), size: 20),
-                    const SizedBox(width: 8),
-                    Text(
-                      'WORLD MAP',
-                      style: GoogleFonts.cinzel(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                        letterSpacing: 1,
-                      ),
-                    ),
-                    const Spacer(),
-                    IconButton(
-                      icon: const Icon(Icons.close,
-                          color: GameColors.textMuted, size: 20),
-                      onPressed: () => Navigator.pop(context),
-                    ),
-                  ],
-                ),
-              ),
-              const Divider(color: GameColors.borderSubtle, height: 1),
-              // Map body
-              const Expanded(child: MinimapWidget()),
-            ],
-          );
-        },
-      );
-    },
-  );
 }

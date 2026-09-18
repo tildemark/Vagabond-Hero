@@ -108,8 +108,24 @@ class CombatEngine {
         );
       }
 
-      // Roll canonical item drop from kItemTemplates (50% drop rate)
-      if (_rng.nextDouble() < 0.50 && kItemTemplates.isNotEmpty) {
+      // Check if this was the Act 1 Climax Boss (The Hollow Woodsman)
+      if (mob.name == 'The Hollow Woodsman') {
+        final currentActs = player.actsCompleted;
+        if (currentActs < 1) {
+          await (_db.update(_db.players)..where((t) => t.id.equals(player.id)))
+              .write(
+            const PlayersCompanion(
+              actsCompleted: Value(1),
+            ),
+          );
+          logNotifier.addLog(
+              '🌀 [SYSTEM MILESTONE]: ACT I CONQUERED! Waypoint to ACT II (The Sunken City) Unlocked!');
+        }
+      }
+
+      // Roll canonical item drop from kItemTemplates (50% drop rate, 100% for bosses)
+      final dropRate = mob.isMiniBoss ? 1.0 : 0.50;
+      if (_rng.nextDouble() <= dropRate && kItemTemplates.isNotEmpty) {
         final template = kItemTemplates[_rng.nextInt(kItemTemplates.length)];
         final droppedId = 'drop_${template.id}_${DateTime.now().millisecondsSinceEpoch}';
         
@@ -163,5 +179,59 @@ class CombatEngine {
         currentHp: Value(remainingPlayerHp),
       ),
     );
+  }
+
+  /// Tactical retreat from an encounter (especially useful against rare mini-bosses)
+  Future<bool> fleeCombat(MobData mob) async {
+    final player = _ref.read(playerStreamProvider).value;
+    if (player == null) return false;
+
+    final currentRoom = _ref.read(currentRoomStreamProvider).value;
+    if (currentRoom == null) return false;
+
+    final logNotifier = _ref.read(combatLogProvider.notifier);
+
+    // Find an escape route (south, west, or any available exit)
+    final escapeRoomId = currentRoom.southExitId ??
+        currentRoom.westExitId ??
+        currentRoom.northExitId ??
+        currentRoom.eastExitId;
+
+    if (escapeRoomId == null) {
+      logNotifier.addLog('⚠️ No escape route available! You are cornered!');
+      return false;
+    }
+
+    // Flee check: Agility based or guaranteed for rare mini-bosses
+    final fleeChance = 0.85;
+    final success = _rng.nextDouble() < fleeChance;
+
+    if (success) {
+      HapticFeedback.selectionClick();
+      await (_db.update(_db.players)..where((t) => t.id.equals(player.id))).write(
+        PlayersCompanion(
+          currentRoomId: Value(escapeRoomId),
+        ),
+      );
+      // Mark escape room explored
+      await (_db.update(_db.rooms)..where((t) => t.id.equals(escapeRoomId))).write(
+        const RoomsCompanion(isExplored: Value(true)),
+      );
+
+      logNotifier.addLog(
+          '🏃 [TACTICAL RETREAT]: You disengaged from ${mob.name} and fled back safely!');
+      return true;
+    } else {
+      HapticFeedback.heavyImpact();
+      // Minor scrape damage on failed flee
+      final scrapeDmg = 2 + (mob.level);
+      final remainingHp = max(1, player.currentHp - scrapeDmg);
+      await (_db.update(_db.players)..where((t) => t.id.equals(player.id))).write(
+        PlayersCompanion(currentHp: Value(remainingHp)),
+      );
+      logNotifier.addLog(
+          '⚠️ Escape hindered! ${mob.name} struck you for $scrapeDmg as you pulled back!');
+      return false;
+    }
   }
 }

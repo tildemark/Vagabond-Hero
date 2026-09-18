@@ -41,14 +41,18 @@ class AppDatabase extends _$AppDatabase {
             ),
           );
 
-          // Seed Act I Rooms (Node 101, 102, 103, 104)
+          // ──────────────────────────────────────────────────────────────────────────
+          // Seed Act I Rooms (Non-linear branching graph across Nodes 1-6 + Gateway)
+          // ──────────────────────────────────────────────────────────────────────────
+
+          // ── Node 1: The Shattered Clearing & Smuggler's Crevasse
           await into(rooms).insert(
             RoomsCompanion.insert(
               id: const Value(101),
               act: 1,
-              title: 'Petrified Clearing',
+              title: 'The Ashen Bed',
               description:
-                  'You awaken on a bed of cold, petrified leaves. Overhead, branches coated in grey ash block out the fractured sky. A hum emanates from an ancient CRT terminal embedded in cracked stone to the north.',
+                  'You awaken on a bed of cold, petrified leaves. Overhead, branches coated in grey ash block out the fractured sky. A glowing system prompt flickers in your peripheral vision.',
               northExitId: const Value(102),
               eastExitId: const Value(103),
               isExplored: const Value(true),
@@ -59,9 +63,9 @@ class AppDatabase extends _$AppDatabase {
             RoomsCompanion.insert(
               id: const Value(102),
               act: 1,
-              title: 'Ancient Monolith Terminal',
+              title: 'The Petrified Path',
               description:
-                  'A moss-covered terminal monolith towers over the broken cobblestone path. Green phosphor glow flickers against the obsidian stone face. An access port awaits input.',
+                  'The dirt is turned to grey glass. Near the base of an obsidian tree lies a fallen soldier in glitching armor, clutching a worn blade. The air hums with distant static.',
               southExitId: const Value(101),
               eastExitId: const Value(104),
               isExplored: const Value(false),
@@ -72,9 +76,9 @@ class AppDatabase extends _$AppDatabase {
             RoomsCompanion.insert(
               id: const Value(103),
               act: 1,
-              title: 'Ash Trail',
+              title: 'The Hollowed Trunk',
               description:
-                  'A barren gravel track winds between petrified trees. The air smells of ozone and charred silicon. In the shadows, a glitched shape twitches with jagged digital artifacts.',
+                  'A barren gravel track winds through the decayed core of a colossal petrified sequoia. Corrupted vermin skitter in the phosphor shadows.',
               westExitId: const Value(101),
               northExitId: const Value(104),
               isExplored: const Value(false),
@@ -85,30 +89,521 @@ class AppDatabase extends _$AppDatabase {
             RoomsCompanion.insert(
               id: const Value(104),
               act: 1,
-              title: 'Crumbling Overlook',
+              title: 'The Void-Torn Edge',
               description:
-                  'A sheer cliff edge overlooks the infinite abyss of the Shattered Expanse. Floating landmasses drift across the purple horizon like shattered continents suspended in static.',
-              southExitId: const Value(103),
+                  'The forest shears off into an infinite abyss of purple clouds. To the north, a rickety bridge descends into the dark ravine (Whispering Hollow). To the east, a narrow crack leads into the Smuggler\'s Crevasse.',
               westExitId: const Value(102),
+              southExitId: const Value(103),
+              northExitId: const Value(201), // Path to Node 2 (Dungeon)
+              eastExitId: const Value(105),  // Alternate bypass route
               isExplored: const Value(false),
             ),
           );
 
-          // Seed initial enemy in Room 103
+          // ── Alternate Branch A: Smuggler's Crevasse (Bypasses Spider Dungeon)
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(105),
+              act: 1,
+              title: 'Smuggler\'s Crevasse',
+              description:
+                  'A jagged fissure cutting through basalt cliffs. Wind howls through the narrow walls. Luminescent fungi pulse with warning signals: an apex stalker prowls here.',
+              westExitId: const Value(104),
+              eastExitId: const Value(106),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(106),
+              act: 1,
+              title: 'Abandoned Supply Depot',
+              description:
+                  'An old scavenger outpost carved into the rock. Crates stamped with ancient alphanumeric codes lie shattered. A rusted ladder leads directly up to the gates of Vanguard\'s Hold.',
+              westExitId: const Value(105),
+              northExitId: const Value(301), // Direct bypass connection to Node 3!
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ── Node 2: The Whispering Hollow (Spider Dungeon)
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(201),
+              act: 1,
+              title: 'The Cave Mouth',
+              description:
+                  'You descend into a subterranean ravine. Bioluminescent spider silk pulses like glowing fiber-optic cabling across the damp stone walls.',
+              southExitId: const Value(104),
+              northExitId: const Value(202),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(202),
+              act: 1,
+              title: 'The Webbed Path',
+              description:
+                  'Thick webs of shimmering data-strands cross the path. Skeletal silhouettes twitched inside silk cocoons. Corrupted Weaver Spiders drop from the stalactites.',
+              southExitId: const Value(201),
+              northExitId: const Value(204),
+              eastExitId: const Value(203), // Side chamber
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(203),
+              act: 1,
+              title: 'The Silk Cocoons',
+              description:
+                  'A secluded side alcove filled with crystallized web clusters. Broken weapons and forgotten traveler backpacks are buried under the sticky strands.',
+              westExitId: const Value(202),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(204),
+              act: 1,
+              title: 'The Broodmother\'s Nest',
+              description:
+                  'A massive domed cavern. Hanging in the center is a bloated arachnid monstrosity glowing with volatile void sacks. Behind her nest, an opening leads upward toward firelight.',
+              southExitId: const Value(202),
+              northExitId: const Value(301), // Exits into Node 3
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ── Node 3: The Vanguard\'s Hold (Safe Hub)
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(301),
+              act: 1,
+              title: 'The Iron Gates',
+              description:
+                  'A reinforced barricade of scrap iron and petrified timber. Watchmen in mismatched armor keep vigilant watch over the fog-choked approaches.',
+              southExitId: const Value(204),
+              westExitId: const Value(106), // Connection to Smuggler\'s Depot
+              northExitId: const Value(302),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(302),
+              act: 1,
+              title: 'The Courtyard & Ward',
+              description:
+                  'A grim sanctuary. In the town square, the "Ward"—a colossal kite shield wired to an ancient arcane core—emits a continuous field of golden light that repels the void fog.',
+              southExitId: const Value(301),
+              westExitId: const Value(303), // Forge
+              eastExitId: const Value(304), // Tavern
+              northExitId: const Value(401), // Path to Sunken Chapel
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(303),
+              act: 1,
+              title: 'Garrick\'s Forge',
+              description:
+                  'Sparks shower the dirt floor. Garrick the Smith hammers away on void-tempered steel with a cybernetic arm. Anvil clangs echo with rhythmic determination.',
+              eastExitId: const Value(302),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(304),
+              act: 1,
+              title: 'The Broker\'s Pavilion',
+              description:
+                  'A smoke-filled tent serving warm ale and dried rations. Elara the Broker reviews bounties and trade ledgers, her eyes darting to your wandering gear.',
+              westExitId: const Value(302),
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ── Node 4: The Sunken Chapel & Catacombs
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(401),
+              act: 1,
+              title: 'The Muddy Steps',
+              description:
+                  'Gothic stone steps descend into a swamp of black liquid Void. The sunken ruins of an antebellum cathedral sink into the bubbling mire.',
+              southExitId: const Value(302),
+              northExitId: const Value(402),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(402),
+              act: 1,
+              title: 'The Flooded Nave',
+              description:
+                  'Water sloshes between broken oak pews. Figures in drenched vestments murmur corrupted scripture, their faces obscured by floating holographic symbols.',
+              southExitId: const Value(401),
+              northExitId: const Value(404),
+              eastExitId: const Value(403), // Vestry
+              westExitId: const Value(405), // Alternate Branch: Catacombs!
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(403),
+              act: 1,
+              title: 'The Flooded Vestry',
+              description:
+                  'A partially submerged library containing liturgical manuscripts. When examined, the Latin script shifts intermittently into x86 assembler code.',
+              westExitId: const Value(402),
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ── Alternate Branch B: The Weeping Catacombs
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(405),
+              act: 1,
+              title: 'Sunken Crypt Vault',
+              description:
+                  'Cold black water drips from vaulted stone ceilings. An ancient defense automaton—a Corrupted Iron Golem—stands motionless before an iron sarcophagus.',
+              eastExitId: const Value(402),
+              northExitId: const Value(406),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(406),
+              act: 1,
+              title: 'Tomb of the First Scripter',
+              description:
+                  'A secluded burial chamber lined with crystal capacitors. An ornate chest rests upon a pediment of fossilized circuitry. A secret tunnel leads upward.',
+              southExitId: const Value(405),
+              eastExitId: const Value(404), // Secret flanking door to Boss Altar!
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(404),
+              act: 1,
+              title: 'The Ruined Altar',
+              description:
+                  'Before the shattered stained-glass rose window stands the Weeping Zealot, swinging an iron censor that billows cyan digital smoke.',
+              southExitId: const Value(402),
+              westExitId: const Value(406), // Secret door from Catacombs
+              northExitId: const Value(501), // Path to Node 5
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ── Node 5: The Charred Canopy & Glass Aerie
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(501),
+              act: 1,
+              title: 'Roots of the Behemoth',
+              description:
+                  'A petrified tree as wide as a fortress rises into the clouds. Spiraling grooves carved into the petrified bark form a perilous winding ramp.',
+              southExitId: const Value(404),
+              northExitId: const Value(502),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(502),
+              act: 1,
+              title: 'The Canopy Bridges',
+              description:
+                  'Rope bridges span between massive stone branches thousands of feet in the air. Glass-Wing Harpies circle overhead, their screeching distorting the soundscape.',
+              southExitId: const Value(501),
+              northExitId: const Value(503),
+              eastExitId: const Value(504), // Alternate branch: Glass Aerie
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ── Alternate Branch C: Glass Aerie Cliff Shortcut
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(504),
+              act: 1,
+              title: 'The Glass Aerie',
+              description:
+                  'A razor-sharp ridge jutting out above the clouds. Abandoned harpy nests glitter with fallen trinkets. A steep slide allows adventurous explorers to rappel straight to the Crater edge!',
+              westExitId: const Value(502),
+              northExitId: const Value(601), // Shortcut down to Node 6!
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(503),
+              act: 1,
+              title: 'Talon-Lord\'s Perch',
+              description:
+                  'The storm-battered summit of the giant canopy. Talon-Lord Vex perches on an ancient satellite dish antenna, feathers shimmering with razor static.',
+              southExitId: const Value(502),
+              northExitId: const Value(601), // Primary path down to Node 6
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ── Node 6: The Ashen Crater (Act 1 Climax)
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(601),
+              act: 1,
+              title: 'The Crater Edge',
+              description:
+                  'You stand at the lip of a titanic impact crater. Below, a jagged fissure in reality pulses with raw purple light, warping gravity and text alike.',
+              southExitId: const Value(503),
+              eastExitId: const Value(504), // Reciprocal shortcut from Aerie
+              northExitId: const Value(602),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(602),
+              act: 1,
+              title: 'Ground Zero',
+              description:
+                  'Floating slabs of shattered granite hover around a swirling gravity well. Reality feels dangerously brittle here—each step sends static ripples across the ground.',
+              southExitId: const Value(601),
+              northExitId: const Value(603),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(603),
+              act: 1,
+              title: 'The Glitching Heart',
+              description:
+                  'The center of the world rupture. The Hollow Woodsman stands guard, an Echo of a forgotten age trapped in heavy rust-eaten plate, his colossal battleaxe trailing pixel shards.',
+              southExitId: const Value(602),
+              northExitId: const Value(604),
+              isExplored: const Value(false),
+            ),
+          );
+
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(604),
+              act: 1,
+              title: 'Gateway to the Sunken City',
+              description:
+                  'A stabilized rift doorway hums with serene sapphire light. Beyond the event horizon lies the drowned metropolis of Act II: The Sunken City. Teleportation protocols active.',
+              southExitId: const Value(603),
+              northExitId: const Value(2101), // Gateway into Act 2
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ── Act II Initial Room (Arrival Plate)
+          await into(rooms).insert(
+            RoomsCompanion.insert(
+              id: const Value(2101),
+              act: 2,
+              title: 'The Arrival Plate',
+              description:
+                  'You emerge onto a fractured stone plaza submerged in knee-deep glowing blue liquid. Above, waves of heavy grey fog roll across an inverted subterranean ocean. Act II has begun.',
+              southExitId: const Value(604),
+              isExplored: const Value(false),
+            ),
+          );
+
+          // ──────────────────────────────────────────────────────────────────────────
+          // Seed Mobs, Rare Mini-Bosses & Act 1 Bosses
+          // ──────────────────────────────────────────────────────────────────────────
+
+          // Room 103: Common enemy
           await into(mobs).insert(
             MobsCompanion.insert(
               roomId: 103,
-              name: 'Glitched Husk',
+              name: 'Void-Touched Rat',
               level: 1,
-              maxHp: 24,
-              currentHp: 24,
-              minDamage: 4,
-              maxDamage: 7,
+              maxHp: 20,
+              currentHp: 20,
+              minDamage: 3,
+              maxDamage: 6,
               armor: const Value(1),
-              expReward: 35,
+              expReward: 30,
               dropTableJson: const Value(
                 '[{"type":"gem","name":"Chipped Emerald","rate":0.5},{"type":"weapon","name":"Rusted Shiv","rate":0.8}]',
               ),
+            ),
+          );
+
+          // Room 105 (Branch A): Rare Mini-Boss - Void-Stalker Alpha (Can be bypassed or fled!)
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 105,
+              name: 'Void-Stalker Alpha',
+              level: 3,
+              maxHp: 55,
+              currentHp: 55,
+              minDamage: 6,
+              maxDamage: 11,
+              armor: const Value(3),
+              expReward: 120,
+              isMiniBoss: const Value(true),
+              dropTableJson: const Value(
+                '[{"type":"ring","name":"Silver Coil Band","rate":0.9}]',
+              ),
+            ),
+          );
+
+          // Room 202: Weaver Spider
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 202,
+              name: 'Weaver Spider',
+              level: 2,
+              maxHp: 32,
+              currentHp: 32,
+              minDamage: 5,
+              maxDamage: 8,
+              armor: const Value(2),
+              expReward: 50,
+            ),
+          );
+
+          // Room 204: Mini-Boss - The Broodmother
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 204,
+              name: 'The Broodmother',
+              level: 3,
+              maxHp: 75,
+              currentHp: 75,
+              minDamage: 7,
+              maxDamage: 13,
+              armor: const Value(4),
+              expReward: 180,
+              isMiniBoss: const Value(true),
+              dropTableJson: const Value(
+                '[{"type":"ring","name":"Silk-Spun Ring","rate":1.0}]',
+              ),
+            ),
+          );
+
+          // Room 402: Risen Cultist
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 402,
+              name: 'Risen Cultist',
+              level: 4,
+              maxHp: 44,
+              currentHp: 44,
+              minDamage: 7,
+              maxDamage: 12,
+              armor: const Value(2),
+              expReward: 80,
+            ),
+          );
+
+          // Room 405 (Branch B): Rare Mini-Boss - Corrupted Iron Golem (Can be fled/bypassed!)
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 405,
+              name: 'Corrupted Iron Golem',
+              level: 5,
+              maxHp: 110,
+              currentHp: 110,
+              minDamage: 9,
+              maxDamage: 16,
+              armor: const Value(8),
+              expReward: 240,
+              isMiniBoss: const Value(true),
+            ),
+          );
+
+          // Room 404: Mini-Boss - The Weeping Zealot
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 404,
+              name: 'The Weeping Zealot',
+              level: 5,
+              maxHp: 95,
+              currentHp: 95,
+              minDamage: 8,
+              maxDamage: 15,
+              armor: const Value(4),
+              expReward: 220,
+              isMiniBoss: const Value(true),
+            ),
+          );
+
+          // Room 502: Glass-Wing Harpy
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 502,
+              name: 'Glass-Wing Harpy',
+              level: 6,
+              maxHp: 60,
+              currentHp: 60,
+              minDamage: 10,
+              maxDamage: 17,
+              armor: const Value(3),
+              expReward: 110,
+            ),
+          );
+
+          // Room 503: Mini-Boss - Talon-Lord Vex
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 503,
+              name: 'Talon-Lord Vex',
+              level: 7,
+              maxHp: 125,
+              currentHp: 125,
+              minDamage: 11,
+              maxDamage: 19,
+              armor: const Value(5),
+              expReward: 290,
+              isMiniBoss: const Value(true),
+            ),
+          );
+
+          // Room 603: Act 1 Climax Boss - The Hollow Woodsman
+          await into(mobs).insert(
+            MobsCompanion.insert(
+              roomId: 603,
+              name: 'The Hollow Woodsman',
+              level: 8,
+              maxHp: 180,
+              currentHp: 180,
+              minDamage: 14,
+              maxDamage: 24,
+              armor: const Value(7),
+              expReward: 500,
+              isMiniBoss: const Value(true),
             ),
           );
 

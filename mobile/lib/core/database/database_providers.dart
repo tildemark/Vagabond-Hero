@@ -47,3 +47,19 @@ final allRoomsProvider = StreamProvider<Map<int, RoomData>>((ref) {
     return {for (final r in rows) r.id: r};
   });
 });
+
+// Streams ALL active mobs mapped by roomId for tactical map overlays
+final allActiveMobsByRoomProvider =
+    StreamProvider<Map<int, List<MobData>>>((ref) {
+  final db = ref.watch(databaseProvider);
+  return (db.select(db.mobs)..where((tbl) => tbl.isAlive.equals(true)))
+      .watch()
+      .map((rows) {
+    final map = <int, List<MobData>>{};
+    for (final mob in rows) {
+      map.putIfAbsent(mob.roomId, () => []).add(mob);
+    }
+    return map;
+  });
+});
+
