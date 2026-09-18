@@ -55,7 +55,6 @@
   <div class="guide-tabs-nav">
     <button class="guide-tab-btn active" onclick="switchGuideTab('items')">⚔️ Items & Gear</button>
     <button class="guide-tab-btn" onclick="switchGuideTab('classes')">🛡️ Classes & Skills</button>
-    <button class="guide-tab-btn" onclick="switchGuideTab('roadmap')">🗺️ Evolution Roadmap & Matrix</button>
     <button class="guide-tab-btn" onclick="switchGuideTab('mobs')">👾 Bestiary / Mobs</button>
     <button class="guide-tab-btn" onclick="switchGuideTab('attributes')">📊 Stats & Attributes</button>
     <button class="guide-tab-btn" onclick="switchGuideTab('gems')">💎 Gems & Sockets</button>
@@ -219,1043 +218,6 @@
         <h2 class="guide-header-title"><span>🛡️</span> Class Progression & Skill Codices</h2>
         <p class="guide-header-desc">
           Every wanderer begins as an unspecialized <strong>Vagabond</strong>. Master field survival techniques before choosing your First Job Awakening at Level 20.
-        </p>
-      </div>
-
-      <!-- =========================================================
-           TOP PROMINENT SECTION: THE VAGABOND (BASE CLASS LV 1–20)
-           ========================================================= -->
-      <div class="vagabond-spotlight-box" style="margin-bottom: 2.5rem;">
-        <div class="dossier-hero-card vagabond-theme">
-          <div class="dossier-header-top">
-            <div class="dossier-title-area">
-              <div class="dossier-class-icon">🎒</div>
-              <div>
-                <div class="dossier-class-name">The Vagabond</div>
-                <div class="dossier-class-subtitle">Tier 1 Universal Starting Survivor • Levels 1–20 (All Adventurers Start Here)</div>
-              </div>
-            </div>
-            <div class="dossier-spec-pills">
-              <span class="dossier-spec-pill" style="border-color: #f59e0b; color: #f59e0b;">Resource: Grit (0–100)</span>
-              <span class="dossier-spec-pill">Primary: All Balanced</span>
-              <span class="dossier-spec-pill">Armor: Scrap & Rags</span>
-            </div>
-          </div>
-
-          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-            Every hero in the Shattered Expanse starts here. Stripped of memories and divine favor, the Vagabond survives purely on grit, scavenged scraps, and raw adaptability. They possess heightened baseline luck to unearth relics and emergency triage techniques to bandage wounds in hostile territory before choosing their awakened path.
-          </p>
-
-          <div class="dossier-stats-grid">
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Resource Mechanics</div>
-              <div class="dossier-stat-value" style="color: #f59e0b;">Grit (0–100)</div>
-              <div class="dossier-stat-desc">Starts at 50. Generates <strong>+10/turn</strong>, <strong>+15 when struck</strong>, and <strong>+5 on basic strikes</strong>. Sustains triage & escape rolls.</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Stat Growth per Level</div>
-              <div class="dossier-stat-value">+3 Attribute Points</div>
-              <div class="dossier-stat-desc">Automatic growth: <strong>+5 Max HP</strong> and <strong>+1 to All Stats</strong> (STR/AGI/INT/STA) automatically per level up.</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Evolution Milestone</div>
-              <div class="dossier-stat-value" style="color: var(--accent-gold);">Level 20 Job Awakening</div>
-              <div class="dossier-stat-desc">Upon conquering Act I's trial, awaken into the <strong>Juggernaut</strong>, <strong>Phantom</strong>, <strong>Weaver</strong>, or <strong>Warden</strong> below.</div>
-            </div>
-          </div>
-
-          <!-- Vagabond Skills Roster Inside Spotlight -->
-          <h4 style="font-family: var(--font-serif); color: var(--accent-gold); margin: 1.5rem 0 0.75rem 0; font-size: 1.05rem;">
-            🎒 Vagabond Survival Skills (Levels 1–20)
-          </h4>
-          <div class="skill-list" style="margin-top: 0.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">🗡️</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Scavenger's Strike [Level 1]</span>
-                  <span class="skill-cost-badge">0 Grit • Generates +5 Grit • 0 Turn CD</span>
-                </div>
-                <p class="skill-desc">Basic survival strike dealing 100% Weapon Damage. Has a 10% chance to dislodge 1–5 Silver Prisms from the enemy.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🩹</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Patch Up [Level 5]</span>
-                  <span class="skill-cost-badge">30 Grit • Cooldown: 4 Turns</span>
-                </div>
-                <p class="skill-desc">Emergency field triage that immediately restores 15% Maximum HP. Inoperable while suffering from active Bleeding or Poison DoTs.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🏃</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Desperate Flee [Level 15]</span>
-                  <span class="skill-cost-badge">20 Grit • Cooldown: 1 Turn</span>
-                </div>
-                <p class="skill-desc">Attempt an evasion roll to disengage and escape from combat (50% base success rate). Automatically fails in Boss encounters.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- =========================================================
-           FIRST JOB CHANGE AWAKENING LINEAGES (LEVEL 21+)
-           ========================================================= -->
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
-        <div>
-          <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 0; font-size: 1.3rem;">
-            ⚔️ First Job Change Lineages (Levels 21–70+ Pinnacle)
-          </h3>
-          <p style="color: var(--text-muted); font-size: 0.86rem; margin: 0.25rem 0 0 0;">
-            Select a specialized class lineage below to view its complete identity, resource engine, 2nd job subclasses, and full skill timeline.
-          </p>
-        </div>
-      </div>
-
-      <!-- Class Dossier Selector Strip (First Job Lineages) -->
-      <div class="class-dossier-nav" role="tablist">
-        <button class="class-dossier-btn active" data-class="Juggernaut" onclick="switchClassDossier('Juggernaut', this)">
-          <span>🛡️</span> Juggernaut Lineage (STR)
-        </button>
-        <button class="class-dossier-btn" data-class="Phantom" onclick="switchClassDossier('Phantom', this)">
-          <span>⚡</span> Phantom Lineage (AGI)
-        </button>
-        <button class="class-dossier-btn" data-class="Weaver" onclick="switchClassDossier('Weaver', this)">
-          <span>🔮</span> Weaver Lineage (INT)
-        </button>
-        <button class="class-dossier-btn" data-class="Warden" onclick="switchClassDossier('Warden', this)">
-          <span>🌿</span> Warden Lineage (Hybrid)
-        </button>
-      </div>
-
-      <!-- =========================================================
-           1. JUGGERNAUT LINEAGE DOSSIER
-           ========================================================= -->
-      <div class="class-dossier-panel active" id="dossier-Juggernaut">
-        <div class="dossier-hero-card juggernaut-theme">
-          <div class="dossier-header-top">
-            <div class="dossier-title-area">
-              <div class="dossier-class-icon">🛡️</div>
-              <div>
-                <div class="dossier-class-name">Juggernaut Lineage</div>
-                <div class="dossier-class-subtitle">Heavy Armor Vanguard • STR / STA • Levels 21–70+ Pinnacle</div>
-              </div>
-            </div>
-            <div class="dossier-spec-pills">
-              <span class="dossier-spec-pill" style="border-color: #ef4444; color: #ef4444;">Resource: Fury & Resolve</span>
-              <span class="dossier-spec-pill">Primary: Strength (STR)</span>
-              <span class="dossier-spec-pill">Armor: Heavy Plate & Tower Shields</span>
-            </div>
-          </div>
-
-          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-            The unstoppable colossus of the battlefield. Juggernauts convert combat momentum and incoming pain directly into devastating physical wrath. Later branching into the bloodthirsty offense of the <strong>Berserker</strong> or the kinetic reflection fortress of the <strong>Void-Knight</strong>.
-          </p>
-
-          <div class="dossier-stats-grid">
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Fury Generation Loop</div>
-              <div class="dossier-stat-value" style="color: #ef4444;">Fury (0–100)</div>
-              <div class="dossier-stat-desc">Starts at 0. Generates <strong>+10 on melee hits</strong>, <strong>+15 when damaged</strong>. Decays (-10/room) outside battle.</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Stat Scaling</div>
-              <div class="dossier-stat-value">STR (+1% Dmg, +0.5 Armor)</div>
-              <div class="dossier-stat-desc">Lv 21–50: <strong>+5 Points/Lv</strong> (+1 STR auto). Lv 51–70: <strong>+6 Points/Lv</strong> (+15 HP/Lv).</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Evolution Path</div>
-              <div class="dossier-stat-value" style="color: var(--accent-gold);">4-Tier Progression</div>
-              <div class="dossier-stat-desc">Juggernaut (Lv 21) ➔ Berserker / Void-Knight (Lv 51) ➔ World-Breaker / Aegis Lord (Lv 70+).</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 1. BASE JUGGERNAUT SKILLS (TIER 2 • LV 21–50) -->
-        <div style="margin: 1.5rem 0;">
-          <h4 style="font-family: var(--font-serif); color: #ef4444; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-            <span>🔨</span> Base Juggernaut Skills (Levels 21–50)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card">
-              <div class="skill-icon">🔨</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Heavy Smash [Tier 2 • Lv 21 Juggernaut]</span>
-                  <span class="skill-cost-badge">20 Fury • Cooldown: 2 Turns</span>
-                </div>
-                <p class="skill-desc">Crushing overhead blow dealing 140% Physical Damage. Reduces target Evasion by 10% for 2 turns.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🛡️</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Taunt [Tier 2 • Lv 30 Juggernaut]</span>
-                  <span class="skill-cost-badge">15 Fury • Generates +10 Fury when struck • Cooldown: 4 Turns</span>
-                </div>
-                <p class="skill-desc">Battle roar that forces enemies to focus you instead of companions. Increases Total Armor by +25% for 3 turns.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">💥</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Earthshatter [Tier 2 • Lv 45 Juggernaut]</span>
-                  <span class="skill-cost-badge">40 Fury • Cooldown: 5 Turns</span>
-                </div>
-                <p class="skill-desc">Slams the ground to trigger a room-wide shockwave dealing 110% Physical Damage to all foes.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. JUGGERNAUT SUBCLASS SPECIALIZATIONS & PINNACLE BRANCHES -->
-        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 2rem 0 1rem 0; font-size: 1.25rem;">
-          ⚔️ Subclass Specializations & Pinnacle Evolutions
-        </h3>
-
-        <!-- BRANCH A: BERSERKER -> WORLD-BREAKER -->
-        <div style="background: rgba(220, 38, 38, 0.05); border: 1px solid rgba(220, 38, 38, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.75rem;">
-          <div class="dossier-branch-card" style="border-top: 3px solid #dc2626; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #f87171;">🪓 Berserker (Tier 3 • Levels 51–70)</span>
-              <span class="dossier-branch-tier" style="background: rgba(220, 38, 38, 0.2); color: #f87171; border: 1px solid rgba(220, 38, 38, 0.4);">Offensive Vanguard</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Commands <strong>Bloodrage</strong>. Fury generation doubles below 50% HP. Sacrifices health for guaranteed criticals and relentless life-steal in close-quarters frenzy.
-            </p>
-          </div>
-
-          <!-- Berserker Skills -->
-          <h4 style="font-family: var(--font-serif); color: #f87171; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
-            🪓 Berserker Skills (Tier 3)
-          </h4>
-          <div class="skill-list" style="margin-bottom: 1.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">🪓</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Reckless Swing [Tier 3 • Lv 51 Berserker]</span>
-                  <span class="skill-cost-badge">30 Fury + 10% HP • Cooldown: 2 Turns</span>
-                </div>
-                <p class="skill-desc">Wild, cleaving strike dealing 200% Physical Damage. Player takes 10% of current HP in recoil damage.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🩸</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Bloodlust [Tier 3 • Lv 60 Berserker]</span>
-                  <span class="skill-cost-badge">50 Fury • Cooldown: 5 Turns</span>
-                </div>
-                <p class="skill-desc">Enters an ecstatic frenzy for 3 turns: grants +20% Life Steal, but reduces Total Armor to 0.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pinnacle: World-Breaker -->
-          <div class="dossier-branch-card" style="border-top: 3px solid #b91c1c; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #fca5a5;">💥 World-Breaker (Tier 4 • Level 70+ Pinnacle)</span>
-              <span class="dossier-branch-tier" style="background: rgba(185, 28, 28, 0.3); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.5);">Pinnacle Ascension</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              The ultimate incarnation of berserk devastation. Annihilates reality itself with execution strikes that reset their cooldown upon claiming a kill.
-            </p>
-          </div>
-
-          <!-- World-Breaker Skill -->
-          <h4 style="font-family: var(--font-serif); color: #fca5a5; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
-            💥 World-Breaker Pinnacle Skill (Tier 4)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card" style="border-color: rgba(220, 38, 38, 0.4); background: rgba(220, 38, 38, 0.08);">
-              <div class="skill-icon" style="border-color: #dc2626;">💥</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Obliterate [Tier 4 • Lv 70 World-Breaker Pinnacle]</span>
-                  <span class="skill-cost-badge">60 Fury + 20% HP • Cooldown: 4 Turns</span>
-                </div>
-                <p class="skill-desc">A reality-rending execution strike dealing 500% Physical Damage. If this strike slays the target, its cooldown instantly resets to 0.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BRANCH B: VOID-KNIGHT -> AEGIS LORD -->
-        <div style="background: rgba(147, 51, 234, 0.05); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
-          <div class="dossier-branch-card" style="border-top: 3px solid #9333ea; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #c084fc;">🌌 Void-Knight (Tier 3 • Levels 51–70)</span>
-              <span class="dossier-branch-tier" style="background: rgba(147, 51, 234, 0.2); color: #c084fc; border: 1px solid rgba(147, 51, 234, 0.4);">Defensive Bastion</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Commands <strong>Resolve</strong>. Converts 20% of mitigated damage into kinetic reserves, turning 100% of Total Armor directly into crushing weapon damage.
-            </p>
-          </div>
-
-          <!-- Void-Knight Skills -->
-          <h4 style="font-family: var(--font-serif); color: #c084fc; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
-            🌌 Void-Knight Skills (Tier 3)
-          </h4>
-          <div class="skill-list" style="margin-bottom: 1.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">🛡️</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Shield Bash [Tier 3 • Lv 51 Void-Knight]</span>
-                  <span class="skill-cost-badge">25 Resolve • Cooldown: 3 Turns</span>
-                </div>
-                <p class="skill-desc">Slams enemy with a towering shield, dealing Physical Damage equal to 100% of Total Armor and stunning non-boss foes for 1 turn.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🌌</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Void Bulwark [Tier 3 • Lv 60 Void-Knight]</span>
-                  <span class="skill-cost-badge">40 Resolve • Cooldown: 6 Turns</span>
-                </div>
-                <p class="skill-desc">Absorbs 100% of damage taken for 1 turn, detonating 50% of stored kinetic damage as an AoE burst next turn.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pinnacle: Aegis Lord -->
-          <div class="dossier-branch-card" style="border-top: 3px solid #7e22ce; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #e9d5ff;">🛡️ Aegis Lord (Tier 4 • Level 70+ Pinnacle)</span>
-              <span class="dossier-branch-tier" style="background: rgba(126, 34, 206, 0.3); color: #e9d5ff; border: 1px solid rgba(168, 85, 247, 0.5);">Pinnacle Ascension</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              The unyielding fortress of the cosmos. Ascends to absolute physical invulnerability, reflecting enemy aggression with triple magnitude.
-            </p>
-          </div>
-
-          <!-- Aegis Lord Skill -->
-          <h4 style="font-family: var(--font-serif); color: #e9d5ff; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
-            🛡️ Aegis Lord Pinnacle Skill (Tier 4)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card" style="border-color: rgba(147, 51, 234, 0.4); background: rgba(147, 51, 234, 0.08);">
-              <div class="skill-icon" style="border-color: #9333ea;">🛡️</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Absolute Defense [Tier 4 • Lv 70 Aegis Lord Pinnacle]</span>
-                  <span class="skill-cost-badge">50 Resolve • Cooldown: 7 Turns</span>
-                </div>
-                <p class="skill-desc">For 2 turns, you are completely impervious to all damage and automatically reflect all incoming attacks at 300% strength.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- =========================================================
-           2. PHANTOM LINEAGE DOSSIER
-           ========================================================= -->
-      <div class="class-dossier-panel" id="dossier-Phantom">
-        <div class="dossier-hero-card phantom-theme">
-          <div class="dossier-header-top">
-            <div class="dossier-title-area">
-              <div class="dossier-class-icon">⚡</div>
-              <div>
-                <div class="dossier-class-name">Phantom Lineage</div>
-                <div class="dossier-class-subtitle">Finesse Assassin & Sniper • AGI / STA • Levels 21–70+ Pinnacle</div>
-              </div>
-            </div>
-            <div class="dossier-spec-pills">
-              <span class="dossier-spec-pill" style="border-color: #fbbf24; color: #fbbf24;">Resource: Energy & Focus</span>
-              <span class="dossier-spec-pill">Primary: Agility (AGI)</span>
-              <span class="dossier-spec-pill">Armor: Finesse Leathers & Wraps</span>
-            </div>
-          </div>
-
-          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-            Lightning-fast stalkers of the void shadows. Phantoms boast untouchable Evasion, high-tempo multi-hit flurries, and deadly poisons. Later specializing into the stealth burst executions of the <strong>Assassin</strong> or the 100% armor-penetrating artillery of the <strong>Rift-Sniper</strong>.
-          </p>
-
-          <div class="dossier-stats-grid">
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Energy Regeneration Loop</div>
-              <div class="dossier-stat-value" style="color: #fbbf24;">Energy (0–100)</div>
-              <div class="dossier-stat-desc">Starts full at 100. Rapidly replenishes <strong>+25 Energy every single turn</strong>. Rewards fast combo cycles.</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Stat Scaling</div>
-              <div class="dossier-stat-value">AGI (+1% Dmg, +0.1% Crit, +0.15% Evade)</div>
-              <div class="dossier-stat-desc">Lv 21–50: <strong>+5 Points/Lv</strong> (+1 AGI auto). Lv 51–70: <strong>+6 Points/Lv</strong> (+15 HP/Lv).</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Evolution Path</div>
-              <div class="dossier-stat-value" style="color: var(--accent-gold);">4-Tier Progression</div>
-              <div class="dossier-stat-desc">Phantom (Lv 21) ➔ Assassin / Rift-Sniper (Lv 51) ➔ Shadow-Walker / Void-Stalker (Lv 70+).</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 1. BASE PHANTOM SKILLS (TIER 2 • LV 21–50) -->
-        <div style="margin: 1.5rem 0;">
-          <h4 style="font-family: var(--font-serif); color: #fbbf24; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-            <span>⚡</span> Base Phantom Skills (Levels 21–50)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card">
-              <div class="skill-icon">⚡</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Flurry [Tier 2 • Lv 21 Phantom]</span>
-                  <span class="skill-cost-badge">25 Energy • Cooldown: 0 Turns</span>
-                </div>
-                <p class="skill-desc">High-tempo dual strike, each hit dealing 70% Finesse Damage with double trigger chance for on-hit elemental affixes.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🧪</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Venom-Laced Blade [Tier 2 • Lv 30 Phantom]</span>
-                  <span class="skill-cost-badge">35 Energy • Cooldown: 3 Turns</span>
-                </div>
-                <p class="skill-desc">Coats weapons in neurotoxin. Next attack inflicts a Poison DoT dealing 20% AGI per turn for 4 turns.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">💨</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Smoke Bomb [Tier 2 • Lv 45 Phantom]</span>
-                  <span class="skill-cost-badge">50 Energy • Cooldown: 6 Turns</span>
-                </div>
-                <p class="skill-desc">Detonates an obscurant pellet, instantly raising player Evasion to 80% for 1 turn.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. PHANTOM SUBCLASS SPECIALIZATIONS & PINNACLE BRANCHES -->
-        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 2rem 0 1rem 0; font-size: 1.25rem;">
-          ⚔️ Subclass Specializations & Pinnacle Evolutions
-        </h3>
-
-        <!-- BRANCH A: ASSASSIN -> SHADOW-WALKER -->
-        <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.75rem;">
-          <div class="dossier-branch-card" style="border-top: 3px solid #f59e0b; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #fbbf24;">🗡️ Assassin (Tier 3 • Levels 51–70)</span>
-              <span class="dossier-branch-tier" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4);">Melee Stealth Specialist</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Commands <strong>Combo Points</strong> and neurotoxins. Consumes debuff stacks with <em>Eviscerate</em> for multiplicative burst from unseen shadows.
-            </p>
-          </div>
-
-          <!-- Assassin Skills -->
-          <h4 style="font-family: var(--font-serif); color: #fbbf24; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
-            🗡️ Assassin Skills (Tier 3)
-          </h4>
-          <div class="skill-list" style="margin-bottom: 1.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">🗡️</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Eviscerate [Tier 3 • Lv 51 Assassin]</span>
-                  <span class="skill-cost-badge">30 Energy • Cooldown: 2 Turns</span>
-                </div>
-                <p class="skill-desc">Consumes all Bleed and Poison stacks on the target for catastrophic burst damage (+50% bonus damage per stack consumed).</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">👤</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Shadow Cloak [Tier 3 • Lv 60 Assassin]</span>
-                  <span class="skill-cost-badge">40 Energy • Cooldown: 5 Turns</span>
-                </div>
-                <p class="skill-desc">Dissolves into shadows for 2 turns. Enemies cannot target you; your next strike from stealth is a guaranteed Critical Hit.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pinnacle: Shadow-Walker -->
-          <div class="dossier-branch-card" style="border-top: 3px solid #d97706; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #fde68a;">⏳ Shadow-Walker (Tier 4 • Level 70+ Pinnacle)</span>
-              <span class="dossier-branch-tier" style="background: rgba(217, 119, 6, 0.3); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.5);">Pinnacle Ascension</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              The phantom executioner. Inscribes doom upon enemies, multiplying all received damage during countdown into an absolute lethal execution.
-            </p>
-          </div>
-
-          <!-- Shadow-Walker Skill -->
-          <h4 style="font-family: var(--font-serif); color: #fde68a; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
-            ⏳ Shadow-Walker Pinnacle Skill (Tier 4)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.08);">
-              <div class="skill-icon" style="border-color: #f59e0b;">⏳</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Death Mark [Tier 4 • Lv 70 Shadow-Walker Pinnacle]</span>
-                  <span class="skill-cost-badge">50 Energy • Cooldown: 5 Turns</span>
-                </div>
-                <p class="skill-desc">Brands an enemy with a death mark. After 3 turns, the mark detonates, dealing True Damage equal to 50% of all damage the target took during the countdown.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BRANCH B: RIFT-SNIPER -> VOID-STALKER -->
-        <div style="background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
-          <div class="dossier-branch-card" style="border-top: 3px solid #38bdf8; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #38bdf8;">🎯 Rift-Sniper (Tier 3 • Levels 51–70)</span>
-              <span class="dossier-branch-tier" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4);">Ranged Artillery</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Commands <strong>Focus</strong>. Controls the engagement from extreme range with 100% armor-penetrating charged shots and defensive barbed caltrops.
-            </p>
-          </div>
-
-          <!-- Rift-Sniper Skills -->
-          <h4 style="font-family: var(--font-serif); color: #38bdf8; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
-            🎯 Rift-Sniper Skills (Tier 3)
-          </h4>
-          <div class="skill-list" style="margin-bottom: 1.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">🎯</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Aimed Shot [Tier 3 • Lv 51 Rift-Sniper]</span>
-                  <span class="skill-cost-badge">45 Focus • Cooldown: 4 Turns</span>
-                </div>
-                <p class="skill-desc">Takes 1 turn to align the sights. On the 2nd turn, unleashes a 350% Finesse shot with 100% Armor Penetration.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">⚙️</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Caltrops [Tier 3 • Lv 60 Rift-Sniper]</span>
-                  <span class="skill-cost-badge">30 Focus • Cooldown: 4 Turns</span>
-                </div>
-                <p class="skill-desc">Scatters barbed spikes across the room. Any foe executing a melee attack takes physical damage per swing for 3 turns.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pinnacle: Void-Stalker -->
-          <div class="dossier-branch-card" style="border-top: 3px solid #0284c7; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #bae6fd;">🏹 Void-Stalker (Tier 4 • Level 70+ Pinnacle)</span>
-              <span class="dossier-branch-tier" style="background: rgba(2, 132, 199, 0.3); color: #bae6fd; border: 1px solid rgba(56, 189, 248, 0.5);">Pinnacle Ascension</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              The interdimensional archer. Pierces temporal boundaries to delete portions of enemy health bars from reality entirely.
-            </p>
-          </div>
-
-          <!-- Void-Stalker Skill -->
-          <h4 style="font-family: var(--font-serif); color: #bae6fd; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
-            🏹 Void-Stalker Pinnacle Skill (Tier 4)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.08);">
-              <div class="skill-icon" style="border-color: #38bdf8;">🏹</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Dimensional Piercer [Tier 4 • Lv 70 Void-Stalker Pinnacle]</span>
-                  <span class="skill-cost-badge">60 Focus • Cooldown: 4 Turns</span>
-                </div>
-                <p class="skill-desc">Fires a quantum arrow that bypasses the enemy's current HP bar entirely, permanently reducing target Maximum HP by 20%.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- =========================================================
-           3. WEAVER LINEAGE DOSSIER
-           ========================================================= -->
-      <div class="class-dossier-panel" id="dossier-Weaver">
-        <div class="dossier-hero-card weaver-theme">
-          <div class="dossier-header-top">
-            <div class="dossier-title-area">
-              <div class="dossier-class-icon">🔮</div>
-              <div>
-                <div class="dossier-class-name">Weaver Lineage</div>
-                <div class="dossier-class-subtitle">Arcane Spellcaster & Sanguine Mage • INT / STA • Levels 21–70+ Pinnacle</div>
-              </div>
-            </div>
-            <div class="dossier-spec-pills">
-              <span class="dossier-spec-pill" style="border-color: #38bdf8; color: #38bdf8;">Resource: Deep Mana & Blood</span>
-              <span class="dossier-spec-pill">Primary: Intelligence (INT)</span>
-              <span class="dossier-spec-pill">Armor: Arcane Silk & Sanguine Robes</span>
-            </div>
-          </div>
-
-          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-            Masters of the celestial weave and cosmic entropy. Weavers boast 100% accurate homing spells, damage-absorbing void barriers, and devastating elemental cascades. Specializing into the tri-element cycle of the <strong>Elementalist</strong> or the forbidden HP-sacrificing devastation of the <strong>Blood Mage</strong>.
-          </p>
-
-          <div class="dossier-stats-grid">
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Mana Reservoir Scaling</div>
-              <div class="dossier-stat-value" style="color: #38bdf8;">Base 50 + (INT × 5)</div>
-              <div class="dossier-stat-desc">Deep spell pool. Regenerates +5% Max MP/turn and restores full pools via siphon spells.</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Stat Scaling</div>
-              <div class="dossier-stat-value">INT (+1% Spell Dmg, +Resistances)</div>
-              <div class="dossier-stat-desc">Lv 21–50: <strong>+5 Points/Lv</strong> (+1 INT auto). Lv 51–70: <strong>+6 Points/Lv</strong> (+15 HP/Lv).</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Evolution Path</div>
-              <div class="dossier-stat-value" style="color: var(--accent-gold);">4-Tier Progression</div>
-              <div class="dossier-stat-desc">Weaver (Lv 21) ➔ Elementalist / Blood Mage (Lv 51) ➔ Arch-Mage / Crimson Sovereign (Lv 70+).</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 1. BASE WEAVER SKILLS (TIER 2 • LV 21–50) -->
-        <div style="margin: 1.5rem 0;">
-          <h4 style="font-family: var(--font-serif); color: #38bdf8; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-            <span>🔮</span> Base Weaver Skills (Levels 21–50)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card">
-              <div class="skill-icon">🔮</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Arcane Bolt [Tier 2 • Lv 21 Weaver]</span>
-                  <span class="skill-cost-badge">10 Mana • Cooldown: 0 Turns</span>
-                </div>
-                <p class="skill-desc">Launches a homing lance of starlight dealing 130% Magic Damage. Automatically bypasses enemy Evasion (Never misses).</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🌀</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Siphon Energy [Tier 2 • Lv 30 Weaver]</span>
-                  <span class="skill-cost-badge">0 Mana • Generates Mana • Cooldown: 3 Turns</span>
-                </div>
-                <p class="skill-desc">Channels enemy aether, dealing 50% Magic Damage and restoring Mana equal to 100% of damage dealt.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🌐</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Void Shield [Tier 2 • Lv 45 Weaver]</span>
-                  <span class="skill-cost-badge">30 Mana • Cooldown: 5 Turns</span>
-                </div>
-                <p class="skill-desc">Projects an arcane barrier absorbing damage equal to 20% of player Maximum HP for 3 turns.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. WEAVER SUBCLASS SPECIALIZATIONS & PINNACLE BRANCHES -->
-        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 2rem 0 1rem 0; font-size: 1.25rem;">
-          ⚔️ Subclass Specializations & Pinnacle Evolutions
-        </h3>
-
-        <!-- BRANCH A: ELEMENTALIST -> ARCH-MAGE -->
-        <div style="background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.75rem;">
-          <div class="dossier-branch-card" style="border-top: 3px solid #38bdf8; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #38bdf8;">🔥 Elementalist (Tier 3 • Levels 51–70)</span>
-              <span class="dossier-branch-tier" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4);">Tri-Flux Arcane</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Commands <strong>Tri-Flux</strong> (Fire for +25% Dmg, Ice for +30% Armor, Lightning for 2 actions/turn) and meteor cataclysms.
-            </p>
-          </div>
-
-          <!-- Elementalist Skills -->
-          <h4 style="font-family: var(--font-serif); color: #38bdf8; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
-            🔥 Elementalist Skills (Tier 3)
-          </h4>
-          <div class="skill-list" style="margin-bottom: 1.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">🔥</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Elemental Cycle [Tier 3 • Lv 51 Elementalist]</span>
-                  <span class="skill-cost-badge">15 Mana • Cooldown: 1 Turn</span>
-                </div>
-                <p class="skill-desc">Cycles active stance: Fire (+25% Dmg), Ice (+30% Armor), or Lightning (2 actions per turn).</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">☄️</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Cataclysm [Tier 3 • Lv 60 Elementalist]</span>
-                  <span class="skill-cost-badge">40 Mana • Cooldown: 5 Turns</span>
-                </div>
-                <p class="skill-desc">Calls down an elemental meteor dealing 250% AoE Magic Damage matching your active elemental stance.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pinnacle: Arch-Mage -->
-          <div class="dossier-branch-card" style="border-top: 3px solid #0284c7; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #bae6fd;">⌛ Arch-Mage (Tier 4 • Level 70+ Pinnacle)</span>
-              <span class="dossier-branch-tier" style="background: rgba(2, 132, 199, 0.3); color: #bae6fd; border: 1px solid rgba(56, 189, 248, 0.5);">Pinnacle Ascension</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Supreme grandmaster of time and space. Halts global reality to unleash consecutive turns unimpeded by enemy response.
-            </p>
-          </div>
-
-          <!-- Arch-Mage Skill -->
-          <h4 style="font-family: var(--font-serif); color: #bae6fd; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
-            ⌛ Arch-Mage Pinnacle Skill (Tier 4)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.08);">
-              <div class="skill-icon" style="border-color: #38bdf8;">⌛</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Time Stop [Tier 4 • Lv 70 Arch-Mage Pinnacle]</span>
-                  <span class="skill-cost-badge">60 Mana • Cooldown: 8 Turns</span>
-                </div>
-                <p class="skill-desc">Freezes global combat ticks. Player takes 3 consecutive turns back-to-back while all foes remain completely frozen.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BRANCH B: BLOOD MAGE -> CRIMSON SOVEREIGN -->
-        <div style="background: rgba(225, 29, 72, 0.05); border: 1px solid rgba(225, 29, 72, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
-          <div class="dossier-branch-card" style="border-top: 3px solid #e11d48; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #fb7185;">🩸 Blood Mage (Tier 3 • Levels 51–70)</span>
-              <span class="dossier-branch-tier" style="background: rgba(225, 29, 72, 0.2); color: #fb7185; border: 1px solid rgba(225, 29, 72, 0.4);">Sanguine Sacrifice</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Consumes player HP instead of Mana for 2x spell burst and executes companion sacrifice pacts for immediate recovery.
-            </p>
-          </div>
-
-          <!-- Blood Mage Skills -->
-          <h4 style="font-family: var(--font-serif); color: #fb7185; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
-            🩸 Blood Mage Skills (Tier 3)
-          </h4>
-          <div class="skill-list" style="margin-bottom: 1.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">🩸</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Hemorrhage [Tier 3 • Lv 51 Blood Mage]</span>
-                  <span class="skill-cost-badge">10% Max HP • Cooldown: 1 Turn</span>
-                </div>
-                <p class="skill-desc">Siphons player vitality into dark sorcery. Deals 150% Magic Damage costing 10% Max HP instead of Mana.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">💀</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Crimson Pact [Tier 3 • Lv 60 Blood Mage]</span>
-                  <span class="skill-cost-badge">Companion Life • Cooldown: 99 Turns</span>
-                </div>
-                <p class="skill-desc">Sacrifices active companion instantly to fully restore 100% of player HP and Mana (usable once per node).</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pinnacle: Crimson Sovereign -->
-          <div class="dossier-branch-card" style="border-top: 3px solid #be123c; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #fecdd3;">🩸 Crimson Sovereign (Tier 4 • Level 70+ Pinnacle)</span>
-              <span class="dossier-branch-tier" style="background: rgba(190, 18, 60, 0.3); color: #fecdd3; border: 1px solid rgba(225, 29, 72, 0.5);">Pinnacle Ascension</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              The immortal harbinger of vital entropy. Sacrifices virtually all mortal health to unleash apocalyptic shockwaves.
-            </p>
-          </div>
-
-          <!-- Crimson Sovereign Skill -->
-          <h4 style="font-family: var(--font-serif); color: #fecdd3; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
-            🩸 Crimson Sovereign Pinnacle Skill (Tier 4)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card" style="border-color: rgba(225, 29, 72, 0.4); background: rgba(225, 29, 72, 0.08);">
-              <div class="skill-icon" style="border-color: #e11d48;">🩸</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Blood Boil [Tier 4 • Lv 70 Crimson Sovereign Pinnacle]</span>
-                  <span class="skill-cost-badge">All HP down to 1 • Cooldown: 8 Turns</span>
-                </div>
-                <p class="skill-desc">Drains player health down to 1 HP to release an apocalyptic shockwave dealing 5× total HP sacrificed as raw Magic Damage.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- =========================================================
-           4. WARDEN LINEAGE DOSSIER
-           ========================================================= -->
-      <div class="class-dossier-panel" id="dossier-Warden">
-        <div class="dossier-hero-card warden-theme">
-          <div class="dossier-header-top">
-            <div class="dossier-title-area">
-              <div class="dossier-class-icon">🌿</div>
-              <div>
-                <div class="dossier-class-name">Warden Lineage</div>
-                <div class="dossier-class-subtitle">Pack Master, Necromancer & Druid • Hybrid STA/INT/STR • Levels 21–70+</div>
-              </div>
-            </div>
-            <div class="dossier-spec-pills">
-              <span class="dossier-spec-pill" style="border-color: #10b981; color: #10b981;">Resource: Animus & Corpses</span>
-              <span class="dossier-spec-pill">Primary: STA / INT / STR</span>
-              <span class="dossier-spec-pill">Armor: Mail, Carapaces & Totems</span>
-            </div>
-          </div>
-
-          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
-            Masters of the wild pack and forbidden occult bonds. Wardens command loyal beast summons, transfer negative ailments to pets, and siphon vitality through thorny roots. Specializing into the undead legion explosions of the <strong>Necromancer</strong> or the chimera shapeshifting ferocity of the <strong>Druid</strong>.
-          </p>
-
-          <div class="dossier-stats-grid">
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Animus Resonance Loop</div>
-              <div class="dossier-stat-value" style="color: #10b981;">Animus (0–100)</div>
-              <div class="dossier-stat-desc">Starts at 30. Generated when your <strong>summon strikes (+15)</strong> or via <strong>life-leeching skills (+10)</strong>.</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Stat Scaling</div>
-              <div class="dossier-stat-value">STA (+10 HP), INT & STR</div>
-              <div class="dossier-stat-desc">Lv 21–50: <strong>+5 Points/Lv</strong> (+1 STA auto). Lv 51–70: <strong>+6 Points/Lv</strong> (+15 HP/Lv).</div>
-            </div>
-            <div class="dossier-stat-block">
-              <div class="dossier-stat-label">Evolution Path</div>
-              <div class="dossier-stat-value" style="color: var(--accent-gold);">4-Tier Progression</div>
-              <div class="dossier-stat-desc">Warden (Lv 21) ➔ Necromancer / Druid (Lv 51) ➔ Death-Caller / Chimera-Lord (Lv 70+).</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 1. BASE WARDEN SKILLS (TIER 2 • LV 21–50) -->
-        <div style="margin: 1.5rem 0;">
-          <h4 style="font-family: var(--font-serif); color: #10b981; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
-            <span>🌿</span> Base Warden Skills (Levels 21–50)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card">
-              <div class="skill-icon">🐺</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Summon Void-Pup [Tier 2 • Lv 21 Warden]</span>
-                  <span class="skill-cost-badge">30 Animus • Cooldown: 8 Turns</span>
-                </div>
-                <p class="skill-desc">Conjures a pet beast with 30% player Max HP. Strikes every turn for 50% INT damage and generates +15 Animus.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🌿</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Leeching Vines [Tier 2 • Lv 30 Warden]</span>
-                  <span class="skill-cost-badge">25 Animus • Cooldown: 3 Turns</span>
-                </div>
-                <p class="skill-desc">Thorny roots erupt, dealing 80% Magic Damage and healing the player for 50% of damage dealt.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🔗</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Shared Burden [Tier 2 • Lv 45 Warden]</span>
-                  <span class="skill-cost-badge">20 Animus • Cooldown: 4 Turns</span>
-                </div>
-                <p class="skill-desc">Mystical tether that transfers all active debuffs (Poison, Chill, Weakness) from the player onto the active summon.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. WARDEN SUBCLASS SPECIALIZATIONS & PINNACLE BRANCHES -->
-        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 2rem 0 1rem 0; font-size: 1.25rem;">
-          ⚔️ Subclass Specializations & Pinnacle Evolutions
-        </h3>
-
-        <!-- BRANCH A: NECROMANCER -> DEATH-CALLER -->
-        <div style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.75rem;">
-          <div class="dossier-branch-card" style="border-top: 3px solid #8b5cf6; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #c4b5fd;">💀 Necromancer (Tier 3 • Levels 51–70)</span>
-              <span class="dossier-branch-tier" style="background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.4);">Undead Swarm Path</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Commands <strong>Corpses</strong> to raise skeletal frost mages and detonate fallen enemy remains for catastrophic AoE damage.
-            </p>
-          </div>
-
-          <!-- Necromancer Skills -->
-          <h4 style="font-family: var(--font-serif); color: #c4b5fd; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
-            💀 Necromancer Skills (Tier 3)
-          </h4>
-          <div class="skill-list" style="margin-bottom: 1.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">💀</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Raise Skeletal Mage [Tier 3 • Lv 51 Necromancer]</span>
-                  <span class="skill-cost-badge">25 Animus • Cooldown: 3 Turns</span>
-                </div>
-                <p class="skill-desc">Raises a skeletal frost mage from fallen essence that casts ranged ice lances. Can command up to 3 active skeletons.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">💣</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Corpse Explosion [Tier 3 • Lv 60 Necromancer]</span>
-                  <span class="skill-cost-badge">35 Animus • Cooldown: 2 Turns</span>
-                </div>
-                <p class="skill-desc">Detonates a fallen enemy corpse, dealing damage equal to 100% of its Max HP as AoE damage to all remaining foes.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pinnacle: Death-Caller -->
-          <div class="dossier-branch-card" style="border-top: 3px solid #7c3aed; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #ede9fe;">👑 Death-Caller (Tier 4 • Level 70+ Pinnacle)</span>
-              <span class="dossier-branch-tier" style="background: rgba(124, 58, 237, 0.3); color: #ede9fe; border: 1px solid rgba(139, 92, 246, 0.5);">Pinnacle Ascension</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              The immortal master of the underworld. Commands legions of the restless dead to overrun and detonate across entire battlefields.
-            </p>
-          </div>
-
-          <!-- Death-Caller Skill -->
-          <h4 style="font-family: var(--font-serif); color: #ede9fe; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
-            👑 Death-Caller Pinnacle Skill (Tier 4)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.08);">
-              <div class="skill-icon" style="border-color: #10b981;">👑</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Army of the Damned [Tier 4 • Lv 70 Death-Caller Pinnacle]</span>
-                  <span class="skill-cost-badge">70 Animus • Cooldown: 8 Turns</span>
-                </div>
-                <p class="skill-desc">Instantly summons 5 elite skeleton champions ignoring regular summon limits. Skeletons explode for massive AoE damage on death.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- BRANCH B: DRUID -> CHIMERA-LORD -->
-        <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
-          <div class="dossier-branch-card" style="border-top: 3px solid #10b981; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #6ee7b7;">🐾 Druid (Tier 3 • Levels 51–70)</span>
-              <span class="dossier-branch-tier" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4);">Primal Beast Path</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              Commands <strong>Primal Surge</strong>. Metamorphoses into a void chimera scaling with STR and INT, gaining +100% Armor Barkskin and immunity to Critical Hits.
-            </p>
-          </div>
-
-          <!-- Druid Skills -->
-          <h4 style="font-family: var(--font-serif); color: #6ee7b7; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
-            🐾 Druid Skills (Tier 3)
-          </h4>
-          <div class="skill-list" style="margin-bottom: 1.5rem;">
-            <div class="skill-card">
-              <div class="skill-icon">🐺</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Chimera Shift [Tier 3 • Lv 51 Druid]</span>
-                  <span class="skill-cost-badge">40 Animus • Cooldown: 6 Turns</span>
-                </div>
-                <p class="skill-desc">Metamorphose into a terrifying Void Chimera for 4 turns. Replaces spells with primal claws scaling off STR and INT.</p>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-icon">🌲</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Barkskin [Tier 3 • Lv 60 Druid]</span>
-                  <span class="skill-cost-badge">30 Animus • Cooldown: 5 Turns</span>
-                </div>
-                <p class="skill-desc">Hardens flesh into ironwood. Increases Total Armor by +100% and grants complete immunity to Critical Hits for 3 turns.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pinnacle: Chimera-Lord -->
-          <div class="dossier-branch-card" style="border-top: 3px solid #059669; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
-            <div class="dossier-branch-header">
-              <span class="dossier-branch-title" style="color: #a7f3d0;">🦁 Chimera-Lord (Tier 4 • Level 70+ Pinnacle)</span>
-              <span class="dossier-branch-tier" style="background: rgba(5, 150, 105, 0.3); color: #a7f3d0; border: 1px solid rgba(16, 185, 129, 0.5);">Pinnacle Ascension</span>
-            </div>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
-              The apex chimera transcendent. Permanently unifies human and primal beast essences without timer constraints, granting passive squad-wide life leech.
-            </p>
-          </div>
-
-          <!-- Chimera-Lord Skill -->
-          <h4 style="font-family: var(--font-serif); color: #a7f3d0; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
-            🦁 Chimera-Lord Pinnacle Skill (Tier 4)
-          </h4>
-          <div class="skill-list">
-            <div class="skill-card" style="border-color: rgba(74, 222, 128, 0.4); background: rgba(74, 222, 128, 0.08);">
-              <div class="skill-icon" style="border-color: #4ade80;">🦁</div>
-              <div class="skill-content">
-                <div class="skill-header">
-                  <span class="skill-name">Apex Evolution [Tier 4 • Lv 70 Chimera-Lord Pinnacle]</span>
-                  <span class="skill-cost-badge">Passive • Always Active • 0 Turn CD</span>
-                </div>
-                <p class="skill-desc">Permanently merges beast forms into human form. Grants permanent Chimera form buffs without transforming, and heals all allies for 10% of all damage dealt.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-         TAB 3: EVOLUTION ROADMAP & COMPARISON MATRIX (DEDICATED SECTION)
-         ========================================================= -->
-    <section id="tab-roadmap" class="guide-section">
-      <div class="guide-header-box">
-        <h2 class="guide-header-title"><span>🗺️</span> 4-Tier Evolution Roadmap & Comparison Matrix</h2>
-        <p class="guide-header-desc">
-          High-level architectural progression of *Vagabond Hero*. From survivor beginnings at Tier 1 to infinite Echo specialization at Level 70+.
         </p>
       </div>
 
@@ -1504,6 +466,1056 @@
             </tr>
           </tbody>
         </table>
+      </div>
+
+      <!-- =========================================================
+           TOP PROMINENT SECTION: THE VAGABOND (BASE CLASS LV 1–20)
+           ========================================================= -->
+      <div class="vagabond-spotlight-box" style="margin-bottom: 2.5rem;">
+        <div class="dossier-hero-card vagabond-theme">
+          <div class="dossier-header-top">
+            <div class="dossier-title-area">
+              <div class="dossier-class-icon">🎒</div>
+              <div>
+                <div class="dossier-class-name">The Vagabond</div>
+                <div class="dossier-class-subtitle">Tier 1 Universal Starting Survivor • Levels 1–20 (All Adventurers Start Here)</div>
+              </div>
+            </div>
+            <div class="dossier-spec-pills">
+              <span class="dossier-spec-pill" style="border-color: #f59e0b; color: #f59e0b;">Resource: Grit (0–100)</span>
+              <span class="dossier-spec-pill">Primary: All Balanced</span>
+              <span class="dossier-spec-pill">Armor: Scrap & Rags</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Every hero in the Shattered Expanse starts here. Stripped of memories and divine favor, the Vagabond survives purely on grit, scavenged scraps, and raw adaptability. They possess heightened baseline luck to unearth relics and emergency triage techniques to bandage wounds in hostile territory before choosing their awakened path.
+          </p>
+
+          <div class="dossier-stats-grid">
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Resource Mechanics</div>
+              <div class="dossier-stat-value" style="color: #f59e0b;">Grit (0–100)</div>
+              <div class="dossier-stat-desc">Starts at 50. Generates <strong>+10/turn</strong>, <strong>+15 when struck</strong>, and <strong>+5 on basic strikes</strong>. Sustains triage & escape rolls.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Stat Growth per Level</div>
+              <div class="dossier-stat-value">+3 Attribute Points</div>
+              <div class="dossier-stat-desc">Automatic growth: <strong>+5 Max HP</strong> and <strong>+1 to All Stats</strong> (STR/AGI/INT/STA) automatically per level up.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Evolution Milestone</div>
+              <div class="dossier-stat-value" style="color: var(--accent-gold);">Level 20 Job Awakening</div>
+              <div class="dossier-stat-desc">Upon conquering Act I's trial, awaken into the <strong>Juggernaut</strong>, <strong>Phantom</strong>, <strong>Weaver</strong>, or <strong>Warden</strong> below.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Tactical Advantage</div>
+              <div class="dossier-stat-value" style="color: var(--accent-cyan);">Survivor Utility</div>
+              <div class="dossier-stat-desc">High baseline Gold find, emergency field triage, and trap/terrain damage immunity.</div>
+            </div>
+          </div>
+
+          <!-- Vagabond Skills Roster Inside Spotlight -->
+          <h4 style="font-family: var(--font-serif); color: var(--accent-gold); margin: 1.5rem 0 0.75rem 0; font-size: 1.05rem;">
+            🎒 Vagabond Survival Skills (Levels 1–20)
+          </h4>
+          <div class="skill-list" style="margin-top: 0.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🗡️</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Scavenger's Strike [Level 1]</span>
+                  <span class="skill-cost-badge">0 Grit • Generates +5 Grit • 0 Turn CD</span>
+                </div>
+                <p class="skill-desc">Basic survival strike dealing 100% Weapon Damage. Has a 10% chance to dislodge 1–5 Silver Prisms from the enemy.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🩹</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Patch Up [Level 5]</span>
+                  <span class="skill-cost-badge">30 Grit • Cooldown: 4 Turns</span>
+                </div>
+                <p class="skill-desc">Emergency field triage that immediately restores 15% Maximum HP. Inoperable while suffering from active Bleeding or Poison DoTs.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🏃</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Desperate Flee [Level 15]</span>
+                  <span class="skill-cost-badge">20 Grit • Cooldown: 1 Turn</span>
+                </div>
+                <p class="skill-desc">Attempt an evasion roll to disengage and escape from combat (50% base success rate). Automatically fails in Boss encounters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           FIRST JOB CHANGE AWAKENING LINEAGES (LEVEL 21+)
+           ========================================================= -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.75rem; flex-wrap: wrap; gap: 0.5rem;">
+        <div>
+          <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 0; font-size: 1.3rem;">
+            ⚔️ First Job Change Lineages (Levels 21–70+ Pinnacle)
+          </h3>
+          <p style="color: var(--text-muted); font-size: 0.86rem; margin: 0.25rem 0 0 0;">
+            Select a specialized class lineage below to view its complete identity, resource engine, 2nd job subclasses, and full skill timeline.
+          </p>
+        </div>
+      </div>
+
+      <!-- Class Dossier Selector Strip (First Job Lineages) -->
+      <div class="class-dossier-nav" role="tablist">
+        <button class="class-dossier-btn active" data-class="Juggernaut" onclick="switchClassDossier('Juggernaut', this)">
+          <span>🛡️</span> Juggernaut Lineage (STR)
+        </button>
+        <button class="class-dossier-btn" data-class="Phantom" onclick="switchClassDossier('Phantom', this)">
+          <span>⚡</span> Phantom Lineage (AGI)
+        </button>
+        <button class="class-dossier-btn" data-class="Weaver" onclick="switchClassDossier('Weaver', this)">
+          <span>🔮</span> Weaver Lineage (INT)
+        </button>
+        <button class="class-dossier-btn" data-class="Warden" onclick="switchClassDossier('Warden', this)">
+          <span>🌿</span> Warden Lineage (Hybrid)
+        </button>
+      </div>
+
+      <!-- =========================================================
+           1. JUGGERNAUT LINEAGE DOSSIER
+           ========================================================= -->
+      <div class="class-dossier-panel active" id="dossier-Juggernaut">
+        <div class="dossier-hero-card juggernaut-theme">
+          <div class="dossier-header-top">
+            <div class="dossier-title-area">
+              <div class="dossier-class-icon">🛡️</div>
+              <div>
+                <div class="dossier-class-name">Juggernaut Lineage</div>
+                <div class="dossier-class-subtitle">Heavy Armor Vanguard • STR / STA • Levels 21–70+ Pinnacle</div>
+              </div>
+            </div>
+            <div class="dossier-spec-pills">
+              <span class="dossier-spec-pill" style="border-color: #ef4444; color: #ef4444;">Resource: Fury & Resolve</span>
+              <span class="dossier-spec-pill">Primary: Strength (STR)</span>
+              <span class="dossier-spec-pill">Armor: Heavy Plate & Tower Shields</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            The unstoppable colossus of the battlefield. Juggernauts convert combat momentum and incoming pain directly into devastating physical wrath. Later branching into the bloodthirsty offense of the <strong>Berserker</strong> or the kinetic reflection fortress of the <strong>Void-Knight</strong>.
+          </p>
+
+          <div class="dossier-stats-grid">
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Fury Generation Loop</div>
+              <div class="dossier-stat-value" style="color: #ef4444;">Fury (0–100)</div>
+              <div class="dossier-stat-desc">Starts at 0. Generates <strong>+10 on melee hits</strong>, <strong>+15 when damaged</strong>. Decays (-10/room) outside battle.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Stat Scaling</div>
+              <div class="dossier-stat-value">STR (+1% Dmg, +0.5 Armor)</div>
+              <div class="dossier-stat-desc">Lv 21–50: <strong>+5 Points/Lv</strong> (+1 STR auto). Lv 51–70: <strong>+6 Points/Lv</strong> (+15 HP/Lv).</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Evolution Path</div>
+              <div class="dossier-stat-value" style="color: var(--accent-gold);">4-Tier Progression</div>
+              <div class="dossier-stat-desc">Juggernaut (Lv 21) ➔ Berserker / Void-Knight (Lv 51) ➔ World-Breaker / Aegis Lord (Lv 70+).</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Tactical Advantage</div>
+              <div class="dossier-stat-value" style="color: #ef4444;">Unstoppable Vanguard</div>
+              <div class="dossier-stat-desc">Unstoppable physical damage, threat control (Taunt), and room-wide armor shredding.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. BASE JUGGERNAUT SKILLS (TIER 2 • LV 21–50) -->
+        <div style="margin: 1.5rem 0;">
+          <h4 style="font-family: var(--font-serif); color: #ef4444; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>🔨</span> Base Juggernaut Skills (Levels 21–50)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card">
+              <div class="skill-icon">🔨</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Heavy Smash [Tier 2 • Lv 21 Juggernaut]</span>
+                  <span class="skill-cost-badge">20 Fury • Cooldown: 2 Turns</span>
+                </div>
+                <p class="skill-desc">Crushing overhead blow dealing 140% Physical Damage. Reduces target Evasion by 10% for 2 turns.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🛡️</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Taunt [Tier 2 • Lv 30 Juggernaut]</span>
+                  <span class="skill-cost-badge">15 Fury • Generates +10 Fury when struck • Cooldown: 4 Turns</span>
+                </div>
+                <p class="skill-desc">Battle roar that forces enemies to focus you instead of companions. Increases Total Armor by +25% for 3 turns.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">💥</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Earthshatter [Tier 2 • Lv 45 Juggernaut]</span>
+                  <span class="skill-cost-badge">40 Fury • Cooldown: 5 Turns</span>
+                </div>
+                <p class="skill-desc">Slams the ground to trigger a room-wide shockwave dealing 110% Physical Damage to all foes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. JUGGERNAUT SUBCLASS SPECIALIZATIONS & PINNACLE BRANCHES -->
+        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 2rem 0 1rem 0; font-size: 1.25rem;">
+          ⚔️ Subclass Specializations & Pinnacle Evolutions
+        </h3>
+
+        <!-- BRANCH A: BERSERKER -> WORLD-BREAKER -->
+        <div style="background: rgba(220, 38, 38, 0.05); border: 1px solid rgba(220, 38, 38, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.75rem;">
+          <div class="dossier-branch-card" style="border-top: 3px solid #dc2626; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #f87171;">🪓 Berserker (Tier 3 • Levels 51–70)</span>
+              <span class="dossier-branch-tier" style="background: rgba(220, 38, 38, 0.2); color: #f87171; border: 1px solid rgba(220, 38, 38, 0.4);">Offensive Vanguard</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Commands <strong>Bloodrage</strong>. Fury generation doubles below 50% HP. Sacrifices health for guaranteed criticals and relentless life-steal in close-quarters frenzy.
+            </p>
+          </div>
+
+          <!-- Berserker Skills -->
+          <h4 style="font-family: var(--font-serif); color: #f87171; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
+            🪓 Berserker Skills (Tier 3)
+          </h4>
+          <div class="skill-list" style="margin-bottom: 1.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🪓</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Reckless Swing [Tier 3 • Lv 51 Berserker]</span>
+                  <span class="skill-cost-badge">30 Fury + 10% HP • Cooldown: 2 Turns</span>
+                </div>
+                <p class="skill-desc">Wild, cleaving strike dealing 200% Physical Damage. Player takes 10% of current HP in recoil damage.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🩸</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Bloodlust [Tier 3 • Lv 60 Berserker]</span>
+                  <span class="skill-cost-badge">50 Fury • Cooldown: 5 Turns</span>
+                </div>
+                <p class="skill-desc">Enters an ecstatic frenzy for 3 turns: grants +20% Life Steal, but reduces Total Armor to 0.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pinnacle: World-Breaker -->
+          <div class="dossier-branch-card" style="border-top: 3px solid #b91c1c; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #fca5a5;">💥 World-Breaker (Tier 4 • Level 70+ Pinnacle)</span>
+              <span class="dossier-branch-tier" style="background: rgba(185, 28, 28, 0.3); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.5);">Pinnacle Ascension</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              The ultimate incarnation of berserk devastation. Annihilates reality itself with execution strikes that reset their cooldown upon claiming a kill.
+            </p>
+          </div>
+
+          <!-- World-Breaker Skill -->
+          <h4 style="font-family: var(--font-serif); color: #fca5a5; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
+            💥 World-Breaker Pinnacle Skill (Tier 4)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card" style="border-color: rgba(220, 38, 38, 0.4); background: rgba(220, 38, 38, 0.08);">
+              <div class="skill-icon" style="border-color: #dc2626;">💥</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Obliterate [Tier 4 • Lv 70 World-Breaker Pinnacle]</span>
+                  <span class="skill-cost-badge">60 Fury + 20% HP • Cooldown: 4 Turns</span>
+                </div>
+                <p class="skill-desc">A reality-rending execution strike dealing 500% Physical Damage. If this strike slays the target, its cooldown instantly resets to 0.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BRANCH B: VOID-KNIGHT -> AEGIS LORD -->
+        <div style="background: rgba(147, 51, 234, 0.05); border: 1px solid rgba(147, 51, 234, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div class="dossier-branch-card" style="border-top: 3px solid #9333ea; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #c084fc;">🌌 Void-Knight (Tier 3 • Levels 51–70)</span>
+              <span class="dossier-branch-tier" style="background: rgba(147, 51, 234, 0.2); color: #c084fc; border: 1px solid rgba(147, 51, 234, 0.4);">Defensive Bastion</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Commands <strong>Resolve</strong>. Converts 20% of mitigated damage into kinetic reserves, turning 100% of Total Armor directly into crushing weapon damage.
+            </p>
+          </div>
+
+          <!-- Void-Knight Skills -->
+          <h4 style="font-family: var(--font-serif); color: #c084fc; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
+            🌌 Void-Knight Skills (Tier 3)
+          </h4>
+          <div class="skill-list" style="margin-bottom: 1.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🛡️</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Shield Bash [Tier 3 • Lv 51 Void-Knight]</span>
+                  <span class="skill-cost-badge">25 Resolve • Cooldown: 3 Turns</span>
+                </div>
+                <p class="skill-desc">Slams enemy with a towering shield, dealing Physical Damage equal to 100% of Total Armor and stunning non-boss foes for 1 turn.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🌌</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Void Bulwark [Tier 3 • Lv 60 Void-Knight]</span>
+                  <span class="skill-cost-badge">40 Resolve • Cooldown: 6 Turns</span>
+                </div>
+                <p class="skill-desc">Absorbs 100% of damage taken for 1 turn, detonating 50% of stored kinetic damage as an AoE burst next turn.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pinnacle: Aegis Lord -->
+          <div class="dossier-branch-card" style="border-top: 3px solid #7e22ce; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #e9d5ff;">🛡️ Aegis Lord (Tier 4 • Level 70+ Pinnacle)</span>
+              <span class="dossier-branch-tier" style="background: rgba(126, 34, 206, 0.3); color: #e9d5ff; border: 1px solid rgba(168, 85, 247, 0.5);">Pinnacle Ascension</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              The unyielding fortress of the cosmos. Ascends to absolute physical invulnerability, reflecting enemy aggression with triple magnitude.
+            </p>
+          </div>
+
+          <!-- Aegis Lord Skill -->
+          <h4 style="font-family: var(--font-serif); color: #e9d5ff; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
+            🛡️ Aegis Lord Pinnacle Skill (Tier 4)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card" style="border-color: rgba(147, 51, 234, 0.4); background: rgba(147, 51, 234, 0.08);">
+              <div class="skill-icon" style="border-color: #9333ea;">🛡️</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Absolute Defense [Tier 4 • Lv 70 Aegis Lord Pinnacle]</span>
+                  <span class="skill-cost-badge">50 Resolve • Cooldown: 7 Turns</span>
+                </div>
+                <p class="skill-desc">For 2 turns, you are completely impervious to all damage and automatically reflect all incoming attacks at 300% strength.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           2. PHANTOM LINEAGE DOSSIER
+           ========================================================= -->
+      <div class="class-dossier-panel" id="dossier-Phantom">
+        <div class="dossier-hero-card phantom-theme">
+          <div class="dossier-header-top">
+            <div class="dossier-title-area">
+              <div class="dossier-class-icon">⚡</div>
+              <div>
+                <div class="dossier-class-name">Phantom Lineage</div>
+                <div class="dossier-class-subtitle">Finesse Assassin & Sniper • AGI / STA • Levels 21–70+ Pinnacle</div>
+              </div>
+            </div>
+            <div class="dossier-spec-pills">
+              <span class="dossier-spec-pill" style="border-color: #fbbf24; color: #fbbf24;">Resource: Energy & Focus</span>
+              <span class="dossier-spec-pill">Primary: Agility (AGI)</span>
+              <span class="dossier-spec-pill">Armor: Finesse Leathers & Wraps</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Lightning-fast stalkers of the void shadows. Phantoms boast untouchable Evasion, high-tempo multi-hit flurries, and deadly poisons. Later specializing into the stealth burst executions of the <strong>Assassin</strong> or the 100% armor-penetrating artillery of the <strong>Rift-Sniper</strong>.
+          </p>
+
+          <div class="dossier-stats-grid">
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Energy Regeneration Loop</div>
+              <div class="dossier-stat-value" style="color: #fbbf24;">Energy (0–100)</div>
+              <div class="dossier-stat-desc">Starts full at 100. Rapidly replenishes <strong>+25 Energy every single turn</strong>. Rewards fast combo cycles.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Stat Scaling</div>
+              <div class="dossier-stat-value">AGI (+1% Dmg, +0.1% Crit, +0.15% Evade)</div>
+              <div class="dossier-stat-desc">Lv 21–50: <strong>+5 Points/Lv</strong> (+1 AGI auto). Lv 51–70: <strong>+6 Points/Lv</strong> (+15 HP/Lv).</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Evolution Path</div>
+              <div class="dossier-stat-value" style="color: var(--accent-gold);">4-Tier Progression</div>
+              <div class="dossier-stat-desc">Phantom (Lv 21) ➔ Assassin / Rift-Sniper (Lv 51) ➔ Shadow-Walker / Void-Stalker (Lv 70+).</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Tactical Advantage</div>
+              <div class="dossier-stat-value" style="color: #fbbf24;">Lethal Evasion</div>
+              <div class="dossier-stat-desc">Extreme Evasion, rapid multi-hit combos, and stacking lethal neurotoxin damage.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. BASE PHANTOM SKILLS (TIER 2 • LV 21–50) -->
+        <div style="margin: 1.5rem 0;">
+          <h4 style="font-family: var(--font-serif); color: #fbbf24; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>⚡</span> Base Phantom Skills (Levels 21–50)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card">
+              <div class="skill-icon">⚡</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Flurry [Tier 2 • Lv 21 Phantom]</span>
+                  <span class="skill-cost-badge">25 Energy • Cooldown: 0 Turns</span>
+                </div>
+                <p class="skill-desc">High-tempo dual strike, each hit dealing 70% Finesse Damage with double trigger chance for on-hit elemental affixes.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🧪</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Venom-Laced Blade [Tier 2 • Lv 30 Phantom]</span>
+                  <span class="skill-cost-badge">35 Energy • Cooldown: 3 Turns</span>
+                </div>
+                <p class="skill-desc">Coats weapons in neurotoxin. Next attack inflicts a Poison DoT dealing 20% AGI per turn for 4 turns.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">💨</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Smoke Bomb [Tier 2 • Lv 45 Phantom]</span>
+                  <span class="skill-cost-badge">50 Energy • Cooldown: 6 Turns</span>
+                </div>
+                <p class="skill-desc">Detonates an obscurant pellet, instantly raising player Evasion to 80% for 1 turn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. PHANTOM SUBCLASS SPECIALIZATIONS & PINNACLE BRANCHES -->
+        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 2rem 0 1rem 0; font-size: 1.25rem;">
+          ⚔️ Subclass Specializations & Pinnacle Evolutions
+        </h3>
+
+        <!-- BRANCH A: ASSASSIN -> SHADOW-WALKER -->
+        <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.75rem;">
+          <div class="dossier-branch-card" style="border-top: 3px solid #f59e0b; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #fbbf24;">🗡️ Assassin (Tier 3 • Levels 51–70)</span>
+              <span class="dossier-branch-tier" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4);">Melee Stealth Specialist</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Commands <strong>Combo Points</strong> and neurotoxins. Consumes debuff stacks with <em>Eviscerate</em> for multiplicative burst from unseen shadows.
+            </p>
+          </div>
+
+          <!-- Assassin Skills -->
+          <h4 style="font-family: var(--font-serif); color: #fbbf24; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
+            🗡️ Assassin Skills (Tier 3)
+          </h4>
+          <div class="skill-list" style="margin-bottom: 1.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🗡️</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Eviscerate [Tier 3 • Lv 51 Assassin]</span>
+                  <span class="skill-cost-badge">30 Energy • Cooldown: 2 Turns</span>
+                </div>
+                <p class="skill-desc">Consumes all Bleed and Poison stacks on the target for catastrophic burst damage (+50% bonus damage per stack consumed).</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">👤</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Shadow Cloak [Tier 3 • Lv 60 Assassin]</span>
+                  <span class="skill-cost-badge">40 Energy • Cooldown: 5 Turns</span>
+                </div>
+                <p class="skill-desc">Dissolves into shadows for 2 turns. Enemies cannot target you; your next strike from stealth is a guaranteed Critical Hit.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pinnacle: Shadow-Walker -->
+          <div class="dossier-branch-card" style="border-top: 3px solid #d97706; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #fde68a;">⏳ Shadow-Walker (Tier 4 • Level 70+ Pinnacle)</span>
+              <span class="dossier-branch-tier" style="background: rgba(217, 119, 6, 0.3); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.5);">Pinnacle Ascension</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              The phantom executioner. Inscribes doom upon enemies, multiplying all received damage during countdown into an absolute lethal execution.
+            </p>
+          </div>
+
+          <!-- Shadow-Walker Skill -->
+          <h4 style="font-family: var(--font-serif); color: #fde68a; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
+            ⏳ Shadow-Walker Pinnacle Skill (Tier 4)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card" style="border-color: rgba(245, 158, 11, 0.4); background: rgba(245, 158, 11, 0.08);">
+              <div class="skill-icon" style="border-color: #f59e0b;">⏳</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Death Mark [Tier 4 • Lv 70 Shadow-Walker Pinnacle]</span>
+                  <span class="skill-cost-badge">50 Energy • Cooldown: 5 Turns</span>
+                </div>
+                <p class="skill-desc">Brands an enemy with a death mark. After 3 turns, the mark detonates, dealing True Damage equal to 50% of all damage the target took during the countdown.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BRANCH B: RIFT-SNIPER -> VOID-STALKER -->
+        <div style="background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div class="dossier-branch-card" style="border-top: 3px solid #38bdf8; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #38bdf8;">🎯 Rift-Sniper (Tier 3 • Levels 51–70)</span>
+              <span class="dossier-branch-tier" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4);">Ranged Artillery</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Commands <strong>Focus</strong>. Controls the engagement from extreme range with 100% armor-penetrating charged shots and defensive barbed caltrops.
+            </p>
+          </div>
+
+          <!-- Rift-Sniper Skills -->
+          <h4 style="font-family: var(--font-serif); color: #38bdf8; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
+            🎯 Rift-Sniper Skills (Tier 3)
+          </h4>
+          <div class="skill-list" style="margin-bottom: 1.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🎯</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Aimed Shot [Tier 3 • Lv 51 Rift-Sniper]</span>
+                  <span class="skill-cost-badge">45 Focus • Cooldown: 4 Turns</span>
+                </div>
+                <p class="skill-desc">Takes 1 turn to align the sights. On the 2nd turn, unleashes a 350% Finesse shot with 100% Armor Penetration.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">⚙️</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Caltrops [Tier 3 • Lv 60 Rift-Sniper]</span>
+                  <span class="skill-cost-badge">30 Focus • Cooldown: 4 Turns</span>
+                </div>
+                <p class="skill-desc">Scatters barbed spikes across the room. Any foe executing a melee attack takes physical damage per swing for 3 turns.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pinnacle: Void-Stalker -->
+          <div class="dossier-branch-card" style="border-top: 3px solid #0284c7; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #bae6fd;">🏹 Void-Stalker (Tier 4 • Level 70+ Pinnacle)</span>
+              <span class="dossier-branch-tier" style="background: rgba(2, 132, 199, 0.3); color: #bae6fd; border: 1px solid rgba(56, 189, 248, 0.5);">Pinnacle Ascension</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              The interdimensional archer. Pierces temporal boundaries to delete portions of enemy health bars from reality entirely.
+            </p>
+          </div>
+
+          <!-- Void-Stalker Skill -->
+          <h4 style="font-family: var(--font-serif); color: #bae6fd; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
+            🏹 Void-Stalker Pinnacle Skill (Tier 4)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.08);">
+              <div class="skill-icon" style="border-color: #38bdf8;">🏹</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Dimensional Piercer [Tier 4 • Lv 70 Void-Stalker Pinnacle]</span>
+                  <span class="skill-cost-badge">60 Focus • Cooldown: 4 Turns</span>
+                </div>
+                <p class="skill-desc">Fires a quantum arrow that bypasses the enemy's current HP bar entirely, permanently reducing target Maximum HP by 20%.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           3. WEAVER LINEAGE DOSSIER
+           ========================================================= -->
+      <div class="class-dossier-panel" id="dossier-Weaver">
+        <div class="dossier-hero-card weaver-theme">
+          <div class="dossier-header-top">
+            <div class="dossier-title-area">
+              <div class="dossier-class-icon">🔮</div>
+              <div>
+                <div class="dossier-class-name">Weaver Lineage</div>
+                <div class="dossier-class-subtitle">Arcane Spellcaster & Sanguine Mage • INT / STA • Levels 21–70+ Pinnacle</div>
+              </div>
+            </div>
+            <div class="dossier-spec-pills">
+              <span class="dossier-spec-pill" style="border-color: #38bdf8; color: #38bdf8;">Resource: Deep Mana & Blood</span>
+              <span class="dossier-spec-pill">Primary: Intelligence (INT)</span>
+              <span class="dossier-spec-pill">Armor: Arcane Silk & Sanguine Robes</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Masters of the celestial weave and cosmic entropy. Weavers boast 100% accurate homing spells, damage-absorbing void barriers, and devastating elemental cascades. Specializing into the tri-element cycle of the <strong>Elementalist</strong> or the forbidden HP-sacrificing devastation of the <strong>Blood Mage</strong>.
+          </p>
+
+          <div class="dossier-stats-grid">
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Mana Reservoir Scaling</div>
+              <div class="dossier-stat-value" style="color: #38bdf8;">Base 50 + (INT × 5)</div>
+              <div class="dossier-stat-desc">Deep spell pool. Regenerates +5% Max MP/turn and restores full pools via siphon spells.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Stat Scaling</div>
+              <div class="dossier-stat-value">INT (+1% Spell Dmg, +Resistances)</div>
+              <div class="dossier-stat-desc">Lv 21–50: <strong>+5 Points/Lv</strong> (+1 INT auto). Lv 51–70: <strong>+6 Points/Lv</strong> (+15 HP/Lv).</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Evolution Path</div>
+              <div class="dossier-stat-value" style="color: var(--accent-gold);">4-Tier Progression</div>
+              <div class="dossier-stat-desc">Weaver (Lv 21) ➔ Elementalist / Blood Mage (Lv 51) ➔ Arch-Mage / Crimson Sovereign (Lv 70+).</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Tactical Advantage</div>
+              <div class="dossier-stat-value" style="color: #38bdf8;">Arcane Mastery</div>
+              <div class="dossier-stat-desc">100% accurate homing spells, void barriers, and massive AoE elemental devastation.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. BASE WEAVER SKILLS (TIER 2 • LV 21–50) -->
+        <div style="margin: 1.5rem 0;">
+          <h4 style="font-family: var(--font-serif); color: #38bdf8; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>🔮</span> Base Weaver Skills (Levels 21–50)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card">
+              <div class="skill-icon">🔮</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Arcane Bolt [Tier 2 • Lv 21 Weaver]</span>
+                  <span class="skill-cost-badge">10 Mana • Cooldown: 0 Turns</span>
+                </div>
+                <p class="skill-desc">Launches a homing lance of starlight dealing 130% Magic Damage. Automatically bypasses enemy Evasion (Never misses).</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🌀</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Siphon Energy [Tier 2 • Lv 30 Weaver]</span>
+                  <span class="skill-cost-badge">0 Mana • Generates Mana • Cooldown: 3 Turns</span>
+                </div>
+                <p class="skill-desc">Channels enemy aether, dealing 50% Magic Damage and restoring Mana equal to 100% of damage dealt.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🌐</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Void Shield [Tier 2 • Lv 45 Weaver]</span>
+                  <span class="skill-cost-badge">30 Mana • Cooldown: 5 Turns</span>
+                </div>
+                <p class="skill-desc">Projects an arcane barrier absorbing damage equal to 20% of player Maximum HP for 3 turns.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. WEAVER SUBCLASS SPECIALIZATIONS & PINNACLE BRANCHES -->
+        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 2rem 0 1rem 0; font-size: 1.25rem;">
+          ⚔️ Subclass Specializations & Pinnacle Evolutions
+        </h3>
+
+        <!-- BRANCH A: ELEMENTALIST -> ARCH-MAGE -->
+        <div style="background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.75rem;">
+          <div class="dossier-branch-card" style="border-top: 3px solid #38bdf8; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #38bdf8;">🔥 Elementalist (Tier 3 • Levels 51–70)</span>
+              <span class="dossier-branch-tier" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4);">Tri-Flux Arcane</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Commands <strong>Tri-Flux</strong> (Fire for +25% Dmg, Ice for +30% Armor, Lightning for 2 actions/turn) and meteor cataclysms.
+            </p>
+          </div>
+
+          <!-- Elementalist Skills -->
+          <h4 style="font-family: var(--font-serif); color: #38bdf8; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
+            🔥 Elementalist Skills (Tier 3)
+          </h4>
+          <div class="skill-list" style="margin-bottom: 1.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🔥</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Elemental Cycle [Tier 3 • Lv 51 Elementalist]</span>
+                  <span class="skill-cost-badge">15 Mana • Cooldown: 1 Turn</span>
+                </div>
+                <p class="skill-desc">Cycles active stance: Fire (+25% Dmg), Ice (+30% Armor), or Lightning (2 actions per turn).</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">☄️</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Cataclysm [Tier 3 • Lv 60 Elementalist]</span>
+                  <span class="skill-cost-badge">40 Mana • Cooldown: 5 Turns</span>
+                </div>
+                <p class="skill-desc">Calls down an elemental meteor dealing 250% AoE Magic Damage matching your active elemental stance.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pinnacle: Arch-Mage -->
+          <div class="dossier-branch-card" style="border-top: 3px solid #0284c7; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #bae6fd;">⌛ Arch-Mage (Tier 4 • Level 70+ Pinnacle)</span>
+              <span class="dossier-branch-tier" style="background: rgba(2, 132, 199, 0.3); color: #bae6fd; border: 1px solid rgba(56, 189, 248, 0.5);">Pinnacle Ascension</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Supreme grandmaster of time and space. Halts global reality to unleash consecutive turns unimpeded by enemy response.
+            </p>
+          </div>
+
+          <!-- Arch-Mage Skill -->
+          <h4 style="font-family: var(--font-serif); color: #bae6fd; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
+            ⌛ Arch-Mage Pinnacle Skill (Tier 4)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card" style="border-color: rgba(56, 189, 248, 0.4); background: rgba(56, 189, 248, 0.08);">
+              <div class="skill-icon" style="border-color: #38bdf8;">⌛</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Time Stop [Tier 4 • Lv 70 Arch-Mage Pinnacle]</span>
+                  <span class="skill-cost-badge">60 Mana • Cooldown: 8 Turns</span>
+                </div>
+                <p class="skill-desc">Freezes global combat ticks. Player takes 3 consecutive turns back-to-back while all foes remain completely frozen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BRANCH B: BLOOD MAGE -> CRIMSON SOVEREIGN -->
+        <div style="background: rgba(225, 29, 72, 0.05); border: 1px solid rgba(225, 29, 72, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div class="dossier-branch-card" style="border-top: 3px solid #e11d48; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #fb7185;">🩸 Blood Mage (Tier 3 • Levels 51–70)</span>
+              <span class="dossier-branch-tier" style="background: rgba(225, 29, 72, 0.2); color: #fb7185; border: 1px solid rgba(225, 29, 72, 0.4);">Sanguine Sacrifice</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Consumes player HP instead of Mana for 2x spell burst and executes companion sacrifice pacts for immediate recovery.
+            </p>
+          </div>
+
+          <!-- Blood Mage Skills -->
+          <h4 style="font-family: var(--font-serif); color: #fb7185; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
+            🩸 Blood Mage Skills (Tier 3)
+          </h4>
+          <div class="skill-list" style="margin-bottom: 1.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🩸</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Hemorrhage [Tier 3 • Lv 51 Blood Mage]</span>
+                  <span class="skill-cost-badge">10% Max HP • Cooldown: 1 Turn</span>
+                </div>
+                <p class="skill-desc">Siphons player vitality into dark sorcery. Deals 150% Magic Damage costing 10% Max HP instead of Mana.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">💀</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Crimson Pact [Tier 3 • Lv 60 Blood Mage]</span>
+                  <span class="skill-cost-badge">Companion Life • Cooldown: 99 Turns</span>
+                </div>
+                <p class="skill-desc">Sacrifices active companion instantly to fully restore 100% of player HP and Mana (usable once per node).</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pinnacle: Crimson Sovereign -->
+          <div class="dossier-branch-card" style="border-top: 3px solid #be123c; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #fecdd3;">🩸 Crimson Sovereign (Tier 4 • Level 70+ Pinnacle)</span>
+              <span class="dossier-branch-tier" style="background: rgba(190, 18, 60, 0.3); color: #fecdd3; border: 1px solid rgba(225, 29, 72, 0.5);">Pinnacle Ascension</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              The immortal harbinger of vital entropy. Sacrifices virtually all mortal health to unleash apocalyptic shockwaves.
+            </p>
+          </div>
+
+          <!-- Crimson Sovereign Skill -->
+          <h4 style="font-family: var(--font-serif); color: #fecdd3; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
+            🩸 Crimson Sovereign Pinnacle Skill (Tier 4)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card" style="border-color: rgba(225, 29, 72, 0.4); background: rgba(225, 29, 72, 0.08);">
+              <div class="skill-icon" style="border-color: #e11d48;">🩸</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Blood Boil [Tier 4 • Lv 70 Crimson Sovereign Pinnacle]</span>
+                  <span class="skill-cost-badge">All HP down to 1 • Cooldown: 8 Turns</span>
+                </div>
+                <p class="skill-desc">Drains player health down to 1 HP to release an apocalyptic shockwave dealing 5× total HP sacrificed as raw Magic Damage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           4. WARDEN LINEAGE DOSSIER
+           ========================================================= -->
+      <div class="class-dossier-panel" id="dossier-Warden">
+        <div class="dossier-hero-card warden-theme">
+          <div class="dossier-header-top">
+            <div class="dossier-title-area">
+              <div class="dossier-class-icon">🌿</div>
+              <div>
+                <div class="dossier-class-name">Warden Lineage</div>
+                <div class="dossier-class-subtitle">Pack Master, Necromancer & Druid • Hybrid STA/INT/STR • Levels 21–70+</div>
+              </div>
+            </div>
+            <div class="dossier-spec-pills">
+              <span class="dossier-spec-pill" style="border-color: #10b981; color: #10b981;">Resource: Animus & Corpses</span>
+              <span class="dossier-spec-pill">Primary: STA / INT / STR</span>
+              <span class="dossier-spec-pill">Armor: Mail, Carapaces & Totems</span>
+            </div>
+          </div>
+
+          <p style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem;">
+            Masters of the wild pack and forbidden occult bonds. Wardens command loyal beast summons, transfer negative ailments to pets, and siphon vitality through thorny roots. Specializing into the undead legion explosions of the <strong>Necromancer</strong> or the chimera shapeshifting ferocity of the <strong>Druid</strong>.
+          </p>
+
+          <div class="dossier-stats-grid">
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Animus Resonance Loop</div>
+              <div class="dossier-stat-value" style="color: #10b981;">Animus (0–100)</div>
+              <div class="dossier-stat-desc">Starts at 30. Generated when your <strong>summon strikes (+15)</strong> or via <strong>life-leeching skills (+10)</strong>.</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Stat Scaling</div>
+              <div class="dossier-stat-value">STA (+10 HP), INT & STR</div>
+              <div class="dossier-stat-desc">Lv 21–50: <strong>+5 Points/Lv</strong> (+1 STA auto). Lv 51–70: <strong>+6 Points/Lv</strong> (+15 HP/Lv).</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Evolution Path</div>
+              <div class="dossier-stat-value" style="color: var(--accent-gold);">4-Tier Progression</div>
+              <div class="dossier-stat-desc">Warden (Lv 21) ➔ Necromancer / Druid (Lv 51) ➔ Death-Caller / Chimera-Lord (Lv 70+).</div>
+            </div>
+            <div class="dossier-stat-block">
+              <div class="dossier-stat-label">Tactical Advantage</div>
+              <div class="dossier-stat-value" style="color: #10b981;">Pack Dominance</div>
+              <div class="dossier-stat-desc">Autonomous pet combat, debuff transference, and life-leeching root barriers.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. BASE WARDEN SKILLS (TIER 2 • LV 21–50) -->
+        <div style="margin: 1.5rem 0;">
+          <h4 style="font-family: var(--font-serif); color: #10b981; font-size: 1.1rem; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>🌿</span> Base Warden Skills (Levels 21–50)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card">
+              <div class="skill-icon">🐺</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Summon Void-Pup [Tier 2 • Lv 21 Warden]</span>
+                  <span class="skill-cost-badge">30 Animus • Cooldown: 8 Turns</span>
+                </div>
+                <p class="skill-desc">Conjures a pet beast with 30% player Max HP. Strikes every turn for 50% INT damage and generates +15 Animus.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🌿</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Leeching Vines [Tier 2 • Lv 30 Warden]</span>
+                  <span class="skill-cost-badge">25 Animus • Cooldown: 3 Turns</span>
+                </div>
+                <p class="skill-desc">Thorny roots erupt, dealing 80% Magic Damage and healing the player for 50% of damage dealt.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🔗</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Shared Burden [Tier 2 • Lv 45 Warden]</span>
+                  <span class="skill-cost-badge">20 Animus • Cooldown: 4 Turns</span>
+                </div>
+                <p class="skill-desc">Mystical tether that transfers all active debuffs (Poison, Chill, Weakness) from the player onto the active summon.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. WARDEN SUBCLASS SPECIALIZATIONS & PINNACLE BRANCHES -->
+        <h3 style="font-family: var(--font-serif); color: var(--accent-cyan); margin: 2rem 0 1rem 0; font-size: 1.25rem;">
+          ⚔️ Subclass Specializations & Pinnacle Evolutions
+        </h3>
+
+        <!-- BRANCH A: NECROMANCER -> DEATH-CALLER -->
+        <div style="background: rgba(139, 92, 246, 0.05); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.75rem;">
+          <div class="dossier-branch-card" style="border-top: 3px solid #8b5cf6; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #c4b5fd;">💀 Necromancer (Tier 3 • Levels 51–70)</span>
+              <span class="dossier-branch-tier" style="background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.4);">Undead Swarm Path</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Commands <strong>Corpses</strong> to raise skeletal frost mages and detonate fallen enemy remains for catastrophic AoE damage.
+            </p>
+          </div>
+
+          <!-- Necromancer Skills -->
+          <h4 style="font-family: var(--font-serif); color: #c4b5fd; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
+            💀 Necromancer Skills (Tier 3)
+          </h4>
+          <div class="skill-list" style="margin-bottom: 1.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">💀</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Raise Skeletal Mage [Tier 3 • Lv 51 Necromancer]</span>
+                  <span class="skill-cost-badge">25 Animus • Cooldown: 3 Turns</span>
+                </div>
+                <p class="skill-desc">Raises a skeletal frost mage from fallen essence that casts ranged ice lances. Can command up to 3 active skeletons.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">💣</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Corpse Explosion [Tier 3 • Lv 60 Necromancer]</span>
+                  <span class="skill-cost-badge">35 Animus • Cooldown: 2 Turns</span>
+                </div>
+                <p class="skill-desc">Detonates a fallen enemy corpse, dealing damage equal to 100% of its Max HP as AoE damage to all remaining foes.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pinnacle: Death-Caller -->
+          <div class="dossier-branch-card" style="border-top: 3px solid #7c3aed; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #ede9fe;">👑 Death-Caller (Tier 4 • Level 70+ Pinnacle)</span>
+              <span class="dossier-branch-tier" style="background: rgba(124, 58, 237, 0.3); color: #ede9fe; border: 1px solid rgba(139, 92, 246, 0.5);">Pinnacle Ascension</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              The immortal master of the underworld. Commands legions of the restless dead to overrun and detonate across entire battlefields.
+            </p>
+          </div>
+
+          <!-- Death-Caller Skill -->
+          <h4 style="font-family: var(--font-serif); color: #ede9fe; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
+            👑 Death-Caller Pinnacle Skill (Tier 4)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card" style="border-color: rgba(16, 185, 129, 0.4); background: rgba(16, 185, 129, 0.08);">
+              <div class="skill-icon" style="border-color: #10b981;">👑</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Army of the Damned [Tier 4 • Lv 70 Death-Caller Pinnacle]</span>
+                  <span class="skill-cost-badge">70 Animus • Cooldown: 8 Turns</span>
+                </div>
+                <p class="skill-desc">Instantly summons 5 elite skeleton champions ignoring regular summon limits. Skeletons explode for massive AoE damage on death.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BRANCH B: DRUID -> CHIMERA-LORD -->
+        <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div class="dossier-branch-card" style="border-top: 3px solid #10b981; margin-bottom: 1.25rem; background: rgba(0,0,0,0.35);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #6ee7b7;">🐾 Druid (Tier 3 • Levels 51–70)</span>
+              <span class="dossier-branch-tier" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4);">Primal Beast Path</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              Commands <strong>Primal Surge</strong>. Metamorphoses into a void chimera scaling with STR and INT, gaining +100% Armor Barkskin and immunity to Critical Hits.
+            </p>
+          </div>
+
+          <!-- Druid Skills -->
+          <h4 style="font-family: var(--font-serif); color: #6ee7b7; font-size: 1rem; margin: 0.75rem 0 0.5rem 0;">
+            🐾 Druid Skills (Tier 3)
+          </h4>
+          <div class="skill-list" style="margin-bottom: 1.5rem;">
+            <div class="skill-card">
+              <div class="skill-icon">🐺</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Chimera Shift [Tier 3 • Lv 51 Druid]</span>
+                  <span class="skill-cost-badge">40 Animus • Cooldown: 6 Turns</span>
+                </div>
+                <p class="skill-desc">Metamorphose into a terrifying Void Chimera for 4 turns. Replaces spells with primal claws scaling off STR and INT.</p>
+              </div>
+            </div>
+
+            <div class="skill-card">
+              <div class="skill-icon">🌲</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Barkskin [Tier 3 • Lv 60 Druid]</span>
+                  <span class="skill-cost-badge">30 Animus • Cooldown: 5 Turns</span>
+                </div>
+                <p class="skill-desc">Hardens flesh into ironwood. Increases Total Armor by +100% and grants complete immunity to Critical Hits for 3 turns.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pinnacle: Chimera-Lord -->
+          <div class="dossier-branch-card" style="border-top: 3px solid #059669; margin-bottom: 1rem; background: rgba(0,0,0,0.45);">
+            <div class="dossier-branch-header">
+              <span class="dossier-branch-title" style="color: #a7f3d0;">🦁 Chimera-Lord (Tier 4 • Level 70+ Pinnacle)</span>
+              <span class="dossier-branch-tier" style="background: rgba(5, 150, 105, 0.3); color: #a7f3d0; border: 1px solid rgba(16, 185, 129, 0.5);">Pinnacle Ascension</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 0.5rem;">
+              The apex chimera transcendent. Permanently unifies human and primal beast essences without timer constraints, granting passive squad-wide life leech.
+            </p>
+          </div>
+
+          <!-- Chimera-Lord Skill -->
+          <h4 style="font-family: var(--font-serif); color: #a7f3d0; font-size: 1rem; margin: 0.5rem 0 0.5rem 0;">
+            🦁 Chimera-Lord Pinnacle Skill (Tier 4)
+          </h4>
+          <div class="skill-list">
+            <div class="skill-card" style="border-color: rgba(74, 222, 128, 0.4); background: rgba(74, 222, 128, 0.08);">
+              <div class="skill-icon" style="border-color: #4ade80;">🦁</div>
+              <div class="skill-content">
+                <div class="skill-header">
+                  <span class="skill-name">Apex Evolution [Tier 4 • Lv 70 Chimera-Lord Pinnacle]</span>
+                  <span class="skill-cost-badge">Passive • Always Active • 0 Turn CD</span>
+                </div>
+                <p class="skill-desc">Permanently merges beast forms into human form. Grants permanent Chimera form buffs without transforming, and heals all allies for 10% of all damage dealt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
