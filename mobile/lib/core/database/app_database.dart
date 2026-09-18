@@ -1,8 +1,8 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:drift/drift.dart';
-
-import 'connection/unsupported.dart'
-    if (dart.library.ffi) 'connection/native.dart'
-    if (dart.library.js_interop) 'connection/web.dart' as impl;
+import 'package:drift_flutter/drift_flutter.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:path/path.dart' as p;
 
 import 'tables/game_tables.dart';
 
@@ -10,7 +10,7 @@ part 'app_database.g.dart';
 
 @DriftDatabase(tables: [Players, Rooms, Items, Mobs])
 class AppDatabase extends _$AppDatabase {
-  AppDatabase() : super(impl.connect());
+  AppDatabase([QueryExecutor? executor]) : super(executor ?? _openConnection());
 
   AppDatabase.forTesting(super.connection);
 
@@ -404,3 +404,28 @@ class AppDatabase extends _$AppDatabase {
         },
       );
 }
+
+/// Opens (or creates) the SQLite database file in the app documents directory,
+/// or uses IndexedDB / WebAssembly when running on the web.
+QueryExecutor _openConnection() {
+  if (kIsWeb) {
+    return driftDatabase(
+      name: 'vagabond_hero',
+      web: DriftWebOptions(
+        sqlite3Wasm: Uri.parse('sqlite3.wasm'),
+        driftWorker: Uri.parse('drift_worker.js'),
+      ),
+    );
+  }
+
+  return driftDatabase(
+    name: 'vagabond_hero',
+    native: DriftNativeOptions(
+      databasePath: () async {
+        final dir = await getApplicationDocumentsDirectory();
+        return p.join(dir.path, 'vagabond_hero.sqlite');
+      },
+    ),
+  );
+}
+
