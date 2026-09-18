@@ -78,7 +78,14 @@ class _GameScreenState extends ConsumerState<GameScreen> {
         appBar: AppBar(
           backgroundColor: GameColors.bgSecondary,
           elevation: 0,
-          titleSpacing: 12,
+          leading: Navigator.canPop(context)
+              ? IconButton(
+                  icon: const Icon(Icons.dashboard_outlined, color: GameColors.cyanRune, size: 20),
+                  tooltip: 'Return to Dashboard',
+                  onPressed: () => Navigator.of(context).pop(),
+                )
+              : null,
+          titleSpacing: Navigator.canPop(context) ? 0 : 12,
           title: Text(
             'VAGABOND HERO',
             style: GoogleFonts.cinzel(
