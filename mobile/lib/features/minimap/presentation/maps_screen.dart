@@ -225,20 +225,31 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
                 children: [
                   const Icon(Icons.radar, size: 14, color: GameColors.cyanRune),
                   const SizedBox(width: 6),
-                  Text(
-                    'NODE SECTOR: ACT 1 • THE ASHEN EXPEDITION',
-                    style: GoogleFonts.jetBrainsMono(
-                      fontSize: 10.5,
-                      fontWeight: FontWeight.bold,
-                      color: GameColors.cyanRune,
+                  Expanded(
+                    child: Text(
+                      'ACT 1 // THE ASHEN EXPEDITION',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.bold,
+                        color: GameColors.cyanRune,
+                      ),
                     ),
                   ),
-                  const Spacer(),
-                  Text(
-                    '${allRooms.values.where((r) => r.isExplored).length}/${allRooms.length} ROOMS SCANNED',
-                    style: GoogleFonts.jetBrainsMono(
-                      fontSize: 10,
-                      color: GameColors.textMuted,
+                  const SizedBox(width: 8),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: Colors.black38,
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(color: GameColors.borderSubtle, width: 0.8),
+                    ),
+                    child: Text(
+                      '${allRooms.values.where((r) => r.isExplored).length}/${allRooms.length} SCANNED',
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 9.5,
+                        color: GameColors.textMuted,
+                      ),
                     ),
                   ),
                 ],
@@ -248,6 +259,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
             // Interactive Map Canvas
             Expanded(
               child: Stack(
+                clipBehavior: Clip.hardEdge,
                 children: [
                   LayoutBuilder(
                     builder: (context, constraints) {
@@ -261,7 +273,8 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
                       final canvasSize = Size(spanW, spanH);
 
                       return InteractiveViewer(
-                        boundaryMargin: const EdgeInsets.all(160),
+                        clipBehavior: Clip.hardEdge,
+                        boundaryMargin: const EdgeInsets.all(40),
                         minScale: 0.3,
                         maxScale: 2.5,
                         child: CustomPaint(
