@@ -112,11 +112,14 @@ class MapsScreen extends ConsumerStatefulWidget {
 class _MapsScreenState extends ConsumerState<MapsScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  late final TransformationController _transformationController;
   RoomData? _selectedRoom;
+  bool _hasCenteredOnPlayer = false;
 
   @override
   void initState() {
     super.initState();
+    _transformationController = TransformationController();
     _tabController = TabController(
       length: 2,
       vsync: this,
@@ -126,8 +129,49 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
 
   @override
   void dispose() {
+    _transformationController.dispose();
     _tabController.dispose();
     super.dispose();
+  }
+
+  void _centerMapOnPlayerNode({
+    required List<_MapNode> nodes,
+    required int currentRoomId,
+    required Size viewportSize,
+    required Size canvasSize,
+  }) {
+    if (nodes.isEmpty) return;
+
+    final maxCol = nodes.map((n) => n.col).reduce(math.max).toDouble();
+    final minCol = nodes.map((n) => n.col).reduce(math.min).toDouble();
+    final maxRow = nodes.map((n) => n.row).reduce(math.max).toDouble();
+    final minRow = nodes.map((n) => n.row).reduce(math.min).toDouble();
+
+    final spanCol = (maxCol - minCol + 1).clamp(1.0, 100.0);
+    final spanRow = (maxRow - minRow + 1).clamp(1.0, 100.0);
+
+    const cell = 64.0;
+    final totalW = spanCol * cell;
+    final totalH = spanRow * cell;
+    final cx = (canvasSize.width - totalW) / 2 + cell / 2;
+    final cy = (canvasSize.height - totalH) / 2 + cell / 2;
+
+    // Find current player node, or fallback to first node
+    final playerNode = nodes.firstWhere(
+      (n) => n.room.id == currentRoomId,
+      orElse: () => nodes.first,
+    );
+
+    final nodePos = Offset(
+      cx + (playerNode.col - minCol) * cell,
+      cy + (playerNode.row - minRow) * cell,
+    );
+
+    // Center target coordinates inside viewport
+    final targetX = (viewportSize.width / 2) - nodePos.dx;
+    final targetY = (viewportSize.height / 2) - nodePos.dy;
+
+    _transformationController.value = Matrix4.translationValues(targetX, targetY, 0.0);
   }
 
   @override
@@ -252,6 +296,51 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
                       ),
                     ),
                   ),
+                  const SizedBox(width: 8),
+                  // Recenter on Player Button
+                  InkWell(
+                    borderRadius: BorderRadius.circular(4),
+                    onTap: () {
+                      final size = MediaQuery.of(context).size;
+                      final maxCol = nodes.map((n) => n.col).fold(0, math.max);
+                      final minCol = nodes.map((n) => n.col).fold(0, math.min);
+                      final maxRow = nodes.map((n) => n.row).fold(0, math.max);
+                      final minRow = nodes.map((n) => n.row).fold(0, math.min);
+                      final spanW = ((maxCol - minCol + 3) * 64.0).clamp(size.width, 1800.0);
+                      final spanH = ((maxRow - minRow + 3) * 64.0).clamp(size.height, 1800.0);
+
+                      _centerMapOnPlayerNode(
+                        nodes: nodes,
+                        currentRoomId: currentRoomId,
+                        viewportSize: size,
+                        canvasSize: Size(spanW, spanH),
+                      );
+                      HapticFeedback.selectionClick();
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: GameColors.cyanRune.withValues(alpha: 0.15),
+                        borderRadius: BorderRadius.circular(4),
+                        border: Border.all(color: GameColors.cyanRune.withValues(alpha: 0.6), width: 0.8),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          const Icon(Icons.my_location, size: 11, color: GameColors.cyanRune),
+                          const SizedBox(width: 4),
+                          Text(
+                            'RECENTER',
+                            style: GoogleFonts.jetBrainsMono(
+                              fontSize: 9,
+                              fontWeight: FontWeight.bold,
+                              color: GameColors.cyanRune,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -272,9 +361,33 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
                       final spanH = ((maxRow - minRow + 3) * 64.0).clamp(constraints.maxHeight, 1800.0);
                       final canvasSize = Size(spanW, spanH);
 
+                      final playerAsync = ref.watch(playerStreamProvider);
+                      final lastDeathRoomId = playerAsync.value?.lastDeathRoomId;
+
+                      // Auto-center map on the player's node on initial layout
+                      if (!_hasCenteredOnPlayer) {
+                        WidgetsBinding.instance.addPostFrameCallback((_) {
+                          if (mounted && !_hasCenteredOnPlayer) {
+                            _hasCenteredOnPlayer = true;
+                            _centerMapOnPlayerNode(
+                              nodes: nodes,
+                              currentRoomId: currentRoomId,
+                              viewportSize: Size(constraints.maxWidth, constraints.maxHeight),
+                              canvasSize: canvasSize,
+                            );
+                          }
+                        });
+                      }
+
                       return InteractiveViewer(
+                        transformationController: _transformationController,
                         clipBehavior: Clip.hardEdge,
-                        boundaryMargin: const EdgeInsets.all(40),
+                        // Allow panning so that any room—including the last
+                        // ones at the edge—can be scrolled to the center.
+                        boundaryMargin: EdgeInsets.symmetric(
+                          horizontal: constraints.maxWidth / 2 + 64,
+                          vertical: constraints.maxHeight / 2 + 64,
+                        ),
                         minScale: 0.3,
                         maxScale: 2.5,
                         child: CustomPaint(
@@ -284,6 +397,7 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
                             currentRoomId: currentRoomId,
                             activeMobs: activeMobs,
                             selectedRoomId: _selectedRoom?.id,
+                            lastDeathRoomId: lastDeathRoomId,
                           ),
                         ),
                       );
@@ -302,28 +416,36 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
               ),
             ),
 
-            // Map Tactical Legend
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              color: GameColors.bgSecondary,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    _legendItem(GameColors.cyanRune, 'Current Node'),
-                    const SizedBox(width: 14),
-                    _legendItem(const Color(0xFF1E3A5F), 'Explored'),
-                    const SizedBox(width: 14),
-                    _legendItem(GameColors.borderSubtle, 'Fog of War'),
-                    const SizedBox(width: 14),
-                    _legendBadge('👑', 'Rare Mini-Boss'),
-                    const SizedBox(width: 14),
-                    _legendBadge('⚔️', 'Combat Encounter'),
-                    const SizedBox(width: 14),
-                    _legendBadge('🛡️', 'Sanctuary Hub'),
-                    const SizedBox(width: 14),
-                    _legendBadge('🌀', 'Act Gateway'),
-                  ],
+            // Map Tactical Legend (protected against phone gesture bar with SafeArea)
+            SafeArea(
+              top: false,
+              left: false,
+              right: false,
+              bottom: true,
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(12, 8, 12, 12),
+                color: GameColors.bgSecondary,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      _legendItem(GameColors.cyanRune, 'Current Node'),
+                      const SizedBox(width: 14),
+                      _legendItem(const Color(0xFF1E3A5F), 'Explored'),
+                      const SizedBox(width: 14),
+                      _legendItem(GameColors.borderSubtle, 'Fog of War'),
+                      const SizedBox(width: 14),
+                      _legendBadge('👑', 'Rare Mini-Boss'),
+                      const SizedBox(width: 14),
+                      _legendBadge('⚔️', 'Combat Encounter'),
+                      const SizedBox(width: 14),
+                      _legendBadge('💀', 'Lost Satchel (Death Site)'),
+                      const SizedBox(width: 14),
+                      _legendBadge('🛡️', 'Sanctuary Hub'),
+                      const SizedBox(width: 14),
+                      _legendBadge('🌀', 'Act Gateway'),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -448,10 +570,15 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
   // World Map View (5 Acts with Teleportation & Unlocked Status)
   // ───────────────────────────────────────────────────────────────────────────
   Widget _buildWorldMapView(int currentRoomId, int actsCompleted) {
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: kAllActs.length,
-      itemBuilder: (context, index) {
+    return SafeArea(
+      top: false,
+      left: false,
+      right: false,
+      bottom: true,
+      child: ListView.builder(
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+        itemCount: kAllActs.length,
+        itemBuilder: (context, index) {
         final act = kAllActs[index];
         // Act 1 is always unlocked.
         // Subsequent acts unlock if previous act is completed (actsCompleted >= act.actNumber - 1).
@@ -650,8 +777,9 @@ class _MapsScreenState extends ConsumerState<MapsScreen>
           ),
         );
       },
-    );
-  }
+    ),
+  );
+}
 
   Future<void> _teleportToAct(ActInfo act) async {
     HapticFeedback.heavyImpact();
@@ -753,6 +881,7 @@ class _ExpandedAreaMapPainter extends CustomPainter {
   final int currentRoomId;
   final Map<int, List<MobData>> activeMobs;
   final int? selectedRoomId;
+  final int? lastDeathRoomId;
   final Map<int, _MapNode> byId;
 
   _ExpandedAreaMapPainter({
@@ -760,6 +889,7 @@ class _ExpandedAreaMapPainter extends CustomPainter {
     required this.currentRoomId,
     required this.activeMobs,
     this.selectedRoomId,
+    this.lastDeathRoomId,
   }) : byId = {for (final n in nodes) n.room.id: n};
 
   @override
@@ -874,7 +1004,25 @@ class _ExpandedAreaMapPainter extends CustomPainter {
         _drawText(canvas, '${node.room.id}', center, Colors.white, 9.5, false);
 
         // Render tactical badge icons
-        if (isBossRoom) {
+        if (node.room.id == lastDeathRoomId) {
+          // Death Satchel Beacon
+          canvas.drawCircle(
+            center,
+            half * 1.5,
+            Paint()
+              ..color = const Color(0xFFEF4444).withValues(alpha: 0.25)
+              ..style = PaintingStyle.fill,
+          );
+          canvas.drawCircle(
+            center,
+            half * 1.3,
+            Paint()
+              ..color = const Color(0xFFEF4444).withValues(alpha: 0.8)
+              ..strokeWidth = 1.5
+              ..style = PaintingStyle.stroke,
+          );
+          _drawText(canvas, '💀', Offset(center.dx + half * 0.85, center.dy - half * 0.85), Colors.white, 12, true);
+        } else if (isBossRoom) {
           _drawText(canvas, '💀', Offset(center.dx + half * 0.8, center.dy - half * 0.8), Colors.white, 10, false);
         } else if (mobsInRoom.any((m) => m.isMiniBoss)) {
           _drawText(canvas, '👑', Offset(center.dx + half * 0.8, center.dy - half * 0.8), Colors.white, 10, false);

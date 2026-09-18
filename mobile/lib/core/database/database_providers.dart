@@ -34,10 +34,31 @@ final currentRoomMobsProvider = StreamProvider.autoDispose<List<MobData>>((ref) 
       .watch();
 });
 
-// Streams player's inventory
+// Streams player's active inventory (held in bag / equipped, not deposited in town safe)
 final playerInventoryProvider = StreamProvider.autoDispose<List<ItemData>>((ref) {
   final db = ref.watch(databaseProvider);
-  return (db.select(db.items)..where((tbl) => tbl.ownerId.equals(1))).watch();
+  return (db.select(db.items)
+        ..where((tbl) => tbl.ownerId.equals(1) & tbl.isStoredInSafe.equals(false)))
+      .watch();
+});
+
+// Streams player's safe stash items (deposited in sanctuary bank)
+final playerSafeStashProvider = StreamProvider.autoDispose<List<ItemData>>((ref) {
+  final db = ref.watch(databaseProvider);
+  return (db.select(db.items)
+        ..where((tbl) => tbl.ownerId.equals(1) & tbl.isStoredInSafe.equals(true)))
+      .watch();
+});
+
+// Streams dropped ground items in current room (for death satchel retrieval)
+final currentRoomGroundItemsProvider =
+    StreamProvider.autoDispose<List<ItemData>>((ref) {
+  final playerAsync = ref.watch(playerStreamProvider);
+  final roomId = playerAsync.value?.currentRoomId ?? 101;
+  final db = ref.watch(databaseProvider);
+  return (db.select(db.items)
+        ..where((tbl) => tbl.groundRoomId.equals(roomId) & tbl.ownerId.isNull()))
+      .watch();
 });
 
 // Streams ALL rooms as a lookup map (used by minimap)

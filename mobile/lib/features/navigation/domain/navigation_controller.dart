@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/database/app_database.dart';
 import '../../../core/database/database_providers.dart';
+import '../../combat/domain/combat_engine.dart';
 
 enum Direction { north, south, east, west }
 
@@ -46,6 +47,9 @@ class NavigationController {
     // Trigger subtle tactile step click
     HapticFeedback.selectionClick();
 
+    // Stop auto-attack when moving between rooms
+    _ref.read(combatEngineProvider).stopAutoAttack();
+
     // Update Player's current room
     await (_db.update(_db.players)..where((t) => t.id.equals(1))).write(
       PlayersCompanion(
@@ -59,6 +63,9 @@ class NavigationController {
         isExplored: Value(true),
       ),
     );
+
+    // Check if newly entered room has aggressive ambush mobs
+    await _ref.read(combatEngineProvider).checkRoomAggroAmbush(validTargetId);
 
     return true;
   }

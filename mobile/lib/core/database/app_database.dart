@@ -15,7 +15,7 @@ class AppDatabase extends _$AppDatabase {
   AppDatabase.forTesting(super.connection);
 
   @override
-  int get schemaVersion => 2;
+  int get schemaVersion => 3;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -31,9 +31,19 @@ class AppDatabase extends _$AppDatabase {
             try {
               await m.addColumn(mobs, mobs.isMiniBoss);
             } catch (_) {}
-
-            await _seedAllRoomsAndMobs();
           }
+          if (from < 3) {
+            try {
+              await m.addColumn(players, players.lastDeathRoomId);
+            } catch (_) {}
+            try {
+              await m.addColumn(items, items.isStoredInSafe);
+            } catch (_) {}
+            try {
+              await m.addColumn(mobs, mobs.isAggro);
+            } catch (_) {}
+          }
+          await _seedAllRoomsAndMobs();
         },
         onCreate: (Migrator m) async {
           await m.createAll();
@@ -464,171 +474,295 @@ class AppDatabase extends _$AppDatabase {
           // ──────────────────────────────────────────────────────────────────────────
           // Seed Mobs, Rare Mini-Bosses & Act 1 Bosses
           // ──────────────────────────────────────────────────────────────────────────
-
-          // Room 103: Common enemy
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 103,
-              name: 'Void-Touched Rat',
-              level: 1,
-              maxHp: 20,
-              currentHp: 20,
-              minDamage: 3,
-              maxDamage: 6,
-              armor: const Value(1),
-              expReward: 30,
-              dropTableJson: const Value(
-                '[{"type":"gem","name":"Chipped Emerald","rate":0.5},{"type":"weapon","name":"Rusted Shiv","rate":0.8}]',
+          final existingMobs = await select(mobs).get();
+          if (existingMobs.isEmpty) {
+            // Room 103: Common starter enemy (Aggro Lv 1)
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 103,
+                name: 'Void-Touched Rat',
+                level: 1,
+                maxHp: 20,
+                currentHp: 20,
+                minDamage: 3,
+                maxDamage: 6,
+                armor: const Value(1),
+                expReward: 30,
+                isAggro: const Value(true),
+                dropTableJson: const Value(
+                  '[{"type":"gem","name":"Chipped Emerald","rate":0.5},{"type":"weapon","name":"Rusted Shiv","rate":0.8}]',
+                ),
               ),
-            ),
-          );
+            );
 
-          // Room 105 (Branch A): Rare Mini-Boss - Void-Stalker Alpha (Can be bypassed or fled!)
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 105,
-              name: 'Void-Stalker Alpha',
-              level: 3,
-              maxHp: 55,
-              currentHp: 55,
-              minDamage: 6,
-              maxDamage: 11,
-              armor: const Value(3),
-              expReward: 120,
-              isMiniBoss: const Value(true),
-              dropTableJson: const Value(
-                '[{"type":"ring","name":"Silver Coil Band","rate":0.9}]',
+            // Room 105 (Branch A): Rare Mini-Boss - Void-Stalker Alpha (Aggro Lv 3)
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 105,
+                name: 'Void-Stalker Alpha',
+                level: 3,
+                maxHp: 55,
+                currentHp: 55,
+                minDamage: 6,
+                maxDamage: 11,
+                armor: const Value(3),
+                expReward: 120,
+                isMiniBoss: const Value(true),
+                isAggro: const Value(true),
+                dropTableJson: const Value(
+                  '[{"type":"ring","name":"Silver Coil Band","rate":0.9}]',
+                ),
               ),
-            ),
-          );
+            );
 
-          // Room 202: Weaver Spider
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 202,
-              name: 'Weaver Spider',
-              level: 2,
-              maxHp: 32,
-              currentHp: 32,
-              minDamage: 5,
-              maxDamage: 8,
-              armor: const Value(2),
-              expReward: 50,
-            ),
-          );
-
-          // Room 204: Mini-Boss - The Broodmother
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 204,
-              name: 'The Broodmother',
-              level: 3,
-              maxHp: 75,
-              currentHp: 75,
-              minDamage: 7,
-              maxDamage: 13,
-              armor: const Value(4),
-              expReward: 180,
-              isMiniBoss: const Value(true),
-              dropTableJson: const Value(
-                '[{"type":"ring","name":"Silk-Spun Ring","rate":1.0}]',
+            // Room 202: 2x Weaver Spiders (Multi-Monster swarm)
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 202,
+                name: 'Weaver Spider Alpha',
+                level: 2,
+                maxHp: 32,
+                currentHp: 32,
+                minDamage: 5,
+                maxDamage: 8,
+                armor: const Value(2),
+                expReward: 50,
+                isAggro: const Value(true),
               ),
-            ),
-          );
+            );
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 202,
+                name: 'Weaver Spider Skitterer',
+                level: 2,
+                maxHp: 26,
+                currentHp: 26,
+                minDamage: 4,
+                maxDamage: 7,
+                armor: const Value(1),
+                expReward: 40,
+                isAggro: const Value(true),
+              ),
+            );
 
-          // Room 402: Risen Cultist
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 402,
-              name: 'Risen Cultist',
-              level: 4,
-              maxHp: 44,
-              currentHp: 44,
-              minDamage: 7,
-              maxDamage: 12,
-              armor: const Value(2),
-              expReward: 80,
-            ),
-          );
+            // Room 204: Mini-Boss - The Broodmother + 2 Spiderling Adds
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 204,
+                name: 'The Broodmother',
+                level: 3,
+                maxHp: 75,
+                currentHp: 75,
+                minDamage: 7,
+                maxDamage: 13,
+                armor: const Value(4),
+                expReward: 180,
+                isMiniBoss: const Value(true),
+                isAggro: const Value(true),
+                dropTableJson: const Value(
+                  '[{"type":"ring","name":"Silk-Spun Ring","rate":1.0}]',
+                ),
+              ),
+            );
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 204,
+                name: 'Brood Hatchling A',
+                level: 2,
+                maxHp: 18,
+                currentHp: 18,
+                minDamage: 3,
+                maxDamage: 5,
+                armor: const Value(1),
+                expReward: 25,
+                isAggro: const Value(true),
+              ),
+            );
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 204,
+                name: 'Brood Hatchling B',
+                level: 2,
+                maxHp: 18,
+                currentHp: 18,
+                minDamage: 3,
+                maxDamage: 5,
+                armor: const Value(1),
+                expReward: 25,
+                isAggro: const Value(true),
+              ),
+            );
 
-          // Room 405 (Branch B): Rare Mini-Boss - Corrupted Iron Golem (Can be fled/bypassed!)
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 405,
-              name: 'Corrupted Iron Golem',
-              level: 5,
-              maxHp: 110,
-              currentHp: 110,
-              minDamage: 9,
-              maxDamage: 16,
-              armor: const Value(8),
-              expReward: 240,
-              isMiniBoss: const Value(true),
-            ),
-          );
+            // Room 402: 3x Risen Cultists (Multi-mob cultist squad)
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 402,
+                name: 'Risen Cultist Initiate',
+                level: 4,
+                maxHp: 38,
+                currentHp: 38,
+                minDamage: 6,
+                maxDamage: 10,
+                armor: const Value(1),
+                expReward: 60,
+                isAggro: const Value(true),
+              ),
+            );
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 402,
+                name: 'Risen Cultist Acolyte',
+                level: 4,
+                maxHp: 44,
+                currentHp: 44,
+                minDamage: 7,
+                maxDamage: 12,
+                armor: const Value(2),
+                expReward: 75,
+                isAggro: const Value(true),
+              ),
+            );
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 402,
+                name: 'Void Hex-Chanter',
+                level: 4,
+                maxHp: 34,
+                currentHp: 34,
+                minDamage: 8,
+                maxDamage: 14,
+                armor: const Value(1),
+                expReward: 70,
+                isAggro: const Value(true),
+              ),
+            );
 
-          // Room 404: Mini-Boss - The Weeping Zealot
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 404,
-              name: 'The Weeping Zealot',
-              level: 5,
-              maxHp: 95,
-              currentHp: 95,
-              minDamage: 8,
-              maxDamage: 15,
-              armor: const Value(4),
-              expReward: 220,
-              isMiniBoss: const Value(true),
-            ),
-          );
+            // Room 405 (Branch B): Rare Mini-Boss - Corrupted Iron Golem (NEUTRAL Guardian! Will not attack unless provoked)
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 405,
+                name: 'Corrupted Iron Golem',
+                level: 5,
+                maxHp: 110,
+                currentHp: 110,
+                minDamage: 9,
+                maxDamage: 16,
+                armor: const Value(8),
+                expReward: 240,
+                isMiniBoss: const Value(true),
+                isAggro: const Value(false), // Neutral!
+              ),
+            );
 
-          // Room 502: Glass-Wing Harpy
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 502,
-              name: 'Glass-Wing Harpy',
-              level: 6,
-              maxHp: 60,
-              currentHp: 60,
-              minDamage: 10,
-              maxDamage: 17,
-              armor: const Value(3),
-              expReward: 110,
-            ),
-          );
+            // Room 404: Mini-Boss - The Weeping Zealot
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 404,
+                name: 'The Weeping Zealot',
+                level: 5,
+                maxHp: 95,
+                currentHp: 95,
+                minDamage: 8,
+                maxDamage: 15,
+                armor: const Value(4),
+                expReward: 220,
+                isMiniBoss: const Value(true),
+                isAggro: const Value(true),
+              ),
+            );
 
-          // Room 503: Mini-Boss - Talon-Lord Vex
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 503,
-              name: 'Talon-Lord Vex',
-              level: 7,
-              maxHp: 125,
-              currentHp: 125,
-              minDamage: 11,
-              maxDamage: 19,
-              armor: const Value(5),
-              expReward: 290,
-              isMiniBoss: const Value(true),
-            ),
-          );
+            // Room 502: 2x Glass-Wing Harpies
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 502,
+                name: 'Glass-Wing Harpy',
+                level: 6,
+                maxHp: 60,
+                currentHp: 60,
+                minDamage: 10,
+                maxDamage: 17,
+                armor: const Value(3),
+                expReward: 110,
+                isAggro: const Value(true),
+              ),
+            );
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 502,
+                name: 'Glass-Wing Diver',
+                level: 6,
+                maxHp: 52,
+                currentHp: 52,
+                minDamage: 11,
+                maxDamage: 18,
+                armor: const Value(2),
+                expReward: 100,
+                isAggro: const Value(true),
+              ),
+            );
 
-          // Room 603: Act 1 Climax Boss - The Hollow Woodsman
-          await into(mobs).insert(
-            MobsCompanion.insert(
-              roomId: 603,
-              name: 'The Hollow Woodsman',
-              level: 8,
-              maxHp: 180,
-              currentHp: 180,
-              minDamage: 14,
-              maxDamage: 24,
-              armor: const Value(7),
-              expReward: 500,
-              isMiniBoss: const Value(true),
-            ),
-          );
+            // Room 503: Mini-Boss - Talon-Lord Vex + 2 Harpy Guard Adds
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 503,
+                name: 'Talon-Lord Vex',
+                level: 7,
+                maxHp: 125,
+                currentHp: 125,
+                minDamage: 11,
+                maxDamage: 19,
+                armor: const Value(5),
+                expReward: 290,
+                isMiniBoss: const Value(true),
+                isAggro: const Value(true),
+              ),
+            );
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 503,
+                name: 'Aerie Sky-Guard A',
+                level: 6,
+                maxHp: 45,
+                currentHp: 45,
+                minDamage: 8,
+                maxDamage: 14,
+                armor: const Value(2),
+                expReward: 80,
+                isAggro: const Value(true),
+              ),
+            );
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 503,
+                name: 'Aerie Sky-Guard B',
+                level: 6,
+                maxHp: 45,
+                currentHp: 45,
+                minDamage: 8,
+                maxDamage: 14,
+                armor: const Value(2),
+                expReward: 80,
+                isAggro: const Value(true),
+              ),
+            );
+
+            // Room 603: Act 1 Climax Boss - The Hollow Woodsman
+            await into(mobs).insert(
+              MobsCompanion.insert(
+                roomId: 603,
+                name: 'The Hollow Woodsman',
+                level: 8,
+                maxHp: 180,
+                currentHp: 180,
+                minDamage: 14,
+                maxDamage: 24,
+                armor: const Value(7),
+                expReward: 500,
+                isMiniBoss: const Value(true),
+                isAggro: const Value(true),
+              ),
+            );
+          }
   }
 
   Future<void> _seedStarterItems() async {
@@ -917,6 +1051,55 @@ class AppDatabase extends _$AppDatabase {
                 '"socketBonusWeapon":"+10% Critical Strike Multiplier",'
                 '"socketBonusArmor":"+6 All Elemental Resistances & +3 Armor",'
                 '"buffs":["Socket in Weapon or Armor"]}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          // ── Seed Starter Consumables ───────────────────
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_potion_hp_01',
+              name: 'Lesser Healing Draught',
+              baseType: 'Potion',
+              rarity: const Value('Normal'),
+              isEquipped: const Value(false),
+              modifiersJson: const Value(
+                '{"description":"A glowing red vial brewed from void moss extract. Immediately restores 40 HP upon consumption.",'
+                '"healAmount":40,'
+                '"buffs":["Restores +40 HP"]}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_potion_hp_02',
+              name: 'Lesser Healing Draught',
+              baseType: 'Potion',
+              rarity: const Value('Normal'),
+              isEquipped: const Value(false),
+              modifiersJson: const Value(
+                '{"description":"A glowing red vial brewed from void moss extract. Immediately restores 40 HP upon consumption.",'
+                '"healAmount":40,'
+                '"buffs":["Restores +40 HP"]}'
+              ),
+              ownerId: const Value(1),
+            ),
+          );
+
+          await into(items).insert(
+            ItemsCompanion.insert(
+              id: 'starter_elixir_01',
+              name: 'Vigorous Draught',
+              baseType: 'Consumable',
+              rarity: const Value('Magic'),
+              isEquipped: const Value(false),
+              modifiersJson: const Value(
+                '{"description":"Distilled mountain marrow. Soothes frayed soul tethers and restores 75 HP.",'
+                '"healAmount":75,'
+                '"buffs":["Restores +75 HP"]}'
               ),
               ownerId: const Value(1),
             ),

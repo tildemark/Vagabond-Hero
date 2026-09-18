@@ -50,6 +50,28 @@ final _slotLabel = {
   'OffHand': 'OFF HAND',
 };
 
+String resolveCanonicalSlot(ItemData item) {
+  final slot = item.equipSlot;
+  if (slot != null && _slots.contains(slot)) return slot;
+  final base = item.baseType;
+  switch (base) {
+    case 'Head':
+    case 'Neck':
+    case 'Chest':
+    case 'Arms':
+    case 'Waist':
+    case 'Feet':
+    case 'Ring':
+      return base;
+    case 'Weapon':
+      return 'MainHand';
+    case 'Shield':
+      return 'OffHand';
+    default:
+      return slot ?? base;
+  }
+}
+
 Color _rarityColor(String rarity) => GameColors.forRarity(rarity);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -69,7 +91,7 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen>
   @override
   void initState() {
     super.initState();
-    _tab = TabController(length: 3, vsync: this);
+    _tab = TabController(length: 5, vsync: this);
   }
 
   @override
@@ -81,6 +103,12 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen>
   @override
   Widget build(BuildContext context) {
     final itemsAsync = ref.watch(playerInventoryProvider);
+    final safeItemsAsync = ref.watch(playerSafeStashProvider);
+    final playerAsync = ref.watch(playerStreamProvider);
+    final currentRoomId = playerAsync.value?.currentRoomId ?? 101;
+    final isSanctuary = currentRoomId == 101 ||
+        (currentRoomId >= 301 && currentRoomId <= 304) ||
+        (currentRoomId >= 2201 && currentRoomId <= 2204);
 
     return Column(
       children: [
@@ -111,6 +139,30 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen>
                 ),
               ),
               const Spacer(),
+              if (isSanctuary)
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: GameColors.cyanRune.withValues(alpha: 0.15),
+                    borderRadius: BorderRadius.circular(4),
+                    border: Border.all(color: GameColors.cyanRune.withValues(alpha: 0.6)),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(Icons.lock, size: 11, color: GameColors.cyanRune),
+                      const SizedBox(width: 4),
+                      Text(
+                        'SANCTUARY SAFE ACTIVE',
+                        style: GoogleFonts.jetBrainsMono(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          color: GameColors.cyanRune,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               IconButton(
                 icon: const Icon(Icons.close, color: GameColors.textMuted, size: 20),
                 onPressed: () => Navigator.pop(context),
@@ -123,17 +175,21 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen>
           color: GameColors.bgCard,
           child: TabBar(
             controller: _tab,
+            isScrollable: true,
+            tabAlignment: TabAlignment.start,
             indicatorColor: GameColors.cyanRune,
             labelColor: GameColors.cyanRune,
             unselectedLabelColor: GameColors.textMuted,
             labelStyle: GoogleFonts.jetBrainsMono(
-              fontSize: 11,
+              fontSize: 10,
               fontWeight: FontWeight.bold,
             ),
             tabs: const [
-              Tab(text: '⚔  EQUIPPED'),
-              Tab(text: '🎒  BAG'),
-              Tab(text: '💎  GEMS'),
+              Tab(text: '⚔ EQUIP'),
+              Tab(text: '🎒 GEAR'),
+              Tab(text: '🧪 POTIONS'),
+              Tab(text: '💎 GEMS'),
+              Tab(text: '🔒 SAFE'),
             ],
           ),
         ),
@@ -150,15 +206,34 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen>
                 for (final s in _slots)
                   s: items.where((i) => i.isEquipped && i.equipSlot == s).firstOrNull
               };
-              final bag = items.where((i) => !i.isEquipped && i.baseType != 'Gem').toList();
+              final consumables = items
+                  .where((i) =>
+                      !i.isEquipped &&
+                      (i.baseType == 'Potion' ||
+                          i.baseType == 'Consumable' ||
+                          i.baseType == 'Food' ||
+                          i.baseType == 'Scroll'))
+                  .toList();
+              final gearBag = items
+                  .where((i) =>
+                      !i.isEquipped &&
+                      i.baseType != 'Gem' &&
+                      i.baseType != 'Potion' &&
+                      i.baseType != 'Consumable' &&
+                      i.baseType != 'Food' &&
+                      i.baseType != 'Scroll')
+                  .toList();
               final gems = items.where((i) => i.baseType == 'Gem').toList();
+              final safeItems = safeItemsAsync.value ?? [];
 
               return TabBarView(
                 controller: _tab,
                 children: [
-                  _EquippedTab(equipped: equipped, bag: bag),
-                  _BagTab(items: bag, equipped: equipped),
-                  _GemsTab(items: gems),
+                  _EquippedTab(equipped: equipped, bag: gearBag),
+                  _BagTab(items: gearBag, equipped: equipped, isSanctuary: isSanctuary),
+                  _ConsumablesTab(items: consumables, isSanctuary: isSanctuary),
+                  _GemsTab(items: gems, isSanctuary: isSanctuary),
+                  _SafeStashTab(items: safeItems, isSanctuary: isSanctuary),
                 ],
               );
             },
@@ -504,16 +579,33 @@ class _SlotCard extends StatelessWidget {
                       ),
                     ),
             ),
-            if (hasItem && onUnequip != null) ...[
+            if (hasItem) ...[
               const SizedBox(width: 4),
-              GestureDetector(
-                onTap: onUnequip,
-                child: const Padding(
-                  padding: EdgeInsets.all(3.0),
-                  child: Icon(Icons.remove_circle_outline,
-                      size: 16, color: GameColors.textDim),
+              Tooltip(
+                message: 'Inspect item details',
+                child: GestureDetector(
+                  onTap: onTap,
+                  child: const Padding(
+                    padding: EdgeInsets.all(3.0),
+                    child: Icon(Icons.info_outline,
+                        size: 16, color: GameColors.cyanRune),
+                  ),
                 ),
               ),
+              if (onUnequip != null) ...[
+                const SizedBox(width: 2),
+                Tooltip(
+                  message: 'Unequip item',
+                  child: GestureDetector(
+                    onTap: onUnequip,
+                    child: const Padding(
+                      padding: EdgeInsets.all(3.0),
+                      child: Icon(Icons.remove_circle_outline,
+                          size: 16, color: GameColors.textDim),
+                    ),
+                  ),
+                ),
+              ],
             ],
           ],
         ),
@@ -612,16 +704,28 @@ class _MiniStat extends StatelessWidget {
 // ─────────────────────────────────────────────────────────────────────────────
 //  Tab 2: Bag View
 // ─────────────────────────────────────────────────────────────────────────────
-class _BagTab extends ConsumerWidget {
+class _BagTab extends ConsumerStatefulWidget {
   final List<ItemData> items;
   final Map<String, ItemData?> equipped;
-  const _BagTab({required this.items, required this.equipped});
+  final bool isSanctuary;
+  const _BagTab({
+    required this.items,
+    required this.equipped,
+    required this.isSanctuary,
+  });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<_BagTab> createState() => _BagTabState();
+}
+
+class _BagTabState extends ConsumerState<_BagTab> {
+  String _filterSlot = 'ALL';
+
+  @override
+  Widget build(BuildContext context) {
     final svc = ref.read(equipmentServiceProvider);
 
-    if (items.isEmpty) {
+    if (widget.items.isEmpty) {
       return Center(
         child: Text(
           'Your satchel is empty.',
@@ -633,21 +737,138 @@ class _BagTab extends ConsumerWidget {
       );
     }
 
-    return ListView.builder(
-      padding: const EdgeInsets.fromLTRB(12, 12, 12, 80),
-      itemCount: items.length,
-      itemBuilder: (_, i) {
-        final item = items[i];
-        final slotKey = item.equipSlot ?? item.baseType;
-        final equippedItem = equipped[slotKey] ??
-            (item.baseType == 'Ring' ? (equipped['RingL'] ?? equipped['RingR']) : null);
+    final filteredItems = widget.items.where((item) {
+      if (_filterSlot == 'ALL') return true;
+      final slot = resolveCanonicalSlot(item);
+      if (_filterSlot == 'Ring') {
+        return slot == 'Ring' || slot == 'RingL' || slot == 'RingR';
+      }
+      return slot == _filterSlot;
+    }).toList();
 
-        return _BagItemCard(
-          item: item,
-          equippedInSlot: equippedItem,
-          onEquip: () => svc.equip(item),
-        );
-      },
+    const filterOptions = [
+      {'key': 'ALL', 'label': 'ALL'},
+      {'key': 'MainHand', 'label': 'WEAPON'},
+      {'key': 'OffHand', 'label': 'OFF HAND'},
+      {'key': 'Head', 'label': 'HEAD'},
+      {'key': 'Neck', 'label': 'NECK'},
+      {'key': 'Chest', 'label': 'TORSO'},
+      {'key': 'Arms', 'label': 'ARMS'},
+      {'key': 'Waist', 'label': 'WAIST'},
+      {'key': 'Feet', 'label': 'FEET'},
+      {'key': 'Ring', 'label': 'RINGS'},
+    ];
+
+    return Column(
+      children: [
+        // Slot Quick-Filter Chips Bar
+        Container(
+          height: 44,
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+          color: GameColors.bgPrimary.withValues(alpha: 0.6),
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemCount: filterOptions.length,
+            separatorBuilder: (_, _) => const SizedBox(width: 6),
+            itemBuilder: (_, idx) {
+              final opt = filterOptions[idx];
+              final key = opt['key']!;
+              final isSelected = _filterSlot == key;
+              final icon = key == 'ALL'
+                  ? Icons.all_inbox
+                  : key == 'Ring'
+                      ? Icons.radio_button_unchecked
+                      : (_slotIcon[key] ?? Icons.category);
+
+              return ChoiceChip(
+                showCheckmark: false,
+                avatar: Icon(
+                  icon,
+                  size: 13,
+                  color: isSelected ? Colors.black : GameColors.textMuted,
+                ),
+                label: Text(
+                  opt['label']!,
+                  style: GoogleFonts.jetBrainsMono(
+                    fontSize: 9.5,
+                    fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                    color: isSelected ? Colors.black : GameColors.textMuted,
+                  ),
+                ),
+                selected: isSelected,
+                selectedColor: GameColors.cyanRune,
+                backgroundColor: GameColors.bgCard,
+                side: BorderSide(
+                  color: isSelected
+                      ? GameColors.cyanRune
+                      : GameColors.borderSubtle,
+                  width: 1,
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 0),
+                onSelected: (_) {
+                  setState(() {
+                    _filterSlot = key;
+                  });
+                },
+              );
+            },
+          ),
+        ),
+        const Divider(height: 1, color: GameColors.borderSubtle),
+
+        // Filtered Item List
+        Expanded(
+          child: filteredItems.isEmpty
+              ? Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(Icons.search_off, size: 36, color: GameColors.textDim),
+                      const SizedBox(height: 8),
+                      Text(
+                        'No $_filterSlot equipment in satchel.',
+                        style: GoogleFonts.inter(
+                          color: GameColors.textDim,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              : ListView.builder(
+                  padding: const EdgeInsets.fromLTRB(12, 10, 12, 80),
+                  itemCount: filteredItems.length,
+                  itemBuilder: (_, i) {
+                    final item = filteredItems[i];
+                    final slotKey = resolveCanonicalSlot(item);
+                    final equippedItem = widget.equipped[slotKey] ??
+                        (slotKey == 'Ring' || item.baseType == 'Ring'
+                            ? (widget.equipped['RingL'] ?? widget.equipped['RingR'])
+                            : null);
+
+                    return _BagItemCard(
+                      item: item,
+                      equippedInSlot: equippedItem,
+                      isSanctuary: widget.isSanctuary,
+                      onEquip: () => svc.equip(item),
+                      onDepositSafe: widget.isSanctuary ? () => svc.depositToSafe(item) : null,
+                      onDrop: () async {
+                        await svc.dropItem(item);
+                        if (context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text('Dropped ${item.name} to the ground.', style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                              backgroundColor: const Color(0xFF0F243A),
+                              duration: const Duration(seconds: 2),
+                            ),
+                          );
+                        }
+                      },
+                    );
+                  },
+                ),
+        ),
+      ],
     );
   }
 }
@@ -655,11 +876,17 @@ class _BagTab extends ConsumerWidget {
 class _BagItemCard extends StatelessWidget {
   final ItemData item;
   final ItemData? equippedInSlot;
+  final bool isSanctuary;
   final VoidCallback? onEquip;
+  final VoidCallback? onDepositSafe;
+  final VoidCallback? onDrop;
   const _BagItemCard({
     required this.item,
     required this.equippedInSlot,
+    required this.isSanctuary,
     this.onEquip,
+    this.onDepositSafe,
+    this.onDrop,
   });
 
   Map<String, dynamic> _parseMetadata(ItemData d) {
@@ -686,6 +913,10 @@ class _BagItemCard extends StatelessWidget {
         item.baseType == 'Waist' ||
         item.baseType == 'Feet' ||
         item.baseType == 'Ring';
+
+    final canonicalSlot = resolveCanonicalSlot(item);
+    final slotLabel = _slotLabel[canonicalSlot] ?? _slotLabel[item.equipSlot] ?? item.baseType.toUpperCase();
+    final slotIcon = _slotIcon[canonicalSlot] ?? _slotIcon[item.equipSlot] ?? Icons.shield_outlined;
 
     // Parse baseStats from item and equipped piece
     final itemMeta = _parseMetadata(item);
@@ -739,7 +970,9 @@ class _BagItemCard extends StatelessWidget {
               context: context,
               item: item,
               isEquipped: false,
+              equippedComparison: cmp,
               onAction: onEquip ?? () {},
+              onDrop: onDrop,
             );
           },
         contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -751,31 +984,56 @@ class _BagItemCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(6),
           ),
           child: Icon(
-            _slotIcon[item.equipSlot] ??
-                (item.baseType == 'Weapon'
-                    ? Icons.colorize
-                    : item.baseType == 'Ring'
-                        ? Icons.radio_button_unchecked
-                        : Icons.shield_outlined),
+            slotIcon,
             size: 20,
             color: rc,
           ),
         ),
-        title: Text(
-          item.name,
-          style: GoogleFonts.inter(
-            fontSize: 13,
-            fontWeight: FontWeight.bold,
-            color: rc,
-          ),
+        title: Row(
+          children: [
+            Expanded(
+              child: Text(
+                item.name,
+                style: GoogleFonts.inter(
+                  fontSize: 13,
+                  fontWeight: FontWeight.bold,
+                  color: rc,
+                ),
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+              decoration: BoxDecoration(
+                color: GameColors.bgPrimary,
+                borderRadius: BorderRadius.circular(4),
+                border: Border.all(color: GameColors.borderSubtle),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(slotIcon, size: 9, color: GameColors.cyanRune),
+                  const SizedBox(width: 3),
+                  Text(
+                    slotLabel,
+                    style: GoogleFonts.jetBrainsMono(
+                      fontSize: 8.5,
+                      fontWeight: FontWeight.bold,
+                      color: GameColors.cyanRune,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 3),
             Text(
-              '${item.rarity} ${item.baseType}${item.equipSlot != null ? " · ${_slotLabel[item.equipSlot] ?? item.equipSlot}" : ""}',
+              '${item.rarity} ${item.baseType}',
               style: GoogleFonts.jetBrainsMono(
-                fontSize: 10,
+                fontSize: 9.5,
                 color: GameColors.textMuted,
               ),
             ),
@@ -831,14 +1089,107 @@ class _BagItemCard extends StatelessWidget {
                   _StatDeltaPill(label: 'INT', delta: intDelta),
               ],
             ),
+            // Equipped Reference Bar
+            if (cmp != null) ...[
+              const SizedBox(height: 5),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
+                decoration: BoxDecoration(
+                  color: GameColors.bgPrimary.withValues(alpha: 0.5),
+                  borderRadius: BorderRadius.circular(4),
+                  border: Border.all(color: GameColors.borderSubtle),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(Icons.compare_arrows, size: 11, color: GameColors.cyanRune),
+                    const SizedBox(width: 4),
+                    Text(
+                      'Equipped: ',
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 9,
+                        color: GameColors.textDim,
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                        '${cmp.name} (${cmp.rarity})',
+                        style: GoogleFonts.inter(
+                          fontSize: 9.5,
+                          fontWeight: FontWeight.w600,
+                          color: _rarityColor(cmp.rarity),
+                        ),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ] else if (canEquip) ...[
+              const SizedBox(height: 4),
+              Text(
+                '• Slot is currently empty',
+                style: GoogleFonts.jetBrainsMono(
+                  fontSize: 9,
+                  color: GameColors.textDim,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ],
           ],
         ),
-        trailing: canEquip
-            ? TextButton(
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Tooltip(
+              message: 'Inspect item details & lore',
+              child: IconButton(
+                icon: const Icon(Icons.info_outline, size: 18, color: GameColors.cyanRune),
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                constraints: const BoxConstraints(),
+                onPressed: () {
+                  showItemDetailModal(
+                    context: context,
+                    item: item,
+                    isEquipped: false,
+                    equippedComparison: cmp,
+                    onAction: onEquip ?? () {},
+                    onDrop: onDrop,
+                  );
+                },
+              ),
+            ),
+            const SizedBox(width: 2),
+            if (isSanctuary && onDepositSafe != null) ...[
+              Tooltip(
+                message: 'Deposit to Town Safe (Immune to Death Drop)',
+                child: IconButton(
+                  icon: const Icon(Icons.archive_outlined, size: 18, color: GameColors.cyanRune),
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  constraints: const BoxConstraints(),
+                  onPressed: onDepositSafe,
+                ),
+              ),
+              const SizedBox(width: 4),
+            ],
+            if (onDrop != null) ...[
+              Tooltip(
+                message: 'Drop onto ground',
+                child: IconButton(
+                  icon: const Icon(Icons.arrow_downward, size: 18, color: GameColors.textDim),
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  constraints: const BoxConstraints(),
+                  onPressed: onDrop,
+                ),
+              ),
+              const SizedBox(width: 4),
+            ],
+            if (canEquip)
+              TextButton(
                 style: TextButton.styleFrom(
                   backgroundColor: rc.withValues(alpha: 0.15),
                   foregroundColor: rc,
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   minimumSize: Size.zero,
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                   shape: RoundedRectangleBorder(
@@ -854,8 +1205,9 @@ class _BagItemCard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-              )
-            : null,
+              ),
+          ],
+        ),
         ),
       ),
     );
@@ -898,12 +1250,15 @@ class _StatDeltaPill extends StatelessWidget {
 // ─────────────────────────────────────────────────────────────────────────────
 //  Tab 3: Gems Bag View
 // ─────────────────────────────────────────────────────────────────────────────
-class _GemsTab extends StatelessWidget {
+class _GemsTab extends ConsumerWidget {
   final List<ItemData> items;
-  const _GemsTab({required this.items});
+  final bool isSanctuary;
+  const _GemsTab({required this.items, required this.isSanctuary});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final svc = ref.read(equipmentServiceProvider);
+
     if (items.isEmpty) {
       return Center(
         child: Column(
@@ -960,104 +1315,598 @@ class _GemsTab extends StatelessWidget {
                   item: gem,
                   isEquipped: false,
                   onAction: () {},
+                  onDrop: () async {
+                    await svc.dropItem(gem);
+                    if (ctx.mounted) {
+                      ScaffoldMessenger.of(ctx).showSnackBar(
+                        SnackBar(
+                          content: Text('Dropped ${gem.name} to the ground.', style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                          backgroundColor: const Color(0xFF0F243A),
+                          duration: const Duration(seconds: 2),
+                        ),
+                      );
+                    }
+                  },
                 );
               },
               contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-            leading: Container(
-              width: 40,
-              height: 40,
-              decoration: BoxDecoration(
-                color: rc.withValues(alpha: 0.18),
-                shape: BoxShape.circle,
-                border: Border.all(color: rc.withValues(alpha: 0.6)),
+              leading: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: rc.withValues(alpha: 0.18),
+                  shape: BoxShape.circle,
+                  border: Border.all(color: rc.withValues(alpha: 0.6)),
+                ),
+                child: Icon(Icons.diamond, size: 20, color: rc),
               ),
-              child: Icon(Icons.diamond, size: 20, color: rc),
-            ),
-            title: Row(
-              children: [
-                Expanded(
-                  child: Text(
-                    gem.name,
-                    style: GoogleFonts.cinzel(
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold,
-                      color: rc,
+              title: Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      gem.name,
+                      style: GoogleFonts.cinzel(
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        color: rc,
+                      ),
                     ),
                   ),
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                  decoration: BoxDecoration(
-                    color: Colors.black38,
-                    borderRadius: BorderRadius.circular(4),
-                    border: Border.all(color: rc.withValues(alpha: 0.3)),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: Colors.black38,
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(color: rc.withValues(alpha: 0.3)),
+                    ),
+                    child: Text(
+                      gem.rarity.toUpperCase(),
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 8.5,
+                        fontWeight: FontWeight.bold,
+                        color: rc,
+                      ),
+                    ),
                   ),
-                  child: Text(
-                    gem.rarity.toUpperCase(),
+                ],
+              ),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 2),
+                  Text(
+                    socketType,
                     style: GoogleFonts.jetBrainsMono(
-                      fontSize: 8.5,
-                      fontWeight: FontWeight.bold,
-                      color: rc,
+                      fontSize: 9.5,
+                      color: GameColors.textMuted,
                     ),
                   ),
-                ),
-              ],
-            ),
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 2),
-                Text(
-                  socketType,
-                  style: GoogleFonts.jetBrainsMono(
-                    fontSize: 9.5,
-                    color: GameColors.textMuted,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                if (wBonus.isNotEmpty)
-                  Row(
-                    children: [
-                      const Icon(Icons.flash_on, size: 10, color: GameColors.crimsonBlood),
-                      const SizedBox(width: 4),
-                      Expanded(
-                        child: Text(
-                          'Weapon: $wBonus',
-                          style: GoogleFonts.jetBrainsMono(
-                            fontSize: 9,
-                            color: GameColors.textDim,
+                  const SizedBox(height: 4),
+                  if (wBonus.isNotEmpty)
+                    Row(
+                      children: [
+                        const Icon(Icons.flash_on, size: 10, color: GameColors.crimsonBlood),
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: Text(
+                            'Weapon: $wBonus',
+                            style: GoogleFonts.jetBrainsMono(
+                              fontSize: 9,
+                              color: GameColors.textDim,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
                         ),
-                      ),
-                    ],
-                  ),
-                if (aBonus.isNotEmpty)
-                  Row(
-                    children: [
-                      const Icon(Icons.shield, size: 10, color: GameColors.terminalGreen),
-                      const SizedBox(width: 4),
-                      Expanded(
-                        child: Text(
-                          'Armor: $aBonus',
-                          style: GoogleFonts.jetBrainsMono(
-                            fontSize: 9,
-                            color: GameColors.textDim,
+                      ],
+                    ),
+                  if (aBonus.isNotEmpty)
+                    Row(
+                      children: [
+                        const Icon(Icons.shield, size: 10, color: GameColors.terminalGreen),
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: Text(
+                            'Armor: $aBonus',
+                            style: GoogleFonts.jetBrainsMono(
+                              fontSize: 9,
+                              color: GameColors.textDim,
+                            ),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
+                ],
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Tooltip(
+                    message: 'Inspect gem details & socket bonuses',
+                    child: IconButton(
+                      icon: const Icon(Icons.info_outline, size: 18, color: GameColors.cyanRune),
+                      padding: const EdgeInsets.symmetric(horizontal: 4),
+                      constraints: const BoxConstraints(),
+                      onPressed: () {
+                        showItemDetailModal(
+                          context: ctx,
+                          item: gem,
+                          isEquipped: false,
+                          onAction: () {},
+                          onDrop: () async {
+                            await svc.dropItem(gem);
+                            if (ctx.mounted) {
+                              ScaffoldMessenger.of(ctx).showSnackBar(
+                                SnackBar(
+                                  content: Text('Dropped ${gem.name} to the ground.', style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                                  backgroundColor: const Color(0xFF0F243A),
+                                  duration: const Duration(seconds: 2),
+                                ),
+                              );
+                            }
+                          },
+                        );
+                      },
+                    ),
                   ),
-              ],
-            ),
-            trailing: const Icon(Icons.chevron_right, size: 18, color: GameColors.textDim),
+                  const SizedBox(width: 2),
+                  if (isSanctuary)
+                    Tooltip(
+                      message: 'Store Gem in Town Safe',
+                      child: IconButton(
+                        icon: const Icon(Icons.archive_outlined, size: 18, color: GameColors.cyanRune),
+                        onPressed: () => svc.depositToSafe(gem),
+                      ),
+                    ),
+                  Tooltip(
+                    message: 'Drop Gem to Ground',
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_downward, size: 18, color: GameColors.textDim),
+                      onPressed: () async {
+                        await svc.dropItem(gem);
+                        if (ctx.mounted) {
+                          ScaffoldMessenger.of(ctx).showSnackBar(
+                            SnackBar(
+                              content: Text('Dropped ${gem.name} to the ground.', style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                              backgroundColor: const Color(0xFF0F243A),
+                              duration: const Duration(seconds: 2),
+                            ),
+                          );
+                        }
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         );
       },
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Tab 3: Consumables & Potions Bag View
+// ─────────────────────────────────────────────────────────────────────────────
+class _ConsumablesTab extends ConsumerWidget {
+  final List<ItemData> items;
+  final bool isSanctuary;
+  const _ConsumablesTab({required this.items, required this.isSanctuary});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final svc = ref.read(equipmentServiceProvider);
+
+    if (items.isEmpty) {
+      return Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.science_outlined, size: 40, color: GameColors.textDim),
+            const SizedBox(height: 8),
+            Text(
+              'No potions or consumables in satchel.\nDefeat monsters or visit town merchants to replenish your supplies.',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.inter(
+                color: GameColors.textDim,
+                fontSize: 12,
+                height: 1.4,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    return ListView.builder(
+      padding: const EdgeInsets.fromLTRB(12, 12, 12, 80),
+      itemCount: items.length,
+      itemBuilder: (ctx, i) {
+        final potion = items[i];
+        final rc = _rarityColor(potion.rarity);
+
+        Map<String, dynamic> meta = {};
+        try {
+          if (potion.modifiersJson.trim().isNotEmpty) {
+            final decoded = jsonDecode(potion.modifiersJson);
+            if (decoded is Map<String, dynamic>) meta = decoded;
+          }
+        } catch (_) {}
+
+        final healAmount = meta['healAmount'] as num? ?? 35;
+        final desc = meta['description'] as String? ?? 'A potent restorative draught.';
+
+        return Container(
+          margin: const EdgeInsets.only(bottom: 8),
+          decoration: BoxDecoration(
+            color: rc.withValues(alpha: 0.08),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: rc.withValues(alpha: 0.4)),
+          ),
+          child: Material(
+            color: Colors.transparent,
+            child: ListTile(
+              onTap: () {
+                showItemDetailModal(
+                  context: ctx,
+                  item: potion,
+                  isEquipped: false,
+                  onAction: () async {
+                    final msg = await svc.useConsumable(potion);
+                    if (ctx.mounted) {
+                      ScaffoldMessenger.of(ctx).showSnackBar(
+                        SnackBar(
+                          content: Text(msg, style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                          backgroundColor: const Color(0xFF0F243A),
+                          duration: const Duration(seconds: 2),
+                        ),
+                      );
+                    }
+                  },
+                  onDrop: () async {
+                    await svc.dropItem(potion);
+                    if (ctx.mounted) {
+                      ScaffoldMessenger.of(ctx).showSnackBar(
+                        SnackBar(
+                          content: Text('Dropped ${potion.name} to the ground.', style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                          backgroundColor: const Color(0xFF0F243A),
+                          duration: const Duration(seconds: 2),
+                        ),
+                      );
+                    }
+                  },
+                );
+              },
+              contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              leading: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  color: const Color(0xFF10B981).withValues(alpha: 0.18),
+                  shape: BoxShape.circle,
+                  border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.6)),
+                ),
+                child: const Icon(Icons.science, size: 20, color: Color(0xFF10B981)),
+              ),
+              title: Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      potion.name,
+                      style: GoogleFonts.cinzel(
+                        fontSize: 13,
+                        fontWeight: FontWeight.bold,
+                        color: rc,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF10B981).withValues(alpha: 0.2),
+                      borderRadius: BorderRadius.circular(4),
+                      border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.5)),
+                    ),
+                    child: Text(
+                      '+$healAmount HP',
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 9,
+                        fontWeight: FontWeight.bold,
+                        color: const Color(0xFF10B981),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              subtitle: Padding(
+                padding: const EdgeInsets.only(top: 3.0),
+                child: Text(
+                  desc,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.inter(
+                    fontSize: 10,
+                    color: GameColors.textMuted,
+                  ),
+                ),
+              ),
+              trailing: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Tooltip(
+                    message: 'Inspect item details & lore',
+                    child: IconButton(
+                      icon: const Icon(Icons.info_outline, size: 18, color: GameColors.cyanRune),
+                      padding: const EdgeInsets.symmetric(horizontal: 4),
+                      constraints: const BoxConstraints(),
+                      onPressed: () {
+                        showItemDetailModal(
+                          context: ctx,
+                          item: potion,
+                          isEquipped: false,
+                          onAction: () async {
+                            final msg = await svc.useConsumable(potion);
+                            if (ctx.mounted) {
+                              ScaffoldMessenger.of(ctx).showSnackBar(
+                                SnackBar(
+                                  content: Text(msg, style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                                  backgroundColor: const Color(0xFF0F243A),
+                                  duration: const Duration(seconds: 2),
+                                ),
+                              );
+                            }
+                          },
+                          onDrop: () async {
+                            await svc.dropItem(potion);
+                            if (ctx.mounted) {
+                              ScaffoldMessenger.of(ctx).showSnackBar(
+                                SnackBar(
+                                  content: Text('Dropped ${potion.name} to the ground.', style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                                  backgroundColor: const Color(0xFF0F243A),
+                                  duration: const Duration(seconds: 2),
+                                ),
+                              );
+                            }
+                          },
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(width: 2),
+                  if (isSanctuary) ...[
+                    Tooltip(
+                      message: 'Store in Town Safe',
+                      child: IconButton(
+                        icon: const Icon(Icons.archive_outlined, size: 18, color: GameColors.cyanRune),
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        constraints: const BoxConstraints(),
+                        onPressed: () => svc.depositToSafe(potion),
+                      ),
+                    ),
+                    const SizedBox(width: 4),
+                  ],
+                  Tooltip(
+                    message: 'Drop onto ground',
+                    child: IconButton(
+                      icon: const Icon(Icons.arrow_downward, size: 18, color: GameColors.textDim),
+                      padding: const EdgeInsets.symmetric(horizontal: 4),
+                      constraints: const BoxConstraints(),
+                      onPressed: () async {
+                        await svc.dropItem(potion);
+                        if (ctx.mounted) {
+                          ScaffoldMessenger.of(ctx).showSnackBar(
+                            SnackBar(
+                              content: Text('Dropped ${potion.name} to the ground.', style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                              backgroundColor: const Color(0xFF0F243A),
+                              duration: const Duration(seconds: 2),
+                            ),
+                          );
+                        }
+                      },
+                    ),
+                  ),
+                  const SizedBox(width: 6),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF10B981).withValues(alpha: 0.2),
+                      foregroundColor: const Color(0xFF10B981),
+                      side: const BorderSide(color: Color(0xFF10B981), width: 1),
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
+                    ),
+                    onPressed: () async {
+                      final msg = await svc.useConsumable(potion);
+                      if (ctx.mounted) {
+                        ScaffoldMessenger.of(ctx).showSnackBar(
+                          SnackBar(
+                            content: Text(msg, style: GoogleFonts.jetBrainsMono(fontSize: 11)),
+                            backgroundColor: const Color(0xFF0F243A),
+                            duration: const Duration(seconds: 2),
+                          ),
+                        );
+                      }
+                    },
+                    child: Text(
+                      'USE',
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+//  Tab 5: Safe Stash View (Sanctuary Storage - Immune to Death Drop)
+// ─────────────────────────────────────────────────────────────────────────────
+class _SafeStashTab extends ConsumerWidget {
+  final List<ItemData> items;
+  final bool isSanctuary;
+  const _SafeStashTab({required this.items, required this.isSanctuary});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final svc = ref.read(equipmentServiceProvider);
+
+    return Column(
+      children: [
+        // Security Banner
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+          margin: const EdgeInsets.fromLTRB(12, 10, 12, 4),
+          decoration: BoxDecoration(
+            color: const Color(0xFF0F243A),
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(color: GameColors.cyanRune.withValues(alpha: 0.5)),
+          ),
+          child: Row(
+            children: [
+              const Icon(Icons.verified_user, color: GameColors.cyanRune, size: 18),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'TOWN SAFE STASH (PROTECTED)',
+                      style: GoogleFonts.jetBrainsMono(
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.bold,
+                        color: GameColors.cyanRune,
+                      ),
+                    ),
+                    Text(
+                      'Items stored here will NEVER drop on death.',
+                      style: GoogleFonts.inter(
+                        fontSize: 10,
+                        color: GameColors.textMuted,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Text(
+                '${items.length} STORED',
+                style: GoogleFonts.jetBrainsMono(
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                  color: GameColors.goldAccent,
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        Expanded(
+          child: items.isEmpty
+              ? Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const Icon(Icons.lock_open_outlined, size: 42, color: GameColors.textDim),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Town Safe is empty.',
+                        style: GoogleFonts.inter(
+                          color: GameColors.textDim,
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Switch to BAG or GEMS and tap the archive icon [📥]\nto deposit equipment you want to protect from death loss.',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.inter(
+                          color: GameColors.textMuted,
+                          fontSize: 11,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              : ListView.builder(
+                  padding: const EdgeInsets.fromLTRB(12, 8, 12, 80),
+                  itemCount: items.length,
+                  itemBuilder: (ctx, i) {
+                    final item = items[i];
+                    final rc = _rarityColor(item.rarity);
+
+                    return Container(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      decoration: BoxDecoration(
+                        color: GameColors.bgCard,
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: GameColors.cyanRune.withValues(alpha: 0.3)),
+                      ),
+                      child: ListTile(
+                        leading: Container(
+                          width: 38,
+                          height: 38,
+                          decoration: BoxDecoration(
+                            color: rc.withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(color: rc.withValues(alpha: 0.5)),
+                          ),
+                          child: Icon(
+                            item.baseType == 'Gem' ? Icons.diamond : Icons.shield_outlined,
+                            size: 18,
+                            color: rc,
+                          ),
+                        ),
+                        title: Text(
+                          item.name,
+                          style: GoogleFonts.inter(
+                            fontSize: 12.5,
+                            fontWeight: FontWeight.bold,
+                            color: rc,
+                          ),
+                        ),
+                        subtitle: Text(
+                          '${item.rarity} ${item.baseType}',
+                          style: GoogleFonts.jetBrainsMono(
+                            fontSize: 9.5,
+                            color: GameColors.textMuted,
+                          ),
+                        ),
+                        trailing: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: GameColors.cyanRune.withValues(alpha: 0.15),
+                            foregroundColor: GameColors.cyanRune,
+                            side: BorderSide(color: GameColors.cyanRune.withValues(alpha: 0.6)),
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            minimumSize: Size.zero,
+                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          ),
+                          icon: const Icon(Icons.unarchive_outlined, size: 14),
+                          label: Text(
+                            'WITHDRAW',
+                            style: GoogleFonts.jetBrainsMono(
+                              fontSize: 9.5,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          onPressed: () => svc.withdrawFromSafe(item),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+        ),
+      ],
     );
   }
 }
@@ -1143,6 +1992,8 @@ void showItemDetailModal({
   required ItemData item,
   required bool isEquipped,
   required VoidCallback onAction,
+  VoidCallback? onDrop,
+  ItemData? equippedComparison,
 }) {
   showModalBottomSheet(
     context: context,
@@ -1159,6 +2010,8 @@ void showItemDetailModal({
         item: item,
         isEquipped: isEquipped,
         onAction: onAction,
+        onDrop: onDrop,
+        equippedComparison: equippedComparison,
       ),
     ),
   );
@@ -1168,11 +2021,15 @@ class _ItemDetailSheet extends StatelessWidget {
   final ItemData item;
   final bool isEquipped;
   final VoidCallback onAction;
+  final VoidCallback? onDrop;
+  final ItemData? equippedComparison;
 
   const _ItemDetailSheet({
     required this.item,
     required this.isEquipped,
     required this.onAction,
+    this.onDrop,
+    this.equippedComparison,
   });
 
   Map<String, dynamic> _parseMetadata() {
@@ -1201,6 +2058,10 @@ class _ItemDetailSheet extends StatelessWidget {
     final otherModifiers = (meta['otherModifiers'] as List<dynamic>?)?.map((e) => e.toString()).toList() ?? [];
     final setInfo = meta['set'] as Map<String, dynamic>?;
     final glitchInfo = meta['glitch'] as Map<String, dynamic>?;
+    final socketType = meta['socketType'] as String?;
+    final socketBonusWeapon = meta['socketBonusWeapon'] as String?;
+    final socketBonusArmor = meta['socketBonusArmor'] as String?;
+    final healAmount = meta['healAmount'] as num?;
 
     final slotName = _slotLabel[item.equipSlot] ?? item.equipSlot ?? item.baseType.toUpperCase();
 
@@ -1391,6 +2252,151 @@ class _ItemDetailSheet extends StatelessWidget {
 
                     const SizedBox(height: 12),
 
+                    // Equipped Comparison Card (When viewing satchel gear)
+                    if (!isEquipped && equippedComparison != null) ...[
+                      _SectionHeader(
+                        title: 'VS. CURRENTLY EQUIPPED',
+                        icon: Icons.compare_arrows,
+                        color: GameColors.cyanRune,
+                      ),
+                      const SizedBox(height: 6),
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: GameColors.bgSurface,
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: GameColors.cyanRune.withValues(alpha: 0.5)),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  width: 28,
+                                  height: 28,
+                                  decoration: BoxDecoration(
+                                    color: _rarityColor(equippedComparison!.rarity).withValues(alpha: 0.2),
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Icon(
+                                    _slotIcon[resolveCanonicalSlot(equippedComparison!)] ?? Icons.shield,
+                                    size: 16,
+                                    color: _rarityColor(equippedComparison!.rarity),
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        equippedComparison!.name,
+                                        style: GoogleFonts.cinzel(
+                                          fontSize: 12.5,
+                                          fontWeight: FontWeight.bold,
+                                          color: _rarityColor(equippedComparison!.rarity),
+                                        ),
+                                      ),
+                                      Text(
+                                        '${equippedComparison!.rarity} ${_slotLabel[resolveCanonicalSlot(equippedComparison!)] ?? equippedComparison!.baseType}',
+                                        style: GoogleFonts.jetBrainsMono(
+                                          fontSize: 9,
+                                          color: GameColors.textMuted,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 8),
+                            const Divider(height: 1, color: GameColors.borderSubtle),
+                            const SizedBox(height: 8),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text(
+                                      'EQUIPPED DMG',
+                                      style: GoogleFonts.jetBrainsMono(fontSize: 8.5, color: GameColors.textDim),
+                                    ),
+                                    Text(
+                                      equippedComparison!.minDamage > 0
+                                          ? '${equippedComparison!.minDamage}–${equippedComparison!.maxDamage}'
+                                          : '—',
+                                      style: GoogleFonts.jetBrainsMono(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        color: GameColors.textMain,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Container(width: 1, height: 24, color: GameColors.borderSubtle),
+                                Column(
+                                  children: [
+                                    Text(
+                                      'EQUIPPED ARM',
+                                      style: GoogleFonts.jetBrainsMono(fontSize: 8.5, color: GameColors.textDim),
+                                    ),
+                                    Text(
+                                      equippedComparison!.armorValue > 0
+                                          ? '+${equippedComparison!.armorValue}'
+                                          : '—',
+                                      style: GoogleFonts.jetBrainsMono(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        color: GameColors.textMain,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Container(width: 1, height: 24, color: GameColors.borderSubtle),
+                                Column(
+                                  children: [
+                                    Text(
+                                      'NET CHANGE',
+                                      style: GoogleFonts.jetBrainsMono(fontSize: 8.5, color: GameColors.cyanRune),
+                                    ),
+                                    Builder(
+                                      builder: (_) {
+                                        final dmgDiff = ((item.minDamage + item.maxDamage) ~/ 2) -
+                                            ((equippedComparison!.minDamage + equippedComparison!.maxDamage) ~/ 2);
+                                        final armDiff = item.armorValue - equippedComparison!.armorValue;
+                                        final isUpgrade = dmgDiff > 0 || armDiff > 0;
+                                        final isDowngrade = dmgDiff < 0 || armDiff < 0;
+                                        final text = dmgDiff != 0
+                                            ? '${dmgDiff > 0 ? "+" : ""}$dmgDiff DMG'
+                                            : armDiff != 0
+                                                ? '${armDiff > 0 ? "+" : ""}$armDiff ARM'
+                                                : 'EQUAL';
+                                        final color = isUpgrade
+                                            ? const Color(0xFF10B981)
+                                            : isDowngrade
+                                                ? const Color(0xFFEF4444)
+                                                : GameColors.textDim;
+                                        return Text(
+                                          text,
+                                          style: GoogleFonts.jetBrainsMono(
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.bold,
+                                            color: color,
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+                    ],
+
                     // Primary Combat Power (Attack, Armor, Sockets)
                     Container(
                       padding: const EdgeInsets.all(12),
@@ -1539,6 +2545,135 @@ class _ItemDetailSheet extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: otherModifiers.map((m) => _AffixRow(text: m, color: GameColors.voidPurple)).toList(),
+                        ),
+                      ),
+                    ],
+
+                    // Socketable Gem Effects
+                    if (socketType != null || socketBonusWeapon != null || socketBonusArmor != null) ...[
+                      const SizedBox(height: 12),
+                      _SectionHeader(title: 'SOCKET EMBEDDING BONUSES', icon: Icons.diamond, color: rc),
+                      const SizedBox(height: 6),
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: rc.withValues(alpha: 0.08),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: rc.withValues(alpha: 0.5)),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            if (socketType != null)
+                              Padding(
+                                padding: const EdgeInsets.only(bottom: 6),
+                                child: Text(
+                                  'Gem Type: $socketType',
+                                  style: GoogleFonts.jetBrainsMono(
+                                    fontSize: 10,
+                                    color: GameColors.textMuted,
+                                  ),
+                                ),
+                              ),
+                            if (socketBonusWeapon != null && socketBonusWeapon.isNotEmpty)
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 3),
+                                child: Row(
+                                  children: [
+                                    const Icon(Icons.flash_on, size: 14, color: GameColors.crimsonBlood),
+                                    const SizedBox(width: 6),
+                                    Text(
+                                      'When Socketed in Weapon: ',
+                                      style: GoogleFonts.jetBrainsMono(fontSize: 10.5, color: GameColors.textDim),
+                                    ),
+                                    Expanded(
+                                      child: Text(
+                                        socketBonusWeapon,
+                                        style: GoogleFonts.jetBrainsMono(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          color: GameColors.crimsonBlood,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            if (socketBonusArmor != null && socketBonusArmor.isNotEmpty)
+                              Padding(
+                                padding: const EdgeInsets.symmetric(vertical: 3),
+                                child: Row(
+                                  children: [
+                                    const Icon(Icons.shield, size: 14, color: GameColors.terminalGreen),
+                                    const SizedBox(width: 6),
+                                    Text(
+                                      'When Socketed in Armor: ',
+                                      style: GoogleFonts.jetBrainsMono(fontSize: 10.5, color: GameColors.textDim),
+                                    ),
+                                    Expanded(
+                                      child: Text(
+                                        socketBonusArmor,
+                                        style: GoogleFonts.jetBrainsMono(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          color: GameColors.terminalGreen,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                    ],
+
+                    // Consumable Potency / Restoration Effect
+                    if (healAmount != null && healAmount > 0) ...[
+                      const SizedBox(height: 12),
+                      _SectionHeader(title: 'POTION RESTORATION EFFECT', icon: Icons.local_hospital, color: const Color(0xFF10B981)),
+                      const SizedBox(height: 6),
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF10B981).withValues(alpha: 0.08),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: const Color(0xFF10B981).withValues(alpha: 0.5)),
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF10B981).withValues(alpha: 0.2),
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(Icons.favorite, size: 16, color: Color(0xFF10B981)),
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '+$healAmount Vitality Restored',
+                                    style: GoogleFonts.cinzel(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold,
+                                      color: const Color(0xFF10B981),
+                                    ),
+                                  ),
+                                  Text(
+                                    'Immediately soothes mortal wounds and stabilizes life force.',
+                                    style: GoogleFonts.inter(
+                                      fontSize: 10,
+                                      color: GameColors.textMuted,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ],
@@ -1700,7 +2835,32 @@ class _ItemDetailSheet extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(width: 12),
+                      if (onDrop != null) ...[
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: OutlinedButton.icon(
+                            style: OutlinedButton.styleFrom(
+                              side: BorderSide(color: GameColors.crimsonBlood.withValues(alpha: 0.6)),
+                              foregroundColor: GameColors.crimsonBlood,
+                              padding: const EdgeInsets.symmetric(vertical: 12),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                            ),
+                            icon: const Icon(Icons.arrow_downward, size: 14, color: GameColors.crimsonBlood),
+                            label: Text(
+                              'DROP',
+                              style: GoogleFonts.jetBrainsMono(
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            onPressed: () {
+                              Navigator.pop(context);
+                              onDrop!();
+                            },
+                          ),
+                        ),
+                      ],
+                      const SizedBox(width: 8),
                       Expanded(
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
@@ -1720,7 +2880,14 @@ class _ItemDetailSheet extends StatelessWidget {
                             onAction();
                           },
                           child: Text(
-                            isEquipped ? 'UNEQUIP' : 'EQUIP NOW',
+                            isEquipped
+                                ? 'UNEQUIP'
+                                : (item.baseType == 'Potion' ||
+                                        item.baseType == 'Consumable' ||
+                                        item.baseType == 'Food' ||
+                                        item.baseType == 'Scroll')
+                                    ? 'USE NOW'
+                                    : 'EQUIP NOW',
                             style: GoogleFonts.jetBrainsMono(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,

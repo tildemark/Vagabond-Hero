@@ -17,6 +17,7 @@ class Players extends Table {
   IntColumn get currentRoomId => integer().withDefault(const Constant(101))();
   IntColumn get silverPrisms => integer().withDefault(const Constant(0))();
   IntColumn get actsCompleted => integer().withDefault(const Constant(0))();
+  IntColumn get lastDeathRoomId => integer().nullable()();
 }
 
 @DataClassName('RoomData')
@@ -49,6 +50,7 @@ class Items extends Table {
   TextColumn get baseType => text()(); // 'Weapon', 'Armor', 'Helm', 'Boots', 'Gem', 'Potion'
   TextColumn get rarity => text().withDefault(const Constant('Normal'))(); // Normal, Magic, Rare, Legendary, Set
   BoolColumn get isEquipped => boolean().withDefault(const Constant(false))();
+  BoolColumn get isStoredInSafe => boolean().withDefault(const Constant(false))();
   TextColumn get equipSlot => text().nullable()(); // 'Head', 'Chest', 'Waist', 'Arms', 'Feet', 'Neck', 'RingL', 'RingR', 'MainHand', 'OffHand'
   
   IntColumn get minDamage => integer().withDefault(const Constant(0))();
@@ -77,5 +79,7 @@ class Mobs extends Table {
   IntColumn get expReward => integer()();
   BoolColumn get isAlive => boolean().withDefault(const Constant(true))();
   BoolColumn get isMiniBoss => boolean().withDefault(const Constant(false))();
+  BoolColumn get isAggro => boolean().withDefault(const Constant(true))();
   TextColumn get dropTableJson => text().withDefault(const Constant('[]'))();
 }
+

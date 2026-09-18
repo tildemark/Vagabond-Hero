@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:drift/drift.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -61,5 +62,69 @@ class EquipmentService {
   Future<void> unequip(ItemData item) async {
     await (_db.update(_db.items)..where((i) => i.id.equals(item.id)))
         .write(const ItemsCompanion(isEquipped: Value(false)));
+  }
+
+  /// Deposit an item into the town safe (must not be equipped)
+  Future<void> depositToSafe(ItemData item) async {
+    await (_db.update(_db.items)..where((i) => i.id.equals(item.id))).write(
+      const ItemsCompanion(
+        isEquipped: Value(false),
+        isStoredInSafe: Value(true),
+      ),
+    );
+  }
+
+  /// Withdraw an item from the town safe back into the satchel bag
+  Future<void> withdrawFromSafe(ItemData item) async {
+    await (_db.update(_db.items)..where((i) => i.id.equals(item.id))).write(
+      const ItemsCompanion(
+        isStoredInSafe: Value(false),
+      ),
+    );
+  }
+
+  /// Drops an item from inventory onto the ground of the current room
+  Future<void> dropItem(ItemData item) async {
+    final player = await (_db.select(_db.players)..where((t) => t.id.equals(1))).getSingleOrNull();
+    final roomId = player?.currentRoomId ?? 101;
+
+    await (_db.update(_db.items)..where((i) => i.id.equals(item.id))).write(
+      ItemsCompanion(
+        ownerId: const Value(null),
+        groundRoomId: Value(roomId),
+        isEquipped: const Value(false),
+        isStoredInSafe: const Value(false),
+      ),
+    );
+  }
+
+  /// Use a consumable item (e.g., Potion, Elixir, Ration), restoring HP and removing or decrementing it
+  Future<String> useConsumable(ItemData item) async {
+    final player = await (_db.select(_db.players)..where((t) => t.id.equals(1))).getSingleOrNull();
+    if (player == null) return 'No active player.';
+
+    int healAmount = 35; // Default heal amount
+    try {
+      if (item.modifiersJson.trim().isNotEmpty) {
+        final decoded = jsonDecode(item.modifiersJson);
+        if (decoded is Map<String, dynamic>) {
+          if (decoded['healAmount'] != null) {
+            healAmount = (decoded['healAmount'] as num).toInt();
+          }
+        }
+      }
+    } catch (_) {}
+
+    final newHp = (player.currentHp + healAmount).clamp(0, player.baseHp);
+    final actualHealed = newHp - player.currentHp;
+
+    await (_db.update(_db.players)..where((t) => t.id.equals(player.id))).write(
+      PlayersCompanion(currentHp: Value(newHp)),
+    );
+
+    // Delete or consume the used item from inventory
+    await (_db.delete(_db.items)..where((i) => i.id.equals(item.id))).go();
+
+    return 'Used ${item.name}! Restored +$actualHealed HP ($newHp/${player.baseHp}).';
   }
 }
